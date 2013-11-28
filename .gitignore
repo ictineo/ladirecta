@@ -45,3 +45,6 @@ sites/all/modules/*
 sites/all/themes/*
 !sites/all/themes/custom
 sites/all/libraries/*
+
+#excloure temporals del vim
+*.swp
