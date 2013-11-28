@@ -21,7 +21,7 @@ robots.txt
 sites/all/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
-sites/default
+sites/default/*
 
 # Ignore everything but the "sites" folder ( for non core developer )
 web.config
