@@ -44,7 +44,10 @@ sites/all/modules/*
 !sites/all/modules/custom
 !sites/all/modules/features
 sites/all/themes/*
-!sites/all/themes/custom
+# el zen base estara a /theme
+# i a sites/all/themes nomes
+# els subthemes desenvolupats
+#!sites/all/themes/custom
 sites/all/libraries/*
 
 
