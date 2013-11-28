@@ -44,7 +44,9 @@ sites/all/modules/*
 !sites/all/modules/features
 sites/all/themes/*
 !sites/all/themes/custom
-sites/all/libraries/*
+sites/all/libraries
+!sites/all/libraries/custom
+
 
 #excloure temporals del vim
 *.swp

@@ -69,6 +69,13 @@ projects[imce][subdir] = "contrib"
 ;projects[][version] = "7.x-"
 ;projects[][subdir] = "contrib"
 
+;themes
+
+projects[zen][version] ="zen"
+
+
+
+
 ; Llibraries
 libraries[ckeditor][download][type] = "file"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
