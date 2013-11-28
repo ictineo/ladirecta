@@ -62,20 +62,19 @@ projects[l10n_update][subdir] = "contrib"
 projects[imce][version] = "7.x-1.7"
 projects[imce][subdir] = "contrib"
 
-;projects[ckeditor][version] = "7.x-1.13"
-;projects[ckeditor][subdir] = "contrib"
-
-
 ;projects[][version] = "7.x-"
 ;projects[][subdir] = "contrib"
 
 ;themes
 
 projects[zen][version] = "7.x-5.4"
-projects[zen][themes] = "theme"
+projects[zen][type] = "theme"
+projects[zen][directory_name] = "zen"
 
 
 
 ; Llibraries
 libraries[ckeditor][download][type] = "file"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
+libraries[ckeditor][destination] = "libraries"
+libraries[ckeditor][directory_name] = "ckeditor"
