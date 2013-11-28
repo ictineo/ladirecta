@@ -71,8 +71,8 @@ projects[imce][subdir] = "contrib"
 
 ;themes
 
-projects[zen][version] ="zen"
-
+projects[zen][version] = "7.x-5.4"
+projects[zen][themes] = "theme"
 
 
 

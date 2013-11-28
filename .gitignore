@@ -18,9 +18,10 @@ robots.txt
 /MAINTAINERS.txt
 /UPGRADE.txt
 /README.txt
-tes/all/README.txt
+sites/all/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
+sites/default
 
 # Ignore everything but the "sites" folder ( for non core developer )
 web.config
@@ -44,8 +45,7 @@ sites/all/modules/*
 !sites/all/modules/features
 sites/all/themes/*
 !sites/all/themes/custom
-sites/all/libraries
-!sites/all/libraries/custom
+sites/all/libraries/*
 
 
 #excloure temporals del vim
