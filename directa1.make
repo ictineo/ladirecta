@@ -71,11 +71,9 @@ projects[zen][version] = "7.x-5.4"
 projects[zen][type] = "theme"
 projects[zen][directory_name] = "zen"
 
-
-
 ; Llibraries
 libraries[ckeditor][download][type] = "file"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3/ckeditor_4.3_full.zip"
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%204.3/ckeditor_4.3_full.zip
 libraries[ckeditor][patch] = "https://drupal.org/files/wysiwyg-ckeditor-4.1853550.136.patch" 
 libraries[ckeditor][destination] = "sites/all/libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
