@@ -40,5 +40,7 @@ dependencies[] = xmlsitemap_node
 dependencies[] = xmlsitemap_taxonomy
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = colorbox_inline
+features[variable][] = colorbox_load
 features[variable][] = fences_default_classes
 features[variable][] = fences_default_markup
