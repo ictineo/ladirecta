@@ -27,6 +27,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[pathauto][version] = "1.2"
   projects[pathauto][subdir] = "contrib"
 
+  projects[page_title][version] = "2.7"
+  projects[page_title][subdir] = "contrib"
+
   projects[libraries][version] = "2.1"
   projects[libraries][subdir] = "contrib"
 
