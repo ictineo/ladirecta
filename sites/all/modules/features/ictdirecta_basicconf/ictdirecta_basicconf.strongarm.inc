@@ -356,7 +356,7 @@ system/ajax/*';
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '0',
-    'javascript' => 'eqySjNEvvkoQRsT_5ZEphxaX4YXivtkzoHbMzJoCA0E',
+    'javascript' => 'b52Qn6xVxGASm0tjRqKF8iRgd0YAhaGUc2z0D9RSSOM',
   );
   $export['language_default'] = $strongarm;
 
@@ -429,6 +429,97 @@ system/ajax/*';
     0 => 'status',
   );
   $export['node_options_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_comment_child_reply';
+  $strongarm->value = '';
+  $export['page_title_comment_child_reply'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_comment_reply';
+  $strongarm->value = '';
+  $export['page_title_comment_reply'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_default';
+  $strongarm->value = '[current-page:page-title] | [site:name]';
+  $export['page_title_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_front';
+  $strongarm->value = '[site:name] | [site:slogan]';
+  $export['page_title_front'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_pager_pattern';
+  $strongarm->value = '';
+  $export['page_title_pager_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_article';
+  $strongarm->value = '';
+  $export['page_title_type_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_article_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_article_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_page';
+  $strongarm->value = '';
+  $export['page_title_type_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_page_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_page_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_user';
+  $strongarm->value = '';
+  $export['page_title_user'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_user_showfield';
+  $strongarm->value = 0;
+  $export['page_title_user_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_vocab_tags';
+  $strongarm->value = '';
+  $export['page_title_vocab_tags'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_vocab_tags_showfield';
+  $strongarm->value = 0;
+  $export['page_title_vocab_tags_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
