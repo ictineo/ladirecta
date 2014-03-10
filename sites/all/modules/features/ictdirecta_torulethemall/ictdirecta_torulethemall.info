@@ -1,0 +1,5 @@
+name = ictdirecta_torulethemall
+core = 7.x
+package = Features
+dependencies[] = ictdirecta_editors
+features[features_api][] = api:2
