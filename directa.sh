@@ -1,9 +1,9 @@
 #!/bin/bash
 rm directa.make
 cp ../directa.make .
-rm -rf sites/all/modules/contrib
-rm -rf sites/all/themes/contrib
-rm -rf sites/all/libraries
+rm -rvf sites/all/modules/contrib
+rm -rvf sites/all/themes/contrib
+rm -rvf sites/all/libraries
 #drush make --working-copy --no-core --contrib-destination=. directa.make .
 drush make --working-copy --no-core directa.make .
 drush updatedb -y && drush cc all
