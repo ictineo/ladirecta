@@ -2,4 +2,5 @@ name = ictdirecta_torulethemall
 core = 7.x
 package = Features
 dependencies[] = ictdirecta_editors
+dependencies[] = ictdirecta_taxonomies
 features[features_api][] = api:2
