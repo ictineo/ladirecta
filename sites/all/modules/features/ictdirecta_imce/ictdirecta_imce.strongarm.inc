@@ -13,6 +13,25 @@ function ictdirecta_imce_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'imce_custom_content';
+  $strongarm->value = array(
+    'imce_mkdir_content' => 1,
+    'imce_file_path_content' => 1,
+  );
+  $export['imce_custom_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_custom_process';
+  $strongarm->value = array(
+    'imce_mkdir_process_profile' => 1,
+  );
+  $export['imce_custom_process'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'imce_profiles';
   $strongarm->value = array(
     1 => array(
@@ -93,6 +112,58 @@ function ictdirecta_imce_strongarm() {
     ),
   );
   $export['imce_profiles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_roles_profiles';
+  $strongarm->value = array(
+    3 => array(
+      'public_pid' => '1',
+    ),
+    2 => array(
+      'public_pid' => 0,
+    ),
+    1 => array(
+      'public_pid' => 0,
+    ),
+  );
+  $export['imce_roles_profiles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_absurls';
+  $strongarm->value = 0;
+  $export['imce_settings_absurls'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_disable_private';
+  $strongarm->value = 1;
+  $export['imce_settings_disable_private'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_replace';
+  $strongarm->value = '0';
+  $export['imce_settings_replace'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_textarea';
+  $strongarm->value = '';
+  $export['imce_settings_textarea'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_settings_thumb_method';
+  $strongarm->value = 'scale_and_crop';
+  $export['imce_settings_thumb_method'] = $strongarm;
 
   return $export;
 }
