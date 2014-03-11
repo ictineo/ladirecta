@@ -1,10 +1,10 @@
 name = ictdirecta_imce
 core = 7.x
 package = Features
-dependencies[] = ctools
 dependencies[] = imce_file_path
 dependencies[] = imce_filefield
 dependencies[] = imce_mkdir
+dependencies[] = imce_wysiwyg
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
