@@ -1,0 +1,13 @@
+name = ictdirecta_lrecerca
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = file
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_adjunt
+features[field_instance][] = node-linies_de_recerca-body
+features[field_instance][] = node-linies_de_recerca-field_adjunt
+features[node][] = linies_de_recerca
