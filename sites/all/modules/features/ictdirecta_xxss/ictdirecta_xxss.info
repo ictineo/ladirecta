@@ -1,7 +1,7 @@
 name = ictdirecta_xxss
 core = 7.x
 package = Features
-dependencies[] = ctools
+dependencies[] = easy_social
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
