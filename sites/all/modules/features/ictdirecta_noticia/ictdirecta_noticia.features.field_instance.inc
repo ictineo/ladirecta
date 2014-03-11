@@ -267,6 +267,47 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticia-field_etiquetes'
+  $field_instances['node-noticia-field_etiquetes'] = array(
+    'bundle' => 'noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'mark',
+    'field_name' => 'field_etiquetes',
+    'label' => 'Etiquetes',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-noticia-field_fotografia_de_portada'
   $field_instances['node-noticia-field_fotografia_de_portada'] = array(
     'bundle' => 'noticia',
@@ -337,6 +378,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Contingut relacionat');
   t('Data');
   t('Documents adjunts');
+  t('Etiquetes');
   t('Fotografia de portada');
 
   return $field_instances;
