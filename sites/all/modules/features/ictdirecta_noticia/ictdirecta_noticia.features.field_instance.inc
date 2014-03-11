@@ -370,6 +370,44 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticia-field_seccio'
+  $field_instances['node-noticia-field_seccio'] = array(
+    'bundle' => 'noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'mark',
+    'field_name' => 'field_seccio',
+    'label' => 'Secció',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Autor');
@@ -380,6 +418,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Documents adjunts');
   t('Etiquetes');
   t('Fotografia de portada');
+  t('Secció');
 
   return $field_instances;
 }
