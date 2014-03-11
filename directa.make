@@ -204,6 +204,14 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[message_notify][version] = "2.5"
   projects[message_notify][subdir] = "contrib"
 
+;;; Xarxes socials
+  projects[easy_social][version] = "2.11"
+  projects[easy_social][subdir] = "contrib"
+  projects[flattr][version] = "1.0"
+  projects[flattr][subdir] = "contrib"
+ 
+ 
+
 
 ;projects[][version] = ""
 ;projects[][subdir] = "contrib"
