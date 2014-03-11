@@ -21,7 +21,6 @@ dependencies[] = libraries
 dependencies[] = link
 dependencies[] = locale
 dependencies[] = mollom
-dependencies[] = multiupload_imagefield_widget
 dependencies[] = page_title
 dependencies[] = pathauto
 dependencies[] = search404
