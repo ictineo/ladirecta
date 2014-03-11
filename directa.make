@@ -123,6 +123,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[select_or_other][version] = "2.20"
   projects[select_or_other][subdir] = "contrib"
 
+  projects[shs][version] = "1.6"
+  projects[shs][subdir] = "contrib"
+
 ;;; views
   projects[views][version] = "3.7"
   projects[views][subdir] = "contrib"
