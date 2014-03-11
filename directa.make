@@ -93,8 +93,6 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[imce_tools][version] = "1.1"
   projects[imce_tools][subdir] = "contrib"
 
-
-
   projects[webform][version] = "3.20"
   projects[webform][subdir] = "contrib"
 
