@@ -1,0 +1,7 @@
+name = ictdirecta_imce
+core = 7.x
+package = Features
+dependencies[] = imce_file_path
+dependencies[] = imce_filefield
+dependencies[] = imce_mkdir
+features[features_api][] = api:2
