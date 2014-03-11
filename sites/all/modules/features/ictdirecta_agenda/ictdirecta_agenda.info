@@ -1,0 +1,17 @@
+name = ictdirecta_agenda
+core = 7.x
+package = Features
+dependencies[] = date
+dependencies[] = features
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_adreca
+features[field_base][] = field_data_ag
+features[field_base][] = field_lloc
+features[field_instance][] = node-esdeveniment_agenda-body
+features[field_instance][] = node-esdeveniment_agenda-field_adreca
+features[field_instance][] = node-esdeveniment_agenda-field_data_ag
+features[field_instance][] = node-esdeveniment_agenda-field_lloc
+features[node][] = esdeveniment_agenda
