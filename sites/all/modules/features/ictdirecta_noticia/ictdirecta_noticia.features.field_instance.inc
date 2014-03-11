@@ -109,6 +109,46 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticia-field_contingut_relacionat'
+  $field_instances['node-noticia-field_contingut_relacionat'] = array(
+    'bundle' => 'noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'article',
+    'field_name' => 'field_contingut_relacionat',
+    'label' => 'Contingut relacionat',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-noticia-field_data'
   $field_instances['node-noticia-field_data'] = array(
     'bundle' => 'noticia',
@@ -294,6 +334,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Autor');
   t('Body');
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
+  t('Contingut relacionat');
   t('Data');
   t('Documents adjunts');
   t('Fotografia de portada');
