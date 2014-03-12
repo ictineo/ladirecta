@@ -1,28 +1,27 @@
 <?php
 /**
  * @file
- * ictdirecta_agenda.features.field_instance.inc
+ * ictdirecta_faldo.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ictdirecta_agenda_field_default_field_instances() {
+function ictdirecta_faldo_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-esdeveniment_agenda-body'
-  $field_instances['node-esdeveniment_agenda-body'] = array(
-    'bundle' => 'esdeveniment_agenda',
+  // Exported field_instance: 'node-faldo-body'
+  $field_instances['node-faldo-body'] = array(
+    'bundle' => 'faldo',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -36,82 +35,35 @@ function ictdirecta_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Descripció de l\'esdeveniment',
-    'required' => 0,
+    'label' => 'Body',
+    'required' => FALSE,
     'settings' => array(
-      'display_summary' => 1,
+      'display_summary' => TRUE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-esdeveniment_agenda-field_adreca'
-  $field_instances['node-esdeveniment_agenda-field_adreca'] = array(
-    'bundle' => 'esdeveniment_agenda',
+  // Exported field_instance: 'node-faldo-field_bs'
+  $field_instances['node-faldo-field_bs'] = array(
+    'bundle' => 'faldo',
     'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Indica l\'adreça',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_adreca',
-    'label' => 'Adreça',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-esdeveniment_agenda-field_data_ag'
-  $field_instances['node-esdeveniment_agenda-field_data_ag'] = array(
-    'bundle' => 'esdeveniment_agenda',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -122,7 +74,42 @@ function ictdirecta_agenda_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_data_ag',
+    'field_name' => 'field_bs',
+    'label' => 'Butlleti sonor',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-faldo-field_dataf'
+  $field_instances['node-faldo-field_dataf'] = array(
+    'bundle' => 'faldo',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_dataf',
     'label' => 'Data',
     'required' => 0,
     'settings' => array(
@@ -148,19 +135,18 @@ function ictdirecta_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-esdeveniment_agenda-field_lloc'
-  $field_instances['node-esdeveniment_agenda-field_lloc'] = array(
-    'bundle' => 'esdeveniment_agenda',
+  // Exported field_instance: 'node-faldo-field_n_'
+  $field_instances['node-faldo-field_n_'] = array(
+    'bundle' => 'faldo',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indica el lloc de l\'esdeveniment',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -170,32 +156,70 @@ function ictdirecta_agenda_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_lloc',
-    'label' => 'Lloc',
+    'field_name' => 'field_n_',
+    'label' => 'Nº',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-faldo-field_numero_en_paper'
+  $field_instances['node-faldo-field_numero_en_paper'] = array(
+    'bundle' => 'faldo',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_numero_en_paper',
+    'label' => 'Numero en paper',
+    'required' => 0,
+    'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'options',
       'settings' => array(
-        'size' => 60,
+        'apply_chosen' => 0,
       ),
-      'type' => 'text_textfield',
-      'weight' => 2,
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Adreça');
+  t('Body');
+  t('Butlleti sonor');
   t('Data');
-  t('Descripció de l\'esdeveniment');
-  t('Indica el lloc de l\'esdeveniment');
-  t('Indica l\'adreça');
-  t('Lloc');
+  t('Numero en paper');
+  t('Nº');
 
   return $field_instances;
 }

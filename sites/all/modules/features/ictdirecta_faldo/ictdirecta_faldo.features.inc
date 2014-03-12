@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * ictdirecta_lrecerca.features.inc
+ * ictdirecta_faldo.features.inc
  */
 
 /**
  * Implements hook_node_info().
  */
-function ictdirecta_lrecerca_node_info() {
+function ictdirecta_faldo_node_info() {
   $items = array(
-    'linies_de_recerca' => array(
-      'name' => t('Linies de recerca'),
+    'faldo' => array(
+      'name' => t('Faldo'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Faldó dels dimecres'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

@@ -1,53 +1,64 @@
 <?php
 /**
  * @file
- * ictdirecta_butlletisonor.features.field_base.inc
+ * ictdirecta_faldo.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ictdirecta_butlletisonor_field_default_field_bases() {
+function ictdirecta_faldo_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_butlleti_sonor'
-  $field_bases['field_butlleti_sonor'] = array(
+  // Exported field_base: 'field_bs'
+  $field_bases['field_bs'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_butlleti_sonor',
+    'field_name' => 'field_bs',
     'foreign keys' => array(
-      'fid' => array(
+      'node' => array(
         'columns' => array(
-          'fid' => 'fid',
+          'target_id' => 'nid',
         ),
-        'table' => 'file_managed',
+        'table' => 'node',
       ),
     ),
     'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'file',
+    'module' => 'entityreference',
     'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'uri_scheme' => 'public',
+      'handler' => 'views',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'butlletisonor',
+        ),
+      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_databs'
-  $field_bases['field_databs'] = array(
+  // Exported field_base: 'field_dataf'
+  $field_bases['field_dataf'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_databs',
+    'field_name' => 'field_dataf',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -71,43 +82,13 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_imatge_portada'
-  $field_bases['field_imatge_portada'] = array(
+  // Exported field_base: 'field_numero_en_paper'
+  $field_bases['field_numero_en_paper'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_imatge_portada',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'image',
-    'settings' => array(
-      'default_image' => 0,
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 0,
-    'type' => 'image',
-  );
-
-  // Exported field_base: 'field_n_associat'
-  $field_bases['field_n_associat'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_n_associat',
+    'field_name' => 'field_numero_en_paper',
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -124,20 +105,17 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'direction' => 'DESC',
-          'property' => 'created',
-          'type' => 'property',
-        ),
-        'target_bundles' => array(
-          'numero_paper' => 'numero_paper',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'numpaper',
         ),
       ),
       'target_type' => 'node',
