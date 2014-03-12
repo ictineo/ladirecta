@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictidirecta_pvenda.features.field_instance.inc
+ * ictdirecta_pvenda.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ictidirecta_pvenda_field_default_field_instances() {
+function ictdirecta_pvenda_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-punts_de_venda-body'
@@ -348,6 +348,7 @@ function ictidirecta_pvenda_field_default_field_instances() {
       'active' => 1,
       'module' => 'shs',
       'settings' => array(
+        'apply_chosen' => 0,
         'shs' => array(
           'create_new_levels' => FALSE,
           'create_new_terms' => FALSE,

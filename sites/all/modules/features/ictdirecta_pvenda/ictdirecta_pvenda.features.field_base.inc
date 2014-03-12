@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictidirecta_pvenda.features.field_base.inc
+ * ictdirecta_pvenda.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ictidirecta_pvenda_field_default_field_bases() {
+function ictdirecta_pvenda_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'body'

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictidirecta_pvenda feature.
- */
-
-include_once 'ictidirecta_pvenda.features.inc';

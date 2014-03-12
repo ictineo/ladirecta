@@ -1,13 +1,20 @@
 <?php
 /**
  * @file
- * ictidirecta_pvenda.features.inc
+ * ictdirecta_pvenda.features.inc
  */
+
+/**
+ * Implements hook_views_api().
+ */
+function ictdirecta_pvenda_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
 
 /**
  * Implements hook_node_info().
  */
-function ictidirecta_pvenda_node_info() {
+function ictdirecta_pvenda_node_info() {
   $items = array(
     'punts_de_venda' => array(
       'name' => t('Punts de Venda'),
