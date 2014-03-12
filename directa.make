@@ -207,7 +207,7 @@ projects[strongarm][subdir] = "contrib/dev"
 ;;; Xarxes socials
   projects[easy_social][version] = "2.11"
   projects[easy_social][subdir] = "contrib"
-  projects[flattr][version] = "1.0"
+  projects[flattr][version] = "2.x-dev"
   projects[flattr][subdir] = "contrib"
  
  
