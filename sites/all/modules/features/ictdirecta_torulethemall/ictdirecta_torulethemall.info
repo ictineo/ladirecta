@@ -4,5 +4,5 @@ package = Features
 dependencies[] = ictdirecta_agenda
 dependencies[] = ictdirecta_cdserveis
 dependencies[] = ictdirecta_editors
-dependencies[] = ictdirecta_numeropaper
+dependencies[] = ictdirecta_faldo
 features[features_api][] = api:2
