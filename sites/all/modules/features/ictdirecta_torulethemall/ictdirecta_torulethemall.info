@@ -4,4 +4,5 @@ package = Features
 dependencies[] = ictdirecta_basicconf
 dependencies[] = ictdirecta_editors
 dependencies[] = ictdirecta_taxonomies
+dependencies[] = ictdirecta_imce
 features[features_api][] = api:2
