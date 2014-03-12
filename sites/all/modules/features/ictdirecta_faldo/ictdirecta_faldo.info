@@ -4,6 +4,7 @@ package = Features
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
+dependencies[] = ictdirecta_pvenda
 dependencies[] = ictidirecta_pvenda
 dependencies[] = node
 dependencies[] = options
