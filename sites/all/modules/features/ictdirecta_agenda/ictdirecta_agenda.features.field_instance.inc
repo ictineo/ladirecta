@@ -51,7 +51,7 @@ function ictdirecta_agenda_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -78,7 +78,7 @@ function ictdirecta_agenda_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_adreca',
-    'label' => 'Adreça',
+    'label' => 'Lloc/Adreça',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -148,19 +148,19 @@ function ictdirecta_agenda_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-esdeveniment_agenda-field_lloc'
-  $field_instances['node-esdeveniment_agenda-field_lloc'] = array(
+  // Exported field_instance: 'node-esdeveniment_agenda-field_territori'
+  $field_instances['node-esdeveniment_agenda-field_territori'] = array(
     'bundle' => 'esdeveniment_agenda',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indica el lloc de l\'esdeveniment',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -170,32 +170,36 @@ function ictdirecta_agenda_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_lloc',
-    'label' => 'Lloc',
+    'field_name' => 'field_territori',
+    'label' => 'Territori',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'shs',
       'settings' => array(
-        'size' => 60,
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+          'use_chosen' => 'chosen',
+        ),
       ),
-      'type' => 'text_textfield',
-      'weight' => 2,
+      'type' => 'taxonomy_shs',
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Adreça');
   t('Data');
   t('Descripció de l\'esdeveniment');
-  t('Indica el lloc de l\'esdeveniment');
   t('Indica l\'adreça');
-  t('Lloc');
+  t('Lloc/Adreça');
+  t('Territori');
 
   return $field_instances;
 }
