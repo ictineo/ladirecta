@@ -4,6 +4,7 @@ package = Features
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
 dependencies[] = ictdirecta_taxonomies
+dependencies[] = ictidirecta_pvenda
 dependencies[] = image
 dependencies[] = node
 dependencies[] = taxonomy

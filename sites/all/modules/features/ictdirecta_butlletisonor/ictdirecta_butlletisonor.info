@@ -4,6 +4,7 @@ package = Features
 dependencies[] = date_api
 dependencies[] = entityreference
 dependencies[] = ictdirecta_numeropaper
+dependencies[] = ictidirecta_pvenda
 dependencies[] = image
 dependencies[] = options
 features[features_api][] = api:2

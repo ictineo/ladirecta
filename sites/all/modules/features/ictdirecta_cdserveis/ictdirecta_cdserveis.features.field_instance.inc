@@ -214,12 +214,18 @@ function ictdirecta_cdserveis_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'shs',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
+        'shs' => array(
+          'create_new_levels' => FALSE,
+          'create_new_terms' => FALSE,
+          'force_deepest' => FALSE,
+          'node_count' => FALSE,
+        ),
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'taxonomy_shs',
       'weight' => -2,
     ),
   );
@@ -254,12 +260,18 @@ function ictdirecta_cdserveis_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'shs',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
+        'shs' => array(
+          'create_new_levels' => FALSE,
+          'create_new_terms' => FALSE,
+          'force_deepest' => FALSE,
+          'node_count' => FALSE,
+        ),
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'taxonomy_shs',
       'weight' => -3,
     ),
   );
