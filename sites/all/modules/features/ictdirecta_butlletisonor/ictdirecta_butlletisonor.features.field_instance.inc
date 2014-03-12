@@ -96,8 +96,8 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-butlleti_sonor-field_data'
-  $field_instances['node-butlleti_sonor-field_data'] = array(
+  // Exported field_instance: 'node-butlleti_sonor-field_databs'
+  $field_instances['node-butlleti_sonor-field_databs'] = array(
     'bundle' => 'butlleti_sonor',
     'deleted' => 0,
     'description' => '',
@@ -113,7 +113,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -123,9 +123,9 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_data',
+    'field_name' => 'field_databs',
     'label' => 'Data',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -144,8 +144,8 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
-      'weight' => 3,
+      'type' => 'date_popup',
+      'weight' => 2,
     ),
   );
 
@@ -241,7 +241,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
