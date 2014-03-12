@@ -4,6 +4,7 @@ package = Features
 dependencies[] = features
 dependencies[] = file
 dependencies[] = ictdirecta_numeropaper
+dependencies[] = ictdirecta_pvenda
 dependencies[] = node
 dependencies[] = text
 features[features_api][] = api:2
