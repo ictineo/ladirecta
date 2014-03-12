@@ -50,7 +50,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -195,7 +195,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -204,7 +204,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     'bundle' => 'butlleti_sonor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Número en paper al que està associat',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -227,7 +227,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_n_',
-    'label' => 'Nº',
+    'label' => 'Butlletí sonor nº',
     'required' => 1,
     'settings' => array(
       'max' => '',
@@ -250,7 +250,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     'bundle' => 'butlleti_sonor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Número en paper al que està associat',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -278,11 +278,9 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -290,9 +288,9 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Butlleti sonor');
+  t('Butlletí sonor nº');
   t('Data');
   t('Imatge portada');
-  t('Nº');
   t('Nº associat');
   t('Número en paper al que està associat');
 

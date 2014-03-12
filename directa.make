@@ -232,3 +232,7 @@ libraries[chosen][download][url] = "https://github.com/harvesthq/chosen/releases
 libraries[chosen][destination] = "libraries"
 libraries[chosen][directory_name] = "chosen"
 
+libraries[circleplayer][download][type] = "file"
+libraries[circleplayer][download][url] = "https://github.com/maboa/circleplayer.git"
+libraries[circlepayer][destination] = "libraries"
+libraries[circleplayer][directory_name] = "circleplayer"
