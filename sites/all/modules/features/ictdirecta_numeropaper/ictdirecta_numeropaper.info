@@ -5,6 +5,7 @@ dependencies[] = date
 dependencies[] = entityreference
 dependencies[] = eva
 dependencies[] = file
+dependencies[] = ictdirecta_pvenda
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = ictidirecta_pvenda
 dependencies[] = number
