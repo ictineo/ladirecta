@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = features
 dependencies[] = ictdirecta_agenda
+dependencies[] = ictdirecta_pvenda
 dependencies[] = list
 dependencies[] = node
 dependencies[] = options

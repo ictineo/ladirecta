@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
+dependencies[] = ictdirecta_pvenda
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = ictidirecta_pvenda
 dependencies[] = image
