@@ -50,7 +50,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 5,
     ),
   );
 
@@ -92,7 +92,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -144,8 +144,8 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_popup',
-      'weight' => 0,
+      'type' => 'date_select',
+      'weight' => 3,
     ),
   );
 
@@ -195,7 +195,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -204,7 +204,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
     'bundle' => 'butlleti_sonor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Número en paper al que està associat',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -241,7 +241,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -2,
+      'weight' => 2,
     ),
   );
 
@@ -282,7 +282,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -294,6 +294,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
   t('Imatge portada');
   t('Nº');
   t('Nº associat');
+  t('Número en paper al que està associat');
 
   return $field_instances;
 }
