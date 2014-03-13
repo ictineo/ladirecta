@@ -173,7 +173,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[plupload][version] = "1.6"
   projects[plupload][subdir] = "contrib"
 
-  projects[jplayer][version] = "2.0-x"
+  projects[jplayer][version] = "2.0-beta1"
   projects[jplayer][subdir] = "contrib"
 
 
