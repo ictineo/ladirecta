@@ -166,7 +166,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[multiupload_imagefield_widget][version] = "1.3"
   projects[multiupload_imagefield_widget][subdir] = "contrib"
   projects[filefield_sources][version] = "1.9"
-  projects[filefield_sources][subdir] = "contrib"
+ projects[filefield_sources][subdir] = "contrib"
   projects[plupload][version] = "1.6"
   projects[plupload][subdir] = "contrib"
 
@@ -207,6 +207,12 @@ projects[strongarm][subdir] = "contrib/dev"
 ;;; Xarxes socials
   projects[easy_social][version] = "2.11"
   projects[easy_social][subdir] = "contrib"
+  projects[flattr_easy_social][type] = "module"
+  projects[flattr_easy_social][download][type] = "git"
+  projects[flattr_easy_social][download][url] = "http://git.drupal.org/sandbox/quiron/2216385.git"
+  projects[flattr_easy_social][download][revision] = db419608763dd70ec419192643c260a541cf200c
+  projects[flattr_easy_social][subdir] = "custom"
+ 
  
  
 
