@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictidirecta_cdnot feature.
+ */
+
+include_once 'ictidirecta_cdnot.features.inc';
