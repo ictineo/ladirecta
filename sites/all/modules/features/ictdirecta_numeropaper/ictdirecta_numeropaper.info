@@ -7,7 +7,6 @@ dependencies[] = eva
 dependencies[] = file
 dependencies[] = ictdirecta_pvenda
 dependencies[] = ictdirecta_taxonomies
-dependencies[] = ictidirecta_pvenda
 dependencies[] = number
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
