@@ -1,6 +1,7 @@
 name = ictdirecta_faldo
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
@@ -32,3 +33,4 @@ features[variable][] = menu_parent_faldo
 features[variable][] = node_options_faldo
 features[variable][] = node_preview_faldo
 features[variable][] = node_submitted_faldo
+features[variable][] = xmlsitemap_settings_node_faldo

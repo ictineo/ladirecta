@@ -1,6 +1,7 @@
 name = ictdirecta_agenda
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
 dependencies[] = ictdirecta_cdserveis
@@ -31,3 +32,4 @@ features[variable][] = menu_parent_esdeveniment_agenda
 features[variable][] = node_options_esdeveniment_agenda
 features[variable][] = node_preview_esdeveniment_agenda
 features[variable][] = node_submitted_esdeveniment_agenda
+features[variable][] = xmlsitemap_settings_node_esdeveniment_agenda
