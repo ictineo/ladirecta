@@ -39,6 +39,7 @@ function ictdirecta_xxss_strongarm() {
     'facebook' => 'facebook',
     'twitter' => 'twitter',
     'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
     'linkedin' => 0,
   );
   $export['easy_social_article_widgets'] = $strongarm;
@@ -77,6 +78,13 @@ function ictdirecta_xxss_strongarm() {
   $strongarm->name = 'easy_social_block_1_url_googleplus';
   $strongarm->value = '[current-path]';
   $export['easy_social_block_1_url_googleplus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_block_1_url_linkedin';
+  $strongarm->value = '[current-path]';
+  $export['easy_social_block_1_url_linkedin'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -177,12 +185,27 @@ function ictdirecta_xxss_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_flattr_category';
+  $strongarm->value = 'text';
+  $export['easy_social_flattr_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_flattr_id';
+  $strongarm->value = 'projecte';
+  $export['easy_social_flattr_id'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_global_order';
   $strongarm->value = array(
     0 => 'facebook',
     1 => 'twitter',
     2 => 'googleplus',
-    3 => 'linkedin',
+    3 => 'flattr_share_button',
+    4 => 'linkedin',
   );
   $export['easy_social_global_order'] = $strongarm;
 

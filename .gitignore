@@ -47,6 +47,7 @@ xmlrpc.php
 sites/all/modules/*
 !sites/all/modules/custom
 !sites/all/modules/features
+sites/all/modules/custom/*/.git
 sites/all/themes/*
 !sites/all/themes/directa
 # el zen base estara a /theme
