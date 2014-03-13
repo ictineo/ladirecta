@@ -173,6 +173,11 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[plupload][version] = "1.6"
   projects[plupload][subdir] = "contrib"
 
+  projects[jplayer][version] = "2.0-beta1"
+  projects[jplayer][subdir] = "contrib"
+
+
+
 ;;; comportaments programats
   projects[rules][version] = "2.6"
   projects[rules][subdir] = "contrib"
@@ -234,5 +239,5 @@ libraries[chosen][directory_name] = "chosen"
 
 libraries[circleplayer][download][type] = "file"
 libraries[circleplayer][download][url] = "https://github.com/maboa/circleplayer.git"
-libraries[circlepayer][destination] = "libraries"
+libraries[circleplayer][destination] = "libraries"
 libraries[circleplayer][directory_name] = "circleplayer"
