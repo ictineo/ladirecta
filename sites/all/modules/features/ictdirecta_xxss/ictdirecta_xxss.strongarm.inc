@@ -39,6 +39,7 @@ function ictdirecta_xxss_strongarm() {
     'facebook' => 'facebook',
     'twitter' => 'twitter',
     'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
     'linkedin' => 0,
   );
   $export['easy_social_article_widgets'] = $strongarm;
@@ -182,7 +183,8 @@ function ictdirecta_xxss_strongarm() {
     0 => 'facebook',
     1 => 'twitter',
     2 => 'googleplus',
-    3 => 'linkedin',
+    3 => 'flattr_share_button',
+    4 => 'linkedin',
   );
   $export['easy_social_global_order'] = $strongarm;
 
