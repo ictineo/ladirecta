@@ -241,3 +241,8 @@ libraries[circleplayer][download][type] = "git"
 libraries[circleplayer][download][url] = "https://github.com/maboa/circleplayer.git"
 libraries[circleplayer][destination] = "libraries"
 libraries[circleplayer][directory_name] = "circleplayer"
+
+libraries[jplayer][download][type] = "file"
+libraries[jplayer][download][url] = "http://jplayer.org/latest/jQuery.jPlayer.2.5.0.zip"
+libraries[jplayer][destination] = "libraries"
+libraries[jplayer][directory_name] = "jplayer"
