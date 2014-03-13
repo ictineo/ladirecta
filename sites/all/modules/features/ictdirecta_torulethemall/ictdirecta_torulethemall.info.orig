@@ -1,0 +1,17 @@
+name = ictdirecta_torulethemall
+core = 7.x
+package = Features
+<<<<<<< HEAD
+dependencies[] = ictdirecta_basicconf
+dependencies[] = ictdirecta_editors
+dependencies[] = ictdirecta_taxonomies
+=======
+dependencies[] = ictdirecta_butlletisonor
+dependencies[] = ictdirecta_cdserveis
+dependencies[] = ictdirecta_editors
+dependencies[] = ictdirecta_faldo
+dependencies[] = ictdirecta_lrecerca
+dependencies[] = ictdirecta_taxonomies
+dependencies[] = ictidirecta_cdnot
+>>>>>>> tcontingut
+features[features_api][] = api:2
