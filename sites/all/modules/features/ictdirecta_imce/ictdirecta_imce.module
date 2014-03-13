@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_imce feature.
+ */
+
+include_once 'ictdirecta_imce.features.inc';

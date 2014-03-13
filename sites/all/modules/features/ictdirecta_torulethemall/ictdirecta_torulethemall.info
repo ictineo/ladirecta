@@ -11,4 +11,5 @@ dependencies[] = ictdirecta_faldo
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = ictidirecta_cdnot
+dependencies[] = ictdirecta_imce
 features[features_api][] = api:2
