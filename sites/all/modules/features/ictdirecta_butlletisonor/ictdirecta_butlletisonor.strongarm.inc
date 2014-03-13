@@ -13,6 +13,13 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_butlleti_sonor';
+  $strongarm->value = 'edit-menu';
+  $export['additional_settings__active_tab_butlleti_sonor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_butlleti_sonor';
   $strongarm->value = 0;
   $export['comment_anonymous_butlleti_sonor'] = $strongarm;
@@ -145,6 +152,16 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm->name = 'node_submitted_butlleti_sonor';
   $strongarm->value = 0;
   $export['node_submitted_butlleti_sonor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_butlleti_sonor';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_butlleti_sonor'] = $strongarm;
 
   return $export;
 }
