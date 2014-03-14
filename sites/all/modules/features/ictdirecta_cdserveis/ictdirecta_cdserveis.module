@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_cdserveis feature.
+ */
+
+include_once 'ictdirecta_cdserveis.features.inc';

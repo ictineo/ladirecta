@@ -88,6 +88,10 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[imce_wysiwyg][subdir] = "contrib"
   projects[imce_mkdir][version] = "1.0"
   projects[imce_mkdir][subdir] = "contrib"
+  projects[imce_filefield][version] = "1.0"
+  projects[imce_filefield][subdir] = "contrib"
+  projects[imce_tools][version] = "1.1"
+  projects[imce_tools][subdir] = "contrib"
 
   projects[webform][version] = "3.20"
   projects[webform][subdir] = "contrib"
@@ -122,6 +126,9 @@ projects[strongarm][subdir] = "contrib/dev"
 
   projects[select_or_other][version] = "2.20"
   projects[select_or_other][subdir] = "contrib"
+
+  projects[shs][version] = "1.6"
+  projects[shs][subdir] = "contrib"
 
 ;;; views
   projects[views][version] = "3.7"
@@ -161,10 +168,10 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[chosen][version] = "2.0-alpha4"
   projects[chosen][subdir] = "contrib"
 
-  projects[multiupload_filefield_widget][version] = "1.13"
-  projects[multiupload_filefield_widget][subdir] = "contrib"
-  projects[multiupload_imagefield_widget][version] = "1.3"
-  projects[multiupload_imagefield_widget][subdir] = "contrib"
+ ; projects[multiupload_filefield_widget][version] = "1.13"
+ ; projects[multiupload_filefield_widget][subdir] = "contrib"
+ ; projects[multiupload_imagefield_widget][version] = "1.3"
+ ; projects[multiupload_imagefield_widget][subdir] = "contrib"
   projects[filefield_sources][version] = "1.9"
  projects[filefield_sources][subdir] = "contrib"
   projects[plupload][version] = "1.6"
@@ -236,4 +243,12 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][destination] = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
 
+libraries[chosen][download][type] = "file"
+libraries[chosen][download][url] = "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
+libraries[chosen][destination] = "libraries"
+libraries[chosen][directory_name] = "chosen"
 
+libraries[circleplayer][download][type] = "file"
+libraries[circleplayer][download][url] = "https://github.com/maboa/circleplayer.git"
+libraries[circlepayer][destination] = "libraries"
+libraries[circleplayer][directory_name] = "circleplayer"
