@@ -173,6 +173,20 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_butlleti_sonor';
+  $strongarm->value = '';
+  $export['page_title_type_butlleti_sonor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_butlleti_sonor_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_butlleti_sonor_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_butlleti_sonor';
   $strongarm->value = array(
     'status' => '0',

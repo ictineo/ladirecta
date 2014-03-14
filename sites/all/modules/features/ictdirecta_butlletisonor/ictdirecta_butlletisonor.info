@@ -44,5 +44,7 @@ features[variable][] = menu_parent_butlleti_sonor
 features[variable][] = node_options_butlleti_sonor
 features[variable][] = node_preview_butlleti_sonor
 features[variable][] = node_submitted_butlleti_sonor
+features[variable][] = page_title_type_butlleti_sonor
+features[variable][] = page_title_type_butlleti_sonor_showfield
 features[variable][] = xmlsitemap_settings_node_butlleti_sonor
 features[views_view][] = butlletisonor
