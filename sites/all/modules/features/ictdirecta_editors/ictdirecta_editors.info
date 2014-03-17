@@ -1,8 +1,8 @@
 name = ictdirecta_editors
 core = 7.x
 package = Features
+dependencies[] = ckeditor_image2
 dependencies[] = features
-dependencies[] = filter
 dependencies[] = wysiwyg
 features[features_api][] = api:2
 features[filter][] = editor_web_complert
