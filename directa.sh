@@ -1,6 +1,4 @@
 #!/bin/bash
-rm directa.make
-cp ../directa.make .
 rm -rvf sites/all/modules/contrib
 rm -rvf sites/all/themes/contrib
 rm -rvf sites/all/libraries
