@@ -148,7 +148,8 @@ projects[strongarm][subdir] = "contrib/dev"
 
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
-  projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch"
+  ;projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch"
+  projects[wysiwyg][patch][] = "https://drupal.org/files/wysiwyg-ckeditor-4.1853550.136.patch"
   projects[wysiwyg][subdir] = "contrib"
 
   projects[jquery_update][version] = "2.3"
