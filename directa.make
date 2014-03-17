@@ -160,6 +160,12 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[chosen][version] = "2.0-alpha4"
   projects[chosen][subdir] = "contrib"
 
+  projects[jplayer][version] = "2.0-beta1"
+  projects[jplayer][subdir] = "contrib"
+
+  projects[shs][version] = "1.6"
+  projects[shs][subdir] = "contrib"
+
  ; projects[multiupload_filefield_widget][version] = "1.13"
  ; projects[multiupload_filefield_widget][subdir] = "contrib"
  ; projects[multiupload_imagefield_widget][version] = "1.3"
