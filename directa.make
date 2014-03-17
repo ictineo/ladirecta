@@ -152,6 +152,12 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[wysiwyg][patch][] = "https://drupal.org/files/wysiwyg-ckeditor-4.1853550.136.patch"
   projects[wysiwyg][subdir] = "contrib"
 
+  projects[ckeditor_image2][type] = "module"
+  projects[ckeditor_image2][download][type] = "git"                                                                                                                                                                                                                   
+  projects[ckeditor_image2][download][url] = "http://git.drupal.org/sandbox/quiron/2219417.git"
+  projects[ckeditor_image2][download][revision] = 511eb16d69e5165f4eaa8aa4c87f919c8b39984f
+  projects[ckeditor_image2][subdir] = "contrib"
+
   projects[jquery_update][version] = "2.3"
   projects[jquery_update][subdir] = "contrib"
 
@@ -249,3 +255,33 @@ libraries[jplayer][download][type] = "file"
 libraries[jplayer][download][url] = "http://jplayer.org/latest/jQuery.jPlayer.2.5.0.zip"
 libraries[jplayer][destination] = "libraries"
 libraries[jplayer][directory_name] = "jplayer"
+
+; Plugins complementaris al ckeditor 4 per 
+; activar el plugin image2 que permet editar les
+; imatges amb titol
+;
+; requerit per ckeditor_image2
+libraries[image2][download][type] = "file"
+libraries[image2][download][url] = "download.ckeditor.com/image2/releases/image2_4.3.3.zip"
+libraries[image2][destination] = "libraries"
+libraries[image2][directory_name] = "ckeditor/plugins"
+
+libraries[widget][download][type] = "file"
+libraries[widget][download][url] = "download.ckeditor.com/widget/releases/widget_4.3.3.zip"
+libraries[widget][destination] = "libraries"
+libraries[widget][directory_name] = "ckeditor/plugins"
+
+libraries[lineutils][download][type] = "file"
+libraries[lineutils][download][url] = "download.ckeditor.com/lineutils/releases/lineutils_4.3.3.zip"
+libraries[][destination] = "libraries"
+libraries[][directory_name] = "ckeditor/plugins"
+
+libraries[lineutils][download][type] = "file"
+libraries[lineutils][download][url] = "download.ckeditor.com/dialog/releases/dialog_4.3.3.zip"
+libraries[lineutils][destination] = "libraries"
+libraries[lineutils][directory_name] = "ckeditor/plugins"
+
+libraries[clipboard][download][type] = "file"
+libraries[clipboard][download][url] = "download.ckeditor.com/clipboard/releases/clipboard_4.3.3.zip"
+libraries[clipboard][destination] = "libraries"
+libraries[clipboard][directory_name] = "ckeditor/plugins"
