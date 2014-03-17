@@ -277,18 +277,19 @@ function ictdirecta_pvenda_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_imatge',
     'label' => 'Imatge',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -296,7 +297,14 @@ function ictdirecta_pvenda_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(),
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',
@@ -309,7 +317,7 @@ function ictdirecta_pvenda_field_default_field_instances() {
             'autocomplete' => 0,
           ),
         ),
-        'imce_filefield_on' => 0,
+        'imce_filefield_on' => 1,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),

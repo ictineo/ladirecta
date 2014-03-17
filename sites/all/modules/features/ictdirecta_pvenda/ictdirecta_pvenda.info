@@ -1,6 +1,7 @@
 name = ictdirecta_pvenda
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = features
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_taxonomies
@@ -33,3 +34,4 @@ features[field_instance][] = node-punts_de_venda-field_tel_fon
 features[field_instance][] = node-punts_de_venda-field_territoripv
 features[field_instance][] = node-punts_de_venda-field_webpv
 features[node][] = punts_de_venda
+features[variable][] = field_bundle_settings_node__punts_de_venda
