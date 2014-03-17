@@ -124,20 +124,17 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'direction' => 'DESC',
-          'property' => 'created',
-          'type' => 'property',
-        ),
-        'target_bundles' => array(
-          'numero_paper' => 'numero_paper',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'entityreference_1',
+          'view_name' => 'numpaper',
         ),
       ),
       'target_type' => 'node',

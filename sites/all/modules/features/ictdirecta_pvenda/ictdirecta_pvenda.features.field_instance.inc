@@ -10,6 +10,39 @@
 function ictdirecta_pvenda_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_punts_de_venda-comment_body'
+  $field_instances['comment-comment_node_punts_de_venda-comment_body'] = array(
+    'bundle' => 'comment_node_punts_de_venda',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-punts_de_venda-body'
   $field_instances['node-punts_de_venda-body'] = array(
     'bundle' => 'punts_de_venda',
@@ -262,6 +295,21 @@ function ictdirecta_pvenda_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -406,6 +454,7 @@ function ictdirecta_pvenda_field_default_field_instances() {
   t('Adreça');
   t('Body');
   t('Codi Postal');
+  t('Comment');
   t('Correu-e');
   t('Horari');
   t('Imatge');

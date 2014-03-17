@@ -101,6 +101,20 @@ function ictdirecta_butlletisonor_views_default_views() {
   $handler->display->display_options['bundles'] = array(
     0 => 'faldo',
   );
+  $translatables['butlletisonor'] = array(
+    t('Master'),
+    t('Butlletisonor'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Nº'),
+    t('Page'),
+    t('Entity Reference'),
+    t('EVA Field'),
+  );
   $export['butlletisonor'] = $view;
 
   return $export;
