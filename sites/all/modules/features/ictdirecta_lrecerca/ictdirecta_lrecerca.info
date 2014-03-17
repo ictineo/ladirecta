@@ -1,6 +1,7 @@
 name = ictdirecta_lrecerca
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = features
 dependencies[] = file
 dependencies[] = ictdirecta_numeropaper
@@ -15,3 +16,4 @@ features[field_base][] = field_adjunt
 features[field_instance][] = node-linies_de_recerca-body
 features[field_instance][] = node-linies_de_recerca-field_adjunt
 features[node][] = linies_de_recerca
+features[variable][] = field_bundle_settings_node__linies_de_recerca

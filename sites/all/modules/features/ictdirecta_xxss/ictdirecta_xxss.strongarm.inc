@@ -102,6 +102,7 @@ function ictdirecta_xxss_strongarm() {
     'twitter' => 'twitter',
     'googleplus' => 'googleplus',
     'linkedin' => 'linkedin',
+    'flattr_share_button' => 0,
   );
   $export['easy_social_block_1_widgets'] = $strongarm;
 
@@ -115,9 +116,37 @@ function ictdirecta_xxss_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_butlleti_sonor_enable';
+  $strongarm->value = 1;
+  $export['easy_social_butlleti_sonor_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_cd_noticies_enable';
+  $strongarm->value = 1;
+  $export['easy_social_cd_noticies_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_cd_serveis_enable';
+  $strongarm->value = 1;
+  $export['easy_social_cd_serveis_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_comment_article_enable';
   $strongarm->value = 0;
   $export['easy_social_comment_article_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_esdeveniment_agenda_enable';
+  $strongarm->value = 1;
+  $export['easy_social_esdeveniment_agenda_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -185,6 +214,13 @@ function ictdirecta_xxss_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_faldo_enable';
+  $strongarm->value = 1;
+  $export['easy_social_faldo_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_flattr_category';
   $strongarm->value = 'text';
   $export['easy_social_flattr_category'] = $strongarm;
@@ -224,6 +260,7 @@ function ictdirecta_xxss_strongarm() {
     'facebook' => 'facebook',
     'twitter' => 'twitter',
     'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
     'linkedin' => 0,
   );
   $export['easy_social_global_widgets'] = $strongarm;
@@ -245,9 +282,30 @@ function ictdirecta_xxss_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_linies_de_recerca_enable';
+  $strongarm->value = 1;
+  $export['easy_social_linies_de_recerca_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_numero_paper_enable';
+  $strongarm->value = 1;
+  $export['easy_social_numero_paper_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'easy_social_page_enable';
   $strongarm->value = 1;
   $export['easy_social_page_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_punts_de_venda_enable';
+  $strongarm->value = 1;
+  $export['easy_social_punts_de_venda_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

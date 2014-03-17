@@ -1,6 +1,7 @@
 name = ictdirecta_cdserveis
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
 dependencies[] = ictdirecta_pvenda
@@ -33,6 +34,7 @@ features[variable][] = comment_default_per_page_cd_serveis
 features[variable][] = comment_form_location_cd_serveis
 features[variable][] = comment_preview_cd_serveis
 features[variable][] = comment_subject_field_cd_serveis
+features[variable][] = field_bundle_settings_node__cd_serveis
 features[variable][] = language_content_type_cd_serveis
 features[variable][] = menu_options_cd_serveis
 features[variable][] = menu_parent_cd_serveis
