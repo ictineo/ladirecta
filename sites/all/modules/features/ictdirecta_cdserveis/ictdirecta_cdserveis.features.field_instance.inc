@@ -118,6 +118,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_logotip',
     'label' => 'Logotip',
     'required' => 0,
@@ -136,6 +137,28 @@ function ictdirecta_cdserveis_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 1,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
