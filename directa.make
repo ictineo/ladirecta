@@ -157,11 +157,6 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[colorbox][version] = "2.4"
   projects[colorbox][subdir] = "contrib"
 
-  projects[imce_wysiwyg][version] = "1.0"
-  projects[imce_wysiwyg][subdir] = "contrib"
-  projects[imce_mkdir][version] = "1.0"
-  projects[imce_mkdir][subdir] = "contrib"
-
   projects[chosen][version] = "2.0-alpha4"
   projects[chosen][subdir] = "contrib"
 
@@ -207,6 +202,15 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[better_messages][subdir] = "contrib"
   projects[message_notify][version] = "2.5"
   projects[message_notify][subdir] = "contrib"
+
+;;; Xarxes Socials
+  projects[easy_social][version] = "2.11"
+  projects[easy_social][subdir] = "contrib"
+  projects[flattr_easy_social][type] = "module"
+  projects[flattr_easy_social][download][type] = "git"                                                                                                                                                                                                                   
+  projects[flattr_easy_social][download][url] = "http://git.drupal.org/sandbox/quiron/2216385.git"
+  projects[flattr_easy_social][download][revision] = db419608763dd70ec419192643c260a541cf200c
+  projects[flattr_easy_social][subdir] = "contrib"
 
 
 ;projects[][version] = ""
