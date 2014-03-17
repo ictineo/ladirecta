@@ -69,6 +69,33 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_butlleti_sonor_count';
+  $strongarm->value = '1';
+  $export['easy_social_butlleti_sonor_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_butlleti_sonor_type';
+  $strongarm->value = '0';
+  $export['easy_social_butlleti_sonor_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_butlleti_sonor_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 'twitter',
+    'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
+    'linkedin' => 0,
+  );
+  $export['easy_social_butlleti_sonor_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__butlleti_sonor';
   $strongarm->value = array(
     'view_modes' => array(
