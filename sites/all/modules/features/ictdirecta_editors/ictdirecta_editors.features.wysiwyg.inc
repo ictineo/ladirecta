@@ -65,6 +65,9 @@ function ictdirecta_editors_wysiwyg_default_profiles() {
           'SpellChecker' => 1,
           'Scayt' => 1,
         ),
+        'imce' => array(
+          'imce' => 1,
+        ),
         'drupal' => array(
           'break' => 1,
         ),
@@ -73,6 +76,7 @@ function ictdirecta_editors_wysiwyg_default_profiles() {
       'toolbar_align' => 'left',
       'path_loc' => 'bottom',
       'resizing' => 1,
+      'default_toolbar_grouping' => 0,
       'verify_html' => 1,
       'preformatted' => 0,
       'convert_fonts_to_spans' => 1,
