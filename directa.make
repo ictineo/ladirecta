@@ -262,26 +262,26 @@ libraries[jplayer][directory_name] = "jplayer"
 ;
 ; requerit per ckeditor_image2
 libraries[image2][download][type] = "file"
-libraries[image2][download][url] = "download.ckeditor.com/image2/releases/image2_4.3.3.zip"
+libraries[image2][download][url] = "http://download.ckeditor.com/image2/releases/image2_4.3.3.zip"
 libraries[image2][destination] = "libraries"
 libraries[image2][directory_name] = "ckeditor/plugins"
 
 libraries[widget][download][type] = "file"
-libraries[widget][download][url] = "download.ckeditor.com/widget/releases/widget_4.3.3.zip"
+libraries[widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.3.3.zip"
 libraries[widget][destination] = "libraries"
 libraries[widget][directory_name] = "ckeditor/plugins"
 
 libraries[lineutils][download][type] = "file"
-libraries[lineutils][download][url] = "download.ckeditor.com/lineutils/releases/lineutils_4.3.3.zip"
+libraries[lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.3.3.zip"
 libraries[lineutils][destination] = "libraries"
 libraries[lineutils][directory_name] = "ckeditor/plugins"
 
 libraries[dialog][download][type] = "file"
-libraries[dialog][download][url] = "download.ckeditor.com/dialog/releases/dialog_4.3.3.zip"
+libraries[dialog][download][url] = "http://download.ckeditor.com/dialog/releases/dialog_4.3.3.zip"
 libraries[dialog][destination] = "libraries"
 libraries[dialog][directory_name] = "ckeditor/plugins"
 
 libraries[clipboard][download][type] = "file"
-libraries[clipboard][download][url] = "download.ckeditor.com/clipboard/releases/clipboard_4.3.3.zip"
+libraries[clipboard][download][url] = "http://download.ckeditor.com/clipboard/releases/clipboard_4.3.3.zip"
 libraries[clipboard][destination] = "libraries"
 libraries[clipboard][directory_name] = "ckeditor/plugins"
