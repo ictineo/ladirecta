@@ -273,13 +273,13 @@ libraries[widget][directory_name] = "ckeditor/plugins"
 
 libraries[lineutils][download][type] = "file"
 libraries[lineutils][download][url] = "download.ckeditor.com/lineutils/releases/lineutils_4.3.3.zip"
-libraries[][destination] = "libraries"
-libraries[][directory_name] = "ckeditor/plugins"
-
-libraries[lineutils][download][type] = "file"
-libraries[lineutils][download][url] = "download.ckeditor.com/dialog/releases/dialog_4.3.3.zip"
 libraries[lineutils][destination] = "libraries"
 libraries[lineutils][directory_name] = "ckeditor/plugins"
+
+libraries[dialog][download][type] = "file"
+libraries[dialog][download][url] = "download.ckeditor.com/dialog/releases/dialog_4.3.3.zip"
+libraries[dialog][destination] = "libraries"
+libraries[dialog][directory_name] = "ckeditor/plugins"
 
 libraries[clipboard][download][type] = "file"
 libraries[clipboard][download][url] = "download.ckeditor.com/clipboard/releases/clipboard_4.3.3.zip"
