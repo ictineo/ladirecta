@@ -84,11 +84,12 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_butlleti_sonor',
     'label' => 'Butlleti sonor',
     'required' => 1,
     'settings' => array(
-      'description_field' => 0,
+      'description_field' => 1,
       'file_directory' => '',
       'file_extensions' => 'mp3 ogg',
       'max_filesize' => '',
@@ -99,7 +100,14 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
       'module' => 'file',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(),
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',
@@ -112,7 +120,7 @@ function ictdirecta_butlletisonor_field_default_field_instances() {
             'autocomplete' => 0,
           ),
         ),
-        'imce_filefield_on' => 0,
+        'imce_filefield_on' => 1,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',

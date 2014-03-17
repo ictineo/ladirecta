@@ -14,7 +14,7 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_butlleti_sonor';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-easy-social';
   $export['additional_settings__active_tab_butlleti_sonor'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -111,6 +111,25 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'imce_custom_content';
+  $strongarm->value = array(
+    'imce_file_path_content' => 1,
+    'imce_mkdir_content' => 1,
+  );
+  $export['imce_custom_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'imce_custom_process';
+  $strongarm->value = array(
+    'imce_mkdir_process_profile' => 1,
+  );
+  $export['imce_custom_process'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_butlleti_sonor';
   $strongarm->value = '0';
   $export['language_content_type_butlleti_sonor'] = $strongarm;
@@ -152,6 +171,20 @@ function ictdirecta_butlletisonor_strongarm() {
   $strongarm->name = 'node_submitted_butlleti_sonor';
   $strongarm->value = 0;
   $export['node_submitted_butlleti_sonor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_butlleti_sonor';
+  $strongarm->value = '';
+  $export['page_title_type_butlleti_sonor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_butlleti_sonor_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_butlleti_sonor_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
