@@ -75,12 +75,11 @@ function ictdirecta_lrecerca_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
     'field_name' => 'field_adjunt',
     'label' => 'Adjunt',
     'required' => 0,
     'settings' => array(
-      'description_field' => 1,
+      'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'txt',
       'max_filesize' => '',
@@ -90,28 +89,6 @@ function ictdirecta_lrecerca_field_default_field_instances() {
       'active' => 1,
       'module' => 'file',
       'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'imce' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'imce_filefield_on' => 1,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',

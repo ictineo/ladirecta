@@ -236,28 +236,6 @@ function ictdirecta_numeropaper_views_default_views() {
     0 => 'faldo',
   );
   $handler->display->display_options['argument_mode'] = 'none';
-  $translatables['numpaper'] = array(
-    t('Master'),
-    t('Numpaper_faldo'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Nº'),
-    t('Title'),
-    t('Page'),
-    t('Entity Reference'),
-    t('EVA Field'),
-  );
   $export['numpaper'] = $view;
 
   return $export;
