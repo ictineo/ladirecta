@@ -204,6 +204,50 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticia-field_destacar'
+  $field_instances['node-noticia-field_destacar'] = array(
+    'bundle' => 'noticia',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_destacar',
+    'label' => 'Destacar',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-noticia-field_documents_adjunts'
   $field_instances['node-noticia-field_documents_adjunts'] = array(
     'bundle' => 'noticia',
@@ -260,6 +304,7 @@ function ictdirecta_noticia_field_default_field_instances() {
             'autocomplete' => 1,
           ),
         ),
+        'imce_filefield_on' => 0,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
@@ -363,6 +408,7 @@ function ictdirecta_noticia_field_default_field_instances() {
             'autocomplete' => 1,
           ),
         ),
+        'imce_filefield_on' => 0,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
@@ -415,6 +461,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
   t('Contingut relacionat');
   t('Data');
+  t('Destacar');
   t('Documents adjunts');
   t('Etiquetes');
   t('Fotografia de portada');
