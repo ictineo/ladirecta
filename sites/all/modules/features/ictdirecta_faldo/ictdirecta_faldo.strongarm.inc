@@ -62,6 +62,40 @@ function ictdirecta_faldo_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_comment_faldo_enable';
+  $strongarm->value = 0;
+  $export['easy_social_comment_faldo_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_faldo_count';
+  $strongarm->value = '1';
+  $export['easy_social_faldo_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_faldo_type';
+  $strongarm->value = '0';
+  $export['easy_social_faldo_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_faldo_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 'twitter',
+    'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
+    'linkedin' => 0,
+  );
+  $export['easy_social_faldo_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_faldo';
   $strongarm->value = '0';
   $export['language_content_type_faldo'] = $strongarm;
