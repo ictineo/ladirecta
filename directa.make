@@ -142,6 +142,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[views_field][version] = "1.2"
   projects[views_field][subdir] = "contrib"
 
+  projects[references_dialog][version] = "1.0-alpha4"
+  projects[references_dialog][subdir] = "contrib"
+
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
   projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch"
