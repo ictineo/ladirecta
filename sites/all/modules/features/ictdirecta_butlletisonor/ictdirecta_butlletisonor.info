@@ -36,6 +36,7 @@ features[variable][] = comment_subject_field_butlleti_sonor
 features[variable][] = easy_social_butlleti_sonor_count
 features[variable][] = easy_social_butlleti_sonor_type
 features[variable][] = easy_social_butlleti_sonor_widgets
+features[variable][] = easy_social_comment_butlleti_sonor_enable
 features[variable][] = field_bundle_settings_node__butlleti_sonor
 features[variable][] = imce_custom_content
 features[variable][] = imce_custom_process
