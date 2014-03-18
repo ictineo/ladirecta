@@ -173,6 +173,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
             'autocomplete' => 0,
           ),
         ),
+        'imce_filefield_on' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
