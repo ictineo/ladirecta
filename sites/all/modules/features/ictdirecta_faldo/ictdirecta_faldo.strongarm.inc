@@ -13,6 +13,13 @@ function ictdirecta_faldo_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_faldo';
+  $strongarm->value = 'edit-easy-social';
+  $export['additional_settings__active_tab_faldo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_faldo';
   $strongarm->value = 0;
   $export['comment_anonymous_faldo'] = $strongarm;
@@ -137,6 +144,20 @@ function ictdirecta_faldo_strongarm() {
   $strongarm->name = 'node_submitted_faldo';
   $strongarm->value = 0;
   $export['node_submitted_faldo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_faldo';
+  $strongarm->value = '';
+  $export['page_title_type_faldo'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_faldo_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_faldo_showfield'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
