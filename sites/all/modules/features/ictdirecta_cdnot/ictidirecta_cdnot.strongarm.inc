@@ -13,6 +13,13 @@ function ictidirecta_cdnot_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_cd_noticies';
+  $strongarm->value = 'edit-easy-social';
+  $export['additional_settings__active_tab_cd_noticies'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_cd_noticies';
   $strongarm->value = 0;
   $export['comment_anonymous_cd_noticies'] = $strongarm;
@@ -137,6 +144,30 @@ function ictidirecta_cdnot_strongarm() {
   $strongarm->name = 'node_submitted_cd_noticies';
   $strongarm->value = 0;
   $export['node_submitted_cd_noticies'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_cd_noticies';
+  $strongarm->value = '';
+  $export['page_title_type_cd_noticies'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_cd_noticies_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_cd_noticies_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_cd_noticies';
+  $strongarm->value = array(
+    'status' => '0',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_cd_noticies'] = $strongarm;
 
   return $export;
 }
