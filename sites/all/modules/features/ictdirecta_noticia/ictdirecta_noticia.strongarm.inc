@@ -13,6 +13,13 @@ function ictdirecta_noticia_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_noticia';
+  $strongarm->value = 'edit-submission';
+  $export['additional_settings__active_tab_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_noticia';
   $strongarm->value = 0;
   $export['comment_anonymous_noticia'] = $strongarm;
@@ -58,6 +65,40 @@ function ictdirecta_noticia_strongarm() {
   $strongarm->name = 'comment_subject_field_noticia';
   $strongarm->value = 1;
   $export['comment_subject_field_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_noticia_count';
+  $strongarm->value = '1';
+  $export['easy_social_noticia_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_noticia_enable';
+  $strongarm->value = 1;
+  $export['easy_social_noticia_enable'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_noticia_type';
+  $strongarm->value = '0';
+  $export['easy_social_noticia_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_noticia_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 'twitter',
+    'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
+    'linkedin' => 0,
+  );
+  $export['easy_social_noticia_widgets'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -145,6 +186,30 @@ function ictdirecta_noticia_strongarm() {
   $strongarm->name = 'node_submitted_noticia';
   $strongarm->value = 0;
   $export['node_submitted_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_noticia';
+  $strongarm->value = '';
+  $export['page_title_type_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_noticia_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_noticia_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_noticia';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.9',
+  );
+  $export['xmlsitemap_settings_node_noticia'] = $strongarm;
 
   return $export;
 }
