@@ -3,4 +3,5 @@ core = 7.x
 package = Features
 dependencies[] = ictdirecta_basicconf
 dependencies[] = ictdirecta_editors
+dependencies[] = ictdirecta_noticia
 features[features_api][] = api:2
