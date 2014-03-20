@@ -146,6 +146,16 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[views_field][version] = "1.2"
   projects[views_field][subdir] = "contrib"
 
+  ; si no es la dev no mostra el widget asociat al camp
+  projects[references_dialog][version] = "1.x-dev"
+  projects[references_dialog][subdir] = "contrib"
+  ; patch de compatibilitat amb similarterms
+  projects[references_dialog][patch][] = "https://drupal.org/files/issues/compatibility_similarterms-v1.patch"
+
+  projects[similarterms][version] = "2.3"
+  projects[similarterms][subdir] = "contrib"
+
+
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
   ;projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch"

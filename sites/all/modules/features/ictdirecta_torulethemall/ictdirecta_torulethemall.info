@@ -13,4 +13,5 @@ dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = ictidirecta_cdnot
 dependencies[] = ictdirecta_imce
+dependencies[] = ictdirecta_noticia
 features[features_api][] = api:2
