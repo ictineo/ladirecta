@@ -142,8 +142,13 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[views_field][version] = "1.2"
   projects[views_field][subdir] = "contrib"
 
-  projects[references_dialog][version] = "1.0-alpha4"
+  ; si no es la dev no mostra el widget asociat al camp
+  projects[references_dialog][version] = "1.x-dev"
   projects[references_dialog][subdir] = "contrib"
+
+  projects[similarterms][version] = "2.3"
+  projects[similarterms][subdir] = "contrib"
+
 
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
