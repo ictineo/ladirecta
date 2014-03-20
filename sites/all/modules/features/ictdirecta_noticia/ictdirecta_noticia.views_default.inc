@@ -40,17 +40,6 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Etiquetes */
-  $handler->display->display_options['fields']['field_etiquetes']['id'] = 'field_etiquetes';
-  $handler->display->display_options['fields']['field_etiquetes']['table'] = 'field_data_field_etiquetes';
-  $handler->display->display_options['fields']['field_etiquetes']['field'] = 'field_etiquetes';
-  $handler->display->display_options['fields']['field_etiquetes']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_etiquetes']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_etiquetes']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_etiquetes']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_etiquetes']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_etiquetes']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_etiquetes']['field_api_classes'] = TRUE;
   /* Field: Content: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
@@ -73,6 +62,17 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_seccio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
+  /* Field: Content: Etiquetes */
+  $handler->display->display_options['fields']['field_etiquetes']['id'] = 'field_etiquetes';
+  $handler->display->display_options['fields']['field_etiquetes']['table'] = 'field_data_field_etiquetes';
+  $handler->display->display_options['fields']['field_etiquetes']['field'] = 'field_etiquetes';
+  $handler->display->display_options['fields']['field_etiquetes']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_etiquetes']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_etiquetes']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_etiquetes']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_etiquetes']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_etiquetes']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_etiquetes']['field_api_classes'] = TRUE;
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -184,6 +184,12 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'd/m/Y';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
 
   /* Display: Reference dialog Search */
@@ -211,9 +217,9 @@ function ictdirecta_noticia_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Title'),
-    t('Etiquetes'),
     t('Autor'),
     t('Secció'),
+    t('Etiquetes'),
     t('Post date'),
     t('All'),
     t('Page'),
