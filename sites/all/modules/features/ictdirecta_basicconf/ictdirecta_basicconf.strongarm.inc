@@ -356,7 +356,7 @@ system/ajax/*';
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '0',
-    'javascript' => 'b52Qn6xVxGASm0tjRqKF8iRgd0YAhaGUc2z0D9RSSOM',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 
