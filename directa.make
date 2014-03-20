@@ -145,6 +145,8 @@ projects[strongarm][subdir] = "contrib/dev"
   ; si no es la dev no mostra el widget asociat al camp
   projects[references_dialog][version] = "1.x-dev"
   projects[references_dialog][subdir] = "contrib"
+  ; patch de compatibilitat amb similarterms
+  projects[references_dialog][patch][] = "https://drupal.org/files/issues/compatibility_similarterms-v1.patch"
 
   projects[similarterms][version] = "2.3"
   projects[similarterms][subdir] = "contrib"
