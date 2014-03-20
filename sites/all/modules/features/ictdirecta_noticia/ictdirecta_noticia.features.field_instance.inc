@@ -427,6 +427,7 @@ function ictdirecta_noticia_field_default_field_instances() {
           'filefield_sources' => array(
             'attach' => 'attach',
             'clipboard' => 'clipboard',
+            'imce' => 'imce',
             'reference' => 'reference',
             'remote' => 'remote',
             'upload' => 'upload',
@@ -443,7 +444,7 @@ function ictdirecta_noticia_field_default_field_instances() {
             'autocomplete' => 1,
           ),
         ),
-        'imce_filefield_on' => 0,
+        'imce_filefield_on' => 1,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
@@ -531,6 +532,7 @@ function ictdirecta_noticia_field_default_field_instances() {
           'filefield_sources' => array(
             'attach' => 'attach',
             'clipboard' => 'clipboard',
+            'imce' => 'imce',
             'reference' => 'reference',
             'remote' => 'remote',
             'upload' => 'upload',
@@ -547,7 +549,7 @@ function ictdirecta_noticia_field_default_field_instances() {
             'autocomplete' => 1,
           ),
         ),
-        'imce_filefield_on' => 0,
+        'imce_filefield_on' => 1,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',

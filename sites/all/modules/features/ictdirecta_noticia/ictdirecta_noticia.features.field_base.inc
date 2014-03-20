@@ -10,35 +10,6 @@
 function ictdirecta_noticia_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
-  $field_bases['body'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(
-      0 => 'node',
-    ),
-    'field_name' => 'body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_with_summary',
-  );
-
   // Exported field_base: 'comment_body'
   $field_bases['comment_body'] = array(
     'active' => 1,
@@ -124,7 +95,14 @@ function ictdirecta_noticia_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_contingut_relacionat_ref',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -150,62 +128,6 @@ function ictdirecta_noticia_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
-  );
-
-  // Exported field_base: 'field_data'
-  $field_bases['field_data'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_data',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'date',
-    'settings' => array(
-      'cache_count' => 4,
-      'cache_enabled' => 0,
-      'granularity' => array(
-        'day' => 'day',
-        'hour' => 'hour',
-        'minute' => 'minute',
-        'month' => 'month',
-        'second' => 0,
-        'year' => 'year',
-      ),
-      'timezone_db' => 'UTC',
-      'todate' => '',
-      'tz_handling' => 'site',
-    ),
-    'translatable' => 0,
-    'type' => 'datetime',
-  );
-
-  // Exported field_base: 'field_destacar'
-  $field_bases['field_destacar'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_destacar',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => '',
-        1 => 'Destacar',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_destacat'

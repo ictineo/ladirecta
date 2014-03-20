@@ -14,7 +14,7 @@ function ictdirecta_noticia_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_noticia';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-xmlsitemap';
   $export['additional_settings__active_tab_noticia'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -65,6 +65,13 @@ function ictdirecta_noticia_strongarm() {
   $strongarm->name = 'comment_subject_field_noticia';
   $strongarm->value = 1;
   $export['comment_subject_field_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_comment_noticia_enable';
+  $strongarm->value = 0;
+  $export['easy_social_comment_noticia_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
