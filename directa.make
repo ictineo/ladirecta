@@ -79,6 +79,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[webform][version] = "3.19"
   projects[webform][subdir] = "contrib"
 
+  projects[media][version] = "1.4"
+  projects[media][subdir] = "contrib"
+
   projects[date][version] = "2.6"
   projects[date][subdir] = "contrib"
 
