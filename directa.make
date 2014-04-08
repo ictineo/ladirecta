@@ -171,6 +171,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[jquery_update][version] = "2.3"
   projects[jquery_update][subdir] = "contrib"
 
+  projects[imagecache_actions][version] = "1.4"
+  projects[imagecache_actions][subdir] = "contrib"
+
   projects[colorbox][version] = "2.4"
   projects[colorbox][subdir] = "contrib"
 
