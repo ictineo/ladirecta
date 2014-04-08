@@ -164,6 +164,47 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fotogaleria-field_etiquetes'
+  $field_instances['node-fotogaleria-field_etiquetes'] = array(
+    'bundle' => 'fotogaleria',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_etiquetes',
+    'label' => 'Etiquetes',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-fotogaleria-field_imatge'
   $field_instances['node-fotogaleria-field_imatge'] = array(
     'bundle' => 'fotogaleria',
@@ -310,13 +351,100 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fotogaleria-field_seccio'
+  $field_instances['node-fotogaleria-field_seccio'] = array(
+    'bundle' => 'fotogaleria',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_seccio',
+    'label' => 'Secció web',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-fotogaleria-field_territori'
+  $field_instances['node-fotogaleria-field_territori'] = array(
+    'bundle' => 'fotogaleria',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_territori',
+    'label' => 'Territori',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'shs',
+      'settings' => array(
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+          'use_chosen' => 'chosen',
+        ),
+      ),
+      'type' => 'taxonomy_shs',
+      'weight' => 13,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Autor');
   t('Body');
   t('Data');
+  t('Etiquetes');
   t('Imatges');
   t('Portada fotogaleria');
+  t('Secció web');
+  t('Territori');
 
   return $field_instances;
 }
