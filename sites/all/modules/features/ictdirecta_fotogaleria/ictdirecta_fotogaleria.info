@@ -1,0 +1,12 @@
+name = ictdirecta_fotogaleria
+core = 7.x
+package = Features
+dependencies[] = ictdirecta_noticia
+dependencies[] = imagecache_actions
+features[features_api][] = api:2
+features[field_base][] = field_portada_fotogaleria
+features[field_instance][] = node-fotogaleria-body
+features[field_instance][] = node-fotogaleria-field_autor
+features[field_instance][] = node-fotogaleria-field_data
+features[field_instance][] = node-fotogaleria-field_imatge
+features[field_instance][] = node-fotogaleria-field_portada_fotogaleria
