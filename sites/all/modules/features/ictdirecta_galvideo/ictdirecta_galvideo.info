@@ -1,0 +1,14 @@
+name = ictdirecta_galvideo
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = comment_default_mode_galeria_video
+features[variable][] = field_bundle_settings_node__galeria_video
+features[variable][] = language_content_type_galeria_video
+features[variable][] = menu_options_galeria_video
+features[variable][] = page_title_type_video
+features[variable][] = page_title_type_video_showfield
+features[variable][] = save_continue_video
