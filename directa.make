@@ -234,6 +234,12 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[flattr_easy_social][download][url] = "http://git.drupal.org/sandbox/quiron/2216385.git"
   projects[flattr_easy_social][download][revision] = db419608763dd70ec419192643c260a541cf200c
   projects[flattr_easy_social][subdir] = "contrib"
+;; Web Semantica
+  projects[schema][version] = ""
+  projects[schema][subdir] = "contrib"
+
+  projects[rdfx][version] = ""
+  projects[rdfx][subdir] = "contrib"
 
 
 ;projects[][version] = ""
@@ -259,7 +265,6 @@ libraries[chosen][download][type] = "file"
 libraries[chosen][download][url] = "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
 libraries[chosen][destination] = "libraries"
 libraries[chosen][directory_name] = "chosen"
-
 
 libraries[circleplayer][download][type] = "git"
 libraries[circleplayer][download][url] = "https://github.com/maboa/circleplayer.git"
