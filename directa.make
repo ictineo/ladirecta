@@ -127,6 +127,14 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[select_or_other][version] = "2.20"
   projects[select_or_other][subdir] = "contrib"
 
+  projects[media][version] = "1.4"
+  projects[media][subdir] = "contrib"
+  
+  projects[media_youtube][version] = "2.0"
+  projects[media_youtube][subdir] = "contrib"
+  
+  projects[media_vimeo][version] = "2.0"
+  projects[media_vimeo][subdir] = "contrib"
 ;;; views
   projects[views][version] = "3.7"
   projects[views][subdir] = "contrib"
