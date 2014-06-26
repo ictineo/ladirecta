@@ -4,6 +4,7 @@ package = Features
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = ictdirecta_lrecerca
+dependencies[] = ictdirecta_noticia
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = image
 dependencies[] = node

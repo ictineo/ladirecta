@@ -20,6 +20,13 @@ function ictdirecta_actualitat_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_actualitat';
+  $strongarm->value = '2';
+  $export['comment_actualitat'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_actualitat';
   $strongarm->value = 0;
   $export['comment_anonymous_actualitat'] = $strongarm;
@@ -48,13 +55,6 @@ function ictdirecta_actualitat_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_actualitat';
-  $strongarm->value = '2';
-  $export['comment_actualitat'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_actualitat';
   $strongarm->value = '1';
   $export['comment_preview_actualitat'] = $strongarm;
@@ -65,13 +65,6 @@ function ictdirecta_actualitat_strongarm() {
   $strongarm->name = 'comment_subject_field_actualitat';
   $strongarm->value = 1;
   $export['comment_subject_field_actualitat'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'easy_social_comment_actualitat_enable';
-  $strongarm->value = 0;
-  $export['easy_social_comment_actualitat_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -110,15 +103,9 @@ function ictdirecta_actualitat_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_field_collection_item__field_contingut_relacionat';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_field_collection_item__field_contingut_relacionat'] = $strongarm;
+  $strongarm->name = 'easy_social_comment_actualitat_enable';
+  $strongarm->value = 0;
+  $export['easy_social_comment_actualitat_enable'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

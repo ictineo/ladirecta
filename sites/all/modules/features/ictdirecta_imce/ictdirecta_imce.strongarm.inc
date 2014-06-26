@@ -16,17 +16,17 @@ function ictdirecta_imce_strongarm() {
   $strongarm->name = 'imce_profiles';
   $strongarm->value = array(
     1 => array(
-      'name' => 'IMCE general',
+      'name' => 'User-1',
       'usertab' => 1,
-      'filesize' => '0',
-      'quota' => '0',
-      'tuquota' => '0',
+      'filesize' => 0,
+      'quota' => 0,
+      'tuquota' => 0,
       'extensions' => '*',
       'dimensions' => '1200x1200',
-      'filenum' => '0',
+      'filenum' => 0,
       'directories' => array(
         0 => array(
-          'name' => '_files',
+          'name' => '.',
           'subnav' => 1,
           'browse' => 1,
           'upload' => 1,
@@ -57,7 +57,7 @@ function ictdirecta_imce_strongarm() {
           'suffix' => '',
         ),
       ),
-      'mkdirnum' => '0',
+      'mkdirnum' => 0,
     ),
     2 => array(
       'name' => 'Sample profile',

@@ -43,112 +43,6 @@ function ictdirecta_actualitat_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_contingut_relacionat_ref'
-  $field_instances['field_collection_item-field_contingut_relacionat-field_contingut_relacionat_ref'] = array(
-    'bundle' => 'field_contingut_relacionat',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_contingut_relacionat_ref',
-    'label' => 'Contingut relacionat',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_destacat'
-  $field_instances['field_collection_item-field_contingut_relacionat-field_destacat'] = array(
-    'bundle' => 'field_contingut_relacionat',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_destacat',
-    'label' => 'Destacat',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_promogut_portada'
-  $field_instances['field_collection_item-field_contingut_relacionat-field_promogut_portada'] = array(
-    'bundle' => 'field_contingut_relacionat',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_promogut_portada',
-    'label' => 'Mostra\'l en portada	',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-actualitat-body'
   $field_instances['node-actualitat-body'] = array(
     'bundle' => 'actualitat',
@@ -604,11 +498,9 @@ function ictdirecta_actualitat_field_default_field_instances() {
   t('Contingut relacionat');
   t('Data');
   t('Destacar');
-  t('Destacat');
   t('Documents adjunts');
   t('Etiquetes');
   t('Fotografia de portada');
-  t('Mostra\'l en portada	');
   t('Secció');
 
   return $field_instances;

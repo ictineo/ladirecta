@@ -53,7 +53,7 @@ function ictdirecta_numeropaper_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Imatge portada */
+  /* Field: : field_imatge_portada */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
@@ -204,7 +204,7 @@ function ictdirecta_numeropaper_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Imatge portada */
+  /* Field: : field_imatge_portada */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
@@ -219,7 +219,7 @@ function ictdirecta_numeropaper_views_default_views() {
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Imatge portada */
+  /* Field: : field_imatge_portada */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
