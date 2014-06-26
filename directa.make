@@ -130,7 +130,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[media][version] = "1.4"
   projects[media][subdir] = "contrib"
   
-  projects[media_youtube][version] = "2.0"
+  projects[media_youtube][version] = "2.0-rc4"
   projects[media_youtube][subdir] = "contrib"
   
   projects[media_vimeo][version] = "2.0"
