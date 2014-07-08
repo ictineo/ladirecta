@@ -167,10 +167,10 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 300,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -208,10 +208,11 @@ function ictdirecta_noticia_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'link_title_plain',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -268,7 +269,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -308,10 +309,17 @@ function ictdirecta_noticia_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -365,7 +373,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -383,7 +391,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -404,7 +412,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -470,7 +478,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -493,50 +501,49 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_fotografia_de_portada'
-  $field_instances['node-noticia-field_fotografia_de_portada'] = array(
+  // Exported field_instance: 'node-noticia-field_fotografia_portada'
+  $field_instances['node-noticia-field_fotografia_portada'] = array(
     'bundle' => 'noticia',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'figure',
-    'field_name' => 'field_fotografia_de_portada',
-    'label' => 'Fotografia de portada',
-    'required' => 0,
+    'field_name' => 'field_fotografia_portada',
+    'label' => 'Fotografia_portada',
+    'required' => FALSE,
     'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'fotografies_portada',
-      'file_extensions' => 'jpg jpeg gif png',
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'file',
+      'module' => 'image',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 'attach',
-            'clipboard' => 'clipboard',
-            'imce' => 'imce',
-            'reference' => 'reference',
-            'remote' => 'remote',
-            'upload' => 'upload',
-          ),
+          'filefield_sources' => array(),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',
@@ -546,13 +553,14 @@ function ictdirecta_noticia_field_default_field_instances() {
             'imce_mode' => 0,
           ),
           'source_reference' => array(
-            'autocomplete' => 1,
+            'autocomplete' => 0,
           ),
         ),
-        'imce_filefield_on' => 1,
+        'imce_filefield_on' => 0,
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'image_image',
       'weight' => 6,
     ),
   );
@@ -572,9 +580,12 @@ function ictdirecta_noticia_field_default_field_instances() {
         'weight' => 7,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'shs',
+        'settings' => array(
+          'linked' => 1,
+        ),
+        'type' => 'shs_default',
         'weight' => 0,
       ),
     ),
@@ -607,7 +618,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Destacat');
   t('Documents adjunts');
   t('Etiquetes');
-  t('Fotografia de portada');
+  t('Fotografia_portada');
   t('Mostra\'l en portada	');
   t('Secció');
 

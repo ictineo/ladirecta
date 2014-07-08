@@ -51,7 +51,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -151,7 +151,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -164,7 +164,12 @@ function ictdirecta_numeropaper_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'file',
-        'settings' => array(),
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'show_description' => 0,
+          'tag' => 'span',
+        ),
         'type' => 'file_default',
         'weight' => 3,
       ),
@@ -209,6 +214,79 @@ function ictdirecta_numeropaper_field_default_field_instances() {
       ),
       'type' => 'file_generic',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-numero_paper-field_portada_numero'
+  $field_instances['node-numero_paper-field_portada_numero'] = array(
+    'bundle' => 'numero_paper',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_portada_numero',
+    'label' => 'Portada numero',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'numeros/portada',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 'imce',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 0,
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 1,
+          ),
+        ),
+        'imce_filefield_on' => 1,
+        'preview_image_style' => 'medium',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
     ),
   );
 
@@ -258,6 +336,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
   t('Descripcio');
   t('Nº');
   t('PDF');
+  t('Portada numero');
   t('Tags');
 
   return $field_instances;

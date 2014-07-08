@@ -133,8 +133,11 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[media_youtube][version] = "2.0-rc4"
   projects[media_youtube][subdir] = "contrib"
   
+
   projects[media_vimeo][version] = "2.0"
   projects[media_vimeo][subdir] = "contrib"
+  
+
 ;;; views
   projects[views][version] = "3.7"
   projects[views][subdir] = "contrib"
@@ -166,9 +169,12 @@ projects[strongarm][subdir] = "contrib/dev"
 
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
-  ;projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch"
+  ;projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-ckeditor4-1853550-4.patch" 
+  projects[wysiwyg][patch][] = "https://www.drupal.org/files/wysiwyg-ajax-error-1757684-13.patch"
   projects[wysiwyg][patch][] = "https://drupal.org/files/wysiwyg-ckeditor-4.1853550.136.patch"
   projects[wysiwyg][subdir] = "contrib"
+
+
 
   projects[ckeditor_image2][type] = "module"
   projects[ckeditor_image2][download][type] = "git"                                                                                                                                                                                                                   

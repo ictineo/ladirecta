@@ -72,7 +72,7 @@ function ictdirecta_noticia_field_default_field_bases() {
   // Exported field_base: 'field_contingut_relacionat'
   $field_bases['field_contingut_relacionat'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_contingut_relacionat',
@@ -91,7 +91,7 @@ function ictdirecta_noticia_field_default_field_bases() {
   // Exported field_base: 'field_contingut_relacionat_ref'
   $field_bases['field_contingut_relacionat_ref'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_contingut_relacionat_ref',
@@ -220,13 +220,13 @@ function ictdirecta_noticia_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_fotografia_de_portada'
-  $field_bases['field_fotografia_de_portada'] = array(
+  // Exported field_base: 'field_fotografia_portada'
+  $field_bases['field_fotografia_portada'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_fotografia_de_portada',
+    'field_name' => 'field_fotografia_portada',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -241,14 +241,13 @@ function ictdirecta_noticia_field_default_field_bases() {
       ),
     ),
     'locked' => 0,
-    'module' => 'file',
+    'module' => 'image',
     'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
+      'default_image' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'image',
   );
 
   // Exported field_base: 'field_promogut_portada'

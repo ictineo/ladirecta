@@ -30,7 +30,7 @@ function ictdirecta_numeropaper_node_info() {
       'base' => 'node_content',
       'description' => t('Per publicar un número en paper sencer de La Directa'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Títol'),
       'help' => '',
     ),
   );
