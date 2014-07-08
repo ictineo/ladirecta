@@ -1,7 +1,6 @@
 name = ictdirecta_torulethemall
 core = 7.x
 package = Features
-dependencies[] = ictdirecta_actualitat_
 dependencies[] = ictdirecta_basicconf
 dependencies[] = ictdirecta_butlletisonor
 dependencies[] = ictdirecta_cdserveis
@@ -13,5 +12,4 @@ dependencies[] = ictdirecta_noticia
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = ictdirecta_xxss
 dependencies[] = ictidirecta_cdnot
-dependencies[] = ictidirecta_video
 features[features_api][] = api:2
