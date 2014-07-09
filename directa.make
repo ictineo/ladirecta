@@ -44,6 +44,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[fences][version] = "1.0"
   projects[fences][subdir] = "contrib"
 
+  projects[conditional_fields][version] = "7.x-3.0-alpha1"
+  projects[conditional_fields][subdir] = "contrib"
+
 ;;; Generics posicionament i funcionalitats
   projects[google_analytics][version] = "1.4"
   projects[google_analytics][subdir] = "contrib"
