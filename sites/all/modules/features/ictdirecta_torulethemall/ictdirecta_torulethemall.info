@@ -10,6 +10,11 @@ dependencies[] = ictdirecta_faldo
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_hemeroteca
+<<<<<<< HEAD
 dependencies[] = ictdirecta_taxonomies
+=======
+dependencies[] = ictdirecta_solr
+>>>>>>> 787a86d4ac99bcebd179b70304b73aadde362baa
 dependencies[] = ictdirecta_xxss
 features[features_api][] = api:2
