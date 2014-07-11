@@ -1,0 +1,16 @@
+name = Views Field
+description = Defines selected field tables as base tables to views and selected columns as fields.
+package = Fields
+version = VERSION
+core = 7.x
+dependencies[] = field
+dependencies[] = views (>=3.0)
+files[] = views_field.join.inc
+;files[] = views_field.test
+
+; Information added by drupal.org packaging script on 2013-01-03
+version = "7.x-1.2"
+core = "7.x"
+project = "views_field"
+datestamp = "1357247674"
+

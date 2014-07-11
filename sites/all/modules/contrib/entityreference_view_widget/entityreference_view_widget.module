@@ -1,0 +1,485 @@
+<?php
+
+/**
+ * @file
+ * Entityreference view widget module.
+ */
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function entityreference_view_widget_entity_info_alter(&$info) {
+  foreach ($info as $entity_type => $data) {
+    $info[$entity_type]['view modes']['entityreference_view_widget'] = array(
+      'label' => t('Entity Reference View Widget'),
+      'custom settings' => TRUE,
+    );
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function entityreference_view_widget_views_data_alter(&$data) {
+  foreach (entity_get_info() as $info) {
+    if (isset($info['base table']) && isset($data[$info['base table']]['table'])) {
+      $data[$info['base table']]['entityreference_view_widget'] = array(
+        'title' => $data[$info['base table']]['table']['group'],
+        'group' => t('Entity Reference View Widget Checkbox'),
+        'help' => t('Provide a checkbox to select the row for an entity reference.'),
+        'real field' => $info['entity keys']['id'],
+        'field' => array(
+          'handler' => 'entityreference_view_widget_handler_field_checkbox',
+          'click sortable' => FALSE,
+        ),
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function entityreference_view_widget_menu() {
+  $items['entityreference_view_widget/%ctools_js/modal/%/%/%'] = array(
+    'title' => 'Entity reference view widget modal',
+    'page callback' => 'entityreference_view_widget_modal',
+    'page arguments' => array(1, 3, 4, 5),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['entityreference_view_widget/ajax'] = array(
+    'page callback' => 'entityreference_view_widget_ajax',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function entityreference_view_widget_theme() {
+  return array(
+    'entityreference_view_widget_widget' => array(
+      'render element' => 'widget',
+    ),
+    'entityreference_view_widget_rows' => array(
+      'render element' => 'rows',
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function entityreference_view_widget_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'entityreference_view_widget') . '/views',
+  );
+}
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function entityreference_view_widget_field_widget_info() {
+  $widgets['entityreference_view_widget'] = array(
+    'label' => t('View'),
+    'description' => t('An advanced, view-based widget.'),
+    'field types' => array('entityreference'),
+    'behaviors' => array(
+      'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+      'default value' => FIELD_BEHAVIOR_NONE,
+    ),
+  );
+
+  return $widgets;
+}
+
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function entityreference_view_widget_field_widget_settings_form($field, $instance) {
+  $widget = $instance['widget'];
+  $settings = $widget['settings'];
+
+  if ($widget['type'] == 'entityreference_view_widget') {
+    // Get a list of all views that contain a "Entityreference View Widget" display.
+    $options = array();
+    $displays = views_get_applicable_views('entityreference view display');
+    foreach ($displays as $data) {
+      list($view, $display_id) = $data;
+      $view_name = !empty($view->human_name) ? $view->human_name : $view->name;
+      $options[$view->name . '|' . $display_id] = check_plain($view_name . ' | ' . $view->display_handler->display->display_title);
+    }
+
+    $element['view'] = array(
+      '#type' => 'select',
+      '#title' => t('View'),
+      '#description' => t('Specify the View to use for selecting items. Only views that have an "Entityreference View Widget" display are shown.'),
+      '#options' => $options,
+      '#default_value' => isset($settings['view']) ? $settings['view'] : '',
+      '#required' => TRUE,
+    );
+    $element['pass_argument'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Pass selected entity ids to View'),
+      '#description' => t('If enabled, the View will get all selected entity ids as the first argument. Useful for excluding already selected items.'),
+      '#default_value' => isset($settings['pass_argument']) ? $settings['pass_argument'] : '',
+    );
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function entityreference_view_widget_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  ctools_include('ajax');
+  ctools_include('modal');
+  ctools_include('plugins');
+  $element['#theme'] = 'entityreference_view_widget_widget';
+  $element['#cardinality'] = $field['cardinality'];
+
+  // Build the path of the element.
+  $parents_path = $field['field_name'];
+  if (!empty($form['#parents'])) {
+    $parents = $form['#parents'];
+    $first_parent = array_shift($parents);
+    $parents_path = $first_parent . '[' . implode('][', $parents) . '][' . $field['field_name'] . ']';
+  }
+
+  $frontend_id = drupal_html_id($field['field_name']);
+  $target_view = explode('|', $instance['widget']['settings']['view']);
+  $settings_selector = 'entityreference-view-widget-' . $frontend_id . '-settings';
+  $form['#after_build'][] = 'entityreference_view_widget_add_resources';
+
+  $settings = array(
+    'langcode' => $langcode,
+    'table_id' => $frontend_id . '-values',
+    'target_type' => $field['settings']['target_type'],
+    'cardinality' => $field['cardinality'],
+    'element' => $parents_path,
+    'required' => $instance['required'],
+    'field_label' => $instance['label'],
+  );
+
+  $form[$field['field_name'] . '_settings'] = array(
+    '#type' => 'hidden',
+    '#default_value' => drupal_json_encode($settings),
+    '#weight' => 100,
+    '#attributes' => array(
+      'id' => $settings_selector,
+    ),
+  );
+
+  $element['add_more'] = array(
+    '#markup' => ctools_modal_text_button(t('Add items'), 'entityreference_view_widget/nojs/modal/' . $target_view[0] . '/' . $target_view[1] . '/' . $settings_selector, '', 'button field-add-more-submit ervw-add-items'),
+    '#element_validate' => array('entityreference_view_widget_validate'),
+    '#name' => $field['field_name'],
+    '#attached' => array(
+      'css' => array(drupal_get_path('module', 'entityreference_view_widget') . '/entityreference_view_widget.css'),
+    ),
+    '#settings' => $settings,
+  );
+
+  foreach ($items as $delta => $item) {
+    $element[$delta] = entityreference_view_widget_row($delta, $parents_path, $field['settings']['target_type'], $langcode, $item['target_id'], count($items));
+  }
+
+  return $element;
+}
+
+/**
+ * Attach the required js and libraries for the widget.
+ */
+function entityreference_view_widget_add_resources($form, &$form_state) {
+  ctools_include('ajax');
+  ctools_include('modal');
+  ctools_include('plugins');
+  ctools_modal_add_js();
+  drupal_add_js(drupal_get_path('module', 'entityreference_view_widget') . '/entityreference_view_widget.js');
+
+  return $form;
+}
+
+/**
+ * Pushes input values to form state.
+ */
+function entityreference_view_widget_validate($element, &$form_state, $form) {
+  array_pop($element['#parents']);
+  $input = drupal_array_get_nested_value($form_state['input'], $element['#parents']);
+
+  if (!empty($input)) {
+    $max_delta = count($input);
+    $rows = array();
+    foreach ($input as $delta => $value) {
+      if (!empty($value['target_id'])) {
+        $rows[$delta] = entityreference_view_widget_row($delta, $element['#settings']['element'], $element['#settings']['target_type'], $element['#settings']['langcode'], $value['target_id'], $max_delta);
+        $valid = TRUE;
+      }
+    }
+    // Put back the rows in the form.
+    form_set_value($element, $input, $form_state);
+    $form_existing = drupal_array_get_nested_value($form, $element['#parents']);
+    drupal_array_set_nested_value($form, $element['#parents'], array_merge($form_existing, $rows));
+  }
+
+  if ($element['#settings']['required'] && empty($valid)) {
+    form_set_error($element['#settings']['element'], t('@f field is required!', array('@f' => $element['#settings']['field_label'])));
+  }
+}
+
+/**
+ * Callback for ctools modal window.
+ *
+ * @param string $mode
+ *   Mode: js or nojs.
+ * @param string $name
+ *   Machine name of the target view.
+ * @param string $display
+ *   Display name of the target view.
+ * @param string $settings_selector
+ *   The dom selector of the settings element.
+ */
+function entityreference_view_widget_modal($mode, $name, $display, $settings_selector) {
+  ctools_include('modal');
+  ctools_include('ajax');
+
+  $view = views_get_view($name);
+  $view->set_display($display);
+  $view->use_ajax = TRUE;
+  $view->display[$display]->display_options['use_ajax'] = TRUE;
+
+  if (method_exists($view, 'preview')) {
+    $html = $view->preview();
+
+    $submit = array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'id' => 'entityreference-view-widget-modal-submit',
+      ),
+      'button_add' => array(
+        '#type' => 'button',
+        '#value' => t('Add selected items'),
+        '#attributes' => array(
+          'class' => array('button'),
+        ),
+      ),
+      'button_add_close' => array(
+        '#type' => 'button',
+        '#value' => t('Add items and close window'),
+        '#attributes' => array(
+          'class' => array('button', 'modal-close'),
+        ),
+      ),
+      'select_all' => array(
+        '#markup' => l(t('Select all'), '', array('attributes' => array('id' => 'entityreference-view-widget-select-all'))),
+      ),
+      'settings_selector' => array(
+        '#type' => 'hidden',
+        '#value' => $settings_selector,
+        '#attributes' => array(
+          'id' => 'entityreference-view-widget-settings-selector',
+        ),
+      ),
+    );
+
+    $html .= drupal_render($submit);
+  }
+  else {
+    $html = '<div class="messages error">' . t("The target view can't be loaded.") . '</div>';
+  }
+
+  return ctools_modal_render($view->human_name, $html);
+}
+
+/**
+ * Ajax callback to transform selected entity IDs into table rows.
+ */
+function entityreference_view_widget_ajax() {
+  $post = $_POST;
+
+  foreach ($post['entity_ids'] as $entity_id) {
+    $post['default_entity_ids'][] = $entity_id;
+  }
+  $entity_ids = array_unique($post['default_entity_ids']);
+  $rows['#theme'] = 'entityreference_view_widget_rows';
+  $rows['#cardinality'] = $post['cardinality'];
+
+  foreach ($entity_ids as $delta => $entity_id) {
+    $rows[$delta] = entityreference_view_widget_row($delta, $post['element'], $post['target_type'], $post['langcode'], $entity_id, count($entity_ids));
+  }
+
+  if (!empty($post['entity_ids'])) {
+    print render($rows);
+  }
+}
+
+/**
+ * Returns a render array for a single field value.
+ */
+function entityreference_view_widget_row($delta, $element, $target_type, $langcode, $target_id, $max_delta) {
+  $frontend_id = 'edit-' . str_replace('_', '-', $element) . '-' . $langcode . '-' . $delta;
+  $entities = entity_load($target_type, array($target_id));
+  $label = entity_label($target_type, current($entities));
+  $name = $element . '[' . $langcode . '][' . $delta . ']';
+
+  $row = array(
+    'target_id' => array(
+      '#type' => 'checkbox',
+      '#delta' => $delta,
+      '#field_suffix' => '<label class="option" for="' . $frontend_id . '">' . $label . '</label>',
+      '#return_value' => $target_id,
+      '#value' => $target_id,
+      '#title_display' => 'after',
+      '#name' => $name . '[target_id]',
+      '#attributes' => array(
+        'checked' => 'checked',
+        'id' => $frontend_id,
+        'data-delta' => $delta,
+      ),
+    ),
+    '_weight' => array(
+      '#type' => 'select',
+      '#options' => entityreference_view_widget_weights($max_delta),
+      '#title' => t('Weight'),
+      '#value' => $delta,
+      '#title_display' => 'invisible',
+      '#name' => $name . '[_weight]',
+      '#attributes' => array(
+        'id' => $frontend_id . '-weight',
+        'class' => array(drupal_html_class($element . '-delta-order')),
+      ),
+    ),
+  );
+
+  return $row;
+}
+
+/**
+ * Generate weight select list values depending on the amount of field values.
+ *
+ * @param int $max_delta
+ *
+ * @return array
+ */
+function entityreference_view_widget_weights($max_delta) {
+  $weights = array();
+
+  for ($i = 0; $i <= $max_delta; $i++) {
+    $weights[$i] = $i;
+    if ($i) {
+      $weights[-$i] = -$i;
+    }
+  }
+
+  ksort($weights);
+
+  return $weights;
+}
+
+/**
+ * Theme function for the whole widget.
+ */
+function theme_entityreference_view_widget_widget($variables) {
+  $widget = $variables['widget'];
+  $table_id = $widget['add_more']['#settings']['table_id'];
+  $order_class = drupal_html_class($widget['add_more']['#settings']['element'] . '-delta-order');
+  $required = !empty($widget['add_more']['#settings']['required']) ? theme('form_required_marker', $variables) : '';
+
+  $header = array(
+    array(
+      'data' => '<label>' . t('!title !required', array('!title' => $widget['#title'], '!required' => $required)) . "</label>",
+      'colspan' => 2,
+      'class' => array('field-label'),
+    ),
+  );
+  if ($widget['#cardinality'] !== '1') {
+    $header[] = array(
+      'data' => t('Order'),
+      'class' => array('tabledrag-hide'),
+    );
+  }
+  $rows = array();
+
+  // Sort items according to '_weight' (needed when the form comes back after
+  // preview or failed validation)
+  $items = array();
+  foreach (element_children($widget) as $key) {
+    if ($key === 'add_more') {
+      $add_more_button = &$widget[$key];
+    }
+    else {
+      $items[] = &$widget[$key];
+    }
+  }
+  usort($items, '_field_sort_items_value_helper');
+
+  // Add the items as table rows.
+  foreach ($items as $key => $item) {
+    $item['_weight']['#attributes']['class'] = array($order_class);
+    $delta_element = drupal_render($item['_weight']);
+    $cells = array(
+      array('data' => '', 'class' => array('field-multiple-drag')),
+      drupal_render($item),
+    );
+    if ($widget['#cardinality'] !== '1') {
+      $cells[] = array('data' => $delta_element, 'class' => array('delta-order'));
+    }
+    $rows[] = array(
+      'data' => $cells,
+      'class' => array('draggable'),
+    );
+  }
+
+  if (empty($rows)) {
+    $rows[][] = array(
+      'data' => t('No items had been added yet. Click "Add items" to launch the widget.'),
+      'colspan' => '3',
+    );
+  }
+
+  $output = '<div class="form-item">';
+  $output .= theme('table', array(
+    'header' => $header,
+    'rows' => $rows,
+    'attributes' => array(
+      'id' => $table_id,
+      'class' => array('field-multiple-table')
+    ),
+  ));
+  $output .= $widget['#description'] ? '<div class="description">' . $widget['#description'] . '</div>' : '';
+  $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+  $output .= '</div>';
+
+  if ($widget['#cardinality'] !== '1') {
+    drupal_add_tabledrag($table_id, 'order', 'sibling', $order_class);
+  }
+
+  return $output;
+}
+
+/**
+ * Theme function for a selection of table rows.
+ */
+function theme_entityreference_view_widget_rows($variables) {
+  $zebra = array('even' => 'odd');
+
+  foreach (element_children($variables['rows']) as $row) {
+    $output[$row]  = '<tr class="draggable ' . current($zebra) . '">';
+    $output[$row] .= '<td class="field-multiple-drag"></td>';
+    $output[$row] .= '<td>' . render($variables['rows'][$row]['target_id']) . '</td>';
+    if ($variables['rows']['#cardinality'] !== '1') {
+      $output[$row] .= '<td class="delta-order tabledrag-hide">' . render($variables['rows'][$row]['_weight']) . '</td>';
+    }
+    $output[$row] .= '</tr>';
+
+    $zebra = array_flip($zebra);
+  }
+
+  return implode("\n", $output);
+}

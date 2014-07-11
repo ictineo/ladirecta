@@ -135,10 +135,21 @@ projects[strongarm][subdir] = "contrib/dev"
   
   projects[media_youtube][version] = "2.0-rc4"
   projects[media_youtube][subdir] = "contrib"
-  
 
   projects[media_vimeo][version] = "2.0"
   projects[media_vimeo][subdir] = "contrib"
+
+  projects[field_slideshow][version] = "7.x-1.82"
+  projects[field_slideshow][subdir] ="contrib"
+  
+  ;projects[flexslider_field_collection][version] = "7.x-1.10"
+  ;projects[flexslider_field_collection][subdir] ="contrib"
+
+  ;projects[photos][version] = "7.x-3.0-rc2"
+  ;projects[photos][subdir] ="contrib"
+
+  projects[galleria][version] = "7.x-1.0-beta3"
+  projects[galleria][subdir] ="contrib"
   
 
 ;;; views

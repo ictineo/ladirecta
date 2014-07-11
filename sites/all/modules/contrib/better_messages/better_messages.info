@@ -1,0 +1,11 @@
+name = Better Messages
+description = This module adds simple functions to make Drupal messages look and act better.
+core = 7.x
+package = User interface
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "better_messages"
+datestamp = "1380555935"
+
