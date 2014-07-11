@@ -22,7 +22,14 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,7 +57,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 3,
     ),
   );
 
@@ -62,11 +69,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => 'Si tota la fotogaleria ha estat realitzada per una única persona es pot indicar aquí. En el cas de que cada fotografia tingui una autoria, es pot deixar en blanc aquest camp i indicar-ho a cadascuna de les imatges.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -91,7 +105,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 45,
+      'weight' => 4,
     ),
   );
 
@@ -103,11 +117,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
         'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -129,7 +150,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 35,
+      'weight' => 9,
     ),
   );
 
@@ -141,11 +162,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -170,7 +198,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 43,
+      'weight' => 7,
     ),
   );
 
@@ -182,13 +210,80 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
+        'label' => 'hidden',
+        'module' => 'field_slideshow',
         'settings' => array(
-          'view_mode' => 'full',
+          'slideshow_caption' => '',
+          'slideshow_caption_link' => '',
+          'slideshow_carousel_circular' => 0,
+          'slideshow_carousel_follow' => 0,
+          'slideshow_carousel_image_style' => '',
+          'slideshow_carousel_scroll' => 1,
+          'slideshow_carousel_skin' => '',
+          'slideshow_carousel_speed' => 500,
+          'slideshow_carousel_vertical' => 0,
+          'slideshow_carousel_visible' => 3,
+          'slideshow_colorbox_image_style' => '',
+          'slideshow_colorbox_slideshow' => '',
+          'slideshow_colorbox_slideshow_speed' => 4000,
+          'slideshow_colorbox_speed' => 350,
+          'slideshow_colorbox_transition' => 'elastic',
+          'slideshow_controls' => 1,
+          'slideshow_controls_pause' => 0,
+          'slideshow_controls_position' => 'after',
+          'slideshow_field_collection_image' => 'field_fotografia',
+          'slideshow_fx' => 'fade',
+          'slideshow_image_style' => '',
+          'slideshow_link' => '',
+          'slideshow_order' => '',
+          'slideshow_pager' => 'image',
+          'slideshow_pager_image_style' => 'thumbnail',
+          'slideshow_pager_position' => 'after',
+          'slideshow_pause' => 0,
+          'slideshow_speed' => 1000,
+          'slideshow_start_on_hover' => 0,
+          'slideshow_timeout' => 4000,
         ),
-        'type' => 'field_collection_fields',
-        'weight' => 8,
+        'type' => 'slideshow',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_slideshow',
+        'settings' => array(
+          'slideshow_caption' => '',
+          'slideshow_caption_link' => '',
+          'slideshow_carousel_circular' => 0,
+          'slideshow_carousel_follow' => 0,
+          'slideshow_carousel_image_style' => '',
+          'slideshow_carousel_scroll' => 1,
+          'slideshow_carousel_skin' => '',
+          'slideshow_carousel_speed' => 500,
+          'slideshow_carousel_vertical' => 0,
+          'slideshow_carousel_visible' => 3,
+          'slideshow_colorbox_image_style' => '',
+          'slideshow_colorbox_slideshow' => '',
+          'slideshow_colorbox_slideshow_speed' => 4000,
+          'slideshow_colorbox_speed' => 350,
+          'slideshow_colorbox_transition' => 'elastic',
+          'slideshow_controls' => 0,
+          'slideshow_controls_pause' => 0,
+          'slideshow_controls_position' => 'after',
+          'slideshow_field_collection_image' => 'field_fotografia',
+          'slideshow_fx' => 'fade',
+          'slideshow_image_style' => 'large',
+          'slideshow_link' => '',
+          'slideshow_order' => '',
+          'slideshow_pager' => 'image',
+          'slideshow_pager_image_style' => 'thumbnail',
+          'slideshow_pager_position' => 'after',
+          'slideshow_pause' => 0,
+          'slideshow_speed' => 1000,
+          'slideshow_start_on_hover' => 0,
+          'slideshow_timeout' => 4000,
+        ),
+        'type' => 'slideshow',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -209,8 +304,8 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       'active' => 0,
       'module' => 'field_collection',
       'settings' => array(),
-      'type' => 'field_collection_hidden',
-      'weight' => 44,
+      'type' => 'field_collection_embed',
+      'weight' => 6,
     ),
   );
 
@@ -221,14 +316,16 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => 'Aquesta és la imatge de presentació de la fotogaleria.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'full' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -283,7 +380,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 32,
+      'weight' => 5,
     ),
   );
 
@@ -295,11 +392,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
         'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -321,7 +425,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 37,
+      'weight' => 8,
     ),
   );
 
@@ -333,11 +437,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -357,9 +468,17 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 39,
+      'settings' => array(
+        'apply_chosen' => 0,
+        'shs' => array(
+          'create_new_levels' => FALSE,
+          'create_new_terms' => FALSE,
+          'force_deepest' => FALSE,
+          'node_count' => FALSE,
+        ),
+      ),
+      'type' => 'options_select',
+      'weight' => 10,
     ),
   );
 
@@ -371,11 +490,18 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -394,8 +520,9 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'shs',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => 0,
         'shs' => array(
           'create_new_levels' => 0,
           'create_new_terms' => 0,
@@ -404,8 +531,8 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'use_chosen' => 'chosen',
         ),
       ),
-      'type' => 'taxonomy_shs',
-      'weight' => 41,
+      'type' => 'options_select',
+      'weight' => 11,
     ),
   );
 

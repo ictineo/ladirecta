@@ -21,6 +21,7 @@ features[field_base][] = field_portada_numero
 features[field_base][] = field_tags_
 features[field_instance][] = node-numero_paper-body
 features[field_instance][] = node-numero_paper-field_data
+features[field_instance][] = node-numero_paper-field_imatge_portada
 features[field_instance][] = node-numero_paper-field_n_
 features[field_instance][] = node-numero_paper-field_pdf
 features[field_instance][] = node-numero_paper-field_portada_numero

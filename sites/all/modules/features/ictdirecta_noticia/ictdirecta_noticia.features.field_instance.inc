@@ -501,49 +501,50 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_fotografia_portada'
-  $field_instances['node-noticia-field_fotografia_portada'] = array(
+  // Exported field_instance: 'node-noticia-field_fotografia_de_portada'
+  $field_instances['node-noticia-field_fotografia_de_portada'] = array(
     'bundle' => 'noticia',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 9,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_fotografia_portada',
-    'label' => 'Fotografia_portada',
-    'required' => FALSE,
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_fotografia_de_portada',
+    'label' => 'Fotografia de portada',
+    'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
+      'description_field' => 1,
+      'file_directory' => 'fotografies_portada',
+      'file_extensions' => 'jpg jpeg gif png',
       'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'image',
+      'active' => 1,
+      'module' => 'file',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(),
+          'filefield_sources' => array(
+            'attach' => 'attach',
+            'clipboard' => 'clipboard',
+            'imce' => 'imce',
+            'reference' => 'reference',
+            'remote' => 'remote',
+            'upload' => 'upload',
+          ),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',
@@ -553,14 +554,13 @@ function ictdirecta_noticia_field_default_field_instances() {
             'imce_mode' => 0,
           ),
           'source_reference' => array(
-            'autocomplete' => 0,
+            'autocomplete' => 1,
           ),
         ),
-        'imce_filefield_on' => 0,
-        'preview_image_style' => 'thumbnail',
+        'imce_filefield_on' => 1,
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'file_generic',
       'weight' => 6,
     ),
   );
@@ -618,7 +618,7 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Destacat');
   t('Documents adjunts');
   t('Etiquetes');
-  t('Fotografia_portada');
+  t('Fotografia de portada');
   t('Mostra\'l en portada	');
   t('Secció');
 

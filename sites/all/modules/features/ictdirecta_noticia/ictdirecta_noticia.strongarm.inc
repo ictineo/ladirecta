@@ -157,14 +157,7 @@ function ictdirecta_noticia_strongarm() {
           'weight' => '2',
         ),
       ),
-      'display' => array(
-        'easy_social_1' => array(
-          'teaser' => array(
-            'weight' => '5',
-            'visible' => FALSE,
-          ),
-        ),
-      ),
+      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__noticia'] = $strongarm;
