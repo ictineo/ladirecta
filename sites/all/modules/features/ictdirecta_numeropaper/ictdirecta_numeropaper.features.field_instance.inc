@@ -51,7 +51,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -151,7 +151,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -164,12 +164,7 @@ function ictdirecta_numeropaper_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'file',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'show_description' => 0,
-          'tag' => 'span',
-        ),
+        'settings' => array(),
         'type' => 'file_default',
         'weight' => 3,
       ),

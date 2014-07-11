@@ -72,8 +72,30 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[login_destination][version] = "1.1"
   projects[login_destination][subdir] = "contrib"
 
+
   projects[search404][version] = "1.3"
   projects[search404][subdir] = "contrib"
+  
+ ;;; Apache Solr + Views + Facets  
+  
+  
+  projects[search_api][version] = "1.12"
+  projects[search_api][subdir] = "contrib"
+  
+  
+  projects[search_api_autocomplete][version] = "1.1"
+  projects[search_api_autocomplete][subdir] = "contrib"
+  
+  projects[search_api_attachments][version] = "1.4"
+  projects[search_api_attachments][subdir] = "contrib"
+  
+  projects[search_api_solr][version] = "1.5"
+  projects[search_api_solr][subdir] = "contrib"
+   
+  projects[apachesolr][version] = "1.6"
+  projects[apachesolr][subdir] = "contrib"
+  
+
 
 ;;; fields
   projects[webform][version] = "3.19"
