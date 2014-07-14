@@ -47,6 +47,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[conditional_fields][version] = "3.0-alpha1"
   projects[conditional_fields][subdir] = "contrib"
 
+  projects[context][version] = "3.2"
+  projects[context][subdir] = "contrib"
+
 ;;; Generics posicionament i funcionalitats
   projects[google_analytics][version] = "1.4"
   projects[google_analytics][subdir] = "contrib"
@@ -77,6 +80,9 @@ projects[strongarm][subdir] = "contrib/dev"
 
   projects[search404][version] = "1.3"
   projects[search404][subdir] = "contrib"
+
+  projects[features_roles_permissions][version] = "1.1"
+  projects[features_roles_permissions][subdir] = "contrib"
 
 ;;; fields
   projects[webform][version] = "3.19"
