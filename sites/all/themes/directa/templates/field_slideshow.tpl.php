@@ -36,6 +36,7 @@ if (!isset($pager_position)) {
               $item['field_peu_fotografia'][LANGUAGE_NONE][0]['safe_value'] != '') : ?>
           <div class="field-slideshow-caption">
           <span class="field-slideshow-caption-author"><?php print $item['field_autor_a'][LANGUAGE_NONE][0]['safe_value']; ?></span>
+          <span class="separador"> &nbsp;<?php print t('|');?>&nbsp;</span>
           <span class="field-slideshow-caption-text"><?php print $item['field_peu_fotografia'][LANGUAGE_NONE][0]['safe_value']; ?></span>
           </div>
         <?php endif; ?>
