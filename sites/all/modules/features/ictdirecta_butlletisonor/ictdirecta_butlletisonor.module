@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_butlletisonor feature.
- */
-
-include_once 'ictdirecta_butlletisonor.features.inc';

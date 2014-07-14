@@ -1,1 +1,0 @@
-window.CKEDITOR_BASEPATH = '/semantica/sites/all/libraries/ckeditor/';

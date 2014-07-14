@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_agenda feature.
- */
-
-include_once 'ictdirecta_agenda.features.inc';

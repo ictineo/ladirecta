@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_page feature.
- */
-
-include_once 'ictdirecta_page.features.inc';

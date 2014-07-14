@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_numeropaper feature.
- */
-
-include_once 'ictdirecta_numeropaper.features.inc';

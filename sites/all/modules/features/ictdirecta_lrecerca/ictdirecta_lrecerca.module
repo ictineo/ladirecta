@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_lrecerca feature.
- */
-
-include_once 'ictdirecta_lrecerca.features.inc';

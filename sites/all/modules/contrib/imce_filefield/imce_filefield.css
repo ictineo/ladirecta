@@ -1,0 +1,9 @@
+.imce-filefield-wrapper {
+  display: block;
+}
+a.imce-filefield-opener {
+  display: inline-block;
+  min-height: 18px;
+  padding-left: 18px;
+  background: url(imce_filefield.png) no-repeat 0 50%;
+}

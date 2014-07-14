@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the ictdirecta_actualitat feature.
- */
-
-include_once 'ictdirecta_actualitat.features.inc';

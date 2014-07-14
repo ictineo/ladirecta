@@ -1,0 +1,242 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the galleria module.
+ */
+
+/**
+ * Implements hook_schema().
+ * Always returns the latest schema version!
+ */
+function galleria_schema() {
+  return array(
+    'galleria_optionset' => array(
+      'description' => 'Store option sets for Galleria instances.',
+      'fields' => array(
+        'name' => array(
+          'description' => 'The machine-readable option set name.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+        'title' => array(
+          'description' => 'The human-readable title for this option set.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+        'theme' => array(
+          'description' => 'The Galleria theme.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => 'classic',
+        ),
+        'plugins' => array(
+          'description' => 'The Galleria plugins to be loaded.',
+          'type' => 'blob',
+          'size' => 'big',
+          'serialize' => TRUE,
+        ),
+        'imagestyle_thumb' => array(
+          'description' => 'The image style for thumbnails.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => 'galleria_thumb',
+        ),
+        'imagestyle_normal' => array(
+          'description' => 'The image style for normal images.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => 'galleria_zoom',
+        ),
+        'imagestyle_big' => array(
+          'description' => 'The image style for big images (lightbox and fullscreen).',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '', // original image
+        ),
+        'options' => array(
+          'description' => 'The options array.',
+          'type' => 'blob',
+          'size' => 'big',
+          'serialize' => TRUE,
+        ),
+      ),
+      'primary key' => array('name'),
+    ),
+  );
+}
+
+/**
+ * Create the first version of the new database schema.
+ */
+function galleria_update_7000() {
+  // Warning: Code duplication intended! Do not use galleria_schema() here, see http://drupal.org/node/150220
+  if (!db_table_exists('galleria_optionset')) {
+    // Create optionset table
+    db_create_table('galleria_optionset', array(
+      'description' => 'Store option sets for Galleria instances.',
+      'fields' => array(
+        'name' => array(
+          'description' => 'The machine-readable option set name.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+        'title' => array(
+          'description' => 'The human-readable title for this option set.',
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ),
+        'options' => array(
+          'description' => 'The options array.',
+          'type' => 'blob',
+          'size' => 'big',
+          'serialize' => TRUE,
+        ),
+      ),
+      'primary key' => array('name'),
+    ));
+
+    // Migrate old variable-based options into the optionset table
+    $oldvars = array(
+      // old_var_name   => array(old_default_value, new_var_name, new_default_value),
+      'height'          => array( 300,   'height',         NULL),
+      'width'           => array( 450,   'width',          NULL),
+      'autoplay'        => array(   0,   'autoplay',       0),
+      'clicknext'       => array(TRUE,   'clicknext',      FALSE),
+      'imagecrop'       => array('on',   'imageCrop',      'false'),
+      'max_scale_ratio' => array(   1,   'maxScaleRatio',  NULL),
+      'min_scale_ratio' => array(   1,   'minScaleRatio',  NULL),
+      'overlay_opacity' => array(0.85,   'overlayOpacity', 0.85),
+      'preload'         => array(   3,   'preload',        2),
+      'queue'           => array(TRUE,   'queue',          TRUE),
+      'show_counter'    => array(TRUE,   'showCounter',    TRUE),
+      'show_imagenav'   => array(TRUE,   'showImagenav',   TRUE),
+      'show_info'       => array(TRUE,   'showInfo',       TRUE),
+      'thumbnails'      => array('on',   'thumbnails',     'true'),
+      'transition'      => array('fade', 'transition',     'fade'),
+      'lib_file'        => FALSE, // just delete this variable
+    );
+    $options = array();
+    foreach ($oldvars as $oldvar => $data) {
+      if (is_array($data)) {
+        $value = variable_get('galleria_' . $oldvar, $data[0]);
+        $value = ($value == 'on') ? 'true' : ($value == 'off' ? 'false' : $value);
+        if ($value != $data[2])
+          $options[$data[1]] = $value;
+      }
+      variable_del('galleria_' . $oldvar);
+    }
+    db_insert('galleria_optionset')->fields(array(
+      'name' => 'default',
+      'title' => 'Default',
+      'options' => serialize($options),
+    ))->execute();
+  }
+}
+
+/**
+ * Integrate image style settings into the option sets.
+ */
+function galleria_update_7001() {
+  $new_fields = array(
+    'theme' => array(
+      'description' => 'The Galleria theme.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => 'classic',
+    ),
+    'imagestyle_thumb' => array(
+      'description' => 'The image style for thumbnails.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => 'galleria_thumb',
+    ),
+    'imagestyle_normal' => array(
+      'description' => 'The image style for normal images.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => 'galleria_zoom',
+    ),
+    'imagestyle_big' => array(
+      'description' => 'The image style for big images (lightbox and fullscreen).',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => '', // original image
+    ),
+  );
+  foreach ($new_fields as $field => $spec) {
+    db_add_field('galleria_optionset', $field, $spec);
+  }
+  return t('You have to re-adjust the theme and image styles for your Galleria instances.');
+}
+
+/**
+ * Updates renamed field formatter settings.
+ */
+function galleria_update_7002() {
+  drupal_load('module', 'field');
+
+  foreach (field_info_instances('node') as $node_type => $field_instances) {
+    foreach ($field_instances as $field_instance) {
+      $changed = FALSE;
+      foreach ($field_instance['display'] as &$display) {
+        if (($display['module'] == 'galleria') && ($display['type'] == 'galleria')) {
+          $settings = &$display['settings'];
+          $settings['optionset'] = $settings['galleria_optionset'];
+          unset($settings['galleria_optionset']);
+          unset($settings['galleria_reference_img_src']);
+          $changed = TRUE;
+        }
+      }
+      if ($changed) {
+        field_update_instance($field_instance);
+      }
+    }
+  }
+}
+
+/**
+ * Add support for Galleria plugins.
+ */
+function galleria_update_7003() {
+  $new_fields = array(
+    'plugins' => array(
+      'description' => 'The Galleria plugins to be loaded.',
+      'type' => 'blob',
+      'size' => 'big',
+      'serialize' => TRUE,
+    ),
+  );
+  foreach ($new_fields as $field => $spec) {
+    db_add_field('galleria_optionset', $field, $spec);
+  }
+  return t('You may now select plugins to be loaded with each Galleria instance.');
+}
+
+
+/**
+ * Implements hook_install().
+ * Adds a 'default' option set for fresh installs.
+ */
+function galleria_install() {
+  $optionset = array(
+    'name' => 'default',
+    'title' => 'Default',
+    'options' => array(
+      'height' => 300,
+      'width' => 450,
+    ),
+  );
+  galleria_optionset_save($optionset, TRUE);
+}

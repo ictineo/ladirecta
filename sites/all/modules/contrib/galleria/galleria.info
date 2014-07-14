@@ -1,0 +1,18 @@
+name = Galleria
+description = Turns image fields of nodes into Galleria galleries with this JavaScript (JQuery) image gallery.
+core = 7.x
+configure = admin/config/media/galleria
+
+dependencies[] = image
+dependencies[] = libraries
+
+files[] = galleria.module
+files[] = includes/galleria.admin.inc
+files[] = includes/views_plugin_style_galleria.inc
+
+; Information added by drupal.org packaging script on 2012-05-10
+version = "7.x-1.0-beta3"
+core = "7.x"
+project = "galleria"
+datestamp = "1336662057"
+
