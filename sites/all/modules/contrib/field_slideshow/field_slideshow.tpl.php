@@ -34,8 +34,6 @@ dsm($item)
     <?php foreach ($items as $num => $item) : ?>
       <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
         <?php print $item['image']; ?>
-        <?php print render($item['field_autor_a']); ?>
-        <?php print render($item['field_peu_fotografia']); ?>
         <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
           <div class="field-slideshow-caption">
             <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
