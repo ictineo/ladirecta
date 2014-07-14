@@ -44,7 +44,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[fences][version] = "1.0"
   projects[fences][subdir] = "contrib"
 
-  projects[conditional_fields][version] = "7.x-3.0-alpha1"
+  projects[conditional_fields][version] = "3.0-alpha1"
   projects[conditional_fields][subdir] = "contrib"
 
 ;;; Generics posicionament i funcionalitats
@@ -139,16 +139,16 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[media_vimeo][version] = "2.0"
   projects[media_vimeo][subdir] = "contrib"
 
-  projects[field_slideshow][version] = "7.x-1.82"
+  projects[field_slideshow][version] = "1.82"
   projects[field_slideshow][subdir] ="contrib"
   
-  ;projects[flexslider_field_collection][version] = "7.x-1.10"
+  ;projects[flexslider_field_collection][version] = "1.10"
   ;projects[flexslider_field_collection][subdir] ="contrib"
 
-  ;projects[photos][version] = "7.x-3.0-rc2"
+  ;projects[photos][version] = "3.0-rc2"
   ;projects[photos][subdir] ="contrib"
 
-  projects[galleria][version] = "7.x-1.0-beta3"
+  projects[galleria][version] = "1.0-beta3"
   projects[galleria][subdir] ="contrib"
   
 
@@ -171,7 +171,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[views_field][version] = "1.2"
   projects[views_field][subdir] = "contrib"
 
-  projects[views_slideshow][version] = "7.x-3.2"
+  projects[views_slideshow][version] = "3.1"
   projects[views_slideshow][subdir] = "contrib"
 
   ; si no es la dev no mostra el widget asociat al camp
