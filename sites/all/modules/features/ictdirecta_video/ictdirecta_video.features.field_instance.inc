@@ -240,7 +240,7 @@ function ictdirecta_video_field_default_field_instances() {
     'label' => 'Video',
     'required' => 0,
     'settings' => array(
-      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm',
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -252,18 +252,16 @@ function ictdirecta_video_field_default_field_instances() {
           'vimeo' => 'vimeo',
           'youtube' => 'youtube',
         ),
-        'allowed_types' => array(),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 'media_internet',
-          'upload' => 'upload',
-          'youtube' => 'youtube',
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'default' => 'default',
+          'image' => 'image',
+          'video' => 'video',
         ),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 9,
+      'weight' => 1,
     ),
   );
 

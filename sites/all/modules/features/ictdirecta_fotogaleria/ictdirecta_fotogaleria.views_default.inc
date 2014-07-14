@@ -28,6 +28,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -204,7 +205,7 @@ function ictdirecta_fotogaleria_views_default_views() {
     t('Master'),
     t('Fotogaleries'),
     t('more'),
-    t('Apply'),
+    t('Aplica'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
