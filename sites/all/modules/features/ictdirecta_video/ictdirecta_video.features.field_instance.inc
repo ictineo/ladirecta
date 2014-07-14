@@ -50,7 +50,7 @@ function ictdirecta_video_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 4,
     ),
   );
 
@@ -63,9 +63,8 @@ function ictdirecta_video_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -88,7 +87,7 @@ function ictdirecta_video_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 34,
+      'weight' => 6,
     ),
   );
 
@@ -101,9 +100,8 @@ function ictdirecta_video_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -126,7 +124,7 @@ function ictdirecta_video_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 33,
+      'weight' => 5,
     ),
   );
 
@@ -138,7 +136,7 @@ function ictdirecta_video_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -164,7 +162,7 @@ function ictdirecta_video_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 39,
+      'weight' => 8,
     ),
   );
 
@@ -176,7 +174,7 @@ function ictdirecta_video_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -210,7 +208,7 @@ function ictdirecta_video_field_default_field_instances() {
         ),
       ),
       'type' => 'taxonomy_shs',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -222,10 +220,12 @@ function ictdirecta_video_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 3,
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'media',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -237,13 +237,10 @@ function ictdirecta_video_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_video',
-    'label' => 'Video',
+    'label' => 'Vídeo',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
-      'file_directory' => 'videos',
-      'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx html zip tar gz bz2 rar gif png jpg jpeg mp3 ogg avi mpg mpeg rtf mp4',
-      'max_filesize' => '',
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -256,15 +253,16 @@ function ictdirecta_video_field_default_field_instances() {
           'youtube' => 'youtube',
         ),
         'allowed_types' => array(
-          'audio' => 'audio',
-          'default' => 'default',
-          'image' => 'image',
+          'audio' => 0,
+          'default' => 0,
+          'image' => 0,
           'video' => 'video',
         ),
+        'browser_plugins' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 35,
+      'weight' => 1,
     ),
   );
 
@@ -275,7 +273,7 @@ function ictdirecta_video_field_default_field_instances() {
   t('Mostra\'l en portada	');
   t('Secció');
   t('Territori');
-  t('Video');
+  t('Vídeo');
 
   return $field_instances;
 }

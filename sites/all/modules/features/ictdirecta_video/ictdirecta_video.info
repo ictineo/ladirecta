@@ -11,6 +11,7 @@ dependencies[] = ictdirecta_pvenda
 dependencies[] = list
 dependencies[] = media
 dependencies[] = media_vimeo
+dependencies[] = mediafield
 dependencies[] = node
 dependencies[] = options
 dependencies[] = shs

@@ -39,12 +39,12 @@ function ictdirecta_video_field_default_field_bases() {
   // Exported field_base: 'field_video'
   $field_bases['field_video'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_video',
     'foreign keys' => array(
-      'fid' => array(
+      'file_managed' => array(
         'columns' => array(
           'fid' => 'fid',
         ),
@@ -57,14 +57,10 @@ function ictdirecta_video_field_default_field_bases() {
       ),
     ),
     'locked' => 0,
-    'module' => 'file',
-    'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'uri_scheme' => 'public',
-    ),
+    'module' => 'mediafield',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'media',
   );
 
   return $field_bases;
