@@ -36,6 +36,10 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[libraries][version] = "2.2"
   projects[libraries][subdir] = "contrib"
 
+  projects[entity][version] = "1.5"
+  projects[entity][subdir] = "contrib"
+
+  projects[file_entity][version] = "2.0-alpha3"
   projects[entity][subdir] = "contrib"
 
   projects[variable][version] = "2.4"
@@ -136,7 +140,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[select_or_other][version] = "2.20"
   projects[select_or_other][subdir] = "contrib"
 
-  projects[media][version] = "1.4"
+  projects[media][version] = "2.0-alpha3"
   projects[media][subdir] = "contrib"
   
   projects[media_youtube][version] = "2.0-rc4"
