@@ -91,7 +91,7 @@ function ictdirecta_agenda_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -122,6 +122,7 @@ function ictdirecta_agenda_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_data_ag',
     'label' => 'Data',
     'required' => 0,
@@ -146,6 +147,47 @@ function ictdirecta_agenda_field_default_field_instances() {
       ),
       'type' => 'date_popup',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-esdeveniment_agenda-field_resum'
+  $field_instances['node-esdeveniment_agenda-field_resum'] = array(
+    'bundle' => 'esdeveniment_agenda',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_resum',
+    'label' => 'Resum',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -190,7 +232,7 @@ function ictdirecta_agenda_field_default_field_instances() {
         ),
       ),
       'type' => 'taxonomy_shs',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -200,6 +242,7 @@ function ictdirecta_agenda_field_default_field_instances() {
   t('Descripció de l\'esdeveniment');
   t('Indica l\'adreça');
   t('Lloc/Adreça');
+  t('Resum');
   t('Territori');
 
   return $field_instances;
