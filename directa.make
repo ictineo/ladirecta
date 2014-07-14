@@ -127,9 +127,13 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[select_or_other][version] = "2.20"
   projects[select_or_other][subdir] = "contrib"
 
-  projects[media][version] = "1.4"
+  projects[media][version] = "2.0-alpha3"
   projects[media][subdir] = "contrib"
   
+  projects[file_entity][version] = "2.0-alpha3"
+  projects[file_entity][subdir] = "contrib"
+
+
   projects[media_youtube][version] = "2.0-rc4"
   projects[media_youtube][subdir] = "contrib"
   
