@@ -16,7 +16,6 @@ if (!isset($controls_position)) {
 if (!isset($pager_position)) {
   $pager_position = "after";
 }
-dsm($item) 
 ?>
 <div id="field-slideshow-<?php print $slideshow_id; ?>-wrapper" class="field-slideshow-wrapper">
 
