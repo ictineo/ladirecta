@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_basicconf feature.
+ */
+
+include_once 'ictdirecta_basicconf.features.inc';
