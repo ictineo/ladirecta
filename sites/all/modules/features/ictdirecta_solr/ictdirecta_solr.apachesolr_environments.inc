@@ -17,10 +17,14 @@ function ictdirecta_solr_apachesolr_environments() {
   $environment->url = 'http://188.165.131.21:8983/solr';
   $environment->service_class = '';
   $environment->conf = array(
-    'apachesolr_direct_commit' => 0,
-    'apachesolr_index_last' => array(),
-    'apachesolr_read_only' => '0',
-    'apachesolr_soft_commit' => 0,
+    'apachesolr_index_last' => array(
+      'node' => array(
+        'last_changed' => '1405077970',
+        'last_entity_id' => '220',
+      ),
+    ),
+    'apachesolr_index_updated' => 1405328788,
+    'apachesolr_last_optimize' => 1405328788,
   );
   $environment->index_bundles = array(
     'node' => array(
