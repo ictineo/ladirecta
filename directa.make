@@ -91,7 +91,7 @@ projects[strongarm][subdir] = "contrib/dev"
   
   projects[search_api_solr][version] = "1.5"
   projects[search_api_solr][subdir] = "contrib"
-   
+    
   projects[apachesolr][version] = "1.6"
   projects[apachesolr][subdir] = "contrib"
   
