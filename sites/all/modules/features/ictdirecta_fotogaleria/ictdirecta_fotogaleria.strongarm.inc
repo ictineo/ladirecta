@@ -62,6 +62,33 @@ function ictdirecta_fotogaleria_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_fotogaleria_count';
+  $strongarm->value = '1';
+  $export['easy_social_fotogaleria_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_fotogaleria_type';
+  $strongarm->value = '1';
+  $export['easy_social_fotogaleria_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'easy_social_fotogaleria_widgets';
+  $strongarm->value = array(
+    'facebook' => 'facebook',
+    'twitter' => 'twitter',
+    'googleplus' => 'googleplus',
+    'flattr_share_button' => 'flattr_share_button',
+    'linkedin' => 0,
+  );
+  $export['easy_social_fotogaleria_widgets'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_collection_item__field_fotografies';
   $strongarm->value = array(
     'view_modes' => array(
