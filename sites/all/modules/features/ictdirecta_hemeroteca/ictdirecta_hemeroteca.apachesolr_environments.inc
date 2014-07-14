@@ -28,8 +28,8 @@ function ictdirecta_hemeroteca_apachesolr_environments() {
         'last_entity_id' => '72',
       ),
     ),
-    'apachesolr_index_updated' => 1405078007,
-    'apachesolr_last_optimize' => 1405068025,
+    'apachesolr_index_updated' => 1405328788,
+    'apachesolr_last_optimize' => 1405328788,
     'apachesolr_read_only' => '0',
     'apachesolr_soft_commit' => 0,
   );
