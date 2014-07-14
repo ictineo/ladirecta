@@ -170,6 +170,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[similarterms][version] = "2.3"
   projects[similarterms][subdir] = "contrib"
 
+  projects[context][version] = "3.2"
+  projects[context][subdir] = "contrib"
+
 
 ;;; usabilitat
   projects[wysiwyg][version] = "2.2"
