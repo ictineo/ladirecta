@@ -1,10 +1,7 @@
 name = ictdirecta_solr
 core = 7.x
 package = Features
-dependencies[] = apachesolr_attachments
-dependencies[] = apachesolr_autocomplete
 dependencies[] = apachesolr_search
-dependencies[] = apachesolr_views
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = search_api
