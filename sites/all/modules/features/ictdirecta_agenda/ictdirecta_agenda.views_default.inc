@@ -266,14 +266,14 @@ function ictdirecta_agenda_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Agenda Llista';
+  $view->human_name = 'Agenda Llista Menu Lateral';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Agenda Llista';
+  $handler->display->display_options['title'] = 'Agenda Llista Menu Lateral';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -494,7 +494,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['agenda_llista'] = array(
     t('Master'),
-    t('Agenda Llista'),
+    t('Agenda Llista Menu Lateral'),
     t('més'),
     t('Aplica'),
     t('Reinicialitza'),
