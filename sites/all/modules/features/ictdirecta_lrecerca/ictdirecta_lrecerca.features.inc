@@ -14,6 +14,13 @@ function ictdirecta_lrecerca_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function ictdirecta_lrecerca_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function ictdirecta_lrecerca_node_info() {
@@ -23,7 +30,7 @@ function ictdirecta_lrecerca_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Títol'),
       'help' => '',
     ),
   );
