@@ -205,6 +205,74 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fotogaleries-field_portada_fotogaleria'
+  $field_instances['node-fotogaleries-field_portada_fotogaleria'] = array(
+    'bundle' => 'fotogaleries',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_portada_fotogaleria',
+    'label' => 'Portada fotogaleria',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'fotogaleries',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-fotogaleries-field_seccio'
   $field_instances['node-fotogaleries-field_seccio'] = array(
     'bundle' => 'fotogaleries',
@@ -295,6 +363,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
   t('Body');
   t('Etiquetes');
   t('Fotografies');
+  t('Portada fotogaleria');
   t('Secció');
   t('Territori');
 
