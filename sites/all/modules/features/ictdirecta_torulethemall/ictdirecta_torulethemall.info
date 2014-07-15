@@ -12,6 +12,6 @@ dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia
 dependencies[] = ictdirecta_taxonomies
-dependencies[] = ictdirecta_video_
+dependencies[] = ictdirecta_video
 dependencies[] = ictdirecta_xxss
 features[features_api][] = api:2
