@@ -305,10 +305,16 @@ libraries[jplayer][destination] = "libraries"
 libraries[jplayer][directory_name] = "jplayer"
 
 
-libraries[jquery][download][type] = "file"
-libraries[jquery][download][url] = "https://malsup.github.io/jquery.cycle.all.js"
-libraries[jquery][destination]= "libraries"
-libraries[jquery][directory_name] = "jquery.cycle"
+libraries[jquery.cycle][download][type] = "file"
+libraries[jquery.cycle][download][url] = "https://malsup.github.io/jquery.cycle.all.js"
+libraries[jquery.cycle][destination]= "libraries"
+libraries[jquery.cycle][directory_name] = "jquery.cycle"
+
+
+libraries[field_slideshow][download][type] = "file"
+libraries[field_slideshow][download][url] = "http://sorgalla.com/jcarousel/dist/jquery.jcarousel-core.min.js?raw=1"
+libraries[field_slideshow][destination]= "libraries"
+libraries[field_slideshow][directory_name] = "field_slideshow"
 
 ; Plugins complementaris al ckeditor 4 per 
 ; activar el plugin image2 que permet editar les
