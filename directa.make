@@ -164,7 +164,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[views_field][version] = "1.2"
   projects[views_field][subdir] = "contrib"
 
-  projects[field_slideshow][version] = "1.82"
+  projects[field_slideshow][version] = "1.x-dev"
   projects[field_slideshow][subdir] = "contrib"
 
   projects[views_slideshow][version] = "3.1"
