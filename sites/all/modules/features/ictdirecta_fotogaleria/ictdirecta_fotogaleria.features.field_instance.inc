@@ -18,11 +18,11 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -41,7 +41,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -52,11 +52,11 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'large',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -100,10 +100,26 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'upload' => 'upload',
           'youtube' => 0,
         ),
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 0,
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -115,11 +131,11 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -154,7 +170,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -198,7 +214,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -299,7 +315,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => 'field_fotografia',
           'slideshow_fx' => 'fade',
-          'slideshow_image_style' => 'medium',
+          'slideshow_image_style' => 'large',
           'slideshow_link' => '',
           'slideshow_order' => '',
           'slideshow_pager' => 'image',
@@ -311,7 +327,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'slideshow_timeout' => 4000,
         ),
         'type' => 'slideshow',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,13 +360,9 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
