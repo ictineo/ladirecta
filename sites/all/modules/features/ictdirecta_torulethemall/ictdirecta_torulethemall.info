@@ -7,7 +7,6 @@ dependencies[] = ictdirecta_cdnot
 dependencies[] = ictdirecta_cdserveis
 dependencies[] = ictdirecta_editors
 dependencies[] = ictdirecta_faldo
-dependencies[] = ictdirecta_fotogaleria
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia
