@@ -40,3 +40,4 @@ features[variable][] = page_title_type_esdeveniment_agenda
 features[variable][] = page_title_type_esdeveniment_agenda_showfield
 features[variable][] = xmlsitemap_settings_node_esdeveniment_agenda
 features[views_view][] = agenda
+features[views_view][] = agenda_llista
