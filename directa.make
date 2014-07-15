@@ -301,6 +301,12 @@ libraries[jplayer][download][url] = "http://jplayer.org/latest/jQuery.jPlayer.2.
 libraries[jplayer][destination] = "libraries"
 libraries[jplayer][directory_name] = "jplayer"
 
+
+libraries[][download][type] = "file"
+libraries[][download][url] = "https://malsup.github.io/jquery.cycle.all.js"
+libraries[][destination]= "libraries"
+libraries[][directory_name] = "jquery.cycle"
+
 ; Plugins complementaris al ckeditor 4 per 
 ; activar el plugin image2 que permet editar les
 ; imatges amb titol
