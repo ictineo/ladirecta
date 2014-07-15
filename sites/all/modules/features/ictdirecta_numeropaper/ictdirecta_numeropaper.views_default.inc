@@ -54,18 +54,13 @@ function ictdirecta_numeropaper_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Camp: : field_imatge_portada */
+  /* Camp: Broken/missing handler */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['label'] = '';
   $handler->display->display_options['fields']['field_imatge_portada']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_imatge_portada']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_imatge_portada']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_imatge_portada']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
   /* Camp: Content: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
@@ -205,22 +200,17 @@ function ictdirecta_numeropaper_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Camp: : field_imatge_portada */
+  /* Camp: Broken/missing handler */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['label'] = '';
   $handler->display->display_options['fields']['field_imatge_portada']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_imatge_portada']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_imatge_portada']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
 
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Camp: : field_imatge_portada */
+  /* Camp: Broken/missing handler */
   $handler->display->display_options['fields']['field_imatge_portada']['id'] = 'field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['table'] = 'field_data_field_imatge_portada';
   $handler->display->display_options['fields']['field_imatge_portada']['field'] = 'field_imatge_portada';
@@ -229,12 +219,6 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_imatge_portada']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_imatge_portada']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_imatge_portada']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_imatge_portada']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_imatge_portada']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_imatge_portada']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(

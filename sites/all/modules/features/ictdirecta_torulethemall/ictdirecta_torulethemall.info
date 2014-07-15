@@ -10,7 +10,18 @@ dependencies[] = ictdirecta_faldo
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_actualitat
+dependencies[] = ictdirecta_agenda
+dependencies[] = ictdirecta_xxss
+dependencies[] = ictdirecta_hemeroteca
+<<<<<<< HEAD
 dependencies[] = ictdirecta_taxonomies
+<<<<<<< HEAD
 dependencies[] = ictdirecta_video
+=======
+=======
+dependencies[] = ictdirecta_solr
+>>>>>>> 787a86d4ac99bcebd179b70304b73aadde362baa
+>>>>>>> fe6ceb02f48dfa988e898e84c4a0f3e17a38e9a7
 dependencies[] = ictdirecta_xxss
 features[features_api][] = api:2
