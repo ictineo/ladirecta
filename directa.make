@@ -30,6 +30,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[page_title][version] = "2.7"
   projects[page_title][subdir] = "contrib"
 
+  projects[context][version] = "3.2"
+  projects[context][subdir] = "contrib"
+
   projects[libraries][version] = "2.1"
   projects[libraries][subdir] = "contrib"
 

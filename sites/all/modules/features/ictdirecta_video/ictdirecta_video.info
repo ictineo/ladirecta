@@ -1,10 +1,10 @@
 name = ictdirecta_video
 core = 7.x
 package = Features
+dependencies[] = context
 dependencies[] = ictdirecta_cdserveis
 dependencies[] = media_vimeo
 dependencies[] = mediafield
-dependencies[] = views
 features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = file_entity:file_type:1
 features[ctools][] = strongarm:strongarm:1
