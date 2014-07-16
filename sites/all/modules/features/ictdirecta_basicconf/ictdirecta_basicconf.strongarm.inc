@@ -323,6 +323,13 @@ system/ajax/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'context_block_rebuild_needed';
+  $strongarm->value = TRUE;
+  $export['context_block_rebuild_needed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_api_use_iso8601';
   $strongarm->value = 0;
   $export['date_api_use_iso8601'] = $strongarm;
@@ -426,14 +433,14 @@ system/ajax/*';
     'language' => 'ca',
     'name' => 'Catalan',
     'native' => 'Català',
-    'direction' => 0,
-    'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'direction' => '0',
+    'enabled' => '1',
+    'plurals' => '2',
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => 0,
-    'javascript' => '',
+    'weight' => '0',
+    'javascript' => '0dlB8SuLTE9QSVxcuJ7ep7XnujLWYneRHxz-Q5hdcS0',
   );
   $export['language_default'] = $strongarm;
 

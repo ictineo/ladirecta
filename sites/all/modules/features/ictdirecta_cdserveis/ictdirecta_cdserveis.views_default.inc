@@ -81,6 +81,24 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'cd_serveis:block_2';
   /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
@@ -370,6 +388,12 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -452,6 +476,54 @@ function ictdirecta_cdserveis_views_default_views() {
     'cd_serveis' => 'cd_serveis',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Menu lateral down */
+  $handler = $view->new_display('block', 'Menu lateral down', 'block_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Títol */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Oferta */
+  $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['label'] = '';
+  $handler->display->display_options['fields']['field_oferta']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_oferta']['settings'] = array(
+    'trim_length' => '400',
+  );
+  $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'cd_serveis' => 'cd_serveis',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['cd_serveis'] = array(
     t('Master'),
     t('Llistat de Serveis'),
@@ -462,6 +534,9 @@ function ictdirecta_cdserveis_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Select any filter and click on Apply to see results'),
+    t('Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?'),
     t('Veure detalls >'),
     t('Territori '),
     t('Tipus de servei '),
@@ -473,6 +548,7 @@ function ictdirecta_cdserveis_views_default_views() {
     t('Servei Destacat negre'),
     t('Page'),
     t('Menu lateral'),
+    t('Menu lateral down'),
   );
   $export['cd_serveis'] = $view;
 
