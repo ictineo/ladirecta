@@ -19,10 +19,9 @@ function ictdirecta_cdserveis_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,7 +49,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 11,
     ),
   );
 
@@ -66,7 +65,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -90,7 +89,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -108,7 +107,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -163,7 +162,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => -1,
+      'weight' => 3,
     ),
   );
 
@@ -179,7 +178,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -203,7 +202,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 4,
     ),
   );
 
@@ -216,10 +215,9 @@ function ictdirecta_cdserveis_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -249,7 +247,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_shs',
-      'weight' => -2,
+      'weight' => 2,
     ),
   );
 
@@ -265,7 +263,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -295,7 +293,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_shs',
-      'weight' => -3,
+      'weight' => 1,
     ),
   );
 
@@ -311,7 +309,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -335,7 +333,7 @@ function ictdirecta_cdserveis_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 5,
     ),
   );
 

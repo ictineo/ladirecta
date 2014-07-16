@@ -24,10 +24,13 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Llistat de Serveis';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
@@ -78,7 +81,25 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Camp: Content: Logotip */
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'cd_serveis:block_2';
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -93,14 +114,14 @@ function ictdirecta_cdserveis_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Camp: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Camp: Content: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -114,7 +135,7 @@ function ictdirecta_cdserveis_views_default_views() {
     'trim_length' => '400',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Camp: Content: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -125,14 +146,14 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Camp: Content: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Veure detalls >';
-  /* Sort criterion: Content: Data de publicació */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -144,7 +165,7 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Tipus */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -207,8 +228,10 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Camp: Content: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -223,14 +246,14 @@ function ictdirecta_cdserveis_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Camp: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Camp: Content: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -244,7 +267,7 @@ function ictdirecta_cdserveis_views_default_views() {
     'trim_length' => '200',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Camp: Content: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -255,7 +278,7 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Camp: Content: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -269,14 +292,14 @@ function ictdirecta_cdserveis_views_default_views() {
     'trim_length' => '600',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Camp: Content: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Subscriu-t\'hi!';
-  /* Camp: Global: Custom text */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -292,7 +315,7 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Tipus */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -304,15 +327,18 @@ function ictdirecta_cdserveis_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Camp: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Camp: Content: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -327,7 +353,7 @@ function ictdirecta_cdserveis_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Camp: Content: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -341,7 +367,7 @@ function ictdirecta_cdserveis_views_default_views() {
     'trim_length' => '400',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Camp: Content: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -352,7 +378,7 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Camp: Content: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -360,26 +386,175 @@ function ictdirecta_cdserveis_views_default_views() {
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Veure detalls >';
   $handler->display->display_options['path'] = 'cd-serveis';
+
+  /* Display: Menu lateral */
+  $handler = $view->new_display('block', 'Menu lateral', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: View area */
+  $handler->display->display_options['header']['view']['id'] = 'view';
+  $handler->display->display_options['header']['view']['table'] = 'views';
+  $handler->display->display_options['header']['view']['field'] = 'view';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Logotip */
+  $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
+  $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
+  $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
+  $handler->display->display_options['fields']['field_logotip']['label'] = '';
+  $handler->display->display_options['fields']['field_logotip']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_logotip']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_logotip']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_logotip']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_logotip']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_logotip']['settings'] = array(
+    'image_style' => '',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
+  /* Field: Content: Adreça */
+  $handler->display->display_options['fields']['field_adre_a']['id'] = 'field_adre_a';
+  $handler->display->display_options['fields']['field_adre_a']['table'] = 'field_data_field_adre_a';
+  $handler->display->display_options['fields']['field_adre_a']['field'] = 'field_adre_a';
+  $handler->display->display_options['fields']['field_adre_a']['label'] = '';
+  $handler->display->display_options['fields']['field_adre_a']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_adre_a']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_adre_a']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_adre_a']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_adre_a']['field_api_classes'] = TRUE;
+  /* Field: Content: Oferta */
+  $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['label'] = '';
+  $handler->display->display_options['fields']['field_oferta']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_oferta']['settings'] = array(
+    'trim_length' => '400',
+  );
+  $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
+  /* Field: Content: Tipus de servei */
+  $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['label'] = '';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tipus_de_servei']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Veure detalls >';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'cd_serveis' => 'cd_serveis',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Menu lateral down */
+  $handler = $view->new_display('block', 'Menu lateral down', 'block_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Oferta */
+  $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
+  $handler->display->display_options['fields']['field_oferta']['label'] = '';
+  $handler->display->display_options['fields']['field_oferta']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_oferta']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_oferta']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_oferta']['settings'] = array(
+    'trim_length' => '400',
+  );
+  $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'cd_serveis' => 'cd_serveis',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['cd_serveis'] = array(
     t('Master'),
     t('Llistat de Serveis'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
+    t('més'),
+    t('Aplica'),
+    t('Reinicialitza'),
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
     t('Select any filter and click on Apply to see results'),
+    t('Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?
+Aquest es el text que va al principi, el tene que poder modificar?'),
     t('Veure detalls >'),
     t('Territori '),
     t('Tipus de servei '),
     t('Block'),
+    t('more'),
     t('Oferta:'),
     t('Tipus de Servei'),
     t('Subscriu-t\'hi!'),
     t('Per poder disfrutar dels descomptes i promocions has de ser soci de la Directa'),
     t('Servei Destacat negre'),
     t('Page'),
+    t('Menu lateral'),
+    t('Menu lateral down'),
   );
   $export['cd_serveis'] = $view;
 
