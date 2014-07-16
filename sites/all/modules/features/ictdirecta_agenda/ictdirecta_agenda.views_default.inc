@@ -33,7 +33,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -52,7 +52,6 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_data_ag']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['field'] = 'field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['label'] = '';
-  $handler->display->display_options['fields']['field_data_ag']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_data_ag']['element_type'] = '0';
   $handler->display->display_options['fields']['field_data_ag']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_data_ag']['element_wrapper_type'] = '0';
@@ -65,10 +64,16 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '!1';
   /* Sort criterion: Content: Data -  start date (field_data_ag) */
   $handler->display->display_options['sorts']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['sorts']['field_data_ag_value']['field'] = 'field_data_ag_value';
+  $handler->display->display_options['sorts']['field_data_ag_value']['order'] = 'DESC';
   /* Contextual filter: Content: Data -  start date (field_data_ag) */
   $handler->display->display_options['arguments']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['arguments']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
@@ -79,6 +84,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['arguments']['field_data_ag_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_data_ag_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_data_ag_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_data_ag_value']['granularity'] = 'day';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -102,8 +108,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['filters']['field_data_ag_value']['field'] = 'field_data_ag_value';
   $handler->display->display_options['filters']['field_data_ag_value']['operator'] = '<';
-  $handler->display->display_options['filters']['field_data_ag_value']['granularity'] = 'hour';
-  $handler->display->display_options['filters']['field_data_ag_value']['default_date'] = '!2';
+  $handler->display->display_options['filters']['field_data_ag_value']['default_date'] = '!1';
 
   /* Display: Enllaç anterior */
   $handler = $view->new_display('entity_view', 'Enllaç anterior', 'entity_view_1');
@@ -171,6 +176,8 @@ function ictdirecta_agenda_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('Custom text'),
+    t('!1'),
     t('Tot'),
     t('Type'),
     t('Enllaç anterior'),
@@ -202,20 +209,13 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'calendar_style';
-  $handler->display->display_options['style_options']['calendar_type'] = 'week';
-  $handler->display->display_options['style_options']['name_size'] = '3';
-  $handler->display->display_options['style_options']['mini'] = '0';
-  $handler->display->display_options['style_options']['with_weekno'] = '0';
-  $handler->display->display_options['style_options']['multiday_theme'] = '1';
-  $handler->display->display_options['style_options']['theme_style'] = '1';
-  $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'dasf';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Sort criterion: Content: Post date */
@@ -237,10 +237,6 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'esdeveniment_agenda' => 'esdeveniment_agenda',
   );
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'agenda-calendar';
   $translatables['agenda_calendar'] = array(
     t('Master'),
     t('Agenda Calendar'),
@@ -257,7 +253,7 @@ function ictdirecta_agenda_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Page'),
+    t('dasf'),
   );
   $export['agenda_calendar'] = $view;
 
@@ -266,14 +262,14 @@ function ictdirecta_agenda_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Agenda Llista Menu Lateral';
+  $view->human_name = 'Agenda Llista';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Agenda Llista Menu Lateral';
+  $handler->display->display_options['title'] = 'Agenda Llista';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -419,10 +415,11 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['view_node']['text'] = '+info';
   $handler->display->display_options['path'] = 'agenda-llista';
 
-  /* Display: Bloc */
-  $handler = $view->new_display('block', 'Bloc', 'block_1');
+  /* Display: Menu lateral */
+  $handler = $view->new_display('block', 'Menu lateral', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Avui';
+  $handler->display->display_options['display_description'] = 'Caldrà tocarla a nivell de template ';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data_ag']['id'] = 'field_data_ag';
@@ -494,7 +491,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['agenda_llista'] = array(
     t('Master'),
-    t('Agenda Llista Menu Lateral'),
+    t('Agenda Llista'),
     t('més'),
     t('Aplica'),
     t('Reinicialitza'),
@@ -511,7 +508,8 @@ function ictdirecta_agenda_views_default_views() {
     t('Avui'),
     t('+info'),
     t('Page'),
-    t('Bloc'),
+    t('Menu lateral'),
+    t('Caldrà tocarla a nivell de template '),
   );
   $export['agenda_llista'] = $view;
 

@@ -228,6 +228,8 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
@@ -325,6 +327,9 @@ Aquest es el text que va al principi, el tene que poder modificar?';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';

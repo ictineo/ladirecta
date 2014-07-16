@@ -324,7 +324,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'context_block_rebuild_needed';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['context_block_rebuild_needed'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -440,7 +440,7 @@ system/ajax/*';
     'domain' => '',
     'prefix' => 'ca',
     'weight' => '0',
-    'javascript' => '0dlB8SuLTE9QSVxcuJ7ep7XnujLWYneRHxz-Q5hdcS0',
+    'javascript' => '5g4cgqBNdplKGU45eyM7He88SAFDB-DaVZguMYO8M8Q',
   );
   $export['language_default'] = $strongarm;
 
@@ -1008,7 +1008,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   return $export;
