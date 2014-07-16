@@ -75,7 +75,11 @@ projects[strongarm][subdir] = "contrib/dev"
 
   projects[search404][version] = "1.3"
   projects[search404][subdir] = "contrib"
+ 
+  projects[context][version] = "3.2"
+  projects[context][subdir] = "contrib"
   
+
  ;;; Apache Solr + Views + Facets  
   
   
