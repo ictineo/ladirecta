@@ -6,11 +6,11 @@ dependencies[] = ictdirecta_agenda
 dependencies[] = ictdirecta_basicconf
 dependencies[] = ictdirecta_butlletisonor
 dependencies[] = ictdirecta_faldo
+dependencies[] = ictdirecta_fotogaleria
 dependencies[] = ictdirecta_hemeroteca
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_video
-dependencies[] = ictdirecta_fotogaleria
 dependencies[] = ictdirecta_xxss
 <<<<<<< HEAD
 dependencies[] = ictdirecta_taxonomies
