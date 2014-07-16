@@ -30,6 +30,7 @@ features[field_instance][] = node-actualitat-field_destacar
 features[field_instance][] = node-actualitat-field_documents_adjunts
 features[field_instance][] = node-actualitat-field_etiquetes
 features[field_instance][] = node-actualitat-field_fotografia_de_portada
+features[field_instance][] = node-actualitat-field_fotografia_portada
 features[field_instance][] = node-actualitat-field_seccio
 features[node][] = actualitat
 features[variable][] = additional_settings__active_tab_actualitat

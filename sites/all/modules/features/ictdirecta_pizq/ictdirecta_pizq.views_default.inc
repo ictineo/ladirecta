@@ -89,13 +89,15 @@ function ictdirecta_pizq_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Pizq-noticies-video-fotogal';
   $translatables['portada_columnaizquierda'] = array(
     t('Master'),
     t('Portada-ColumnaIzquierda'),
@@ -114,6 +116,7 @@ function ictdirecta_pizq_views_default_views() {
     t('last »'),
     t('Page'),
     t('Block'),
+    t('Pizq-noticies-video-fotogal'),
   );
   $export['portada_columnaizquierda'] = $view;
 

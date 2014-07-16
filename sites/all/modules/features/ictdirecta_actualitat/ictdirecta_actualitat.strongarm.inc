@@ -144,7 +144,14 @@ function ictdirecta_actualitat_strongarm() {
           'weight' => '2',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'easy_social_1' => array(
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__actualitat'] = $strongarm;
