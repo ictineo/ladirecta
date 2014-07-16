@@ -11,6 +11,7 @@ dependencies[] = field_collection
 dependencies[] = field_slideshow
 dependencies[] = list
 dependencies[] = views
+features[conditional_fields][] = node:fotogaleria
 features[context][] = fotogaleria
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1

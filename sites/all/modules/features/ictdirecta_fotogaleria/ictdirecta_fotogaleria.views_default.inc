@@ -102,7 +102,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['fields']['field_portada_fotogaleria']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_portada_fotogaleria']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_portada_fotogaleria']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'medium',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_portada_fotogaleria']['field_api_classes'] = TRUE;
@@ -116,6 +116,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '4';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -140,7 +141,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['fields']['field_portada_fotogaleria']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_portada_fotogaleria']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_portada_fotogaleria']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'medium',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_portada_fotogaleria']['field_api_classes'] = TRUE;

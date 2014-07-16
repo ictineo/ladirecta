@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_pizq feature.
+ */
+
+include_once 'ictdirecta_pizq.features.inc';

@@ -150,7 +150,14 @@ function ictdirecta_fotogaleria_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'easy_social_1' => array(
+          'default' => array(
+            'weight' => '101',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__fotogaleria'] = $strongarm;
