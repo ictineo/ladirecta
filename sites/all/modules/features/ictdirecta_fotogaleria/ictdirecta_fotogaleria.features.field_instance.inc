@@ -232,6 +232,44 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-fotogaleria-field_columna'
+  $field_instances['node-fotogaleria-field_columna'] = array(
+    'bundle' => 'fotogaleria',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_columna',
+    'label' => 'Columna',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-fotogaleria-field_etiquetes'
   $field_instances['node-fotogaleria-field_etiquetes'] = array(
     'bundle' => 'fotogaleria',
@@ -538,6 +576,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
   t('Autoria');
   t('Autoria general');
   t('Body');
+  t('Columna');
   t('Etiquetes');
   t('Fotografia');
   t('Fotografies');
