@@ -80,6 +80,7 @@ features[variable][] = colorbox_transition_type
 features[variable][] = colorbox_visibility
 features[variable][] = comment_page
 features[variable][] = configurable_timezones
+features[variable][] = context_block_rebuild_needed
 features[variable][] = date_api_use_iso8601
 features[variable][] = date_api_version
 features[variable][] = date_default_timezone
