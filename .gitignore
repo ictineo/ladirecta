@@ -54,8 +54,9 @@ sites/all/themes/*
 # i a sites/all/themes nomes
 # els subthemes desenvolupats
 #!sites/all/themes/custom
-sites/all/libraries/*
 
+!sites/all/libraries/ckeditor/styles.js
+sites/all/libraries/*
 
 #excloure temporals del vim
 *.swp
