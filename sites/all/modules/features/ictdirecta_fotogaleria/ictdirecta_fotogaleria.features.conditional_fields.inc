@@ -14,7 +14,7 @@ function ictdirecta_fotogaleria_conditional_fields_default_fields() {
     'entity' => 'node',
     'bundle' => 'fotogaleria',
     'dependent' => 'field_columna',
-    'dependee' => 'field_promogut_portada',
+    'dependee' => 'field_destacar',
     'options' => array(
       'state' => 'visible',
       'condition' => 'checked',

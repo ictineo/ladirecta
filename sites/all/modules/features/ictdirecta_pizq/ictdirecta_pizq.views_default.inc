@@ -44,6 +44,11 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -60,11 +65,13 @@ function ictdirecta_pizq_views_default_views() {
     'noticia' => 'noticia',
     'video' => 'video',
   );
-  /* Filter criterion: Field: Mostra&#039;l en portada	 (field_promogut_portada) */
-  $handler->display->display_options['filters']['field_promogut_portada_value']['id'] = 'field_promogut_portada_value';
-  $handler->display->display_options['filters']['field_promogut_portada_value']['table'] = 'field_data_field_promogut_portada';
-  $handler->display->display_options['filters']['field_promogut_portada_value']['field'] = 'field_promogut_portada_value';
-  $handler->display->display_options['filters']['field_promogut_portada_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Destacar (field_destacar) */
+  $handler->display->display_options['filters']['field_destacar_value']['id'] = 'field_destacar_value';
+  $handler->display->display_options['filters']['field_destacar_value']['table'] = 'field_data_field_destacar';
+  $handler->display->display_options['filters']['field_destacar_value']['field'] = 'field_destacar_value';
+  $handler->display->display_options['filters']['field_destacar_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_destacar_value']['group'] = 1;
   /* Filter criterion: Content: Columna (field_columna) */
   $handler->display->display_options['filters']['field_columna_value']['id'] = 'field_columna_value';
   $handler->display->display_options['filters']['field_columna_value']['table'] = 'field_data_field_columna';
@@ -72,6 +79,7 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['filters']['field_columna_value']['value'] = array(
     'Esquerra' => 'Esquerra',
   );
+  $handler->display->display_options['filters']['field_columna_value']['group'] = 2;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

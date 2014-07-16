@@ -160,7 +160,7 @@ function ictdirecta_noticia_strongarm() {
       'display' => array(
         'easy_social_1' => array(
           'teaser' => array(
-            'weight' => '5',
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

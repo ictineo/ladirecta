@@ -141,13 +141,13 @@ function ictdirecta_fotogaleria_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '2',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -155,6 +155,10 @@ function ictdirecta_fotogaleria_strongarm() {
           'default' => array(
             'weight' => '101',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
       ),
