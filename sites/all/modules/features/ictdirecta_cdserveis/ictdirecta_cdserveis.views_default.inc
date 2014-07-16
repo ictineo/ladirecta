@@ -114,7 +114,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -246,7 +246,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -331,7 +331,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -400,7 +400,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['header']['view']['field'] = 'view';
   $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -491,7 +491,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -546,6 +546,7 @@ Aquest es el text que va al principi, el tene que poder modificar?'),
     t('Territori '),
     t('Tipus de servei '),
     t('Block'),
+    t('more'),
     t('Oferta:'),
     t('Tipus de Servei'),
     t('Subscriu-t\'hi!'),
