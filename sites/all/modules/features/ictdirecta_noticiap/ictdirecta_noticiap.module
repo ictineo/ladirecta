@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_noticiap feature.
+ */
+
+include_once 'ictdirecta_noticiap.features.inc';
