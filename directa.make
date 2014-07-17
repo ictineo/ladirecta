@@ -49,6 +49,11 @@ projects[strongarm][subdir] = "contrib/dev"
 
   projects[draggableviews][version] = "2.0"
   projects[draggableviews][subdir] = "contrib"
+
+  projects[flag][version] = "3.5"
+  projects[flag][subdir] = "contrib"
+
+
 ;;; Generics posicionament i funcionalitats
   projects[google_analytics][version] = "1.4"
   projects[google_analytics][subdir] = "contrib"
