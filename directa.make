@@ -13,6 +13,8 @@ projects[features][version] = "2.0"
 projects[features][subdir] = "contrib/dev"
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib/dev"
+projects[drush_clone][version] = "1.0"
+projects[drush_clone][subdir] = "contrib/dev"
 
 ;
 ; Moduls de funcionalitat
