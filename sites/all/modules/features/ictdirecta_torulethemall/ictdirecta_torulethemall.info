@@ -13,6 +13,7 @@ dependencies[] = ictdirecta_n_paper
 dependencies[] = ictdirecta_noticia_paper
 dependencies[] = ictdirecta_pdret
 dependencies[] = ictdirecta_pizq
+dependencies[] = ictdirecta_tagadelic
 dependencies[] = ictdirecta_video
 dependencies[] = ictdirecta_xxss
 <<<<<<< HEAD
