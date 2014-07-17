@@ -32,15 +32,9 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
-  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Relationship: Flags: portada_ciz */
@@ -141,13 +135,6 @@ function ictdirecta_pizq_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Elements per pàgina'),
-    t('- Tot -'),
-    t('Desplaçament'),
-    t('« primer'),
-    t('‹ anterior'),
-    t('següent ›'),
-    t('últim »'),
     t('flag'),
     t('Page'),
     t('Content'),
