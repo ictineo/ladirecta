@@ -15,7 +15,7 @@ function ictdirecta_portada_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Directa_Portada';
+  $view->human_name = 'Portada_total';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -50,7 +50,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['view']['label'] = '';
   $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view']['view'] = 'portada_columnaizquierda';
-  $handler->display->display_options['fields']['view']['display'] = 'block';
+  $handler->display->display_options['fields']['view']['display'] = 'page';
   /* Field: Global: View */
   $handler->display->display_options['fields']['view_1']['id'] = 'view_1';
   $handler->display->display_options['fields']['view_1']['table'] = 'views';
@@ -58,7 +58,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['view_1']['label'] = '';
   $handler->display->display_options['fields']['view_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_1']['view'] = 'portada_columnaderecha';
-  $handler->display->display_options['fields']['view_1']['display'] = 'block';
+  $handler->display->display_options['fields']['view_1']['display'] = 'page';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -136,49 +136,48 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
     'type' => 'type',
-    'status' => 'status',
-    'name' => 'name',
-    'changed' => 'changed',
     'edit_node' => 'edit_node',
+    'ops_1' => 'ops_1',
+    'ops' => 'ops',
   );
-  $handler->display->display_options['style_options']['default'] = 'changed';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
     ),
     'type' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
-    ),
-    'status' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-    ),
-    'name' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-    ),
-    'changed' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'desc',
-      'align' => '',
-      'separator' => '',
+      'empty_column' => 0,
     ),
     'edit_node' => array(
       'align' => '',
       'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops_1' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'ops' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['order'] = 'desc';
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<a href="portada/ordend"> Ordre columna dreta</a>
+<a href="portada/ordeni"> Ordre columna esquerra</a>';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -192,6 +191,10 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relationship: Content: Autor */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -233,10 +236,37 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
   $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+  /* Filter criterion: Content: Tipus */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'actualitat' => 'actualitat',
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: portada_cdr */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'flag_dret';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relationship: Flags: portada_ciz */
+  $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['label'] = 'flag_izq';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'portada_ciz';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -259,11 +289,18 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edita';
   /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
+  $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
+  $handler->display->display_options['fields']['ops_1']['label'] = 'Columna  Esquerra';
+  $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
-  $handler->display->display_options['fields']['ops']['label'] = 'Promocionar';
+  $handler->display->display_options['fields']['ops']['label'] = 'Columna Dreta';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'admin/workbench/portada';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -271,23 +308,6 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '2';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Publicat */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
   $translatables['gestioportada'] = array(
     t('Defaults'),
     t('Tot el contingut recent'),
@@ -304,8 +324,11 @@ function ictdirecta_portada_views_default_views() {
     t('‹ anterior'),
     t('següent ›'),
     t('últim »'),
+    t('<a href="portada/ordend"> Ordre columna dreta</a>
+<a href="portada/ordeni"> Ordre columna esquerra</a>'),
     t('There is no content available for you to edit.'),
     t('flag'),
+    t('autor'),
     t('Títol'),
     t('Tipus'),
     t('Autor'),
@@ -314,8 +337,10 @@ function ictdirecta_portada_views_default_views() {
     t('edita'),
     t('Page'),
     t('més'),
-    t('Promocionar'),
-    t('Block'),
+    t('flag_dret'),
+    t('flag_izq'),
+    t('Columna  Esquerra'),
+    t('Columna Dreta'),
   );
   $export['gestioportada'] = $view;
 
