@@ -1,0 +1,5 @@
+name = ictdirecta_portada
+core = 7.x
+package = Features
+dependencies[] = rules
+features[features_api][] = api:2
