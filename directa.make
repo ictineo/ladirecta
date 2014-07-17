@@ -117,6 +117,9 @@ projects[drush_clone][subdir] = "contrib/dev"
   projects[webform][version] = "3.19"
   projects[webform][subdir] = "contrib"
 
+  projects[views_field_view][version] = "1.1"
+  projects[views_field_view][subdir] = "contrib"
+  
   projects[date][version] = "2.6"
   projects[date][subdir] = "contrib"
 
