@@ -5,6 +5,13 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function ictdirecta_portada_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_flag_default_flags().
  */
 function ictdirecta_portada_flag_default_flags() {
