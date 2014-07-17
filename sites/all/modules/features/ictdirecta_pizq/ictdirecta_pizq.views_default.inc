@@ -32,6 +32,12 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Relationship: Flags: portada_ciz */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -45,10 +51,6 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'AND',
-  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -56,30 +58,6 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'fotogaleria' => 'fotogaleria',
-    'noticia' => 'noticia',
-    'video' => 'video',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Destacar (field_destacar) */
-  $handler->display->display_options['filters']['field_destacar_value']['id'] = 'field_destacar_value';
-  $handler->display->display_options['filters']['field_destacar_value']['table'] = 'field_data_field_destacar';
-  $handler->display->display_options['filters']['field_destacar_value']['field'] = 'field_destacar_value';
-  $handler->display->display_options['filters']['field_destacar_value']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_destacar_value']['group'] = 1;
-  /* Filter criterion: Content: Columna (field_columna) */
-  $handler->display->display_options['filters']['field_columna_value']['id'] = 'field_columna_value';
-  $handler->display->display_options['filters']['field_columna_value']['table'] = 'field_data_field_columna';
-  $handler->display->display_options['filters']['field_columna_value']['field'] = 'field_columna_value';
-  $handler->display->display_options['filters']['field_columna_value']['value'] = array(
-    'Esquerra' => 'Esquerra',
-  );
-  $handler->display->display_options['filters']['field_columna_value']['group'] = 2;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -142,6 +120,7 @@ function ictdirecta_pizq_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('flag'),
     t('Page'),
     t('Block'),
     t('Pizq-noticies-video-fotogal'),
