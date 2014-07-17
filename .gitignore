@@ -53,10 +53,14 @@ sites/all/themes/*
 # el zen base estara a /theme
 # i a sites/all/themes nomes
 # els subthemes desenvolupats
-#!sites/all/themes/custom
+!sites/all/themes/custom
 
-!sites/all/libraries/ckeditor/styles.js
+!sites/all/libraries/
+
 sites/all/libraries/*
+!sites/all/libraries/ckeditor/
 
+sites/all/libraries/ckeditor/*
+!sites/all/libraries/ckeditor/styles.js
 #excloure temporals del vim
 *.swp
