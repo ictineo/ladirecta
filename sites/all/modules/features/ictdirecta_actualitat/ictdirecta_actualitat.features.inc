@@ -26,7 +26,7 @@ function ictdirecta_actualitat_views_api($module = NULL, $api = NULL) {
 function ictdirecta_actualitat_node_info() {
   $items = array(
     'actualitat' => array(
-      'name' => t('Notícia'),
+      'name' => t('Actualitat'),
       'base' => 'node_content',
       'description' => t('Element principal de contingut. Pensat per continguts treballats i relativament extensos, en la portada es mostrarà a la columna esquerra. No te limitació de caràcters'),
       'has_title' => '1',
