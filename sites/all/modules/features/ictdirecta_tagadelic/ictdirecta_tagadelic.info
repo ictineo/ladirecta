@@ -1,6 +1,6 @@
 name = ictdirecta_tagadelic
 core = 7.x
 package = Features
-dependencies[] = tagadelic
+dependencies[] = tagadelic_taxonomy
 dependencies[] = tagadelic_views
 features[features_api][] = api:2
