@@ -110,6 +110,33 @@ function ictdirecta_noticia_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_comment__comment_node_noticia';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(
+        'author' => array(
+          'weight' => '0',
+        ),
+        'subject' => array(
+          'weight' => '2',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_comment__comment_node_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_collection_item__field_contingut_relacionat';
   $strongarm->value = array(
     'view_modes' => array(
@@ -171,7 +198,13 @@ function ictdirecta_noticia_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '2',
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'ultimes_noticies_entity_view_1' => array(
+          'default' => array(
+            'weight' => '0',
             'visible' => TRUE,
           ),
         ),
