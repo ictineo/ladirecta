@@ -53,6 +53,11 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[flag][version] = "3.5"
   projects[flag][subdir] = "contrib"
 
+  projects[tagadelic][version] = "2.x-dev"
+  projects[tagadelic][subdir] = "contrib"
+  
+  projects[tagadelic_views][version] = "2.x-dev"
+  projects[tagadelic_views][subdir] = "contrib"
 
 ;;; Generics posicionament i funcionalitats
   projects[google_analytics][version] = "1.4"
