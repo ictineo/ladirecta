@@ -283,6 +283,8 @@ projects[drush_clone][subdir] = "contrib"
   projects[field_permissions][subdir] = "contrib"
 
 ;;; Usuaris
+  projects[workbench][version]="1.2"
+  projects[workbench][subdir]="contrib"
   projects[profile2][version] = "1.3"
   projects[profile2][subdir] = "contrib"
   projects[user_readonly][version] = "1.4"
