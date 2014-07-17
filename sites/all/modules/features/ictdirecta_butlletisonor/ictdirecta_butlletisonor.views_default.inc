@@ -41,6 +41,19 @@ function ictdirecta_butlletisonor_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
+  /* Field: Content: Nº associat */
+  $handler->display->display_options['fields']['field_n_associat']['id'] = 'field_n_associat';
+  $handler->display->display_options['fields']['field_n_associat']['table'] = 'field_data_field_n_associat';
+  $handler->display->display_options['fields']['field_n_associat']['field'] = 'field_n_associat';
+  $handler->display->display_options['fields']['field_n_associat']['label'] = '';
+  $handler->display->display_options['fields']['field_n_associat']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_n_associat']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_n_associat']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_n_associat']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_n_associat']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_n_associat']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

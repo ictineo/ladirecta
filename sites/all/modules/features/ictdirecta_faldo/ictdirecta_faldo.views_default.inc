@@ -60,7 +60,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['id'] = 'field_contingut_relacionat_desta_target_id';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['table'] = 'field_data_field_contingut_relacionat_desta';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['field'] = 'field_contingut_relacionat_desta_target_id';
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -157,7 +157,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
@@ -293,8 +293,140 @@ function ictdirecta_faldo_views_default_views() {
     'faldo' => 'faldo',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Faldo dimecres */
+  $handler = $view->new_display('block', 'Faldo dimecres', 'block');
+
+  /* Display: Bs portada */
+  $handler = $view->new_display('block', 'Bs portada', 'block_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Portada numero */
+  $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
+  $handler->display->display_options['fields']['field_portada_numero']['table'] = 'field_data_field_portada_numero';
+  $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
+  $handler->display->display_options['fields']['field_portada_numero']['relationship'] = 'field_numero_en_paper_target_id';
+  $handler->display->display_options['fields']['field_portada_numero']['label'] = 'Foto';
+  $handler->display->display_options['fields']['field_portada_numero']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_portada_numero']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_portada_numero']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_portada_numero']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_portada_numero']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_portada_numero']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_portada_numero']['settings'] = array(
+    'image_style' => '',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_portada_numero']['field_api_classes'] = TRUE;
+  /* Field: Content: Butlleti sonor */
+  $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'field_data_field_butlleti_sonor';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['relationship'] = 'field_bs_target_id';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['label'] = '';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_butlleti_sonor']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_butlleti_sonor']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_butlleti_sonor']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['type'] = 'jplayer_player';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['settings'] = array(
+    'mode' => 'playlist',
+    'autoplay' => '0',
+    'solution' => 'html, flash',
+    'preload' => 'metadata',
+    'volume' => '80',
+    'muted' => '0',
+    'repeat' => 'none',
+    'backgroundColor' => '000000',
+  );
+  $handler->display->display_options['fields']['field_butlleti_sonor']['field_api_classes'] = TRUE;
+  /* Field: Content: Nº */
+  $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
+  $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
+  $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
+  $handler->display->display_options['fields']['field_n_']['relationship'] = 'field_numero_en_paper_target_id';
+  $handler->display->display_options['fields']['field_n_']['label'] = '';
+  $handler->display->display_options['fields']['field_n_']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_n_']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_n_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_n_']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_n_']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_n_']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_n_']['field_api_classes'] = TRUE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Hemeroteca';
+  /* Field: Content: Data */
+  $handler->display->display_options['fields']['field_dataf_1']['id'] = 'field_dataf_1';
+  $handler->display->display_options['fields']['field_dataf_1']['table'] = 'field_data_field_dataf';
+  $handler->display->display_options['fields']['field_dataf_1']['field'] = 'field_dataf';
+  $handler->display->display_options['fields']['field_dataf_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_dataf_1']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: PDF */
+  $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
+  $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
+  $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
+  $handler->display->display_options['fields']['field_pdf']['relationship'] = 'field_numero_en_paper_target_id';
+  $handler->display->display_options['fields']['field_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_pdf']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_pdf']['alter']['text'] = 'Visualitza';
+  $handler->display->display_options['fields']['field_pdf']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_pdf']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pdf']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_pdf']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pdf']['type'] = 'file_download_link';
+  $handler->display->display_options['fields']['field_pdf']['settings'] = array(
+    'text' => 'Visualitza',
+  );
+  $handler->display->display_options['fields']['field_pdf']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div id=faldo-general>
+
+  <div id=faldo_esquerra>
+
+    <div id=faldo_esquerra_portada>
+   [field_portada_numero]
+    </div>
+    <div id=faldo_esquerra_dreta>
+    [field_dataf_1]
+    [field_n_]
+    [field_pdf]
+    [view_node]
+    [field_butlleti_sonor]
+
+    </div>
+  </div>
+</div>';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $translatables['fald_'] = array(
     t('Master'),
     t('Faldó'),
@@ -348,7 +480,28 @@ function ictdirecta_faldo_views_default_views() {
     </div>
   </div>
 </div>'),
-    t('Block'),
+    t('Faldo dimecres'),
+    t('Bs portada'),
+    t('Hemeroteca'),
+    t('Data'),
+    t('Visualitza'),
+    t('<div id=faldo-general>
+
+  <div id=faldo_esquerra>
+
+    <div id=faldo_esquerra_portada>
+   [field_portada_numero]
+    </div>
+    <div id=faldo_esquerra_dreta>
+    [field_dataf_1]
+    [field_n_]
+    [field_pdf]
+    [view_node]
+    [field_butlleti_sonor]
+
+    </div>
+  </div>
+</div>'),
   );
   $export['fald_'] = $view;
 

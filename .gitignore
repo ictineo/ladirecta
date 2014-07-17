@@ -61,6 +61,6 @@ sites/all/libraries/*
 !sites/all/libraries/ckeditor/
 
 sites/all/libraries/ckeditor/*
-!sites/all/libraries/ckeditor/styles.js
+sites/all/libraries/ckeditor/styles.js
 #excloure temporals del vim
 *.swp

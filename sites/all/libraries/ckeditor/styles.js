@@ -14,16 +14,7 @@
 // website requirements and design properly.
 
 CKEDITOR.stylesSet.add( 'default', [
-	
-    
-   
-   /* Customs styles: Aquests estil son els desenvolupats per Porjecte Ictineo */
-
-  { name: 'Resaltat noticia vermell',	element: 'span', attributes: { 'class': 'vermell_reslat'} },
-	{ name: 'Negreta notcia',	element: 'span', attributes: { 'class': 'negreta_notica' } }, 
-	{ name: 'Noticia Subtitol',	element: 'span', attributes: { 'class': 'subtitol' } },
-    
-    /* Block Styles */
+	/* Block Styles */
 
 	// These styles are already available in the "Format" combo ("format" plugin),
 	// so they are not needed here by default. You may enable them to avoid
@@ -84,11 +75,9 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Inline Quotation',	element: 'q' },
 
 	{ name: 'Language: RTL',	element: 'span', attributes: { 'dir': 'rtl' } },
-
 	{ name: 'Language: LTR',	element: 'span', attributes: { 'dir': 'ltr' } },
-	
-    
-  /* Object Styles */
+
+	/* Object Styles */
 
 	{
 		name: 'Styled image (left)',
