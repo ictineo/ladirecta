@@ -24,12 +24,23 @@ function ictdirecta_pdret_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Portada-ColumnaDerecha';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Relationship: Flags: portada_cdr */
@@ -38,7 +49,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: Title */
+  /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -50,7 +61,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Publicat */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -120,7 +131,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -136,7 +147,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
-  /* Field: Content: Published */
+  /* Field: Content: Publicat */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -157,7 +168,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Field: Content: Type */
+  /* Field: Content: Tipus */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
@@ -165,19 +176,19 @@ function ictdirecta_pdret_views_default_views() {
   $translatables['portada_columnaderecha'] = array(
     t('Master'),
     t('Portada-ColumnaDerecha'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
+    t('més'),
+    t('Aplica'),
+    t('Reinicialitza'),
+    t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('Elements per pàgina'),
+    t('- Tot -'),
+    t('Desplaçament'),
+    t('« primer'),
+    t('‹ anterior'),
+    t('següent ›'),
+    t('últim »'),
     t('flag'),
     t('Page'),
     t('Block'),
@@ -186,7 +197,7 @@ function ictdirecta_pdret_views_default_views() {
     t('Promoted to front page'),
     t('Updated date'),
     t('Author uid'),
-    t('Type'),
+    t('Tipus'),
     t('Admin_Pder-noticies-video-fotogal'),
   );
   $export['portada_columnaderecha'] = $view;
