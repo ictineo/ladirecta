@@ -10,7 +10,6 @@ dependencies[] = ictdirecta_hemeroteca
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_n_paper
-dependencies[] = ictdirecta_noticiap
 dependencies[] = ictdirecta_pdret
 dependencies[] = ictdirecta_pizq
 dependencies[] = ictdirecta_video
