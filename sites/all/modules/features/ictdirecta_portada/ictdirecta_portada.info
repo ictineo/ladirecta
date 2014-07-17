@@ -4,6 +4,7 @@ package = Features
 dependencies[] = flag
 dependencies[] = rules
 dependencies[] = trigger
+dependencies[] = views_field_view
 features[features_api][] = api:2
 features[flag][] = portada_cdr
 features[flag][] = portada_ciz
