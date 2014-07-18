@@ -22,7 +22,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'comment',
@@ -39,7 +39,42 @@ function ictdirecta_noticia_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_noticia-field_correu_electr_nic'
+  $field_instances['comment-comment_node_noticia-field_correu_electr_nic'] = array(
+    'bundle' => 'comment_node_noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_correu_electr_nic',
+    'label' => 'Correu Electrónic',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -54,10 +89,11 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 1,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -94,10 +130,9 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -126,10 +161,9 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -161,7 +195,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -202,10 +236,9 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -260,16 +293,24 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 0,
+          'edit' => '',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_fields',
+        'type' => 'field_collection_view',
         'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
+<<<<<<< HEAD
         'weight' => 7,
+=======
+        'weight' => 9,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -297,9 +338,15 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -308,12 +355,15 @@ function ictdirecta_noticia_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 2,
       ),
+<<<<<<< HEAD
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
       ),
+=======
+>>>>>>> noticies
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
@@ -344,6 +394,7 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+<<<<<<< HEAD
   // Exported field_instance: 'node-noticia-field_destacar'
   $field_instances['node-noticia-field_destacar'] = array(
     'bundle' => 'noticia',
@@ -388,6 +439,8 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
+=======
+>>>>>>> noticies
   // Exported field_instance: 'node-noticia-field_documents_adjunts'
   $field_instances['node-noticia-field_documents_adjunts'] = array(
     'bundle' => 'noticia',
@@ -398,14 +451,18 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'file_table',
         'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+<<<<<<< HEAD
         'weight' => 9,
+=======
+        'weight' => 8,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -462,16 +519,19 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+<<<<<<< HEAD
         'weight' => 6,
+=======
+        'weight' => 5,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -494,8 +554,8 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_fotografia_de_portada'
-  $field_instances['node-noticia-field_fotografia_de_portada'] = array(
+  // Exported field_instance: 'node-noticia-field_fotografia_portada'
+  $field_instances['node-noticia-field_fotografia_portada'] = array(
     'bundle' => 'noticia',
     'deleted' => 0,
     'description' => '',
@@ -504,10 +564,11 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'hidden',
+<<<<<<< HEAD
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
@@ -566,12 +627,15 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+=======
+>>>>>>> noticies
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'image_link' => 'content',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
+<<<<<<< HEAD
         'weight' => 9,
       ),
       'teaser' => array(
@@ -583,6 +647,9 @@ function ictdirecta_noticia_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 2,
+=======
+        'weight' => 0,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -634,13 +701,14 @@ function ictdirecta_noticia_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 1,
       ),
       'teaser' => array(
+<<<<<<< HEAD
         'label' => 'hidden',
         'module' => 'shs',
         'settings' => array(
@@ -648,6 +716,12 @@ function ictdirecta_noticia_field_default_field_instances() {
         ),
         'type' => 'shs_default',
         'weight' => 0,
+=======
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -676,16 +750,19 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+<<<<<<< HEAD
         'weight' => 5,
+=======
+        'weight' => 7,
+>>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -715,12 +792,11 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
   t('Comment');
   t('Contingut relacionat');
+  t('Correu Electrónic');
   t('Data');
-  t('Destacar');
   t('Destacat');
   t('Documents adjunts');
   t('Etiquetes');
-  t('Fotografia de portada');
   t('Fotografia_portada');
   t('Mostra\'l en portada	');
   t('Secció');

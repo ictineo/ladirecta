@@ -28,6 +28,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '100';
@@ -207,7 +208,7 @@ function ictdirecta_noticia_views_default_views() {
     t('Noticies relacionades'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Reinicialitza'),
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
@@ -230,6 +231,101 @@ function ictdirecta_noticia_views_default_views() {
     t('Reference dialog Search'),
   );
   $export['contingut_relacionat'] = $view;
+
+  $view = new view();
+  $view->name = 'ultimes_noticies';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Ultimes noticies';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Ultimes noticies [field_seccio] ';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Secció */
+  $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
+  $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
+  $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
+  $handler->display->display_options['fields']['field_seccio']['label'] = '';
+  $handler->display->display_options['fields']['field_seccio']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_seccio']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Secció (field_seccio) */
+  $handler->display->display_options['arguments']['field_seccio_tid']['id'] = 'field_seccio_tid';
+  $handler->display->display_options['arguments']['field_seccio_tid']['table'] = 'field_data_field_seccio';
+  $handler->display->display_options['arguments']['field_seccio_tid']['field'] = 'field_seccio_tid';
+  $handler->display->display_options['arguments']['field_seccio_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_seccio_tid']['exception']['title'] = 'Tot';
+  $handler->display->display_options['arguments']['field_seccio_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_seccio_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_seccio_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_seccio_tid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'noticia' => 'noticia',
+  );
+
+  /* Display: EVA Field */
+  $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'noticia',
+  );
+  $handler->display->display_options['argument_mode'] = 'token';
+  $handler->display->display_options['default_argument'] = '[node:field-seccio:tid]';
+  $handler->display->display_options['show_title'] = 1;
+  $translatables['ultimes_noticies'] = array(
+    t('Master'),
+    t('Ultimes noticies [field_seccio] '),
+    t('more'),
+    t('Apply'),
+    t('Reinicialitza'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Tot'),
+    t('EVA Field'),
+  );
+  $export['ultimes_noticies'] = $view;
 
   return $export;
 }
