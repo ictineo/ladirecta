@@ -26,6 +26,16 @@ function ictdirecta_noticia_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'token',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'field_collection_item',
     'fences_wrapper' => 'div',
@@ -66,6 +76,12 @@ function ictdirecta_noticia_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 1,
       ),
+      'token' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
     ),
     'entity_type' => 'field_collection_item',
     'fences_wrapper' => 'div',
@@ -96,6 +112,12 @@ function ictdirecta_noticia_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -152,7 +174,7 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
