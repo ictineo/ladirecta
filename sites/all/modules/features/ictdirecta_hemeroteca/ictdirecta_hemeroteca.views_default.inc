@@ -29,7 +29,6 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -154,25 +153,53 @@ function ictdirecta_hemeroteca_views_default_views() {
         ),
       ),
     ),
+    'type_1' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => 'Tot',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
   );
-  $handler->display->display_options['exposed_form']['options']['input_required'] = 1;
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Selecciona qualsevol filtre per veure els resultats';
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Camp: Indexed Content: Node ID */
+  /* Relationship: Indexed Content: Numero en paper */
+  $handler->display->display_options['relationships']['field_numero_en_paper']['id'] = 'field_numero_en_paper';
+  $handler->display->display_options['relationships']['field_numero_en_paper']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_numero_en_paper']['field'] = 'field_numero_en_paper';
+  /* Relationship: Indexed Content: Butlleti sonor */
+  $handler->display->display_options['relationships']['field_bs']['id'] = 'field_bs';
+  $handler->display->display_options['relationships']['field_bs']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['relationships']['field_bs']['field'] = 'field_bs';
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Camp: Indexed Content: Tipus de contingut */
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
+  /* Field: Indexed Content: Content type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
-  /* Camp: Indexed Content: Autor */
+  /* Field: Indexed Content: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -180,7 +207,7 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
-  /* Camp: Indexed Content: Data */
+  /* Field: Indexed Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -193,7 +220,38 @@ function ictdirecta_hemeroteca_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Camp: Indexed Content: Fotografia_portada */
+  /* Field: Content: Data */
+  $handler->display->display_options['fields']['field_databs']['id'] = 'field_databs';
+  $handler->display->display_options['fields']['field_databs']['table'] = 'entity_node';
+  $handler->display->display_options['fields']['field_databs']['field'] = 'field_databs';
+  $handler->display->display_options['fields']['field_databs']['relationship'] = 'field_bs';
+  $handler->display->display_options['fields']['field_databs']['label'] = '';
+  $handler->display->display_options['fields']['field_databs']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_databs']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Butlleti sonor */
+  $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'entity_node';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['relationship'] = 'field_bs';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['type'] = 'jplayer_player';
+  $handler->display->display_options['fields']['field_butlleti_sonor']['settings'] = array(
+    'mode' => 'playlist',
+    'autoplay' => '0',
+    'solution' => 'html, flash',
+    'preload' => 'metadata',
+    'volume' => '80',
+    'muted' => '0',
+    'repeat' => 'none',
+    'backgroundColor' => '000000',
+  );
+  /* Field: Indexed Content: Fotografia_portada */
   $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
@@ -205,7 +263,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Camp: Indexed Content: Portada numero */
+  /* Field: Indexed Content: Portada numero */
   $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
@@ -217,14 +275,14 @@ function ictdirecta_hemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Camp: Indexed Content: Títol */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Camp: Indexed Content: The main body text */
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -234,11 +292,30 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_tags_']['id'] = 'field_tags_';
+  $handler->display->display_options['fields']['field_tags_']['table'] = 'entity_node';
+  $handler->display->display_options['fields']['field_tags_']['field'] = 'field_tags_';
+  $handler->display->display_options['fields']['field_tags_']['relationship'] = 'field_numero_en_paper';
+  $handler->display->display_options['fields']['field_tags_']['label'] = '';
+  $handler->display->display_options['fields']['field_tags_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags_']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_tags_']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_tags_']['bypass_access'] = 0;
+  /* Field: Indexed Content: Etiquetes */
+  $handler->display->display_options['fields']['field_etiquetes_1']['id'] = 'field_etiquetes_1';
+  $handler->display->display_options['fields']['field_etiquetes_1']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_etiquetes_1']['field'] = 'field_etiquetes';
+  $handler->display->display_options['fields']['field_etiquetes_1']['label'] = '';
+  $handler->display->display_options['fields']['field_etiquetes_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_etiquetes_1']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_etiquetes_1']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_etiquetes_1']['bypass_access'] = 0;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
     2 => 'OR',
   );
-  /* Filter criterion: Cerca: Fulltext search */
+  /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
@@ -306,7 +383,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_data_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Autor */
+  /* Filter criterion: Indexed Content: Author */
   $handler->display->display_options['filters']['author']['id'] = 'author';
   $handler->display->display_options['filters']['author']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['author']['field'] = 'author';
@@ -376,7 +453,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_territori']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Content: Tipus de contingut */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -390,6 +467,7 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['filters']['type']['is_grouped'] = TRUE;
   $handler->display->display_options['filters']['type']['group_info']['identifier'] = 'type';
   $handler->display->display_options['filters']['type']['group_info']['widget'] = 'radios';
+  $handler->display->display_options['filters']['type']['group_info']['multiple'] = TRUE;
   $handler->display->display_options['filters']['type']['group_info']['group_items'] = array(
     1 => array(
       'title' => 'Web',
@@ -397,15 +475,19 @@ function ictdirecta_hemeroteca_views_default_views() {
       'value' => array(
         'butlleti_sonor' => 'butlleti_sonor',
         'noticia' => 'noticia',
+        'actualitat' => 0,
         'article' => 0,
         'page' => 0,
         'cd_serveis' => 0,
         'cd_noticies' => 0,
         'esdeveniment_agenda' => 0,
         'faldo' => 0,
+        'fotogaleria' => 0,
         'linies_de_recerca' => 0,
+        'noticia_paper' => 0,
         'numero_paper' => 0,
         'punts_de_venda' => 0,
+        'video' => 0,
       ),
     ),
     2 => array(
@@ -413,6 +495,85 @@ function ictdirecta_hemeroteca_views_default_views() {
       'operator' => '=',
       'value' => array(
         'numero_paper' => 'numero_paper',
+        'actualitat' => 0,
+        'article' => 0,
+        'page' => 0,
+        'butlleti_sonor' => 0,
+        'cd_serveis' => 0,
+        'cd_noticies' => 0,
+        'esdeveniment_agenda' => 0,
+        'faldo' => 0,
+        'fotogaleria' => 0,
+        'linies_de_recerca' => 0,
+        'noticia_paper' => 0,
+        'noticia' => 0,
+        'punts_de_venda' => 0,
+        'video' => 0,
+      ),
+    ),
+  );
+  /* Filter criterion: Indexed Content: Content type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type_1']['expose']['operator_id'] = 'type_1_op';
+  $handler->display->display_options['filters']['type_1']['expose']['label'] = 'Content type';
+  $handler->display->display_options['filters']['type_1']['expose']['operator'] = 'type_1_op';
+  $handler->display->display_options['filters']['type_1']['expose']['identifier'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['type_1']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['type_1']['group_info']['label'] = 'Tipus';
+  $handler->display->display_options['filters']['type_1']['group_info']['identifier'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'Text',
+      'operator' => '=',
+      'value' => array(
+        'noticia_paper' => 'noticia_paper',
+        'noticia' => 'noticia',
+        'actualitat' => 0,
+        'article' => 0,
+        'page' => 0,
+        'butlleti_sonor' => 0,
+        'cd_serveis' => 0,
+        'cd_noticies' => 0,
+        'esdeveniment_agenda' => 0,
+        'faldo' => 0,
+        'fotogaleria' => 0,
+        'linies_de_recerca' => 0,
+        'numero_paper' => 0,
+        'punts_de_venda' => 0,
+        'video' => 0,
+      ),
+    ),
+    2 => array(
+      'title' => 'Video',
+      'operator' => '=',
+      'value' => array(
+        'video' => 'video',
+        'actualitat' => 0,
+        'article' => 0,
+        'page' => 0,
+        'butlleti_sonor' => 0,
+        'cd_serveis' => 0,
+        'cd_noticies' => 0,
+        'esdeveniment_agenda' => 0,
+        'faldo' => 0,
+        'fotogaleria' => 0,
+        'linies_de_recerca' => 0,
+        'noticia_paper' => 0,
+        'noticia' => 0,
+        'numero_paper' => 0,
+        'punts_de_venda' => 0,
+      ),
+    ),
+    3 => array(
+      'title' => 'Foto',
+      'operator' => '=',
+      'value' => array(
+        'fotogaleria' => 'fotogaleria',
+        'actualitat' => 0,
         'article' => 0,
         'page' => 0,
         'butlleti_sonor' => 0,
@@ -421,10 +582,47 @@ function ictdirecta_hemeroteca_views_default_views() {
         'esdeveniment_agenda' => 0,
         'faldo' => 0,
         'linies_de_recerca' => 0,
+        'noticia_paper' => 0,
         'noticia' => 0,
+        'numero_paper' => 0,
         'punts_de_venda' => 0,
+        'video' => 0,
       ),
     ),
+    4 => array(
+      'title' => 'audio',
+      'operator' => '=',
+      'value' => array(
+        'faldo' => 'faldo',
+        'actualitat' => 0,
+        'article' => 0,
+        'page' => 0,
+        'butlleti_sonor' => 0,
+        'cd_serveis' => 0,
+        'cd_noticies' => 0,
+        'esdeveniment_agenda' => 0,
+        'fotogaleria' => 0,
+        'linies_de_recerca' => 0,
+        'noticia_paper' => 0,
+        'noticia' => 0,
+        'numero_paper' => 0,
+        'punts_de_venda' => 0,
+        'video' => 0,
+      ),
+    ),
+  );
+  /* Filter criterion: Indexed Content: Content type */
+  $handler->display->display_options['filters']['type_2']['id'] = 'type_2';
+  $handler->display->display_options['filters']['type_2']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['type_2']['field'] = 'type';
+  $handler->display->display_options['filters']['type_2']['operator'] = '<>';
+  $handler->display->display_options['filters']['type_2']['value'] = array(
+    'page' => 'page',
+    'butlleti_sonor' => 'butlleti_sonor',
+    'cd_noticies' => 'cd_noticies',
+    'esdeveniment_agenda' => 'esdeveniment_agenda',
+    'linies_de_recerca' => 'linies_de_recerca',
+    'punts_de_venda' => 'punts_de_venda',
   );
 
   /* Display: Page */
@@ -464,13 +662,13 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Camp: Cerca: Excerpt */
+  /* Field: Search: Excerpt */
   $handler->display->display_options['fields']['search_api_excerpt']['id'] = 'search_api_excerpt';
   $handler->display->display_options['fields']['search_api_excerpt']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['search_api_excerpt']['field'] = 'search_api_excerpt';
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
-  /* Camp: Indexed Content: Adjunt */
+  /* Field: Indexed Content: Adjunt */
   $handler->display->display_options['fields']['field_adjunt']['id'] = 'field_adjunt';
   $handler->display->display_options['fields']['field_adjunt']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_adjunt']['field'] = 'field_adjunt';
@@ -479,7 +677,7 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_adjunt']['click_sort_column'] = 'fid';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Cerca: Fulltext search */
+  /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
@@ -519,16 +717,20 @@ function ictdirecta_hemeroteca_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('Numero en paper'),
+    t('Butlleti sonor'),
     t('Node ID'),
     t('.'),
     t(','),
-    t('Tipus de contingut'),
+    t('Content type'),
     t('Fulltext search'),
     t('Desde'),
     t('Fins'),
     t('Autor'),
     t('Secció'),
     t('Territori'),
+    t('Tipus de contingut'),
+    t('Tipus'),
     t('Page'),
     t('Excerpt'),
   );

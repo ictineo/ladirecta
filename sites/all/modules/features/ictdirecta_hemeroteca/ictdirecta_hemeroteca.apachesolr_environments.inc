@@ -17,21 +17,14 @@ function ictdirecta_hemeroteca_apachesolr_environments() {
   $environment->url = 'http://188.165.131.21:8983/solr';
   $environment->service_class = '';
   $environment->conf = array(
-    'apachesolr_direct_commit' => 0,
     'apachesolr_index_last' => array(
       'node' => array(
-        'last_changed' => '1405077970',
-        'last_entity_id' => '220',
-      ),
-      'file' => array(
-        'last_changed' => '1405077970',
-        'last_entity_id' => '72',
+        'last_changed' => '1405608245',
+        'last_entity_id' => '209',
       ),
     ),
-    'apachesolr_index_updated' => 1405328788,
-    'apachesolr_last_optimize' => 1405328788,
-    'apachesolr_read_only' => '0',
-    'apachesolr_soft_commit' => 0,
+    'apachesolr_index_updated' => 0,
+    'apachesolr_last_optimize' => 1405670105,
   );
   $environment->index_bundles = array(
     'node' => array(
@@ -40,11 +33,9 @@ function ictdirecta_hemeroteca_apachesolr_environments() {
       2 => 'cd_serveis',
       3 => 'esdeveniment_agenda',
       4 => 'noticia',
-      5 => 'numero_paper',
-      6 => 'punts_de_venda',
-    ),
-    'file' => array(
-      0 => 'file',
+      5 => 'noticia_paper',
+      6 => 'numero_paper',
+      7 => 'punts_de_venda',
     ),
   );
   $export['solr_server'] = $environment;
