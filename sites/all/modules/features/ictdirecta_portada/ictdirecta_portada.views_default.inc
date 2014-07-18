@@ -254,6 +254,14 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'portada_ciz';
   $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
+  /* Relationship: Flags: destacado_portada */
+  $handler->display->display_options['relationships']['flag_content_rel_2']['id'] = 'flag_content_rel_2';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['label'] = 'flag_dest3col';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_2']['flag'] = 'destacado_portada';
+  $handler->display->display_options['relationships']['flag_content_rel_2']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Títol */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -289,6 +297,18 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Columna Dreta';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops_2']['id'] = 'ops_2';
+  $handler->display->display_options['fields']['ops_2']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops_2']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops_2']['relationship'] = 'flag_content_rel_2';
+  $handler->display->display_options['fields']['ops_2']['label'] = 'Destacat 3 Col';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'admin/workbench/portada';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Portada';
@@ -326,8 +346,10 @@ function ictdirecta_portada_views_default_views() {
     t('més'),
     t('flag_dret'),
     t('flag_izq'),
+    t('flag_dest3col'),
     t('Columna  Esquerra'),
     t('Columna Dreta'),
+    t('Destacat 3 Col'),
   );
   $export['gestioportada'] = $view;
 
