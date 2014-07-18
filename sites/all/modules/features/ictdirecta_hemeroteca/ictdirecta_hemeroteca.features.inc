@@ -69,46 +69,33 @@ function ictdirecta_hemeroteca_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "data_alter_callbacks" : {
-        "search_api_attachments_alter_settings" : {
-          "status" : 1,
-          "weight" : "-50",
-          "settings" : { "excluded_extensions" : "aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv " }
-        },
-        "search_api_ranges_alter" : { "status" : 0, "weight" : "-48", "settings" : [] },
         "search_api_alter_bundle_filter" : {
           "status" : 0,
-          "weight" : "-46",
+          "weight" : "-10",
           "settings" : { "default" : "1", "bundles" : [] }
         },
-        "search_api_alter_node_status" : { "status" : 0, "weight" : "-44", "settings" : [] },
-        "search_api_attachments_field_collections_alter_settings" : {
-          "status" : 0,
-          "weight" : "-42",
+        "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
+        "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_attachments_alter_settings" : {
+          "status" : 1,
+          "weight" : "0",
           "settings" : { "excluded_extensions" : "aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv" }
         },
-        "search_api_alter_node_access" : { "status" : 1, "weight" : "-40", "settings" : [] },
         "search_api_alter_language_control" : {
           "status" : 0,
-          "weight" : "-38",
+          "weight" : "0",
           "settings" : { "lang_field" : "", "languages" : [] }
         },
-        "search_api_alter_add_url" : { "status" : 0, "weight" : "-36", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "-34", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "-32", "settings" : { "mode" : "full" } },
-        "search_api_alter_add_hierarchy" : { "status" : 1, "weight" : "-30", "settings" : { "fields" : [] } }
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
       },
       "processors" : {
         "search_api_case_ignore" : {
           "status" : 1,
           "weight" : "0",
-          "settings" : { "fields" : {
-              "title" : true,
-              "attachments_field_pdf" : true,
-              "attachments_field_butlleti_sonor" : true,
-              "body:value" : true,
-              "field_pdf:file" : true
-            }
-          }
+          "settings" : { "fields" : { "title" : true, "body:value" : true } }
         },
         "search_api_html_filter" : {
           "status" : 1,
@@ -157,7 +144,10 @@ function ictdirecta_hemeroteca_default_search_api_index() {
         }
       },
       "fields" : {
+        "attachments_field_adjunt" : { "type" : "text" },
         "attachments_field_butlleti_sonor" : { "type" : "text" },
+        "attachments_field_documents_adjunts" : { "type" : "text" },
+        "attachments_field_fotografia_de_portada" : { "type" : "text" },
         "attachments_field_pdf" : { "type" : "text" },
         "author" : { "type" : "integer", "entity_type" : "user" },
         "body:value" : { "type" : "text" },
@@ -165,11 +155,10 @@ function ictdirecta_hemeroteca_default_search_api_index() {
         "comment_count" : { "type" : "integer" },
         "created" : { "type" : "date" },
         "field_data" : { "type" : "date" },
-        "field_pdf:file" : { "type" : "integer", "entity_type" : "file" },
+        "field_etiquetes" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_seccio" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_territori" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_territoripv" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_webpv" : { "type" : "boolean" },
+        "field_tipus_de_servei" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "promote" : { "type" : "boolean" },
         "search_api_language" : { "type" : "string" },
         "sticky" : { "type" : "boolean" },

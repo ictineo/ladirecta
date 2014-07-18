@@ -194,9 +194,6 @@ function ictdirecta_noticia_strongarm() {
       'display' => array(
         'easy_social_1' => array(
           'teaser' => array(
-<<<<<<< HEAD
-            'weight' => '11',
-=======
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -212,8 +209,7 @@ function ictdirecta_noticia_strongarm() {
           ),
           'teaser' => array(
             'weight' => '4',
->>>>>>> noticies
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
         ),
       ),
