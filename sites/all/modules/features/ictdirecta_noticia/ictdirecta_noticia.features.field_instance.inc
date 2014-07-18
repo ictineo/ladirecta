@@ -43,65 +43,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_noticia-field_adjunt'
-  $field_instances['comment-comment_node_noticia-field_adjunt'] = array(
-    'bundle' => 'comment_node_noticia',
-    'deleted' => 0,
-    'description' => 'Aquí pots adjuntar aquells documents que creguis necessaris',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 11,
-      ),
-    ),
-    'entity_type' => 'comment',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_adjunt',
-    'label' => 'Adjunt',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'txt pdf xls doc docx rtf odt odx jpeg png jpg',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'imce' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'imce_filefield_on' => 0,
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'comment-comment_node_noticia-field_correu_electr_nic'
   $field_instances['comment-comment_node_noticia-field_correu_electr_nic'] = array(
     'bundle' => 'comment_node_noticia',
@@ -365,7 +306,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -440,49 +381,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_destacar'
-  $field_instances['node-noticia-field_destacar'] = array(
-    'bundle' => 'noticia',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_destacar',
-    'label' => 'Destacar',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 0,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 13,
-    ),
-  );
-
   // Exported field_instance: 'node-noticia-field_documents_adjunts'
   $field_instances['node-noticia-field_documents_adjunts'] = array(
     'bundle' => 'noticia',
@@ -493,14 +391,14 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'file_table',
         'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -565,7 +463,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -670,7 +568,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -707,7 +605,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -732,8 +630,6 @@ function ictdirecta_noticia_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Adjunt');
-  t('Aquí pots adjuntar aquells documents que creguis necessaris');
   t('Autor');
   t('Body');
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
@@ -741,7 +637,6 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Contingut relacionat');
   t('Correu Electrónic');
   t('Data');
-  t('Destacar');
   t('Destacat');
   t('Documents adjunts');
   t('Etiquetes');
