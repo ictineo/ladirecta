@@ -212,7 +212,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['attach'] = array(
-    0 => 'field_collection_item:field_contingut_relacionat_ref:field_contingut_relacionat',
+    0 => 'field_collection_item:field_continguts_relacionats_ref:field_continguts_relacionats',
   );
   $translatables['continguts_relacionats'] = array(
     t('Master'),
