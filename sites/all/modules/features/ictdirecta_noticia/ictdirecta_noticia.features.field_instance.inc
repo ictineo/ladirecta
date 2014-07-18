@@ -10,65 +10,6 @@
 function ictdirecta_noticia_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_noticia-field_adjunt'
-  $field_instances['comment-comment_node_noticia-field_adjunt'] = array(
-    'bundle' => 'comment_node_noticia',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_table',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'comment',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_adjunt',
-    'label' => 'Arxiu',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx html zip tar gz bz2 rar gif png jpg jpeg mp3 ogg avi mpg mpeg rtf',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'imce' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'imce_filefield_on' => 0,
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'comment-comment_node_noticia-field_adre_a_correu_e'
   $field_instances['comment-comment_node_noticia-field_adre_a_correu_e'] = array(
     'bundle' => 'comment_node_noticia',
@@ -317,7 +258,7 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -411,7 +352,6 @@ function ictdirecta_noticia_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Adreça correu-e');
-  t('Arxiu');
   t('Cercar i seleccionar documents, fotogaleries o videos relacionats amb la notícia');
   t('Continguts relacionats');
   t('Destacat');
