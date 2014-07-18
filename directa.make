@@ -11,6 +11,8 @@ projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib/dev"
 projects[features][version] = "2.0"
 projects[features][subdir] = "contrib/dev"
+projects[features_extra][version] = "1.0-beta1"
+projects[features_extra][subdir] = "contrib/dev"
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib/dev"
 
