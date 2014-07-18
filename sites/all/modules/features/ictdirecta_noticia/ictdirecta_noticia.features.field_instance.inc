@@ -306,11 +306,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-<<<<<<< HEAD
-        'weight' => 7,
-=======
         'weight' => 9,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -355,15 +351,6 @@ function ictdirecta_noticia_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 2,
       ),
-<<<<<<< HEAD
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-=======
->>>>>>> noticies
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
@@ -394,7 +381,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-<<<<<<< HEAD
   // Exported field_instance: 'node-noticia-field_destacar'
   $field_instances['node-noticia-field_destacar'] = array(
     'bundle' => 'noticia',
@@ -439,8 +425,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     ),
   );
 
-=======
->>>>>>> noticies
   // Exported field_instance: 'node-noticia-field_documents_adjunts'
   $field_instances['node-noticia-field_documents_adjunts'] = array(
     'bundle' => 'noticia',
@@ -458,11 +442,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-<<<<<<< HEAD
-        'weight' => 9,
-=======
         'weight' => 8,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -527,11 +507,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-<<<<<<< HEAD
         'weight' => 6,
-=======
-        'weight' => 5,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -568,7 +544,6 @@ function ictdirecta_noticia_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-<<<<<<< HEAD
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
@@ -627,15 +602,12 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-=======
->>>>>>> noticies
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
           'image_style' => 'medium',
         ),
         'type' => 'image',
-<<<<<<< HEAD
         'weight' => 9,
       ),
       'teaser' => array(
@@ -646,10 +618,7 @@ function ictdirecta_noticia_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 2,
-=======
         'weight' => 0,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -708,20 +677,16 @@ function ictdirecta_noticia_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-<<<<<<< HEAD
         'label' => 'hidden',
         'module' => 'shs',
         'settings' => array(
           'linked' => FALSE,
         ),
         'type' => 'shs_default',
-        'weight' => 0,
-=======
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
@@ -758,11 +723,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-<<<<<<< HEAD
-        'weight' => 5,
-=======
         'weight' => 7,
->>>>>>> noticies
       ),
     ),
     'entity_type' => 'node',
