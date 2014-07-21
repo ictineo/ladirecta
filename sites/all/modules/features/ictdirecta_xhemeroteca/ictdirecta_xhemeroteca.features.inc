@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictdirecta_hemeroteca.features.inc
+ * ictdirecta_xhemeroteca.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ictdirecta_hemeroteca_ctools_plugin_api($module = NULL, $api = NULL) {
+function ictdirecta_xhemeroteca_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "apachesolr" && $api == "apachesolr_environments") {
     return array("version" => "1");
   }
@@ -22,14 +22,14 @@ function ictdirecta_hemeroteca_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function ictdirecta_hemeroteca_views_api($module = NULL, $api = NULL) {
+function ictdirecta_xhemeroteca_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_default_search_api_autocomplete_search().
  */
-function ictdirecta_hemeroteca_default_search_api_autocomplete_search() {
+function ictdirecta_xhemeroteca_default_search_api_autocomplete_search() {
   $items = array();
   $items['search_api_views_hemeroteca'] = entity_import('search_api_autocomplete_search', '{
     "machine_name" : "search_api_views_hemeroteca",
@@ -57,7 +57,7 @@ function ictdirecta_hemeroteca_default_search_api_autocomplete_search() {
 /**
  * Implements hook_default_search_api_index().
  */
-function ictdirecta_hemeroteca_default_search_api_index() {
+function ictdirecta_xhemeroteca_default_search_api_index() {
   $items = array();
   $items['default_node_index'] = entity_import('search_api_index', '{
     "name" : "Default node index",

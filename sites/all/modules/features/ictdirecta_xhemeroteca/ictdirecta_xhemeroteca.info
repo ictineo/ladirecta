@@ -1,4 +1,4 @@
-name = ictdirecta_hemeroteca
+name = ictdirecta_xhemeroteca
 core = 7.x
 package = Features
 dependencies[] = apachesolr

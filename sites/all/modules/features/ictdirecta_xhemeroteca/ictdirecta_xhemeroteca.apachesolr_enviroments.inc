@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictdirecta_hemeroteca.apachesolr_environments.inc
+ * ictdirecta_xhemeroteca.apachesolr_environments.inc
  */
 
 /**
  * Implements hook_apachesolr_environments().
  */
-function ictdirecta_hemeroteca_apachesolr_environments() {
+function ictdirecta_xhemeroteca_apachesolr_environments() {
   $export = array();
 
   $environment = new stdClass();

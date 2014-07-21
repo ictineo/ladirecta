@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictdirecta_hemeroteca.strongarm.inc
+ * ictdirecta_xhemeroteca.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ictdirecta_hemeroteca_strongarm() {
+function ictdirecta_xhemeroteca_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
