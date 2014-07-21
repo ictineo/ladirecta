@@ -141,6 +141,10 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[entityconnect][version] = "1.0-rc1"
   projects[entityconnect][subdir] = "contrib"
 
+
+  projects[field_group][version] = "1.4"
+  projects[field_group][subidr] = "contrib"
+
   projects[field_collection][version] = "1.0-beta5"
   projects[field_collection][subdir] = "contrib"
   projects[field_collection_views][version] = "1.0-beta3"
