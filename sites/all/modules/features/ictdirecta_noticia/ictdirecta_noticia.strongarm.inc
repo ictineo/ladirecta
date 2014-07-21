@@ -209,11 +209,7 @@ function ictdirecta_noticia_strongarm() {
           ),
           'teaser' => array(
             'weight' => '4',
-<<<<<<< HEAD
             'visible' => FALSE,
-=======
-            'visible' => TRUE,
->>>>>>> context
           ),
         ),
       ),
