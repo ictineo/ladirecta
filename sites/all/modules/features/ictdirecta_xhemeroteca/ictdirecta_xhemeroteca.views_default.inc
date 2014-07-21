@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ictdirecta_hemeroteca.views_default.inc
+ * ictdirecta_xhemeroteca.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function ictdirecta_hemeroteca_views_default_views() {
+function ictdirecta_xhemeroteca_views_default_views() {
   $export = array();
 
   $view = new view();

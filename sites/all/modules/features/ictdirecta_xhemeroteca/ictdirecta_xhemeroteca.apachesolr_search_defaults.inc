@@ -7,7 +7,7 @@
 /**
  * Implements hook_apachesolr_search_default_searchers().
  */
-function ictdirecta_hemeroteca_apachesolr_search_default_searchers() {
+function ictdirecta_xhemeroteca_apachesolr_search_default_searchers() {
   $export = array();
 
   $searcher = new stdClass();
