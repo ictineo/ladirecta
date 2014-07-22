@@ -73,9 +73,13 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[node_clone][version] = "1.0-rc2"
   projects[node_clone][subdir] = "contrib"
 
+
+  projects[taxonomy_menu][version] = "1.5"
+  projects[taxonomy_menu][subdir] = "contrib"
+  
   projects[taxonomy_manager][version] = "1.0"
   projects[taxonomy_manager][subdir] = "contrib"
-
+  
   projects[login_destination][version] = "1.1"
   projects[login_destination][subdir] = "contrib"
 
@@ -92,7 +96,6 @@ projects[strongarm][subdir] = "contrib/dev"
   
   projects[search_api][version] = "1.12"
   projects[search_api][subdir] = "contrib"
-  
   
   projects[search_api_autocomplete][version] = "1.1"
   projects[search_api_autocomplete][subdir] = "contrib"
