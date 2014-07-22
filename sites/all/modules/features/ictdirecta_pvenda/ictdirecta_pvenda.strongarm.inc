@@ -118,7 +118,14 @@ function ictdirecta_pvenda_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'easy_social_1' => array(
+          'teaser' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__punts_de_venda'] = $strongarm;

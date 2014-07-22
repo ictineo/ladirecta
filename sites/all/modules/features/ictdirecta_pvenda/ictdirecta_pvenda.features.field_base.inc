@@ -211,7 +211,7 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'punts_de_venda',
+          'vocabulary' => 'territorial',
           'parent' => 0,
         ),
       ),
