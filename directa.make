@@ -73,7 +73,9 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[node_clone][version] = "1.0-rc2"
   projects[node_clone][subdir] = "contrib"
 
-
+  projects[nice_menus][version] = "2.5"
+  projects[nice_menus][subdir] = "contrib"
+  
   projects[taxonomy_menu][version] = "1.5"
   projects[taxonomy_menu][subdir] = "contrib"
   
@@ -146,7 +148,7 @@ projects[strongarm][subdir] = "contrib/dev"
 
 
   projects[field_group][version] = "1.4"
-  projects[field_group][subidr] = "contrib"
+  projects[field_group][subdir] = "contrib"
 
   projects[field_collection][version] = "1.0-beta5"
   projects[field_collection][subdir] = "contrib"
