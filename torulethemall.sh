@@ -1,4 +1,4 @@
 #!/bin/bash
 
-drush en ictdirecta_turulethemall
+drush en ictdirecta_torulethemall
 drush fr ictdirecta_hemeroteca 

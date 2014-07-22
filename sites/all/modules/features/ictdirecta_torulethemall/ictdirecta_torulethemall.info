@@ -15,6 +15,7 @@ dependencies[] = ictdirecta_pdret
 dependencies[] = ictdirecta_pizq
 dependencies[] = ictdirecta_video
 dependencies[] = ictdirecta_colabora
+dependencies[] = ictdirecta_pvenda
 dependencies[] = ictdirecta_xxss
 <<<<<<< HEAD
 dependencies[] = ictdirecta_taxonomies
