@@ -21,6 +21,7 @@ features[field_base][] = field_adre_a_correu_e
 features[field_base][] = field_continguts_relacionats
 features[field_base][] = field_continguts_relacionats_ref
 features[field_base][] = field_nom_i_cognoms
+features[field_base][] = field_subt_tol
 features[field_instance][] = comment-comment_node_noticia-field_adjunt
 features[field_instance][] = comment-comment_node_noticia-field_adre_a_correu_e
 features[field_instance][] = comment-comment_node_noticia-field_nom_i_cognoms

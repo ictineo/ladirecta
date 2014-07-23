@@ -289,7 +289,7 @@ function ictdirecta_noticia_field_default_field_instances() {
           'view_mode' => 'token',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'above',
@@ -323,7 +323,7 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -390,7 +390,7 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
