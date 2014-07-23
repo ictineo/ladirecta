@@ -291,6 +291,15 @@ function ictdirecta_noticia_field_default_field_instances() {
         'type' => 'field_collection_fields',
         'weight' => 6,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -345,6 +354,15 @@ function ictdirecta_noticia_field_default_field_instances() {
         ),
         'type' => 'field_collection_fields',
         'weight' => 1,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
