@@ -158,7 +158,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
+          'links' => 0,
           'view_mode' => 'token',
         ),
         'type' => 'entityreference_entity_view',
@@ -283,7 +283,7 @@ function ictdirecta_noticia_field_default_field_instances() {
         'weight' => 12,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
           'view_mode' => 'token',

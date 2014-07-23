@@ -81,7 +81,7 @@ function ictdirecta_video_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -96,7 +96,18 @@ function ictdirecta_video_strongarm() {
           'weight' => '3',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'flag_portada_cdr' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'token' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__video'] = $strongarm;

@@ -31,6 +31,12 @@ function ictdirecta_docs_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div',

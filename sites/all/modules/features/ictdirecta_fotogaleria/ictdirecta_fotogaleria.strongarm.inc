@@ -105,7 +105,14 @@ function ictdirecta_fotogaleria_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_collection_item__field_fotografies';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'token' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(),
       'display' => array(),
@@ -135,7 +142,7 @@ function ictdirecta_fotogaleria_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -158,6 +165,20 @@ function ictdirecta_fotogaleria_strongarm() {
           ),
           'teaser' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'token' => array(
+            'weight' => '101',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_portada_cdr' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'token' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
