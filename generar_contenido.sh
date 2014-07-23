@@ -5,10 +5,7 @@ drush en devel devel_generate
 
 
 
-drush gent seccions_web 40 --kill
 drush gent categories_cd 40 --kill
-drush gent seccions_paper 40 --kill
-drush gent territorial 40 --kill
 drush gent tags 40 --kill
 
 echo "Creados 40 terminos de todas las taxonomias"
