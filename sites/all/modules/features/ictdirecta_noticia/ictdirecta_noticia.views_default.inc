@@ -45,7 +45,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -103,14 +103,14 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['arguments']['similar_nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['similar_nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['similar_nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Publicat */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Tipus */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -157,7 +157,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -230,13 +230,14 @@ function ictdirecta_noticia_views_default_views() {
     t('‹ anterior'),
     t('següent ›'),
     t('últim »'),
-    t('Títol'),
+    t('Title'),
     t('Autor'),
     t('Secció'),
     t('Etiquetes'),
     t('Post date'),
     t('Tot'),
     t('Page'),
+    t('more'),
     t('Referència d\'entitat'),
     t('Noticies relacionades'),
     t('Reference dialog Search'),
