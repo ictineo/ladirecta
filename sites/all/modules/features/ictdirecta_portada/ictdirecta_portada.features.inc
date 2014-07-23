@@ -25,10 +25,10 @@ function ictdirecta_portada_views_api($module = NULL, $api = NULL) {
  */
 function ictdirecta_portada_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Destacado Portada".
+  // Exported flag: "Destacado Portada 3 Col".
   $flags['destacado_portada'] = array(
     'entity_type' => 'node',
-    'title' => 'Destacado Portada',
+    'title' => 'Destacado Portada 3 Col',
     'global' => 0,
     'types' => array(
       0 => 'noticia',
