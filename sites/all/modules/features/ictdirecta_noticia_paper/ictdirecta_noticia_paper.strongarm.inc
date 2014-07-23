@@ -156,6 +156,9 @@ function ictdirecta_noticia_paper_strongarm() {
         'xmlsitemap' => array(
           'weight' => '2',
         ),
+        'flag' => array(
+          'weight' => '12',
+        ),
       ),
       'display' => array(
         'easy_social_1' => array(

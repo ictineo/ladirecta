@@ -34,6 +34,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -63,6 +65,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -89,6 +93,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
         'Dreta' => 'Dreta',
       ),
       'allowed_values_function' => '',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -119,6 +125,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'settings' => array(
       'default_image' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -127,7 +135,7 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
   // Exported field_base: 'field_fotografies'
   $field_bases['field_fotografies'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fotografies',
@@ -138,6 +146,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'settings' => array(
       'hide_blank_items' => 1,
       'path' => '',
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'field_collection',
@@ -167,6 +177,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -197,6 +209,8 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
     'settings' => array(
       'default_image' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',

@@ -80,7 +80,7 @@ function ictdirecta_portada_flag_default_flags() {
       'token' => 0,
     ),
     'show_as_field' => 1,
-    'show_on_form' => 0,
+    'show_on_form' => 1,
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
