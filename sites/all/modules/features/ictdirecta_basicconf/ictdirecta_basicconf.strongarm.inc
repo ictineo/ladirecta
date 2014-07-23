@@ -324,7 +324,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'context_block_rebuild_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['context_block_rebuild_needed'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -433,14 +433,14 @@ system/ajax/*';
     'language' => 'ca',
     'name' => 'Catalan',
     'native' => 'Català',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n>1)',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
+    'formula' => '',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => '0',
-    'javascript' => '5g4cgqBNdplKGU45eyM7He88SAFDB-DaVZguMYO8M8Q',
+    'weight' => 0,
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

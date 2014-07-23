@@ -31,6 +31,8 @@ function ictdirecta_cdnot_field_default_field_bases() {
         1 => 'Destacar',
       ),
       'allowed_values_function' => '',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_boolean',

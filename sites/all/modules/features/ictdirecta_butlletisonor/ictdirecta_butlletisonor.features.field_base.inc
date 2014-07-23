@@ -36,6 +36,8 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'file',
@@ -66,6 +68,8 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
       'timezone_db' => '',
       'todate' => '',
       'tz_handling' => 'none',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'datetime',
@@ -96,6 +100,8 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
     'settings' => array(
       'default_image' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -108,7 +114,14 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_n_associat',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -131,6 +144,8 @@ function ictdirecta_butlletisonor_field_default_field_bases() {
         ),
       ),
       'target_type' => 'node',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'entityreference',

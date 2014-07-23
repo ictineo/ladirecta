@@ -34,6 +34,8 @@ function ictdirecta_agenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -64,6 +66,8 @@ function ictdirecta_agenda_field_default_field_bases() {
       'timezone_db' => 'UTC',
       'todate' => 'optional',
       'tz_handling' => 'site',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'datetime',
@@ -93,6 +97,8 @@ function ictdirecta_agenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',

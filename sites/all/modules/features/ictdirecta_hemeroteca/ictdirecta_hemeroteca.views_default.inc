@@ -162,17 +162,17 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Camp: Indexed Content: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Camp: Indexed Content: Tipus de contingut */
+  /* Field: Indexed Content: Content type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
-  /* Camp: Indexed Content: Autor */
+  /* Field: Indexed Content: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -180,7 +180,7 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
-  /* Camp: Indexed Content: Data */
+  /* Field: Indexed Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -193,7 +193,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Camp: Indexed Content: Fotografia_portada */
+  /* Field: Indexed Content: Fotografia_portada */
   $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
@@ -205,7 +205,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Camp: Indexed Content: Portada numero */
+  /* Field: Indexed Content: Portada numero */
   $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
@@ -217,14 +217,14 @@ function ictdirecta_hemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Camp: Indexed Content: Títol */
+  /* Field: Indexed Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Camp: Indexed Content: The main body text */
+  /* Field: Indexed Content: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -238,7 +238,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     1 => 'AND',
     2 => 'OR',
   );
-  /* Filter criterion: Cerca: Fulltext search */
+  /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
@@ -260,7 +260,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '3';
-  /* Filter criterion: Indexed Content: Data */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_data']['id'] = 'field_data';
   $handler->display->display_options['filters']['field_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_data']['field'] = 'field_data';
@@ -282,8 +282,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  $handler->display->display_options['filters']['field_data']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Data */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_data_1']['id'] = 'field_data_1';
   $handler->display->display_options['filters']['field_data_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_data_1']['field'] = 'field_data';
@@ -305,8 +304,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  $handler->display->display_options['filters']['field_data_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Autor */
+  /* Filter criterion: Indexed Content: Author */
   $handler->display->display_options['filters']['author']['id'] = 'author';
   $handler->display->display_options['filters']['author']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['author']['field'] = 'author';
@@ -328,7 +326,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  /* Filter criterion: Indexed Content: Secció */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['filters']['field_seccio']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_seccio']['field'] = 'field_seccio';
@@ -351,8 +349,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  $handler->display->display_options['filters']['field_seccio']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Content: Territori */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_territori']['id'] = 'field_territori';
   $handler->display->display_options['filters']['field_territori']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_territori']['field'] = 'field_territori';
@@ -375,8 +372,7 @@ function ictdirecta_hemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  $handler->display->display_options['filters']['field_territori']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Content: Tipus de contingut */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -464,13 +460,13 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Camp: Cerca: Excerpt */
+  /* Field: Search: Excerpt */
   $handler->display->display_options['fields']['search_api_excerpt']['id'] = 'search_api_excerpt';
   $handler->display->display_options['fields']['search_api_excerpt']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['search_api_excerpt']['field'] = 'search_api_excerpt';
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
-  /* Camp: Indexed Content: Adjunt */
+  /* Field: Indexed Content: Adjunt */
   $handler->display->display_options['fields']['field_adjunt']['id'] = 'field_adjunt';
   $handler->display->display_options['fields']['field_adjunt']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_adjunt']['field'] = 'field_adjunt';
@@ -479,7 +475,7 @@ function ictdirecta_hemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_adjunt']['click_sort_column'] = 'fid';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Cerca: Fulltext search */
+  /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
@@ -522,13 +518,14 @@ function ictdirecta_hemeroteca_views_default_views() {
     t('Node ID'),
     t('.'),
     t(','),
-    t('Tipus de contingut'),
+    t('Content type'),
     t('Fulltext search'),
     t('Desde'),
     t('Fins'),
     t('Autor'),
     t('Secció'),
     t('Territori'),
+    t('Tipus de contingut'),
     t('Page'),
     t('Excerpt'),
   );
