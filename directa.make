@@ -114,9 +114,20 @@ projects[strongarm][subdir] = "contrib/dev"
 
 
 ;;; fields
+
+  
+  projects[webform_webform_optionsmarkup][version] = "1.0"
+  projects[webform_webform_optionsmarkup][subdir] = "contrib"
+  
+  projects[webform_share][version] = "1.2"
+  projects[webform_share][subdir] = "contrib"
+  
   projects[webform][version] = "3.19"
   projects[webform][subdir] = "contrib"
-
+  
+  projects[options_element][version] = "1.12"
+  projects[options_element][subdir] = "contrib"
+  
   projects[date][version] = "2.6"
   projects[date][subdir] = "contrib"
 

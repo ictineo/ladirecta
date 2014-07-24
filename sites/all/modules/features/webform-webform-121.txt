@@ -1,0 +1,489 @@
+$webform = array (
+  'nid' => '121',
+  'confirmation' => 'Hem rebut la teva sol·licitud ens posarem en contacte amb tu breument',
+  'confirmation_format' => 'filtered_html',
+  'redirect_url' => '<confirmation>',
+  'status' => '1',
+  'block' => '0',
+  'teaser' => '0',
+  'allow_draft' => '0',
+  'auto_save' => '0',
+  'submit_notice' => '1',
+  'submit_text' => 'Subscriu-t\'hi!',
+  'submit_limit' => '-1',
+  'submit_interval' => '-1',
+  'total_submit_limit' => '-1',
+  'total_submit_interval' => '-1',
+  'record_exists' => true,
+  'roles' => 
+  array (
+    0 => '1',
+    1 => '2',
+  ),
+  'emails' => 
+  array (
+  ),
+  'components' => 
+  array (
+    13 => 
+    array (
+      'nid' => 121,
+      'cid' => '13',
+      'pid' => '0',
+      'form_key' => 'quotas2',
+      'name' => 'Quotas2',
+      'type' => 'optionsmarkup',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => '0| <div id=bloc> <div id=quotes> Ordinaria </div> <div id=desc> Paga cada mes </div> </div>  <div id=pasta> <h4> 75€ </h4> </div> 
+1| <div id=bloc> <div id=quotes> Semestral </div> <div id=desc> Paga semestralment </div> <div id=desc2> Estalvia un 20% </div> </div>  <div id=pasta> <h4> 40€ </h4> </div> 
+2| <div id=bloc> <div id=quotes> Solidaria </div> <div id=desc> Paga semestralment </div> </div>  <div id=pasta> <h4> 140€ </h4> </div> 
+3| <div id=bloc> <div id=quotes> Altres </div> <div id=desc> Paga cada mes </div> </div>  <div id=pasta> <h4> </h4> </div> 
+',
+        'multiple' => 0,
+        'title_display' => 'before',
+        'private' => 0,
+        'optrand' => 0,
+        'conditional_operator' => '=',
+        'description' => '',
+        'aslist' => NULL,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '0',
+      'html' => true,
+      'page_num' => 1,
+    ),
+    18 => 
+    array (
+      'nid' => 121,
+      'cid' => '18',
+      'pid' => '0',
+      'form_key' => 'altres_diners2',
+      'name' => 'Altres diners',
+      'type' => 'textfield',
+      'value' => '',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'width' => '2',
+        'field_suffix' => '€',
+        'disabled' => 0,
+        'unique' => 0,
+        'conditional_operator' => '=',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '1',
+      'page_num' => 1,
+    ),
+    19 => 
+    array (
+      'nid' => 121,
+      'cid' => '19',
+      'pid' => '0',
+      'form_key' => 'altres_desc',
+      'name' => 'Altres descripcio',
+      'type' => 'markup',
+      'value' => '<p>Text a editar manualment a gust del consumidor</p><ul><li>Editar els text format per tenir opcions tipo word</li><li>Compta el l&#39;espai que aixó ocupara o el disseny no agauntarà</li></ul>',
+      'extra' => 
+      array (
+        'conditional_operator' => '=',
+        'format' => 'editor_web_reduit',
+        'private' => 0,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '2',
+      'page_num' => 1,
+    ),
+    14 => 
+    array (
+      'nid' => 121,
+      'cid' => '14',
+      'pid' => '0',
+      'form_key' => 'altres',
+      'name' => 'Altres',
+      'type' => 'optionsmarkup',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => '5| <div id=bloc> <div id=quotes> Regala </div> <div id=desc> Paga cada mes </div> </div>  <div id=pasta> <h4> </h4> </div>
+
+',
+        'multiple' => 0,
+        'title_display' => 'none',
+        'private' => 0,
+        'optrand' => 0,
+        'conditional_operator' => '=',
+        'description' => '',
+        'aslist' => NULL,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '3',
+      'html' => true,
+      'page_num' => 1,
+    ),
+    17 => 
+    array (
+      'nid' => 121,
+      'cid' => '17',
+      'pid' => '0',
+      'form_key' => 'altres_diners',
+      'name' => 'Altres diners',
+      'type' => 'textfield',
+      'value' => '',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'width' => '2',
+        'field_suffix' => '€',
+        'disabled' => 0,
+        'unique' => 0,
+        'conditional_operator' => '=',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '4',
+      'page_num' => 1,
+    ),
+    3 => 
+    array (
+      'nid' => 121,
+      'cid' => '3',
+      'pid' => '0',
+      'form_key' => 'dades',
+      'name' => 'Dades',
+      'type' => 'markup',
+      'value' => 'En quan rebem les dades ens posarem en contacte amb tu per la formalitzar la subscripció',
+      'extra' => 
+      array (
+        'conditional_operator' => '=',
+        'format' => 'filtered_html',
+        'private' => 0,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '5',
+      'page_num' => 1,
+    ),
+    4 => 
+    array (
+      'nid' => 121,
+      'cid' => '4',
+      'pid' => '0',
+      'form_key' => 'nom',
+      'name' => 'Nom',
+      'type' => 'textfield',
+      'value' => 'Nom',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => false,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '7',
+      'page_num' => 1,
+    ),
+    5 => 
+    array (
+      'nid' => 121,
+      'cid' => '5',
+      'pid' => '0',
+      'form_key' => 'cognom',
+      'name' => 'Cognom',
+      'type' => 'textfield',
+      'value' => 'Cognom',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => false,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '8',
+      'page_num' => 1,
+    ),
+    6 => 
+    array (
+      'nid' => 121,
+      'cid' => '6',
+      'pid' => '0',
+      'form_key' => 'adreca',
+      'name' => 'Adreça',
+      'type' => 'textfield',
+      'value' => 'Adreça',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => false,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '9',
+      'page_num' => 1,
+    ),
+    7 => 
+    array (
+      'nid' => 121,
+      'cid' => '7',
+      'pid' => '0',
+      'form_key' => 'poblacio',
+      'name' => 'Població',
+      'type' => 'textfield',
+      'value' => 'Població',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => 0,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '10',
+      'page_num' => 1,
+    ),
+    8 => 
+    array (
+      'nid' => 121,
+      'cid' => '8',
+      'pid' => '0',
+      'form_key' => 'comarca',
+      'name' => 'Comarca',
+      'type' => 'textfield',
+      'value' => 'Comarca',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => false,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '11',
+      'page_num' => 1,
+    ),
+    9 => 
+    array (
+      'nid' => 121,
+      'cid' => '9',
+      'pid' => '0',
+      'form_key' => 'codi_postal',
+      'name' => 'Codi Postal',
+      'type' => 'textfield',
+      'value' => 'Codi Postal',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => false,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '12',
+      'page_num' => 1,
+    ),
+    10 => 
+    array (
+      'nid' => 121,
+      'cid' => '10',
+      'pid' => '0',
+      'form_key' => 'telefon',
+      'name' => 'Telèfon',
+      'type' => 'textfield',
+      'value' => 'Telefon',
+      'extra' => 
+      array (
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => 0,
+        'conditional_operator' => '=',
+        'width' => '',
+        'maxlength' => '',
+        'field_prefix' => '',
+        'field_suffix' => '',
+        'description' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '13',
+      'page_num' => 1,
+    ),
+    12 => 
+    array (
+      'nid' => 121,
+      'cid' => '12',
+      'pid' => '0',
+      'form_key' => 'emaill',
+      'name' => 'Email',
+      'type' => 'email',
+      'value' => 'Email',
+      'extra' => 
+      array (
+        'description' => 'Tots els camps son obligatoris',
+        'title_display' => 'none',
+        'private' => 0,
+        'disabled' => 0,
+        'unique' => 0,
+        'conditional_operator' => '=',
+        'width' => '',
+        'attributes' => 
+        array (
+        ),
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '1',
+      'weight' => '14',
+      'page_num' => 1,
+    ),
+    20 => 
+    array (
+      'nid' => 121,
+      'cid' => '20',
+      'pid' => '0',
+      'form_key' => 'bancari',
+      'name' => 'Bancari',
+      'type' => 'markup',
+      'value' => 'Escull com vols realitzar el pagament:',
+      'extra' => 
+      array (
+        'conditional_operator' => '=',
+        'format' => 'filtered_html',
+        'private' => 0,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '16',
+      'page_num' => 1,
+    ),
+    21 => 
+    array (
+      'nid' => 121,
+      'cid' => '21',
+      'pid' => '0',
+      'form_key' => 'bancari_opcions',
+      'name' => 'Bancari Opcions',
+      'type' => 'optionsmarkup',
+      'value' => '',
+      'extra' => 
+      array (
+        'items' => '0 | Ingrés al compte bancari | Fes l\'íngrés al següent compte corrent de Caixa d\'Enginyers <div id=compte> EEEE OOOO DD AAAAAAAA </div>
+1 | Domiciliació | Indica\'ns a quin compte vols que carreguem la tarífa <div id=compte> <form> <input id="compte1" type="numer" value="0000" name="Compte1" max="9999"><input id="compte2" type="numer" value="0000" name="Compte2" max="9999"><input id="compte3" type="numer" value="00" name="Compte3" max="99"><input id="compte4" type="numer" value="0000000000" name="Compte4" max="9999999999"></form>  </div>
+2 | Altres | Indica\'ns com vols realitzar el pagament <div id=compte> <form> <input type="text" name="Altres"></form>  </div> <div id=missatge> Has d\'omplimentar el camp de compte per poder continuar </div>',
+        'multiple' => 0,
+        'title_display' => 'before',
+        'private' => 0,
+        'optrand' => 0,
+        'conditional_operator' => '=',
+        'description' => '',
+        'aslist' => NULL,
+        'conditional_component' => '',
+        'conditional_values' => '',
+      ),
+      'mandatory' => '0',
+      'weight' => '17',
+      'html' => true,
+      'page_num' => 1,
+    ),
+  ),
+);
+
