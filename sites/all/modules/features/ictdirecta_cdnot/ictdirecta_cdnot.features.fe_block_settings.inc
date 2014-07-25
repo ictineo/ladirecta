@@ -27,12 +27,6 @@ function ictdirecta_cdnot_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
-      'directa' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'directa',
-        'weight' => 0,
-      ),
       'seven' => array(
         'region' => '',
         'status' => 0,
@@ -57,12 +51,6 @@ function ictdirecta_cdnot_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'directa' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'directa',
         'weight' => 0,
       ),
       'seven' => array(

@@ -5,19 +5,19 @@ dependencies[] = ictdirecta_actualitat
 dependencies[] = ictdirecta_agenda
 dependencies[] = ictdirecta_basicconf
 dependencies[] = ictdirecta_butlletisonor
+dependencies[] = ictdirecta_colabora
 dependencies[] = ictdirecta_faldo
-dependencies[] = ictdirecta_xhemeroteca
 dependencies[] = ictdirecta_imce
 dependencies[] = ictdirecta_lrecerca
+dependencies[] = ictdirecta_menu
 dependencies[] = ictdirecta_n_paper
 dependencies[] = ictdirecta_noticia
 dependencies[] = ictdirecta_pdret
 dependencies[] = ictdirecta_pizq
-dependencies[] = ictdirecta_video
-dependencies[] = ictdirecta_colabora
 dependencies[] = ictdirecta_pvenda
+dependencies[] = ictdirecta_video
+dependencies[] = ictdirecta_xhemeroteca
 dependencies[] = ictdirecta_xxss
-dependencies[] = ictdirecta_menu
 <<<<<<< HEAD
 dependencies[] = ictdirecta_taxonomies
 <<<<<<< HEAD

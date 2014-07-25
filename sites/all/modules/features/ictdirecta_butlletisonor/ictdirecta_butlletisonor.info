@@ -9,6 +9,7 @@ dependencies[] = eva
 dependencies[] = features
 dependencies[] = ictdirecta_numeropaper
 dependencies[] = ictdirecta_pvenda
+dependencies[] = image
 dependencies[] = jplayer
 dependencies[] = options
 dependencies[] = strongarm

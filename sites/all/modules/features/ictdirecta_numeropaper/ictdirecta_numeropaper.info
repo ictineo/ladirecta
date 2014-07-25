@@ -8,6 +8,7 @@ dependencies[] = eva
 dependencies[] = file
 dependencies[] = ictdirecta_pvenda
 dependencies[] = ictdirecta_taxonomies
+dependencies[] = image
 dependencies[] = number
 dependencies[] = strongarm
 dependencies[] = views

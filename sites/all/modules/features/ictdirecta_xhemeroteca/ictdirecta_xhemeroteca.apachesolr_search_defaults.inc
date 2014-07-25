@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * ictdirecta_hemeroteca.apachesolr_search_defaults.inc
+ * ictdirecta_xhemeroteca.apachesolr_search_defaults.inc
  */
 
 /**
