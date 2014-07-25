@@ -1008,7 +1008,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   return $export;

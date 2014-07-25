@@ -59,14 +59,14 @@ function ictdirecta_pvenda_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Territori */
+  /* Field: Contingut: Territori */
   $handler->display->display_options['fields']['field_territoripv']['id'] = 'field_territoripv';
   $handler->display->display_options['fields']['field_territoripv']['table'] = 'field_data_field_territoripv';
   $handler->display->display_options['fields']['field_territoripv']['field'] = 'field_territoripv';
@@ -80,7 +80,7 @@ function ictdirecta_pvenda_views_default_views() {
     'linked' => 0,
   );
   $handler->display->display_options['fields']['field_territoripv']['field_api_classes'] = TRUE;
-  /* Field: Content: Adreça */
+  /* Field: Contingut: Adreça */
   $handler->display->display_options['fields']['field_adrecapv']['id'] = 'field_adrecapv';
   $handler->display->display_options['fields']['field_adrecapv']['table'] = 'field_data_field_adrecapv';
   $handler->display->display_options['fields']['field_adrecapv']['field'] = 'field_adrecapv';
@@ -90,7 +90,7 @@ function ictdirecta_pvenda_views_default_views() {
   $handler->display->display_options['fields']['field_adrecapv']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_adrecapv']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_adrecapv']['field_api_classes'] = TRUE;
-  /* Field: Content: Web */
+  /* Field: Contingut: Web */
   $handler->display->display_options['fields']['field_webpv']['id'] = 'field_webpv';
   $handler->display->display_options['fields']['field_webpv']['table'] = 'field_data_field_webpv';
   $handler->display->display_options['fields']['field_webpv']['field'] = 'field_webpv';
@@ -100,7 +100,7 @@ function ictdirecta_pvenda_views_default_views() {
   $handler->display->display_options['fields']['field_webpv']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_webpv']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_webpv']['field_api_classes'] = TRUE;
-  /* Field: Content: All taxonomy terms */
+  /* Field: Contingut: All taxonomy terms */
   $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
@@ -113,26 +113,26 @@ function ictdirecta_pvenda_views_default_views() {
     'tags' => 0,
     'territorial' => 0,
   );
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'punts_de_venda' => 'punts_de_venda',
   );
-  /* Filter criterion: Content: Has taxonomy terms (with depth) */
+  /* Filter criterion: Contingut: Has taxonomy terms (with depth) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';

@@ -60,7 +60,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['id'] = 'field_contingut_relacionat_desta_target_id';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['table'] = 'field_data_field_contingut_relacionat_desta';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['field'] = 'field_contingut_relacionat_desta_target_id';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -69,7 +69,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Portada numero */
+  /* Field: Contingut: Portada numero */
   $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['table'] = 'field_data_field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
@@ -86,7 +86,7 @@ function ictdirecta_faldo_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_portada_numero']['field_api_classes'] = TRUE;
-  /* Field: Content: Easy Social */
+  /* Field: Contingut: Easy Social */
   $handler->display->display_options['fields']['easy_social']['id'] = 'easy_social';
   $handler->display->display_options['fields']['easy_social']['table'] = 'node';
   $handler->display->display_options['fields']['easy_social']['field'] = 'easy_social';
@@ -94,7 +94,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['easy_social']['label'] = 'Comparteix';
   $handler->display->display_options['fields']['easy_social']['exclude'] = TRUE;
   $handler->display->display_options['fields']['easy_social']['easy_social_type'] = '0';
-  /* Field: Content: Butlleti sonor */
+  /* Field: Contingut: Butlleti sonor */
   $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'field_data_field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
@@ -128,7 +128,7 @@ function ictdirecta_faldo_views_default_views() {
 <a href="/subscriptors"> <h2> Subscriute </h2> </a> 
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Fotografia_portada */
+  /* Field: Contingut: Fotografia_portada */
   $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'field_data_field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
@@ -145,7 +145,7 @@ function ictdirecta_faldo_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_fotografia_portada']['field_api_classes'] = TRUE;
-  /* Field: Content: Secció */
+  /* Field: Contingut: Secció */
   $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
@@ -157,7 +157,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
@@ -165,7 +165,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  /* Field: Content: Autor */
+  /* Field: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -179,7 +179,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['type'] = 'link_title_plain';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -198,7 +198,7 @@ function ictdirecta_faldo_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Content: Body */
+  /* Field: Contingut: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -273,19 +273,19 @@ function ictdirecta_faldo_views_default_views() {
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -299,7 +299,7 @@ function ictdirecta_faldo_views_default_views() {
   /* Display: Bs portada */
   $handler = $view->new_display('block', 'Bs portada', 'block_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -308,7 +308,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Portada numero */
+  /* Field: Contingut: Portada numero */
   $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['table'] = 'field_data_field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
@@ -325,7 +325,7 @@ function ictdirecta_faldo_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_portada_numero']['field_api_classes'] = TRUE;
-  /* Field: Content: Butlleti sonor */
+  /* Field: Contingut: Butlleti sonor */
   $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'field_data_field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
@@ -349,7 +349,7 @@ function ictdirecta_faldo_views_default_views() {
     'backgroundColor' => '000000',
   );
   $handler->display->display_options['fields']['field_butlleti_sonor']['field_api_classes'] = TRUE;
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
@@ -365,7 +365,7 @@ function ictdirecta_faldo_views_default_views() {
     'prefix_suffix' => 1,
   );
   $handler->display->display_options['fields']['field_n_']['field_api_classes'] = TRUE;
-  /* Field: Content: Link */
+  /* Field: Contingut: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -373,7 +373,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Hemeroteca';
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_dataf_1']['id'] = 'field_dataf_1';
   $handler->display->display_options['fields']['field_dataf_1']['table'] = 'field_data_field_dataf';
   $handler->display->display_options['fields']['field_dataf_1']['field'] = 'field_dataf';
@@ -385,7 +385,7 @@ function ictdirecta_faldo_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: PDF */
+  /* Field: Contingut: PDF */
   $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
   $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
   $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
@@ -436,10 +436,10 @@ function ictdirecta_faldo_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Content entity referenced from field_numero_en_paper'),
-    t('Content entity referenced from field_bs'),
-    t('Content entity referenced from field_contingut_relacionat_ref'),
-    t('Content entity referenced from field_contingut_relacionat_desta'),
+    t('Contingut entity referenced from field_numero_en_paper'),
+    t('Contingut entity referenced from field_bs'),
+    t('Contingut entity referenced from field_contingut_relacionat_ref'),
+    t('Contingut entity referenced from field_contingut_relacionat_desta'),
     t('Foto'),
     t('Comparteix'),
     t('<div id=faldo_subscriptors>

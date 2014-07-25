@@ -84,7 +84,7 @@ function ictdirecta_xhemeroteca_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1406199375;
+  $strongarm->value = 1406288715;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();

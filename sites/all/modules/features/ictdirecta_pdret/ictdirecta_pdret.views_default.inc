@@ -32,14 +32,14 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -48,14 +48,14 @@ function ictdirecta_pdret_views_default_views() {
     1 => 'AND',
     2 => 'AND',
   );
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -64,13 +64,13 @@ function ictdirecta_pdret_views_default_views() {
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Promoted to front page */
+  /* Filter criterion: Contingut: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['filters']['promote']['group'] = 1;
-  /* Filter criterion: Content: Columna (field_columna) */
+  /* Filter criterion: Contingut: Columna (field_columna) */
   $handler->display->display_options['filters']['field_columna_value']['id'] = 'field_columna_value';
   $handler->display->display_options['filters']['field_columna_value']['table'] = 'field_data_field_columna';
   $handler->display->display_options['filters']['field_columna_value']['field'] = 'field_columna_value';
@@ -78,13 +78,13 @@ function ictdirecta_pdret_views_default_views() {
     'Esquerra' => 'Esquerra',
   );
   $handler->display->display_options['filters']['field_columna_value']['group'] = 1;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'node';
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 1;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
@@ -92,7 +92,7 @@ function ictdirecta_pdret_views_default_views() {
     'actualitat' => 'actualitat',
   );
   $handler->display->display_options['filters']['type_1']['group'] = 1;
-  /* Filter criterion: Content: Promoted to front page */
+  /* Filter criterion: Contingut: Promoted to front page */
   $handler->display->display_options['filters']['promote_1']['id'] = 'promote_1';
   $handler->display->display_options['filters']['promote_1']['table'] = 'node';
   $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
@@ -116,7 +116,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -161,14 +161,14 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Draggableviews: Content */
+  /* Field: Draggableviews: Contingut */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -177,28 +177,28 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
-  /* Field: Content: Published */
+  /* Field: Contingut: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
   $handler->display->display_options['fields']['status']['label'] = '';
   $handler->display->display_options['fields']['status']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['status']['not'] = 0;
-  /* Field: Content: Promoted to front page */
+  /* Field: Contingut: Promoted to front page */
   $handler->display->display_options['fields']['promote']['id'] = 'promote';
   $handler->display->display_options['fields']['promote']['table'] = 'node';
   $handler->display->display_options['fields']['promote']['field'] = 'promote';
   $handler->display->display_options['fields']['promote']['not'] = 0;
-  /* Field: Content: Updated date */
+  /* Field: Contingut: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['date_format'] = 'long';
-  /* Field: Content: Author uid */
+  /* Field: Contingut: Author uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Field: Content: Type */
+  /* Field: Contingut: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';

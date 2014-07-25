@@ -39,7 +39,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -47,7 +47,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data_ag']['id'] = 'field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['field'] = 'field_data_ag';
@@ -69,12 +69,12 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '!1';
-  /* Sort criterion: Content: Data -  start date (field_data_ag) */
+  /* Sort criterion: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['sorts']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['sorts']['field_data_ag_value']['field'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['order'] = 'DESC';
-  /* Contextual filter: Content: Data -  start date (field_data_ag) */
+  /* Contextual filter: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['arguments']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['arguments']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['arguments']['field_data_ag_value']['field'] = 'field_data_ag_value';
@@ -85,14 +85,14 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['arguments']['field_data_ag_value']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_data_ag_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_data_ag_value']['granularity'] = 'day';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -103,7 +103,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  /* Filter criterion: Content: Data -  start date (field_data_ag) */
+  /* Filter criterion: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['filters']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['filters']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['filters']['field_data_ag_value']['field'] = 'field_data_ag_value';
@@ -122,21 +122,21 @@ function ictdirecta_agenda_views_default_views() {
   /* Display: Enllaç posterior */
   $handler = $view->new_display('entity_view', 'Enllaç posterior', 'entity_view_2');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Data -  start date (field_data_ag) */
+  /* Sort criterion: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['sorts']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['sorts']['field_data_ag_value']['field'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -147,7 +147,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  /* Filter criterion: Content: Data -  start date (field_data_ag) */
+  /* Filter criterion: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['filters']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['filters']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['filters']['field_data_ag_value']['field'] = 'field_data_ag_value';
@@ -212,26 +212,26 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'dasf';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -289,7 +289,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Avui';
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data_ag']['id'] = 'field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['field'] = 'field_data_ag';
@@ -306,14 +306,14 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Lloc/Adreça */
+  /* Field: Contingut: Lloc/Adreça */
   $handler->display->display_options['fields']['field_adreca']['id'] = 'field_adreca';
   $handler->display->display_options['fields']['field_adreca']['table'] = 'field_data_field_adreca';
   $handler->display->display_options['fields']['field_adreca']['field'] = 'field_adreca';
@@ -323,7 +323,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_adreca']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_adreca']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_adreca']['field_api_classes'] = TRUE;
-  /* Field: Content: Resum */
+  /* Field: Contingut: Resum */
   $handler->display->display_options['fields']['field_resum']['id'] = 'field_resum';
   $handler->display->display_options['fields']['field_resum']['table'] = 'field_data_field_resum';
   $handler->display->display_options['fields']['field_resum']['field'] = 'field_resum';
@@ -333,25 +333,25 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_resum']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_resum']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_resum']['field_api_classes'] = TRUE;
-  /* Field: Content: Link */
+  /* Field: Contingut: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = '+info';
-  /* Sort criterion: Content: Data -  start date (field_data_ag) */
+  /* Sort criterion: Contingut: Data -  start date (field_data_ag) */
   $handler->display->display_options['sorts']['field_data_ag_value']['id'] = 'field_data_ag_value';
   $handler->display->display_options['sorts']['field_data_ag_value']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['sorts']['field_data_ag_value']['field'] = 'field_data_ag_value';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -363,7 +363,7 @@ function ictdirecta_agenda_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data_ag']['id'] = 'field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['field'] = 'field_data_ag';
@@ -380,14 +380,14 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Lloc/Adreça */
+  /* Field: Contingut: Lloc/Adreça */
   $handler->display->display_options['fields']['field_adreca']['id'] = 'field_adreca';
   $handler->display->display_options['fields']['field_adreca']['table'] = 'field_data_field_adreca';
   $handler->display->display_options['fields']['field_adreca']['field'] = 'field_adreca';
@@ -397,7 +397,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_adreca']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_adreca']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_adreca']['field_api_classes'] = TRUE;
-  /* Field: Content: Resum */
+  /* Field: Contingut: Resum */
   $handler->display->display_options['fields']['field_resum']['id'] = 'field_resum';
   $handler->display->display_options['fields']['field_resum']['table'] = 'field_data_field_resum';
   $handler->display->display_options['fields']['field_resum']['field'] = 'field_resum';
@@ -407,7 +407,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_resum']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_resum']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_resum']['field_api_classes'] = TRUE;
-  /* Field: Content: Link */
+  /* Field: Contingut: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -422,7 +422,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['title'] = 'Avui';
   $handler->display->display_options['display_description'] = 'Caldrà tocarla a nivell de template ';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data_ag']['id'] = 'field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['table'] = 'field_data_field_data_ag';
   $handler->display->display_options['fields']['field_data_ag']['field'] = 'field_data_ag';
@@ -439,14 +439,14 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Lloc/Adreça */
+  /* Field: Contingut: Lloc/Adreça */
   $handler->display->display_options['fields']['field_adreca']['id'] = 'field_adreca';
   $handler->display->display_options['fields']['field_adreca']['table'] = 'field_data_field_adreca';
   $handler->display->display_options['fields']['field_adreca']['field'] = 'field_adreca';
@@ -456,7 +456,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_adreca']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_adreca']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_adreca']['field_api_classes'] = TRUE;
-  /* Field: Content: Resum */
+  /* Field: Contingut: Resum */
   $handler->display->display_options['fields']['field_resum']['id'] = 'field_resum';
   $handler->display->display_options['fields']['field_resum']['table'] = 'field_data_field_resum';
   $handler->display->display_options['fields']['field_resum']['field'] = 'field_resum';
@@ -466,7 +466,7 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_resum']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_resum']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_resum']['field_api_classes'] = TRUE;
-  /* Field: Content: Link */
+  /* Field: Contingut: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -475,14 +475,14 @@ function ictdirecta_agenda_views_default_views() {
   $handler->display->display_options['fields']['view_node']['text'] = '+info';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

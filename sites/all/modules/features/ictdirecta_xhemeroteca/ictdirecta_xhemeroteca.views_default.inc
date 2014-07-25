@@ -179,27 +179,27 @@ function ictdirecta_xhemeroteca_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Indexed Content: Numero en paper */
+  /* Relationship: Indexed Contingut: Numero en paper */
   $handler->display->display_options['relationships']['field_numero_en_paper']['id'] = 'field_numero_en_paper';
   $handler->display->display_options['relationships']['field_numero_en_paper']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['relationships']['field_numero_en_paper']['field'] = 'field_numero_en_paper';
-  /* Relationship: Indexed Content: Butlleti sonor */
+  /* Relationship: Indexed Contingut: Butlleti sonor */
   $handler->display->display_options['relationships']['field_bs']['id'] = 'field_bs';
   $handler->display->display_options['relationships']['field_bs']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['relationships']['field_bs']['field'] = 'field_bs';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Contingut: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Content: Content type */
+  /* Field: Indexed Contingut: Content type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
-  /* Field: Indexed Content: Autor */
+  /* Field: Indexed Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -207,7 +207,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
-  /* Field: Indexed Content: Data */
+  /* Field: Indexed Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -220,7 +220,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_databs']['id'] = 'field_databs';
   $handler->display->display_options['fields']['field_databs']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_databs']['field'] = 'field_databs';
@@ -234,7 +234,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Butlleti sonor */
+  /* Field: Contingut: Butlleti sonor */
   $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
@@ -251,7 +251,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     'repeat' => 'none',
     'backgroundColor' => '000000',
   );
-  /* Field: Indexed Content: Fotografia_portada */
+  /* Field: Indexed Contingut: Fotografia_portada */
   $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
@@ -263,7 +263,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Indexed Content: Portada numero */
+  /* Field: Indexed Contingut: Portada numero */
   $handler->display->display_options['fields']['field_portada_numero']['id'] = 'field_portada_numero';
   $handler->display->display_options['fields']['field_portada_numero']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_portada_numero']['field'] = 'field_portada_numero';
@@ -275,14 +275,14 @@ function ictdirecta_xhemeroteca_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Indexed Content: Title */
+  /* Field: Indexed Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Content: The main body text */
+  /* Field: Indexed Contingut: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -292,7 +292,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Tags */
+  /* Field: Contingut: Tags */
   $handler->display->display_options['fields']['field_tags_']['id'] = 'field_tags_';
   $handler->display->display_options['fields']['field_tags_']['table'] = 'entity_node';
   $handler->display->display_options['fields']['field_tags_']['field'] = 'field_tags_';
@@ -302,7 +302,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
   $handler->display->display_options['fields']['field_tags_']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_tags_']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_tags_']['bypass_access'] = 0;
-  /* Field: Indexed Content: Etiquetes */
+  /* Field: Indexed Contingut: Etiquetes */
   $handler->display->display_options['fields']['field_etiquetes_1']['id'] = 'field_etiquetes_1';
   $handler->display->display_options['fields']['field_etiquetes_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_etiquetes_1']['field'] = 'field_etiquetes';
@@ -337,7 +337,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '3';
-  /* Filter criterion: Indexed Content: Data */
+  /* Filter criterion: Indexed Contingut: Data */
   $handler->display->display_options['filters']['field_data']['id'] = 'field_data';
   $handler->display->display_options['filters']['field_data']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_data']['field'] = 'field_data';
@@ -360,7 +360,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_data']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Data */
+  /* Filter criterion: Indexed Contingut: Data */
   $handler->display->display_options['filters']['field_data_1']['id'] = 'field_data_1';
   $handler->display->display_options['filters']['field_data_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_data_1']['field'] = 'field_data';
@@ -383,7 +383,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_data_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Author */
+  /* Filter criterion: Indexed Contingut: Author */
   $handler->display->display_options['filters']['author']['id'] = 'author';
   $handler->display->display_options['filters']['author']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['author']['field'] = 'author';
@@ -405,7 +405,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  /* Filter criterion: Indexed Content: Secció */
+  /* Filter criterion: Indexed Contingut: Secció */
   $handler->display->display_options['filters']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['filters']['field_seccio']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_seccio']['field'] = 'field_seccio';
@@ -429,7 +429,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_seccio']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Content: Territori */
+  /* Filter criterion: Indexed Contingut: Territori */
   $handler->display->display_options['filters']['field_territori']['id'] = 'field_territori';
   $handler->display->display_options['filters']['field_territori']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_territori']['field'] = 'field_territori';
@@ -453,7 +453,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_territori']['expose']['reduce'] = 0;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Contingut: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -512,7 +512,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
       ),
     ),
   );
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Contingut: Content type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
@@ -611,7 +611,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
       ),
     ),
   );
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Contingut: Content type */
   $handler->display->display_options['filters']['type_2']['id'] = 'type_2';
   $handler->display->display_options['filters']['type_2']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type_2']['field'] = 'type';
@@ -668,7 +668,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
   $handler->display->display_options['fields']['search_api_excerpt']['field'] = 'search_api_excerpt';
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
-  /* Field: Indexed Content: Adjunt */
+  /* Field: Indexed Contingut: Adjunt */
   $handler->display->display_options['fields']['field_adjunt']['id'] = 'field_adjunt';
   $handler->display->display_options['fields']['field_adjunt']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['field_adjunt']['field'] = 'field_adjunt';

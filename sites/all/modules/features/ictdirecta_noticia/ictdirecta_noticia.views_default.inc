@@ -36,12 +36,12 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Autor */
+  /* Field: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -53,7 +53,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['type'] = 'link_title_plain';
   $handler->display->display_options['fields']['field_autor']['group_column'] = 'entity_id';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Secció */
+  /* Field: Contingut: Secció */
   $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
@@ -63,7 +63,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_seccio']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
-  /* Field: Content: Etiquetes */
+  /* Field: Contingut: Etiquetes */
   $handler->display->display_options['fields']['field_etiquetes']['id'] = 'field_etiquetes';
   $handler->display->display_options['fields']['field_etiquetes']['table'] = 'field_data_field_etiquetes';
   $handler->display->display_options['fields']['field_etiquetes']['field'] = 'field_etiquetes';
@@ -74,7 +74,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_etiquetes']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_etiquetes']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_etiquetes']['field_api_classes'] = TRUE;
-  /* Field: Content: Post date */
+  /* Field: Contingut: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -94,14 +94,14 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['arguments']['similar_nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['similar_nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['similar_nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -112,7 +112,7 @@ function ictdirecta_noticia_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
+  /* Contextual filter: Contingut: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -146,14 +146,14 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Autor */
+  /* Field: Contingut: Autor */
   $handler->display->display_options['fields']['field_autor']['id'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
@@ -169,7 +169,7 @@ function ictdirecta_noticia_views_default_views() {
     'title' => 'title',
   );
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
-  /* Field: Content: Secció */
+  /* Field: Contingut: Secció */
   $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
@@ -179,7 +179,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Post date */
+  /* Field: Contingut: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -188,7 +188,7 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'd/m/Y';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -256,14 +256,14 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Secció */
+  /* Field: Contingut: Secció */
   $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
@@ -274,12 +274,12 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Secció (field_seccio) */
+  /* Contextual filter: Contingut: Secció (field_seccio) */
   $handler->display->display_options['arguments']['field_seccio_tid']['id'] = 'field_seccio_tid';
   $handler->display->display_options['arguments']['field_seccio_tid']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['arguments']['field_seccio_tid']['field'] = 'field_seccio_tid';
@@ -289,14 +289,14 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['arguments']['field_seccio_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_seccio_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_seccio_tid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

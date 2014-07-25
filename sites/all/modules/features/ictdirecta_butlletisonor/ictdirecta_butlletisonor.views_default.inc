@@ -33,7 +33,7 @@ function ictdirecta_butlletisonor_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
@@ -41,7 +41,7 @@ function ictdirecta_butlletisonor_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Nº associat */
+  /* Field: Contingut: Nº associat */
   $handler->display->display_options['fields']['field_n_associat']['id'] = 'field_n_associat';
   $handler->display->display_options['fields']['field_n_associat']['table'] = 'field_data_field_n_associat';
   $handler->display->display_options['fields']['field_n_associat']['field'] = 'field_n_associat';
@@ -54,19 +54,19 @@ function ictdirecta_butlletisonor_views_default_views() {
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_n_associat']['field_api_classes'] = TRUE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -95,7 +95,7 @@ function ictdirecta_butlletisonor_views_default_views() {
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'entity_view_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
@@ -103,7 +103,7 @@ function ictdirecta_butlletisonor_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Butlleti sonor */
+  /* Field: Contingut: Butlleti sonor */
   $handler->display->display_options['fields']['field_butlleti_sonor']['id'] = 'field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['table'] = 'field_data_field_butlleti_sonor';
   $handler->display->display_options['fields']['field_butlleti_sonor']['field'] = 'field_butlleti_sonor';
