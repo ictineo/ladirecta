@@ -8,6 +8,7 @@ dependencies[] = menu
 dependencies[] = nice_menus
 dependencies[] = options_element
 dependencies[] = strongarm
+dependencies[] = taxonomy_menu
 dependencies[] = webform
 dependencies[] = webform_optionsmarkup
 dependencies[] = webform_share

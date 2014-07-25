@@ -16,27 +16,33 @@ function ictdirecta_menu_context_default_contexts() {
   $context->name = 'menu_paper';
   $context->description = '';
   $context->tag = '';
-  $context->conditions = array();
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-seccions-web' => array(
-          'module' => 'menu',
-          'delta' => 'menu-seccions-web',
-          'region' => 'featured',
-          'weight' => '0',
+        'nice_menus-1' => array(
+          'module' => 'nice_menus',
+          'delta' => '1',
+          'region' => 'highlighted',
+          'weight' => '-10',
         ),
-        'menu-menu-menu-territorial' => array(
-          'module' => 'menu',
-          'delta' => 'menu-menu-territorial',
-          'region' => 'featured',
-          'weight' => '0',
+        'nice_menus-2' => array(
+          'module' => 'nice_menus',
+          'delta' => '2',
+          'region' => 'highlighted',
+          'weight' => '-9',
         ),
-        'menu-menu-menu-paper' => array(
-          'module' => 'menu',
-          'delta' => 'menu-menu-paper',
-          'region' => 'featured',
-          'weight' => '2',
+        'nice_menus-3' => array(
+          'module' => 'nice_menus',
+          'delta' => '3',
+          'region' => 'highlighted',
+          'weight' => '-8',
         ),
       ),
     ),

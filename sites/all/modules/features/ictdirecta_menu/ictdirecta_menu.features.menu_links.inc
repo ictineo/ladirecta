@@ -286,7 +286,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/213
   $menu_links['menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/213'] = array(
@@ -307,7 +307,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 1,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/214
   $menu_links['menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/214'] = array(
@@ -328,7 +328,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 2,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/216
   $menu_links['menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/216'] = array(
@@ -349,7 +349,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 3,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/217
   $menu_links['menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/217'] = array(
@@ -370,7 +370,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 4,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_illes-balears:taxonomy/term/218
   $menu_links['menu-menu-territorial_illes-balears:taxonomy/term/218'] = array(
@@ -391,7 +391,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 5,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_pas-valenci:taxonomy/term/219
   $menu_links['menu-menu-territorial_pas-valenci:taxonomy/term/219'] = array(
@@ -412,7 +412,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 6,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/220
   $menu_links['menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/220'] = array(
@@ -433,7 +433,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 7,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/221
   $menu_links['menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/221'] = array(
@@ -454,7 +454,7 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 8,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/212',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/212',
   );
   // Exported menu link: menu-menu-territorial_territori:taxonomy/term/212
   $menu_links['menu-menu-territorial_territori:taxonomy/term/212'] = array(
