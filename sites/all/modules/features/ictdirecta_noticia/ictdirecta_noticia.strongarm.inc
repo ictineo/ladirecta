@@ -138,20 +138,6 @@ function ictdirecta_noticia_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_field_collection_item__field_contingut_relacionat';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-=======
   $strongarm->name = 'entityreference:base-tables';
   $strongarm->value = array(
     'comment' => array(
@@ -209,7 +195,6 @@ function ictdirecta_noticia_strongarm() {
     'menu_link' => array(
       0 => 'menu_links',
       1 => 'mlid',
->>>>>>> isa
     ),
   );
   $export['entityreference:base-tables'] = $strongarm;
@@ -228,7 +213,6 @@ function ictdirecta_noticia_strongarm() {
       ),
     ),
     'extra_fields' => array(
-<<<<<<< HEAD
       'form' => array(
         'title' => array(
           'weight' => '0',
@@ -262,10 +246,8 @@ function ictdirecta_noticia_strongarm() {
           ),
         ),
       ),
-=======
       'form' => array(),
       'display' => array(),
->>>>>>> isa
     ),
   );
   $export['field_bundle_settings_field_collection_item__field_continguts_relacionats'] = $strongarm;
