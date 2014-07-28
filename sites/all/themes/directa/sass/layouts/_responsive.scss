@@ -41,6 +41,7 @@ $zen-auto-include-item-base: false;
 #header,
 #content,
 #navigation,
+.region-help,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -51,6 +52,7 @@ $zen-auto-include-item-base: false;
 /* Containers for grid items and flow items. */
 #header,
 #main,
+.region-help,
 #footer {
   @include zen-grid-container();
 }
