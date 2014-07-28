@@ -37,11 +37,7 @@ function ictdirecta_cdnot_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-<<<<<<< HEAD
-  /* Field: Contingut: Title */
-=======
   /* Field: Content: Title */
->>>>>>> isa
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -92,11 +88,7 @@ function ictdirecta_cdnot_views_default_views() {
   /* Display: Serveis capçalera */
   $handler = $view->new_display('block', 'Serveis capçalera', 'block');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-<<<<<<< HEAD
-  /* Field: Contingut: Title */
-=======
   /* Field: Content: Title */
->>>>>>> isa
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
