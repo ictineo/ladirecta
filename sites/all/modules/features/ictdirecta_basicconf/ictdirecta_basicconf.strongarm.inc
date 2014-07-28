@@ -502,7 +502,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_admin_theme';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['node_admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -973,7 +973,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'node/51';
+  $strongarm->value = 'node';
   $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1001,14 +1001,14 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'directa';
+  $strongarm->value = 'bartik';
   $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   return $export;
