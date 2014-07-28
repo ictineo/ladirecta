@@ -64,7 +64,6 @@ function ictdirecta_noticia_field_default_field_instances() {
         'imce_filefield_on' => 0,
         'progress_indicator' => 'throbber',
       ),
-<<<<<<< HEAD
       'type' => 'text_textarea',
       'weight' => 3,
     ),
@@ -134,7 +133,6 @@ function ictdirecta_noticia_field_default_field_instances() {
       'settings' => array(
         'size' => 60,
       ),
-<<<<<<< HEAD
       'type' => 'entityreference_autocomplete',
       'weight' => 0,
     ),
@@ -343,7 +341,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-<<<<<<< HEAD
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
@@ -425,7 +422,6 @@ function ictdirecta_noticia_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-<<<<<<< HEAD
         'weight' => 8,
       ),
     ),
@@ -520,7 +516,6 @@ function ictdirecta_noticia_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-=======
         'module' => 'field_collection',
         'settings' => array(
           'view_mode' => 'full',
@@ -542,7 +537,6 @@ function ictdirecta_noticia_field_default_field_instances() {
         'module' => 'field_collection',
         'settings' => array(
           'view_mode' => 'token',
->>>>>>> isa
         ),
         'type' => 'field_collection_fields',
         'weight' => 0,
@@ -654,12 +648,6 @@ function ictdirecta_noticia_field_default_field_instances() {
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-=======
         'type' => 'field_collection_fields',
         'weight' => 2,
       ),
@@ -674,7 +662,6 @@ function ictdirecta_noticia_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
->>>>>>> isa
     'fences_wrapper' => 'div',
     'field_name' => 'field_fotografies',
     'label' => 'Fotografia portada',
@@ -693,7 +680,6 @@ function ictdirecta_noticia_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-<<<<<<< HEAD
   t('Autor');
   t('Body');
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
@@ -705,14 +691,10 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Documents adjunts');
   t('Etiquetes');
   t('Fotografia_portada');
-=======
-  t('Adreça correu-e');
   t('Arxiu');
   t('Cercar i seleccionar documents, fotogaleries o videos relacionats amb la notícia');
   t('Continguts relacionats');
-  t('Destacat');
   t('Fotografia portada');
->>>>>>> isa
   t('Mostra\'l en portada	');
   t('Nom i cognoms');
 

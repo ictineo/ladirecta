@@ -29,10 +29,6 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-<<<<<<< HEAD
-=======
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
->>>>>>> isa
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -219,15 +215,9 @@ function ictdirecta_noticia_views_default_views() {
   );
   $translatables['continguts_relacionats'] = array(
     t('Master'),
-<<<<<<< HEAD
-    t('Noticies relacionades'),
-    t('more'),
-    t('Apply'),
-=======
     t('Continguts relacionats'),
     t('més'),
     t('Aplica'),
->>>>>>> isa
     t('Reinicialitza'),
     t('Ordena per'),
     t('Asc'),
