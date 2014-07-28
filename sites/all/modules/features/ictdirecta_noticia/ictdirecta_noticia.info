@@ -2,34 +2,27 @@ name = ictdirecta_noticia
 core = 7.x
 package = Features
 dependencies[] = ctools
-<<<<<<< HEAD
 dependencies[] = entity_token
-=======
 dependencies[] = email
->>>>>>> isa
 dependencies[] = entityreference
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = file
-<<<<<<< HEAD
 dependencies[] = ictdirecta_cdnot
 dependencies[] = ictdirecta_cdserveis
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
-=======
 dependencies[] = ictdirecta_fotogaleria
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia_paper
->>>>>>> isa
 dependencies[] = references_dialog
 dependencies[] = strongarm
 dependencies[] = views
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-<<<<<<< HEAD
 features[field_base][] = comment_body
 features[field_base][] = field_adjunt_coment
 features[field_base][] = field_autor
@@ -85,7 +78,6 @@ features[variable][] = page_title_type_noticia_showfield
 features[variable][] = xmlsitemap_settings_node_noticia
 features[views_view][] = contingut_relacionat
 features[views_view][] = ultimes_noticies
-=======
 features[field_base][] = field_adre_a_correu_e
 features[field_base][] = field_continguts_relacionats
 features[field_base][] = field_continguts_relacionats_ref
@@ -102,4 +94,3 @@ features[field_instance][] = node-noticia-field_fotografies
 features[variable][] = entityreference:base-tables
 features[variable][] = field_bundle_settings_field_collection_item__field_continguts_relacionats
 features[views_view][] = continguts_relacionats
->>>>>>> isa

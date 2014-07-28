@@ -547,7 +547,6 @@ function ictdirecta_noticia_field_default_field_instances() {
         'settings' => array(
           'view_mode' => 'full',
         ),
-<<<<<<< HEAD
         'type' => 'image',
         'weight' => 0,
       ),
