@@ -161,6 +161,23 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 960px) {
 
   $zen-column-count: 23;
+  #header {
+    #logo {
+      @include zen-grid-item(5,1);
+    }
+    .header__region {
+      #block-block-1 {
+      @include zen-grid-item(5,6);
+    }
+    #block-block-2 {
+      @include zen-grid-item(5,11);
+    }
+    #block-views-exp-hemeroteca-page-1 {
+     @include zen-grid-item(5,16);
+    }
+  }
+}
+
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -197,24 +214,22 @@ $zen-auto-include-item-base: false;
    */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
-
-    .region-highlighted {
-      @include zen-grid-item (23,1);
-      @include zen-clear();
-      
-    }
-    #main-content {
-      @include zen-grid-item(9, 1);
+    #content {
+        @include zen-grid-item (23,1);
+      .main-content {
+        @include zen-grid-item(9,1);
+      }
     }
 
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(8, 10);
     }
+  }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(6, 18);
     }
-  }
+  
 }

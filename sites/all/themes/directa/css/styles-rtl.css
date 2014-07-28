@@ -162,22 +162,51 @@ ul {
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
+  /* line 165, ../sass/layouts/_responsive.scss */
+  #header #logo {
+    float: right;
+    width: 21.73913%;
+    margin-right: 0%;
+    margin-left: -21.73913%;
+  }
+  /* line 169, ../sass/layouts/_responsive.scss */
+  #header .header__region #block-block-1 {
+    float: right;
+    width: 21.73913%;
+    margin-right: 21.73913%;
+    margin-left: -43.47826%;
+  }
+  /* line 172, ../sass/layouts/_responsive.scss */
+  #header .header__region #block-block-2 {
+    float: right;
+    width: 21.73913%;
+    margin-right: 43.47826%;
+    margin-left: -65.21739%;
+  }
+  /* line 175, ../sass/layouts/_responsive.scss */
+  #header .header__region #block-views-exp-hemeroteca-page-1 {
+    float: right;
+    width: 21.73913%;
+    margin-right: 65.21739%;
+    margin-left: -86.95652%;
+  }
+
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 168, ../sass/layouts/_responsive.scss */
+  /* line 185, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 170, ../sass/layouts/_responsive.scss */
+  /* line 187, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: right;
     width: 65.21739%;
     margin-right: 0%;
     margin-left: -65.21739%;
   }
-  /* line 175, ../sass/layouts/_responsive.scss */
+  /* line 192, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: right;
     width: 34.78261%;
@@ -188,19 +217,19 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 183, ../sass/layouts/_responsive.scss */
+  /* line 200, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 185, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: right;
     width: 73.91304%;
     margin-right: 0%;
     margin-left: -73.91304%;
   }
-  /* line 190, ../sass/layouts/_responsive.scss */
+  /* line 207, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: right;
     width: 26.08696%;
@@ -211,36 +240,36 @@ ul {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 198, ../sass/layouts/_responsive.scss */
+  /* line 215, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 201, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-highlighted {
+  /* line 217, ../sass/layouts/_responsive.scss */
+  .two-sidebars #content {
     float: right;
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
-    clear: right;
   }
-  /* line 206, ../sass/layouts/_responsive.scss */
-  .two-sidebars #main-content {
+  /* line 219, ../sass/layouts/_responsive.scss */
+  .two-sidebars #content .main-content {
     float: right;
     width: 39.13043%;
     margin-right: 0%;
     margin-left: -39.13043%;
   }
-  /* line 211, ../sass/layouts/_responsive.scss */
+  /* line 225, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 34.78261%;
     margin-right: 39.13043%;
     margin-left: -73.91304%;
   }
-  /* line 216, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
+
+  /* Span 1 column, starting in 5th column from left. */
+  /* line 231, ../sass/layouts/_responsive.scss */
+  .region-sidebar-second {
     float: right;
     width: 26.08696%;
     margin-right: 73.91304%;
