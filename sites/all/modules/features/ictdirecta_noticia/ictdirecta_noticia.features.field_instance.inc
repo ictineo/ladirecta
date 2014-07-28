@@ -10,34 +10,66 @@
 function ictdirecta_noticia_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_noticia-comment_body'
-  $field_instances['comment-comment_node_noticia-comment_body'] = array(
+  // Exported field_instance: 'comment-comment_node_noticia-field_adjunt'
+  $field_instances['comment-comment_node_noticia-field_adjunt'] = array(
     'bundle' => 'comment_node_noticia',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'file',
         'settings' => array(),
+<<<<<<< HEAD
         'type' => 'text_default',
         'weight' => 10,
+=======
+        'type' => 'file_table',
+        'weight' => 3,
+>>>>>>> isa
       ),
     ),
     'entity_type' => 'comment',
-    'field_name' => 'comment_body',
-    'label' => 'Comment',
-    'required' => TRUE,
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_adjunt',
+    'label' => 'Arxiu',
+    'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx html zip tar gz bz2 rar gif png jpg jpeg mp3 ogg avi mpg mpeg rtf',
+      'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'text',
+      'active' => 1,
+      'module' => 'file',
       'settings' => array(
-        'rows' => 5,
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 0,
+        'progress_indicator' => 'throbber',
       ),
+<<<<<<< HEAD
       'type' => 'text_textarea',
       'weight' => 3,
     ),
@@ -75,17 +107,22 @@ function ictdirecta_noticia_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+=======
+      'type' => 'file_generic',
+      'weight' => 4,
+>>>>>>> isa
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_contingut_relacionat_ref'
-  $field_instances['field_collection_item-field_contingut_relacionat-field_contingut_relacionat_ref'] = array(
-    'bundle' => 'field_contingut_relacionat',
+  // Exported field_instance: 'comment-comment_node_noticia-field_adre_a_correu_e'
+  $field_instances['comment-comment_node_noticia-field_adre_a_correu_e'] = array(
+    'bundle' => 'comment_node_noticia',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+<<<<<<< HEAD
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
@@ -94,28 +131,30 @@ function ictdirecta_noticia_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,
+=======
+        'label' => 'hidden',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 2,
+>>>>>>> isa
       ),
     ),
-    'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_contingut_relacionat_ref',
-    'label' => 'Contingut relacionat',
+    'entity_type' => 'comment',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_adre_a_correu_e',
+    'label' => 'Adreça correu-e',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'email',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
         'size' => 60,
       ),
+<<<<<<< HEAD
       'type' => 'entityreference_autocomplete',
       'weight' => 0,
     ),
@@ -148,26 +187,199 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
+=======
+      'type' => 'email_textfield',
+>>>>>>> isa
       'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_promogut_portada'
-  $field_instances['field_collection_item-field_contingut_relacionat-field_promogut_portada'] = array(
-    'bundle' => 'field_contingut_relacionat',
+  // Exported field_instance: 'comment-comment_node_noticia-field_nom_i_cognoms'
+  $field_instances['comment-comment_node_noticia-field_nom_i_cognoms'] = array(
+    'bundle' => 'comment_node_noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+<<<<<<< HEAD
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+=======
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+>>>>>>> isa
+      ),
+    ),
+    'entity_type' => 'comment',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_nom_i_cognoms',
+    'label' => 'Nom i cognoms',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_continguts_relacionats_ref'
+  $field_instances['field_collection_item-field_continguts_relacionats-field_continguts_relacionats_ref'] = array(
+    'bundle' => 'field_continguts_relacionats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+<<<<<<< HEAD
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+=======
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+>>>>>>> isa
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'token',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_continguts_relacionats_ref',
+    'label' => 'Continguts relacionats',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_destacat'
+  $field_instances['field_collection_item-field_continguts_relacionats-field_destacat'] = array(
+    'bundle' => 'field_continguts_relacionats',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
+<<<<<<< HEAD
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 9,
+=======
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+>>>>>>> isa
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'fences_wrapper' => 'no_wrapper',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_destacat',
+    'label' => 'Destacat',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_promogut_portada'
+  $field_instances['field_collection_item-field_continguts_relacionats-field_promogut_portada'] = array(
+    'bundle' => 'field_continguts_relacionats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+<<<<<<< HEAD
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 0,
+          'edit' => '',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 5,
+=======
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+>>>>>>> isa
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+<<<<<<< HEAD
+        'weight' => 9,
+=======
+        'weight' => 2,
+>>>>>>> isa
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_promogut_portada',
     'label' => 'Mostra\'l en portada	',
     'required' => 0,
@@ -179,161 +391,20 @@ function ictdirecta_noticia_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-noticia-body'
-  $field_instances['node-noticia-body'] = array(
+  // Exported field_instance: 'node-noticia-field_continguts_relacionats'
+  $field_instances['node-noticia-field_continguts_relacionats'] = array(
     'bundle' => 'noticia',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'node-noticia-field_autor'
-  $field_instances['node-noticia-field_autor'] = array(
-    'bundle' => 'noticia',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).',
+    'description' => 'Cercar i seleccionar documents, fotogaleries o videos relacionats amb la notícia',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_autor',
-    'label' => 'Autor',
-    'required' => 0,
-    'settings' => array(
-      'attributes' => array(
-        'class' => 'autor',
-        'configurable_title' => 0,
-        'rel' => 'bookmark',
-        'target' => '_blank',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 'optional',
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-noticia-field_contingut_relacionat'
-  $field_instances['node-noticia-field_contingut_relacionat'] = array(
-    'bundle' => 'noticia',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => '',
-          'delete' => '',
-          'description' => 0,
-          'edit' => '',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'article',
-    'field_name' => 'field_contingut_relacionat',
-    'label' => 'Contingut relacionat',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-noticia-field_data'
-  $field_instances['node-noticia-field_data'] = array(
-    'bundle' => 'noticia',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
+<<<<<<< HEAD
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
@@ -393,11 +464,35 @@ function ictdirecta_noticia_field_default_field_instances() {
         'settings' => array(),
         'type' => 'file_table',
         'weight' => 4,
+=======
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'token',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 7,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+>>>>>>> isa
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+<<<<<<< HEAD
         'weight' => 8,
       ),
     ),
@@ -458,57 +553,88 @@ function ictdirecta_noticia_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+=======
+        'weight' => 5,
+>>>>>>> isa
       ),
-      'teaser' => array(
+      'token' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'mark',
-    'field_name' => 'field_etiquetes',
-    'label' => 'Etiquetes',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_continguts_relacionats',
+    'label' => 'Continguts relacionats',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 11,
     ),
   );
 
+<<<<<<< HEAD
   // Exported field_instance: 'node-noticia-field_fotografia_portada'
   $field_instances['node-noticia-field_fotografia_portada'] = array(
     'bundle' => 'noticia',
+=======
+  // Exported field_instance: 'node-noticia-field_fotografies'
+  $field_instances['node-noticia-field_fotografies'] = array(
+    'bundle' => 'noticia',
+    'default_value' => NULL,
+>>>>>>> isa
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
+<<<<<<< HEAD
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
           'image_style' => 'medium',
+=======
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
         ),
-        'type' => 'image',
-        'weight' => 9,
+        'type' => 'field_collection_fields',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 1,
+      ),
+      'rss' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'token',
+>>>>>>> isa
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'field_collection',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'medium',
+          'view_mode' => 'full',
         ),
+<<<<<<< HEAD
         'type' => 'image',
         'weight' => 0,
       ),
@@ -614,27 +740,41 @@ function ictdirecta_noticia_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+=======
+        'type' => 'field_collection_fields',
+        'weight' => 2,
+      ),
+      'token' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'view_mode' => 'token',
+        ),
+        'type' => 'field_collection_fields',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+>>>>>>> isa
     'fences_wrapper' => 'div',
-    'field_name' => 'field_territori',
-    'label' => 'Territori',
+    'field_name' => 'field_fotografies',
+    'label' => 'Fotografia portada',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 12,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 7,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+<<<<<<< HEAD
   t('Autor');
   t('Body');
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
@@ -646,9 +786,16 @@ function ictdirecta_noticia_field_default_field_instances() {
   t('Documents adjunts');
   t('Etiquetes');
   t('Fotografia_portada');
+=======
+  t('Adreça correu-e');
+  t('Arxiu');
+  t('Cercar i seleccionar documents, fotogaleries o videos relacionats amb la notícia');
+  t('Continguts relacionats');
+  t('Destacat');
+  t('Fotografia portada');
+>>>>>>> isa
   t('Mostra\'l en portada	');
-  t('Secció');
-  t('Territori');
+  t('Nom i cognoms');
 
   return $field_instances;
 }

@@ -55,6 +55,16 @@ projects[strongarm][subdir] = "contrib/dev"
 
   projects[draggableviews][version] = "2.0"
   projects[draggableviews][subdir] = "contrib"
+
+  projects[flag][version] = "3.5"
+  projects[flag][subdir] = "contrib"
+
+  projects[tagadelic][version] = "2.x-dev"
+  projects[tagadelic][subdir] = "contrib"
+  
+  projects[tagadelic_views][version] = "2.x-dev"
+  projects[tagadelic_views][subdir] = "contrib"
+
 ;;; Generics posicionament i funcionalitats
   projects[google_analytics][version] = "1.4"
   projects[google_analytics][subdir] = "contrib"
@@ -128,9 +138,15 @@ projects[strongarm][subdir] = "contrib/dev"
   
   projects[webform][version] = "3.19"
   projects[webform][subdir] = "contrib"
+<<<<<<< HEAD
   
   projects[options_element][version] = "1.12"
   projects[options_element][subdir] = "contrib"
+=======
+
+  projects[views_field_view][version] = "1.1"
+  projects[views_field_view][subdir] = "contrib"
+>>>>>>> isa
   
   projects[date][version] = "2.6"
   projects[date][subdir] = "contrib"
@@ -299,6 +315,8 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[field_permissions][subdir] = "contrib"
 
 ;;; Usuaris
+  projects[workbench][version]="1.2"
+  projects[workbench][subdir]="contrib"
   projects[profile2][version] = "1.3"
   projects[profile2][subdir] = "contrib"
   projects[user_readonly][version] = "1.4"

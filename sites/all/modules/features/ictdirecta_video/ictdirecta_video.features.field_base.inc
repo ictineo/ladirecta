@@ -35,6 +35,8 @@ function ictdirecta_video_field_default_field_bases() {
     'settings' => array(
       'default_image' => FALSE,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -65,6 +67,8 @@ function ictdirecta_video_field_default_field_bases() {
     'settings' => array(
       'default_image' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -99,6 +103,8 @@ function ictdirecta_video_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
@@ -126,7 +132,10 @@ function ictdirecta_video_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'mediafield',
-    'settings' => array(),
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'media',
   );

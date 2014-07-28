@@ -19,12 +19,21 @@ function ictdirecta_xhemeroteca_apachesolr_environments() {
   $environment->conf = array(
     'apachesolr_index_last' => array(
       'node' => array(
+<<<<<<< HEAD:sites/all/modules/features/ictdirecta_xhemeroteca/ictdirecta_xhemeroteca.apachesolr_enviroments.inc
         'last_changed' => '1405608245',
         'last_entity_id' => '209',
       ),
     ),
     'apachesolr_index_updated' => 0,
     'apachesolr_last_optimize' => 1405670105,
+=======
+        'last_changed' => '1406128674',
+        'last_entity_id' => '1',
+      ),
+    ),
+    'apachesolr_index_updated' => 1406536027,
+    'apachesolr_last_optimize' => 1406536027,
+>>>>>>> isa:sites/all/modules/features/ictdirecta_hemeroteca/ictdirecta_hemeroteca.apachesolr_environments.inc
   );
   $environment->index_bundles = array(
     'node' => array(

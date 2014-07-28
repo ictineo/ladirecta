@@ -10,6 +10,7 @@
 function ictdirecta_noticia_field_default_field_bases() {
   $field_bases = array();
 
+<<<<<<< HEAD
   // Exported field_base: 'comment_body'
   $field_bases['comment_body'] = array(
     'active' => 1,
@@ -72,41 +73,34 @@ function ictdirecta_noticia_field_default_field_bases() {
 
   // Exported field_base: 'field_autor'
   $field_bases['field_autor'] = array(
+=======
+  // Exported field_base: 'field_adre_a_correu_e'
+  $field_bases['field_adre_a_correu_e'] = array(
+>>>>>>> isa
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_autor',
+    'field_name' => 'field_adre_a_correu_e',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
-    'module' => 'link',
+    'module' => 'email',
     'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
-    'type' => 'link_field',
+    'type' => 'email',
   );
 
-  // Exported field_base: 'field_contingut_relacionat'
-  $field_bases['field_contingut_relacionat'] = array(
+  // Exported field_base: 'field_continguts_relacionats'
+  $field_bases['field_continguts_relacionats'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_contingut_relacionat',
+    'field_name' => 'field_continguts_relacionats',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -114,18 +108,24 @@ function ictdirecta_noticia_field_default_field_bases() {
     'settings' => array(
       'hide_blank_items' => 1,
       'path' => '',
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_contingut_relacionat_ref'
-  $field_bases['field_contingut_relacionat_ref'] = array(
+  // Exported field_base: 'field_continguts_relacionats_ref'
+  $field_bases['field_continguts_relacionats_ref'] = array(
     'active' => 1,
     'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
+<<<<<<< HEAD
     'field_name' => 'field_contingut_relacionat_ref',
+=======
+    'field_name' => 'field_continguts_relacionats_ref',
+>>>>>>> isa
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -152,15 +152,18 @@ function ictdirecta_noticia_field_default_field_bases() {
         'view' => array(
           'args' => array(),
           'display_name' => 'entityreference_1',
-          'view_name' => 'contingut_relacionat',
+          'view_name' => 'continguts_relacionats',
         ),
       ),
       'target_type' => 'node',
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'entityreference',
   );
 
+<<<<<<< HEAD
   // Exported field_base: 'field_correu_electr_nic'
   $field_bases['field_correu_electr_nic'] = array(
     'active' => 1,
@@ -282,122 +285,68 @@ function ictdirecta_noticia_field_default_field_bases() {
 
   // Exported field_base: 'field_fotografia_de_portada'
   $field_bases['field_fotografia_de_portada'] = array(
+=======
+  // Exported field_base: 'field_nom_i_cognoms'
+  $field_bases['field_nom_i_cognoms'] = array(
+>>>>>>> isa
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_fotografia_de_portada',
+    'field_name' => 'field_nom_i_cognoms',
     'foreign keys' => array(
-      'fid' => array(
+      'format' => array(
         'columns' => array(
-          'fid' => 'fid',
+          'format' => 'format',
         ),
-        'table' => 'file_managed',
+        'table' => 'filter_format',
       ),
     ),
     'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
+      'format' => array(
+        0 => 'format',
       ),
     ),
     'locked' => 0,
-    'module' => 'file',
+    'module' => 'text',
     'settings' => array(
-      'display_default' => 0,
-      'display_field' => 0,
-      'uri_scheme' => 'public',
+      'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'text',
   );
 
-  // Exported field_base: 'field_fotografia_portada'
-  $field_bases['field_fotografia_portada'] = array(
+  // Exported field_base: 'field_subt_tol'
+  $field_bases['field_subt_tol'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_fotografia_portada',
+    'field_name' => 'field_subt_tol',
     'foreign keys' => array(
-      'fid' => array(
+      'format' => array(
         'columns' => array(
-          'fid' => 'fid',
+          'format' => 'format',
         ),
-        'table' => 'file_managed',
+        'table' => 'filter_format',
       ),
     ),
     'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
+      'format' => array(
+        0 => 'format',
       ),
     ),
     'locked' => 0,
-    'module' => 'image',
+    'module' => 'text',
     'settings' => array(
-      'default_image' => 0,
-      'uri_scheme' => 'public',
+      'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
-    'type' => 'image',
-  );
-
-  // Exported field_base: 'field_promogut_portada'
-  $field_bases['field_promogut_portada'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_promogut_portada',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'promoted' => 'Mostra aquest element també en la portada',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_seccio'
-  $field_bases['field_seccio'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_seccio',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'seccions_web',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'text',
   );
 
   return $field_bases;

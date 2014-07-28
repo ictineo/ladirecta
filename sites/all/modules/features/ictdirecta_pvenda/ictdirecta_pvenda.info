@@ -4,6 +4,7 @@ package = Features
 dependencies[] = better_exposed_filters
 dependencies[] = ictdirecta_lrecerca
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_noticia_paper
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = number
 dependencies[] = views

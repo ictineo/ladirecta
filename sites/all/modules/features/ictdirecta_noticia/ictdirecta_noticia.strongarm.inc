@@ -13,6 +13,7 @@ function ictdirecta_noticia_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+<<<<<<< HEAD
   $strongarm->name = 'additional_settings__active_tab_noticia';
   $strongarm->value = 'edit-comment';
   $export['additional_settings__active_tab_noticia'] = $strongarm;
@@ -150,36 +151,84 @@ function ictdirecta_noticia_strongarm() {
     'extra_fields' => array(
       'form' => array(),
       'display' => array(),
+=======
+  $strongarm->name = 'entityreference:base-tables';
+  $strongarm->value = array(
+    'comment' => array(
+      0 => 'comment',
+      1 => 'cid',
+    ),
+    'field_collection_item' => array(
+      0 => 'field_collection_item',
+      1 => 'item_id',
+    ),
+    'flagging' => array(
+      0 => 'flagging',
+      1 => 'flagging_id',
+    ),
+    'node' => array(
+      0 => 'node',
+      1 => 'nid',
+    ),
+    'search_api_server' => array(
+      0 => 'search_api_server',
+      1 => 'id',
+    ),
+    'search_api_index' => array(
+      0 => 'search_api_index',
+      1 => 'id',
+    ),
+    'search_api_autocomplete_search' => array(
+      0 => 'search_api_autocomplete_search',
+      1 => 'id',
+    ),
+    'file' => array(
+      0 => 'file_managed',
+      1 => 'fid',
+    ),
+    'taxonomy_term' => array(
+      0 => 'taxonomy_term_data',
+      1 => 'tid',
+    ),
+    'taxonomy_vocabulary' => array(
+      0 => 'taxonomy_vocabulary',
+      1 => 'vid',
+    ),
+    'user' => array(
+      0 => 'users',
+      1 => 'uid',
+    ),
+    'wysiwyg_profile' => array(
+      0 => 'wysiwyg',
+      1 => 'format',
+    ),
+    'rules_config' => array(
+      0 => 'rules_config',
+      1 => 'id',
+    ),
+    'menu_link' => array(
+      0 => 'menu_links',
+      1 => 'mlid',
+>>>>>>> isa
     ),
   );
-  $export['field_bundle_settings_field_collection_item__field_contingut_relacionat'] = $strongarm;
+  $export['entityreference:base-tables'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__noticia';
+  $strongarm->name = 'field_bundle_settings_field_collection_item__field_continguts_relacionats';
   $strongarm->value = array(
     'view_modes' => array(
-      'teaser' => array(
+      'token' => array(
         'custom_settings' => TRUE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
       ),
-      'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
+<<<<<<< HEAD
       'form' => array(
         'title' => array(
           'weight' => '0',
@@ -213,78 +262,13 @@ function ictdirecta_noticia_strongarm() {
           ),
         ),
       ),
+=======
+      'form' => array(),
+      'display' => array(),
+>>>>>>> isa
     ),
   );
-  $export['field_bundle_settings_node__noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_noticia';
-  $strongarm->value = '0';
-  $export['language_content_type_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_noticia';
-  $strongarm->value = array();
-  $export['menu_options_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_noticia';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_noticia';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
-  );
-  $export['node_options_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_noticia';
-  $strongarm->value = '1';
-  $export['node_preview_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_noticia';
-  $strongarm->value = 0;
-  $export['node_submitted_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_noticia';
-  $strongarm->value = '';
-  $export['page_title_type_noticia'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'page_title_type_noticia_showfield';
-  $strongarm->value = 0;
-  $export['page_title_type_noticia_showfield'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_node_noticia';
-  $strongarm->value = array(
-    'status' => '1',
-    'priority' => '0.9',
-  );
-  $export['xmlsitemap_settings_node_noticia'] = $strongarm;
+  $export['field_bundle_settings_field_collection_item__field_continguts_relacionats'] = $strongarm;
 
   return $export;
 }

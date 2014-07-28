@@ -11,23 +11,28 @@ function ictdirecta_noticia_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'contingut_relacionat';
-  $view->description = 'View usada per seleccionar noticies relacionades';
+  $view->name = 'continguts_relacionats';
+  $view->description = 'View usada per seleccionar documents, fotogaleria o video relacionats amb la notícia';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Noticies relacionades';
+  $view->human_name = 'Continguts relacionats';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Noticies relacionades';
+  $handler->display->display_options['title'] = 'Continguts relacionats';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+<<<<<<< HEAD
+=======
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+>>>>>>> isa
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -35,6 +40,13 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elements per pàgina';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tot -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplaçament';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« primer';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ anterior';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'següent ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'últim »';
   $handler->display->display_options['style_plugin'] = 'table';
   /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -106,7 +118,9 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'noticia' => 'noticia',
+    'documents' => 'documents',
+    'fotogaleria' => 'fotogaleria',
+    'video' => 'video',
   );
 
   /* Display: Page */
@@ -122,12 +136,12 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['path'] = 'noticies-relacionades';
+  $handler->display->display_options['path'] = 'continguts-relacionats';
 
   /* Display: Referència d'entitat */
   $handler = $view->new_display('entityreference', 'Referència d\'entitat', 'entityreference_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Contingut relacionat';
+  $handler->display->display_options['title'] = 'Noticies relacionades';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '100';
@@ -201,24 +215,30 @@ function ictdirecta_noticia_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['attach'] = array(
-    0 => 'field_collection_item:field_contingut_relacionat_ref:field_contingut_relacionat',
+    0 => 'field_collection_item:field_continguts_relacionats_ref:field_continguts_relacionats',
   );
-  $translatables['contingut_relacionat'] = array(
+  $translatables['continguts_relacionats'] = array(
     t('Master'),
+<<<<<<< HEAD
     t('Noticies relacionades'),
     t('more'),
     t('Apply'),
+=======
+    t('Continguts relacionats'),
+    t('més'),
+    t('Aplica'),
+>>>>>>> isa
     t('Reinicialitza'),
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('Elements per pàgina'),
+    t('- Tot -'),
+    t('Desplaçament'),
+    t('« primer'),
+    t('‹ anterior'),
+    t('següent ›'),
+    t('últim »'),
     t('Title'),
     t('Autor'),
     t('Secció'),
@@ -226,11 +246,12 @@ function ictdirecta_noticia_views_default_views() {
     t('Post date'),
     t('Tot'),
     t('Page'),
+    t('more'),
     t('Referència d\'entitat'),
-    t('Contingut relacionat'),
+    t('Noticies relacionades'),
     t('Reference dialog Search'),
   );
-  $export['contingut_relacionat'] = $view;
+  $export['continguts_relacionats'] = $view;
 
   $view = new view();
   $view->name = 'ultimes_noticies';

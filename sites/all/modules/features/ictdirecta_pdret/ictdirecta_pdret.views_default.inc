@@ -24,15 +24,30 @@ function ictdirecta_pdret_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Portada-ColumnaDerecha';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Aplica';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Reinicialitza';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Ordena per';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
+<<<<<<< HEAD
   $handler->display->display_options['row_plugin'] = 'node';
   /* Field: Contingut: Title */
+=======
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Flags: portada_cdr */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Field: Content: Title */
+>>>>>>> isa
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -44,17 +59,22 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+<<<<<<< HEAD
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
     2 => 'AND',
   );
   /* Filter criterion: Contingut: Published */
+=======
+  /* Filter criterion: Content: Published */
+>>>>>>> isa
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+<<<<<<< HEAD
   /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -98,13 +118,11 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
   $handler->display->display_options['filters']['promote_1']['value'] = '1';
   $handler->display->display_options['filters']['promote_1']['group'] = 2;
+=======
+>>>>>>> isa
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'portada-columnaderecha';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '15';
@@ -126,10 +144,11 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
-  $handler->display->display_options['block_description'] = 'Pder-noticies-video-fotogal';
+  $handler->display->display_options['path'] = 'portada-columnaderecha';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+<<<<<<< HEAD
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Admin_Portada-ColumnaDerecha';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -203,31 +222,21 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['block_description'] = 'Admin_Pder-noticies-video-fotogal';
+=======
+>>>>>>> isa
   $translatables['portada_columnaderecha'] = array(
     t('Master'),
     t('Portada-ColumnaDerecha'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
+    t('més'),
+    t('Aplica'),
+    t('Reinicialitza'),
+    t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('flag'),
     t('Page'),
+    t('more'),
     t('Block'),
-    t('Pder-noticies-video-fotogal'),
-    t('Admin_Portada-ColumnaDerecha'),
-    t('Promoted to front page'),
-    t('Updated date'),
-    t('Author uid'),
-    t('Type'),
-    t('Admin_Pder-noticies-video-fotogal'),
   );
   $export['portada_columnaderecha'] = $view;
 

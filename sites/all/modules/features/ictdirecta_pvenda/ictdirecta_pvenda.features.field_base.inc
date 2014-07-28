@@ -34,7 +34,10 @@ function ictdirecta_pvenda_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_with_summary',
   );
@@ -63,6 +66,8 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -79,7 +84,10 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
-    'settings' => array(),
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'number_integer',
   );
@@ -108,6 +116,8 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -135,7 +145,10 @@ function ictdirecta_pvenda_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'text_long',
   );
@@ -165,6 +178,8 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'settings' => array(
       'default_image' => 0,
       'uri_scheme' => 'public',
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'image',
@@ -181,7 +196,10 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
-    'settings' => array(),
+    'settings' => array(
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'number_integer',
   );
@@ -215,6 +233,8 @@ function ictdirecta_pvenda_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
@@ -244,6 +264,8 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',

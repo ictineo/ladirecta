@@ -1,0 +1,12 @@
+name = ictdirecta_tagadelic
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = strongarm
+dependencies[] = tagadelic_taxonomy
+dependencies[] = tagadelic_views
+dependencies[] = views
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[variable][] = tagadelic_taxonomy_vocabularies
