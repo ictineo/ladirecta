@@ -56,7 +56,7 @@ Quadre de text inclós abans de les línis de recerca, preguntar que es';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href=/linies-de-recerca> Veure totes les línies -> </a>';
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -184,6 +184,7 @@ Quadre de text inclós abans de les línis de recerca, preguntar que es'),
     t('[Icon] '),
     t(' Aportacions'),
     t('Totes les ĺínies'),
+    t('more'),
     t('Menu lateral'),
     t('Intern per admin'),
   );

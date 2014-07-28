@@ -112,7 +112,14 @@ function ictdirecta_noticia_paper_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_field_collection_item__field_contingut_relacionat';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'token' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(),
       'display' => array(),
@@ -130,7 +137,7 @@ function ictdirecta_noticia_paper_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -142,7 +149,7 @@ function ictdirecta_noticia_paper_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -151,16 +158,57 @@ function ictdirecta_noticia_paper_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '2',
+          'weight' => '3',
+        ),
+        'flag' => array(
+          'weight' => '13',
         ),
       ),
       'display' => array(
         'easy_social_1' => array(
           'teaser' => array(
             'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '101',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+          'rss' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'token' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_destacado_portada' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'rss' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'token' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

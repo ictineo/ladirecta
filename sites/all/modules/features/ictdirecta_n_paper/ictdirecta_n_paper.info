@@ -2,6 +2,7 @@ name = ictdirecta_n_paper
 core = 7.x
 package = Features
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_noticia_paper
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_instance][] = node-noticia_paper-body

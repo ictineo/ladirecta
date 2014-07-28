@@ -9,6 +9,7 @@ dependencies[] = field_collection
 dependencies[] = file
 dependencies[] = ictdirecta_cdnot
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_noticia_paper
 dependencies[] = ictdirecta_numeropaper
 dependencies[] = ictdirecta_taxonomies
 dependencies[] = link

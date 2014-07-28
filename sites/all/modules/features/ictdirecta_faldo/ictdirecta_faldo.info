@@ -2,6 +2,7 @@ name = ictdirecta_faldo
 core = 7.x
 package = Features
 dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_noticia_paper
 dependencies[] = options
 dependencies[] = views
 features[ctools][] = strongarm:strongarm:1
