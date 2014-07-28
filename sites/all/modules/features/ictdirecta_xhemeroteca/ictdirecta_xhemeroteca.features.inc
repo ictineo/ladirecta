@@ -68,7 +68,6 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
     "options" : {
       "index_directly" : 1,
       "cron_limit" : "50",
-<<<<<<< HEAD:sites/all/modules/features/ictdirecta_xhemeroteca/ictdirecta_xhemeroteca.features.inc
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
           "status" : 0,
@@ -98,11 +97,6 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
           "weight" : "0",
           "settings" : { "fields" : { "title" : true, "body:value" : true } }
         },
-=======
-      "data_alter_callbacks" : { "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] } },
-      "processors" : {
-        "search_api_case_ignore" : { "status" : 1, "weight" : "0", "settings" : { "strings" : 0 } },
->>>>>>> isa:sites/all/modules/features/ictdirecta_hemeroteca/ictdirecta_hemeroteca.features.inc
         "search_api_html_filter" : {
           "status" : 1,
           "weight" : "10",
@@ -119,27 +113,21 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
         }
       },
       "fields" : {
-<<<<<<< HEAD:sites/all/modules/features/ictdirecta_xhemeroteca/ictdirecta_xhemeroteca.features.inc
         "attachments_field_adjunt" : { "type" : "text" },
         "attachments_field_butlleti_sonor" : { "type" : "text" },
         "attachments_field_documents_adjunts" : { "type" : "text" },
         "attachments_field_fotografia_de_portada" : { "type" : "text" },
         "attachments_field_pdf" : { "type" : "text" },
-=======
->>>>>>> isa:sites/all/modules/features/ictdirecta_hemeroteca/ictdirecta_hemeroteca.features.inc
         "author" : { "type" : "integer", "entity_type" : "user" },
         "body:value" : { "type" : "text" },
         "changed" : { "type" : "date" },
         "comment_count" : { "type" : "integer" },
         "created" : { "type" : "date" },
-<<<<<<< HEAD:sites/all/modules/features/ictdirecta_xhemeroteca/ictdirecta_xhemeroteca.features.inc
         "field_data" : { "type" : "date" },
         "field_etiquetes" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_seccio" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_territori" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_tipus_de_servei" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-=======
->>>>>>> isa:sites/all/modules/features/ictdirecta_hemeroteca/ictdirecta_hemeroteca.features.inc
         "promote" : { "type" : "boolean" },
         "search_api_language" : { "type" : "string" },
         "sticky" : { "type" : "boolean" },

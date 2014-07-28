@@ -10,7 +10,6 @@
 function ictdirecta_noticia_field_default_field_bases() {
   $field_bases = array();
 
-<<<<<<< HEAD
   // Exported field_base: 'comment_body'
   $field_bases['comment_body'] = array(
     'active' => 1,
@@ -73,10 +72,6 @@ function ictdirecta_noticia_field_default_field_bases() {
 
   // Exported field_base: 'field_autor'
   $field_bases['field_autor'] = array(
-=======
-  // Exported field_base: 'field_adre_a_correu_e'
-  $field_bases['field_adre_a_correu_e'] = array(
->>>>>>> isa
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
@@ -121,11 +116,7 @@ function ictdirecta_noticia_field_default_field_bases() {
     'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
-<<<<<<< HEAD
-    'field_name' => 'field_contingut_relacionat_ref',
-=======
     'field_name' => 'field_continguts_relacionats_ref',
->>>>>>> isa
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -163,7 +154,6 @@ function ictdirecta_noticia_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-<<<<<<< HEAD
   // Exported field_base: 'field_correu_electr_nic'
   $field_bases['field_correu_electr_nic'] = array(
     'active' => 1,
@@ -283,12 +273,8 @@ function ictdirecta_noticia_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_fotografia_de_portada'
-  $field_bases['field_fotografia_de_portada'] = array(
-=======
   // Exported field_base: 'field_nom_i_cognoms'
   $field_bases['field_nom_i_cognoms'] = array(
->>>>>>> isa
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
