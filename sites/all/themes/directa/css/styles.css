@@ -608,8 +608,8 @@ table {
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -741,8 +741,8 @@ table {
   }
   /* line 134, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -787,16 +787,16 @@ table {
   /* line 166, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 80%;
-    margin-left: 20%;
-    margin-right: -100%;
+    width: 65.21739%;
+    margin-left: 0%;
+    margin-right: -65.21739%;
   }
   /* line 171, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
-    width: 20%;
-    margin-left: 0%;
-    margin-right: -20%;
+    width: 34.78261%;
+    margin-left: 65.21739%;
+    margin-right: -100%;
   }
 
   /**
@@ -810,15 +810,15 @@ table {
   /* line 181, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
-    width: 80%;
+    width: 73.91304%;
     margin-left: 0%;
-    margin-right: -80%;
+    margin-right: -73.91304%;
   }
   /* line 186, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
-    width: 20%;
-    margin-left: 80%;
+    width: 26.08696%;
+    margin-left: 73.91304%;
     margin-right: -100%;
   }
 
@@ -834,22 +834,22 @@ table {
   /* line 196, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: -80%;
+    width: 39.13043%;
+    margin-left: 0%;
+    margin-right: -39.13043%;
   }
   /* line 201, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
-    width: 20%;
-    margin-left: 0%;
-    margin-right: -20%;
+    width: 34.78261%;
+    margin-left: 39.13043%;
+    margin-right: -73.91304%;
   }
   /* line 206, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
-    width: 20%;
-    margin-left: 80%;
+    width: 26.08696%;
+    margin-left: 73.91304%;
     margin-right: -100%;
   }
 }
@@ -1700,7 +1700,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1405681657');
+  background-image: url('../images/progress.gif?1406548794');
 }
 
 /**
