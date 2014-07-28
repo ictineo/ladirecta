@@ -200,6 +200,8 @@ $zen-auto-include-item-base: false;
 
     .region-highlighted {
       @include zen-grid-item (23,1);
+      @include zen-clear();
+      
     }
     #main-content {
       @include zen-grid-item(9, 1);

@@ -223,22 +223,23 @@ ul {
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
+    clear: right;
   }
-  /* line 204, ../sass/layouts/_responsive.scss */
+  /* line 206, ../sass/layouts/_responsive.scss */
   .two-sidebars #main-content {
     float: right;
     width: 39.13043%;
     margin-right: 0%;
     margin-left: -39.13043%;
   }
-  /* line 209, ../sass/layouts/_responsive.scss */
+  /* line 211, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: right;
     width: 34.78261%;
     margin-right: 39.13043%;
     margin-left: -73.91304%;
   }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 216, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     width: 26.08696%;
