@@ -35,10 +35,6 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
-<<<<<<< HEAD
-  $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Contingut: Title */
-=======
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Flags: portada_cdr */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -47,7 +43,6 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Title */
->>>>>>> isa
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -59,22 +54,13 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-<<<<<<< HEAD
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'AND',
-  );
-  /* Filter criterion: Contingut: Published */
-=======
   /* Filter criterion: Content: Published */
->>>>>>> isa
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-<<<<<<< HEAD
   /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -118,8 +104,6 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
   $handler->display->display_options['filters']['promote_1']['value'] = '1';
   $handler->display->display_options['filters']['promote_1']['group'] = 2;
-=======
->>>>>>> isa
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -148,7 +132,6 @@ function ictdirecta_pdret_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-<<<<<<< HEAD
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Admin_Portada-ColumnaDerecha';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -222,8 +205,6 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['block_description'] = 'Admin_Pder-noticies-video-fotogal';
-=======
->>>>>>> isa
   $translatables['portada_columnaderecha'] = array(
     t('Master'),
     t('Portada-ColumnaDerecha'),
