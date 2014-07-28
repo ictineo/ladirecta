@@ -42,6 +42,7 @@ $zen-auto-include-item-base: false;
 #content,
 #navigation,
 .region-help,
+.region-highlighted,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -53,6 +54,7 @@ $zen-auto-include-item-base: false;
 #header,
 #main,
 .region-help,
+.region-highlighted,
 #footer {
   @include zen-grid-container();
 }
@@ -195,7 +197,11 @@ $zen-auto-include-item-base: false;
    */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
-    #content {
+
+    .region-highlighted {
+      @include zen-grid-item (23,1);
+    }
+    #main-content {
       @include zen-grid-item(9, 1);
     }
 
