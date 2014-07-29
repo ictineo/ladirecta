@@ -100,9 +100,6 @@
       <?php print render($page['navigation']); ?>
 
     </div>
- <div id="destacat">
-   <?php print render($page['destacat']); ?>
- </div>   
 
     <?php
       // Render the sidebars to see if there's anything in them.

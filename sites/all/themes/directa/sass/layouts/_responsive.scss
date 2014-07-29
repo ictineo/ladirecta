@@ -218,7 +218,9 @@ $zen-auto-include-item-base: false;
   #destacat {
     @include zen-clear();
   }
-
+  .region-help {
+    display:none;
+  }
 
   
 
