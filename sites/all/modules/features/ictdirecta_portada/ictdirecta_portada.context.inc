@@ -14,7 +14,7 @@ function ictdirecta_portada_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'portada_columnaderecha';
-  $context->description = '';
+  $context->description = 'Colocación columna derecha en first side bar';
   $context->tag = 'portada';
   $context->conditions = array(
     'path' => array(
@@ -32,6 +32,12 @@ function ictdirecta_portada_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
+        'views-52ac42fa3c76d4864389298401da2087' => array(
+          'module' => 'views',
+          'delta' => '52ac42fa3c76d4864389298401da2087',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
       ),
     ),
   );
@@ -39,6 +45,7 @@ function ictdirecta_portada_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Colocación columna derecha en first side bar');
   t('portada');
   $export['portada_columnaderecha'] = $context;
 
