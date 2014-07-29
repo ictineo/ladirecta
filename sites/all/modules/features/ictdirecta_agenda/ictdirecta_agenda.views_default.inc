@@ -306,7 +306,7 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -380,7 +380,7 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -439,7 +439,7 @@ function ictdirecta_agenda_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data_ag']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
