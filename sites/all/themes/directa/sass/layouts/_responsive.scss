@@ -11,7 +11,7 @@
 // We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
 // between columns (applied as 10px of left/right padding on each column).
 $zen-column-count:  1;
-$zen-gutter-width:  24px;
+$zen-gutter-width:  4px;
 
 // If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
 //$zen-box-sizing: content-box;
@@ -31,6 +31,7 @@ $zen-auto-include-item-base: false;
  * by setting a max-width.
  */
 #page,
+.region-highlighted,
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -41,6 +42,7 @@ $zen-auto-include-item-base: false;
 #header,
 #content,
 #navigation,
+#destacat,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -62,6 +64,7 @@ $zen-auto-include-item-base: false;
     padding-top: $nav-height;
     position: relative;
   }
+
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -155,6 +158,10 @@ $zen-auto-include-item-base: false;
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
+#help {
+  display:none;
+}
+
 
   $zen-column-count: 23;
   #page {
@@ -163,23 +170,56 @@ $zen-auto-include-item-base: false;
   #header {
     @include zen-grid-container();
     #logo {
-      @include zen-grid-item(6,1);
+      @include zen-grid-item(5,1);
+    }
+    #site-name {
+      display:none;
+    }
+    #name-and-slogan {
+      display:none;
+    }
+    #secondary-menu {
+      @include zen-grid-item(3,6);
     }
     .region-header {
-      @include zen-grid-item(17,6);
-      @include zen-grid-container();
-      $zen-column-count:3;
-      #block-block-1 {
-        @include zen-grid-item(1,1);
-      }
+      display:inline;
       #block-block-2 {
-        @include zen-grid-item(1,2);
+        @include zen-grid-item(3,10);
+
+      }
+      #block-block-1 {
+        @include zen-grid-item(3,14);
+        #twitter {
+        }
+        #fb {
+        }
+        #vm {
+        }
       }
       #block-views-exp-hemeroteca-page-1 {
-        @include zen-grid-item(1,3);
+        @include zen-grid-item(6,18);
       }
     }
   }
+  #navigation {
+    @include zen-clear();
+    .region-navigation {
+      #block-nice-menus-3 {
+        @include zen-grid-item(6,1);
+      }
+      #block-nice-menus-2 {
+        @include zen-grid-item(6,7);
+      }
+      #block-nice-menus-1 {
+        @include zen-grid-item(6,14);
+      }
+    }
+  }
+  #destacat {
+    @include zen-clear();
+  }
+
+
   
 
   /**
@@ -188,12 +228,12 @@ $zen-auto-include-item-base: false;
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(4, 2);
+      @include zen-grid-item(9, 1);
     }
 
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
-      @include zen-grid-item(1, 1);
+      @include zen-grid-item(8, 10);
     }
   }
 
@@ -203,12 +243,12 @@ $zen-auto-include-item-base: false;
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     #content {
-      @include zen-grid-item(4, 1);
+      @include zen-grid-item(9, 1);
     }
 
     /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      @include zen-grid-item(6, 19);
     }
   }
 
@@ -216,6 +256,7 @@ $zen-auto-include-item-base: false;
    * The layout when there are two sidebars.
    */
   .two-sidebars {
+    
     /* Span 3 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(9, 1);
