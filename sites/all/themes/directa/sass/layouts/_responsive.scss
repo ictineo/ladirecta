@@ -77,6 +77,9 @@ $zen-auto-include-item-base: false;
 
 } // End of @if $zen-reverse-all-floats == true
 
+
+
+
 /**
  * Use 3 grid columns for smaller screens.
  */
@@ -160,8 +163,10 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 960px) {
   $zen-column-count: 23;
-  @include zen-grid-background($grid-color:pink);
   #header {
+    @include zen-grid-background();
+    
+  }
     #logo {
       @include zen-grid-item(5,1);
     }

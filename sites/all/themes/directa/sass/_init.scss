@@ -124,3 +124,6 @@ $tabs-border: #bbb;
 
 // Now we add our custom helper mixins.
 @import "mixins";
+
+//Now we add background grids
+@import "zen/background";
