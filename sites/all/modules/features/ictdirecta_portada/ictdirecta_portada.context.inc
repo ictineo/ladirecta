@@ -94,7 +94,7 @@ function ictdirecta_portada_context_default_contexts() {
         'views-c721e0c0c017aee43ae86693d23b264b' => array(
           'module' => 'views',
           'delta' => 'c721e0c0c017aee43ae86693d23b264b',
-          'region' => 'highlighted',
+          'region' => 'destacat',
           'weight' => '-10',
         ),
       ),
