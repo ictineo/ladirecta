@@ -330,56 +330,6 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-fotogaleria-field_destacar'
-  $field_instances['node-fotogaleria-field_destacar'] = array(
-    'bundle' => 'fotogaleria',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'token' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_destacar',
-    'label' => 'Destacar',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 0,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 10,
-    ),
-  );
-
   // Exported field_instance: 'node-fotogaleria-field_etiquetes'
   $field_instances['node-fotogaleria-field_etiquetes'] = array(
     'bundle' => 'fotogaleria',
@@ -683,7 +633,6 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
   t('Autoria general');
   t('Body');
   t('Columna');
-  t('Destacar');
   t('Etiquetes');
   t('Fotografia');
   t('Fotografies');

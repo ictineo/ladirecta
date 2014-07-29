@@ -63,7 +63,7 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
     "name" : "Default node index",
     "machine_name" : "default_node_index",
     "description" : "An automatically created search index for indexing node data. Might be configured to specific needs.",
-    "server" : null,
+    "server" : "solr_server",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
@@ -135,7 +135,7 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
         "type" : { "type" : "string" }
       }
     },
-    "enabled" : "0",
+    "enabled" : "1",
     "read_only" : "0",
     "rdf_mapping" : []
   }');

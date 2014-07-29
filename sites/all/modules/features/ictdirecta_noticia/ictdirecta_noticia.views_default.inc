@@ -217,7 +217,7 @@ function ictdirecta_noticia_views_default_views() {
     t('Master'),
     t('Continguts relacionats'),
     t('més'),
-    t('Aplica'),
+    t('Apply'),
     t('Reinicialitza'),
     t('Ordena per'),
     t('Asc'),

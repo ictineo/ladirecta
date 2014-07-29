@@ -60,7 +60,7 @@ function ictdirecta_faldo_views_default_views() {
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['id'] = 'field_contingut_relacionat_desta_target_id';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['table'] = 'field_data_field_contingut_relacionat_desta';
   $handler->display->display_options['relationships']['field_contingut_relacionat_desta_target_id']['field'] = 'field_contingut_relacionat_desta_target_id';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';

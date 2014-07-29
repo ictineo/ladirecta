@@ -383,7 +383,7 @@ function ictdirecta_xhemeroteca_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['field_data_1']['widget_type'] = 'date_popup';
-  /* Filter criterion: Indexed Content: Author */
+  /* Filter criterion: Indexed Contingut: Author */
   $handler->display->display_options['filters']['author']['id'] = 'author';
   $handler->display->display_options['filters']['author']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['author']['field'] = 'author';

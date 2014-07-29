@@ -33,14 +33,14 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Body */
+  /* Field: Contingut: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -61,7 +61,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_imatge_portada']['label'] = '';
   $handler->display->display_options['fields']['field_imatge_portada']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_imatge_portada']['element_label_colon'] = FALSE;
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
@@ -70,7 +70,7 @@ function ictdirecta_numeropaper_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: PDF */
+  /* Field: Contingut: PDF */
   $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
   $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
   $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
@@ -78,7 +78,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_pdf']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'fid';
-  /* Field: Content: Tags */
+  /* Field: Contingut: Tags */
   $handler->display->display_options['fields']['field_tags_']['id'] = 'field_tags_';
   $handler->display->display_options['fields']['field_tags_']['table'] = 'field_data_field_tags_';
   $handler->display->display_options['fields']['field_tags_']['field'] = 'field_tags_';
@@ -86,11 +86,11 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_tags_']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_tags_']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_tags_']['delta_offset'] = '0';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contingut: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -102,7 +102,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contingut: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -113,7 +113,7 @@ function ictdirecta_numeropaper_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Contingut: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -124,14 +124,14 @@ function ictdirecta_numeropaper_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Content: Body */
+  /* Field: Contingut: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Data */
+  /* Field: Contingut: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
@@ -145,7 +145,7 @@ function ictdirecta_numeropaper_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
@@ -156,7 +156,7 @@ function ictdirecta_numeropaper_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: PDF */
+  /* Field: Contingut: PDF */
   $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
   $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
   $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
@@ -164,7 +164,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_pdf']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'fid';
-  /* Field: Content: Tags */
+  /* Field: Contingut: Tags */
   $handler->display->display_options['fields']['field_tags_']['id'] = 'field_tags_';
   $handler->display->display_options['fields']['field_tags_']['table'] = 'field_data_field_tags_';
   $handler->display->display_options['fields']['field_tags_']['field'] = 'field_tags_';
@@ -172,7 +172,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['fields']['field_tags_']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_tags_']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_tags_']['delta_offset'] = '0';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -192,7 +192,7 @@ function ictdirecta_numeropaper_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nº */
+  /* Field: Contingut: Nº */
   $handler->display->display_options['fields']['field_n_']['id'] = 'field_n_';
   $handler->display->display_options['fields']['field_n_']['table'] = 'field_data_field_n_';
   $handler->display->display_options['fields']['field_n_']['field'] = 'field_n_';
