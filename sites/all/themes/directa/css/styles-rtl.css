@@ -1,434 +1,81 @@
-/**
- * @file
- * RTL companion for the styles.scss file.
- */
-/* Import Sass mixins, variables, Compass modules, etc. */
-/* HTML element (SMACSS base) rules */
-/**
- * @file
- * Normalize-rtl.scss is the RTL language extension of normalize.scss
- */
-/**
- * Lists
- */
-/* line 9, ../sass/_normalize-rtl.scss */
-dd {
-  margin: 0 30px 0 0;
-}
-
-/* Address paddings set differently in IE 6/7. */
-/* line 16, ../sass/_normalize-rtl.scss */
-menu,
-ol,
-ul {
-  padding: 0 30px 0 0;
-}
-
-/* Layout rules */
-/**
- * @file
- * RTL companion for the layout-responsive.css file.
- */
-/**
- * @file
- * Positioning for a responsive layout.
- *
- * Define CSS classes to create a fluid grid layout with optional sidebars
- * depending on whether blocks are placed in the left or right sidebars.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */
-/**
- * Use 3 grid columns for smaller screens.
- */
-@media all and (min-width: 480px) and (max-width: 959px) {
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  /* line 90, ../sass/layouts/_responsive.scss */
-  .sidebar-first {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
-  /* line 92, ../sass/layouts/_responsive.scss */
-  .sidebar-first #content {
-    float: right;
-    width: 66.66667%;
-    margin-right: 33.33333%;
-    margin-left: -100%;
-  }
-  /* line 97, ../sass/layouts/_responsive.scss */
-  .sidebar-first .region-sidebar-first {
-    float: right;
-    width: 33.33333%;
-    margin-right: 0%;
-    margin-left: -33.33333%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  /* line 105, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
-  /* line 107, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: right;
-    width: 66.66667%;
-    margin-right: 0%;
-    margin-left: -66.66667%;
-  }
-  /* line 112, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: right;
-    width: 33.33333%;
-    margin-right: 66.66667%;
-    margin-left: -100%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 120, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
-  /* line 122, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: right;
-    width: 66.66667%;
-    margin-right: 33.33333%;
-    margin-left: -100%;
-  }
-  /* line 127, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: right;
-    width: 33.33333%;
-    margin-right: 0%;
-    margin-left: -33.33333%;
-  }
-  /* line 132, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: right;
-    width: 100%;
-    margin-right: 0%;
-    margin-left: -100%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: right;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
-  }
-  /* line 138, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 12px;
-    padding-right: 12px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 142, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: right;
-    width: 33.33333%;
-    margin-right: 0%;
-    margin-left: -33.33333%;
-    clear: right;
-  }
-  /* line 147, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: right;
-    width: 33.33333%;
-    margin-right: 33.33333%;
-    margin-left: -66.66667%;
-  }
-  /* line 151, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: right;
-    width: 33.33333%;
-    margin-right: 66.66667%;
-    margin-left: -100%;
-  }
-}
-/**
- * Use 5 grid columns for larger screens.
- */
-@media all and (min-width: 960px) {
-  /* line 165, ../sass/layouts/_responsive.scss */
-  #header #logo {
-    float: right;
-    width: 21.73913%;
-    margin-right: 0%;
-    margin-left: -21.73913%;
-  }
-  /* line 169, ../sass/layouts/_responsive.scss */
-  #header .header__region #block-block-1 {
-    float: right;
-    width: 21.73913%;
-    margin-right: 21.73913%;
-    margin-left: -43.47826%;
-  }
-  /* line 172, ../sass/layouts/_responsive.scss */
-  #header .header__region #block-block-2 {
-    float: right;
-    width: 21.73913%;
-    margin-right: 43.47826%;
-    margin-left: -65.21739%;
-  }
-  /* line 175, ../sass/layouts/_responsive.scss */
-  #header .header__region #block-views-exp-hemeroteca-page-1 {
-    float: right;
-    width: 21.73913%;
-    margin-right: 65.21739%;
-    margin-left: -86.95652%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  /* line 185, ../sass/layouts/_responsive.scss */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
-  /* line 187, ../sass/layouts/_responsive.scss */
-  .sidebar-first #content {
-    float: right;
-    width: 65.21739%;
-    margin-right: 0%;
-    margin-left: -65.21739%;
-  }
-  /* line 192, ../sass/layouts/_responsive.scss */
-  .sidebar-first .region-sidebar-first {
-    float: right;
-    width: 34.78261%;
-    margin-right: 65.21739%;
-    margin-left: -100%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  /* line 200, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
-  /* line 202, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: right;
-    width: 73.91304%;
-    margin-right: 0%;
-    margin-left: -73.91304%;
-  }
-  /* line 207, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: right;
-    width: 26.08696%;
-    margin-right: 73.91304%;
-    margin-left: -100%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 215, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
-  /* line 217, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: right;
-    width: 100%;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  /* line 219, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content .main-content {
-    float: right;
-    width: 39.13043%;
-    margin-right: 0%;
-    margin-left: -39.13043%;
-  }
-  /* line 225, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: right;
-    width: 34.78261%;
-    margin-right: 39.13043%;
-    margin-left: -73.91304%;
-  }
-
-  /* Span 1 column, starting in 5th column from left. */
-  /* line 231, ../sass/layouts/_responsive.scss */
-  .region-sidebar-second {
-    float: right;
-    width: 26.08696%;
-    margin-right: 73.91304%;
-    margin-left: -100%;
-  }
-}
-/* Component (SMACSS module) rules */
-/**
- * @file
- * RTL companion for the modular-styles.css file.
- */
-/**
- * Branding header.
- */
-/* Wrapping link for logo. */
-/* line 11, ../sass/components/_misc-rtl.scss */
-.header__logo {
-  float: right;
-}
-
-/* The secondary menu (login, etc.) */
-/* line 16, ../sass/components/_misc-rtl.scss */
-.header__secondary-menu {
-  float: left;
-}
-
-/**
- * Navigation bar.
- */
-/* Main menu and secondary menu links and menu block links. */
-/* line 27, ../sass/components/_misc-rtl.scss */
-#navigation .links,
-#navigation .menu {
-  text-align: right;
-}
-/* line 30, ../sass/components/_misc-rtl.scss */
-#navigation .links li,
-#navigation .menu li {
-  /* A simple method to get navigation links to appear in one line. */
-  float: right;
-  padding: 0 0 0 10px;
-}
-
-/**
- * Messages.
- */
-/* line 41, ../sass/components/_misc-rtl.scss */
-.messages, .messages--status, .messages--warning, .messages--error {
-  padding: 10px 50px 10px 10px;
-  background-position: 99% 8px;
-}
-
-/**
- * Tabs.
- */
-/* line 58, ../sass/components/_misc-rtl.scss */
-.tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
-.tabs-secondary__tab.is-active {
-  float: right;
-}
-
-/**
- * Inline styles.
- */
-/* List of links */
-/* line 77, ../sass/components/_misc-rtl.scss */
-.inline li {
-  /* Bug in Safari causes display: inline to fail. */
-  display: inline-block;
-  padding: 0 0 0 1em;
-}
-
-/* The inline field label used by the Fences.module */
-/* line 84, ../sass/components/_misc-rtl.scss */
-span.field-label {
-  padding: 0 0 0 1em;
-}
-
-/**
- * "More" links.
- */
-/* line 91, ../sass/components/_misc-rtl.scss */
-.more-link {
-  text-align: left;
-}
-
-/* line 94, ../sass/components/_misc-rtl.scss */
-.more-help-link {
-  text-align: left;
-}
-
-/* line 97, ../sass/components/_misc-rtl.scss */
-.more-help-link a {
-  background-position: 100% 50%;
-  padding: 1px 20px 1px 0;
-}
-
-/**
- * Menus.
- */
-/* line 105, ../sass/components/_misc-rtl.scss */
-.menu__item.is-collapsed {
-  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-}
-
-/**
- * Comments.
- */
-/* Nested comments are indented. */
-/* line 117, ../sass/components/_misc-rtl.scss */
-.indented {
-  margin-left: 0;
-  margin-right: 30px;
-}
-
-/**
- * Forms.
- */
-/* Drupal's default login form block */
-/* line 127, ../sass/components/_misc-rtl.scss */
-#user-login-form {
-  text-align: right;
-}
-
-/* line 132, ../sass/components/_misc-rtl.scss */
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link {
-  /* Un-do some of the padding on the ul list. */
-  margin-left: 0;
-  margin-right: -20px;
-}
-
 /*
- * Drupal admin tables.
- */
-/* line 142, ../sass/components/_misc-rtl.scss */
-form th {
-  text-align: right;
-  padding-left: 1em;
-  padding-right: 0;
-}
+Syntax error: Undefined mixin 'zen-grid-background'.
+        on line 163 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss, in `zen-grid-background'
+        from line 163 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss
+        from line 10 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive-rtl.scss
+        from line 13 of /var/www/28julc/sites/all/themes/directa/sass/styles-rtl.scss
 
-/**
- * Collapsible fieldsets.
- *
- * @see collapse.js
- */
-/* line 155, ../sass/components/_misc-rtl.scss */
-html.js .collapsible .fieldset-legend {
-  background-position: 98% 75%;
-  padding-left: 0;
-  padding-right: 15px;
-}
-/* line 160, ../sass/components/_misc-rtl.scss */
-html.js .collapsed .fieldset-legend {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-  background-position: 98% 50%;
-}
-
-/* SMACSS theme rules */
-/* @import "theme-A-rtl"; */
-/* @import "theme-B-rtl"; */
+Backtrace:
+/var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss:163:in `zen-grid-background'
+/var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss:163
+/var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive-rtl.scss:10
+/var/www/28julc/sites/all/themes/directa/sass/styles-rtl.scss:13
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:253:in `visit_mixin'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:362:in `visit_media'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `map'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `map'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/engine.rb:315:in `_render'
+/usr/lib/ruby/gems/1.8/gems/sass-3.2.12/lib/sass/../sass/engine.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:30
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/usr/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'zen-grid-background'.\A         on line 163 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss, in `zen-grid-background'\A         from line 163 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive.scss\A         from line 10 of /var/www/28julc/sites/all/themes/directa/sass/layouts/_responsive-rtl.scss\A         from line 13 of /var/www/28julc/sites/all/themes/directa/sass/styles-rtl.scss"; }
