@@ -46,7 +46,7 @@ function ictdirecta_basicconf_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'menu_lateral';
-  $context->description = '';
+  $context->description = 'Colocacion menu lateral a la region help';
   $context->tag = '';
   $context->conditions = array(
     'sitewide' => array(
@@ -61,31 +61,35 @@ function ictdirecta_basicconf_context_default_contexts() {
         'views-agenda_llista-block_1' => array(
           'module' => 'views',
           'delta' => 'agenda_llista-block_1',
-          'region' => 'sidebar_first',
+          'region' => 'help',
           'weight' => '-10',
         ),
         'views-cd_noticias-block_1' => array(
           'module' => 'views',
           'delta' => 'cd_noticias-block_1',
-          'region' => 'sidebar_first',
+          'region' => 'help',
           'weight' => '-9',
         ),
         'views-cd_serveis-block_1' => array(
           'module' => 'views',
           'delta' => 'cd_serveis-block_1',
-          'region' => 'sidebar_first',
+          'region' => 'help',
           'weight' => '-8',
         ),
         'views-linies_de_recerca-block' => array(
           'module' => 'views',
           'delta' => 'linies_de_recerca-block',
-          'region' => 'sidebar_first',
+          'region' => 'help',
           'weight' => '-7',
         ),
       ),
     ),
   );
   $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Colocacion menu lateral a la region help');
   $export['menu_lateral'] = $context;
 
   $context = new stdClass();
