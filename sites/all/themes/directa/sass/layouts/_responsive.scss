@@ -164,9 +164,6 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 960px) {
   $zen-column-count: 23;
   #header {
-    @include zen-grid-background();
-    
-  }
     #logo {
       @include zen-grid-item(5,1);
     }
