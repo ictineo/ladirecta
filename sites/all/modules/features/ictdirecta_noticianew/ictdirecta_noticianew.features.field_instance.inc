@@ -136,6 +136,50 @@ function ictdirecta_noticianew_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_contingut_relacionat-field_destacar'
+  $field_instances['field_collection_item-field_contingut_relacionat-field_destacar'] = array(
+    'bundle' => 'field_contingut_relacionat',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_destacar',
+    'label' => 'Destacar',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_continguts_relacionats_ref'
   $field_instances['field_collection_item-field_continguts_relacionats-field_continguts_relacionats_ref'] = array(
     'bundle' => 'field_continguts_relacionats',
@@ -188,10 +232,14 @@ function ictdirecta_noticianew_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_destacat'
-  $field_instances['field_collection_item-field_continguts_relacionats-field_destacat'] = array(
+  // Exported field_instance: 'field_collection_item-field_continguts_relacionats-field_destacar'
+  $field_instances['field_collection_item-field_continguts_relacionats-field_destacar'] = array(
     'bundle' => 'field_continguts_relacionats',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -200,19 +248,19 @@ function ictdirecta_noticianew_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'token' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_destacat',
-    'label' => 'Destacat',
+    'field_name' => 'field_destacar',
+    'label' => 'Destacar',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -220,9 +268,11 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 7,
     ),
   );
 
@@ -440,7 +490,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
   t('Adreça correu-e');
   t('Continguts relacionats');
   t('Correu Electrónic');
-  t('Destacat');
+  t('Destacar');
   t('Fotografia portada');
   t('Mostra\'l en portada	');
   t('Nom i cognoms');
