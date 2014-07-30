@@ -465,6 +465,61 @@ function ictdirecta_noticianew_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-noticia-field_subtitol'
+  $field_instances['node-noticia-field_subtitol'] = array(
+    'bundle' => 'noticia',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_subtitol',
+    'label' => 'Subtítol',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Adreça correu-e');
@@ -475,6 +530,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
   t('Fotografia portada');
   t('Mostra\'l en portada	');
   t('Nom i cognoms');
+  t('Subtítol');
 
   return $field_instances;
 }
