@@ -278,7 +278,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
         'weight' => 5,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
@@ -336,9 +336,8 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'rss' => array(
@@ -419,7 +418,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
         'weight' => 6,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Add',
