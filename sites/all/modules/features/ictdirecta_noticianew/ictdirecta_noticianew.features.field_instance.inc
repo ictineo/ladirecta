@@ -279,9 +279,15 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+        ),
+        'type' => 'field_collection_list',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -330,12 +336,10 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'token',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 7,
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 10,
       ),
       'rss' => array(
         'label' => 'above',
@@ -416,9 +420,15 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+        ),
+        'type' => 'field_collection_list',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
