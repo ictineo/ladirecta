@@ -319,7 +319,6 @@ function ictdirecta_noticianew_field_default_field_instances() {
     ),
   );
 
-
   // Exported field_instance: 'node-noticia-field_fotografies'
   $field_instances['node-noticia-field_fotografies'] = array(
     'bundle' => 'noticia',
@@ -442,7 +441,6 @@ function ictdirecta_noticianew_field_default_field_instances() {
   t('Continguts relacionats');
   t('Correu Electrónic');
   t('Destacat');
-  t('Documents adjunts');
   t('Fotografia portada');
   t('Mostra\'l en portada	');
   t('Nom i cognoms');
