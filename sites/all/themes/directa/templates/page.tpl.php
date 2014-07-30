@@ -54,6 +54,9 @@
     <div id="destacat">
       <?php print render($page['destacat']); ?>
     </div>   
+    <div id="interior">
+      <?php print render($page['interior']); ?>
+    </div>   
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
