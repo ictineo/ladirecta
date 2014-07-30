@@ -287,7 +287,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
           'edit' => 'Edit',
         ),
         'type' => 'field_collection_list',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -315,7 +315,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -338,7 +338,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'rss' => array(
         'label' => 'above',
@@ -427,7 +427,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
           'edit' => 'Edit',
         ),
         'type' => 'field_collection_list',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -220,5 +220,36 @@ function ictdirecta_noticianew_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_subtitol'
+  $field_bases['field_subtitol'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_subtitol',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+      'views_base_columns' => array(),
+      'views_base_table' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   return $field_bases;
 }
