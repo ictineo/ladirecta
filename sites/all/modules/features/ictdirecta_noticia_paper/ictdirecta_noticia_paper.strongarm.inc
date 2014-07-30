@@ -164,13 +164,13 @@ function ictdirecta_noticia_paper_strongarm() {
           'weight' => '3',
         ),
         'flag' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
       ),
       'display' => array(
         'easy_social_1' => array(
           'teaser' => array(
-            'weight' => '11',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -186,7 +186,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '9',
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),
@@ -196,7 +196,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '11',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'rss' => array(
@@ -204,11 +204,25 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '8',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'ultimes_noticies_entity_view_1' => array(
+          'teaser' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+          'token' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

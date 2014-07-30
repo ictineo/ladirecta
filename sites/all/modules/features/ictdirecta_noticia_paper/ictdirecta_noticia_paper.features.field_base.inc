@@ -102,7 +102,14 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_contingut_relacionat_ref',
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -130,33 +137,6 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
-  );
-
-  // Exported field_base: 'field_destacat'
-  $field_bases['field_destacat'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_destacat',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'destacat' => 'Destaca aquest contingut',
-      ),
-      'allowed_values_function' => '',
-      'views_base_columns' => array(),
-      'views_base_table' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_documents_adjunts'
@@ -323,7 +303,7 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
   // Exported field_base: 'field_seccio'
   $field_bases['field_seccio'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_seccio',
@@ -350,7 +330,7 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
         ),
       ),
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',

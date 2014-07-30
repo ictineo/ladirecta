@@ -77,7 +77,7 @@ function ictdirecta_cdnot_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'cd_noticies' => 'cd_noticies',
   );
-  /* Filter criterion: Contingut: Destacar (field_destacar) */
+  /* Filter criterion: Field: Destacar (field_destacar) */
   $handler->display->display_options['filters']['field_destacar_value']['id'] = 'field_destacar_value';
   $handler->display->display_options['filters']['field_destacar_value']['table'] = 'field_data_field_destacar';
   $handler->display->display_options['filters']['field_destacar_value']['field'] = 'field_destacar_value';

@@ -106,7 +106,7 @@ function ictdirecta_cdserveis_field_default_field_bases() {
   // Exported field_base: 'field_territori'
   $field_bases['field_territori'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_territori',
@@ -133,7 +133,7 @@ function ictdirecta_cdserveis_field_default_field_bases() {
         ),
       ),
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',

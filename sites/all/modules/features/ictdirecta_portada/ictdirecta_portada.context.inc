@@ -26,17 +26,11 @@ function ictdirecta_portada_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-portada_columnaderecha-block_1' => array(
-          'module' => 'views',
-          'delta' => 'portada_columnaderecha-block_1',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
         'views-52ac42fa3c76d4864389298401da2087' => array(
           'module' => 'views',
           'delta' => '52ac42fa3c76d4864389298401da2087',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
       ),
     ),
