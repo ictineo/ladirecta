@@ -518,6 +518,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['label'] = '';
+  $handler->display->display_options['fields']['field_seccio']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_seccio']['element_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
@@ -528,6 +529,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_autor']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['element_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
@@ -539,6 +541,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_data']['element_type'] = '0';
   $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
@@ -551,6 +554,13 @@ function ictdirecta_portada_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="pretitular">[field_seccio][field_autor][field_data]</div> ';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Contingut: Fotografia_portada */
   $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
   $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'field_data_field_fotografia_portada';
@@ -562,7 +572,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_fotografia_portada']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_fotografia_portada']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_fotografia_portada']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'large',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_fotografia_portada']['field_api_classes'] = TRUE;
@@ -663,6 +673,7 @@ function ictdirecta_portada_views_default_views() {
     t('flag_destacado3col'),
     t('Block'),
     t('more'),
+    t('<div class="pretitular">[field_seccio][field_autor][field_data]</div> '),
     t('Attachment 2'),
     t('All'),
   );
