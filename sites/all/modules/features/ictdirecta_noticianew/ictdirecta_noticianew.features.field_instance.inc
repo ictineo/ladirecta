@@ -315,7 +315,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
