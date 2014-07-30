@@ -10,6 +10,10 @@ a {
 
 /*MENU*/
 
+#navigation {
+}
+
+
 ul.nice-menu a {
   @include tit-menu;
 }
@@ -36,6 +40,7 @@ span.date-display-single {
 
 /*DESTACAT 3 COLUMNES*/
 .view-portada-destacadotodascolumnas {
+  @include zen-clear();
   @include zen-grid-container();
   .field-fotografia-portada {
     @include zen-grid-item(11,1);
@@ -70,3 +75,13 @@ span.date-display-single {
   }
 
 }
+
+/*COLUMNA NOTICIES (ESQUERRA)*/
+.view-portada-columnaizquierda.view-display-id-block_1 {
+  h2.node-title a {
+    @include titular-not;
+  }
+}
+
+
+

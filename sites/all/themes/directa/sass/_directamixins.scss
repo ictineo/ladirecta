@@ -69,7 +69,6 @@ $blanc: #FFFFFF;
   color:$grisfosc;
   text-align:left;
 }
-
 @mixin entradilla-3col {
   font-family:'publico_textroman';
   font-size:22px;
@@ -97,7 +96,14 @@ $blanc: #FFFFFF;
   color:$grismitja;
 }
 
-
+@mixin titular-not {
+  font-family:'graphiksemibold';
+  font-size:36px;
+  line-height:40px;
+  color:$grisfosc;
+  font-weight:normal;
+}
+ 
 
 
 

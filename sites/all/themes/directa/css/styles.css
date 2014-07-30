@@ -180,16 +180,6 @@ h1 {
   font-size: 2em;
   line-height: 1.5em;
   /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-}
-
-/* line 190, ../sass/_normalize.scss */
-h2 {
-  font-size: 1.5em;
-  line-height: 2em;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 /* line 195, ../sass/_normalize.scss */
@@ -2410,7 +2400,7 @@ a {
 }
 
 /*MENU*/
-/* line 13, ../sass/directa.scss */
+/* line 17, ../sass/directa.scss */
 ul.nice-menu a {
   font-family: 'graphik_regular_regular';
   font-size: 16px;
@@ -2423,17 +2413,17 @@ ul.nice-menu a:hover {
   color: #c13432;
 }
 
-/* line 16, ../sass/directa.scss */
+/* line 20, ../sass/directa.scss */
 .mark {
   color: none;
 }
 
 /*ESTILS DE TEXT*/
-/* line 23, ../sass/directa.scss */
+/* line 27, ../sass/directa.scss */
 .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 25, ../sass/directa.scss */
+/* line 29, ../sass/directa.scss */
 .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
@@ -2441,18 +2431,22 @@ ul.nice-menu a:hover {
   text-decoration: none;
 }
 
-/* line 30, ../sass/directa.scss */
+/* line 34, ../sass/directa.scss */
 a.autor {
   color: #777777;
   text-transform: underline;
 }
 
-/* line 33, ../sass/directa.scss */
+/* line 37, ../sass/directa.scss */
 span.date-display-single {
   color: #777777;
 }
 
 /*DESTACAT 3 COLUMNES*/
+/* line 42, ../sass/directa.scss */
+.view-portada-destacadotodascolumnas {
+  clear: left;
+}
 /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .view-portada-destacadotodascolumnas:before, .view-portada-destacadotodascolumnas:after {
   content: "";
@@ -2462,34 +2456,34 @@ span.date-display-single {
 .view-portada-destacadotodascolumnas:after {
   clear: both;
 }
-/* line 40, ../sass/directa.scss */
+/* line 45, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .field-fotografia-portada {
   float: left;
   width: 47.82609%;
   margin-left: 0%;
   margin-right: -47.82609%;
 }
-/* line 43, ../sass/directa.scss */
+/* line 48, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 45, ../sass/directa.scss */
+/* line 50, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
   font-size: 19px;
   text-decoration: none;
 }
-/* line 49, ../sass/directa.scss */
+/* line 54, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas a.autor {
   color: #777777;
   text-transform: underline;
 }
-/* line 52, ../sass/directa.scss */
+/* line 57, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas span.date-display-single {
   color: #777777;
 }
-/* line 55, ../sass/directa.scss */
+/* line 60, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .views-field-title a {
   font-family: 'graphiksemibold';
   font-size: 40px;
@@ -2497,14 +2491,14 @@ span.date-display-single {
   color: #5e5e5e;
   text-align: left;
 }
-/* line 58, ../sass/directa.scss */
+/* line 63, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .field-body {
   font-family: 'publico_textroman';
   font-size: 22px;
   line-height: 30px;
   color: #5e5e5e;
 }
-/* line 63, ../sass/directa.scss */
+/* line 68, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .pretitular,
 .view-portada-destacadotodascolumnas .views-field-title a,
 .view-portada-destacadotodascolumnas .field-body {
@@ -2514,10 +2508,20 @@ span.date-display-single {
   margin-right: -100%;
   clear: right;
 }
-/* line 67, ../sass/directa.scss */
+/* line 72, ../sass/directa.scss */
 .view-portada-destacadotodascolumnas .pretitular {
   display: block-inline;
   clear: left;
+}
+
+/*COLUMNA NOTICIES (ESQUERRA)*/
+/* line 81, ../sass/directa.scss */
+.view-portada-columnaizquierda.view-display-id-block_1 h2.node-title a {
+  font-family: 'graphiksemibold';
+  font-size: 36px;
+  line-height: 40px;
+  color: #5e5e5e;
+  font-weight: normal;
 }
 
 /**
