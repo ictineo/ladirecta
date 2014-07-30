@@ -2,3 +2,71 @@
 
 @import "directamixins";
 
+a {
+  @include enllac-net;
+}
+
+
+
+/*MENU*/
+
+ul.nice-menu a {
+  @include tit-menu;
+}
+.mark {
+  color:none;
+}
+
+
+/*ESTILS DE TEXT*/
+
+.field-seccio {
+  background-color:$grisfosc;
+  a {
+    @include seccio;
+  }
+}
+
+a.autor {
+  @include autoria;
+}
+span.date-display-single {
+  @include data;
+}
+
+/*DESTACAT 3 COLUMNES*/
+.view-portada-destacadotodascolumnas {
+  @include zen-grid-container();
+  .field-fotografia-portada {
+    @include zen-grid-item(11,1);
+  }
+  .field-seccio {
+    background-color:$grisfosc;
+    a {
+      @include seccio;
+    }
+  }
+  a.autor {
+    @include autoria;
+  }
+  span.date-display-single {
+    @include data;
+  }
+  .views-field-title a {
+    @include titular-3col;
+  }
+  .field-body {
+    @include entradilla-3col;
+  }
+  .pretitular,
+  .views-field-title a,
+  .field-body {
+    @include zen-grid-item (12, 12);
+    @include zen-clear(right);
+  }
+  .pretitular {
+    display:block-inline;
+    @include zen-clear();
+  }
+
+}
