@@ -178,6 +178,7 @@ $zen-auto-include-item-base: false;
     #name-and-slogan {
       display:none;
     }
+    #block-user-login,
     #secondary-menu {
       @include zen-grid-item(3,6);
     }
