@@ -10,6 +10,7 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_slideshow
 dependencies[] = ictdirecta_cdnot
+dependencies[] = ictdirecta_cdserveis
 dependencies[] = ictdirecta_noticia_paper
 dependencies[] = list
 dependencies[] = options
