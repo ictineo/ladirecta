@@ -1,6 +1,6 @@
 #!/bin/bash
 
-drush en ictdirecta_torulethemall
+drush en ictdirecta_torulethemallnew
 
 drush fr ictdirecta_xhemeroteca 
 
