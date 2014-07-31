@@ -238,9 +238,6 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[field_slideshow][version] = "1.82"
   projects[field_slideshow][subdir] = "contrib"
 
-  projects[views_slideshow][version] = "3.1"
-  projects[views_slideshow][subdir] = "contrib"
-
   ; si no es la dev no mostra el widget asociat al camp
   projects[references_dialog][version] = "1.x-dev"
   projects[references_dialog][subdir] = "contrib"
@@ -383,6 +380,7 @@ libraries[jplayer][download][type] = "file"
 libraries[jplayer][download][url] = "http://jplayer.org/latest/jQuery.jPlayer.2.6.0.zip"
 libraries[jplayer][destination] = "libraries"
 libraries[jplayer][directory_name] = "jplayer"
+
 
 
 libraries[jquery.cycle][download][type] = "file"

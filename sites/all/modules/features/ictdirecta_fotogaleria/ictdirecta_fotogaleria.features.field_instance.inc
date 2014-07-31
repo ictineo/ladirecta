@@ -19,9 +19,8 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
@@ -154,9 +153,8 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'full' => array(
@@ -388,16 +386,16 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
-          'slideshow_caption' => '',
-          'slideshow_caption_link' => '',
+          'slideshow_caption' => 'field_autoria',
+          'slideshow_caption_link' => 'content',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
-          'slideshow_carousel_image_style' => '',
+          'slideshow_carousel_image_style' => 'large',
           'slideshow_carousel_scroll' => 1,
           'slideshow_carousel_skin' => '',
           'slideshow_carousel_speed' => 500,
           'slideshow_carousel_vertical' => 0,
-          'slideshow_carousel_visible' => 3,
+          'slideshow_carousel_visible' => 1,
           'slideshow_colorbox_image_style' => '',
           'slideshow_colorbox_slideshow' => '',
           'slideshow_colorbox_slideshow_speed' => 4000,
@@ -408,10 +406,10 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'slideshow_controls_position' => 'after',
           'slideshow_field_collection_image' => 'field_fotografia',
           'slideshow_fx' => 'fade',
-          'slideshow_image_style' => '',
+          'slideshow_image_style' => 'large',
           'slideshow_link' => 'content',
           'slideshow_order' => '',
-          'slideshow_pager' => 'carousel',
+          'slideshow_pager' => 'number',
           'slideshow_pager_image_style' => 'thumbnail',
           'slideshow_pager_position' => 'after',
           'slideshow_pause' => 0,
