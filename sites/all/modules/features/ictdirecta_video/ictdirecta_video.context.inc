@@ -25,21 +25,20 @@ function ictdirecta_video_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'videogaleria' => 'videogaleria',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-galeria_video-block' => array(
+        'views-videogaleria-block' => array(
           'module' => 'views',
-          'delta' => 'galeria_video-block',
+          'delta' => 'videogaleria-block',
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-galeria_video-block_1' => array(
-          'module' => 'views',
-          'delta' => 'galeria_video-block_1',
-          'region' => 'content',
-          'weight' => '-9',
+          'weight' => '10',
         ),
       ),
     ),
