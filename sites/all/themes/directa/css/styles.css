@@ -794,53 +794,98 @@ table {
   /* line 172, ../sass/layouts/_responsive.scss */
   #header #logo {
     float: left;
-    width: 21.73913%;
+    width: 26.08696%;
     margin-left: 0%;
-    margin-right: -21.73913%;
+    margin-right: -26.08696%;
   }
   /* line 175, ../sass/layouts/_responsive.scss */
-  #header #site-name {
-    display: none;
-  }
-  /* line 178, ../sass/layouts/_responsive.scss */
   #header #name-and-slogan {
     display: none;
   }
-  /* line 182, ../sass/layouts/_responsive.scss */
-  #header #block-user-login,
+  /* line 178, ../sass/layouts/_responsive.scss */
   #header #secondary-menu {
     float: left;
-    width: 13.04348%;
-    margin-left: 21.73913%;
-    margin-right: -34.78261%;
+    width: 8.69565%;
+    margin-left: 52.17391%;
+    margin-right: -60.86957%;
   }
-  /* line 185, ../sass/layouts/_responsive.scss */
+  /* line 181, ../sass/layouts/_responsive.scss */
   #header .region-header {
     display: inline;
   }
-  /* line 187, ../sass/layouts/_responsive.scss */
+  /* line 183, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-block-4 {
+    float: left;
+    width: 13.04348%;
+    margin-left: 26.08696%;
+    margin-right: -39.13043%;
+  }
+  /* line 186, ../sass/layouts/_responsive.scss */
   #header .region-header #block-block-2 {
     float: left;
     width: 13.04348%;
     margin-left: 39.13043%;
     margin-right: -52.17391%;
   }
-  /* line 191, ../sass/layouts/_responsive.scss */
-  #header .region-header #block-block-1 {
+  /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #header .region-header #block-block-2:before, #header .region-header #block-block-2:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #header .region-header #block-block-2:after {
+    clear: both;
+  }
+  /* line 190, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-block-2 .tw {
     float: left;
-    width: 13.04348%;
-    margin-left: 56.52174%;
-    margin-right: -69.56522%;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 193, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-block-2 .fb {
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 196, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-block-2 .vi {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
   }
   /* line 200, ../sass/layouts/_responsive.scss */
   #header .region-header #block-views-exp-hemeroteca-page-1 {
     float: left;
-    width: 26.08696%;
+    width: 21.73913%;
     margin-left: 73.91304%;
-    margin-right: -100%;
+    margin-right: -95.65217%;
+  }
+  /* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #header .region-header #block-views-exp-hemeroteca-page-1:before, #header .region-header #block-views-exp-hemeroteca-page-1:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #header .region-header #block-views-exp-hemeroteca-page-1:after {
+    clear: both;
+  }
+  /* line 204, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-views-exp-hemeroteca-page-1 .views-submit-button {
+    display: none;
+  }
+  /* line 208, ../sass/layouts/_responsive.scss */
+  #header .region-header #block-block-1 {
+    float: left;
+    width: 13.04348%;
+    margin-left: 60.86957%;
+    margin-right: -73.91304%;
   }
 
-  /* line 206, ../sass/layouts/_responsive.scss */
+  /* line 214, ../sass/layouts/_responsive.scss */
   #navigation .region-navigation {
     clear: both;
   }
@@ -853,21 +898,21 @@ table {
   #navigation .region-navigation:after {
     clear: both;
   }
-  /* line 211, ../sass/layouts/_responsive.scss */
+  /* line 219, ../sass/layouts/_responsive.scss */
   #navigation .region-navigation #block-nice-menus-3 {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 214, ../sass/layouts/_responsive.scss */
+  /* line 222, ../sass/layouts/_responsive.scss */
   #navigation .region-navigation #block-nice-menus-2 {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 217, ../sass/layouts/_responsive.scss */
+  /* line 225, ../sass/layouts/_responsive.scss */
   #navigation .region-navigation #block-nice-menus-1 {
     float: left;
     width: 33.33333%;
@@ -875,7 +920,7 @@ table {
     margin-right: -100%;
   }
 
-  /* line 222, ../sass/layouts/_responsive.scss */
+  /* line 230, ../sass/layouts/_responsive.scss */
   #destacat {
     clear: both;
   }
@@ -888,14 +933,14 @@ table {
   #destacat:after {
     clear: both;
   }
-  /* line 227, ../sass/layouts/_responsive.scss */
+  /* line 235, ../sass/layouts/_responsive.scss */
   #destacat .field-fotografies {
     float: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
   }
-  /* line 233, ../sass/layouts/_responsive.scss */
+  /* line 241, ../sass/layouts/_responsive.scss */
   #destacat .pretitular,
   #destacat .views-field-title,
   #destacat .field-body,
@@ -908,7 +953,7 @@ table {
     margin-left: -50%;
     clear: right;
   }
-  /* line 239, ../sass/layouts/_responsive.scss */
+  /* line 247, ../sass/layouts/_responsive.scss */
   #destacat .attachment-after {
     clear: both;
     float: left;
@@ -925,14 +970,14 @@ table {
   #destacat .field-contingut-relacionat:after {
     clear: both;
   }
-  /* line 247, ../sass/layouts/_responsive.scss */
+  /* line 255, ../sass/layouts/_responsive.scss */
   #destacat .field-contingut-relacionat .field-fotografies {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
-  /* line 252, ../sass/layouts/_responsive.scss */
+  /* line 260, ../sass/layouts/_responsive.scss */
   #destacat .field-contingut-relacionat a.autor,
   #destacat .field-contingut-relacionat .date-display-single,
   #destacat .field-contingut-relacionat .field-body {
@@ -942,7 +987,7 @@ table {
     margin-right: -100%;
   }
 
-  /* line 259, ../sass/layouts/_responsive.scss */
+  /* line 267, ../sass/layouts/_responsive.scss */
   .region-help {
     clear: left;
     display: none;
@@ -951,19 +996,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 269, ../sass/layouts/_responsive.scss */
+  /* line 277, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 271, ../sass/layouts/_responsive.scss */
+  /* line 279, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 180%;
     margin-left: 0%;
     margin-right: -180%;
   }
-  /* line 276, ../sass/layouts/_responsive.scss */
+  /* line 284, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 160%;
@@ -974,19 +1019,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 284, ../sass/layouts/_responsive.scss */
+  /* line 292, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 286, ../sass/layouts/_responsive.scss */
+  /* line 294, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 180%;
     margin-left: 0%;
     margin-right: -180%;
   }
-  /* line 291, ../sass/layouts/_responsive.scss */
+  /* line 299, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 120%;
@@ -997,7 +1042,7 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-  /* line 299, ../sass/layouts/_responsive.scss */
+  /* line 307, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     clear: left;
     /* Span 3 columns, starting in 2nd column from left. */
@@ -1013,21 +1058,21 @@ table {
   .two-sidebars:after {
     clear: both;
   }
-  /* line 303, ../sass/layouts/_responsive.scss */
+  /* line 311, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 180%;
     margin-left: 0%;
     margin-right: -180%;
   }
-  /* line 308, ../sass/layouts/_responsive.scss */
+  /* line 316, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 160%;
     margin-left: 180%;
     margin-right: -340%;
   }
-  /* line 313, ../sass/layouts/_responsive.scss */
+  /* line 321, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 120%;
