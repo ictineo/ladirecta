@@ -325,7 +325,7 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'seccions_web',
+          'vocabulary' => 'seccions_paper',
           'parent' => 0,
         ),
       ),
