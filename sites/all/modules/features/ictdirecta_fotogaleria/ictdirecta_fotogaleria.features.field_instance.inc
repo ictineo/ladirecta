@@ -25,10 +25,9 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'token' => array(
         'label' => 'hidden',
@@ -159,10 +158,9 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'token' => array(
         'label' => 'hidden',
@@ -386,7 +384,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
-          'slideshow_caption' => 'field_autoria',
+          'slideshow_caption' => '',
           'slideshow_caption_link' => 'content',
           'slideshow_carousel_circular' => 0,
           'slideshow_carousel_follow' => 0,
