@@ -135,7 +135,7 @@ function ictdirecta_fotogaleria_field_default_field_bases() {
   // Exported field_base: 'field_fotografies'
   $field_bases['field_fotografies'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fotografies',

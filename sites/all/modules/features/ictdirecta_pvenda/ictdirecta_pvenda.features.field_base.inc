@@ -36,7 +36,7 @@ function ictdirecta_pvenda_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'text_with_summary',

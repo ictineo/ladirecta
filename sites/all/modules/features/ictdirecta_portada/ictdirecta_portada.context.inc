@@ -14,7 +14,7 @@ function ictdirecta_portada_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'portada_columnaderecha';
-  $context->description = '';
+  $context->description = 'Colocación columna derecha en first side bar';
   $context->tag = 'portada';
   $context->conditions = array(
     'path' => array(
@@ -26,9 +26,9 @@ function ictdirecta_portada_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-portada_columnaderecha-block_1' => array(
+        'views-52ac42fa3c76d4864389298401da2087' => array(
           'module' => 'views',
-          'delta' => 'portada_columnaderecha-block_1',
+          'delta' => '52ac42fa3c76d4864389298401da2087',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
@@ -39,6 +39,7 @@ function ictdirecta_portada_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Colocación columna derecha en first side bar');
   t('portada');
   $export['portada_columnaderecha'] = $context;
 
@@ -94,7 +95,7 @@ function ictdirecta_portada_context_default_contexts() {
         'views-c721e0c0c017aee43ae86693d23b264b' => array(
           'module' => 'views',
           'delta' => 'c721e0c0c017aee43ae86693d23b264b',
-          'region' => 'highlighted',
+          'region' => 'destacat',
           'weight' => '-10',
         ),
       ),

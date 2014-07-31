@@ -65,10 +65,6 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'directa-portada';
   $translatables['directa_portada'] = array(
     t('Master'),
     t('Directa_Portada'),
@@ -78,8 +74,6 @@ function ictdirecta_portada_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('Page'),
-    t('more'),
   );
   $export['directa_portada'] = $view;
 
@@ -512,12 +506,26 @@ function ictdirecta_portada_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: destacado_portada */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'flag_destacado3col';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'destacado_portada';
+  /* Relationship: Contingut: Continguts relacionats (field_continguts_relacionats) */
+  $handler->display->display_options['relationships']['field_continguts_relacionats_value']['id'] = 'field_continguts_relacionats_value';
+  $handler->display->display_options['relationships']['field_continguts_relacionats_value']['table'] = 'field_data_field_continguts_relacionats';
+  $handler->display->display_options['relationships']['field_continguts_relacionats_value']['field'] = 'field_continguts_relacionats_value';
+  $handler->display->display_options['relationships']['field_continguts_relacionats_value']['required'] = TRUE;
+  $handler->display->display_options['relationships']['field_continguts_relacionats_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contingut: Secció */
   $handler->display->display_options['fields']['field_seccio']['id'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['table'] = 'field_data_field_seccio';
   $handler->display->display_options['fields']['field_seccio']['field'] = 'field_seccio';
   $handler->display->display_options['fields']['field_seccio']['label'] = '';
+  $handler->display->display_options['fields']['field_seccio']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_seccio']['element_type'] = '0';
   $handler->display->display_options['fields']['field_seccio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_seccio']['element_wrapper_type'] = '0';
@@ -528,6 +536,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['table'] = 'field_data_field_autor';
   $handler->display->display_options['fields']['field_autor']['field'] = 'field_autor';
   $handler->display->display_options['fields']['field_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_autor']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_autor']['element_type'] = '0';
   $handler->display->display_options['fields']['field_autor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['element_wrapper_type'] = '0';
@@ -539,6 +548,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
   $handler->display->display_options['fields']['field_data']['field'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['label'] = '';
+  $handler->display->display_options['fields']['field_data']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_data']['element_type'] = '0';
   $handler->display->display_options['fields']['field_data']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_data']['element_wrapper_type'] = '0';
@@ -551,21 +561,26 @@ function ictdirecta_portada_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Fotografia_portada */
-  $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
-  $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'field_data_field_fotografia_portada';
-  $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
-  $handler->display->display_options['fields']['field_fotografia_portada']['label'] = '';
-  $handler->display->display_options['fields']['field_fotografia_portada']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_fotografia_portada']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_fotografia_portada']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_fotografia_portada']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_fotografia_portada']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_fotografia_portada']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => '',
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="pretitular">[field_seccio][field_autor][field_data]</div> ';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Contingut: Fotografia portada */
+  $handler->display->display_options['fields']['field_fotografies']['id'] = 'field_fotografies';
+  $handler->display->display_options['fields']['field_fotografies']['table'] = 'field_data_field_fotografies';
+  $handler->display->display_options['fields']['field_fotografies']['field'] = 'field_fotografies';
+  $handler->display->display_options['fields']['field_fotografies']['label'] = '';
+  $handler->display->display_options['fields']['field_fotografies']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_fotografies']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_fotografies']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_fotografies']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_fotografies']['settings'] = array(
+    'view_mode' => 'full',
   );
-  $handler->display->display_options['fields']['field_fotografia_portada']['field_api_classes'] = TRUE;
+  $handler->display->display_options['fields']['field_fotografies']['field_api_classes'] = TRUE;
   /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -587,28 +602,47 @@ function ictdirecta_portada_views_default_views() {
     'trim_length' => '600',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Continguts relacionats */
-  $handler->display->display_options['fields']['field_continguts_relacionats']['id'] = 'field_continguts_relacionats';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['table'] = 'field_data_field_continguts_relacionats';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['field'] = 'field_continguts_relacionats';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['label'] = '';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_continguts_relacionats']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_continguts_relacionats']['settings'] = array(
-    'view_mode' => 'token',
+  /* Field: Field collection item: Continguts relacionats */
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['id'] = 'field_continguts_relacionats_ref';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['table'] = 'field_data_field_continguts_relacionats_ref';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['field'] = 'field_continguts_relacionats_ref';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['relationship'] = 'field_continguts_relacionats_value';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['label'] = '';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['settings'] = array(
+    'link' => 1,
   );
-  $handler->display->display_options['fields']['field_continguts_relacionats']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_continguts_relacionats']['field_api_classes'] = TRUE;
+  $handler->display->display_options['fields']['field_continguts_relacionats_ref']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contingut: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contingut: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'noticia' => 'noticia',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: Attachment 2 */
   $handler = $view->new_display('attachment', 'Attachment 2', 'attachment_2');
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -619,6 +653,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'flag_destacado3col';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'destacado_portada';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contingut: Contingut relacionat */
@@ -646,6 +681,23 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['arguments']['entity_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['entity_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['entity_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contingut: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contingut: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'noticia' => 'noticia',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['displays'] = array(
     'block' => 'block',
     'default' => 0,
@@ -663,6 +715,8 @@ function ictdirecta_portada_views_default_views() {
     t('flag_destacado3col'),
     t('Block'),
     t('more'),
+    t('field collection item from field_continguts_relacionats'),
+    t('<div class="pretitular">[field_seccio][field_autor][field_data]</div> '),
     t('Attachment 2'),
     t('All'),
   );

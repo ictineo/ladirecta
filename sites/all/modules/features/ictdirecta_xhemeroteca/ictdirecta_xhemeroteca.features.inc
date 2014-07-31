@@ -63,7 +63,7 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
     "name" : "Default node index",
     "machine_name" : "default_node_index",
     "description" : "An automatically created search index for indexing node data. Might be configured to specific needs.",
-    "server" : null,
+    "server" : "solr_server",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
@@ -125,8 +125,8 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
         "created" : { "type" : "date" },
         "field_data" : { "type" : "date" },
         "field_etiquetes" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_seccio" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_territori" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_seccio" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_territori" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_tipus_de_servei" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "promote" : { "type" : "boolean" },
         "search_api_language" : { "type" : "string" },
@@ -135,7 +135,7 @@ function ictdirecta_xhemeroteca_default_search_api_index() {
         "type" : { "type" : "string" }
       }
     },
-    "enabled" : "0",
+    "enabled" : "1",
     "read_only" : "0",
     "rdf_mapping" : []
   }');

@@ -1,0 +1,125 @@
+
+@import "publico";
+@import "graphic";
+
+/*COLORS*/
+$grisfosc:#5E5E5E;
+$grisclar:#777;
+$grismitja:#767676;
+$vermell: #C13432;
+$blanc: #FFFFFF;
+
+
+/*Transversals*/
+@mixin enllac-net {
+  text-decoration:none;
+}
+
+
+/*Menu*/
+
+@mixin tit-menu {
+  font-family:'graphik_regular_regular';
+  font-size:16px;
+  color:$grisclar;
+  @include enllac-net ;
+  &:hover {
+    font-family:'graphiksemibold';
+    color:$vermell;
+  }
+}
+
+@mixin territori {
+  font-family:'graphiksemibold';
+  font-size:19px;
+  color:$blanc;
+}
+
+@mixin caixa-grisfosca {
+  background-color:$grisfosc;
+}
+
+@mixin caixa-grisclar {
+  background-color:$grisclar;
+  text-align:center;
+  font-family:'graphikmedium';
+  font-color:$grisfosc;
+}
+
+/*ESTILS DE TEXT*/
+
+@mixin seccio {
+  font-family:'graphiksuper';
+  color:$blanc;
+  font-size:19px;
+  @include enllac-net;
+}
+
+@mixin autoria {
+  color:$grisclar;
+  text-transform:underline;
+}
+@mixin data {
+  color: $grisclar;
+}
+@mixin titular-3col {
+  font-family:'graphiksemibold';
+  font-size:40px;
+  line-height:46px;
+  color:$grisfosc;
+  text-align:left;
+}
+@mixin entradilla-3col {
+  font-family:'publico_textroman';
+  font-size:22px;
+  line-height:30px;
+  color:$grisfosc;
+}
+
+@mixin conts-rel {
+  font-family:'publico_textroman';
+  font-size:17px;
+  color:$grisfosc;
+  text-decoration:underlined;
+}
+
+@mixin titular-not-rel-dest {
+  font-family:'graphiksemibold';
+  font-size:24px;
+  line-height:30px;
+  color:$grisfosc;
+}
+@mixin entradilla-not-rel-dest {
+  font-family:'publico_textsemibold';
+  font-size:21px;
+  line-height:26px;
+  color:$grismitja;
+}
+
+@mixin titular-not {
+  font-family:'graphiksemibold';
+  font-size:36px;
+  line-height:40px;
+  color:$grisfosc;
+  font-weight:normal;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

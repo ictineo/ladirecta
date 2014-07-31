@@ -32,7 +32,7 @@ function ictdirecta_cdnot_field_default_field_bases() {
       ),
       'allowed_values_function' => '',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_boolean',

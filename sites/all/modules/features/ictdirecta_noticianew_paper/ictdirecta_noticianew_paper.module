@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_noticianew_paper feature.
+ */
+
+include_once 'ictdirecta_noticianew_paper.features.inc';

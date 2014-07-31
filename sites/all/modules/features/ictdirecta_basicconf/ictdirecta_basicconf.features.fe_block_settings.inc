@@ -72,7 +72,7 @@ function ictdirecta_basicconf_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Enllaços a XXSS',
+    'title' => '<none>',
     'visibility' => 0,
   );
 

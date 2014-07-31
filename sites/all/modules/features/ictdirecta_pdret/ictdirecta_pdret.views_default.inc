@@ -42,7 +42,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Field: Content: Title */
+  /* Field: Contingut: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -54,7 +54,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contingut: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -81,7 +81,7 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['filters']['field_columna_value']['table'] = 'field_data_field_columna';
   $handler->display->display_options['filters']['field_columna_value']['field'] = 'field_columna_value';
   $handler->display->display_options['filters']['field_columna_value']['value'] = array(
-    'Esquerra' => 'Esquerra',
+    'Dreta' => 'Dreta',
   );
   $handler->display->display_options['filters']['field_columna_value']['group'] = 1;
   /* Filter criterion: Contingut: Published */
@@ -96,6 +96,8 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
   $handler->display->display_options['filters']['type_1']['value'] = array(
     'actualitat' => 'actualitat',
+    'fotogaleria' => 'fotogaleria',
+    'video' => 'video',
   );
   $handler->display->display_options['filters']['type_1']['group'] = 1;
   /* Filter criterion: Contingut: Promoted to front page */
@@ -205,6 +207,61 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['block_description'] = 'Admin_Pder-noticies-video-fotogal';
+
+  /* Display: Block 2 */
+  $handler = $view->new_display('block', 'Block 2', 'block_2');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contingut: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contingut: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'video' => 'video',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Contingut: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
+  $handler->display->display_options['filters']['promote']['group'] = 1;
+  /* Filter criterion: Contingut: Columna (field_columna) */
+  $handler->display->display_options['filters']['field_columna_value']['id'] = 'field_columna_value';
+  $handler->display->display_options['filters']['field_columna_value']['table'] = 'field_data_field_columna';
+  $handler->display->display_options['filters']['field_columna_value']['field'] = 'field_columna_value';
+  $handler->display->display_options['filters']['field_columna_value']['value'] = array(
+    'Dreta' => 'Dreta',
+  );
+  $handler->display->display_options['filters']['field_columna_value']['group'] = 1;
+  /* Filter criterion: Contingut: Published */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['group'] = 1;
+  /* Filter criterion: Contingut: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'actualitat' => 'actualitat',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 1;
+  /* Filter criterion: Contingut: Promoted to front page */
+  $handler->display->display_options['filters']['promote_1']['id'] = 'promote_1';
+  $handler->display->display_options['filters']['promote_1']['table'] = 'node';
+  $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote_1']['value'] = '1';
+  $handler->display->display_options['filters']['promote_1']['group'] = 2;
   $translatables['portada_columnaderecha'] = array(
     t('Master'),
     t('Portada-ColumnaDerecha'),
@@ -218,6 +275,13 @@ function ictdirecta_pdret_views_default_views() {
     t('Page'),
     t('more'),
     t('Block'),
+    t('Admin_Portada-ColumnaDerecha'),
+    t('Promoted to front page'),
+    t('Updated date'),
+    t('Author uid'),
+    t('Type'),
+    t('Admin_Pder-noticies-video-fotogal'),
+    t('Block 2'),
   );
   $export['portada_columnaderecha'] = $view;
 
