@@ -11,7 +11,7 @@
 // We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
 // between columns (applied as 10px of left/right padding on each column).
 $zen-column-count:  1;
-$zen-gutter-width:  4px;
+$zen-gutter-width:  20px;
 
 // If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
 //$zen-box-sizing: content-box;
@@ -203,23 +203,61 @@ $zen-auto-include-item-base: false;
     }
   }
   #navigation {
-    @include zen-clear();
     .region-navigation {
+      @include zen-clear(both);
+      $zen-column-count:3;
+      $zen-gutter-width:10px;
+      @include zen-grid-container();
       #block-nice-menus-3 {
-        @include zen-grid-item(6,1);
+        @include zen-grid-item(1,1);
       }
       #block-nice-menus-2 {
-        @include zen-grid-item(6,7);
+        @include zen-grid-item(1,2);
       }
       #block-nice-menus-1 {
-        @include zen-grid-item(6,14);
+        @include zen-grid-item(1,3);
       }
     }
   }
   #destacat {
-    @include zen-clear();
+    @include zen-clear(both);
+    $zen-column-count:2;
+    $zen-gutter-width:12px;
+    @include zen-grid-container();
+    .field-fotografies {
+      @include zen-grid-item(1,1);
+    }
+    .pretitular,
+    .views-field-title,
+    .field-body,
+    .field-continguts-relacionats-ref {
+      @include zen-clear(right);
+      @include zen-clear(right);
+      @include zen-grid-item(1,1,right);
+      @include zen-clear(right);
+    }
+    .attachment-after {
+      @include zen-clear(both);
+      @include zen-grid-item(2,1);
+    }
+    .field-contingut-relacionat {
+      $zen-column-count:5;
+      $zen-gutter-width:5px;
+      @include zen-grid-container();
+      .field-fotografies {
+        @include zen-grid-item(1,1);
+      }
+      a.autor,
+      .date-display-single,
+      .field-body {
+        @include zen-grid-item(4,2);
+      }
+    }
   }
+  
+    
   .region-help {
+    @include zen-clear();
     display:none;
   }
 
@@ -259,7 +297,8 @@ $zen-auto-include-item-base: false;
    * The layout when there are two sidebars.
    */
   .two-sidebars {
-    
+     @include zen-clear();
+     @include zen-grid-container();
     /* Span 3 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(9, 1);
