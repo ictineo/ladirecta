@@ -169,7 +169,6 @@ $zen-auto-include-item-base: false;
   }
   #header {
     @include zen-grid-container();
-    
     #logo {
       @include zen-grid-item(5,1);
     }
