@@ -25,6 +25,11 @@ function ictdirecta_fotogaleria_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'fotogaleria' => 'fotogaleria',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
