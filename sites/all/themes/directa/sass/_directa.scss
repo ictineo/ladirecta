@@ -1,0 +1,99 @@
+/**Fulla d'estils de la Directa**/
+
+@import "directamixins";
+
+a {
+  @include enllac-net;
+}
+
+
+
+/*MENU*/
+
+#navigation {
+}
+
+
+ul.nice-menu a {
+  @include tit-menu;
+}
+.mark {
+  color:none;
+}
+
+
+/*ESTILS DE TEXT*/
+
+.field-seccio {
+  background-color:$grisfosc;
+  a {
+    @include seccio;
+  }
+}
+
+a.autor {
+  @include autoria;
+}
+span.date-display-single {
+  @include data;
+}
+
+/*DESTACAT 3 COLUMNES*/
+.view-portada-destacadotodascolumnas.view-display-id-block {
+  .field-fotografies {
+  }
+  .field-seccio {
+    background-color:$grisfosc;
+    a {
+      @include seccio;
+    }
+  }
+  a.autor {
+    @include autoria;
+  }
+  span.date-display-single {
+    @include data;
+  }
+  .views-field-title a {
+    @include titular-3col;
+  }
+  .field-body {
+    @include entradilla-3col;
+  }
+  .field-continguts-relacionats-ref {
+    background-color:$grisfosc;
+  }
+ 
+
+  .pretitular,
+  .views-field-title a,
+  .field-body,
+  .field-continguts-relacionats-ref {
+  }
+  .pretitular {
+    display:block-inline;
+  }
+}
+.view-portada-destacadotodascolumnas {
+  .view-display-id-attachment_2 {
+      td.col-1 {
+      }
+      td.col-2 {
+      }
+      td.col-3 {
+      }
+  }
+}
+
+
+
+
+/*COLUMNA NOTICIES (ESQUERRA)*/
+.view-portada-columnaizquierda.view-display-id-block_1 {
+  h2.node-title a {
+    @include titular-not;
+  }
+}
+
+
+
