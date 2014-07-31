@@ -164,15 +164,12 @@ $zen-auto-include-item-base: false;
 
 
   $zen-column-count: 23;
-<<<<<<< HEAD
-  #header {
-=======
   #page {
     @include zen-grid-background();
   }
   #header {
     @include zen-grid-container();
->>>>>>> fase3
+    
     #logo {
       @include zen-grid-item(5,1);
     }
