@@ -1,0 +1,9 @@
+name = ictdirecta_header
+core = 7.x
+package = Features
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+features[context][] = caixa_login
+features[ctools][] = context:context:3
+features[features_api][] = api:2

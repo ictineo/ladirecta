@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ictdirecta_header feature.
+ */
+
+include_once 'ictdirecta_header.features.inc';
