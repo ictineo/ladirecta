@@ -3,16 +3,65 @@
 @import "graphic";
 
 /*COLORS*/
-$grisfosc:#5E5E5E;
-$grisclar:#777;
-$grismitja:#767676;
-$vermell: #C13432;
+$gris2:#767676;
+$gris3:#777; 
+$gris4:#9A9A9A;
+$gris5:#939393;
+$gris6:#D3D3D3; /*fil d'ariadna*/
+$gris7:#5E5E5E; /*inicia sessio*/
+$vermell:#C13432;
 $blanc: #FFFFFF;
+$negre:#030303;
+
+
 
 
 /*Transversals*/
 @mixin enllac-net {
   text-decoration:none;
+}
+@mixin sprite {
+  background-image:url('../images/sprites.png');
+  background-repeat:no-repeat;
+}
+
+
+
+/*Botones*/
+@mixin bseccio {
+  a {
+    font-family:'graphikmedium';
+    font-size:16px;
+    color:$blanc;
+    background-color:$gris7;
+  }
+  text-align:center;
+  padding:3px;
+}
+@mixin bsessio {
+  a {
+    font-family:'graphikmedium';
+    font-size:17px;
+    color:$gris7;
+  }
+  background-color:$gris6;
+  text-align:center;
+  padding:3px;
+}
+@mixin bsubs {
+  a {
+    font-family:'publico_textroman';
+    font-size:24px;
+    color:$blanc;
+  }
+  background-color:$vermell;
+  text-align:center;
+  padding:3px;
+}
+@mixin bform {
+  font-family:'graphikmedium';
+  font-size:21px;
+  font-color:$gris4;
 }
 
 
@@ -21,11 +70,15 @@ $blanc: #FFFFFF;
 @mixin tit-menu {
   font-family:'graphik_regular_regular';
   font-size:16px;
-  color:$grisclar;
+  color:$gris3;
+  text-transform:uppercase;
+  line-height:26px;
   @include enllac-net ;
   &:hover {
     font-family:'graphiksemibold';
     color:$vermell;
+    font-size:16px;
+    line-height:26px;
   }
 }
 
@@ -35,16 +88,32 @@ $blanc: #FFFFFF;
   color:$blanc;
 }
 
-@mixin caixa-grisfosca {
-  background-color:$grisfosc;
+@mixin breadcrumb {
+  font-family:'graphikmedium';
+  font-size:17px;
+  font-color:$gris6;
+  .a {
+    text-decoration:underline;
+  }
+}
+/*shadows*/
+
+@mixin header-shadow {
+  -webkit-box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
+  -moz-box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
+  box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
 }
 
-@mixin caixa-grisclar {
-  background-color:$grisclar;
-  text-align:center;
-  font-family:'graphikmedium';
-  font-color:$grisfosc;
+
+@mixin menu-shadow {
+ -webkit-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+ -moz-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+  box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1); 
 }
+@mixin line-gradient {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
 
 /*ESTILS DE TEXT*/
 
@@ -56,51 +125,54 @@ $blanc: #FFFFFF;
 }
 
 @mixin autoria {
-  color:$grisclar;
-  text-transform:underline;
+  color:$gris3;
+  text-transform:uppercase;
+  padding-left:5px;
+  padding-right:5px;
+  a {
+    text-transform:underline;
+  }
 }
 @mixin data {
-  color: $grisclar;
+  color: $gris3;
+  a {
+    text-transform:underline;
+  }
 }
+/*Destacat a 3 columnes*/
 @mixin titular-3col {
   font-family:'graphiksemibold';
   font-size:40px;
   line-height:46px;
-  color:$grisfosc;
+  color:$gris7;
   text-align:left;
 }
 @mixin entradilla-3col {
   font-family:'publico_textroman';
   font-size:22px;
   line-height:30px;
-  color:$grisfosc;
+  color:$gris7;
 }
 
-@mixin conts-rel {
-  font-family:'publico_textroman';
-  font-size:17px;
-  color:$grisfosc;
-  text-decoration:underlined;
-}
 
 @mixin titular-not-rel-dest {
   font-family:'graphiksemibold';
   font-size:24px;
   line-height:30px;
-  color:$grisfosc;
+  color:$gris7;
 }
 @mixin entradilla-not-rel-dest {
   font-family:'publico_textsemibold';
   font-size:21px;
   line-height:26px;
-  color:$grismitja;
+  color:$gris2;
 }
 
 @mixin titular-not {
   font-family:'graphiksemibold';
   font-size:36px;
   line-height:40px;
-  color:$grisfosc;
+  color:$gris7;
   font-weight:normal;
 }
  

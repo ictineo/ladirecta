@@ -165,12 +165,12 @@ $zen-auto-include-item-base: false;
 
   $zen-column-count: 23;
   #page {
-    @include zen-grid-background();
+  /*@include zen-grid-background();*/
   }
   #header {
     @include zen-grid-container();
     #logo{
-      @include zen-grid-item(6,1);
+      @include zen-grid-item(7,1);
     }
     #name-and-slogan {
       display:none;
@@ -181,10 +181,10 @@ $zen-auto-include-item-base: false;
     .region-header {
       display:inline;
       #block-block-4 {
-        @include zen-grid-item(3,7);
+        @include zen-grid-item(2,8);
       }
       #block-block-2 {
-        @include zen-grid-item(3,10);
+        @include zen-grid-item(2,10);
         $zen-column-count:3;
         @include zen-grid-container();
         .tw {
@@ -204,6 +204,7 @@ $zen-auto-include-item-base: false;
         .views-submit-button {
           display:none;
         }
+          
       }
       #block-block-1 {
         @include zen-grid-item(3,15);

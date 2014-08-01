@@ -6,11 +6,81 @@ a {
   @include enllac-net;
 }
 
+/*AMAGATS*/
+.header__logo-image {
+  display:none;
+}
 
+
+
+
+/*HEADER*/
+.html #header #logo {
+  @include sprite;
+  position:absolute;
+  width:134px; 
+  height:40px; 
+}
+#header {
+  margin-top:10px;
+  padding-top:10px;
+  @include header-shadow;
+}
+
+#block-user-login {
+  display:none;
+}
+
+#block-block-4 {
+  @include bseccio;
+  text-align:right;
+  a {
+      @include sprite;
+      display:block;
+      content:"";
+      background-position:-129px 4px;
+      background-image-size:19px 12px;
+  }
+}
+
+#block-block-2 {
+  
+  .fb,
+  .tw,
+  .vi {
+    display:inline;
+    @include sprite;
+    padding-right:5px;
+    width:21px;
+    height:29px;
+    background-position:-161px 8px;
+    display:block;
+    content:"";
+    img {
+      display:none;
+    }
+  }
+}
+  html.js input.form-autocomplete {
+    @include sprite;
+  } 
+
+
+
+#secondary-menu {
+  @include bsessio;
+}
+#block-block-1 {
+  @include bsubs;
+}
 
 /*MENU*/
+.front #main-menu {
+  display:none;
+}
 
 #navigation {
+  @include menu-shadow;
 }
 
 
@@ -25,7 +95,7 @@ ul.nice-menu a {
 /*ESTILS DE TEXT*/
 
 .field-seccio {
-  background-color:$grisfosc;
+  background-color:$gris7;
   a {
     @include seccio;
   }
@@ -43,7 +113,7 @@ span.date-display-single {
   .field-fotografies {
   }
   .field-seccio {
-    background-color:$grisfosc;
+    background-color:$gris7;
     a {
       @include seccio;
     }
@@ -61,7 +131,7 @@ span.date-display-single {
     @include entradilla-3col;
   }
   .field-continguts-relacionats-ref {
-    background-color:$grisfosc;
+    background-color:$gris7;
   }
  
 
