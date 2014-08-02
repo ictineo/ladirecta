@@ -15,11 +15,19 @@ a {
 
 
 /*HEADER*/
+.region-header {
+  margin-bottom:-20px;
+  padding-top:15px;
+}
+
+
 .html #header #logo {
-  @include sprite;
-  position:absolute;
-  width:134px; 
-  height:40px; 
+ background-image:url('../images/logo.png');
+ background-repeat:no-repeat;
+ display:block;
+ content:"";
+ width:132px;
+ height:39px;
 }
 #header {
   margin-top:10px;
@@ -27,51 +35,71 @@ a {
   @include header-shadow;
 }
 
+
+
 #block-user-login {
   display:none;
 }
 
 #block-block-4 {
   @include bseccio;
-  text-align:right;
-  a {
-      @include sprite;
-      display:block;
-      content:"";
-      background-position:-129px 4px;
-      background-image-size:19px 12px;
-  }
+    background-image:url('../images/menu_arrow_down');
+    background-repeat:no-repeat;
+    background-position: 8px 8px;
+    height:auto;
+    background-color:$gris7;
+    text-align:right;
+    border-radius:5px;
 }
 
 #block-block-2 {
-  
-  .fb,
-  .tw,
+  border-left:1px solid $gris2;
+  border-right:1px solid $gris2;
+  .fb {
+    @include back;
+      background-image:url('../images/fb.png');
+  }
+  .tw {
+    @include back;
+    background-image:url('../images/tw.png');
+  }
   .vi {
-    display:inline;
-    @include sprite;
-    padding-right:5px;
-    width:21px;
-    height:29px;
-    background-position:-161px 8px;
-    display:block;
-    content:"";
-    img {
-      display:none;
-    }
+    @include back;
+    background-image:url('../images/vi.png');
   }
 }
   html.js input.form-autocomplete {
-    @include sprite;
-  } 
+    background-image:url('../images/vi.png');
+    background-repeat:no-repeat;
+    background-position:right;
+    display:block;
+    content:"";
+    border:1px solid $gris2;
+    height:25px;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+
 
 
 
 #secondary-menu {
   @include bsessio;
+  padding:0px;
+  background-color:#e5e5ee5;
+  @include back;
+  background-image:url('../images/arrow_down');
+  content:"";
+  display:block;
+  width:auto;
+  background-position:85px 11px;
+  border-radius:5px;
+  height:auto;
 }
 #block-block-1 {
   @include bsubs;
+  border-radius:5px;
 }
 
 /*MENU*/

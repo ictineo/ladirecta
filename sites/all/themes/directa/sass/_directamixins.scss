@@ -25,6 +25,14 @@ $negre:#030303;
   background-repeat:no-repeat;
 }
 
+@mixin back {
+  background-repeat:no-repeat;
+  display:block;
+  content:"";
+  width:20px;
+  height:20px;
+}
+
 
 
 /*Botones*/
@@ -34,9 +42,10 @@ $negre:#030303;
     font-size:16px;
     color:$blanc;
     background-color:$gris7;
+    font-weight:normal;
+    text-align:right;
+    padding-right:5px;
   }
-  text-align:center;
-  padding:3px;
 }
 @mixin bsessio {
   a {
@@ -99,19 +108,24 @@ $negre:#030303;
 /*shadows*/
 
 @mixin header-shadow {
-  -webkit-box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
-  -moz-box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
-  box-shadow: 0px 10px 11px 0px rgba(233,233,233,1);
+  -webkit-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
+  -moz-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
+  box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
 }
 
 
 @mixin menu-shadow {
- -webkit-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
- -moz-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
-  box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1); 
+ -webkit-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
+ -moz-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
+  box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1); 
 }
 @mixin line-gradient {
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+@mixin box-shadow {
+ -webkit-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+ -moz-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+  box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1); 
 }
 
 
