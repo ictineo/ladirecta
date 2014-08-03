@@ -155,9 +155,8 @@ $zen-auto-include-item-base: false;
  * Use 5 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
-
   $zen-column-count: 23;
-  $zen-gutter-width:10px;
+  $zen-gutter-width:20px;
   #header {
     @include zen-nested-container();
     #logo {
@@ -170,25 +169,30 @@ $zen-auto-include-item-base: false;
       @include zen-clear(none);
       @include zen-grid-item(17,1,right);
       $zen-column-count:18;
-      $zen-gutter-width:10px;
+      $zen-gutter-width:20px;
       @include zen-grid-container();
+      @include zen-grid-background();
       #block-block-4 {
-        @include zen-grid-container();
-        @include zen-grid-item(2,1);
+        @include zen-grid-item(2,2);
+      }
+      #block-block-5 {
+        @include zen-grid-item(3,6);
+      }
+      #block-block-1 {
+        @include zen-grid-item(4,9);
       }
       #block-views-exp-hemeroteca-page-1 {
         @include zen-grid-item(6,13);
         @include zen-nested-container();
-        @include zen-grid-background();
         #edit-search-api-views-fulltext-wrapper {
-          @include zen-grid-item(18,1,right);
+          @include zen-grid-item(17,1);
         }
         .views-submit-button {
           display:none;
         }
       }
       #block-block-2 {
-        @include zen-grid-item(2,5); /*asignando ancho del bloque xxss*/
+        @include zen-grid-item(2,4); /*asignando ancho del bloque xxss*/
         @include zen-nested-container(); /*indico que se subdivide, crea una graella igual a la heredada de 23*/
         .tw {
         @include zen-grid-item(7,2); /*distribuyo cada elemento tomando de referencia 23*/
@@ -200,11 +204,51 @@ $zen-auto-include-item-base: false;
         @include zen-grid-item(7,14);
         }
       }
-      #block-block-1 {
-        @include zen-grid-item(4,9);
+      #block-system-user-menu {
+        @include zen-grid-item (3,6);
       }
     }
   }
+
+
+  #navigation .region-navigation {
+    @include zen-clear(both);
+    $zen-column-count:6;
+    $zen-gutter-width:20px;
+    @include zen-grid-container();
+    @include zen-grid-background();
+    #block-nice-menus-3 {
+      @include zen-grid-item(2,1);
+      @include zen-nested-container();
+    }
+    #block-nice-menus-2 {
+      @include zen-grid-item(2,3);
+      @include zen-nested-container();
+    }
+    #block-nice-menus-1 {
+      @include zen-grid-item(2,5);
+      @include zen-nested-container();
+    }
+  }
+  
+  .block-nice-menus {
+    $zen-column-count:2;
+    $zen-gutter-width:20px;
+    @include zen-grid-container;
+    @include zen-grid-background();
+    li.odd {
+      @include zen-grid-container;
+      @include zen-grid-item(2,1);
+      @include zen-clear(left);
+    }
+    li.even {
+      @include zen-grid-item(2,3);
+    }
+  }
+
+
+
+
 
   /**
    * The layout when there is only one sidebar, the left one.

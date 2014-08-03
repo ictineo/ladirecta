@@ -38,7 +38,6 @@ a {
 
 
 #block-user-login {
-  display:none;
 }
 
 #block-block-4 {
@@ -83,19 +82,21 @@ a {
 
 
 
-
+#block-block-5,
 #secondary-menu {
   @include bsessio;
-  padding:0px;
-  background-color:#e5e5ee5;
-  @include back;
-  background-image:url('../images/arrow_down');
-  content:"";
-  display:block;
-  width:auto;
-  background-position:85px 11px;
-  border-radius:5px;
-  height:auto;
+  a {
+    padding: 0;
+    background-color:#e5e5ee5;
+    @include back;
+    background-image:url('../images/arrow_down');
+    content:"";
+    display:block;
+    width:auto;
+    background-position:85px 11px;
+    border-radius:5px;
+    height:auto;
+  }
 }
 #block-block-1 {
   @include bsubs;
@@ -109,12 +110,25 @@ a {
 
 #navigation {
   @include menu-shadow;
-}
 
 
 ul.nice-menu a {
   @include tit-menu;
 }
+ul.nice-menu li {
+  background-color: $blanc;
+  border: 0;
+  width:90%;
+}
+
+ul li.odd  {
+  border-left: 1px solid $gris7;
+  padding-left: 5px;
+  }
+}
+
+
+
 .mark {
   color:none;
 }

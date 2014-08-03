@@ -19,6 +19,7 @@ $negre:#030303;
 /*Transversals*/
 @mixin enllac-net {
   text-decoration:none;
+  padding: 0;
 }
 @mixin sprite {
   background-image:url('../images/sprites.png');
@@ -76,10 +77,12 @@ $negre:#030303;
 
 /*Menu*/
 
+
 @mixin tit-menu {
-  font-family:'graphik_regular_regular';
+  font-family:'graphik_regularregular';
+  font-weight: normal;
   font-size:16px;
-  color:$gris3;
+  color:$gris7;
   text-transform:uppercase;
   line-height:26px;
   @include enllac-net ;
