@@ -196,7 +196,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'rss' => array(
@@ -218,8 +218,8 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '11',
-            'visible' => TRUE,
+            'weight' => '12',
+            'visible' => FALSE,
           ),
           'token' => array(
             'weight' => '13',

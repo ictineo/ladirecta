@@ -188,10 +188,10 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 0,
@@ -245,10 +245,9 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'token' => array(
         'label' => 'above',
@@ -285,10 +284,9 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'token' => array(
         'label' => 'hidden',
@@ -329,14 +327,16 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'field_collection_table',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'empty' => TRUE,
+          'view_mode' => 'full',
         ),
-        'type' => 'field_collection_list',
+        'type' => 'field_collection_table_view',
         'weight' => 7,
       ),
       'teaser' => array(

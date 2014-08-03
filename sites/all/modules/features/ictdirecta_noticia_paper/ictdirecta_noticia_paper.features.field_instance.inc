@@ -301,9 +301,13 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
           'view_mode' => 'token',
         ),
-        'type' => 'field_collection_fields',
+        'type' => 'field_collection_view',
         'weight' => 10,
       ),
       'rss' => array(
@@ -500,11 +504,9 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
       'teaser' => array(

@@ -8,6 +8,7 @@ dependencies[] = entityreference
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_collection
+dependencies[] = field_collection_table
 dependencies[] = file
 dependencies[] = ictdirecta_cdnot
 dependencies[] = ictdirecta_cdserveis
