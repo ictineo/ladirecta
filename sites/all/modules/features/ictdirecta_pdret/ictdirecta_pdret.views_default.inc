@@ -580,6 +580,8 @@ function ictdirecta_pdret_views_default_views() {
 
   /* Display: Portada dreta */
   $handler = $view->new_display('block', 'Portada dreta', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Portada-ColumnaDreta';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['block_description'] = 'Portada dreta';
 
@@ -597,6 +599,30 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['block_description'] = 'Portada dreta seccions';
+
+  /* Display: Portada dreta territorial */
+  $handler = $view->new_display('block', 'Portada dreta territorial', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Portada-ColumnaDreta-territorial';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: portada_cdr */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_cdr';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Territori (field_territori) */
+  $handler->display->display_options['arguments']['field_territori_tid']['id'] = 'field_territori_tid';
+  $handler->display->display_options['arguments']['field_territori_tid']['table'] = 'field_data_field_territori';
+  $handler->display->display_options['arguments']['field_territori_tid']['field'] = 'field_territori_tid';
+  $handler->display->display_options['arguments']['field_territori_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_territori_tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_territori_tid']['default_argument_options']['index'] = '2';
+  $handler->display->display_options['arguments']['field_territori_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_territori_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_territori_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['block_description'] = 'Portada dreta territorial';
   $translatables['portada_columnadreta'] = array(
     t('Master'),
     t('Portada-ColumnaDreta-seccions'),
@@ -614,7 +640,10 @@ function ictdirecta_pdret_views_default_views() {
     t('Nid'),
     t('Content'),
     t('Portada dreta'),
+    t('Portada-ColumnaDreta'),
     t('Portada dreta seccions'),
+    t('Portada dreta territorial'),
+    t('Portada-ColumnaDreta-territorial'),
   );
   $export['portada_columnadreta'] = $view;
 

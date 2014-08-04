@@ -28,8 +28,9 @@ function ictdirecta_video_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
   /* Field: Content: Title */
@@ -157,6 +158,10 @@ function ictdirecta_video_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Page'),
+    t('Videos'),
+    t('Altres Fotogalerias'),
+    t('Altres videogalerias'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -164,10 +169,6 @@ function ictdirecta_video_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
-    t('Page'),
-    t('Videos'),
-    t('Altres Fotogalerias'),
-    t('Altres videogalerias'),
   );
   $export['videogaleria'] = $view;
 

@@ -20,6 +20,7 @@ function ictdirecta_faldo_context_default_contexts() {
     'path' => array(
       'values' => array(
         '<front>' => '<front>',
+        'seccionsweb/*' => 'seccionsweb/*',
       ),
     ),
   );

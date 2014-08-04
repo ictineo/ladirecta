@@ -243,5 +243,61 @@ function ictdirecta_portada_context_default_contexts() {
   t('portada');
   $export['portada_dreta_seccions'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_dreta_territori';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'territorial/*' => 'territorial/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-portada_columnadreta-block_3' => array(
+          'module' => 'views',
+          'delta' => 'portada_columnadreta-block_3',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['portada_dreta_territori'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_esquerra_territori';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'territorial/*' => 'territorial/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-e6c39e78393a5534ee4b34f8efc858ca' => array(
+          'module' => 'views',
+          'delta' => 'e6c39e78393a5534ee4b34f8efc858ca',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['portada_esquerra_territori'] = $context;
+
   return $export;
 }
