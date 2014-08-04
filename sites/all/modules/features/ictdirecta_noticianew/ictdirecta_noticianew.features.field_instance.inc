@@ -349,7 +349,7 @@ function ictdirecta_noticianew_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',

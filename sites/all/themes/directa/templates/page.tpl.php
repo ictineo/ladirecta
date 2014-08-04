@@ -51,33 +51,7 @@
   </header>
 
   <div id="main">
-    <div id="destacat">
-      <?php print render($page['destacat']); ?>
-    </div>   
-    <div id="interior">
-      <?php print render($page['interior']); ?>
-    </div>   
-
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div>
-
-    <div id="navigation">
+  <div id="navigation">
 
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation" tabindex="-1">
@@ -104,6 +78,33 @@
 
     </div>
 
+    <div id="destacat">
+      <?php print render($page['destacat']); ?>
+    </div>   
+    <div id="interior">
+      <?php print render($page['interior']); ?>
+    </div>   
+
+    <div id="content" class="column" role="main">
+      <?php print render($page['highlighted']); ?>
+      <?php print $breadcrumb; ?>
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      <?php print render($tabs); ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
+    </div>
+
+    
     <?php
       // Render the sidebars to see if there's anything in them.
       $sidebar_first  = render($page['sidebar_first']);

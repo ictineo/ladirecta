@@ -14,45 +14,33 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Internacional',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 5,
+    'weight' => 4,
     'uuid' => '0adcce5a-b12c-4cc5-b28a-34d51aca84a0',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Miralls',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 7,
+    'weight' => 3,
     'uuid' => '0b7ecad9-d1e2-470f-8952-faccfca7d1bd',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Territori',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 1,
     'uuid' => '0ba7da05-2d1b-481d-a244-97d7746eb6f9',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Drets',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 7,
+    'weight' => 2,
     'uuid' => '0bdfdd9a-3b26-444b-8216-038d178d8725',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Terres de l\'Èbre i del Sènia',
@@ -69,23 +57,17 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Economia',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 3,
+    'weight' => 6,
     'uuid' => '193e5f25-f80e-4200-8839-b39b1d41e9be',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Més que mil',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 6,
+    'weight' => 4,
     'uuid' => '24abbd70-d316-426a-ad88-85cf5e965951',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Indirecta',
@@ -94,9 +76,6 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'weight' => 5,
     'uuid' => '2e619ec1-5bf3-436d-a91a-4a70d1f0ef77',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Terres de Ponent i Alt Pirineu',
@@ -113,12 +92,9 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Així està el pati',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 0,
+    'weight' => 10,
     'uuid' => '441896d6-fdf0-489f-8c0b-b78682aeacde',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'País Valencià',
@@ -135,7 +111,7 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Seccions web',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 5,
+    'weight' => 0,
     'uuid' => '5909ed0d-2197-4596-b968-e4e6e4e27235',
     'vocabulary_machine_name' => 'seccions_web',
   );
@@ -143,23 +119,17 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Impressions',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 4,
+    'weight' => 5,
     'uuid' => '71c82a8e-7f62-4732-9b38-83c8ddb2239c',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Estirant del Fil',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 2,
+    'weight' => 8,
     'uuid' => '73c0b594-3d4b-48e6-b6bf-f27b5e4725ea',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Baix Llobregat i Barcelonés',
@@ -176,23 +146,17 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Politica',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 1,
+    'weight' => 8,
     'uuid' => '903a998f-5bdc-427e-bf44-c7acdbdf774e',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Llibertats',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 6,
+    'weight' => 3,
     'uuid' => '933d6e5b-fa53-4c8f-b79f-13e644abab16',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'El Camp i el Penedès',
@@ -209,7 +173,7 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'A Fons',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 7,
+    'weight' => 11,
     'uuid' => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
     'vocabulary_machine_name' => 'seccions_paper',
   );
@@ -228,34 +192,25 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Impressions',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 4,
+    'weight' => 6,
     'uuid' => 'b96c3567-03cd-4f53-bf04-8b8ec74440e1',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Expressions',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 2,
+    'weight' => 7,
     'uuid' => 'c0003d30-41ca-4055-9963-7cbcf84dab0f',
     'vocabulary_machine_name' => 'seccions_web',
-    'parent' => array(
-      0 => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    ),
   );
   $terms[] = array(
     'name' => 'Poca Broma',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 8,
+    'weight' => 2,
     'uuid' => 'c584102a-f0b0-4d41-b1ce-e8839d9b549f',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Illes Balears',
@@ -291,34 +246,25 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Expressions',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 3,
+    'weight' => 7,
     'uuid' => 'e8bb6efe-4ce1-414e-8acd-022d6dadb08e',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Roda del Món',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 9,
+    'weight' => 1,
     'uuid' => 'f02cf09d-58ee-4441-8f89-e1f8e94b3228',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Barri  Internet',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 1,
+    'weight' => 9,
     'uuid' => 'f2636d10-dd3a-4ab9-8e95-668b89d8bf3c',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   $terms[] = array(
     'name' => 'Baix Montseny, Maresme i Vallès',
@@ -335,12 +281,9 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     'name' => 'Transformacions',
     'description' => '',
     'format' => 'filtered_html',
-    'weight' => 10,
+    'weight' => 0,
     'uuid' => 'ff86d3e2-623a-4f5c-a94e-05cd834108b2',
     'vocabulary_machine_name' => 'seccions_paper',
-    'parent' => array(
-      0 => '9933a2e9-475a-4cc6-870f-6fb220f2d6da',
-    ),
   );
   return $terms;
 }

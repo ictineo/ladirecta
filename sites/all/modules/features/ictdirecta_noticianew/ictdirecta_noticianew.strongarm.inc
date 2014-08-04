@@ -121,5 +121,19 @@ function ictdirecta_noticianew_strongarm() {
   );
   $export['field_bundle_settings_field_collection_item__field_continguts_relacionats'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flag_destacado_portada_default_noticia';
+  $strongarm->value = 0;
+  $export['flag_destacado_portada_default_noticia'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flag_portada_ciz_default_noticia';
+  $strongarm->value = 0;
+  $export['flag_portada_ciz_default_noticia'] = $strongarm;
+
   return $export;
 }
