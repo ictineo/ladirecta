@@ -396,27 +396,26 @@ ul {
   .front #main:after {
     clear: both;
   }
-  /* line 282, ../sass/layouts/_responsive.scss */
-  .front #main #content,
-  .front #main .sidebars {
-    margin-top: 9em;
+  /* line 280, ../sass/layouts/_responsive.scss */
+  .front #main #destacat {
+    clear: both;
+    position: relative;
   }
-  /* line 285, ../sass/layouts/_responsive.scss */
+  /* line 291, ../sass/layouts/_responsive.scss */
   .front #main #content {
-    margin-top: 9em;
     float: right;
     width: 39.13043%;
     margin-right: 0%;
     margin-left: -39.13043%;
   }
-  /* line 289, ../sass/layouts/_responsive.scss */
+  /* line 294, ../sass/layouts/_responsive.scss */
   .front #main .sidebars .region-sidebar-first {
     float: right;
     width: 34.78261%;
     margin-right: 39.13043%;
     margin-left: -73.91304%;
   }
-  /* line 292, ../sass/layouts/_responsive.scss */
+  /* line 297, ../sass/layouts/_responsive.scss */
   .front #main .sidebars .region-sidebar-second {
     float: right;
     width: 26.08696%;

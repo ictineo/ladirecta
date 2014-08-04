@@ -66,14 +66,14 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) {
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: $nav-height;
+    //padding-top: $nav-height;
     position: relative;
   }
   #navigation {
     /* Move the navbar up inside #main's padding. */
-    position: absolute;
+    //position: absolute;
     top: 0;
-    height: $nav-height;
+    //height: $nav-height;
     width: $zen-grid-width;
   }
 }
@@ -277,13 +277,18 @@ $zen-auto-include-item-base: false;
      $zen-gutter-width:10px; 
      @include zen-grid-container();
      @include zen-grid-background();
-       
+     #destacat {
+       //@include zen-grid-item(1,23);
+       @include zen-clear(both);
+       position:relative;
+     }
+
+
      #content,
      .sidebars {
-       margin-top:3*$nav-height;
+       //margin-top:3*$nav-height;
      }
      #content {
-       margin-top:3*$nav-height;
        @include zen-grid-item(9,1);
      }
      .sidebars .region-sidebar-first {

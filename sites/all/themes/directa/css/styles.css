@@ -635,16 +635,13 @@ table {
   /* line 67, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: 3em;
     position: relative;
   }
 
   /* line 72, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
-    position: absolute;
     top: 0;
-    height: 3em;
     width: 100%;
   }
 }
@@ -1006,27 +1003,26 @@ table {
   .front #main:after {
     clear: both;
   }
-  /* line 282, ../sass/layouts/_responsive.scss */
-  .front #main #content,
-  .front #main .sidebars {
-    margin-top: 9em;
+  /* line 280, ../sass/layouts/_responsive.scss */
+  .front #main #destacat {
+    clear: both;
+    position: relative;
   }
-  /* line 285, ../sass/layouts/_responsive.scss */
+  /* line 291, ../sass/layouts/_responsive.scss */
   .front #main #content {
-    margin-top: 9em;
     float: left;
     width: 39.13043%;
     margin-left: 0%;
     margin-right: -39.13043%;
   }
-  /* line 289, ../sass/layouts/_responsive.scss */
+  /* line 294, ../sass/layouts/_responsive.scss */
   .front #main .sidebars .region-sidebar-first {
     float: left;
     width: 34.78261%;
     margin-left: 39.13043%;
     margin-right: -73.91304%;
   }
-  /* line 292, ../sass/layouts/_responsive.scss */
+  /* line 297, ../sass/layouts/_responsive.scss */
   .front #main .sidebars .region-sidebar-second {
     float: left;
     width: 26.08696%;
@@ -2293,8 +2289,9 @@ ul.nice-menu {
   -moz-box-shadow: inset 0px 15px 12px -12px #e9e9e9;
   box-shadow: inset 0px 15px 12px -12px #e9e9e9;
   padding-top: 20px;
+  margin-bottom: 20px;
 }
-/* line 121, ../sass/_directa.scss */
+/* line 122, ../sass/_directa.scss */
 #navigation ul.nice-menu a {
   font-family: 'graphik_regularregular';
   font-weight: normal;
@@ -2312,18 +2309,18 @@ ul.nice-menu {
   font-size: 14px;
   line-height: 26px;
 }
-/* line 124, ../sass/_directa.scss */
+/* line 125, ../sass/_directa.scss */
 #navigation ul.nice-menu li {
   background-color: white;
   border: 0;
   width: 90%;
 }
-/* line 130, ../sass/_directa.scss */
+/* line 131, ../sass/_directa.scss */
 #navigation ul li.odd {
   border-left: 1px solid #5e5e5e;
   padding-left: 5px;
 }
-/* line 138, ../sass/_directa.scss */
+/* line 139, ../sass/_directa.scss */
 #navigation #block-nice-menus-1 .block-title {
   font-family: 'graphik_regularregular';
   font-weight: normal;
@@ -2346,7 +2343,7 @@ ul.nice-menu {
   font-size: 14px;
   line-height: 26px;
 }
-/* line 142, ../sass/_directa.scss */
+/* line 143, ../sass/_directa.scss */
 #navigation #block-nice-menus-1 li {
   border-left: 0;
   padding-left: 0;
@@ -2354,7 +2351,7 @@ ul.nice-menu {
   padding: 10px;
   border-bottom: 1px solid #5e5e5e;
 }
-/* line 146, ../sass/_directa.scss */
+/* line 147, ../sass/_directa.scss */
 #navigation #block-nice-menus-1 li a {
   font-family: 'graphiksemibold';
   font-size: 16px;
@@ -2362,22 +2359,22 @@ ul.nice-menu {
   text-transform: none;
   font-weight: normal;
 }
-/* line 151, ../sass/_directa.scss */
+/* line 152, ../sass/_directa.scss */
 #navigation ul.nice-menu ul {
   top: 2.8em;
 }
 
-/* line 157, ../sass/_directa.scss */
+/* line 158, ../sass/_directa.scss */
 .mark {
   color: none;
 }
 
 /*ESTILS DE TEXT*/
-/* line 164, ../sass/_directa.scss */
+/* line 165, ../sass/_directa.scss */
 .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 166, ../sass/_directa.scss */
+/* line 167, ../sass/_directa.scss */
 .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
@@ -2386,7 +2383,7 @@ ul.nice-menu {
   padding: 0;
 }
 
-/* line 171, ../sass/_directa.scss */
+/* line 172, ../sass/_directa.scss */
 a.autor {
   color: #777777;
   text-transform: uppercase;
@@ -2398,7 +2395,7 @@ a.autor a {
   text-transform: underline;
 }
 
-/* line 174, ../sass/_directa.scss */
+/* line 175, ../sass/_directa.scss */
 span.date-display-single {
   color: #777777;
 }
@@ -2408,11 +2405,11 @@ span.date-display-single a {
 }
 
 /*DESTACAT 3 COLUMNES*/
-/* line 182, ../sass/_directa.scss */
+/* line 183, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 184, ../sass/_directa.scss */
+/* line 185, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
@@ -2420,7 +2417,7 @@ span.date-display-single a {
   text-decoration: none;
   padding: 0;
 }
-/* line 188, ../sass/_directa.scss */
+/* line 189, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block a.autor {
   color: #777777;
   text-transform: uppercase;
@@ -2431,7 +2428,7 @@ span.date-display-single a {
 .view-portada-destacadotodascolumnas.view-display-id-block a.autor a {
   text-transform: underline;
 }
-/* line 191, ../sass/_directa.scss */
+/* line 192, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block span.date-display-single {
   color: #777777;
 }
@@ -2439,7 +2436,7 @@ span.date-display-single a {
 .view-portada-destacadotodascolumnas.view-display-id-block span.date-display-single a {
   text-transform: underline;
 }
-/* line 194, ../sass/_directa.scss */
+/* line 195, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .views-field-title a {
   font-family: 'graphiksemibold';
   font-size: 40px;
@@ -2447,24 +2444,24 @@ span.date-display-single a {
   color: #5e5e5e;
   text-align: left;
 }
-/* line 197, ../sass/_directa.scss */
+/* line 198, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-body {
   font-family: 'publico_textroman';
   font-size: 22px;
   line-height: 30px;
   color: #5e5e5e;
 }
-/* line 200, ../sass/_directa.scss */
+/* line 201, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-continguts-relacionats-ref {
   background-color: #5e5e5e;
 }
-/* line 210, ../sass/_directa.scss */
+/* line 211, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .pretitular {
   display: block-inline;
 }
 
 /*COLUMNA NOTICIES (ESQUERRA)*/
-/* line 230, ../sass/_directa.scss */
+/* line 231, ../sass/_directa.scss */
 .view-portada-columnaizquierda.view-display-id-block_1 h2.node-title a {
   font-family: 'graphiksemibold';
   font-size: 36px;
