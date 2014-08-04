@@ -135,5 +135,13 @@ function ictdirecta_editors_wysiwyg_default_profiles() {
     'rdf_mapping' => array(),
   );
 
+  // Exported profile: filtered_html
+  $profiles['filtered_html'] = array(
+    'format' => 'filtered_html',
+    'editor' => 'ckeditor',
+    'settings' => FALSE,
+    'rdf_mapping' => array(),
+  );
+
   return $profiles;
 }

@@ -1,6 +1,7 @@
 name = ictdirecta_portada
 core = 7.x
 package = Features
+dependencies[] = block
 dependencies[] = color
 dependencies[] = comment
 dependencies[] = context
@@ -24,6 +25,8 @@ dependencies[] = views
 dependencies[] = views_field
 dependencies[] = views_field_view
 dependencies[] = workbench
+features[context][] = customlogin
+features[context][] = desplegar_secc
 features[context][] = portada_columnaderecha
 features[context][] = portada_columnaizquierda
 features[context][] = portada_destacadotodascolumnas

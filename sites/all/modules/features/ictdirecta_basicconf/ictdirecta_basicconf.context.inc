@@ -169,18 +169,7 @@ function ictdirecta_basicconf_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'user-login' => array(
-          'module' => 'user',
-          'delta' => 'login',
-          'region' => 'header',
-          'weight' => '-12',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
   $export['usermenu'] = $context;
 

@@ -6,17 +6,155 @@ a {
   @include enllac-net;
 }
 
+/*AMAGATS*/
+.header__logo-image {
+  display:none;
+}
 
+
+
+
+/*HEADER*/
+.region-header {
+  margin-bottom:-20px;
+  padding-top:15px;
+}
+
+
+.html #header #logo {
+ background-image:url('../images/logo.png');
+ background-repeat:no-repeat;
+ display:block;
+ content:"";
+ width:132px;
+ height:39px;
+}
+#header {
+  margin-top:10px;
+  padding-top:10px;
+  @include header-shadow;
+}
+
+
+
+#block-user-login {
+}
+
+#block-block-4 {
+  @include bseccio;
+    background-image:url('../images/menu_arrow_down');
+    background-repeat:no-repeat;
+    background-position: 8px 8px;
+    height:auto;
+    background-color:$gris7;
+    text-align:right;
+    border-radius:5px;
+}
+
+#block-block-2 {
+  border-left:1px solid $gris2;
+  border-right:1px solid $gris2;
+  .fb {
+    @include back;
+      background-image:url('../images/fb.png');
+  }
+  .tw {
+    @include back;
+    background-image:url('../images/tw.png');
+  }
+  .vi {
+    @include back;
+    background-image:url('../images/vi.png');
+  }
+}
+  html.js input.form-autocomplete {
+    background-image:url('../images/vi.png');
+    background-repeat:no-repeat;
+    background-position:right;
+    display:block;
+    content:"";
+    border:1px solid $gris2;
+    height:25px;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+
+
+
+#block-block-5,
+#secondary-menu {
+  display: none; /*wip*/
+  @include bsessio;
+  a {
+    padding: 0;
+    background-color:#e5e5ee5;
+    @include back;
+    background-image:url('../images/arrow_down');
+    content:"";
+    display:block;
+    width:auto;
+    background-position:85px 11px;
+    border-radius:5px;
+    height:auto;
+  }
+}
+#block-block-1 {
+  @include bsubs;
+  border-radius:5px;
+}
 
 /*MENU*/
+.front #main-menu {
+  display:none;
+}
+
+ul.nice-menu {
+  border-top: 0;
+}
 
 #navigation {
-}
+  @include menu-shadow;
+  padding-top:20px;
+  margin-bottom:20px;
 
 
 ul.nice-menu a {
   @include tit-menu;
 }
+ul.nice-menu li {
+  background-color: $blanc;
+  border: 0;
+  width:90%;
+}
+
+ul li.odd  {
+  border-left: 1px solid $gris7;
+  padding-left: 5px;
+  //margin-left:20px;
+  }
+
+
+#block-nice-menus-1 {
+  .block-title {
+    @include tit-menu;
+    @include block-tit; 
+  }
+  li {
+  border-left: 0;
+  padding-left: 0;
+  @include territori-caixa;
+  a {
+    @include territori;
+  }
+}
+}
+  ul.nice-menu ul {
+    top:2.8em;
+  }
+}
+
+
 .mark {
   color:none;
 }
@@ -25,7 +163,7 @@ ul.nice-menu a {
 /*ESTILS DE TEXT*/
 
 .field-seccio {
-  background-color:$grisfosc;
+  background-color:$gris7;
   a {
     @include seccio;
   }
@@ -43,7 +181,7 @@ span.date-display-single {
   .field-fotografies {
   }
   .field-seccio {
-    background-color:$grisfosc;
+    background-color:$gris7;
     a {
       @include seccio;
     }
@@ -61,7 +199,7 @@ span.date-display-single {
     @include entradilla-3col;
   }
   .field-continguts-relacionats-ref {
-    background-color:$grisfosc;
+    background-color:$gris7;
   }
  
 

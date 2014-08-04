@@ -46,5 +46,7 @@ features[field_instance][] = node-noticia-field_subtitol
 features[variable][] = entityreference:base-tables
 features[variable][] = field_bundle_settings_comment__comment_node_noticia
 features[variable][] = field_bundle_settings_field_collection_item__field_continguts_relacionats
+features[variable][] = flag_destacado_portada_default_noticia
+features[variable][] = flag_portada_ciz_default_noticia
 features[views_view][] = continguts_relacionats
 features[views_view][] = ultimes_noticies
