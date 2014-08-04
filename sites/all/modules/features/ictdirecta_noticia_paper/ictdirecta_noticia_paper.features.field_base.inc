@@ -267,7 +267,7 @@ function ictdirecta_noticia_paper_field_default_field_bases() {
       'default_image' => 0,
       'uri_scheme' => 'public',
       'views_base_columns' => array(),
-      'views_base_table' => FALSE,
+      'views_base_table' => 0,
     ),
     'translatable' => 0,
     'type' => 'image',

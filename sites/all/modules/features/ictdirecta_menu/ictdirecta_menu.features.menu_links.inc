@@ -267,17 +267,17 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
-  // Exported menu link: menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/24
-  $menu_links['menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/24'] = array(
+  // Exported menu link: menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/25
+  $menu_links['menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/25'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/24',
+    'link_path' => 'taxonomy/term/25',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Alt Cardener, Llobregat i Ter',
     'options' => array(
       'attributes' => array(
         'title' => 'Alt Cardener, Llobregat i Ter',
       ),
-      'identifier' => 'menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/24',
+      'identifier' => 'menu-menu-territorial_alt-cardener-llobregat-i-ter:taxonomy/term/25',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -286,19 +286,18 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
-  // Exported menu link: menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/14
-  $menu_links['menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/14'] = array(
+  // Exported menu link: menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/15
+  $menu_links['menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/15'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/14',
+    'link_path' => 'taxonomy/term/15',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Baix Llobregat i Barcelonés',
     'options' => array(
       'attributes' => array(
         'title' => 'Baix Llobregat i Barcelonés',
       ),
-      'identifier' => 'menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/14',
+      'identifier' => 'menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/15',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -307,19 +306,18 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 1,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
-  // Exported menu link: menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/29
-  $menu_links['menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/29'] = array(
+  // Exported menu link: menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/30
+  $menu_links['menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/30'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/29',
+    'link_path' => 'taxonomy/term/30',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Baix Montseny, Maresme i Vallès',
     'options' => array(
       'attributes' => array(
         'title' => 'Baix Montseny, Maresme i Vallès',
       ),
-      'identifier' => 'menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/29',
+      'identifier' => 'menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/30',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -328,19 +326,19 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 2,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
+    'parent_identifier' => 'menu-menu-territorial_taxonomy-term:taxonomy/term/26 25 15 30 20 18 24 11 5 9',
   );
-  // Exported menu link: menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/19
-  $menu_links['menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/19'] = array(
+  // Exported menu link: menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/20
+  $menu_links['menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/20'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/19',
+    'link_path' => 'taxonomy/term/20',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Catalunya Nord i Comarques gironines',
     'options' => array(
       'attributes' => array(
         'title' => 'Catalunya Nord i Comarques gironines',
       ),
-      'identifier' => 'menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/19',
+      'identifier' => 'menu-menu-territorial_catalunya-nord-i-comarques-gironines:taxonomy/term/20',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -349,19 +347,18 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 3,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
-  // Exported menu link: menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/17
-  $menu_links['menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/17'] = array(
+  // Exported menu link: menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/18
+  $menu_links['menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/18'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/17',
+    'link_path' => 'taxonomy/term/18',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'El Camp i el Penedès',
     'options' => array(
       'attributes' => array(
         'title' => 'El Camp i el Penedès',
       ),
-      'identifier' => 'menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/17',
+      'identifier' => 'menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/18',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -370,19 +367,18 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 4,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
-  // Exported menu link: menu-menu-territorial_illes-balears:taxonomy/term/23
-  $menu_links['menu-menu-territorial_illes-balears:taxonomy/term/23'] = array(
+  // Exported menu link: menu-menu-territorial_illes-balears:taxonomy/term/24
+  $menu_links['menu-menu-territorial_illes-balears:taxonomy/term/24'] = array(
     'menu_name' => 'menu-menu-territorial',
-    'link_path' => 'taxonomy/term/23',
+    'link_path' => 'taxonomy/term/24',
     'router_path' => 'taxonomy/term/%',
     'link_title' => 'Illes Balears',
     'options' => array(
       'attributes' => array(
         'title' => 'Illes Balears',
       ),
-      'identifier' => 'menu-menu-territorial_illes-balears:taxonomy/term/23',
+      'identifier' => 'menu-menu-territorial_illes-balears:taxonomy/term/24',
     ),
     'module' => 'taxonomy_menu',
     'hidden' => 0,
@@ -391,7 +387,6 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 5,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
   // Exported menu link: menu-menu-territorial_pas-valenci:taxonomy/term/11
   $menu_links['menu-menu-territorial_pas-valenci:taxonomy/term/11'] = array(
@@ -412,7 +407,6 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 6,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
   // Exported menu link: menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/5
   $menu_links['menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/5'] = array(
@@ -433,7 +427,6 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 7,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
   // Exported menu link: menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/9
   $menu_links['menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/9'] = array(
@@ -454,7 +447,6 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 8,
     'customized' => 0,
-    'parent_identifier' => 'menu-menu-territorial_territori:taxonomy/term/25',
   );
   // Exported menu link: menu-menu-territorial_territori:taxonomy/term/212
   $menu_links['menu-menu-territorial_territori:taxonomy/term/212'] = array(
@@ -496,6 +488,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
+  // Exported menu link: menu-seccions-web_drets:taxonomy/term/4
+  $menu_links['menu-seccions-web_drets:taxonomy/term/4'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/4',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Drets',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Drets',
+      ),
+      'identifier' => 'menu-seccions-web_drets:taxonomy/term/4',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 7,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
+  );
   // Exported menu link: menu-seccions-web_economia:taxonomy/term/224
   $menu_links['menu-seccions-web_economia:taxonomy/term/224'] = array(
     'menu_name' => 'menu-seccions-web',
@@ -515,6 +528,48 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
+  );
+  // Exported menu link: menu-seccions-web_economia:taxonomy/term/6
+  $menu_links['menu-seccions-web_economia:taxonomy/term/6'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/6',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Economia',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Economia',
+      ),
+      'identifier' => 'menu-seccions-web_economia:taxonomy/term/6',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 3,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
+  );
+  // Exported menu link: menu-seccions-web_expressions:taxonomy/term/22
+  $menu_links['menu-seccions-web_expressions:taxonomy/term/22'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/22',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Expressions',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Expressions',
+      ),
+      'identifier' => 'menu-seccions-web_expressions:taxonomy/term/22',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 2,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
   );
   // Exported menu link: menu-seccions-web_expressions:taxonomy/term/233
   $menu_links['menu-seccions-web_expressions:taxonomy/term/233'] = array(
@@ -536,6 +591,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
+  // Exported menu link: menu-seccions-web_impressions:taxonomy/term/13
+  $menu_links['menu-seccions-web_impressions:taxonomy/term/13'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/13',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Impressions',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Impressions',
+      ),
+      'identifier' => 'menu-seccions-web_impressions:taxonomy/term/13',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 4,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
+  );
   // Exported menu link: menu-seccions-web_impressions:taxonomy/term/228
   $menu_links['menu-seccions-web_impressions:taxonomy/term/228'] = array(
     'menu_name' => 'menu-seccions-web',
@@ -555,6 +631,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
+  );
+  // Exported menu link: menu-seccions-web_internacional:taxonomy/term/1
+  $menu_links['menu-seccions-web_internacional:taxonomy/term/1'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/1',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Internacional',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Internacional',
+      ),
+      'identifier' => 'menu-seccions-web_internacional:taxonomy/term/1',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 5,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
   );
   // Exported menu link: menu-seccions-web_internacional:taxonomy/term/226
   $menu_links['menu-seccions-web_internacional:taxonomy/term/226'] = array(
@@ -576,6 +673,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
+  // Exported menu link: menu-seccions-web_llibertats:taxonomy/term/17
+  $menu_links['menu-seccions-web_llibertats:taxonomy/term/17'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/17',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Llibertats',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Llibertats',
+      ),
+      'identifier' => 'menu-seccions-web_llibertats:taxonomy/term/17',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 6,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
+  );
   // Exported menu link: menu-seccions-web_llibertats:taxonomy/term/222
   $menu_links['menu-seccions-web_llibertats:taxonomy/term/222'] = array(
     'menu_name' => 'menu-seccions-web',
@@ -595,6 +713,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
+  );
+  // Exported menu link: menu-seccions-web_politica:taxonomy/term/16
+  $menu_links['menu-seccions-web_politica:taxonomy/term/16'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/16',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Politica',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Politica',
+      ),
+      'identifier' => 'menu-seccions-web_politica:taxonomy/term/16',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 1,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
   );
   // Exported menu link: menu-seccions-web_politica:taxonomy/term/223
   $menu_links['menu-seccions-web_politica:taxonomy/term/223'] = array(
@@ -616,6 +755,26 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
+  // Exported menu link: menu-seccions-web_seccions-web:taxonomy/term/12
+  $menu_links['menu-seccions-web_seccions-web:taxonomy/term/12'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/12',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Seccions web',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Seccions web',
+      ),
+      'identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 5,
+    'customized' => 0,
+  );
   // Exported menu link: menu-seccions-web_territori:taxonomy/term/225
   $menu_links['menu-seccions-web_territori:taxonomy/term/225'] = array(
     'menu_name' => 'menu-seccions-web',
@@ -635,6 +794,27 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
+  );
+  // Exported menu link: menu-seccions-web_territori:taxonomy/term/3
+  $menu_links['menu-seccions-web_territori:taxonomy/term/3'] = array(
+    'menu_name' => 'menu-seccions-web',
+    'link_path' => 'taxonomy/term/3',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Territori',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Territori',
+      ),
+      'identifier' => 'menu-seccions-web_territori:taxonomy/term/3',
+    ),
+    'module' => 'taxonomy_menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
+    'customized' => 0,
+    'parent_identifier' => 'menu-seccions-web_seccions-web:taxonomy/term/12',
   );
   // Translatables
   // Included for use with string extractors like potx.
@@ -662,6 +842,7 @@ function ictdirecta_menu_menu_default_menu_links() {
   t('Poca Broma');
   t('Politica');
   t('Roda del Món');
+  t('Seccions web');
   t('Terres de Ponent i Alt Pirineu');
   t('Terres de l\'Èbre i del Sènia');
   t('Territori');

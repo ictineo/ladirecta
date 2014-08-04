@@ -138,16 +138,29 @@ function ictdirecta_actualitat_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '2',
+          'weight' => '3',
+        ),
+        'flag' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(
         'easy_social_1' => array(
           'teaser' => array(
             'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+        'flag_portada_cdr' => array(
+          'default' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),

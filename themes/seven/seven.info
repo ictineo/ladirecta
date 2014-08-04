@@ -4,13 +4,8 @@ package = Core
 version = VERSION
 core = 7.x
 stylesheets[screen][] = reset.css
-<<<<<<< HEAD
-stylesheets[screen][] = ictineo.css
-stylesheets[screen][] = style.css
-=======
 stylesheets[screen][] = style.css
 stylesheets[screen][] = ictineo.css
->>>>>>> 508c4baf7b464705d6ab84ac2ef8c5d9da0382fe
 settings[shortcut_module_link] = 1
 regions[content] = Content
 regions[help] = Help

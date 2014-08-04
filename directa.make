@@ -53,7 +53,7 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[fences][version] = "1.0"
   projects[fences][subdir] = "contrib"
 
-  projects[draggableviews][version] = "2.0"
+  projects[draggableviews][version] = "2.x-dev"
   projects[draggableviews][subdir] = "contrib"
 
   projects[flag][version] = "3.5"

@@ -162,13 +162,19 @@ ul li.odd  {
 
 /*ESTILS DE TEXT*/
 
+
+.field-seccio-web {
+  background-color:$grisfosc;
+  a {
+    @include seccio;
+  }
+}
 .field-seccio {
   background-color:$gris7;
   a {
     @include seccio;
   }
 }
-
 a.autor {
   @include autoria;
 }

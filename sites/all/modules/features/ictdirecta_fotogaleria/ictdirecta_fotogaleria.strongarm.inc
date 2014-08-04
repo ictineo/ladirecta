@@ -156,11 +156,14 @@ function ictdirecta_fotogaleria_strongarm() {
         'xmlsitemap' => array(
           'weight' => '1',
         ),
+        'flag' => array(
+          'weight' => '11',
+        ),
       ),
       'display' => array(
         'easy_social_1' => array(
           'default' => array(
-            'weight' => '101',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'teaser' => array(
@@ -174,7 +177,7 @@ function ictdirecta_fotogaleria_strongarm() {
         ),
         'flag_portada_cdr' => array(
           'default' => array(
-            'weight' => '10',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'token' => array(

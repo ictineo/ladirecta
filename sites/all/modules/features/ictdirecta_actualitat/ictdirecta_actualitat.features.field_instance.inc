@@ -55,7 +55,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -68,22 +68,24 @@ function ictdirecta_actualitat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 15,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -95,7 +97,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
     'description' => 'Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -139,7 +141,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -154,10 +156,14 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
-          'view_mode' => 'full',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'view_mode' => 'token',
         ),
-        'type' => 'field_collection_fields',
-        'weight' => 5,
+        'type' => 'field_collection_view',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -169,7 +175,52 @@ function ictdirecta_actualitat_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'article',
     'field_name' => 'field_contingut_relacionat',
-    'label' => 'Contingut relacionat',
+    'label' => 'Noticies relacionades',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-actualitat-field_continguts_relacionats'
+  $field_instances['node-actualitat-field_continguts_relacionats'] = array(
+    'bundle' => 'actualitat',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection_table',
+        'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'empty' => 1,
+          'view_mode' => 'token',
+        ),
+        'type' => 'field_collection_table_view',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_continguts_relacionats',
+    'label' => 'Continguts relacionats',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -190,7 +241,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -234,116 +285,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualitat-field_destacar'
-  $field_instances['node-actualitat-field_destacar'] = array(
-    'bundle' => 'actualitat',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_destacar',
-    'label' => 'Destacar',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 0,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualitat-field_documents_adjunts'
-  $field_instances['node-actualitat-field_documents_adjunts'] = array(
-    'bundle' => 'actualitat',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'ins',
-    'field_name' => 'field_documents_adjunts',
-    'label' => 'Documents adjunts',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'documents_adjunts',
-      'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx html zip tar gz bz2 rar gif png jpg jpeg mp3 ogg avi mpg mpeg rtf',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 'attach',
-            'clipboard' => 'clipboard',
-            'imce' => 'imce',
-            'reference' => 'reference',
-            'remote' => 'remote',
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 1,
-          ),
-        ),
-        'imce_filefield_on' => 1,
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -355,11 +297,11 @@ function ictdirecta_actualitat_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -384,71 +326,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-actualitat-field_fotografia_de_portada'
-  $field_instances['node-actualitat-field_fotografia_de_portada'] = array(
-    'bundle' => 'actualitat',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'figure',
-    'field_name' => 'field_fotografia_de_portada',
-    'label' => 'Fotografia de portada',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'fotografies_portada',
-      'file_extensions' => 'jpg jpeg gif png',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 'attach',
-            'clipboard' => 'clipboard',
-            'imce' => 'imce',
-            'reference' => 'reference',
-            'remote' => 'remote',
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 1,
-          ),
-        ),
-        'imce_filefield_on' => 1,
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 6,
+      'weight' => 11,
     ),
   );
 
@@ -459,14 +337,14 @@ function ictdirecta_actualitat_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -529,34 +407,31 @@ function ictdirecta_actualitat_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-actualitat-field_seccio'
-  $field_instances['node-actualitat-field_seccio'] = array(
+  // Exported field_instance: 'node-actualitat-field_seccio_web'
+  $field_instances['node-actualitat-field_seccio_web'] = array(
     'bundle' => 'actualitat',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'mark',
-    'field_name' => 'field_seccio',
-    'label' => 'Secció',
+    'field_name' => 'field_seccio_web',
+    'label' => 'Seccio web',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -566,7 +441,48 @@ function ictdirecta_actualitat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-actualitat-field_subtitol'
+  $field_instances['node-actualitat-field_subtitol'] = array(
+    'bundle' => 'actualitat',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_subtitol',
+    'label' => 'Subtítol',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -576,14 +492,13 @@ function ictdirecta_actualitat_field_default_field_instances() {
   t('Body');
   t('Camp per descriure l\'autor de la notícia. Ha de contenir el nom i un enllaç que fagi referència a l\'autor (p.e. el seu perfil de twitter o un blog personal).');
   t('Comment');
-  t('Contingut relacionat');
+  t('Continguts relacionats');
   t('Data');
-  t('Destacar');
-  t('Documents adjunts');
   t('Etiquetes');
-  t('Fotografia de portada');
   t('Fotografia_portada');
-  t('Secció');
+  t('Noticies relacionades');
+  t('Seccio web');
+  t('Subtítol');
 
   return $field_instances;
 }

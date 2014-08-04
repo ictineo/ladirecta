@@ -188,10 +188,19 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 0,
@@ -245,10 +254,15 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'token' => array(
         'label' => 'above',
@@ -285,10 +299,15 @@ function ictdirecta_noticianew_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'token' => array(
         'label' => 'hidden',
@@ -329,14 +348,16 @@ function ictdirecta_noticianew_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'field_collection',
+        'module' => 'field_collection_table',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
+          'empty' => TRUE,
+          'view_mode' => 'full',
         ),
-        'type' => 'field_collection_list',
+        'type' => 'field_collection_table_view',
         'weight' => 7,
       ),
       'teaser' => array(
@@ -369,60 +390,87 @@ function ictdirecta_noticianew_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_fotografies'
-  $field_instances['node-noticia-field_fotografies'] = array(
+  // Exported field_instance: 'node-noticia-field_portada_fotogaleria'
+  $field_instances['node-noticia-field_portada_fotogaleria'] = array(
     'bundle' => 'noticia',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 14,
       ),
       'full' => array(
-        'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 3,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'token' => array(
-        'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'view_mode' => 'token',
-        ),
-        'type' => 'field_collection_fields',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_fotografies',
-    'label' => 'Fotografia portada',
+    'field_name' => 'field_portada_fotogaleria',
+    'label' => 'Portada Noticia',
     'required' => 0,
     'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'imce_filefield_on' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
       'weight' => 7,
     ),
   );
@@ -488,9 +536,9 @@ function ictdirecta_noticianew_field_default_field_instances() {
   t('Continguts relacionats');
   t('Correu Electrónic');
   t('Destacar');
-  t('Fotografia portada');
   t('Mostra\'l en portada	');
   t('Nom i cognoms');
+  t('Portada Noticia');
   t('Subtítol');
 
   return $field_instances;
