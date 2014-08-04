@@ -1,7 +1,7 @@
 name = ictdirecta_n_paper
 core = 7.x
 package = Features
-dependencies[] = ictdirecta_noticia
+dependencies[] = ictdirecta_noticianew
 dependencies[] = ictdirecta_noticia_paper
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2

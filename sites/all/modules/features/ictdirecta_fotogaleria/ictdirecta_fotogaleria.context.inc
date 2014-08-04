@@ -25,6 +25,11 @@ function ictdirecta_fotogaleria_context_default_contexts() {
         'node_form' => '1',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        'fotogaleria' => 'fotogaleria',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -33,13 +38,7 @@ function ictdirecta_fotogaleria_context_default_contexts() {
           'module' => 'views',
           'delta' => 'fotogaleria-block',
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-fotogaleria-block_1' => array(
-          'module' => 'views',
-          'delta' => 'fotogaleria-block_1',
-          'region' => 'content',
-          'weight' => '-9',
+          'weight' => '20',
         ),
       ),
     ),

@@ -99,8 +99,8 @@ function ictdirecta_video_strongarm() {
       'display' => array(
         'flag_portada_cdr' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
           'token' => array(
             'weight' => '10',
