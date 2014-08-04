@@ -469,7 +469,7 @@ function ictdirecta_portada_views_default_views() {
   );
   $handler->display->display_options['fields']['field_continguts_relacionats']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_continguts_relacionats']['field_api_classes'] = TRUE;
-  /* Field: Content: Notícies relacionades */
+  /* Field: Content: Noticies relacionades */
   $handler->display->display_options['fields']['field_contingut_relacionat']['id'] = 'field_contingut_relacionat';
   $handler->display->display_options['fields']['field_contingut_relacionat']['table'] = 'field_data_field_contingut_relacionat';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field'] = 'field_contingut_relacionat';
@@ -656,7 +656,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'destacado_portada';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Notícies relacionades */
+  /* Field: Content: Noticies relacionades */
   $handler->display->display_options['fields']['field_contingut_relacionat']['id'] = 'field_contingut_relacionat';
   $handler->display->display_options['fields']['field_contingut_relacionat']['table'] = 'field_data_field_contingut_relacionat';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field'] = 'field_contingut_relacionat';
@@ -740,22 +740,59 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Seccio web */
+  $handler->display->display_options['fields']['field_seccio_web']['id'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['field'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['label'] = 'Estem a la seccio:';
+  $handler->display->display_options['fields']['field_seccio_web']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['field_api_classes'] = TRUE;
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['label'] = 'Columna Esquerra';
+  $handler->display->display_options['fields']['view']['view'] = 'portada_columnaizquierda';
+  $handler->display->display_options['fields']['view']['display'] = 'page';
+  $handler->display->display_options['fields']['view']['arguments'] = '%1';
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view_1']['id'] = 'view_1';
+  $handler->display->display_options['fields']['view_1']['table'] = 'views';
+  $handler->display->display_options['fields']['view_1']['field'] = 'view';
+  $handler->display->display_options['fields']['view_1']['label'] = 'Columna Dreta';
+  $handler->display->display_options['fields']['view_1']['view'] = 'portada_columnadreta';
+  $handler->display->display_options['fields']['view_1']['display'] = 'page';
+  $handler->display->display_options['fields']['view_1']['arguments'] = '!1';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '!1';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['exception']['value'] = '';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_options']['argument'] = 'Hola';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -764,8 +801,69 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Portada general seccions */
+  $handler = $view->new_display('page', 'Portada general seccions', 'page');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Seccio web */
+  $handler->display->display_options['fields']['field_seccio_web']['id'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['field'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['label'] = 'Estem a la seccio:';
+  $handler->display->display_options['fields']['field_seccio_web']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['field_api_classes'] = TRUE;
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['label'] = 'Columna Esquerra';
+  $handler->display->display_options['fields']['view']['view'] = 'portada_columnaizquierda';
+  $handler->display->display_options['fields']['view']['display'] = 'page';
+  $handler->display->display_options['fields']['view']['arguments'] = '%1';
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view_1']['id'] = 'view_1';
+  $handler->display->display_options['fields']['view_1']['table'] = 'views';
+  $handler->display->display_options['fields']['view_1']['field'] = 'view';
+  $handler->display->display_options['fields']['view_1']['label'] = 'Columna Dreta';
+  $handler->display->display_options['fields']['view_1']['view'] = 'portada_columnadreta';
+  $handler->display->display_options['fields']['view_1']['display'] = 'page';
+  $handler->display->display_options['fields']['view_1']['arguments'] = '!1';
+  $handler->display->display_options['path'] = 'portada-general/seccionsweb/%';
+
+  /* Display: Portada general  */
+  $handler = $view->new_display('page', 'Portada general ', 'page_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Seccio web */
+  $handler->display->display_options['fields']['field_seccio_web']['id'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['field'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['label'] = 'Estem a la seccio:';
+  $handler->display->display_options['fields']['field_seccio_web']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_seccio_web']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['field_api_classes'] = TRUE;
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view']['id'] = 'view';
+  $handler->display->display_options['fields']['view']['table'] = 'views';
+  $handler->display->display_options['fields']['view']['field'] = 'view';
+  $handler->display->display_options['fields']['view']['label'] = 'Columna Esquerra';
+  $handler->display->display_options['fields']['view']['view'] = 'portada_columnaizquierda';
+  $handler->display->display_options['fields']['view']['display'] = 'page';
+  /* Field: Global: View */
+  $handler->display->display_options['fields']['view_1']['id'] = 'view_1';
+  $handler->display->display_options['fields']['view_1']['table'] = 'views';
+  $handler->display->display_options['fields']['view_1']['field'] = 'view';
+  $handler->display->display_options['fields']['view_1']['label'] = 'Columna Dreta';
+  $handler->display->display_options['fields']['view_1']['view'] = 'portada_columnadreta';
+  $handler->display->display_options['fields']['view_1']['display'] = 'page';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'portada-general';
   $translatables['portada_general'] = array(
     t('Master'),
@@ -776,14 +874,14 @@ function ictdirecta_portada_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Page'),
+    t('Estem a la seccio:'),
+    t('Columna Esquerra'),
+    t('Columna Dreta'),
+    t('Custom text'),
+    t('!1'),
+    t('All'),
+    t('Portada general seccions'),
+    t('Portada general '),
   );
   $export['portada_general'] = $view;
 

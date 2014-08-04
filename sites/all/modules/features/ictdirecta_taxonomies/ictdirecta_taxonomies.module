@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the ictdirecta_taxonomies feature.
  */
+
+include_once 'ictdirecta_taxonomies.features.inc';

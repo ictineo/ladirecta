@@ -297,7 +297,7 @@ function ictdirecta_pdret_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Portada-ColumnaDreta';
+  $handler->display->display_options['title'] = 'Portada-ColumnaDreta-seccions';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'més';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -365,6 +365,21 @@ function ictdirecta_pdret_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_data']['field_api_classes'] = TRUE;
+  /* Field: Content: Fotografia_portada */
+  $handler->display->display_options['fields']['field_fotografia_portada']['id'] = 'field_fotografia_portada';
+  $handler->display->display_options['fields']['field_fotografia_portada']['table'] = 'field_data_field_fotografia_portada';
+  $handler->display->display_options['fields']['field_fotografia_portada']['field'] = 'field_fotografia_portada';
+  $handler->display->display_options['fields']['field_fotografia_portada']['label'] = '';
+  $handler->display->display_options['fields']['field_fotografia_portada']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_fotografia_portada']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_fotografia_portada']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_fotografia_portada']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_fotografia_portada']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_fotografia_portada']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_fotografia_portada']['field_api_classes'] = TRUE;
   /* Field: Content: Portada Noticia */
   $handler->display->display_options['fields']['field_portada_fotogaleria']['id'] = 'field_portada_fotogaleria';
   $handler->display->display_options['fields']['field_portada_fotogaleria']['table'] = 'field_data_field_portada_fotogaleria';
@@ -415,7 +430,7 @@ function ictdirecta_pdret_views_default_views() {
     'trim_length' => '200',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Content: Contingut relacionat */
+  /* Field: Content: Continguts relacionats */
   $handler->display->display_options['fields']['field_continguts_relacionats']['id'] = 'field_continguts_relacionats';
   $handler->display->display_options['fields']['field_continguts_relacionats']['table'] = 'field_data_field_continguts_relacionats';
   $handler->display->display_options['fields']['field_continguts_relacionats']['field'] = 'field_continguts_relacionats';
@@ -486,8 +501,8 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
+    'actualitat' => 'actualitat',
     'fotogaleria' => 'fotogaleria',
-    'noticia_paper' => 'noticia_paper',
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
@@ -556,15 +571,35 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  $handler->display->display_options['path'] = 'admin/workbench/portada/ordeni';
+  $handler->display->display_options['path'] = 'admin/workbench/portada/ordend';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Ordre columna dreta';
   $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context'] = 1;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Portada dreta */
+  $handler = $view->new_display('block', 'Portada dreta', 'block_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Portada dreta';
+
+  /* Display: Portada dreta seccions */
+  $handler = $view->new_display('block', 'Portada dreta seccions', 'block_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_options']['index'] = '2';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['block_description'] = 'Portada dreta seccions';
   $translatables['portada_columnadreta'] = array(
     t('Master'),
-    t('Portada-ColumnaDreta'),
+    t('Portada-ColumnaDreta-seccions'),
     t('més'),
     t('Aplica'),
     t('Reinicialitza'),
@@ -578,6 +613,8 @@ function ictdirecta_pdret_views_default_views() {
     t('Sort '),
     t('Nid'),
     t('Content'),
+    t('Portada dreta'),
+    t('Portada dreta seccions'),
   );
   $export['portada_columnadreta'] = $view;
 

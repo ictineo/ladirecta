@@ -39,6 +39,13 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'asdasdasdasdasdasdasdasdasd';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Relationship: Flags: portada_ciz */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
@@ -140,7 +147,7 @@ function ictdirecta_pizq_views_default_views() {
     'trim_length' => '200',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Content: Contingut relacionat */
+  /* Field: Content: Continguts relacionats */
   $handler->display->display_options['fields']['field_continguts_relacionats']['id'] = 'field_continguts_relacionats';
   $handler->display->display_options['fields']['field_continguts_relacionats']['table'] = 'field_data_field_continguts_relacionats';
   $handler->display->display_options['fields']['field_continguts_relacionats']['field'] = 'field_continguts_relacionats';
@@ -194,7 +201,10 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['arguments']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
-  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['field_seccio_web_tid']['default_argument_options']['use_alias'] = TRUE;
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary_options']['items_per_page'] = '25';
@@ -287,6 +297,15 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Portada esquerra block */
+  $handler = $view->new_display('block', 'Portada esquerra block', 'block_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Portada esquerra';
+
+  /* Display: Portada esquerra block seccions */
+  $handler = $view->new_display('block', 'Portada esquerra block seccions', 'block_2');
+  $handler->display->display_options['block_description'] = 'Portada esquerra seccions';
   $translatables['portada_columnaizquierda'] = array(
     t('Master'),
     t('Portada-ColumnaIzquierda'),
@@ -296,6 +315,7 @@ function ictdirecta_pizq_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
+    t('asdasdasdasdasdasdasdasdasd'),
     t('flag'),
     t('All'),
     t('Portada Esquerra'),
@@ -303,6 +323,10 @@ function ictdirecta_pizq_views_default_views() {
     t('Sort '),
     t('Nid'),
     t('Content'),
+    t('Portada esquerra block'),
+    t('Portada esquerra'),
+    t('Portada esquerra block seccions'),
+    t('Portada esquerra seccions'),
   );
   $export['portada_columnaizquierda'] = $view;
 

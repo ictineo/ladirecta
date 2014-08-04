@@ -26,9 +26,9 @@ function ictdirecta_portada_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-52ac42fa3c76d4864389298401da2087' => array(
+        'views-portada_columnadreta-block_1' => array(
           'module' => 'views',
-          'delta' => '52ac42fa3c76d4864389298401da2087',
+          'delta' => 'portada_columnadreta-block_1',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
@@ -46,13 +46,45 @@ function ictdirecta_portada_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'portada_columnaizq_seccions';
+  $context->description = '';
+  $context->tag = 'portada';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'seccionsweb/*' => 'seccionsweb/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-52ac42fa3c76d4864389298401da2087' => array(
+          'module' => 'views',
+          'delta' => '52ac42fa3c76d4864389298401da2087',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('portada');
+  $export['portada_columnaizq_seccions'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'portada_columnaizquierda';
   $context->description = 'Colocación columna izquierda en portada';
   $context->tag = 'portada';
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'directa_site2/admin/workbench/portada' => 'directa_site2/admin/workbench/portada',
+        '<front>' => '<front>',
       ),
     ),
   );
@@ -67,7 +99,6 @@ function ictdirecta_portada_context_default_contexts() {
         ),
       ),
     ),
-    'breadcrumb' => '0',
   );
   $context->condition_mode = 1;
 
@@ -108,6 +139,38 @@ function ictdirecta_portada_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('portada');
   $export['portada_destacadotodascolumnas'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_dreta_seccions';
+  $context->description = '';
+  $context->tag = 'portada';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'seccionsweb/*' => 'seccionsweb/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-portada_columnadreta-block_2' => array(
+          'module' => 'views',
+          'delta' => 'portada_columnadreta-block_2',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('portada');
+  $export['portada_dreta_seccions'] = $context;
 
   return $export;
 }
