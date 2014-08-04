@@ -14,7 +14,7 @@ function ictdirecta_noticia_paper_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_noticia';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-page-title';
   $export['additional_settings__active_tab_noticia'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -186,7 +186,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '11',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -204,7 +204,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -222,7 +222,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => TRUE,
           ),
           'token' => array(
-            'weight' => '13',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),

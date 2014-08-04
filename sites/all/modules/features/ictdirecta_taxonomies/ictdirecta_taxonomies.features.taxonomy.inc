@@ -59,7 +59,7 @@ function ictdirecta_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'Seccions_paper',
       'machine_name' => 'seccions_paper',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
@@ -82,7 +82,7 @@ function ictdirecta_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'Seccions_web',
       'machine_name' => 'seccions_web',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

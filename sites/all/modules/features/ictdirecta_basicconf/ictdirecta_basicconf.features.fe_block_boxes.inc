@@ -20,9 +20,12 @@ function ictdirecta_basicconf_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Enllaços de xxss';
-  $fe_block_boxes->format = 'plain_text';
+  $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'xss_header';
-  $fe_block_boxes->body = 'Enllaços xarxes socials';
+  $fe_block_boxes->body = '<a class="tw" href=""></a>
+<a class="fb" href=""></a>
+<a class="vi" href=""></a>
+';
 
   $export['xss_header'] = $fe_block_boxes;
 

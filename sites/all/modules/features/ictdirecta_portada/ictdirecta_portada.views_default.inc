@@ -520,7 +520,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['field_continguts_relacionats_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_continguts_relacionats_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contingut: Fotografies */
+  /* Field: Contingut: Fotografia portada */
   $handler->display->display_options['fields']['field_fotografies']['id'] = 'field_fotografies';
   $handler->display->display_options['fields']['field_fotografies']['table'] = 'field_data_field_fotografies';
   $handler->display->display_options['fields']['field_fotografies']['field'] = 'field_fotografies';
