@@ -39,13 +39,6 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = 'asdasdasdasdasdasdasdasdasd';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Relationship: Flags: portada_ciz */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
@@ -315,7 +308,6 @@ function ictdirecta_pizq_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
-    t('asdasdasdasdasdasdasdasdasd'),
     t('flag'),
     t('All'),
     t('Portada Esquerra'),
