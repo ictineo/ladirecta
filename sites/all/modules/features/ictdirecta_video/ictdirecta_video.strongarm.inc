@@ -95,6 +95,9 @@ function ictdirecta_video_strongarm() {
         'xmlsitemap' => array(
           'weight' => '3',
         ),
+        'flag' => array(
+          'weight' => '8',
+        ),
       ),
       'display' => array(
         'flag_portada_cdr' => array(

@@ -201,7 +201,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -248,7 +248,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,7 +344,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -452,7 +452,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
           'slideshow_timeout' => 0,
         ),
         'type' => 'slideshow',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -494,7 +494,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -563,37 +563,37 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-fotogaleria-field_seccio'
-  $field_instances['node-fotogaleria-field_seccio'] = array(
+  // Exported field_instance: 'node-fotogaleria-field_seccio_web'
+  $field_instances['node-fotogaleria-field_seccio_web'] = array(
     'bundle' => 'fotogaleria',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'token' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_seccio',
-    'label' => 'Secció',
+    'fences_wrapper' => 'mark',
+    'field_name' => 'field_seccio_web',
+    'label' => 'Seccio web',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -603,7 +603,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -670,7 +670,7 @@ function ictdirecta_fotogaleria_field_default_field_instances() {
   t('Fotografies');
   t('Peu fotografia');
   t('Portada fotogaleria');
-  t('Secció');
+  t('Seccio web');
   t('Territori');
 
   return $field_instances;

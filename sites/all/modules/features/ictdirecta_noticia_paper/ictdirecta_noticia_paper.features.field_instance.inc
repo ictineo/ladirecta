@@ -152,7 +152,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -223,7 +223,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -308,7 +308,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
           'view_mode' => 'token',
         ),
         'type' => 'field_collection_view',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -342,7 +342,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -370,7 +370,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -447,7 +447,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'rss' => array(
         'label' => 'above',
@@ -484,23 +484,23 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
-  // Exported field_instance: 'node-noticia-field_seccio'
-  $field_instances['node-noticia-field_seccio'] = array(
+  // Exported field_instance: 'node-noticia-field_seccio_web'
+  $field_instances['node-noticia-field_seccio_web'] = array(
     'bundle' => 'noticia',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -510,25 +510,22 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'token' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'mark',
-    'field_name' => 'field_seccio',
-    'label' => 'Secció',
+    'field_name' => 'field_seccio_web',
+    'label' => 'Seccio web',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -538,7 +535,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -561,7 +558,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'rss' => array(
         'label' => 'above',
@@ -721,7 +718,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
   t('Etiquetes');
   t('Mostra\'l en portada	');
   t('Notícies relacionades');
-  t('Secció');
+  t('Seccio web');
   t('Subtítol');
   t('Territori');
 

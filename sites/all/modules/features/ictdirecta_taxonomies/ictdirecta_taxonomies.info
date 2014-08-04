@@ -5,6 +5,7 @@ dependencies[] = features
 dependencies[] = taxonomy
 dependencies[] = uuid_features
 features[features_api][] = api:2
+features[field_base][] = field_seccio_web
 features[taxonomy][] = categories_cd
 features[taxonomy][] = punts_de_venda
 features[taxonomy][] = seccions_paper

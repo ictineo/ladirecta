@@ -1882,7 +1882,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1406548794');
+  background-image: url('../images/progress.gif?1407065804');
 }
 
 /**Fulla d'estils de la Directa**/
@@ -2109,12 +2109,12 @@ ul.nice-menu a:hover {
 }
 
 /*ESTILS DE TEXT*/
-/* line 27, ../sass/_directa.scss */
-.field-seccio {
+/* line 28, ../sass/_directa.scss */
+.field-seccio-web {
   background-color: #5e5e5e;
 }
-/* line 29, ../sass/_directa.scss */
-.field-seccio a {
+/* line 30, ../sass/_directa.scss */
+.field-seccio-web a {
   font-family: 'graphiksuper';
   color: white;
   font-size: 19px;
@@ -2122,38 +2122,50 @@ ul.nice-menu a:hover {
 }
 
 /* line 34, ../sass/_directa.scss */
+.field-seccio {
+  background-color: #5e5e5e;
+}
+/* line 36, ../sass/_directa.scss */
+.field-seccio a {
+  font-family: 'graphiksuper';
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+/* line 40, ../sass/_directa.scss */
 a.autor {
   color: #777777;
   text-transform: underline;
 }
 
-/* line 37, ../sass/_directa.scss */
+/* line 43, ../sass/_directa.scss */
 span.date-display-single {
   color: #777777;
 }
 
 /*DESTACAT 3 COLUMNES*/
-/* line 45, ../sass/_directa.scss */
+/* line 51, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 47, ../sass/_directa.scss */
+/* line 53, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
   font-size: 19px;
   text-decoration: none;
 }
-/* line 51, ../sass/_directa.scss */
+/* line 57, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block a.autor {
   color: #777777;
   text-transform: underline;
 }
-/* line 54, ../sass/_directa.scss */
+/* line 60, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block span.date-display-single {
   color: #777777;
 }
-/* line 57, ../sass/_directa.scss */
+/* line 63, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .views-field-title a {
   font-family: 'graphiksemibold';
   font-size: 40px;
@@ -2161,24 +2173,24 @@ span.date-display-single {
   color: #5e5e5e;
   text-align: left;
 }
-/* line 60, ../sass/_directa.scss */
+/* line 66, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-body {
   font-family: 'publico_textroman';
   font-size: 22px;
   line-height: 30px;
   color: #5e5e5e;
 }
-/* line 63, ../sass/_directa.scss */
+/* line 69, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-continguts-relacionats-ref {
   background-color: #5e5e5e;
 }
-/* line 73, ../sass/_directa.scss */
+/* line 79, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .pretitular {
   display: block-inline;
 }
 
 /*COLUMNA NOTICIES (ESQUERRA)*/
-/* line 93, ../sass/_directa.scss */
+/* line 99, ../sass/_directa.scss */
 .view-portada-columnaizquierda.view-display-id-block_1 h2.node-title a {
   font-family: 'graphiksemibold';
   font-size: 36px;

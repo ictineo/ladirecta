@@ -24,13 +24,19 @@ ul.nice-menu a {
 
 /*ESTILS DE TEXT*/
 
+
+.field-seccio-web {
+  background-color:$grisfosc;
+  a {
+    @include seccio;
+  }
+}
 .field-seccio {
   background-color:$grisfosc;
   a {
     @include seccio;
   }
 }
-
 a.autor {
   @include autoria;
 }

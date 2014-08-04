@@ -143,6 +143,9 @@ function ictdirecta_actualitat_strongarm() {
         'xmlsitemap' => array(
           'weight' => '2',
         ),
+        'flag' => array(
+          'weight' => '10',
+        ),
       ),
       'display' => array(
         'easy_social_1' => array(

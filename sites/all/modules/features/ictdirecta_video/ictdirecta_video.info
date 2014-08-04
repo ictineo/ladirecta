@@ -1,6 +1,7 @@
 name = ictidirecta_video
 core = 7.x
 package = Features
+dependencies[] = ictdirecta_fotogaleria
 dependencies[] = mediafield
 dependencies[] = views
 features[context][] = galeria_video
@@ -18,7 +19,7 @@ features[field_instance][] = node-video-body
 features[field_instance][] = node-video-field_columna
 features[field_instance][] = node-video-field_destacar
 features[field_instance][] = node-video-field_impre_video
-features[field_instance][] = node-video-field_seccio
+features[field_instance][] = node-video-field_seccio_web
 features[field_instance][] = node-video-field_tags
 features[field_instance][] = node-video-field_territori
 features[field_instance][] = node-video-field_video

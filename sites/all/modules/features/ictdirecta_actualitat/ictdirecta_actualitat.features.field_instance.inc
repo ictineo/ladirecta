@@ -278,7 +278,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -384,7 +384,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -529,8 +529,8 @@ function ictdirecta_actualitat_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-actualitat-field_seccio'
-  $field_instances['node-actualitat-field_seccio'] = array(
+  // Exported field_instance: 'node-actualitat-field_seccio_web'
+  $field_instances['node-actualitat-field_seccio_web'] = array(
     'bundle' => 'actualitat',
     'default_value' => NULL,
     'deleted' => 0,
@@ -541,22 +541,19 @@ function ictdirecta_actualitat_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'mark',
-    'field_name' => 'field_seccio',
-    'label' => 'Secció',
+    'field_name' => 'field_seccio_web',
+    'label' => 'Seccio web',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -566,7 +563,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -583,7 +580,7 @@ function ictdirecta_actualitat_field_default_field_instances() {
   t('Etiquetes');
   t('Fotografia de portada');
   t('Fotografia_portada');
-  t('Secció');
+  t('Seccio web');
 
   return $field_instances;
 }

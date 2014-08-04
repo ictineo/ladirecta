@@ -130,7 +130,7 @@ function ictdirecta_video_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -204,7 +204,7 @@ function ictdirecta_video_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 11,
     ),
   );
 
@@ -253,7 +253,7 @@ function ictdirecta_video_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 10,
     ),
   );
 
@@ -331,19 +331,19 @@ function ictdirecta_video_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-video-field_seccio'
-  $field_instances['node-video-field_seccio'] = array(
+  // Exported field_instance: 'node-video-field_seccio_web'
+  $field_instances['node-video-field_seccio_web'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -355,13 +355,13 @@ function ictdirecta_video_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_seccio',
-    'label' => 'Secció',
+    'fences_wrapper' => 'mark',
+    'field_name' => 'field_seccio_web',
+    'label' => 'Seccio web',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -371,7 +371,7 @@ function ictdirecta_video_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -387,7 +387,7 @@ function ictdirecta_video_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -418,7 +418,7 @@ function ictdirecta_video_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -434,7 +434,7 @@ function ictdirecta_video_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -470,7 +470,7 @@ function ictdirecta_video_field_default_field_instances() {
         ),
       ),
       'type' => 'taxonomy_shs',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -487,7 +487,7 @@ function ictdirecta_video_field_default_field_instances() {
           'file_view_mode' => 'full',
         ),
         'type' => 'media',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -548,7 +548,7 @@ function ictdirecta_video_field_default_field_instances() {
   t('Enter a comma-separated list of words to describe your content.');
   t('Image');
   t('Imatge preview video');
-  t('Secció');
+  t('Seccio web');
   t('Tags');
   t('Territori');
   t('Upload an image to go with this article.');
