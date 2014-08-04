@@ -51,6 +51,39 @@ function ictdirecta_portada_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'desplegar_secc';
+  $context->description = 'Boton desplegable menu secciones';
+  $context->tag = 'header';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => '4',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Boton desplegable menu secciones');
+  t('header');
+  $export['desplegar_secc'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'portada_columnaderecha';
   $context->description = 'Colocación columna derecha en first side bar';
   $context->tag = 'portada';

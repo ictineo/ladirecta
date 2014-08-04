@@ -27,6 +27,7 @@ dependencies[] = views_field
 dependencies[] = views_field_view
 dependencies[] = workbench
 features[context][] = customlogin
+features[context][] = desplegar_secc
 features[context][] = portada_columnaderecha
 features[context][] = portada_columnaizquierda
 features[context][] = portada_destacadotodascolumnas
