@@ -84,6 +84,7 @@ a {
 
 #block-block-5,
 #secondary-menu {
+  display: none; /*wip*/
   @include bsessio;
   a {
     padding: 0;
@@ -108,8 +109,13 @@ a {
   display:none;
 }
 
+ul.nice-menu {
+  border-top: 0;
+}
+
 #navigation {
   @include menu-shadow;
+  padding-top:20px;
 
 
 ul.nice-menu a {
@@ -124,9 +130,28 @@ ul.nice-menu li {
 ul li.odd  {
   border-left: 1px solid $gris7;
   padding-left: 5px;
+  //margin-left:20px;
+  }
+
+
+#block-nice-menus-1 {
+  .block-title {
+    @include tit-menu;
+    @include block-tit; 
+  }
+  li {
+  border-left: 0;
+  padding-left: 0;
+  @include territori-caixa;
+  a {
+    @include territori;
   }
 }
-
+}
+  ul.nice-menu ul {
+    top:2.8em;
+  }
+}
 
 
 .mark {

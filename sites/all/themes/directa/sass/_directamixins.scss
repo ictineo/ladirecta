@@ -61,7 +61,7 @@ $negre:#030303;
 @mixin bsubs {
   a {
     font-family:'publico_textroman';
-    font-size:24px;
+    font-size:18px;
     color:$blanc;
   }
   background-color:$vermell;
@@ -81,7 +81,7 @@ $negre:#030303;
 @mixin tit-menu {
   font-family:'graphik_regularregular';
   font-weight: normal;
-  font-size:16px;
+  font-size:14px;
   color:$gris7;
   text-transform:uppercase;
   line-height:26px;
@@ -89,15 +89,30 @@ $negre:#030303;
   &:hover {
     font-family:'graphiksemibold';
     color:$vermell;
-    font-size:16px;
+    font-size:14px;
     line-height:26px;
   }
 }
-
+@mixin block-tit {
+  font-family:'graphiksemibold';
+  color:$gris7;
+  font-size:14px;
+  padding-bottom:5px;
+  padding-left:10px;
+}
+  
 @mixin territori {
   font-family:'graphiksemibold';
-  font-size:19px;
+  font-size:16px;
   color:$blanc;
+  text-transform: none;
+  font-weight:normal;
+}
+
+@mixin territori-caixa {
+  background-color: $gris2;
+  padding: 10px;
+  border-bottom: 1px solid $gris7;
 }
 
 @mixin breadcrumb {

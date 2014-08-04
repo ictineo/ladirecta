@@ -34,7 +34,7 @@ $zen-auto-include-item-base: false;
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -54,6 +54,13 @@ $zen-auto-include-item-base: false;
 #footer {
   @include zen-grid-container();
 }
+
+/**All**/
+#name-and-slogan {
+  display: none;
+}
+
+
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
@@ -157,8 +164,10 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 960px) {
   $zen-column-count: 23;
   $zen-gutter-width:20px;
+  @include zen-grid-background();
   #header {
-    @include zen-nested-container();
+    //@include zen-grid-item(23,1);
+    //@include zen-nested-container();
     #logo {
       @include zen-grid-item(6,1);
     }
@@ -171,7 +180,6 @@ $zen-auto-include-item-base: false;
       $zen-column-count:18;
       $zen-gutter-width:20px;
       @include zen-grid-container();
-      @include zen-grid-background();
       #block-block-4 {
         @include zen-grid-item(2,2);
       }
@@ -214,89 +222,112 @@ $zen-auto-include-item-base: false;
   #navigation .region-navigation {
     @include zen-clear(both);
     $zen-column-count:6;
-    $zen-gutter-width:20px;
+    $zen-gutter-width:10px;
     @include zen-grid-container();
     @include zen-grid-background();
-    #block-nice-menus-3 {
+    #block-nice-menus-3 ul {
       @include zen-grid-item(2,1);
-      @include zen-nested-container();
+      li.even {
+        @include zen-grid-item(3,1);
+      }
+      li.odd {
+        @include zen-grid-item(3,4);
+        @include zen-clear(left);
+      }
     }
-    #block-nice-menus-2 {
+    
+    #block-nice-menus-2 ul {
       @include zen-grid-item(2,3);
-      @include zen-nested-container();
+      @include zen-grid-background();
+        li.even {
+          @include zen-grid-item(3,1);
+        }
+        li.odd {
+          @include zen-grid-item(3,4);
+          @include zen-clear(left);
+      }
     }
     #block-nice-menus-1 {
       @include zen-grid-item(2,5);
-      @include zen-nested-container();
-    }
-  }
-  
-  .block-nice-menus {
-    $zen-column-count:2;
-    $zen-gutter-width:20px;
-    @include zen-grid-container;
-    @include zen-grid-background();
-    li.odd {
-      @include zen-grid-container;
-      @include zen-grid-item(2,1);
-      @include zen-clear(left);
-    }
-    li.even {
-      @include zen-grid-item(2,3);
+      .block-title {
+        @include zen-grid-item(4,3);
+      }
+      ul {
+       @include zen-clear();
+       @include zen-grid-item(4,3);
+
+      }
+      ul li ul {
+        @include zen-grid-item(6,1);
+      }
     }
   }
 
 
+  #content,
+  .sidebars,
+  .region-help {
+  }
+  .region-help {
+    display:none;
+  }
+ .front {
+   #main {
+     $zen-column-count:23;
+     $zen-gutter-width:10px; 
+     @include zen-grid-container();
+     @include zen-grid-background();
+       
+     #content,
+     .sidebars {
+       margin-top:3*$nav-height;
+     }
+     #content {
+       margin-top:3*$nav-height;
+       @include zen-grid-item(9,1);
+     }
+     .sidebars .region-sidebar-first {
+       @include zen-grid-item(8,10);
+       }
+     .sidebars .region-sidebar-second {
+       @include zen-grid-item(6,18);
+     }
+   }
+ }
+ 
 
 
 
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
+
+/*
+   The layout when there is only one sidebar, the left one.
   .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(4, 2);
     }
-
-    /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(1, 1);
     }
   }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
   .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
     #content {
       @include zen-grid-item(4, 1);
     }
-
-    /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(1, 5);
     }
   }
-
-  /**
-   * The layout when there are two sidebars.
-   */
   .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(3, 2);
     }
-
-    /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(1, 1);
     }
-
-    /* Span 1 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(1, 5);
     }
-  }
+   }
+   */
 }
+
