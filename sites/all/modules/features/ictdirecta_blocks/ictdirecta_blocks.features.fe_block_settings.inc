@@ -136,7 +136,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
+    'title' => 'Escull territori:',
     'visibility' => 0,
   );
 
