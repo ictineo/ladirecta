@@ -280,7 +280,43 @@ $zen-auto-include-item-base: false;
      #destacat {
        //@include zen-grid-item(1,23);
        @include zen-clear(both);
-       position:relative;
+       @include zen-grid-background();
+       @include zen-nested-container();
+
+       .field-fotografies {
+         @include zen-grid-item(11,1);
+       }
+       .views-field-nothing {
+         @include zen-grid-item(12,1,right);
+       }
+       .views-field-title {
+         @include zen-clear(right);
+         @include zen-grid-item(12,1,right);
+       }
+       .field-body,
+       .field-continguts-relacionats-ref {
+         @include zen-clear(right);
+         @include zen-grid-item(12,1,right);
+       }
+       .attachment {
+         @include zen-clear(both);
+         $zen-column-count:4;
+         $zen-gutter-width:10px;
+         @include zen-grid-container();
+         @include zen-grid-background();
+         .field-fotografies {
+           @include zen-grid-item(2,1);
+         }
+         .autor,
+         .date-display-single,
+         .field-body {
+           @include zen-clear(right);
+           @include zen-grid-item(2,3);
+         }
+         
+       }
+         
+       
      }
 
 
