@@ -277,12 +277,19 @@ $zen-auto-include-item-base: false;
      $zen-gutter-width:10px; 
      @include zen-grid-container();
      @include zen-grid-background();
+     #content {
+       @include zen-grid-item(9,1);
+     }
+     .sidebars .region-sidebar-first {
+       @include zen-grid-item(8,10);
+     }
+     .sidebars .region-sidebar-second {
+       @include zen-grid-item(6,18);
+     }
      #destacat {
-       //@include zen-grid-item(1,23);
        @include zen-clear(both);
        @include zen-grid-background();
        @include zen-nested-container();
-
        .field-fotografies {
          @include zen-grid-item(11,1);
        }
@@ -313,27 +320,11 @@ $zen-auto-include-item-base: false;
            @include zen-clear(right);
            @include zen-grid-item(2,3);
          }
-         
        }
-         
-       
      }
-
-
-     #content,
-     .sidebars {
-       //margin-top:3*$nav-height;
-     }
-     #content {
-       @include zen-grid-item(9,1);
-     }
-     .sidebars .region-sidebar-first {
-       @include zen-grid-item(8,10);
-       }
-     .sidebars .region-sidebar-second {
-       @include zen-grid-item(6,18);
-     }
-   }
+     
+   } 
+  
  }
  
 
