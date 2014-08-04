@@ -156,6 +156,9 @@ function ictdirecta_fotogaleria_strongarm() {
         'xmlsitemap' => array(
           'weight' => '1',
         ),
+        'flag' => array(
+          'weight' => '11',
+        ),
       ),
       'display' => array(
         'easy_social_1' => array(

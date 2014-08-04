@@ -111,7 +111,7 @@ function ictdirecta_noticianew_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

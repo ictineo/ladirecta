@@ -52,7 +52,7 @@ function ictdirecta_portada_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        '<front>' => '<front>',
+        'directa_site2/admin/workbench/portada' => 'directa_site2/admin/workbench/portada',
       ),
     ),
   );
@@ -67,6 +67,7 @@ function ictdirecta_portada_context_default_contexts() {
         ),
       ),
     ),
+    'breadcrumb' => '0',
   );
   $context->condition_mode = 1;
 

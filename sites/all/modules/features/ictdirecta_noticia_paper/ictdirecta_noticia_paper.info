@@ -47,7 +47,6 @@ features[field_instance][] = node-noticia-field_etiquetes
 features[field_instance][] = node-noticia-field_seccio
 features[field_instance][] = node-noticia-field_territori
 features[field_instance][] = node-noticia_paper-field_continguts_relacionats
-features[field_instance][] = node-noticia_paper-field_fotografies
 features[field_instance][] = node-noticia_paper-field_subtitol
 features[node][] = noticia
 features[variable][] = additional_settings__active_tab_noticia

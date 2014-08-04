@@ -37,7 +37,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['relationships']['field_fotografies_value']['table'] = 'field_data_field_fotografies';
   $handler->display->display_options['relationships']['field_fotografies_value']['field'] = 'field_fotografies_value';
   $handler->display->display_options['relationships']['field_fotografies_value']['delta'] = '-1';
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -107,7 +107,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
-  /* Field: Content: Títol */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';

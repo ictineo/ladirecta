@@ -223,7 +223,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -244,7 +244,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -326,7 +326,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -370,7 +370,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -396,7 +396,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -465,7 +465,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -579,7 +579,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -615,45 +615,14 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'type' => 'field_collection_fields',
         'weight' => 12,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_continguts_relacionats',
-    'label' => 'Noticies relacionades',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-noticia_paper-field_fotografies'
-  $field_instances['node-noticia_paper-field_fotografies'] = array(
-    'bundle' => 'noticia_paper',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
+      'full' => array(
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -661,11 +630,17 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_fotografies',
-    'label' => 'Fotografies',
+    'field_name' => 'field_continguts_relacionats',
+    'label' => 'Contingut relacionat',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -675,7 +650,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -693,11 +668,24 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 10,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -731,9 +719,7 @@ function ictdirecta_noticia_paper_field_default_field_instances() {
   t('Contingut relacionat');
   t('Data');
   t('Etiquetes');
-  t('Fotografies');
   t('Mostra\'l en portada	');
-  t('Noticies relacionades');
   t('Notícies relacionades');
   t('Secció');
   t('Subtítol');

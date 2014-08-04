@@ -186,7 +186,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '11',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -204,7 +204,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -222,7 +222,7 @@ function ictdirecta_noticia_paper_strongarm() {
             'visible' => FALSE,
           ),
           'token' => array(
-            'weight' => '13',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
