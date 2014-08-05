@@ -367,5 +367,63 @@ function ictdirecta_portada_context_default_contexts() {
   $context->condition_mode = 0;
   $export['portada_negreta'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_seccions_inferior';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-portada_seccions-block' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block',
+          'region' => 'seccion_portada',
+          'weight' => '-10',
+        ),
+        'views-portada_seccions-block_1' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block_1',
+          'region' => 'seccion_portada',
+          'weight' => '-9',
+        ),
+        'views-portada_seccions-block_2' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block_2',
+          'region' => 'seccion_portada',
+          'weight' => '-8',
+        ),
+        'views-portada_seccions-block_3' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block_3',
+          'region' => 'seccion_portada',
+          'weight' => '-7',
+        ),
+        'views-portada_seccions-block_4' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block_4',
+          'region' => 'seccion_portada',
+          'weight' => '-6',
+        ),
+        'views-portada_seccions-block_5' => array(
+          'module' => 'views',
+          'delta' => 'portada_seccions-block_5',
+          'region' => 'seccion_portada',
+          'weight' => '-5',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['portada_seccions_inferior'] = $context;
+
   return $export;
 }

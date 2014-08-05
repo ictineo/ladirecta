@@ -2111,5 +2111,352 @@ function ictdirecta_portada_views_default_views() {
   );
   $export['portada_general'] = $view;
 
+  $view = new view();
+  $view->name = 'portada_seccions';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Portada-seccions';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Economia';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_portada_fotogaleria' => 'field_portada_fotogaleria',
+    'field_video' => 'field_portada_fotogaleria',
+    'title' => 'title',
+    'body' => 'title',
+    'field_seccio_web' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_portada_fotogaleria' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_video' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_seccio_web' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Field: Content: Portada Noticia */
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['id'] = 'field_portada_fotogaleria';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['table'] = 'field_data_field_portada_fotogaleria';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['field'] = 'field_portada_fotogaleria';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['label'] = '';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_portada_fotogaleria']['field_api_classes'] = TRUE;
+  /* Field: Content: Video */
+  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
+  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_video']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video']['settings'] = array(
+    'file_view_mode' => 'default',
+  );
+  $handler->display->display_options['fields']['field_video']['field_api_classes'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '200',
+  );
+  $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  /* Field: Content: Seccio web */
+  $handler->display->display_options['fields']['field_seccio_web']['id'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['field'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['label'] = 'Veure mes';
+  $handler->display->display_options['fields']['field_seccio_web']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['field_api_classes'] = TRUE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    17 => '17',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+
+  /* Display: Economia */
+  $handler = $view->new_display('block', 'Economia', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    6 => '6',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+  $handler->display->display_options['block_description'] = 'portada-seccions-economia';
+
+  /* Display: Llibertats */
+  $handler = $view->new_display('block', 'Llibertats', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Llibertats';
+  $handler->display->display_options['block_description'] = 'portada-seccions-llibertats';
+
+  /* Display: Drets */
+  $handler = $view->new_display('block', 'Drets', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Drets';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+  $handler->display->display_options['block_description'] = 'portada-seccions-drets';
+
+  /* Display: Internacional */
+  $handler = $view->new_display('block', 'Internacional', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Internacional';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+  $handler->display->display_options['block_description'] = 'portada-iseccions-nternacional';
+
+  /* Display: Politica */
+  $handler = $view->new_display('block', 'Politica', 'block_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Politica';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    16 => '16',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+  $handler->display->display_options['block_description'] = 'portada-seccions-politica';
+
+  /* Display: Territori */
+  $handler = $view->new_display('block', 'Territori', 'block_5');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'fotogaleria' => 'fotogaleria',
+    'noticia' => 'noticia',
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
+  $handler->display->display_options['block_description'] = 'portada-seccions-territori';
+  $translatables['portada_seccions'] = array(
+    t('Master'),
+    t('Economia'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Veure mes'),
+    t('portada-seccions-economia'),
+    t('Llibertats'),
+    t('portada-seccions-llibertats'),
+    t('Drets'),
+    t('portada-seccions-drets'),
+    t('Internacional'),
+    t('portada-iseccions-nternacional'),
+    t('Politica'),
+    t('portada-seccions-politica'),
+    t('Territori'),
+    t('portada-seccions-territori'),
+  );
+  $export['portada_seccions'] = $view;
+
   return $export;
 }

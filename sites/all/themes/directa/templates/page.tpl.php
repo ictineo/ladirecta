@@ -124,12 +124,16 @@ if (drupal_is_front_page()) {
 
   </div>
  
+
    <div id="interior">
      <?php print render($page['interior']); ?>
    </div>   
 
-
-  <?php print render($page['footer']); ?>
+   <div id="seccion_portada">
+     <?php print render($page['seccion_portada']); ?>
+   </div>   
+  
+<?php print render($page['footer']); ?>
 
 </div>
 
