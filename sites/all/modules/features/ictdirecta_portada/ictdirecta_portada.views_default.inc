@@ -270,6 +270,17 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['type']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Seccio web */
+  $handler->display->display_options['fields']['field_seccio_web']['id'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['field'] = 'field_seccio_web';
+  $handler->display->display_options['fields']['field_seccio_web']['label'] = 'Seccio';
+  $handler->display->display_options['fields']['field_seccio_web']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_seccio_web']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_seccio_web']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_seccio_web']['field_api_classes'] = TRUE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -283,7 +294,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
   $handler->display->display_options['fields']['ops_1']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
-  $handler->display->display_options['fields']['ops_1']['label'] = 'Columna  Esquerra';
+  $handler->display->display_options['fields']['ops_1']['label'] = 'Columna  Esquerra / Central';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
@@ -291,6 +302,9 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['ops']['field'] = 'ops';
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = 'Columna Dreta';
+  $handler->display->display_options['fields']['ops']['alter']['text'] = '<div class= "[field_seccio_web]" > [ops] </div>';
+  $handler->display->display_options['fields']['ops']['element_type'] = 'div';
+  $handler->display->display_options['fields']['ops']['element_class'] = '[field_seccio_web]';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops_2']['id'] = 'ops_2';
@@ -298,6 +312,10 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['ops_2']['field'] = 'ops';
   $handler->display->display_options['fields']['ops_2']['relationship'] = 'flag_content_rel_2';
   $handler->display->display_options['fields']['ops_2']['label'] = 'Destacat 3 Col';
+  $handler->display->display_options['fields']['ops_2']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['ops_2']['alter']['text'] = '<div id=[type] > [ops_2] </div>';
+  $handler->display->display_options['fields']['ops_2']['element_type'] = 'div';
+  $handler->display->display_options['fields']['ops_2']['element_class'] = '[field_seccio_web]';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
@@ -342,9 +360,12 @@ function ictdirecta_portada_views_default_views() {
     t('flag_dret'),
     t('flag_izq'),
     t('flag_dest3col'),
-    t('Columna  Esquerra'),
+    t('Seccio'),
+    t('Columna  Esquerra / Central'),
     t('Columna Dreta'),
+    t('<div class= "[field_seccio_web]" > [ops] </div>'),
     t('Destacat 3 Col'),
+    t('<div id=[type] > [ops_2] </div>'),
   );
   $export['gestioportada'] = $view;
 
@@ -760,6 +781,11 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Flags: portada_ciz */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -944,6 +970,11 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: portada_ciz */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
@@ -1209,6 +1240,11 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Portada Expresions auxiliar';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: portada_ciz */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -1304,6 +1340,7 @@ function ictdirecta_portada_views_default_views() {
     t('Ordena per'),
     t('Asc'),
     t('Desc'),
+    t('flag'),
     t('All'),
     t('Portada Expresions'),
     t('more'),
