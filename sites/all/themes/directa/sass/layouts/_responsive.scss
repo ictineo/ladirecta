@@ -180,6 +180,7 @@ $zen-auto-include-item-base: false;
       $zen-column-count:18;
       $zen-gutter-width:20px;
       @include zen-grid-container();
+      @include zen-grid-background();
       #block-block-4 {
         @include zen-grid-item(2,2);
       }
@@ -188,6 +189,9 @@ $zen-auto-include-item-base: false;
       }
       #block-block-1 {
         @include zen-grid-item(4,9);
+      }
+      #block-block-3 {
+        @include zen-grid-item(3,6);
       }
       #block-views-exp-hemeroteca-page-1 {
         @include zen-grid-item(6,13);
@@ -326,7 +330,59 @@ $zen-auto-include-item-base: false;
    } 
   
  }
- 
+ .not-logged-in.page-user {
+   #header,
+   #navigation {
+     display: none;
+   }
+   #content {
+     $zen-column-count:4;
+     $zen-gutter-width:10px;
+     @include zen-grid-container();
+     @include zen-grid-background();
+     h1#page-title {
+       @include zen-grid-item(2,2);
+       @include zen-clear(both);
+     }
+     ul li.tabs-primary__tab.is-active {
+       @include zen-clear(both);
+       @include zen-grid-item(1,2);
+       display: none;
+     }
+     ul li.tabs-primary__tab {
+       @include zen-clear(both);
+       @include zen-grid-item(1,3);
+       display: none;
+     }
+     #edit-account,
+     #user-pass,
+     #user-login {
+       @include zen-clear();
+       @include zen-grid-item(1,2,left);
+     }
+     #block-block-5--2 {
+       @include zen-grid-item(1,2,right);
+       @include zen-clear(left);
+     }
+     #block-block-6 {
+       @include zen-clear();
+       @include zen-grid-item(1,3);
+     }
+     #block-block-8 {
+       @include zen-grid-item(1,2);
+     }
+   }
+   .region-sidebar-first {
+     $zen-column-count:4;
+     $zen-gutter-width:10px;
+     @include zen-grid-container();
+     @include zen-grid-background();
+     #block-block-8 {
+       @include zen-grid-item(1,2);
+       }
+     }
+ }
+
 
 
 

@@ -14,8 +14,6 @@ $blanc: #FFFFFF;
 $negre:#030303;
 
 
-
-
 /*Transversals*/
 @mixin enllac-net {
   text-decoration:none;
@@ -33,6 +31,33 @@ $negre:#030303;
   width:20px;
   height:20px;
 }
+@mixin reset-button {
+  .form-action { 
+    border: none;  
+    padding-top:5px;
+    width:100%;
+    margin-top:15px;
+  }
+  button, 
+  input[type="button"], 
+  input[type="reset"], 
+  input[type="submit"] {
+    border: none;  
+    padding-top:5px;
+    width:100%;
+    margin-top:15px;
+  }
+ }
+
+/*logo*/
+ @mixin logo() {
+   background-image:url('../images/logo.png');
+   background-repeat:no-repeat;
+   display:block;
+   content:"";
+   width:132px;
+   height:39px;
+ }
 
 
 
@@ -208,7 +233,16 @@ $negre:#030303;
   font-weight:normal;
 }
  
-
+/*LOGIN*/
+@mixin reset-login() {
+  label,
+  .description {
+    display:none;
+  }
+  .form-item {
+    margin: 0;
+  }
+}
 
 
 

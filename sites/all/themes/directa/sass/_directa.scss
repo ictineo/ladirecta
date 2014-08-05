@@ -22,12 +22,7 @@ a {
 
 
 .html #header #logo {
- background-image:url('../images/logo.png');
- background-repeat:no-repeat;
- display:block;
- content:"";
- width:132px;
- height:39px;
+ @include logo(); 
 }
 #header {
   margin-top:10px;
@@ -164,7 +159,7 @@ ul li.odd  {
 
 
 .field-seccio-web {
-  background-color:$grisfosc;
+  background-color:$gris7;
   a {
     @include seccio;
   }
@@ -236,6 +231,42 @@ span.date-display-single {
 .view-portada-columnaizquierda.view-display-id-block_1 {
   h2.node-title a {
     @include titular-not;
+  }
+}
+/**USER LOGIN PAGE**/
+.not-logged-in.page-user {
+  #user-pass,
+  #edit-account,
+  #user-login {
+    @include reset-login;
+    .form-item {
+      @include box-shadow;
+    }
+    @include reset-button;
+  }
+  h1#page-title{
+    @include logo();
+    text-align: center;
+    width:auto;
+    padding-top:40px;
+    margin-bottom:40px;
+    background-position: top center;
+  }
+  #block-block-5--2 {
+    @include bsubs;
+    padding-top:20px;
+    padding-bottom:20px;
+    h2 {
+      display: none;
+    }
+  }
+  
+  #block-block-6, 
+  #block-block-8, 
+  #block-block-5--2 {
+    h2 {
+      display:none;
+    }
   }
 }
 
