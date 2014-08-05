@@ -299,5 +299,73 @@ function ictdirecta_portada_context_default_contexts() {
   $context->condition_mode = 0;
   $export['portada_esquerra_territori'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_expresions_territorial';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'territorial/*' => 'territorial/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-160100222da673a8132c52dad64ea9c2' => array(
+          'module' => 'views',
+          'delta' => '160100222da673a8132c52dad64ea9c2',
+          'region' => 'interior',
+          'weight' => '-10',
+        ),
+        'views-e7607627710ba8b9dcad21d78ca817fc' => array(
+          'module' => 'views',
+          'delta' => 'e7607627710ba8b9dcad21d78ca817fc',
+          'region' => 'interior',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['portada_expresions_territorial'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'portada_negreta';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-9e43a5859a02b156a0111ba48933a77f' => array(
+          'module' => 'views',
+          'delta' => '9e43a5859a02b156a0111ba48933a77f',
+          'region' => 'interior',
+          'weight' => '-10',
+        ),
+        'views-b6fc8349d2e36602d9ec641764829686' => array(
+          'module' => 'views',
+          'delta' => 'b6fc8349d2e36602d9ec641764829686',
+          'region' => 'interior',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['portada_negreta'] = $context;
+
   return $export;
 }

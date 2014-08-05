@@ -348,6 +348,16 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Field: Content: Autoria general */
+  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
+  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
