@@ -233,6 +233,17 @@ span.date-display-single {
     @include titular-not;
   }
 }
+/*FOOTER*/
+#footer {
+  h2 {
+    display: none;
+  }
+}
+
+
+
+
+
 /**USER LOGIN PAGE**/
 .not-logged-in.page-user {
   #user-pass,

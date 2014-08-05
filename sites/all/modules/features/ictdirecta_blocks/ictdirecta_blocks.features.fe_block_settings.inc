@@ -76,6 +76,70 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-accedeix_login'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'accedeix_login',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'accedeix_login',
+    'visibility' => 0,
+  );
+
+  $export['block-ccommons'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'ccommons',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'ccommons',
+    'visibility' => 0,
+  );
+
   $export['block-customlogin'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -105,6 +169,38 @@ function ictdirecta_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['block-footer_comptador'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'footer_comptador',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'footer_comptador',
     'visibility' => 0,
   );
 
@@ -556,6 +652,38 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['menu-menu-menu-footer'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'menu-menu-footer',
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['menu-menu-menu-paper'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -592,6 +720,38 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 'menu-menu-territorial',
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['menu-menu-menu-xxss'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'menu-menu-xxss',
     'module' => 'menu',
     'node_types' => array(),
     'pages' => '',

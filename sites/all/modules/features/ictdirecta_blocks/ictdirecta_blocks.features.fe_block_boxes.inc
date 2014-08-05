@@ -19,12 +19,28 @@ function ictdirecta_blocks_default_fe_block_boxes() {
   $export['accedeix_login'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'ccommons';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'ccommons';
+  $fe_block_boxes->body = '<a href=""></a> | <a href="">Avís de seguretat</a>';
+
+  $export['ccommons'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'caixa de login';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'customlogin';
   $fe_block_boxes->body = '<a href="/user">Inicia sessió</a>';
 
   $export['customlogin'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'footer_comptador';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'footer_comptador';
+  $fe_block_boxes->body = 'Som <span class="comptador"></span> subscriptores. <div class="subs">Faltes tu!</div>';
+
+  $export['footer_comptador'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'login-pass';
