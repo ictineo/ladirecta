@@ -108,6 +108,70 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-login_pass'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'login_pass',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'login-pass',
+    'visibility' => 0,
+  );
+
+  $export['block-nou_directa_login'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'nou_directa_login',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'nou_directa_login',
+    'visibility' => 0,
+  );
+
   $export['block-sections_button'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -137,6 +201,38 @@ function ictdirecta_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['block-subscriute_login'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'subscriute_login',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'subscriute-login',
     'visibility' => 0,
   );
 
@@ -648,7 +744,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
+    'title' => '',
     'visibility' => 0,
   );
 
@@ -732,8 +828,8 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => -1,
       ),
       'directa' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'directa',
         'weight' => -1,
       ),
@@ -924,8 +1020,8 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'directa' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'directa',
         'weight' => 0,
       ),
@@ -1224,7 +1320,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
+    'title' => '',
     'visibility' => 0,
   );
 
@@ -1256,7 +1352,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '<none>',
+    'title' => '',
     'visibility' => 0,
   );
 
@@ -1264,38 +1360,6 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 'fotogaleria-block',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'directa' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'directa',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['views-fotogaleria-block_1'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'fotogaleria-block_1',
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
@@ -1567,7 +1631,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'directa',
-        'weight' => -99,
+        'weight' => -32,
       ),
       'seven' => array(
         'region' => 'content',

@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the ictdirecta_blocks feature.
  */
+
+include_once 'ictdirecta_blocks.features.inc';
