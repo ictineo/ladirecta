@@ -62,14 +62,9 @@ a {
     background-image:url('../images/vi.png');
   }
 }
-  html.js input.form-autocomplete {
-    background-image:url('../images/vi.png');
-    background-repeat:no-repeat;
-    background-position:right;
-    display:block;
-    content:"";
-    border:1px solid $gris2;
-    height:25px;
+#block-views-exp-hemeroteca-page-1 {
+  /**/
+  @include buscador;
   }
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;

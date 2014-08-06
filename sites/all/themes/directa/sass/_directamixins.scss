@@ -99,6 +99,22 @@ $negre:#030303;
   font-color:$gris4;
 }
 
+@mixin buscador {
+ html.js input.form-autocomplete {
+    background-image:url('../images/vi.png');
+    background-repeat:no-repeat;
+    background-position:right;
+    display:block;
+    content:"";
+    border:1px solid $gris2;
+    height:25px;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+/**/
+}
+
 
 /*Menu*/
 
