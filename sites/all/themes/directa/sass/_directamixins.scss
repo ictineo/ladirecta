@@ -30,7 +30,13 @@ $negre:#030303;
   line-height:$line-height;
   text-transform:uppercase;
 }
-
+@mixin graphik-semibold($font-size,$color,$line-height){
+  font-family:'graphiksemibold';
+  font-size:$font-size;
+  color:$color;
+  line-height:$line-height;
+  text-transform:uppercase;
+}
 /*Transversals*/
 @mixin enllac-net {
   text-decoration:none;

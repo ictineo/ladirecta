@@ -74,7 +74,6 @@ a {
 
 #block-block-5,
 #secondary-menu {
-  display: none; /*wip*/
   @include bsessio;
   a {
     padding: 0;
@@ -107,25 +106,41 @@ ul.nice-menu {
   @include menu-shadow;
   padding-top:20px;
   margin-bottom:20px;
+  h2 {
+    display: none;
+  }
+  #block-nice-menus-3 {
+    @include menu-seccions($blanc,$gris7);
+    ul {
+      background-image: url('../images/adj4.png');
+      a {
+        @include graphik-semibold(16px,$gris7,25px);
+      }
+    }
+  }
+  #block-nice-menus-2 {
+  }
+}
 
 
-ul.nice-menu a {
+/*
+ ul.nice-menu a {
   @include tit-menu;
 }
-ul.nice-menu li {
+  ul.nice-menu li {
   background-color: $blanc;
   border: 0;
   width:90%;
 }
 
-ul li.odd  {
+  ul li.odd  {
   border-left: 1px solid $gris7;
   padding-left: 5px;
   //margin-left:20px;
   }
 
 
-#block-nice-menus-1 {
+  #block-nice-menus-1 {
   .block-title {
     @include tit-menu;
     @include block-tit; 
@@ -143,11 +158,15 @@ ul li.odd  {
     top:2.8em;
   }
 }
+*/
 
 
 .mark {
   color:none;
 }
+
+
+
 
 
 /*ESTILS DE TEXT*/

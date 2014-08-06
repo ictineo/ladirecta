@@ -2492,7 +2492,7 @@ a {
   text-align: right;
   border-radius: 5px;
 }
-/* line 92, ../sass/_directamixins.scss */
+/* line 98, ../sass/_directamixins.scss */
 #block-block-4 a {
   font-family: 'graphikmedium';
   font-size: 16px;
@@ -2540,7 +2540,7 @@ a {
 #block-views-exp-hemeroteca-page-1 {
   /**/
 }
-/* line 131, ../sass/_directamixins.scss */
+/* line 137, ../sass/_directamixins.scss */
 #block-views-exp-hemeroteca-page-1 html.js,
 #block-views-exp-hemeroteca-page-1 html.js input.form-autocomplete,
 #block-views-exp-hemeroteca-page-1 input.form-autocomplete {
@@ -2552,11 +2552,11 @@ a {
   border: 1px solid #767676;
   height: 28px;
 }
-/* line 140, ../sass/_directamixins.scss */
+/* line 146, ../sass/_directamixins.scss */
 #block-views-exp-hemeroteca-page-1 .views-exposed-form #edit-search-api-views-fulltext-wrapper {
   padding: 0px;
 }
-/* line 143, ../sass/_directamixins.scss */
+/* line 149, ../sass/_directamixins.scss */
 #block-views-exp-hemeroteca-page-1 .views-submit-button {
   display: none;
 }
@@ -2569,20 +2569,18 @@ a {
 /* line 76, ../sass/_directa.scss */
 #block-block-5,
 #secondary-menu {
-  display: none;
-  /*wip*/
   background-color: lightgrey;
   text-align: center;
   padding: 3px;
 }
-/* line 103, ../sass/_directamixins.scss */
+/* line 109, ../sass/_directamixins.scss */
 #block-block-5 a,
 #secondary-menu a {
   font-family: 'graphikmedium';
   font-size: 17px;
   color: #5e5e5e;
 }
-/* line 79, ../sass/_directa.scss */
+/* line 78, ../sass/_directa.scss */
 #block-block-5 a,
 #secondary-menu a {
   padding: 0;
@@ -2601,14 +2599,14 @@ a {
   height: auto;
 }
 
-/* line 92, ../sass/_directa.scss */
+/* line 91, ../sass/_directa.scss */
 #block-block-1 {
   background-color: #c13432;
   text-align: center;
   padding: 3px;
   border-radius: 5px;
 }
-/* line 113, ../sass/_directamixins.scss */
+/* line 119, ../sass/_directamixins.scss */
 #block-block-1 a {
   font-family: 'publico_textroman';
   font-size: 18px;
@@ -2616,17 +2614,17 @@ a {
 }
 
 /*MENU*/
-/* line 98, ../sass/_directa.scss */
+/* line 97, ../sass/_directa.scss */
 .front #main-menu {
   display: none;
 }
 
-/* line 102, ../sass/_directa.scss */
+/* line 101, ../sass/_directa.scss */
 ul.nice-menu {
   border-top: 0;
 }
 
-/* line 106, ../sass/_directa.scss */
+/* line 105, ../sass/_directa.scss */
 #navigation {
   -webkit-box-shadow: inset 0px 15px 12px -12px #e9e9e9;
   -moz-box-shadow: inset 0px 15px 12px -12px #e9e9e9;
@@ -2634,90 +2632,95 @@ ul.nice-menu {
   padding-top: 20px;
   margin-bottom: 20px;
 }
-/* line 112, ../sass/_directa.scss */
-#navigation ul.nice-menu a {
-  font-family: 'graphik_regularregular';
-  font-weight: normal;
-  font-size: 14px;
-  color: #5e5e5e;
-  text-transform: uppercase;
-  line-height: 26px;
-  text-decoration: none;
-  padding: 0;
+/* line 109, ../sass/_directa.scss */
+#navigation h2 {
+  display: none;
 }
-/* line 210, ../sass/_directamixins.scss */
-#navigation ul.nice-menu a:hover {
-  font-family: 'graphiksemibold';
-  color: #c13432;
-  font-size: 14px;
-  line-height: 26px;
+/* line 172, ../sass/_directamixins.scss */
+#navigation #block-nice-menus-3 ul {
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
-/* line 115, ../sass/_directa.scss */
-#navigation ul.nice-menu li {
+/* line 176, ../sass/_directamixins.scss */
+#navigation #block-nice-menus-3 ul li {
+  list-style: none;
   background-color: white;
-  border: 0;
-  width: 90%;
+  border: none;
 }
-/* line 121, ../sass/_directa.scss */
-#navigation ul li.odd {
+/* line 180, ../sass/_directamixins.scss */
+#navigation #block-nice-menus-3 ul li.odd {
   border-left: 1px solid #5e5e5e;
-  padding-left: 5px;
 }
-/* line 129, ../sass/_directa.scss */
-#navigation #block-nice-menus-1 .block-title {
+/* line 183, ../sass/_directamixins.scss */
+#navigation #block-nice-menus-3 ul li a {
   font-family: 'graphik_regularregular';
-  font-weight: normal;
-  font-size: 14px;
-  color: #5e5e5e;
+  font-size: 15px;
+  color: white;
+  line-height: 24px;
   text-transform: uppercase;
-  line-height: 26px;
-  text-decoration: none;
-  padding: 0;
-  font-family: 'graphiksemibold';
-  color: #5e5e5e;
-  font-size: 14px;
-  padding-bottom: 5px;
-  padding-left: 10px;
+  padding: 0 0 0px 10px;
 }
-/* line 210, ../sass/_directamixins.scss */
-#navigation #block-nice-menus-1 .block-title:hover {
-  font-family: 'graphiksemibold';
-  color: #c13432;
-  font-size: 14px;
-  line-height: 26px;
+/* line 114, ../sass/_directa.scss */
+#navigation #block-nice-menus-3 ul {
+  background-image: url("../images/adj4.png");
 }
-/* line 133, ../sass/_directa.scss */
-#navigation #block-nice-menus-1 li {
-  border-left: 0;
-  padding-left: 0;
-  background-color: #767676;
-  padding: 10px;
-  border-bottom: 1px solid #5e5e5e;
-}
-/* line 137, ../sass/_directa.scss */
-#navigation #block-nice-menus-1 li a {
+/* line 116, ../sass/_directa.scss */
+#navigation #block-nice-menus-3 ul a {
   font-family: 'graphiksemibold';
   font-size: 16px;
-  color: white;
-  text-transform: none;
-  font-weight: normal;
-}
-/* line 142, ../sass/_directa.scss */
-#navigation ul.nice-menu ul {
-  top: 2.8em;
+  color: #5e5e5e;
+  line-height: 25px;
+  text-transform: uppercase;
 }
 
-/* line 148, ../sass/_directa.scss */
+/*
+ ul.nice-menu a {
+  @include tit-menu;
+}
+  ul.nice-menu li {
+  background-color: $blanc;
+  border: 0;
+  width:90%;
+}
+
+  ul li.odd  {
+  border-left: 1px solid $gris7;
+  padding-left: 5px;
+  //margin-left:20px;
+  }
+
+
+  #block-nice-menus-1 {
+  .block-title {
+    @include tit-menu;
+    @include block-tit; 
+  }
+  li {
+  border-left: 0;
+  padding-left: 0;
+  @include territori-caixa;
+  a {
+    @include territori;
+  }
+}
+}
+  ul.nice-menu ul {
+    top:2.8em;
+  }
+}
+*/
+/* line 164, ../sass/_directa.scss */
 .mark {
   color: none;
 }
 
 /*ESTILS DE TEXT*/
-/* line 156, ../sass/_directa.scss */
+/* line 175, ../sass/_directa.scss */
 .field-seccio-web {
   background-color: #5e5e5e;
 }
-/* line 158, ../sass/_directa.scss */
+/* line 177, ../sass/_directa.scss */
 .field-seccio-web a {
   font-family: 'graphiksuper';
   color: white;
@@ -2726,11 +2729,11 @@ ul.nice-menu {
   padding: 0;
 }
 
-/* line 162, ../sass/_directa.scss */
+/* line 181, ../sass/_directa.scss */
 .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 164, ../sass/_directa.scss */
+/* line 183, ../sass/_directa.scss */
 .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
@@ -2739,33 +2742,33 @@ ul.nice-menu {
   padding: 0;
 }
 
-/* line 168, ../sass/_directa.scss */
+/* line 187, ../sass/_directa.scss */
 a.autor {
   color: #777777;
   text-transform: uppercase;
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 285, ../sass/_directamixins.scss */
+/* line 291, ../sass/_directamixins.scss */
 a.autor a {
   text-transform: underline;
 }
 
-/* line 171, ../sass/_directa.scss */
+/* line 190, ../sass/_directa.scss */
 span.date-display-single {
   color: #777777;
 }
-/* line 291, ../sass/_directamixins.scss */
+/* line 297, ../sass/_directamixins.scss */
 span.date-display-single a {
   text-transform: underline;
 }
 
 /*DESTACAT 3 COLUMNES*/
-/* line 179, ../sass/_directa.scss */
+/* line 198, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio {
   background-color: #5e5e5e;
 }
-/* line 181, ../sass/_directa.scss */
+/* line 200, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-seccio a {
   font-family: 'graphiksuper';
   color: white;
@@ -2773,26 +2776,26 @@ span.date-display-single a {
   text-decoration: none;
   padding: 0;
 }
-/* line 185, ../sass/_directa.scss */
+/* line 204, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block a.autor {
   color: #777777;
   text-transform: uppercase;
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 285, ../sass/_directamixins.scss */
+/* line 291, ../sass/_directamixins.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block a.autor a {
   text-transform: underline;
 }
-/* line 188, ../sass/_directa.scss */
+/* line 207, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block span.date-display-single {
   color: #777777;
 }
-/* line 291, ../sass/_directamixins.scss */
+/* line 297, ../sass/_directamixins.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block span.date-display-single a {
   text-transform: underline;
 }
-/* line 191, ../sass/_directa.scss */
+/* line 210, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .views-field-title a {
   font-family: 'graphiksemibold';
   font-size: 40px;
@@ -2800,24 +2803,24 @@ span.date-display-single a {
   color: #5e5e5e;
   text-align: left;
 }
-/* line 194, ../sass/_directa.scss */
+/* line 213, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-body {
   font-family: 'publico_textroman';
   font-size: 22px;
   line-height: 30px;
   color: #5e5e5e;
 }
-/* line 197, ../sass/_directa.scss */
+/* line 216, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .field-continguts-relacionats-ref {
   background-color: #5e5e5e;
 }
-/* line 207, ../sass/_directa.scss */
+/* line 226, ../sass/_directa.scss */
 .view-portada-destacadotodascolumnas.view-display-id-block .pretitular {
   display: block-inline;
 }
 
 /*COLUMNA NOTICIES (ESQUERRA)*/
-/* line 227, ../sass/_directa.scss */
+/* line 246, ../sass/_directa.scss */
 .view-portada-columnaizquierda.view-display-id-block_1 h2.node-title a {
   font-family: 'graphiksemibold';
   font-size: 36px;
@@ -2827,16 +2830,16 @@ span.date-display-single a {
 }
 
 /*FOOTER*/
-/* line 232, ../sass/_directa.scss */
+/* line 251, ../sass/_directa.scss */
 #footer {
   background-color: #5e5e5e;
 }
-/* line 235, ../sass/_directa.scss */
+/* line 254, ../sass/_directa.scss */
 #footer h2,
 #footer #block-system-powered-by {
   display: none;
 }
-/* line 131, ../sass/_directamixins.scss */
+/* line 137, ../sass/_directamixins.scss */
 #footer #block-views-exp-hemeroteca-page-1--2 html.js,
 #footer #block-views-exp-hemeroteca-page-1--2 html.js input.form-autocomplete,
 #footer #block-views-exp-hemeroteca-page-1--2 input.form-autocomplete {
@@ -2848,32 +2851,32 @@ span.date-display-single a {
   border: 1px solid #767676;
   height: 28px;
 }
-/* line 140, ../sass/_directamixins.scss */
+/* line 146, ../sass/_directamixins.scss */
 #footer #block-views-exp-hemeroteca-page-1--2 .views-exposed-form #edit-search-api-views-fulltext-wrapper {
   padding: 0px;
 }
-/* line 143, ../sass/_directamixins.scss */
+/* line 149, ../sass/_directamixins.scss */
 #footer #block-views-exp-hemeroteca-page-1--2 .views-submit-button {
   display: none;
 }
-/* line 241, ../sass/_directa.scss */
+/* line 260, ../sass/_directa.scss */
 #footer #block-menu-menu-menu-footer {
   border-bottom: solid 1px white;
 }
-/* line 152, ../sass/_directamixins.scss */
+/* line 158, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-footer ul {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
 }
-/* line 157, ../sass/_directamixins.scss */
+/* line 163, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-footer ul li {
   list-style: none;
   display: inline;
   padding-right: 20px;
 }
-/* line 244, ../sass/_directa.scss */
+/* line 263, ../sass/_directa.scss */
 #footer #block-menu-menu-menu-footer a {
   font-family: 'graphik_regularregular';
   font-size: 16px;
@@ -2881,7 +2884,7 @@ span.date-display-single a {
   line-height: 40px;
   text-transform: uppercase;
 }
-/* line 248, ../sass/_directa.scss */
+/* line 267, ../sass/_directa.scss */
 #footer #block-block-10 {
   font-family: 'graphikmedium';
   font-size: 15px;
@@ -2893,7 +2896,7 @@ span.date-display-single a {
   padding: 5px;
   text-transform: none;
 }
-/* line 254, ../sass/_directa.scss */
+/* line 273, ../sass/_directa.scss */
 #footer #block-block-10 .subs {
   background-color: #c13432;
   text-align: center;
@@ -2904,13 +2907,13 @@ span.date-display-single a {
   padding: 10px 5px;
   float: right;
 }
-/* line 113, ../sass/_directamixins.scss */
+/* line 119, ../sass/_directamixins.scss */
 #footer #block-block-10 .subs a {
   font-family: 'publico_textroman';
   font-size: 18px;
   color: white;
 }
-/* line 262, ../sass/_directa.scss */
+/* line 281, ../sass/_directa.scss */
 #footer #block-block-10 .comptador {
   background-image: url("../images/comptador.png");
   background-repeat: no-repeat;
@@ -2919,26 +2922,26 @@ span.date-display-single a {
   width: 95px;
   height: 39px;
 }
-/* line 166, ../sass/_directamixins.scss */
+/* line 172, ../sass/_directamixins.scss */
 #footer #block-nice-menus-2 ul,
 #footer #block-nice-menus-2--2 ul {
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* line 170, ../sass/_directamixins.scss */
+/* line 176, ../sass/_directamixins.scss */
 #footer #block-nice-menus-2 ul li,
 #footer #block-nice-menus-2--2 ul li {
   list-style: none;
   background-color: #5e5e5e;
   border: none;
 }
-/* line 174, ../sass/_directamixins.scss */
+/* line 180, ../sass/_directamixins.scss */
 #footer #block-nice-menus-2 ul li.odd,
 #footer #block-nice-menus-2--2 ul li.odd {
   border-left: 1px solid white;
 }
-/* line 177, ../sass/_directamixins.scss */
+/* line 183, ../sass/_directamixins.scss */
 #footer #block-nice-menus-2 ul li a,
 #footer #block-nice-menus-2--2 ul li a {
   font-family: 'graphik_regularregular';
@@ -2948,31 +2951,31 @@ span.date-display-single a {
   text-transform: uppercase;
   padding: 0 0 0px 10px;
 }
-/* line 274, ../sass/_directa.scss */
+/* line 293, ../sass/_directa.scss */
 #footer #block-nice-menus-2 ul,
 #footer #block-nice-menus-2--2 ul {
   background-image: url("../images/adj5.png");
 }
-/* line 166, ../sass/_directamixins.scss */
+/* line 172, ../sass/_directamixins.scss */
 #footer #block-nice-menus-3 ul,
 #footer #block-nice-menus-3--2 ul {
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* line 170, ../sass/_directamixins.scss */
+/* line 176, ../sass/_directamixins.scss */
 #footer #block-nice-menus-3 ul li,
 #footer #block-nice-menus-3--2 ul li {
   list-style: none;
   background-color: #5e5e5e;
   border: none;
 }
-/* line 174, ../sass/_directamixins.scss */
+/* line 180, ../sass/_directamixins.scss */
 #footer #block-nice-menus-3 ul li.odd,
 #footer #block-nice-menus-3--2 ul li.odd {
   border-left: 1px solid white;
 }
-/* line 177, ../sass/_directamixins.scss */
+/* line 183, ../sass/_directamixins.scss */
 #footer #block-nice-menus-3 ul li a,
 #footer #block-nice-menus-3--2 ul li a {
   font-family: 'graphik_regularregular';
@@ -2982,28 +2985,28 @@ span.date-display-single a {
   text-transform: uppercase;
   padding: 0 0 0px 10px;
 }
-/* line 281, ../sass/_directa.scss */
+/* line 300, ../sass/_directa.scss */
 #footer #block-nice-menus-3 ul,
 #footer #block-nice-menus-3--2 ul {
   background-image: url("../images/adj4.png");
 }
-/* line 166, ../sass/_directamixins.scss */
+/* line 172, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-xxss ul {
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* line 170, ../sass/_directamixins.scss */
+/* line 176, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-xxss ul li {
   list-style: none;
   background-color: #5e5e5e;
   border: none;
 }
-/* line 174, ../sass/_directamixins.scss */
+/* line 180, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-xxss ul li.odd {
   border-left: 1px solid white;
 }
-/* line 177, ../sass/_directamixins.scss */
+/* line 183, ../sass/_directamixins.scss */
 #footer #block-menu-menu-menu-xxss ul li a {
   font-family: 'graphik_regularregular';
   font-size: 15px;
@@ -3012,20 +3015,20 @@ span.date-display-single a {
   text-transform: uppercase;
   padding: 0 0 0px 10px;
 }
-/* line 287, ../sass/_directa.scss */
+/* line 306, ../sass/_directa.scss */
 #footer #block-menu-menu-menu-xxss ul {
   background-image: url("../images/share2.png");
   margin-top: 0;
 }
-/* line 290, ../sass/_directa.scss */
+/* line 309, ../sass/_directa.scss */
 #footer #block-menu-menu-menu-xxss ul li {
   border-left: 1px solid white;
 }
-/* line 295, ../sass/_directa.scss */
+/* line 314, ../sass/_directa.scss */
 #footer #block-block-9 {
   text-align: right;
 }
-/* line 297, ../sass/_directa.scss */
+/* line 316, ../sass/_directa.scss */
 #footer #block-block-9 a {
   font-family: 'graphikmedium';
   font-size: 15px;
@@ -3036,7 +3039,7 @@ span.date-display-single a {
   text-transform: none;
   text-decoration: underline;
 }
-/* line 302, ../sass/_directa.scss */
+/* line 321, ../sass/_directa.scss */
 #footer #block-block-9 a.cc {
   background-image: url("../images/cc.png");
   background-repeat: no-repeat;
@@ -3047,7 +3050,7 @@ span.date-display-single a {
 }
 
 /**USER LOGIN PAGE**/
-/* line 335, ../sass/_directamixins.scss */
+/* line 341, ../sass/_directamixins.scss */
 .not-logged-in.page-user #user-pass label,
 .not-logged-in.page-user #user-pass .description,
 .not-logged-in.page-user #edit-account label,
@@ -3056,13 +3059,13 @@ span.date-display-single a {
 .not-logged-in.page-user #user-login .description {
   display: none;
 }
-/* line 338, ../sass/_directamixins.scss */
+/* line 344, ../sass/_directamixins.scss */
 .not-logged-in.page-user #user-pass .form-item,
 .not-logged-in.page-user #edit-account .form-item,
 .not-logged-in.page-user #user-login .form-item {
   margin: 0;
 }
-/* line 329, ../sass/_directa.scss */
+/* line 348, ../sass/_directa.scss */
 .not-logged-in.page-user #user-pass .form-item,
 .not-logged-in.page-user #edit-account .form-item,
 .not-logged-in.page-user #user-login .form-item {
@@ -3070,7 +3073,7 @@ span.date-display-single a {
   -moz-box-shadow: inset 0px 15px 12px 0px #e9e9e9;
   box-shadow: inset 0px 15px 12px 0px #e9e9e9;
 }
-/* line 61, ../sass/_directamixins.scss */
+/* line 67, ../sass/_directamixins.scss */
 .not-logged-in.page-user #user-pass .form-action,
 .not-logged-in.page-user #edit-account .form-action,
 .not-logged-in.page-user #user-login .form-action {
@@ -3079,7 +3082,7 @@ span.date-display-single a {
   width: 100%;
   margin-top: 15px;
 }
-/* line 70, ../sass/_directamixins.scss */
+/* line 76, ../sass/_directamixins.scss */
 .not-logged-in.page-user #user-pass button,
 .not-logged-in.page-user #user-pass input[type="button"],
 .not-logged-in.page-user #user-pass input[type="reset"],
@@ -3097,7 +3100,7 @@ span.date-display-single a {
   width: 100%;
   margin-top: 15px;
 }
-/* line 334, ../sass/_directa.scss */
+/* line 353, ../sass/_directa.scss */
 .not-logged-in.page-user h1#page-title {
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
@@ -3111,7 +3114,7 @@ span.date-display-single a {
   margin-bottom: 40px;
   background-position: top center;
 }
-/* line 342, ../sass/_directa.scss */
+/* line 361, ../sass/_directa.scss */
 .not-logged-in.page-user #block-block-5--2 {
   background-color: #c13432;
   text-align: center;
@@ -3119,17 +3122,17 @@ span.date-display-single a {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 113, ../sass/_directamixins.scss */
+/* line 119, ../sass/_directamixins.scss */
 .not-logged-in.page-user #block-block-5--2 a {
   font-family: 'publico_textroman';
   font-size: 18px;
   color: white;
 }
-/* line 346, ../sass/_directa.scss */
+/* line 365, ../sass/_directa.scss */
 .not-logged-in.page-user #block-block-5--2 h2 {
   display: none;
 }
-/* line 354, ../sass/_directa.scss */
+/* line 373, ../sass/_directa.scss */
 .not-logged-in.page-user #block-block-6 h2,
 .not-logged-in.page-user #block-block-8 h2,
 .not-logged-in.page-user #block-block-5--2 h2 {
