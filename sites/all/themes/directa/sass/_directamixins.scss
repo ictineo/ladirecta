@@ -14,6 +14,17 @@ $blanc: #FFFFFF;
 $negre:#030303;
 
 
+/*MIXINS FONTS*/
+
+@mixin graphik-regular($font-size,$color,$line-height){
+  font-family:'graphik_regularregular';
+  font-size:$font-size;
+  color:$color;
+  line-height:$line-height;
+  text-transform:uppercase;
+}
+
+
 /*Transversals*/
 @mixin enllac-net {
   text-decoration:none;
@@ -31,6 +42,15 @@ $negre:#030303;
   width:20px;
   height:20px;
 }
+@mixin background ($width,$height) {
+  background-repeat:no-repeat;
+  display:block;
+  content:"";
+  width:$width;
+  height:$height;
+}
+
+
 @mixin reset-button {
   .form-action { 
     border: none;  
@@ -99,7 +119,7 @@ $negre:#030303;
   font-color:$gris4;
 }
 
-@mixin buscador {
+@mixin buscador() {
  html.js input.form-autocomplete {
     background-image:url('../images/vi.png');
     background-repeat:no-repeat;
@@ -112,11 +132,55 @@ $negre:#030303;
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;
   }
-/**/
+  .views-submit-button {
+    display:none;
+  }
 }
 
 
-/*Menu*/
+/*Menus*/
+
+@mixin menu-general-horizontal {
+  li {
+    list-style: none;
+  }
+}
+
+@mixin menu-seccions($color,$border) {
+  ul {
+    padding-left:30px;
+    background-repeat: no-repeat;
+    background-position:0 0;
+    li {
+      list-style: none;
+      background-color:$color;
+      border: none;
+      &.odd {
+        border-left: 1px solid $border;
+      }
+      a {
+        @include graphik-regular(15px,$blanc,24px);
+        padding: 0 0 0px 10px;
+      }
+    }
+  }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @mixin tit-menu {

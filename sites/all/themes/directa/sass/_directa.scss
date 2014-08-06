@@ -230,10 +230,51 @@ span.date-display-single {
 }
 /*FOOTER*/
 #footer {
+  background-color: $gris7;
   h2 {
     display: none;
   }
+  #block-views-exp-hemeroteca-page-1--2 {
+    @include buscador;
+  }
+  #block-menu-menu-menu-footer {
+    @include menu-general-horizontal;
+    a {
+      @include graphik-regular(16px,$blanc,40px);
+    }
+
+  }
+  #block-nice-menus-2,
+  #block-nice-menus-2--2 {
+    @include menu-seccions ($gris7,$blanc);
+    ul {
+      background-image: url('../images/adj5.png');
+    }
+  } 
+  #block-nice-menus-3,
+  #block-nice-menus-3--2 {
+    @include menu-seccions($gris7,$blanc);
+    ul {
+      background-image: url('../images/adj4.png');
+    }
+  }
+  #block-menu-menu-menu-xxss {
+    @include menu-seccions($gris7,$blanc);
+    ul {
+      background-image: url('../images/share2.png');
+      margin-top: 0;
+      li {
+        border-left: 1px solid $blanc;
+      }
+    }
+  }
+
 }
+
+     
+    
+  
+
 
 
 

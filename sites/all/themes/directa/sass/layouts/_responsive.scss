@@ -335,63 +335,64 @@ $zen-auto-include-item-base: false;
    $zen-column-count:9;
    $zen-gutter-width:10px;
    @include zen-grid-container();
-   @include zen-grid-background();
    #block-menu-menu-menu-footer {
-     @include zen-grid-item(6,1);
+     @include zen-grid-item(7,1);
    }
    #block-block-10 {
-     @include zen-grid-item(3,1,right);
+     @include zen-grid-item(2,1,right);
      @include zen-clear(right);
    }
+   #views-exposed-form-hemeroteca-page-1,
    #block-views-exp-hemeroteca-page-1--2 {
-     @include zen-grid-item(3,1,right);
+     @include zen-grid-item(2,1,right);
      @include zen-clear(right);
    }
    #block-block-9 {
      @include zen-grid-item(2,1,right);
    }
    #block-menu-menu-menu-xxss {
-     @include zen-grid-item(2,1,right);
-     @include zen-clear(right);
+     @include zen-grid-item(1,7);
    }
 
-
+   #block-nice-menus-2,
    #block-nice-menus-2--2 {
      @include zen-clear();
      @include zen-grid-item(3,1);
    }
-   #block-nice-menus-3--2  {
+   #block-nice-menus-3,
+   #block-nice-menus-3--2 {
      @include zen-grid-item(3,4);
     }
 
+   #block-nice-menus-2,
    #block-nice-menus-2--2 {
-      $zen-column-count:2;
+      $zen-column-count:3;
        $zen-gutter-width:10px;
        @include zen-grid-container();
        li.odd {
-         @include zen-grid-item(2,1);
-         @include zen-grid-background();
+         @include zen-grid-item(3,1);
          @include zen-clear(left);
        }
        li.even {
          @include zen-clear();
-         @include zen-grid-item(2,3);
+         @include zen-grid-item(3,4);
          @include zen-clear(right);
        }
    }
+   #block-nice-menus-3,
    #block-nice-menus-3--2 {
-     $zen-column-count:2;
+     $zen-column-count:3;
      $zen-gutter-width:10px;
      @include zen-grid-container();
      li.odd {
-       @include zen-grid-item(2,1);
-       @include zen-grid-background();
+       @include zen-grid-item(3,1);
        @include zen-clear(left);
      }
      li.even {
-       @include zen-grid-item(2,3);
+       @include zen-grid-item(2,4);
        @include zen-clear(right);
      }
+     
    }
 
    
