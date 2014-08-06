@@ -332,22 +332,26 @@ $zen-auto-include-item-base: false;
  }
  #footer {
    @include zen-clear(both);
-   $zen-column-count:9;
+   $zen-column-count:10;
    $zen-gutter-width:10px;
    @include zen-grid-container();
    #block-menu-menu-menu-footer {
      @include zen-grid-item(7,1);
    }
    #block-block-10 {
-     @include zen-grid-item(2,1,right);
+     @include zen-grid-item(3,1,right);
      @include zen-clear(right);
    }
    #views-exposed-form-hemeroteca-page-1,
    #block-views-exp-hemeroteca-page-1--2 {
-     @include zen-grid-item(2,1,right);
+     @include zen-grid-item(3,1,right);
      @include zen-clear(right);
+     .views-exposed-form {
+       float:right;
+     }
    }
    #block-block-9 {
+     @include zen-clear(right);
      @include zen-grid-item(2,1,right);
    }
    #block-menu-menu-menu-xxss {

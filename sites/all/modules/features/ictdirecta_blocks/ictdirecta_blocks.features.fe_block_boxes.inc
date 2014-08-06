@@ -22,7 +22,7 @@ function ictdirecta_blocks_default_fe_block_boxes() {
   $fe_block_boxes->info = 'ccommons';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'ccommons';
-  $fe_block_boxes->body = '<a href=""></a> | <a href="">Avís de seguretat</a>';
+  $fe_block_boxes->body = '<a class="cc" href=""></a> | <a href="">Avís de seguretat</a>';
 
   $export['ccommons'] = $fe_block_boxes;
 

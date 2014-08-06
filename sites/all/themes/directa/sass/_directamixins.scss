@@ -23,7 +23,13 @@ $negre:#030303;
   line-height:$line-height;
   text-transform:uppercase;
 }
-
+@mixin graphik-medium($font-size,$color,$line-height){
+  font-family:'graphikmedium';
+  font-size:$font-size;
+  color:$color;
+  line-height:$line-height;
+  text-transform:uppercase;
+}
 
 /*Transversals*/
 @mixin enllac-net {
@@ -120,14 +126,16 @@ $negre:#030303;
 }
 
 @mixin buscador() {
- html.js input.form-autocomplete {
+  html.js,
+  html.js input.form-autocomplete,
+  input.form-autocomplete {
     background-image:url('../images/vi.png');
     background-repeat:no-repeat;
-    background-position:right;
+    background-position: right;
     display:block;
     content:"";
     border:1px solid $gris2;
-    height:25px;
+    height:28px;
   }
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;
@@ -141,8 +149,16 @@ $negre:#030303;
 /*Menus*/
 
 @mixin menu-general-horizontal {
-  li {
-    list-style: none;
+  ul {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    padding-left: 0;
+    padding-right: 0;
+    li {
+      list-style: none;
+      display: inline;
+      padding-right:20px;
+    }
   }
 }
 
