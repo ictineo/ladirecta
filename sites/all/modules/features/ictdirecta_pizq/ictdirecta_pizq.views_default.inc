@@ -43,7 +43,6 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Nid */
@@ -74,6 +73,16 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Field: Content: Autoria general */
+  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
+  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
@@ -184,13 +193,8 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'self';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'portada_columnaizquierda:page_1';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Contextual filter: Content: Seccio web (field_seccio_web) */
   $handler->display->display_options['arguments']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
@@ -230,17 +234,6 @@ function ictdirecta_pizq_views_default_views() {
     1 => '13',
   );
   $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
-
-  /* Display: Portada Esquerra */
-  $handler = $view->new_display('page', 'Portada Esquerra', 'page');
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'portada_columnaizquierda:page_1';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  $handler->display->display_options['path'] = 'portada-columnaizquierda';
 
   /* Display: Sort  */
   $handler = $view->new_display('page', 'Sort ', 'page_1');
@@ -347,6 +340,16 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Field: Content: Autoria general */
+  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
+  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
@@ -515,6 +518,16 @@ function ictdirecta_pizq_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Field: Content: Autoria general */
+  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
+  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
@@ -644,9 +657,8 @@ function ictdirecta_pizq_views_default_views() {
     t('Desc'),
     t('flag'),
     t('All'),
-    t('Portada Esquerra'),
-    t('more'),
     t('Sort '),
+    t('more'),
     t('Nid'),
     t('Content'),
     t('Portada esquerra block'),

@@ -69,7 +69,8 @@ function ictdirecta_portada_flag_default_flags() {
     'types' => array(
       0 => 'actualitat',
       1 => 'fotogaleria',
-      2 => 'video',
+      2 => 'noticia_paper',
+      3 => 'video',
     ),
     'flag_short' => 'Promou Portada (Dreta)',
     'flag_long' => '',
@@ -106,8 +107,9 @@ function ictdirecta_portada_flag_default_flags() {
     'global' => 0,
     'types' => array(
       0 => 'fotogaleria',
-      1 => 'noticia',
-      2 => 'video',
+      1 => 'noticia_paper',
+      2 => 'noticia',
+      3 => 'video',
     ),
     'flag_short' => 'Promou Portada (Esquerra)',
     'flag_long' => '',
