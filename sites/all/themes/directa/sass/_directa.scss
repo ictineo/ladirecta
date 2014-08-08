@@ -11,9 +11,6 @@ a {
   display:none;
 }
 
-
-
-
 /*HEADER*/
 .region-header {
   margin-bottom:-20px;
@@ -29,8 +26,6 @@ a {
   padding-top:10px;
   @include header-shadow;
 }
-
-
 
 #block-user-login {
 }
@@ -63,13 +58,11 @@ a {
   }
 }
 #block-views-exp-hemeroteca-page-1 {
-  /**/
   @include buscador;
   }
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;
   }
-
 
 
 #block-block-5,
@@ -113,15 +106,28 @@ ul.nice-menu {
     @include menu-seccions($blanc,$gris7);
     ul {
       background-image: url('../images/adj4.png');
-      a {
-        @include graphik-semibold(16px,$gris7,25px);
+      li a {
+        @include graphik-regular (16px, $gris7, 25px);
+        &:hover {
+          @include graphik-semibold(16px,$vermell,25px);
+        }
       }
     }
   }
+  
   #block-nice-menus-2 {
+    @include menu-seccions($blanc,$gris7);
+    ul {
+      background-image: url('../images/adj4.png');
+      li a {
+        @include graphik-regular (16px, $gris7, 25px);
+        &:hover {
+          @include graphik-semibold(16px,$vermell,25px);
+        }
+      }
+    }
   }
-}
-
+   #block-nice-menus-1 {
 
 /*
  ul.nice-menu a {
@@ -139,26 +145,24 @@ ul.nice-menu {
   //margin-left:20px;
   }
 
-
-  #block-nice-menus-1 {
+*/
   .block-title {
     @include tit-menu;
-    @include block-tit; 
+    @include block-tit;
   }
-  li {
-  border-left: 0;
-  padding-left: 0;
-  @include territori-caixa;
-  a {
-    @include territori;
-  }
-}
-}
-  ul.nice-menu ul {
+  ul {
     top:2.8em;
+    li {
+      border-left: 0;
+      padding-left: 0;
+      @include territori-caixa;
+      a {
+        @include territori;
+      }
+    }
   }
 }
-*/
+}
 
 
 .mark {
@@ -292,6 +296,9 @@ span.date-display-single {
     @include menu-seccions ($gris7,$blanc);
     ul {
       background-image: url('../images/adj5.png');
+      li a {
+        @include graphik-regular(15px,$blanc,24px);
+      }
     }
   } 
   #block-nice-menus-3,
@@ -299,6 +306,9 @@ span.date-display-single {
     @include menu-seccions($gris7,$blanc);
     ul {
       background-image: url('../images/adj4.png');
+      li a {
+        @include graphik-regular(15px,$blanc,24px);
+      }
     }
   }
   #block-menu-menu-menu-xxss {
@@ -308,6 +318,9 @@ span.date-display-single {
       margin-top: 0;
       li {
         border-left: 1px solid $blanc;
+        a {
+          @include graphik-regular(15px,$blanc,24px);
+        }
       }
     }
   }
@@ -330,9 +343,20 @@ span.date-display-single {
   }
 }
 
-     
-    
-  
+/*NOTICIA COMPLETA*/
+
+.not-front.node-type-noticia {
+  #page-title {
+    @include titulo-not;
+  }
+  .field-subtitol {
+    @include subtitulo-not;
+  }
+  .body {
+    @include body;
+  }
+}
+
 
 
 
@@ -351,25 +375,43 @@ span.date-display-single {
     @include reset-button;
   }
   h1#page-title{
+    margin-top: 10%;
     @include logo();
     text-align: center;
     width:auto;
     padding-top:40px;
     margin-bottom:40px;
     background-position: top center;
+    @include graphik-regular(40px,$gris7,40px);
+    padding-top:60px;
   }
   #block-block-5--2 {
-    @include bsubs;
-    padding-top:20px;
-    padding-bottom:20px;
     h2 {
       display: none;
     }
+    @include subscriute(26px);
   }
-  
+  #block-block-6 {
+    @include graphik-regular(18px,$gris3,1i8px);
+    text-align: center;
+  }
+  #block-block-8 {
+    padding-top:10px;
+    @include graphik-medium(16px,$gris3,16px);
+    text-align: center;
+    a {
+      @include graphik-medium(16px,$negre,16px);
+      text-decoration: underline;
+    }
+  }
+  #edit-actions {
+  }
+  #user-login {
+    @include user-login;
+  }
   #block-block-6, 
   #block-block-8, 
-  #block-block-5--2 {
+  #block-block-5--2 { 
     h2 {
       display:none;
     }
