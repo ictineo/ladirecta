@@ -32,7 +32,7 @@ if (!isset($pager_position)) {
       <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
         <?php print $item['image']; ?>
       <div class="peu fotografia">  
-        <?php print $item['field_peu_fotografia'][LANGUAGE_NONE][0]['safe_value']; ?> &nbsp; <?php print t('/'); ?> &nbsp;  <?php print $item['field_autoria'][LANGUAGE_NONE][0]['safe_value']; ?>
+        <span class="p"><?php print $item['field_peu_fotografia'][LANGUAGE_NONE][0]['safe_value']; ?> &nbsp;</span> <?php print t('/'); ?> <?php print $item['field_autoria'][LANGUAGE_NONE][0]['safe_value']; ?>
       </div>
         <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
           <div class="field-slideshow-caption">

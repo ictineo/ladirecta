@@ -40,6 +40,9 @@ a {
     text-align:right;
     border-radius:5px;
 }
+#block-block-3 {
+  @include inicia(5px);
+}
 
 #block-block-2 {
   border-left:1px solid $gris2;
@@ -70,7 +73,7 @@ a {
   @include bsessio;
   a {
     padding: 0;
-    background-color:#e5e5ee5;
+    background-color:#e5e5e5;
     @include back;
     background-image:url('../images/arrow_down');
     content:"";
@@ -82,12 +85,11 @@ a {
   }
 }
 #block-block-1 {
-  @include bsubs;
-  border-radius:5px;
+  @include subscriute(5px);
 }
 
 /*MENU*/
-.front #main-menu {
+#main-menu {
   display:none;
 }
 
@@ -177,16 +179,10 @@ ul.nice-menu {
 
 
 .field-seccio-web {
-  background-color:$gris7;
-  a {
     @include seccio;
-  }
 }
 .field-seccio {
-  background-color:$gris7;
-  a {
     @include seccio;
-  }
 }
 a.autor {
   @include autoria;
@@ -195,15 +191,28 @@ span.date-display-single {
   @include data;
 }
 
+.field-seccio-web {
+  @include seccio;
+}
+.peu.fotografia {
+  @include peu-foto;
+}
+
+.not-front.node-type-fotogaleria {
+  #page-title {
+    @include titulo-fotogaleria;
+  }
+}
+
+
+
+
 /*DESTACAT 3 COLUMNES*/
 .view-portada-destacadotodascolumnas.view-display-id-block {
   .field-fotografies {
   }
-  .field-seccio {
-    background-color:$gris7;
-    a {
-      @include seccio;
-    }
+  .field-seccio-web {
+    @include seccio;
   }
   a.autor {
     @include autoria;
@@ -345,9 +354,14 @@ span.date-display-single {
 
 /*NOTICIA COMPLETA*/
 
-.not-front.node-type-noticia {
+.not-front {
   #page-title {
     @include titulo-not;
+  }
+  .node-title {
+    a {
+      @include titulo-not;
+    }
   }
   .field-subtitol {
     @include subtitulo-not;
