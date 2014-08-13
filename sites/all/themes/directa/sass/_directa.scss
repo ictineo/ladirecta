@@ -206,6 +206,49 @@ span.date-display-single {
   }
 }
 
+/*MENU LATERAL*/
+
+#interior {
+  @include block-mlateral();
+  #block-views-agenda-llista-block-1 .block-title {
+    background-image: url('../images/agenda.png');
+  }
+  #block-views-cd-noticias-block-1 .block-title {
+    background-image: url('../images/agenda.png');
+    
+  }
+  #block-views-linies-de-recerca-block {
+    .block-title {
+      background-image: url('../images/agenda.png');
+    }
+    .view-header {
+    @include graphik-medium(19px, $gris2, 24px);
+    }
+    .views-field-title a {
+      @include graphik-bold(26px, $gris7, 30px);
+    }
+    .field-body {
+      @include graphik-bold(19px, $gris2, 21px);
+    }
+    .views-field-comment-count {
+      @include graphik-medium(16px, $gris2, 37px);
+      padding-left:20px;
+      @include back-simple; 
+    }
+    .view-footer {
+      text-align: right;
+    }
+      a {
+      @include graphik-medium(16px, $gris7, 19px);
+      text-decoration: underline;
+    }
+  }
+
+  #block-views-cd-serveis-block-1 .block-title {
+    background-image: url('../images/agenda.png'); 
+  }
+
+}
 
 
 

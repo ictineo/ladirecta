@@ -297,6 +297,47 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   width:$width;
   height:$height;
 }
+@mixin back-simple {
+  background-repeat: no-repeat;
+  display: block;
+  content:"";
+}
+@mixin block-mlateral(){
+  .block {
+    .block__title {
+    @include graphik-medium(26px, $gris2, 31px);
+    padding-left:35px;
+      background-repeat: no-repeat;
+      display:block;
+      content: "";
+      width:100%;
+      height:30px;
+      background-position: -30px 0;
+      &:hover {
+        background-position: 0 0;
+      }
+    }
+    .views-field-title a {
+      @include graphik-semibold (22px, $gris7, 26px);
+    }
+    .field-body {
+      @include graphik-medium(19px, $gris2, 24px);
+    }
+    .field-oferta {
+      @include graphik-bold(24px, $gris4, 26px);
+    }
+    .field-tipus-de-servei a {
+      @include graphik-medium(15px, $gris3, 18px);
+      background-color: $fons;
+      padding: 2px;
+    }
+    .views-field-view-node a {
+      @include graphik-medium(16px, $gris7, 19px);
+      text-decoration: underline;
+    }
+
+    }
+}
 
 
 @mixin reset-button {
