@@ -88,9 +88,6 @@ if (drupal_is_front_page()) {
     <div id="destacat">
       <?php print render($page['destacat']); ?>
     </div>   
-    <div id="interior">
-      <?php print render($page['interior']); ?>
-    </div>   
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
@@ -126,9 +123,20 @@ if (drupal_is_front_page()) {
     <?php endif; ?>
 
   </div>
+ 
 
-  <?php print render($page['footer']); ?>
+   <div id="interior">
+     <?php print render($page['interior']); ?>
+   </div>   
+
+   <div id="seccion_portada">
+     <?php print render($page['seccion_portada']); ?>
+   </div>   
+  
+<?php print render($page['footer']); ?>
 
 </div>
 
 <?php print render($page['bottom']); ?>
+
+<?php drupal_add_js(drupal_get_path('theme','directa') . '/js/menu.js'); ?>

@@ -348,6 +348,16 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['fields']['field_autor']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_autor']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_autor']['field_api_classes'] = TRUE;
+  /* Field: Content: Autoria general */
+  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
+  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
+  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
   /* Field: Content: Data */
   $handler->display->display_options['fields']['field_data']['id'] = 'field_data';
   $handler->display->display_options['fields']['field_data']['table'] = 'field_data_field_data';
@@ -506,6 +516,16 @@ function ictdirecta_pdret_views_default_views() {
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Seccio web (field_seccio_web) */
+  $handler->display->display_options['filters']['field_seccio_web_tid']['id'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['table'] = 'field_data_field_seccio_web';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['field'] = 'field_seccio_web_tid';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_seccio_web_tid']['value'] = array(
+    0 => '22',
+    1 => '13',
+  );
+  $handler->display->display_options['filters']['field_seccio_web_tid']['vocabulary'] = 'seccions_web';
 
   /* Display: Portada Dreta */
   $handler = $view->new_display('page', 'Portada Dreta', 'page');
@@ -582,6 +602,13 @@ function ictdirecta_pdret_views_default_views() {
   $handler = $view->new_display('block', 'Portada dreta', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Portada-ColumnaDreta';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'portada_columnadreta:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['block_description'] = 'Portada dreta';
 
@@ -598,6 +625,26 @@ function ictdirecta_pdret_views_default_views() {
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_seccio_web_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'actualitat' => 'actualitat',
+    'fotogaleria' => 'fotogaleria',
+    'video' => 'video',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['block_description'] = 'Portada dreta seccions';
 
   /* Display: Portada dreta territorial */

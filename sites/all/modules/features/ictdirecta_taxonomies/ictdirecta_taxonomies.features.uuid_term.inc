@@ -108,14 +108,6 @@ function ictdirecta_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
-    'name' => 'Seccions web',
-    'description' => '',
-    'format' => 'filtered_html',
-    'weight' => 0,
-    'uuid' => '5909ed0d-2197-4596-b968-e4e6e4e27235',
-    'vocabulary_machine_name' => 'seccions_web',
-  );
-  $terms[] = array(
     'name' => 'Impressions',
     'description' => '',
     'format' => 'filtered_html',
