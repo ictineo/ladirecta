@@ -233,6 +233,7 @@ $zen-auto-include-item-base: false;
     $zen-column-count:23;
     $zen-gutter-width:10px;
     @include zen-grid-container();
+    @include zen-grid-background();
     #block-nice-menus-3 ul {
       @include zen-grid-item(7,1);
       $zen-column-count:2;
@@ -263,7 +264,7 @@ $zen-auto-include-item-base: false;
      #block-nice-menus-1 ul {
        $zen-column-count:23;
        $zen-gutter-width:10px;
-       @include zen-grid-item(6,1,right);
+       @include zen-grid-item(5,1,right);
        $zen-column-count:1;
        @include zen-grid-container();
       li {
@@ -274,13 +275,26 @@ $zen-auto-include-item-base: false;
   }
 
 
+
+
   #content,
   .sidebars,
   .region-help {
   }
-  .region-help {
-    display:none;
+  
+  #main {
+    $zen-column-count: 23;
+    $zen-gutter-width: 10px;
+    @include zen-grid-container();
+    @include zen-clear();
+    .region-help {
+      @include zen-grid-item(17,1);
+      @include zen-clear();
+    }
   }
+
+
+
  .not-front {
    #main {
      $zen-column-count:23;
@@ -348,7 +362,7 @@ $zen-auto-include-item-base: false;
          @include zen-grid-item(12,1,right);
        }
        .field-body,
-       .field-continguts-relacionats-ref,
+       //.field-continguts-relacionats-ref,
        .field-continguts-relacionats {
          @include zen-clear(right);
          @include zen-grid-item(12,1,right);
@@ -368,6 +382,7 @@ $zen-auto-include-item-base: false;
            @include zen-grid-item(2,3);
          }
        }
+
      }
      
    } 
@@ -510,11 +525,53 @@ $zen-auto-include-item-base: false;
      }
  }
 
+
+ /*BUTLLETÍ SONOR**/
+ .front {
+   #faldo_esquerra {
+   @include zen-grid-background;
+     $zen-column-count:5;
+     @include zen-nested-container();
+     @include zen-grid-background;
+     #faldo_esquerra_portada {
+      @include zen-grid-item(2,1);
+      background-color: green;
+     }
+    #faldo_esquerra_dreta {
+      @include zen-grid-item(2,3);
+      background-color: yellow;
+     }
+   }
+ }
+
 /*NOTICIA COMPLETA**/
 
  .node-type-noticia {
    .breadcrumb {
      display: none;
+   }
+   .node-noticia.view-mode-token {
+     $zen-column-count:4;
+     @include zen-grid-container();
+     @include zen-grid-background();
+     @include zen-nested-container();
+     img {
+       @include zen-grid-item(1,1);
+     }
+     .date-display-single {
+       @include zen-nested-container();
+       @include zen-grid-item(3,2);
+     }
+     .node-title {
+       @include zen-clear(right);
+       @include zen-nested-container();
+       @include zen-grid-item(3,2);
+     }
+     .field-body {
+       @include zen-nested-container();
+       @include zen-grid-item(3,2);
+     }
+
    }
  }
 

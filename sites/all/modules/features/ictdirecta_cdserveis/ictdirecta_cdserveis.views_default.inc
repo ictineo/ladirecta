@@ -99,7 +99,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
   $handler->display->display_options['footer']['view']['view_to_insert'] = 'cd_serveis:block_2';
-  /* Field: Contingut: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -114,14 +114,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contingut: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -135,7 +135,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'trim_length' => '400',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -146,26 +146,26 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Veure detalls >';
-  /* Sort criterion: Contingut: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contingut: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contingut: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -173,7 +173,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'cd_serveis' => 'cd_serveis',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Contingut: Territori (field_territori) */
+  /* Filter criterion: Content: Territori (field_territori) */
   $handler->display->display_options['filters']['field_territori_tid']['id'] = 'field_territori_tid';
   $handler->display->display_options['filters']['field_territori_tid']['table'] = 'field_data_field_territori';
   $handler->display->display_options['filters']['field_territori_tid']['field'] = 'field_territori_tid';
@@ -196,7 +196,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   );
   $handler->display->display_options['filters']['field_territori_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_territori_tid']['vocabulary'] = 'territorial';
-  /* Filter criterion: Contingut: Tipus de servei (field_tipus_de_servei) */
+  /* Filter criterion: Content: Tipus de servei (field_tipus_de_servei) */
   $handler->display->display_options['filters']['field_tipus_de_servei_tid']['id'] = 'field_tipus_de_servei_tid';
   $handler->display->display_options['filters']['field_tipus_de_servei_tid']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['filters']['field_tipus_de_servei_tid']['field'] = 'field_tipus_de_servei_tid';
@@ -231,7 +231,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contingut: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -246,14 +246,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contingut: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -267,7 +267,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'trim_length' => '200',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -278,7 +278,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -292,7 +292,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'trim_length' => '600',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -308,14 +308,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contingut: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contingut: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -331,14 +331,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contingut: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contingut: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -353,7 +353,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -367,7 +367,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'trim_length' => '400',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -378,7 +378,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -400,14 +400,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['header']['view']['field'] = 'view';
   $handler->display->display_options['header']['view']['view_to_insert'] = 'cd_noticias:block_1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contingut: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contingut: Logotip */
+  /* Field: Content: Logotip */
   $handler->display->display_options['fields']['field_logotip']['id'] = 'field_logotip';
   $handler->display->display_options['fields']['field_logotip']['table'] = 'field_data_field_logotip';
   $handler->display->display_options['fields']['field_logotip']['field'] = 'field_logotip';
@@ -422,7 +422,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_logotip']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Adreça */
+  /* Field: Content: Adreça */
   $handler->display->display_options['fields']['field_adre_a']['id'] = 'field_adre_a';
   $handler->display->display_options['fields']['field_adre_a']['table'] = 'field_data_field_adre_a';
   $handler->display->display_options['fields']['field_adre_a']['field'] = 'field_adre_a';
@@ -432,7 +432,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_adre_a']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_adre_a']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_adre_a']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -446,7 +446,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
     'trim_length' => '400',
   );
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Tipus de servei */
+  /* Field: Content: Tipus de servei */
   $handler->display->display_options['fields']['field_tipus_de_servei']['id'] = 'field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['table'] = 'field_data_field_tipus_de_servei';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field'] = 'field_tipus_de_servei';
@@ -457,7 +457,7 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_tipus_de_servei']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_tipus_de_servei']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_tipus_de_servei']['field_api_classes'] = TRUE;
-  /* Field: Contingut: Link */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -466,14 +466,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['view_node']['text'] = 'Veure detalls >';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contingut: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contingut: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -491,14 +491,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contingut: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contingut: Oferta */
+  /* Field: Content: Oferta */
   $handler->display->display_options['fields']['field_oferta']['id'] = 'field_oferta';
   $handler->display->display_options['fields']['field_oferta']['table'] = 'field_data_field_oferta';
   $handler->display->display_options['fields']['field_oferta']['field'] = 'field_oferta';
@@ -514,14 +514,14 @@ Aquest es el text que va al principi, el tene que poder modificar?';
   $handler->display->display_options['fields']['field_oferta']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contingut: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contingut: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

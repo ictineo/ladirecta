@@ -12,6 +12,7 @@ $gris7:#5E5E5E; /*inicia sessio*/
 $vermell:#C13432;
 $blanc: #FFFFFF;
 $negre:#030303;
+$fons: #e9e9e9; /*gris de fons*/
 
 
 /*MIXINS FONTS*/
@@ -35,7 +36,6 @@ $negre:#030303;
   font-size:$font-size;
   color:$color;
   line-height:$line-height;
-  text-transform:uppercase;
 }
 @mixin graphik-bold($font-size,$color,$line-height){
   font-family:'graphikbold';
@@ -61,6 +61,7 @@ $negre:#030303;
   color:$color;
   line-height:$line-height;
 }
+
 
 /*SHADOWS*/
 
@@ -90,16 +91,21 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 }
 
 
+
 /*FORMATOS DE TEXTO INTERNOS*/
 
 @mixin titulo-not {
   @include graphik-bold(46px,$gris7,56px);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 @mixin titulo-fotogaleria {
   @include graphik-bold(32px,$gris7,36px);
 }
 @mixin subtitulo-not {
   @include graphik-medium(33px, $gris3,40px);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 @mixin body {
   @include public-roman(23px, $gris7, 32px);
@@ -115,7 +121,7 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 
 @mixin seccio {
   background-color: $gris7;
-  padding:10px 5px; 
+  padding: 5px; 
   a {
     @include enllac-net;
     @include graphik-super(19px,$blanc,19px);
@@ -136,6 +142,73 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   color: $gris3;
   a {
     text-transform:underline;
+  }
+}
+
+@mixin cont-rel() {
+  //background-color: $fons;
+  .field-continguts-relacionats {
+    background-color:$fons;
+    margin:0px;
+    .field-collection-view-final {
+      margin: 0;
+      width:100%;
+      thead {
+        display:none;
+      }
+      tbody {
+        .field_collection_item  {
+          background-color: $fons;
+          border: none;
+          .field-continguts-relacionats-ref {
+            padding-bottom:10px;
+            padding-top:10px;
+            a {
+              @include public-roman(17px, $gris7, 22px);
+              text-decoration: underline;
+              padding-left:40px;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@mixin not-rel() {
+    h3.field-label {
+      @include graphik-medium(33px, $gris3, 37px);
+      padding-bottom: 0;
+      margin-botttom: 0;
+      border-top: solid 1px $fons;
+      margin-top: 10px;
+      padding-top:10px;
+    }
+  .field-contingut-relacionat .field-collection-view {
+    .node__title a {
+      @include graphik-semibold(33px, $gris7, 37px);
+    }
+    .field-body {
+      @include public-roman(21px, $gris7, 26px);
+    }
+  }
+}
+
+
+@mixin etiquetes {
+  a {
+    @include public-roman(17px, $gris7, 22px);
+    text-decoration: underline;
+  }
+}
+
+
+@mixin portada-numero {
+  .field-portada-numero {
+    img {
+      border:5px solid $fons;
+    }
   }
 }
 
@@ -188,7 +261,7 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   padding: 0;
   @include login-shadow;
   text-align: center;
-  background-color: #e9e9e9;
+  background-color: $fons;
   a {
     padding-top: $padding;
     padding-bottom: $padding;

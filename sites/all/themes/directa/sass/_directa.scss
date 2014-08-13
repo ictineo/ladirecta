@@ -106,6 +106,7 @@ ul.nice-menu {
   }
   #block-nice-menus-3 {
     @include menu-seccions($blanc,$gris7);
+    text-transform: uppercase;
     ul {
       background-image: url('../images/adj4.png');
       li a {
@@ -119,6 +120,7 @@ ul.nice-menu {
   
   #block-nice-menus-2 {
     @include menu-seccions($blanc,$gris7);
+    text-transform: uppercase;
     ul {
       background-image: url('../images/adj4.png');
       li a {
@@ -226,16 +228,7 @@ span.date-display-single {
   .field-body {
     @include entradilla-3col;
   }
-  .field-continguts-relacionats-ref {
-    background-color:$gris7;
-  }
- 
 
-  .pretitular,
-  .views-field-title a,
-  .field-body,
-  .field-continguts-relacionats-ref {
-  }
   .pretitular {
     display:block-inline;
   }
@@ -249,9 +242,30 @@ span.date-display-single {
       td.col-3 {
       }
   }
+  .field-collection-container {
+    @include cont-rel();
+  }
 }
 
+/*Portada*/
 
+.front #content,
+.front .sidebars {
+  .views-field-title a {
+    @include graphik-semibold(24px,$gris7,30px);
+  }
+  .field-body {
+    @include public-roman(18px, $gris2, 23px);
+  }
+  .field-collection-container {
+    @include cont-rel();
+  }
+  .view-display-id-block_1 {
+    @include portada-numero;
+  }
+  #faldo_esquerra {
+  }
+}
 
 
 /*COLUMNA NOTICIES (ESQUERRA)*/
@@ -260,6 +274,22 @@ span.date-display-single {
     @include titular-not;
   }
 }
+
+/*COLUMNA ACTUALITAT (DRETA)*/
+.front .region-sidebar-first {
+  padding: 0 20px;
+  border-right: 1px solid #e9e9e9;
+  #block-views-portada-columnadreta-block-1 {
+    background-color: #e9e9e9;
+    .block__title block-title {
+      display:none;
+    }
+  }
+}
+
+
+
+
 /*FOOTER*/
 #footer {
   background-color: $gris7;
@@ -368,6 +398,14 @@ span.date-display-single {
   }
   .body {
     @include body;
+  }
+  .field-etiquetes,
+  .field-territori {
+    @include etiquetes;
+  }
+    @include cont-rel();
+  .field-collection-container {
+    @include not-rel();
   }
 }
 
