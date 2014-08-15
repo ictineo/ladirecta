@@ -108,10 +108,11 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-ccommons'] = array(
+
+  $export['block-sections_button'] = array(
     'cache' => -1,
     'custom' => 0,
-    'machine_name' => 'ccommons',
+    'machine_name' => 'sections_button',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '',
@@ -136,7 +137,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'ccommons',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -172,37 +173,6 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-footer_comptador'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'machine_name' => 'footer_comptador',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'directa' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'directa',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => 'footer_comptador',
-    'visibility' => 0,
-  );
 
   $export['block-login_pass'] = array(
     'cache' => -1,
@@ -268,37 +238,6 @@ function ictdirecta_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['block-sections_button'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'machine_name' => 'sections_button',
-    'module' => 'block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'directa' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'directa',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
 
   $export['block-subscriute_login'] = array(
     'cache' => -1,
@@ -329,6 +268,71 @@ function ictdirecta_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => 'subscriute-login',
+    'visibility' => 0,
+  );
+
+  
+  $export['block-ccommons'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'ccommons',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'ccommons',
+    'visibility' => 0,
+  );
+
+  $export['block-footer_comptador'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'footer_comptador',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'directa' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'directa',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'footer_comptador',
     'visibility' => 0,
   );
 
