@@ -13,7 +13,9 @@ echo "Creados 40 terminos de todas las taxonomias"
 
 drush genc 40 --types=cd_serveis,cd_noticies,numero_paper,noticia,linies_de_recerca,cd_noticies,esdeveniment_agenda,fotogaleria,video,punts_de_venda --kill
 
-drush genc 20 --types=faldo,butlleti_sonor --kill
+drush cc all
+
+drush genc 3 --types=faldo,butlleti_sonor --kill
 
 echo "Creados 40 tipos de contenido repartidos"
 echo "Creados 20 tipos de contenido repartidos entre faldo i butlleti sonor"
