@@ -27,6 +27,40 @@ function ictdirecta_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
   );
+  // Exported menu link: menu-menu-footer_contacte:node/217
+  $menu_links['menu-menu-footer_contacte:node/217'] = array(
+    'menu_name' => 'menu-menu-footer',
+    'link_path' => 'node/217',
+    'router_path' => 'node/%',
+    'link_title' => 'contacte',
+    'options' => array(
+      'identifier' => 'menu-menu-footer_contacte:node/217',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 0,
+  );
+  // Exported menu link: menu-menu-footer_qui-som:node/216
+  $menu_links['menu-menu-footer_qui-som:node/216'] = array(
+    'menu_name' => 'menu-menu-footer',
+    'link_path' => 'node/216',
+    'router_path' => 'node/%',
+    'link_title' => 'Qui som',
+    'options' => array(
+      'identifier' => 'menu-menu-footer_qui-som:node/216',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 0,
+  );
   // Exported menu link: menu-menu-paper_a-fons:taxonomy/term/241
   $menu_links['menu-menu-paper_a-fons:taxonomy/term/241'] = array(
     'menu_name' => 'menu-menu-paper',
@@ -284,8 +318,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -50,
-    'customized' => 1,
+    'weight' => 0,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/15
   $menu_links['menu-menu-territorial_baix-llobregat-i-barcelons:taxonomy/term/15'] = array(
@@ -302,10 +336,10 @@ function ictdirecta_menu_menu_default_menu_links() {
     'module' => 'taxonomy_menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 1,
+    'has_children' => 0,
     'expanded' => 1,
-    'weight' => -36,
-    'customized' => 1,
+    'weight' => 1,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/30
   $menu_links['menu-menu-territorial_baix-montseny-maresme-i-valls:taxonomy/term/30'] = array(
@@ -345,8 +379,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -48,
-    'customized' => 1,
+    'weight' => 3,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/18
   $menu_links['menu-menu-territorial_el-camp-i-el-peneds:taxonomy/term/18'] = array(
@@ -365,8 +399,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -46,
-    'customized' => 1,
+    'weight' => 4,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_illes-balears:taxonomy/term/24
   $menu_links['menu-menu-territorial_illes-balears:taxonomy/term/24'] = array(
@@ -385,8 +419,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -44,
-    'customized' => 1,
+    'weight' => 5,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_pas-valenci:taxonomy/term/11
   $menu_links['menu-menu-territorial_pas-valenci:taxonomy/term/11'] = array(
@@ -405,8 +439,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -42,
-    'customized' => 1,
+    'weight' => 6,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/5
   $menu_links['menu-menu-territorial_terres-de-lbre-i-del-snia:taxonomy/term/5'] = array(
@@ -425,8 +459,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -40,
-    'customized' => 1,
+    'weight' => 7,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/9
   $menu_links['menu-menu-territorial_terres-de-ponent-i-alt-pirineu:taxonomy/term/9'] = array(
@@ -445,8 +479,8 @@ function ictdirecta_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 1,
-    'weight' => -38,
-    'customized' => 1,
+    'weight' => 8,
+    'customized' => 0,
   );
   // Exported menu link: menu-menu-territorial_territori:taxonomy/term/212
   $menu_links['menu-menu-territorial_territori:taxonomy/term/212'] = array(
@@ -467,6 +501,86 @@ function ictdirecta_menu_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => 0,
     'customized' => 0,
+  );
+  // Exported menu link: menu-menu-xxss_facebook:<front>
+  $menu_links['menu-menu-xxss_facebook:<front>'] = array(
+    'menu_name' => 'menu-menu-xxss',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'facebook',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-xxss_facebook:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-xxss_twitter:<front>
+  $menu_links['menu-menu-xxss_twitter:<front>'] = array(
+    'menu_name' => 'menu-menu-xxss',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'twitter',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-xxss_twitter:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-xxss_vimeo:<front>
+  $menu_links['menu-menu-xxss_vimeo:<front>'] = array(
+    'menu_name' => 'menu-menu-xxss',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'vimeo',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-xxss_vimeo:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-xxss_youtube:<front>
+  $menu_links['menu-menu-xxss_youtube:<front>'] = array(
+    'menu_name' => 'menu-menu-xxss',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'youtube',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-menu-xxss_youtube:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
   );
   // Exported menu link: menu-seccions-web_drets:taxonomy/term/4
   $menu_links['menu-seccions-web_drets:taxonomy/term/4'] = array(
@@ -681,12 +795,18 @@ function ictdirecta_menu_menu_default_menu_links() {
   t('País Valencià');
   t('Poca Broma');
   t('Politica');
+  t('Qui som');
   t('Roda del Món');
   t('Seccions web');
   t('Terres de Ponent i Alt Pirineu');
   t('Terres de l\'Èbre i del Sènia');
   t('Territori');
   t('Transformacions');
+  t('contacte');
+  t('facebook');
+  t('twitter');
+  t('vimeo');
+  t('youtube');
 
 
   return $menu_links;

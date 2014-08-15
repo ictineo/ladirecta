@@ -904,7 +904,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -988,8 +988,8 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => -1,
       ),
       'directa' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'sidebar_first',
+        'status' => 1,
         'theme' => 'directa',
         'weight' => -1,
       ),
@@ -1180,8 +1180,8 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'directa' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'sidebar_first',
+        'status' => 1,
         'theme' => 'directa',
         'weight' => 0,
       ),
@@ -1480,7 +1480,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -1512,7 +1512,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
@@ -1791,7 +1791,7 @@ function ictdirecta_blocks_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'directa',
-        'weight' => -32,
+        'weight' => -99,
       ),
       'seven' => array(
         'region' => 'content',

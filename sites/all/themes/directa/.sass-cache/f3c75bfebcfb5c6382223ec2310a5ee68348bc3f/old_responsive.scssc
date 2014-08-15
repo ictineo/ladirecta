@@ -1,819 +1,0 @@
-3.2.12 (Media Mark)
-ba30b562a6e357cd63eefb07bb20de845b38b2c2
-o:Sass::Tree::RootNode
-:@template"ž/**
- * @file
- * Positioning for a responsive layout.
- *
- * Define CSS classes to create a fluid grid layout with optional sidebars
- * depending on whether blocks are placed in the left or right sidebars.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */
-
-// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
-// between columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  1;
-$zen-gutter-width:  20px;
-
-// If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
-//$zen-box-sizing: content-box;
-
-// You can generate more efficient CSS if you manually apply the
-// zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
-// $zen-auto-include-flow-item-base: false;
-
-// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
-@if $zen-reverse-all-floats == false {
-
-/**
- * Center the page.
- *
- * For screen sizes larger than 1200px, prevent excessively long lines of text
- * by setting a max-width.
- */
-#page,
-.region-highlighted,
-.region-bottom {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-}
-
-/* Apply the shared properties of grid items in a single, efficient ruleset. */
-#header,
-#content,
-#navigation,
-#destacat,
-.region-sidebar-first,
-.region-sidebar-second,
-#footer {
-  // See the note about $zen-auto-include-item-base above.
-  @include zen-grid-item-base();
-}
-
-/* Containers for grid items and flow items. */
-#header,
-#main,
-#footer {
-  @include zen-grid-container();
-}
-
-/* Navigation bar */
-@media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
-    padding-top: $nav-height;
-    position: relative;
-  }
-
-  #navigation {
-    /* Move the navbar up inside #main's padding. */
-    position: absolute;
-    top: 0;
-    height: $nav-height;
-    width: $zen-grid-width;
-  }
-}
-
-} // End of @if $zen-reverse-all-floats == true
-
-/**
- * Use 3 grid columns for smaller screens.
- */
-@media all and (min-width: 480px) and (max-width: 959px) {
-
-  $zen-column-count: 3;
-
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  .sidebar-first {
-    /* Span 2 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(2, 2);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(1, 1);
-    }
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    #content {
-      @include zen-grid-item(2, 1);
-    }
-
-    /* Span 1 column, starting in 3rd column from left. */
-    .region-sidebar-second {
-      @include zen-grid-item(1, 3);
-    }
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(2, 2);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(1, 1);
-    }
-
-    /* Start a new row and span all 3 columns. */
-    .region-sidebar-second {
-      @include zen-grid-item(3, 1);
-      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
-      @include zen-clear();
-
-      /* Apply the shared properties of grid items in a single, efficient ruleset. */
-      .block {
-        @include zen-grid-item-base();
-      }
-      /* Span 1 column, starting in the 1st column from left. */
-      .block:nth-child(3n+1) {
-        @include zen-grid-item(1, 1);
-        @include zen-clear();
-      }
-      /* Span 1 column, starting in the 2nd column from left. */
-      .block:nth-child(3n+2) {
-        @include zen-grid-item(1, 2);
-      }
-      /* Span 1 column, starting in the 3rd column from left. */
-      .block:nth-child(3n) {
-        @include zen-grid-item(1, 3);
-      }
-    }
-  }
-}
-
-/**
- * Use 5 grid columns for larger screens.
- */
-@media all and (min-width: 960px) {
-#help {
-  display:none;
-}
-
-
-  $zen-column-count: 23;
-  $zen-gutter-width:20px;
-  #page {
-  /*@include zen-grid-background();*/
-  }
-  #header {
-    @include zen-grid-container();
-    #logo{
-      @include zen-grid-item(6,1);
-    }
-    #name-and-slogan {
-      display:none;
-    }
-    #secondary-menu {
-      @include zen-grid-item(2,13);
-    }
-    .region-header {
-      display:inline;
-      #block-views-exp-hemeroteca-page-1  {
-        @include zen-grid-item(4,18);
-      }
-      #block-block-4 {
-        @include zen-grid-item(2,7);
-      }
-      #block-block-1 {
-        @include zen-grid-item(3,15);
-      }
-      #block-block-2 {
-        @include zen-grid-item(2,10);
-        padding-left:10px;
-        $zen-column-count:3;
-        $zen-gutter-width:20px;
-        @include zen-grid-container();
-        .tw {
-          @include zen-grid-item(1,1);
-        }
-        .fb{
-          @include zen-grid-item(1,2);
-        }
-        .vi{
-          @include zen-grid-item(1,3);
-        }
-      }
-      .views-submit-button {
-        display:none;
-      }
-    }
-  }
-  #navigation {
-    @include zen-clear(both);
-    .region-navigation {
-      @include zen-clear(both);
-      $zen-column-count:3;
-      $zen-gutter-width:10px;
-      @include zen-grid-container();
-      #block-nice-menus-3 {
-        @include zen-grid-item(1,1);
-        #nice-menu-3 {
-          @include zen-clear();
-          li {
-            $zen-column-count:2;
-            $zen-gutter-width:10px;
-            @include zen-grid-container();
-            li.odd a {
-              @include zen-grid-item(1,1);
-            }li.even a {
-              @include zen-grid-item(1,2);
-            }
-          }
-        }
-    }
-      #block-nice-menus-2 {
-        @include zen-grid-item(1,2);
-      }
-      #block-nice-menus-1 {
-        @include zen-grid-item(1,3);
-      }
-    }
-  }
-  #destacat {
-    @include zen-clear(both);
-    $zen-column-count:2;
-    $zen-gutter-width:12px;
-    @include zen-grid-container();
-    .field-fotografies {
-      @include zen-grid-item(1,1);
-    }
-    .pretitular,
-    .views-field-title,
-    .field-body,
-    .field-continguts-relacionats-ref {
-      @include zen-clear(right);
-      @include zen-clear(right);
-      @include zen-grid-item(1,1,right);
-      @include zen-clear(right);
-    }
-    .attachment-after {
-      @include zen-clear(both);
-      @include zen-grid-item(2,1);
-    }
-    .field-contingut-relacionat {
-      $zen-column-count:5;
-      $zen-gutter-width:5px;
-      @include zen-grid-container();
-      .field-fotografies {
-        @include zen-grid-item(1,1);
-      }
-      a.autor,
-      .date-display-single,
-      .field-body {
-        @include zen-grid-item(4,2);
-      }
-    }
-  }
-  
-    
-  .region-help {
-    @include zen-clear();
-    display:none;
-  }
-
-  
-
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(9, 1);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(8, 10);
-    }
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
-    #content {
-      @include zen-grid-item(9, 1);
-    }
-
-    /* Span 1 column, starting in 5th column from left. */
-    .region-sidebar-second {
-      @include zen-grid-item(6, 19);
-    }
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  .two-sidebars {
-     @include zen-clear(both);
-     @include zen-grid-container();
-    /* Span 3 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(9, 1);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(8, 10);
-    }
-
-    /* Span 1 column, starting in 5th column from left. */
-    .region-sidebar-second {
-      @include zen-grid-item(6, 19);
-    }
-  }
-}
-
-
-
-:@options{ :@has_childrenT:
-@linei:@children[o:Sass::Tree::CommentNode
-:
-@type:normal:@value["/**
- * @file
- * Positioning for a responsive layout.
- *
- * Define CSS classes to create a fluid grid layout with optional sidebars
- * depending on whether blocks are placed in the left or right sidebars.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */;@;	i;
-[ o;
-;:silent;["/* We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
- * between columns (applied as 10px of left/right padding on each column). */;@;	i;
-[ o:Sass::Tree::VariableNode:
-@expro:Sass::Script::Number:@numerator_units[ :@original"1;i;@:@denominator_units[ ;	i:
-@name"zen-column-count;@:@guarded0;	i;
-[ o;;o;;["px;"	20px;i;@;[ ;	i;"zen-gutter-width;@;0;	i;
-[ o;
-;;;["y/* If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
- *$zen-box-sizing: content-box; */;@;	i;
-[ o;
-;;;["/* You can generate more efficient CSS if you manually apply the
- * zen-grid-item-base mixin to all grid items from within a single ruleset. */;@;	i;
-[ o;;o:Sass::Script::Bool;F;@;	i;"zen-auto-include-item-base;@;0;	i;
-[ o;
-;;;["3/* $zen-auto-include-flow-item-base: false; */;@;	i;
-[ o;
-;;;["a/* Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles. */;@;	i;
-[ u:Sass::Tree::IfNode[o:Sass::Script::Operation
-:@operand2o:Sass::Script::Bool:@valueF:@options{ :
-@linei:@operand1o:Sass::Script::Variable	:@underscored_name"zen_reverse_all_floats:
-@name"zen-reverse-all-floats;	@;
-i;	@;
-i:@operator:eq0[o:Sass::Tree::CommentNode
-:
-@type:normal;["ˆ/**
- * Center the page.
- *
- * For screen sizes larger than 1200px, prevent excessively long lines of text
- * by setting a max-width.
- */;	@;
-i :@children[ o:Sass::Tree::RuleNode:
-@tabsi :
-@rule["/#page,
-.region-highlighted,
-.region-bottom:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" :@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
-:@sourceso:Set:
-@hash{ :@subject0;@;[o:Sass::Selector::Id;["	page;@;
-i(;
-i(o;;["
-o;
-;o;; { ;!0;@;[o:Sass::Selector::Class;["region-highlighted;@;
-i(;
-i(o;;["
-o;
-;o;; { ;!0;@;[o;#;["region-bottom;@;
-i(;
-i(;
-i(;	@:@has_childrenT;
-i(;[o:Sass::Tree::PropNode:@prop_syntax:new;i ;o:Sass::Script::String;:identifier;"	auto;	@;["margin-left;	@;
-i);[ o;%;&;';i ;o;(;;);"	auto;	@;["margin-right;	@;
-i*;[ o;%;&;';i ;o;(;;);"1200px;	@;["max-width;	@;
-i+;[ o;
-;;;["T/* Apply the shared properties of grid items in a single, efficient ruleset. */;	@;
-i.;[ o;;i ;["f#header,
-#content,
-#navigation,
-#destacat,
-.region-sidebar-first,
-.region-sidebar-second,
-#footer;o;;" ;[o;;[o;
-;o;; { ;!0;@O;[o;";["header;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;";["content;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;";["navigation;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;";["destacat;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;#;["region-sidebar-first;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;#;["region-sidebar-second;@O;
-i5;
-i5o;;["
-o;
-;o;; { ;!0;@O;[o;";["footer;@O;
-i5;
-i5;
-i5;	@;$T;
-i5;[o;
-;:silent;["@/* See the note about $zen-auto-include-item-base above. */;	@;
-i6;[ o:Sass::Tree::MixinNode:@splat0:
-@args[ ;"zen-grid-item-base:@keywords{ ;	@;
-i7;[ o;
-;;;["4/* Containers for grid items and flow items. */;	@;
-i:;[ o;;i ;["#header,
-#main,
-#footer;o;;" ;[o;;[o;
-;o;; { ;!0;@£;[o;";["header;@£;
-i=;
-i=o;;["
-o;
-;o;; { ;!0;@£;[o;";["	main;@£;
-i=;
-i=o;;["
-o;
-;o;; { ;!0;@£;[o;";["footer;@£;
-i=;
-i=;
-i=;	@;$T;
-i=;[o;+;,0;-[ ;"zen-grid-container;.{ ;	@;
-i>;[ o;
-;;;["/* Navigation bar */;	@;
-iA;[ o:Sass::Tree::MediaNode;i :@query["all"
- and "(o;(	;;);"min-width;	@;
-iB": o:Sass::Script::Number:@numerator_units["px:@original"
-480px;ià;	@:@denominator_units[ ;
-iB");" ;	@;$T;
-iB;[o;;i ;["
-#main;o;;" ;[o;;[o;
-;o;; { ;!0;@à;[o;";["	main;@à;
-iC;
-iC;
-iC;	@;$T;
-iC;[o;
-;;;["</* Move all the children of #main down to make room. */;	@;
-iD;[ o;%;&;';i ;o;	;"nav_height;"nav-height;	@;
-iE;["padding-top;	@;
-iE;[ o;%;&;';i ;o;(;;);"relative;	@;["position;	@;
-iF;[ o;;i ;["#navigation;o;;" ;[o;;[o;
-;o;; { ;!0;@;[o;";["navigation;@;
-iI;
-iI;
-iI;	@;$T;
-iI;[
-o;
-;;;["5/* Move the navbar up inside #main's padding. */;	@;
-iJ;[ o;%;&;';i ;o;(;;);"absolute;	@;["position;	@;
-iK;[ o;%;&;';i ;o;(;;);"0;	@;["top;	@;
-iL;[ o;%;&;';i ;o;	;"nav_height;"nav-height;	@;
-iM;["height;	@;
-iM;[ o;%;&;';i ;o;	;"zen_grid_width;"zen-grid-width;	@;
-iN;["
-width;	@;
-iN;[ o;
-;;;["5/* End of @if $zen-reverse-all-floats == true */;@;	iR;
-[ o;
-;;;["7/**
- * Use 3 grid columns for smaller screens.
- */;@;	iT;
-[ o:Sass::Tree::MediaNode:
-@tabsi :@query["all"
- and "(o:Sass::Script::String	;:identifier;"min-width;@;	iW": o;;["px;"
-480px;ià;@;[ ;	iW")"
- and "(o;	;;;"max-width;@;	iW": o;;["px;"
-959px;i¿;@;[ ;	iW");" ;@;T;	iW;
-[o;;o;;[ ;"3;i;@;@;	iY;"zen-column-count;@;0;	iY;
-[ o;
-;;;["H/**
- * The layout when there is only one sidebar, the left one.
- */;@;	i[;
-[ o:Sass::Tree::RuleNode;i :
-@rule[".sidebar-first:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" :@members[o:Sass::Selector::Sequence;$[o:#Sass::Selector::SimpleSequence
-:@sourceso:Set:
-@hash{ :@subject0;#@f;$[o:Sass::Selector::Class;["sidebar-first;#@f;	i^;	i^;	i^;@;T;	i^;
-[	o;
-;;;["</* Span 2 columns, starting in 2nd column from left. */;@;	i_;
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@z;$[o:Sass::Selector::Id;["content;#@z;	i`;	i`;	i`;@;T;	i`;
-[o:Sass::Tree::MixinNode:@splat0:
-@args[o;;[ ;"2;i;@;@;	iao;;[ ;"2;i;@;@;	ia;"zen-grid-item:@keywords{ ;@;	ia;
-[ o;
-;;;[";/* Span 1 column, starting in 1st column from left. */;@;	id;
-[ o;;i ; [".region-sidebar-first;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@”;$[o;+;["region-sidebar-first;#@”;	ie;	ie;	ie;@;T;	ie;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	ifo;;[ ;"1;i;@;@;	if;"zen-grid-item;0{ ;@;	if;
-[ o;
-;;;["I/**
- * The layout when there is only one sidebar, the right one.
- */;@;	ij;
-[ o;;i ; [".sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@³;$[o;+;["sidebar-second;#@³;	im;	im;	im;@;T;	im;
-[	o;
-;;;["</* Span 2 columns, starting in 1st column from left. */;@;	in;
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Ç;$[o;,;["content;#@Ç;	io;	io;	io;@;T;	io;
-[o;-;.0;/[o;;[ ;"2;i;@;@;	ipo;;[ ;"1;i;@;@;	ip;"zen-grid-item;0{ ;@;	ip;
-[ o;
-;;;[";/* Span 1 column, starting in 3rd column from left. */;@;	is;
-[ o;;i ; [".region-sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@æ;$[o;+;["region-sidebar-second;#@æ;	it;	it;	it;@;T;	it;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iuo;;[ ;"3;i;@;@;	iu;"zen-grid-item;0{ ;@;	iu;
-[ o;
-;;;["7/**
- * The layout when there are two sidebars.
- */;@;	iy;
-[ o;;i ; [".two-sidebars;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;+;["two-sidebars;#@;	i|;	i|;	i|;@;T;	i|;
-[o;
-;;;["</* Span 2 columns, starting in 2nd column from left. */;@;	i};
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;,;["content;#@;	i~;	i~;	i~;@;T;	i~;
-[o;-;.0;/[o;;[ ;"2;i;@;@;	io;;[ ;"2;i;@;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;
-;;;[";/* Span 1 column, starting in 1st column from left. */;@;	i};
-[ o;;i ; [".region-sidebar-first;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@8;$[o;+;["region-sidebar-first;#@8;	i~;	i~;	i~;@;T;	i~;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	io;;[ ;"1;i;@;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;
-;;;["2/* Start a new row and span all 3 columns. */;@;	i‚;
-[ o;;i ; [".region-sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@W;$[o;+;["region-sidebar-second;#@W;	iƒ;	iƒ;	iƒ;@;T;	iƒ;
-[o;-;.0;/[o;;[ ;"3;i;@;@;	i„o;;[ ;"1;i;@;@;	i„;"zen-grid-item;0{ ;@;	i„;
-[ o;-;.0;/[ ;"zen-nested-container;0{ ;@;	i…;
-[ o;
-;;;["H/* Since we're making every block in this region be a grid item. */;@;	i…;
-[ o;-;.0;/[ ;"zen-clear;0{ ;@;	i†;
-[ o;
-;;;["T/* Apply the shared properties of grid items in a single, efficient ruleset. */;@;	iˆ;
-[ o;;i ; [".block;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@„;$[o;+;["
-block;#@„;	i‰;	i‰;	i‰;@;T;	i‰;
-[o;-;.0;/[ ;"zen-grid-item-base;0{ ;@;	iŠ;
-[ o;
-;;;["?/* Span 1 column, starting in the 1st column from left. */;@;	iŒ;
-[ o;;i ; [".block:nth-child(3n+1);!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;+;["
-block;#@;	io:Sass::Selector::Pseudo
-:	@arg["	3n+1;["nth-child:@syntactic_type:
-class;#@;	i;	i;	i;@;T;	i;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iŽo;;[ ;"1;i;@;@;	iŽ;"zen-grid-item;0{ ;@;	iŽ;
-[ o;-;.0;/[ ;"zen-clear;0{ ;@;	i;
-[ o;
-;;;["?/* Span 1 column, starting in the 2nd column from left. */;@;	i‘;
-[ o;;i ; [".block:nth-child(3n+2);!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Æ;$[o;+;["
-block;#@Æ;	i’o;1
-;2["	3n+2;["nth-child;3;4;#@Æ;	i’;	i’;	i’;@;T;	i’;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	i“o;;[ ;"2;i;@;@;	i“;"zen-grid-item;0{ ;@;	i“;
-[ o;
-;;;["?/* Span 1 column, starting in the 3rd column from left. */;@;	i•;
-[ o;;i ; [".block:nth-child(3n);!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@ê;$[o;+;["
-block;#@ê;	i–o;1
-;2["3n;["nth-child;3;4;#@ê;	i–;	i–;	i–;@;T;	i–;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	i—o;;[ ;"3;i;@;@;	i—;"zen-grid-item;0{ ;@;	i—;
-[ o;
-;;;["6/**
- * Use 5 grid columns for larger screens.
- */;@;	i;
-[ o;;i ;["all"
- and "(o;	;;;"min-width;@;	i ": o;;["px;"
-960px;iÀ;@;[ ;	i ");" ;@;T;	i ;
-[o;;i ; ["
-#help;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;,;["	help;#@;	i¡;	i¡;	i¡;@;T;	i¡;
-[o:Sass::Tree::PropNode:@prop_syntax:new;i ;o;;;;"	none;@;["display;@;	i¢;
-[ o;;o;;[ ;"23;i;@;@;	i¦;"zen-column-count;@;0;	i¦;
-[ o;;o;;["px;"	20px;i;@;[ ;	i§;"zen-gutter-width;@;0;	i§;
-[ o;;i ; ["
-#page;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@B;$[o;,;["	page;#@B;	i¨;	i¨;	i¨;@;T;	i¨;
-[o;
-;;;["(/*@include zen-grid-background();*/;@;	i©;
-[ o;;i ; ["#header;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@V;$[o;,;["header;#@V;	i«;	i«;	i«;@;T;	i«;
-[
-o;-;.0;/[ ;"zen-grid-container;0{ ;@;	i¬;
-[ o;;i ; ["
-#logo;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@k;$[o;,;["	logo;#@k;	i­;	i­;	i­;@;T;	i­;
-[o;-;.0;/[o;;[ ;"6;i;@;@;	i®o;;[ ;"1;i;@;@;	i®;"zen-grid-item;0{ ;@;	i®;
-[ o;;i ; ["#name-and-slogan;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@†;$[o;,;["name-and-slogan;#@†;	i°;	i°;	i°;@;T;	i°;
-[o;5;6;7;i ;o;;;;"	none;@;["display;@;	i±;
-[ o;;i ; ["#secondary-menu;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@œ;$[o;,;["secondary-menu;#@œ;	i³;	i³;	i³;@;T;	i³;
-[o;-;.0;/[o;;[ ;"2;i;@;@;	i´o;;[ ;"13;i;@;@;	i´;"zen-grid-item;0{ ;@;	i´;
-[ o;;i ; [".region-header;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@·;$[o;+;["region-header;#@·;	i¶;	i¶;	i¶;@;T;	i¶;
-[o;5;6;7;i ;o;;;;"inline;@;["display;@;	i·;
-[ o;;i ; ["'#block-views-exp-hemeroteca-page-1;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Í;$[o;,;["&block-views-exp-hemeroteca-page-1;#@Í;	i¸;	i¸;	i¸;@;T;	i¸;
-[o;-;.0;/[o;;[ ;"4;i	;@;@;	i¹o;;[ ;"18;i;@;@;	i¹;"zen-grid-item;0{ ;@;	i¹;
-[ o;;i ; ["#block-block-4;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@è;$[o;,;["block-block-4;#@è;	i»;	i»;	i»;@;T;	i»;
-[o;-;.0;/[o;;[ ;"2;i;@;@;	i¼o;;[ ;"7;i;@;@;	i¼;"zen-grid-item;0{ ;@;	i¼;
-[ o;;i ; ["#block-block-1;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;,;["block-block-1;#@;	i¾;	i¾;	i¾;@;T;	i¾;
-[o;-;.0;/[o;;[ ;"3;i;@;@;	i¿o;;[ ;"15;i;@;@;	i¿;"zen-grid-item;0{ ;@;	i¿;
-[ o;;i ; ["#block-block-2;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;,;["block-block-2;#@;	iÁ;	iÁ;	iÁ;@;T;	iÁ;
-[o;-;.0;/[o;;[ ;"2;i;@;@;	iÂo;;[ ;"10;i;@;@;	iÂ;"zen-grid-item;0{ ;@;	iÂ;
-[ o;5;6;7;i ;o;;;;"	10px;@;["padding-left;@;	iÃ;
-[ o;;o;;[ ;"3;i;@;@;	iÄ;"zen-column-count;@;0;	iÄ;
-[ o;;o;;["px;"	20px;i;@;[ ;	iÅ;"zen-gutter-width;@;0;	iÅ;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	iÆ;
-[ o;;i ; [".tw;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@R;$[o;+;["tw;#@R;	iÇ;	iÇ;	iÇ;@;T;	iÇ;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iÈo;;[ ;"1;i;@;@;	iÈ;"zen-grid-item;0{ ;@;	iÈ;
-[ o;;i ; [".fb;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@m;$[o;+;["fb;#@m;	iÊ;	iÊ;	iÊ;@;T;	iÊ;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iËo;;[ ;"2;i;@;@;	iË;"zen-grid-item;0{ ;@;	iË;
-[ o;;i ; [".vi;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@ˆ;$[o;+;["vi;#@ˆ;	iÍ;	iÍ;	iÍ;@;T;	iÍ;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iÎo;;[ ;"3;i;@;@;	iÎ;"zen-grid-item;0{ ;@;	iÎ;
-[ o;;i ; [".views-submit-button;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@£;$[o;+;["views-submit-button;#@£;	iÑ;	iÑ;	iÑ;@;T;	iÑ;
-[o;5;6;7;i ;o;;;;"	none;@;["display;@;	iÒ;
-[ o;;i ; ["#navigation;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@¹;$[o;,;["navigation;#@¹;	iÖ;	iÖ;	iÖ;@;T;	iÖ;
-[o;-;.0;/[o;	;;;"	both;@;	i×;"zen-clear;0{ ;@;	i×;
-[ o;;i ; [".region-navigation;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Ð;$[o;+;["region-navigation;#@Ð;	iØ;	iØ;	iØ;@;T;	iØ;
-[o;-;.0;/[o;	;;;"	both;@;	iÙ;"zen-clear;0{ ;@;	iÙ;
-[ o;;o;;[ ;"3;i;@;@;	iÚ;"zen-column-count;@;0;	iÚ;
-[ o;;o;;["px;"	10px;i;@;[ ;	iÛ;"zen-gutter-width;@;0;	iÛ;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	iÜ;
-[ o;;i ; ["#block-nice-menus-3;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@ú;$[o;,;["block-nice-menus-3;#@ú;	iÝ;	iÝ;	iÝ;@;T;	iÝ;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iÞo;;[ ;"1;i;@;@;	iÞ;"zen-grid-item;0{ ;@;	iÞ;
-[ o;;i ; ["#nice-menu-3;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;,;["nice-menu-3;#@;	iß;	iß;	iß;@;T;	iß;
-[o;-;.0;/[ ;"zen-clear;0{ ;@;	ià;
-[ o;;i ; ["li;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@*;$[o:Sass::Selector::Element	:@namespace0;["li;#@*;	iá;	iá;	iá;@;T;	iá;
-[
-o;;o;;[ ;"2;i;@;@;	iâ;"zen-column-count;@;0;	iâ;
-[ o;;o;;["px;"	10px;i;@;[ ;	iã;"zen-gutter-width;@;0;	iã;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	iä;
-[ o;;i ; ["li.odd a;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@M;$[o;8	;90;["li;#@M;	iåo;+;["odd;#@M;	iå;	iåo;&
-;'o;(;){ ;*0;#@M;$[o;8	;90;["a;#@M;	iå;	iå;	iå;@;T;	iå;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iæo;;[ ;"1;i;@;@;	iæ;"zen-grid-item;0{ ;@;	iæ;
-[ o;;i ; ["li.even a;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@r;$[o;8	;90;["li;#@r;	iço;+;["	even;#@r;	iç;	iço;&
-;'o;(;){ ;*0;#@r;$[o;8	;90;["a;#@r;	iç;	iç;	iç;@;T;	iç;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	ièo;;[ ;"2;i;@;@;	iè;"zen-grid-item;0{ ;@;	iè;
-[ o;;i ; ["#block-nice-menus-2;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@—;$[o;,;["block-nice-menus-2;#@—;	ií;	ií;	ií;@;T;	ií;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iîo;;[ ;"2;i;@;@;	iî;"zen-grid-item;0{ ;@;	iî;
-[ o;;i ; ["#block-nice-menus-1;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@²;$[o;,;["block-nice-menus-1;#@²;	ið;	ið;	ið;@;T;	ið;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iño;;[ ;"3;i;@;@;	iñ;"zen-grid-item;0{ ;@;	iñ;
-[ o;;i ; ["#destacat;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Í;$[o;,;["destacat;#@Í;	iõ;	iõ;	iõ;@;T;	iõ;
-[o;-;.0;/[o;	;;;"	both;@;	iö;"zen-clear;0{ ;@;	iö;
-[ o;;o;;[ ;"2;i;@;@;	i÷;"zen-column-count;@;0;	i÷;
-[ o;;o;;["px;"	12px;i;@;[ ;	iø;"zen-gutter-width;@;0;	iø;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	iù;
-[ o;;i ; [".field-fotografies;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@÷;$[o;+;["field-fotografies;#@÷;	iú;	iú;	iú;@;T;	iú;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	iûo;;[ ;"1;i;@;@;	iû;"zen-grid-item;0{ ;@;	iû;
-[ o;;i ; ["`.pretitular,
-    .views-field-title,
-    .field-body,
-    .field-continguts-relacionats-ref;!o;";#" ;$[	o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;+;["pretitular;#@;	i ;	i o;%;$["
-o;&
-;'o;(;){ ;*0;#@;$[o;+;["views-field-title;#@;	i ;	i o;%;$["
-o;&
-;'o;(;){ ;*0;#@;$[o;+;["field-body;#@;	i ;	i o;%;$["
-o;&
-;'o;(;){ ;*0;#@;$[o;+;["%field-continguts-relacionats-ref;#@;	i ;	i ;	i ;@;T;	i ;
-[	o;-;.0;/[o;	;;;"
-right;@;	i;"zen-clear;0{ ;@;	i;
-[ o;-;.0;/[o;	;;;"
-right;@;	i;"zen-clear;0{ ;@;	i;
-[ o;-;.0;/[o;;[ ;"1;i;@;@;	io;;[ ;"1;i;@;@;	io;	;;;"
-right;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;-;.0;/[o;	;;;"
-right;@;	i;"zen-clear;0{ ;@;	i;
-[ o;;i ; [".attachment-after;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@b;$[o;+;["attachment-after;#@b;	i;	i;	i;@;T;	i;
-[o;-;.0;/[o;	;;;"	both;@;	i;"zen-clear;0{ ;@;	i;
-[ o;-;.0;/[o;;[ ;"2;i;@;@;	io;;[ ;"1;i;@;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;;i ; [" .field-contingut-relacionat;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@„;$[o;+;["field-contingut-relacionat;#@„;	i
-;	i
-;	i
-;@;T;	i
-;
-[
-o;;o;;[ ;"5;i
-;@;@;	i;"zen-column-count;@;0;	i;
-[ o;;o;;["px;"5px;i
-;@;[ ;	i;"zen-gutter-width;@;0;	i;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	i;
-[ o;;i ; [".field-fotografies;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@§;$[o;+;["field-fotografies;#@§;	i;	i;	i;@;T;	i;
-[o;-;.0;/[o;;[ ;"1;i;@;@;	io;;[ ;"1;i;@;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;;i ; [";a.autor,
-      .date-display-single,
-      .field-body;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@Â;$[o;8	;90;["a;#@Â;	io;+;["
-autor;#@Â;	i;	io;%;$["
-o;&
-;'o;(;){ ;*0;#@Â;$[o;+;["date-display-single;#@Â;	i;	io;%;$["
-o;&
-;'o;(;){ ;*0;#@Â;$[o;+;["field-body;#@Â;	i;	i;	i;@;T;	i;
-[o;-;.0;/[o;;[ ;"4;i	;@;@;	io;;[ ;"2;i;@;@;	i;"zen-grid-item;0{ ;@;	i;
-[ o;;i ; [".region-help;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@ô;$[o;+;["region-help;#@ô;	i;	i;	i;@;T;	i;
-[o;-;.0;/[ ;"zen-clear;0{ ;@;	i;
-[ o;5;6;7;i ;o;;;;"	none;@;["display;@;	i;
-[ o;
-;;;["H/**
- * The layout when there is only one sidebar, the left one.
- */;@;	i!;
-[ o;;i ; [".sidebar-first;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;+;["sidebar-first;#@;	i$;	i$;	i$;@;T;	i$;
-[	o;
-;;;["</* Span 4 columns, starting in 2nd column from left. */;@;	i%;
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@';$[o;,;["content;#@';	i&;	i&;	i&;@;T;	i&;
-[o;-;.0;/[o;;[ ;"9;i;@;@;	i'o;;[ ;"1;i;@;@;	i';"zen-grid-item;0{ ;@;	i';
-[ o;
-;;;[";/* Span 1 column, starting in 1st column from left. */;@;	i*;
-[ o;;i ; [".region-sidebar-first;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@F;$[o;+;["region-sidebar-first;#@F;	i+;	i+;	i+;@;T;	i+;
-[o;-;.0;/[o;;[ ;"8;i;@;@;	i,o;;[ ;"10;i;@;@;	i,;"zen-grid-item;0{ ;@;	i,;
-[ o;
-;;;["I/**
- * The layout when there is only one sidebar, the right one.
- */;@;	i0;
-[ o;;i ; [".sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@e;$[o;+;["sidebar-second;#@e;	i3;	i3;	i3;@;T;	i3;
-[	o;
-;;;["</* Span 4 columns, starting in 1st column from left. */;@;	i4;
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@y;$[o;,;["content;#@y;	i5;	i5;	i5;@;T;	i5;
-[o;-;.0;/[o;;[ ;"9;i;@;@;	i6o;;[ ;"1;i;@;@;	i6;"zen-grid-item;0{ ;@;	i6;
-[ o;
-;;;[";/* Span 1 column, starting in 5th column from left. */;@;	i9;
-[ o;;i ; [".region-sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@˜;$[o;+;["region-sidebar-second;#@˜;	i:;	i:;	i:;@;T;	i:;
-[o;-;.0;/[o;;[ ;"6;i;@;@;	i;o;;[ ;"19;i;@;@;	i;;"zen-grid-item;0{ ;@;	i;;
-[ o;
-;;;["7/**
- * The layout when there are two sidebars.
- */;@;	i?;
-[ o;;i ; [".two-sidebars;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@·;$[o;+;["two-sidebars;#@·;	iB;	iB;	iB;@;T;	iB;
-[o;-;.0;/[o;	;;;"	both;@;	iC;"zen-clear;0{ ;@;	iC;
-[ o;-;.0;/[ ;"zen-grid-container;0{ ;@;	iD;
-[ o;
-;;;["</* Span 3 columns, starting in 2nd column from left. */;@;	iE;
-[ o;;i ; ["#content;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@×;$[o;,;["content;#@×;	iF;	iF;	iF;@;T;	iF;
-[o;-;.0;/[o;;[ ;"9;i;@;@;	iGo;;[ ;"1;i;@;@;	iG;"zen-grid-item;0{ ;@;	iG;
-[ o;
-;;;[";/* Span 1 column, starting in 1st column from left. */;@;	iJ;
-[ o;;i ; [".region-sidebar-first;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@ö;$[o;+;["region-sidebar-first;#@ö;	iK;	iK;	iK;@;T;	iK;
-[o;-;.0;/[o;;[ ;"8;i;@;@;	iLo;;[ ;"10;i;@;@;	iL;"zen-grid-item;0{ ;@;	iL;
-[ o;
-;;;[";/* Span 1 column, starting in 5th column from left. */;@;	iO;
-[ o;;i ; [".region-sidebar-second;!o;";#" ;$[o;%;$[o;&
-;'o;(;){ ;*0;#@;$[o;+;["region-sidebar-second;#@;	iP;	iP;	iP;@;T;	iP;
-[o;-;.0;/[o;;[ ;"6;i;@;@;	iQo;;[ ;"19;i;@;@;	iQ;"zen-grid-item;0{ ;@;	iQ;
-[ 
