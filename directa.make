@@ -125,6 +125,14 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[apachesolr][version] = "1.6"
   projects[apachesolr][subdir] = "contrib"
   
+ ;;;; Exportacio de antiga web
+
+  projects[feeds][version] = "2.x-dev"
+  projects[feeds][subdir] = "contrib"
+  
+  projects[feeds_tamper][version] = "1.0"
+  projects[feeds_tamper][subdir] = "contrib"
+
 
 
 ;;; fields
