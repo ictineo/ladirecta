@@ -127,6 +127,10 @@ projects[strongarm][subdir] = "contrib/dev"
   
  ;;;; Exportacio de antiga web
 
+  
+  projects[job_scheduler][version] = "2.0-alpha3"
+  projects[job_scheduler][subdir] = "contrib"
+  
   projects[feeds][version] = "2.x-dev"
   projects[feeds][subdir] = "contrib"
   

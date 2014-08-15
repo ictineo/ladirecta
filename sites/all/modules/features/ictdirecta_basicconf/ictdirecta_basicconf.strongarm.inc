@@ -310,7 +310,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['comment_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -324,7 +324,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'context_block_rebuild_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['context_block_rebuild_needed'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -910,7 +910,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
-  $strongarm->value = '[term:vocabulary]/[term:tid]';
+  $strongarm->value = '[term:vocabulary]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1008,7 +1008,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = FALSE;
+  $strongarm->value = TRUE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   return $export;

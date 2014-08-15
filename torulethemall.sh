@@ -8,6 +8,4 @@ drush dis uuid_features
 
 drush en ictdirecta_torulethemallnew
 
-echo "EL MODULO UUID_FEATURES NO CHUTA VIA DRUSH!! SE HA DE ACTIVAR POR INTERFICIE DESPUES DE ESTE SCRIPT"
-echo "EL MODULO UUID_FEATURES NO CHUTA VIA DRUSH!! SE HA DE ACTIVAR POR INTERFICIE DESPUES DE ESTE SCRIPT"
-echo "EL MODULO UUID_FEATURES NO CHUTA VIA DRUSH!! SE HA DE ACTIVAR POR INTERFICIE DESPUES DE ESTE SCRIPT"
+echo "Cal posar enable al feeds admin ui i al feeds tamper ui, i fer la importacio"
