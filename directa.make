@@ -193,8 +193,10 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[field_group][version] = "1.4"
   projects[field_group][subdir] = "contrib"
 
-  projects[field_collection][version] = "1.0-beta5"
+  projects[field_collection][version] = "1.x-dev"
   projects[field_collection][subdir] = "contrib"
+  projects[field_collection][patch][] = "https://www.drupal.org/files/issues/field_collection_1063434_143.patch"
+  
   projects[field_collection_views][version] = "1.0-beta3"
   projects[field_collection_views][subdir] = "contrib"
   projects[field_collection_table][version] = "1.0-beta1"

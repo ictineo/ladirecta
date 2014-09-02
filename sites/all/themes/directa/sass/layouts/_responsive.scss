@@ -175,7 +175,7 @@ $zen-auto-include-item-base: false;
       display:none;
     }
     #secondary-menu {
-      //@include zen-grid-item(2,10);
+      @include zen-grid-item(2,12);
     }
     .region-header  {
       @include zen-clear(none);
@@ -183,8 +183,11 @@ $zen-auto-include-item-base: false;
       $zen-column-count:18;
       $zen-gutter-width:20px;
       @include zen-grid-container();
-      #block-block-4 {
+      #block-block-7 {
         @include zen-grid-item(2,2);
+      }
+      #block-block-4 {
+        @include zen-grid-item(2,4);
       }
       #block-block-5 {
         //Subscriu't-'hi

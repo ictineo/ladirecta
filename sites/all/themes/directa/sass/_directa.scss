@@ -29,7 +29,7 @@ a {
 
 #block-user-login {
 }
-
+#block-block-7,
 #block-block-4 {
   @include bseccio;
     background-image:url('../images/menu_arrow_down');
@@ -513,5 +513,28 @@ span.date-display-single {
   }
 }
 
+.block.block-views {
+      display: inline-block;
+      float: left;
+      width: 310px;
+ }
 
 
+#menu-agenda {
+    width: 290px;
+}
+
+#menu-agenda > div {
+    background: none repeat scroll 0 0 rgb(220, 220, 200);
+    height: 35px;
+    margin-bottom: 4px;
+    padding-top: 9px;
+    width: 100%;
+}
+.daysup {
+    background: none repeat scroll 0 0 grey;
+    border-radius: 60px;
+    display: inline;
+    margin-top: 0;
+    padding: 8px;
+}
