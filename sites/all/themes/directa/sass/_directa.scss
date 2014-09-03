@@ -513,6 +513,7 @@ span.date-display-single {
   }
 }
 
+/* Agenda Lateral menu */
 .block.block-views {
       display: inline-block;
       float: left;
@@ -538,3 +539,9 @@ span.date-display-single {
     margin-top: 0;
     padding: 8px;
 }
+
+#esdeveniment-agenda-node-form {
+  .vertical-tabs {
+     display:none;
+   }
+ }

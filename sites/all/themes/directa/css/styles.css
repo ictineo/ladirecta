@@ -3939,19 +3939,20 @@ span.date-display-single a {
   display: none;
 }
 
-/* line 516, ../sass/_directa.scss */
+/* Agenda Lateral menu */
+/* line 517, ../sass/_directa.scss */
 .block.block-views {
   display: inline-block;
   float: left;
   width: 310px;
 }
 
-/* line 523, ../sass/_directa.scss */
+/* line 524, ../sass/_directa.scss */
 #menu-agenda {
   width: 290px;
 }
 
-/* line 527, ../sass/_directa.scss */
+/* line 528, ../sass/_directa.scss */
 #menu-agenda > div {
   background: none repeat scroll 0 0 #dcdcc8;
   height: 35px;
@@ -3960,13 +3961,18 @@ span.date-display-single a {
   width: 100%;
 }
 
-/* line 534, ../sass/_directa.scss */
+/* line 535, ../sass/_directa.scss */
 .daysup {
   background: none repeat scroll 0 0 grey;
   border-radius: 60px;
   display: inline;
   margin-top: 0;
   padding: 8px;
+}
+
+/* line 544, ../sass/_directa.scss */
+#esdeveniment-agenda-node-form .vertical-tabs {
+  display: none;
 }
 
 /**
@@ -4055,43 +4061,117 @@ span.date-display-single a {
     display: none;
   }
 }
-/* line 4, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia {
+/* line 3, ../sass/_calendari.scss */
+.node-esdeveniment_agenda-form .form-item-title .form-text.required {
+  height: 68px;
+  width: 100%;
+}
+/* line 8, ../sass/_calendari.scss */
+.node-esdeveniment_agenda-form .form-item.form-type-textfield.form-item-field-adreca-electronica-und-0-value {
+  width: 40%;
+}
+/* line 10, ../sass/_calendari.scss */
+.node-esdeveniment_agenda-form .form-item.form-type-textfield.form-item-field-adreca-electronica-und-0-value .description {
+  color: rgba(120, 120, 120, 0.698);
+  margin-left: 5px;
+  margin-top: -24px;
+}
+/* line 17, ../sass/_calendari.scss */
+.node-esdeveniment_agenda-form .form-item-field-data-ag-und-0-value2-date {
+  display: none;
+}
+/* line 20, ../sass/_calendari.scss */
+.node-esdeveniment_agenda-form .date-float {
+  display: none;
+}
+
+/* line 32, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia {
   display: block;
   float: left;
   height: 100%;
-  width: 12%;
+  width: 13%;
 }
-/* line 9, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia .data {
-  background: none repeat scroll 0 0 grey;
+/* line 38, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui {
+  background: none repeat scroll 0 0 #5e5e5e;
   border-radius: 60px;
   padding: 8px;
   display: inherit;
   height: 95px;
 }
-/* line 16, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia .data .num,
-.page-agenda-llista .view-agenda-llista #cal-line .dia .data .llet {
+/* line 45, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data .num,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data .llet,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .num,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .llet {
   display: block;
   text-align: center;
   color: white;
 }
-/* line 21, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia .data .num {
-  margin-top: 15px;
+/* line 50, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data .num,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .num {
+  font-family: 'graphik_regularregular';
   font-size: 53px;
+  color: white;
+  line-height: 21px;
+  font-weight: normal;
+  margin-top: 16px;
 }
-/* line 25, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia .data .llet {
+/* line 54, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data .llet,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .llet {
+  font-family: 'graphik_regularregular';
   font-size: 16px;
-  margin-top: 10px;
+  color: white;
+  line-height: 21px;
+  font-weight: normal;
+  margin-top: 14px;
+  text-transform: uppercase;
 }
-/* line 30, ../sass/_calendari.scss */
-.page-agenda-llista .view-agenda-llista #cal-line .dia #events {
+/* line 60, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui {
+  border: 5px solid #5e5e5e;
+  background-color: white;
+}
+/* line 64, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .num,
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .llet {
+  color: #5e5e5e;
+}
+/* line 67, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .num {
+  font-family: 'graphik_regularregular';
+  font-size: 53px;
+  color: #5e5e5e;
+  line-height: 21px;
+  font-weight: normal;
+  margin-top: 16px;
+}
+/* line 71, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia .data-avui .llet {
+  font-family: 'graphik_regularregular';
+  font-size: 16px;
+  color: #5e5e5e;
+  line-height: 21px;
+  font-weight: normal;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+/* line 77, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia #event {
   display: inline-block;
-  margin-left: 50px;
-  width: 250px;
+  margin-left: 10px;
+  width: 100%;
+}
+/* line 86, ../sass/_calendari.scss */
+.page-node-add-esdeveniment-agenda .view-agenda-llista #cal-line .dia #event .title .events a {
+  font-family: 'graphiksemibold';
+  font-size: 19px;
+  color: #5e5e5e;
+  line-height: 21px;
 }
 
 /* SMACSS theme rules */

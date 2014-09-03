@@ -150,15 +150,12 @@ projects[strongarm][subdir] = "contrib/dev"
   
   projects[webform][version] = "3.19"
   projects[webform][subdir] = "contrib"
-<<<<<<< HEAD
   
   projects[options_element][version] = "1.12"
   projects[options_element][subdir] = "contrib"
-=======
 
   projects[views_field_view][version] = "1.1"
   projects[views_field_view][subdir] = "contrib"
->>>>>>> isa
   
   projects[date][version] = "2.6"
   projects[date][subdir] = "contrib"
@@ -174,9 +171,12 @@ projects[strongarm][subdir] = "contrib/dev"
   projects[imce_tools][version] = "1.1"
   projects[imce_tools][subdir] = "contrib"
 
+  projects[insert][version] = "1.3"
+  projects[insert][subdir] = "contrib"
+
+
   projects[webform][version] = "3.20"
   projects[webform][subdir] = "contrib"
-
   projects[link][version] = "1.2"
   projects[link][subdir] = "contrib"
 
