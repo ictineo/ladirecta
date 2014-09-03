@@ -1,6 +1,7 @@
 name = ictdirecta_agenda
 core = 7.x
 package = Features
+dependencies[] = insert
 dependencies[] = calendar
 dependencies[] = date
 dependencies[] = eva

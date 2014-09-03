@@ -20,6 +20,7 @@ dependencies[] = job_scheduler
 dependencies[] = l10n_update
 dependencies[] = libraries
 dependencies[] = link
+dependencies[] = profile2
 dependencies[] = locale
 dependencies[] = mollom
 dependencies[] = page_title
