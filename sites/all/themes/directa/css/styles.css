@@ -4396,6 +4396,10 @@ span.date-display-single a {
   overflow: hidden;
   height: 0px;
 }
+/* line 28, ../sass/_ajustosjs.scss */
+#navigation #block-nice-menus-1 {
+  display: block;
+}
 
 /* SMACSS theme rules */
 /* @import "theme-A"; */

@@ -189,7 +189,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'portada_ciz';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Relationship: Content: Author */
+  /* Relationship: Content: Autor */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
@@ -205,7 +205,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['type']['alter']['ellipsis'] = FALSE;
-  /* Field: User: Name */
+  /* Field: User: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -763,6 +763,27 @@ function ictdirecta_portada_views_default_views() {
   );
   $handler->display->display_options['fields']['field_continguts_relacionats']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_continguts_relacionats']['field_api_classes'] = TRUE;
+  /* Field: Content: Noticies relacionades */
+  $handler->display->display_options['fields']['field_contingut_relacionat']['id'] = 'field_contingut_relacionat';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['table'] = 'field_data_field_contingut_relacionat';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['field'] = 'field_contingut_relacionat';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['label'] = '';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_contingut_relacionat']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_contingut_relacionat']['type'] = 'field_collection_view';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['settings'] = array(
+    'edit' => '',
+    'delete' => '',
+    'add' => '',
+    'description' => 0,
+    'view_mode' => 'token',
+  );
+  $handler->display->display_options['fields']['field_contingut_relacionat']['delta_limit'] = '4';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_contingut_relacionat']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -783,6 +804,7 @@ function ictdirecta_portada_views_default_views() {
 
   /* Display: Attachment 2 */
   $handler = $view->new_display('attachment', 'Attachment 2', 'attachment_2');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
@@ -821,6 +843,10 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_contingut_relacionat']['delta_limit'] = '4';
   $handler->display->display_options['fields']['field_contingut_relacionat']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field_api_classes'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Flags: Content ID */
   $handler->display->display_options['arguments']['entity_id']['id'] = 'entity_id';
@@ -867,6 +893,7 @@ function ictdirecta_portada_views_default_views() {
     t('field collection item from field_continguts_relacionats'),
     t('<div class="pretitular">[field_seccio][field_autor][field_data]</div> '),
     t('Attachment 2'),
+    t('Title'),
     t('All'),
   );
   $export['portada_destacadotodascolumnas'] = $view;
@@ -2768,7 +2795,7 @@ function ictdirecta_portada_views_default_views() {
   );
   $handler->display->display_options['fields']['field_contingut_relacionat']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Sort criterion: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -2855,7 +2882,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 1;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Sort criterion: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -3034,7 +3061,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['field_contingut_relacionat']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Sort criterion: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -3277,7 +3304,7 @@ function ictdirecta_portada_views_default_views() {
   );
   $handler->display->display_options['fields']['field_contingut_relacionat']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_contingut_relacionat']['field_api_classes'] = TRUE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Sort criterion: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -3371,7 +3398,7 @@ function ictdirecta_portada_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 1;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Weight */
+  /* Sort criterion: Draggableviews: Pes */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';

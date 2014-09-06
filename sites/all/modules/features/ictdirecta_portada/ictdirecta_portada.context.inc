@@ -70,6 +70,12 @@ function ictdirecta_portada_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => '7',
+          'region' => 'header',
+          'weight' => '-9',
+        ),
       ),
     ),
   );
