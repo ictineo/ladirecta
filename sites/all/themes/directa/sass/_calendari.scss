@@ -1,0 +1,183 @@
+.node-esdeveniment_agenda-form{
+ .form-item-title {
+   .form-text.required {
+     height: 68px;
+     width: 100%;
+    }
+  }
+  .form-item.form-type-textfield.form-item-field-adreca-electronica-und-0-value {
+      width:40%;
+     .description {
+       color: rgba(120, 120, 120, 0.698);
+       margin-left: 5px;
+       margin-top: -24px;
+       }
+  }
+
+ .form-item-field-data-ag-und-0-value2-date {
+       display: none;
+ }
+ .date-float {
+   display:none;
+
+
+ }
+}
+
+
+.page-node-add-esdeveniment-agenda {
+  #main #content {
+    @include zen-grid-item(4,1);
+    form > div {
+      $zen-column-count: 3;
+      $zen-gutter-width:60px;
+      @include zen-grid-container();
+      .form-type-textfield.form-item-title {
+        @include zen-grid-item(3,1);
+      }
+      #edit-field-adreca-electronica {
+        @include zen-clear();
+        @include zen-grid-item(1,1);
+      }
+      #edit-field-data-ag {
+        @include zen-grid-item(2,2);
+      }
+      #edit-field-adreca {
+        @include zen-clear();
+      }
+      #edit-field-territori {
+        @include zen-clear();
+      }
+      #edit-body {
+        @include zen-clear();
+      }
+      #edit-field-adjuntar-imatge {
+        @include zen-clear();
+      }
+    }
+  }
+ 
+  .view-agenda-llista {
+    .cal-line-pager {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: pink;
+    }
+    #cal-line {
+      .dia {
+        display: block;
+        width: 112px;
+        .data,
+        .data-avui {
+          background: none repeat scroll 0 0 $gris7;
+          border-radius: 60px;
+          padding: 8px;
+          display: block;
+          height: 95px;
+          width: 95px;
+          .num,
+          .llet {
+            display: block;
+            text-align: center;
+            color: white;
+          }
+          .num {
+            @include graphik-regular(53px,$blanc,21px);
+            margin-top: 16px;
+          }
+          .llet {
+            @include graphik-regular(16px,$blanc,21px);
+            margin-top: 14px;
+            text-transform: uppercase;
+          }
+        }
+        .data-avui {
+          border: 5px solid $gris7;
+          background-color: $blanc;
+          .num,
+          .llet {
+            color: $gris7;
+          }
+          .num {
+            @include graphik-regular(53px,$gris7,21px);
+            margin-top: 16px;
+          }
+          .llet {
+            @include graphik-regular(16px,$gris7,21px);
+            margin-top: 14px;
+            text-transform: uppercase;
+          }
+        }
+        #event {
+          display: inline-block;
+          margin-left: 10px;
+          width: 100%;
+          //data {
+          //  @include public-bold(16px,$gris4,16px);
+          //  font-style: italic;
+          //  }
+          .title {
+            .events a {
+              @include graphik-semibold(19px,$gris7,21px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#user-register-form {
+
+  #subscripcions {
+    .visible, .colapsat {
+    float: left;
+    height: 60px;
+    width: 450px;
+    }
+    .visible {
+      background: none repeat scroll 0 0 rgba(200, 200, 200, 0.8);
+      padding: 20px 0 0 10px;
+      .bola {
+        background: none repeat scroll 0 0 grey;
+        border-radius: 60px;
+        display: inline-block;
+        float: left;
+        height: 10px;
+        margin-bottom: -1px;
+        width: 10px;
+      }
+      .text {
+        display: inline;
+        float: left;
+        margin-top: -7px;
+        padding-left: 20px;
+        width: 75%;
+        .ajuda {
+          display: block;
+          padding-left: 0;
+         }
+      }
+     
+      .expand {
+        float: left;
+        margin-left: 0;
+      }
+    
+      .preu {
+        background: none repeat scroll 0 0 white;
+        border-radius: 152px;
+        display: inline;
+        padding: 16px;
+        width: 90%;
+      }
+
+} 
+
+
+  }
+
+
+
+}

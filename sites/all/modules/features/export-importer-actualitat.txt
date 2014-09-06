@@ -1,0 +1,66 @@
+$feeds_importer = new stdClass();
+$feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+$feeds_importer->api_version = 1;
+$feeds_importer->id = 'actualitat';
+$feeds_importer->config = array(
+  'name' => 'Actualitat',
+  'description' => 'Antics teletips',
+  'fetcher' => array(
+    'plugin_key' => 'FeedsHTTPFetcher',
+    'config' => array(
+      'auto_detect_feeds' => FALSE,
+      'use_pubsubhubbub' => FALSE,
+      'designated_hub' => '',
+      'request_timeout' => NULL,
+      'auto_scheme' => 'http',
+    ),
+  ),
+  'parser' => array(
+    'plugin_key' => 'FeedsCSVParser',
+    'config' => array(
+      'delimiter' => ',',
+      'no_headers' => 0,
+    ),
+  ),
+  'processor' => array(
+    'plugin_key' => 'FeedsNodeProcessor',
+    'config' => array(
+      'expire' => '-1',
+      'author' => '1',
+      'authorize' => 1,
+      'mappings' => array(
+        0 => array(
+          'source' => 'field_description[\'0\'][\'value\']',
+          'target' => 'body',
+          'unique' => FALSE,
+        ),
+        1 => array(
+          'source' => 'name',
+          'target' => 'field_autor:title',
+          'unique' => FALSE,
+        ),
+        2 => array(
+          'source' => 'title',
+          'target' => 'field_autor:title',
+          'unique' => FALSE,
+        ),
+        3 => array(
+          'source' => 'vid ',
+          'target' => 'nid',
+          'unique' => 1,
+        ),
+      ),
+      'update_existing' => '1',
+      'input_format' => 'full_html',
+      'skip_hash_check' => 0,
+      'bundle' => 'actualitat',
+    ),
+  ),
+  'content_type' => '',
+  'update' => 0,
+  'import_period' => 1800,
+  'expire_period' => 3600,
+  'import_on_create' => TRUE,
+  'process_in_background' => FALSE,
+);
+
