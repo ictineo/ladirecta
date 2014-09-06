@@ -204,6 +204,15 @@ span.date-display-single {
   #page-title {
     @include titulo-fotogaleria;
   }
+  .field-body {
+    @include public-roman(23px,$gris7,32px);
+    }
+  #block-views-fotogaleria-block {
+    @include graphik-medium(26px,$gris7,30px);
+    .views-field-title a {
+      @include graphik-semibold(21px, $gris7,24px);
+    }
+  }
 }
 
 /*MENU LATERAL*/
@@ -329,7 +338,6 @@ span.date-display-single {
     }
   }
 }
-
 
 
 
@@ -545,3 +553,50 @@ span.date-display-single {
      display:none;
    }
  }
+
+ // Subscripcions
+
+
+.page-admin-people-create {
+
+
+
+  #user-register-form {
+
+    .fieldset-wrapper {
+         
+       .group-subscripcio {
+
+       }
+       .group-perfil {
+
+       }
+       .group-pagament {
+         #edit-profile-main-field-forma-pagament{
+           display:none;
+
+         }
+       }
+
+
+    }
+  
+    #edit-locale {
+      display: none;
+    }
+
+  }
+
+}
+
+//Home//
+
+#content h2 a {
+  @include graphik-semibold(36px,$gris7,40px);
+}
+
+.block-tagadelic-taxonomy  {
+  @include tagadelic;
+}
+
+

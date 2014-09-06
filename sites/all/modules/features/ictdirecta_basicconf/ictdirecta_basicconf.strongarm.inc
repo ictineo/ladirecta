@@ -14,7 +14,7 @@ function ictdirecta_basicconf_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
-  $strongarm->value = 'seven';
+  $strongarm->value = 'directa';
   $export['admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -433,14 +433,14 @@ system/ajax/*';
     'language' => 'ca',
     'name' => 'Catalan',
     'native' => 'Català',
-    'direction' => 0,
-    'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'direction' => '0',
+    'enabled' => '1',
+    'plurals' => '2',
+    'formula' => '($n>1)',
     'domain' => '',
     'prefix' => 'ca',
-    'weight' => 0,
-    'javascript' => '',
+    'weight' => '0',
+    'javascript' => 'sFyv8fJNsaK8JoKKmOMdiSrQLJnqI-uOaDdxMIONCRY',
   );
   $export['language_default'] = $strongarm;
 
@@ -502,7 +502,7 @@ system/ajax/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_admin_theme';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['node_admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();

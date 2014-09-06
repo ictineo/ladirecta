@@ -67,6 +67,8 @@ stylesheets[all][] = css/styles.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
+scripts[] = js/menu_lateral.js
+scripts[] = js/afegir_subscriptora.js
 
 
 

@@ -325,7 +325,7 @@ $zen-auto-include-item-base: false;
      @include zen-grid-container();
      #content {
        @include zen-clear();
-       @include zen-grid-item(17,1);
+       @include zen-grid-item(23,1);
      }
      .sidebars .region-sidebar-first {
        @include zen-grid-item(6,18);
@@ -337,24 +337,35 @@ $zen-auto-include-item-base: false;
    }
  }
 
- .page-fotogaleria {
-   #main {
-     $zen-column-count:23;
-     $zen-gutter-width:10px; 
-     @include zen-grid-container();
-     #content {
-       @include zen-grid-item(23,1);
-     }
-     .sidebars .region-sidebar-first {
-       @include zen-grid-item(6,18);
-       display: none;
-     }
-     .sidebars .region-sidebar-second {
-       @include zen-grid-item(6,18);
-       display: none;
-     }
-   }
- }
+.node-type-fotogaleria {
+  #content {
+    $zen-column-count:9;
+    $zen-gutter-width:10px;
+    @include zen-nested-container();
+    @include zen-grid-background();
+    .field-fotografies {
+      @include zen-grid-item(9,1);
+    }
+    .field-body { 
+      @include zen-clear();
+      @include zen-grid-item(8,1,right);
+    }
+    .easy_social_box {
+      @include zen-grid-item(1,1,left);
+    }
+    #block-views-fotogaleria-block {
+      @include zen-clear(left);
+      @include zen-grid-item(6,1,left);
+    }
+  }
+}
+
+//CD DIRECTA//
+
+.page-cd-serveis {
+
+}
+
 
 
  .front {
@@ -373,7 +384,14 @@ $zen-auto-include-item-base: false;
        @include zen-grid-item(6,18);
      }
      #destacat {
-       @include zen-clear(both);
+       @include zen-clear();
+       @include zen-grid-item(23,1);
+     }
+
+     #block-views-c721e0c0c017aee43ae86693d23b264b,    
+     #view-portada-destacadotodascolumnas {
+       @include zen-grid-item(23,1);
+       @include zen-grid-background();
        @include zen-nested-container();
        .field-fotografies,
        .field-portada-fotogaleria {

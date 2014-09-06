@@ -22,7 +22,6 @@ function ictdirecta_fotogaleria_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Altres Fotogaleria';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -36,7 +35,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['relationships']['field_fotografies_value']['id'] = 'field_fotografies_value';
   $handler->display->display_options['relationships']['field_fotografies_value']['table'] = 'field_data_field_fotografies';
   $handler->display->display_options['relationships']['field_fotografies_value']['field'] = 'field_fotografies_value';
-  $handler->display->display_options['relationships']['field_fotografies_value']['delta'] = '-1';
+  $handler->display->display_options['relationships']['field_fotografies_value']['delta'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -79,7 +78,7 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler = $view->new_display('block', 'Altres Fotogalerias', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'mini';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -90,30 +89,6 @@ function ictdirecta_fotogaleria_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'short';
-  /* Field: Content: Autoria general */
-  $handler->display->display_options['fields']['field_autoria_general']['id'] = 'field_autoria_general';
-  $handler->display->display_options['fields']['field_autoria_general']['table'] = 'field_data_field_autoria_general';
-  $handler->display->display_options['fields']['field_autoria_general']['field'] = 'field_autoria_general';
-  $handler->display->display_options['fields']['field_autoria_general']['label'] = '';
-  $handler->display->display_options['fields']['field_autoria_general']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_autoria_general']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_autoria_general']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_autoria_general']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_autoria_general']['field_api_classes'] = TRUE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Portada Noticia */
   $handler->display->display_options['fields']['field_portada_fotogaleria']['id'] = 'field_portada_fotogaleria';
   $handler->display->display_options['fields']['field_portada_fotogaleria']['table'] = 'field_data_field_portada_fotogaleria';
@@ -129,18 +104,16 @@ function ictdirecta_fotogaleria_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_portada_fotogaleria']['field_api_classes'] = TRUE;
-  /* Field: Content: Fotografies (field_fotografies:delta) */
-  $handler->display->display_options['fields']['delta']['id'] = 'delta';
-  $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_fotografies';
-  $handler->display->display_options['fields']['delta']['field'] = 'delta';
-  $handler->display->display_options['fields']['delta']['label'] = 'Numero de fotografies';
-  $handler->display->display_options['fields']['delta']['element_type'] = '0';
-  $handler->display->display_options['fields']['delta']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['delta']['element_default_classes'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['block_description'] = 'Altres Fotogalerias';
   $translatables['fotogaleria'] = array(
     t('Master'),
-    t('Altres Fotogaleria'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -157,9 +130,6 @@ function ictdirecta_fotogaleria_views_default_views() {
     t('field collection item from field_fotografies'),
     t('Page'),
     t('Altres Fotogalerias'),
-    t('Numero de fotografies'),
-    t('.'),
-    t(','),
   );
   $export['fotogaleria'] = $view;
 

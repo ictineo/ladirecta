@@ -145,6 +145,14 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   }
 }
 
+@mixin tagadelic {
+  a {
+    font-family: 'graphiksemibold';
+    color: $negre;
+    line-height: 30px;
+  }
+}
+
 @mixin cont-rel() {
   //background-color: $fons;
   .field-continguts-relacionats {
@@ -466,12 +474,12 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 }
  
 
+//EASY SOCIAL//
 
-
-
-
-
-
+@mixin easysocial {
+  .easy_social_box {
+  }
+}
 
 
 

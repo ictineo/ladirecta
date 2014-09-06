@@ -33,6 +33,7 @@ features[field_instance][] = field_collection_item-field_fotografies-field_fotog
 features[field_instance][] = field_collection_item-field_fotografies-field_peu_fotografia
 features[field_instance][] = node-fotogaleria-body
 features[field_instance][] = node-fotogaleria-field_autoria_general
+features[field_instance][] = node-fotogaleria-field_data
 features[field_instance][] = node-fotogaleria-field_etiquetes
 features[field_instance][] = node-fotogaleria-field_fotografies
 features[field_instance][] = node-fotogaleria-field_portada_fotogaleria

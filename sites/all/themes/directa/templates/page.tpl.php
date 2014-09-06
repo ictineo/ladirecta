@@ -126,6 +126,7 @@ if (drupal_is_front_page()) {
  
 
    <div id="interior">
+      <div id="menu-tigger"> &nbsp; </div>
      <?php print render($page['interior']); ?>
    </div>   
 
