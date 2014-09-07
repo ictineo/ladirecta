@@ -4393,12 +4393,22 @@ span.date-display-single a {
 
 /* line 25, ../sass/_ajustosjs.scss */
 #navigation {
-  overflow: hidden;
-  height: 0px;
+  /*.region-navigation > .block-nice-menus {*/
+  position: absolute;
+  /*}*/
 }
-/* line 28, ../sass/_ajustosjs.scss */
-#navigation #block-nice-menus-1 {
-  display: block;
+/* line 29, ../sass/_ajustosjs.scss */
+#navigation #block-nice-menus-1 > ul {
+  position: absolute;
+  right: 10px;
+}
+/* line 32, ../sass/_ajustosjs.scss */
+#navigation #block-nice-menus-1 > ul > li {
+  display: none;
+}
+/* line 34, ../sass/_ajustosjs.scss */
+#navigation #block-nice-menus-1 > ul > li:first-child {
+  display: inherit;
 }
 
 /* SMACSS theme rules */

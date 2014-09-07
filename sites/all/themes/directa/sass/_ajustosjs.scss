@@ -23,9 +23,17 @@ $menu_tiger_w: 100px;
   }
 }
 #navigation {
-  overflow: hidden;
-  height: 0px;
-  #block-nice-menus-1 {
-    display: block;
+  /*.region-navigation > .block-nice-menus {*/
+  position: absolute;
+  /*}*/
+  #block-nice-menus-1 > ul {
+    position: absolute;
+    right: 10px;
+    & > li {
+      display: none;
+      &:first-child {
+        display: inherit;
+      }
+    }
   }
 }
