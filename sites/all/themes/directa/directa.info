@@ -69,6 +69,7 @@ stylesheets[all][] = css/styles.css
 ;scripts[] = js/script.js
 scripts[] = js/menu_lateral.js
 scripts[] = js/menu_seccions.js
+scripts[] = js/faldo.js
 scripts[] = js/afegir_subscriptora.js
 
 

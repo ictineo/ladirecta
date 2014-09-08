@@ -173,6 +173,20 @@ ul.nice-menu {
   color:none;
 }
 
+/*MENU LATERAL*/
+#interior {
+  margin-top:$head-height;
+  background-color:$gris7;
+  #menu-tigger {
+  }
+  #block-views-agenda-llista-block-1,
+  #block-views-cd-noticias-block-1,
+  #block-views-linies-de-recerca-block {
+    @include menu-lateral;
+  }
+
+}
+
 
 
 

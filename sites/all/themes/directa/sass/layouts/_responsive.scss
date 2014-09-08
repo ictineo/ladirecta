@@ -295,20 +295,19 @@ $zen-auto-include-item-base: false;
       $zen-column-count: 3;
       $zen-gutter-width: 10px;
       @include zen-grid-container();
+      @include zen-grid-background();
       #block-views-agenda-llista-block-1 {
         @include zen-grid-item(1,1);
-      }
-      #block-views-linies-de-recerca-block {
-        @include zen-grid-item(1,3);
       }
       #block-views-cd-noticias-block-1 {
         @include zen-grid-item(1,2);
       }
-      #block-views-cd-serveis-block-1 {
-        @include zen-clear();
-        @include zen-grid-item(1,2);
+      #block-views-linies-de-recerca-block {
+        @include zen-grid-item(1,3);
       }
-      
+      #block-views-cd-serveis-block-1 {
+        @include zen-grid-item(3,2);
+      }
     }
   }
 
