@@ -1,0 +1,26 @@
+#faldo-wrapper {
+  width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  height: 40%;
+  .region-faldo {
+    max-width: 1280px;
+    margin: 0 auto;
+    #faldo-general {
+      $zen-column-count:  2;
+      $zen-gutter-width:  20px;
+      @include zen-grid-container();
+      #faldo_esquerra {
+        @include zen-grid-item(1,1);
+        @include zen-grid-container();
+      }
+      #faldo_dreta {
+        @include zen-grid-item(1,2);
+        @include zen-grid-container();
+      }
+    }
+  }
+}
