@@ -1,6 +1,15 @@
+
+// temporal!!!
+
+#faldo-wrapper  {
+
+  display:none;
+
+}
+
+
 /**Fulla d'estils de la Directa**/
 
-@import "directamixins";
 
 a {
   @include enllac-net;
@@ -16,8 +25,6 @@ a {
   margin-bottom:-20px;
   padding-top:15px;
 }
-
-
 .html #header #logo {
  @include logo(); 
 }
@@ -27,18 +34,22 @@ a {
   @include header-shadow;
 }
 
+/** OJU AQUESTS BLOCS NO TENEN context
+ * afecten a tot independentment de on estiguin!
+ */
+// CAL COMENTAR CADA UN QUE ES!!
 #block-user-login {
 }
 #block-block-7,
 #block-block-4 {
   @include bseccio;
-    background-image:url('../images/menu_arrow_down');
-    background-repeat:no-repeat;
-    background-position: 8px 8px;
-    height:auto;
-    background-color:$gris7;
-    text-align:right;
-    border-radius:5px;
+  background-image:url('../images/menu_arrow_down');
+  background-repeat:no-repeat;
+  background-position: 8px 8px;
+  height:auto;
+  background-color:$gris7;
+  text-align:right;
+  border-radius:5px;
 }
 #block-block-3 {
   @include inicia(5px);
@@ -62,12 +73,10 @@ a {
 }
 #block-views-exp-hemeroteca-page-1 {
   @include buscador;
-  }
-  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
-    padding:0px;
-  }
-
-
+}
+.views-exposed-form #edit-search-api-views-fulltext-wrapper {
+  padding:0px;
+}
 #block-block-5,
 #secondary-menu {
   @include bsessio;
@@ -92,113 +101,24 @@ a {
 #main-menu {
   display:none;
 }
-
 ul.nice-menu {
   border-top: 0;
 }
-
-#navigation {
-  @include menu-shadow;
-  padding-top:20px;
-  margin-bottom:20px;
-  h2 {
-    display: none;
-  }
-  #block-nice-menus-3 {
-    @include menu-seccions($blanc,$gris7);
-    text-transform: uppercase;
-    ul {
-      background-image: url('../images/adj4.png');
-      li a {
-        @include graphik-regular (16px, $gris7, 25px);
-        &:hover {
-          @include graphik-semibold(16px,$vermell,25px);
-        }
-      }
-    }
-  }
-  
-  #block-nice-menus-2 {
-    @include menu-seccions($blanc,$gris7);
-    text-transform: uppercase;
-    ul {
-      background-image: url('../images/adj4.png');
-      li a {
-        @include graphik-regular (16px, $gris7, 25px);
-        &:hover {
-          @include graphik-semibold(16px,$vermell,25px);
-        }
-      }
-    }
-  }
-   #block-nice-menus-1 {
-
-/*
- ul.nice-menu a {
-  @include tit-menu;
-}
-  ul.nice-menu li {
-  background-color: $blanc;
-  border: 0;
-  width:90%;
-}
-
-  ul li.odd  {
-  border-left: 1px solid $gris7;
-  padding-left: 5px;
-  //margin-left:20px;
-  }
-
-*/
-  .block-title {
-    @include tit-menu;
-    @include block-tit;
-  }
-  ul {
-    top:2.8em;
-    li {
-      border-left: 0;
-      padding-left: 0;
-      @include territori-caixa;
-      a {
-        @include territori;
-      }
-    }
-  }
-}
-}
-
-
+// que es això? cal comentar que es
 .mark {
   color:none;
 }
 
-/*MENU LATERAL*/
-#interior {
-  margin-top:$head-height;
-  background-color:$gris7;
-  #menu-tigger {
-  }
-  #block-views-agenda-llista-block-1,
-  #block-views-cd-noticias-block-1,
-  #block-views-linies-de-recerca-block {
-    @include menu-lateral;
-  }
-
-}
-
-
-
-
-
 /*ESTILS DE TEXT*/
-
-
+/****
+ * AQUI LI FALTA CONTEXT, SON MOLT GENERICS ELS
+ * SELECTORS PER ASSIGNAR ESTILS DE TEXT!
+ */
 .field-seccio-web {
-    @include seccio;
+  @include seccio;
 }
 .field-seccio {
-    @include seccio;
+  @include seccio;
 }
 a.autor {
   @include autoria;
@@ -213,404 +133,3 @@ span.date-display-single {
 .peu.fotografia {
   @include peu-foto;
 }
-
-.not-front.node-type-fotogaleria {
-  #page-title {
-    @include titulo-fotogaleria;
-  }
-  .field-body {
-    @include public-roman(23px,$gris7,32px);
-    }
-  #block-views-fotogaleria-block {
-    @include graphik-medium(26px,$gris7,30px);
-    .views-field-title a {
-      @include graphik-semibold(21px, $gris7,24px);
-    }
-  }
-}
-
-/*MENU LATERAL*/
-
-#interior {
-  @include block-mlateral();
-  #block-views-agenda-llista-block-1 .block-title {
-    background-image: url('../images/agenda.png');
-  }
-  #block-views-cd-noticias-block-1 .block-title {
-    background-image: url('../images/agenda.png');
-    
-  }
-  #block-views-linies-de-recerca-block {
-    .block-title {
-      background-image: url('../images/agenda.png');
-    }
-    .view-header {
-    @include graphik-medium(19px, $gris2, 24px);
-    }
-    .views-field-title a {
-      @include graphik-bold(26px, $gris7, 30px);
-    }
-    .field-body {
-      @include graphik-bold(19px, $gris2, 21px);
-    }
-    .views-field-comment-count {
-      @include graphik-medium(16px, $gris2, 37px);
-      padding-left:20px;
-      @include back-simple; 
-    }
-    .view-footer {
-      text-align: right;
-    }
-      a {
-      @include graphik-medium(16px, $gris7, 19px);
-      text-decoration: underline;
-    }
-  }
-
-  #block-views-cd-serveis-block-1 .block-title {
-    background-image: url('../images/agenda.png'); 
-  }
-
-}
-
-
-
-/*DESTACAT 3 COLUMNES*/
-.view-portada-destacadotodascolumnas.view-display-id-block {
-  .field-fotografies {
-  }
-  .field-seccio-web {
-    @include seccio;
-  }
-  a.autor {
-    @include autoria;
-  }
-  span.date-display-single {
-    @include data;
-  }
-  .views-field-title a {
-    @include titular-3col;
-  }
-  .field-body {
-    @include entradilla-3col;
-  }
-
-  .pretitular {
-    display:block-inline;
-  }
-}
-.view-portada-destacadotodascolumnas {
-  .view-display-id-attachment_2 {
-      td.col-1 {
-      }
-      td.col-2 {
-      }
-      td.col-3 {
-      }
-  }
-  .field-collection-container {
-    @include cont-rel();
-  }
-}
-
-/*Portada*/
-
-.front #content,
-.front .sidebars {
-  .views-field-title a {
-    @include graphik-semibold(24px,$gris7,30px);
-  }
-  .field-body {
-    @include public-roman(18px, $gris2, 23px);
-  }
-  .field-collection-container {
-    @include cont-rel();
-  }
-  .view-display-id-block_1 {
-    @include portada-numero;
-  }
-  #faldo_esquerra {
-  }
-}
-
-
-/*COLUMNA NOTICIES (ESQUERRA)*/
-.view-portada-columnaizquierda.view-display-id-block_1 {
-  h2.node-title a {
-    @include titular-not;
-  }
-}
-
-/*COLUMNA ACTUALITAT (DRETA)*/
-.front .region-sidebar-first {
-  padding: 0 20px;
-  border-right: 1px solid #e9e9e9;
-  #block-views-portada-columnadreta-block-1 {
-    background-color: #e9e9e9;
-    .block__title block-title {
-      display:none;
-    }
-  }
-}
-
-
-
-/*FOOTER*/
-#footer {
-  background-color: $gris7;
-  h2, 
-  #block-system-powered-by {
-    display: none;
-  }
-  #block-views-exp-hemeroteca-page-1--2 {
-    @include buscador;
-  }
-  #block-menu-menu-menu-footer {
-    @include menu-general-horizontal;
-    border-bottom: solid 1px $blanc;
-    a {
-      @include graphik-regular(16px,$blanc,40px);
-    }
-  }
-  #block-block-10 {
-    @include graphik-medium (15px, $gris7, 20px);
-    background-color:$blanc;
-    margin-top:10px;
-    padding:5px;
-    text-transform: none;
-    .subs {
-      @include bsubs;
-      display: inline-block;
-      color:$blanc;
-      margin-left:5px;
-      padding:10px 5px;
-      float:right;
-    }
-    .comptador {
-      background-image: url('../images/comptador.png');
-      background-repeat: no-repeat;
-      content:"";
-      display: inline-block;
-      width: 95px;
-      height: 39px;
-    }
-  }
-  #block-nice-menus-2,
-  #block-nice-menus-2--2 {
-    @include menu-seccions ($gris7,$blanc);
-    ul {
-      background-image: url('../images/adj5.png');
-      li a {
-        @include graphik-regular(15px,$blanc,24px);
-      }
-    }
-  } 
-  #block-nice-menus-3,
-  #block-nice-menus-3--2 {
-    @include menu-seccions($gris7,$blanc);
-    ul {
-      background-image: url('../images/adj4.png');
-      li a {
-        @include graphik-regular(15px,$blanc,24px);
-      }
-    }
-  }
-  #block-menu-menu-menu-xxss {
-    @include menu-seccions($gris7,$blanc);
-    ul {
-      background-image: url('../images/share2.png');
-      margin-top: 0;
-      li {
-        border-left: 1px solid $blanc;
-        a {
-          @include graphik-regular(15px,$blanc,24px);
-        }
-      }
-    }
-  }
-  #block-block-9 {
-    text-align:right;
-    a {
-      @include graphik-medium (15px,$blanc,20px);
-      font-weight: normal;
-      text-transform: none;
-      text-decoration: underline;
-      &.cc {
-        background-image:url('../images/cc.png');
-        background-repeat:no-repeat;
-        content:"";
-        display:inline-block;
-        width: 62px;
-        height:14px;
-      }
-    }
-  }
-}
-
-/*NOTICIA COMPLETA*/
-
-.not-front {
-  #page-title {
-    @include titulo-not;
-  }
-  .node-title {
-    a {
-      @include titulo-not;
-    }
-  }
-  .field-subtitol {
-    @include subtitulo-not;
-  }
-  .body {
-    @include body;
-  }
-  .field-etiquetes,
-  .field-territori {
-    @include etiquetes;
-  }
-    @include cont-rel();
-  .field-collection-container {
-    @include not-rel();
-  }
-}
-
-
-
-
-
-
-
-/**USER LOGIN PAGE**/
-.not-logged-in.page-user {
-  #user-pass,
-  #edit-account,
-  #user-login {
-    @include reset-login;
-    .form-item {
-      @include box-shadow;
-    }
-    @include reset-button;
-  }
-  h1#page-title{
-    margin-top: 10%;
-    @include logo();
-    text-align: center;
-    width:auto;
-    padding-top:40px;
-    margin-bottom:40px;
-    background-position: top center;
-    @include graphik-regular(40px,$gris7,40px);
-    padding-top:60px;
-  }
-  #block-block-5--2 {
-    h2 {
-      display: none;
-    }
-    @include subscriute(26px);
-  }
-  #block-block-6 {
-    @include graphik-regular(18px,$gris3,1i8px);
-    text-align: center;
-  }
-  #block-block-8 {
-    padding-top:10px;
-    @include graphik-medium(16px,$gris3,16px);
-    text-align: center;
-    a {
-      @include graphik-medium(16px,$negre,16px);
-      text-decoration: underline;
-    }
-  }
-  #edit-actions {
-  }
-  #user-login {
-    @include user-login;
-  }
-  #block-block-6, 
-  #block-block-8, 
-  #block-block-5--2 { 
-    h2 {
-      display:none;
-    }
-  }
-}
-
-/* Agenda Lateral menu */
-.block.block-views {
-      display: inline-block;
-      float: left;
-      width: 310px;
- }
-
-
-#menu-agenda {
-    width: 290px;
-}
-
-#menu-agenda > div {
-    background: none repeat scroll 0 0 rgb(220, 220, 200);
-    height: 35px;
-    margin-bottom: 4px;
-    padding-top: 9px;
-    width: 100%;
-}
-.daysup {
-    background: none repeat scroll 0 0 grey;
-    border-radius: 60px;
-    display: inline;
-    margin-top: 0;
-    padding: 8px;
-}
-
-#esdeveniment-agenda-node-form {
-  .vertical-tabs {
-     display:none;
-   }
- }
-
- // Subscripcions
-
-
-.page-admin-people-create {
-
-
-
-  #user-register-form {
-
-    .fieldset-wrapper {
-         
-       .group-subscripcio {
-
-       }
-       .group-perfil {
-
-       }
-       .group-pagament {
-         #edit-profile-main-field-forma-pagament{
-           display:none;
-
-         }
-       }
-
-
-    }
-  
-    #edit-locale {
-      display: none;
-    }
-
-  }
-
-}
-
-//Home//
-
-#content h2 a {
-  @include graphik-semibold(36px,$gris7,40px);
-}
-
-.block-tagadelic-taxonomy  {
-  @include tagadelic;
-}
-
-

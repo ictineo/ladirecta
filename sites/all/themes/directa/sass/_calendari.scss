@@ -1,30 +1,31 @@
+
+// de on es aquest selector??
 .node-esdeveniment_agenda-form{
- .form-item-title {
-   .form-text.required {
-     height: 68px;
-     width: 100%;
+  .form-item-title {
+    .form-text.required {
+      height: 68px;
+      width: 100%;
     }
   }
   .form-item.form-type-textfield.form-item-field-adreca-electronica-und-0-value {
-      width:40%;
-     .description {
-       color: rgba(120, 120, 120, 0.698);
-       margin-left: 5px;
-       margin-top: -24px;
-       }
+    width:40%;
+    .description {
+      color: rgba(120, 120, 120, 0.698);
+      margin-left: 5px;
+      margin-top: -24px;
+    }
   }
-
- .form-item-field-data-ag-und-0-value2-date {
-       display: none;
- }
- .date-float {
-   display:none;
-
-
- }
+  .form-item-field-data-ag-und-0-value2-date {
+    display: none;
+  }
+  .date-float {
+    display:none;
+  }
 }
 
-
+// Afegir nou esdeveniment agenda
+// En aquesta pagina tambe hi ha el calendari en
+// carrousel
 .page-node-add-esdeveniment-agenda {
   #main #content {
     @include zen-grid-item(4,1);
@@ -56,7 +57,6 @@
       }
     }
   }
- 
   .view-agenda-llista {
     .cal-line-pager {
       display: block;
@@ -128,56 +128,3 @@
   }
 }
 
-#user-register-form {
-
-  #subscripcions {
-    .visible, .colapsat {
-    float: left;
-    height: 60px;
-    width: 450px;
-    }
-    .visible {
-      background: none repeat scroll 0 0 rgba(200, 200, 200, 0.8);
-      padding: 20px 0 0 10px;
-      .bola {
-        background: none repeat scroll 0 0 grey;
-        border-radius: 60px;
-        display: inline-block;
-        float: left;
-        height: 10px;
-        margin-bottom: -1px;
-        width: 10px;
-      }
-      .text {
-        display: inline;
-        float: left;
-        margin-top: -7px;
-        padding-left: 20px;
-        width: 75%;
-        .ajuda {
-          display: block;
-          padding-left: 0;
-         }
-      }
-     
-      .expand {
-        float: left;
-        margin-left: 0;
-      }
-    
-      .preu {
-        background: none repeat scroll 0 0 white;
-        border-radius: 152px;
-        display: inline;
-        padding: 16px;
-        width: 90%;
-      }
-
-} 
-
-
-  }
-
-
-
-}

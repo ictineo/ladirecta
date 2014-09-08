@@ -1,0 +1,61 @@
+/*NOTICIA COMPLETA**/
+.node-type-noticia {
+  .breadcrumb {
+    display: none;
+  }
+  .node-noticia.view-mode-token {
+    $zen-column-count:4;
+    @include zen-grid-container();
+    @include zen-grid-background();
+    @include zen-nested-container();
+    img {
+      @include zen-grid-item(1,1);
+    }
+    .date-display-single {
+      @include zen-nested-container();
+      @include zen-grid-item(3,2);
+    }
+    .node-title {
+      @include zen-clear(right);
+      @include zen-nested-container();
+      @include zen-grid-item(3,2);
+    }
+   .field-body {
+     @include zen-nested-container();
+     @include zen-grid-item(3,2);
+    }
+  }
+}
+
+
+
+/*NOTICIA COMPLETA*/
+/***
+ * OJU SELECTOR MASSA GENERIC PER SER NOTICIA DE PORTADA!
+ */
+.not-front {
+  #page-title {
+    @include titulo-not;
+  }
+  .node-title {
+    a {
+      @include titulo-not;
+    }
+  }
+  .field-subtitol {
+    @include subtitulo-not;
+  }
+  .body {
+    @include body;
+  }
+  .field-etiquetes,
+  .field-territori {
+    @include etiquetes;
+  }
+    @include cont-rel();
+  .field-collection-container {
+    @include not-rel();
+  }
+}
+
+

@@ -8,6 +8,7 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
+@import "directamixins";
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
@@ -18,11 +19,19 @@
 /* Component (SMACSS module) rules */
 @import "components/misc";
 // Optionally, add your own components here.
-@import "directa";
+@import "directa"; // incorpora els mixins
+@import "calendari";
+@import "faldo";
+@import "footer";
+@import "fotogaleria";
+@import "menu_lateral";
+@import "menu_seccions";
+@import "noticia";
+@import "portada";
+@import "userlogin";
+@import "faldo";
+
 @import "print";
-@import "calendari"; //jude adds
-@import "ajustosjs"; //quiron adds
-@import "faldo";     //quiron adds
 
 /* SMACSS theme rules */
 /* @import "theme-A"; */

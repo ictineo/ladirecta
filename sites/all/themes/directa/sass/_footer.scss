@@ -1,0 +1,161 @@
+/**
+ * dos arxius ajuntats aqui, pot ser
+ * que es sobreescriguin definicions
+ * REVISAR!
+ */
+/**FOOTER**/
+#footer {
+  background-color: $gris7;
+  @include zen-clear(both);
+  $zen-column-count:10;
+  $zen-gutter-width:10px;
+  @include zen-grid-container();
+  #block-menu-menu-menu-footer {
+    @include zen-grid-item(7,1);
+  }
+  #block-block-10 {
+    @include zen-grid-item(3,1,right);
+    @include zen-clear(right);
+  }
+  #views-exposed-form-hemeroteca-page-1,
+  #block-views-exp-hemeroteca-page-1--2 {
+    @include zen-grid-item(3,1,right);
+    @include zen-clear(right);
+    .views-exposed-form {
+      float:right;
+    }
+  }
+  #block-block-9 {
+    @include zen-clear(right);
+    @include zen-grid-item(2,1,right);
+  }
+  #block-menu-menu-menu-xxss {
+    @include zen-grid-item(1,7);
+  }
+  #block-nice-menus-2,
+  #block-nice-menus-2--2 {
+    @include zen-clear();
+    @include zen-grid-item(3,1);
+  }
+  #block-nice-menus-3,
+  #block-nice-menus-3--2 {
+    @include zen-grid-item(3,4);
+   }
+ 
+  #block-nice-menus-2,
+  #block-nice-menus-2--2 {
+     $zen-column-count:3;
+     $zen-gutter-width:10px;
+     @include zen-grid-container();
+     li.odd {
+       @include zen-grid-item(3,1);
+       @include zen-clear(left);
+     }
+     li.even {
+       @include zen-clear();
+       @include zen-grid-item(3,4);
+       @include zen-clear(right);
+     }
+  }
+  #block-nice-menus-3,
+  #block-nice-menus-3--2 {
+    $zen-column-count:3;
+    $zen-gutter-width:10px;
+    @include zen-grid-container();
+    li.odd {
+      @include zen-grid-item(3,1);
+      @include zen-clear(left);
+    }
+    li.even {
+      @include zen-grid-item(2,4);
+      @include zen-clear(right);
+    }
+  }
+  h2, 
+  #block-system-powered-by {
+    display: none;
+  }
+  #block-views-exp-hemeroteca-page-1--2 {
+    @include buscador;
+  }
+  #block-menu-menu-menu-footer {
+    @include menu-general-horizontal;
+    border-bottom: solid 1px $blanc;
+    a {
+      @include graphik-regular(16px,$blanc,40px);
+    }
+  }
+  #block-block-10 {
+    @include graphik-medium (15px, $gris7, 20px);
+    background-color:$blanc;
+    margin-top:10px;
+    padding:5px;
+    text-transform: none;
+    .subs {
+      @include bsubs;
+      display: inline-block;
+      color:$blanc;
+      margin-left:5px;
+      padding:10px 5px;
+      float:right;
+    }
+    .comptador {
+      background-image: url('../images/comptador.png');
+      background-repeat: no-repeat;
+      content:"";
+      display: inline-block;
+      width: 95px;
+      height: 39px;
+    }
+  }
+  #block-nice-menus-2,
+  #block-nice-menus-2--2 {
+    @include menu-seccions ($gris7,$blanc);
+    ul {
+      background-image: url('../images/adj5.png');
+      li a {
+        @include graphik-regular(15px,$blanc,24px);
+      }
+    }
+  } 
+  #block-nice-menus-3,
+  #block-nice-menus-3--2 {
+    @include menu-seccions($gris7,$blanc);
+    ul {
+      background-image: url('../images/adj4.png');
+      li a {
+        @include graphik-regular(15px,$blanc,24px);
+      }
+    }
+  }
+  #block-menu-menu-menu-xxss {
+    @include menu-seccions($gris7,$blanc);
+    ul {
+      background-image: url('../images/share2.png');
+      margin-top: 0;
+      li {
+        border-left: 1px solid $blanc;
+        a {
+          @include graphik-regular(15px,$blanc,24px);
+        }
+      }
+    }
+  }
+  #block-block-9 {
+    text-align:right;
+    a {
+      @include graphik-medium (15px,$blanc,20px);
+      font-weight: normal;
+      text-transform: none;
+      text-decoration: underline;
+      &.cc {
+        background-image:url('../images/cc.png');
+        background-repeat:no-repeat;
+        content:"";
+        display:inline-block;
+        width: 62px;
+        height:14px;
+      }
+    }
+  }
+}

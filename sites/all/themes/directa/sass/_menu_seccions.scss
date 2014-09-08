@@ -1,0 +1,135 @@
+/**
+ * menu superior desplegable de seccions
+ * web/paper/territori
+ */
+
+/***
+  * I PER VARIAR AJUNTATS VARIOS ARXIUS...
+  */ 
+#navigation .region-navigation {
+  @include zen-clear(both);
+  $zen-column-count:23;
+  $zen-gutter-width:10px;
+  @include zen-grid-container();
+  @include zen-grid-background();
+  #block-nice-menus-3 ul {
+    @include zen-grid-item(7,1);
+    $zen-column-count:2;
+    @include zen-grid-container();
+    .odd {
+      @include zen-grid-item(1,1);
+      @include zen-clear(left);
+    }
+    .even {
+      @include zen-grid-item (1,2);
+    }
+  }
+  #block-nice-menus-2 ul {
+    $zen-column-count:23;
+    $zen-gutter-width:10px;
+    @include zen-grid-item(7,8);
+    $zen-column-count:2;
+    @include zen-grid-container();
+    .odd {
+       @include zen-grid-item(1,1);
+       @include zen-clear(left);
+     }
+    .even {
+      @include zen-grid-item (1,2);
+    }  
+  }
+  #block-nice-menus-1 ul {
+    $zen-column-count:23;
+    $zen-gutter-width:10px;
+    @include zen-grid-item(5,1,right);
+    $zen-column-count:1;
+    @include zen-grid-container();
+    li {
+      @include zen-grid-item(1,1,right);
+      @include zen-clear(right);
+    }
+  }
+}
+
+#navigation {
+  @include menu-shadow;
+  padding-top:20px;
+  margin-bottom:20px;
+  h2 {
+    display: none;
+  }
+  #block-nice-menus-3 {
+    @include menu-seccions($blanc,$gris7);
+    text-transform: uppercase;
+    ul {
+      background-image: url('../images/adj4.png');
+      li a {
+        @include graphik-regular (16px, $gris7, 25px);
+        &:hover {
+          @include graphik-semibold(16px,$vermell,25px);
+        }
+      }
+    }
+  }
+  #block-nice-menus-2 {
+    @include menu-seccions($blanc,$gris7);
+    text-transform: uppercase;
+    ul {
+      background-image: url('../images/adj4.png');
+      li a {
+        @include graphik-regular (16px, $gris7, 25px);
+        &:hover {
+          @include graphik-semibold(16px,$vermell,25px);
+        }
+      }
+    }
+  }
+  #block-nice-menus-1 {
+
+/*
+ ul.nice-menu a {
+  @include tit-menu;
+}
+  ul.nice-menu li {
+  background-color: $blanc;
+  border: 0;
+  width:90%;
+}
+
+  ul li.odd  {
+  border-left: 1px solid $gris7;
+  padding-left: 5px;
+  //margin-left:20px;
+  }
+
+*/
+    .block-title {
+      @include tit-menu;
+      @include block-tit;
+    }
+    ul {
+      top:2.8em;
+      li {
+        border-left: 0;
+        padding-left: 0;
+        @include territori-caixa;
+        a {
+          @include territori;
+        }
+      }
+    }
+  }
+  /*.region-navigation > .block-nice-menus {*/
+  position: absolute;
+  /*}*/
+  #block-nice-menus-1 > ul {
+    position: absolute;
+    right: 10px;
+    & > li {
+      display: none;
+      &:first-child {
+        display: inherit;
+      }
+    }
+  }
+}

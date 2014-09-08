@@ -1,0 +1,196 @@
+/**LOGIN**/
+
+/** /user **/
+body.not-logged-in.page-user {
+   #header,
+   #navigation,
+   .breadcrumb,
+   #footer {
+     display: none;
+   }
+   #main {
+     $zen-column-count:23;
+     $zen-gutter-width:10px;
+     @include zen-grid-container();
+     #content {
+       @include zen-grid-item(23,1);
+       $zen-column-count:4;
+       $zen-gutter-width:40px;
+       @include zen-grid-container();
+       @include zen-grid-background();
+       h1#page-title {
+         @include zen-grid-item(2,2);
+         @include zen-clear(both);
+       }
+       ul li.tabs-primary__tab.is-active {
+         @include zen-clear(both);
+         @include zen-grid-item(1,2);
+         display: none;
+       }
+       ul li.tabs-primary__tab {
+         @include zen-clear(both);
+         @include zen-grid-item(1,3);
+         display: none;
+       }
+       #edit-account,
+       #user-pass,
+       #user-login {
+         @include zen-clear();
+         @include zen-grid-item(1,2,left);
+       }
+       #block-block-5--2 {
+         @include zen-grid-item(1,2,right);
+         @include zen-clear(left);
+       }
+       #block-block-6 {
+         @include zen-clear();
+         @include zen-grid-item(1,3);
+       }
+       #block-block-8 {
+         @include zen-grid-item(1,2);
+       }
+     }
+   }
+   .region-sidebar-first {
+     $zen-column-count:4;
+     $zen-gutter-width:40px;
+     @include zen-grid-container();
+     @include zen-grid-background();
+     #block-block-8 {
+       @include zen-grid-item(1,2);
+     }
+   }
+}
+
+
+ /** /admin/people/create
+  * formulari de creacio de nou usuari
+  * amb el profile2 de info de subscriptor
+  */
+body.page-admin-people-create {
+  #user-register-form {
+    #subscripcions {
+      .visible, .colapsat {
+        float: left;
+        height: 60px;
+        width: 450px;
+      }
+      .visible {
+        background: none repeat scroll 0 0 rgba(200, 200, 200, 0.8);
+        padding: 20px 0 0 10px;
+        .bola {
+          background: none repeat scroll 0 0 grey;
+          border-radius: 60px;
+          display: inline-block;
+          float: left;
+          height: 10px;
+          margin-bottom: -1px;
+          width: 10px;
+        }
+        .text {
+          display: inline;
+          float: left;
+          margin-top: -7px;
+          padding-left: 20px;
+          width: 75%;
+          .ajuda {
+            display: block;
+            padding-left: 0;
+          }
+        }
+        .expand {
+          float: left;
+          margin-left: 0;
+        }
+        .preu {
+          background: none repeat scroll 0 0 white;
+          border-radius: 152px;
+          display: inline;
+          padding: 16px;
+          width: 90%;
+        }
+      } 
+    }
+  }
+}
+
+/**USER LOGIN PAGE**/
+.not-logged-in.page-user {
+  #user-pass,
+  #edit-account,
+  #user-login {
+    @include reset-login;
+    .form-item {
+      @include box-shadow;
+    }
+    @include reset-button;
+  }
+  h1#page-title{
+    margin-top: 10%;
+    @include logo();
+    text-align: center;
+    width:auto;
+    padding-top:40px;
+    margin-bottom:40px;
+    background-position: top center;
+    @include graphik-regular(40px,$gris7,40px);
+    padding-top:60px;
+  }
+  #block-block-5--2 {
+    h2 {
+      display: none;
+    }
+    @include subscriute(26px);
+  }
+  #block-block-6 {
+    @include graphik-regular(18px,$gris3,1i8px);
+    text-align: center;
+  }
+  #block-block-8 {
+    padding-top:10px;
+    @include graphik-medium(16px,$gris3,16px);
+    text-align: center;
+    a {
+      @include graphik-medium(16px,$negre,16px);
+      text-decoration: underline;
+    }
+  }
+  #edit-actions {
+  }
+  #user-login {
+    @include user-login;
+  }
+  #block-block-6, 
+  #block-block-8, 
+  #block-block-5--2 { 
+    h2 {
+      display:none;
+    }
+  }
+}
+
+
+
+ // Subscripcions
+
+/**** WTF??? *****/
+.page-admin-people-create {
+  #user-register-form {
+    .fieldset-wrapper {
+       .group-subscripcio {
+       }
+       .group-perfil {
+
+       }
+       .group-pagament {
+         #edit-profile-main-field-forma-pagament{
+           display:none;
+         }
+       }
+    }
+    #edit-locale {
+      display: none;
+    }
+  }
+}
+

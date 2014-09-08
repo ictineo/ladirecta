@@ -1,0 +1,45 @@
+/**
+ * visio completa de fotogaleries
+ */
+/*****
+ * OJU DOS ARXIUS AJUNTATS, ES PODEN REPETIR
+ * DEFINICIONS
+ * REVISAR
+ */
+
+.not-front.node-type-fotogaleria {
+  #content {
+    $zen-column-count:9;
+    $zen-gutter-width:10px;
+    @include zen-nested-container();
+    @include zen-grid-background();
+    .field-fotografies {
+      @include zen-grid-item(9,1);
+    }
+    .field-body { 
+      @include zen-clear();
+      @include zen-grid-item(8,1,right);
+    }
+    .easy_social_box {
+      @include zen-grid-item(1,1,left);
+    }
+    #block-views-fotogaleria-block {
+      @include zen-clear(left);
+      @include zen-grid-item(6,1,left);
+    }
+  }
+  #page-title {
+    @include titulo-fotogaleria;
+  }
+  .field-body {
+    @include public-roman(23px,$gris7,32px);
+    }
+  #block-views-fotogaleria-block {
+    @include graphik-medium(26px,$gris7,30px);
+    .views-field-title a {
+      @include graphik-semibold(21px, $gris7,24px);
+    }
+  }
+}
+
+

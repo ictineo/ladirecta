@@ -151,5 +151,5 @@ $zen-grid-number-images   : ()                  !default;
   $bg-images  : append($bg-images, linear-gradient(left, $right-half-gradient) (-(zen-half-gutter($gutter-width))) top no-repeat, comma);
 
   // Apply the full list of background images.
-  @include background($bg-images);
+  //@include background($bg-images); by IBR
 }
