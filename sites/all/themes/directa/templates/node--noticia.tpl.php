@@ -6,11 +6,11 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728164
  */
-if($view_mode ==  'full') {
+if($view_mode == 'full') {
   global $base_url;
   $query_next = new EntityFieldQuery();
   $query_next->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'actualitat')
+      ->entityCondition('bundle', 'noticia')
       ->propertyCondition('status', 1)
       ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '>')
       ->fieldOrderBy('field_data', 'value', 'ASC')
@@ -21,7 +21,7 @@ if($view_mode ==  'full') {
 
   $query_prev = new EntityFieldQuery();
   $query_prev->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'actualitat')
+      ->entityCondition('bundle', 'noticia')
       ->propertyCondition('status', 1)
       ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '<')
       ->fieldOrderBy('field_data', 'value', 'DESC')
@@ -54,7 +54,6 @@ if($view_mode ==  'full') {
       <?php endif; ?>
     </header>
   <?php endif; ?>
-
   <?php if($view_mode == 'full'): ?>
     <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
     <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div>

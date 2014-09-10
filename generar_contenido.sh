@@ -5,7 +5,7 @@ drush en devel devel_generate
 
 
 
-drush gent categories_cd 40 --kill
+drush gent categories_cd 0 --kill
 drush gent tags 40 --kill
 
 echo "Creados 40 terminos de todas las taxonomias"

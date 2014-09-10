@@ -1,0 +1,39 @@
+/**USABILIDAD FORMULARIOS CREACIÓN Y EDICIÓN NODOS*/
+
+
+/*NOTICIAS*/
+
+.page-node-add-noticia {
+  label {
+    @include graphik-medium(18px, $negre, 18px);
+  }
+  fieldset.form-wrapper {
+    border: none;
+  .tips,
+  .description {
+    @include graphik-regular(12px,$gris7,12px);
+  }
+
+  .form-item .tabledrag-toggle-weight-wrapper a {
+    display: none;
+  }
+}
+
+
+
+/*Editor de texto*/
+.field-type-text-with-summary {
+  a {
+    @include graphik-medium(16px,$gris7,16px);
+  }
+}
+
+
+
+
+}
+
+
+
+
+

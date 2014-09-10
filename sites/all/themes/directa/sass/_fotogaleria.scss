@@ -1,6 +1,23 @@
 /**
  * visio completa de fotogaleries
  */
+
+/**
+ * mixin de comportament del block de 'totes les fotogaleries'
+ * tant pel llistat com per la vista del node
+ */
+@mixin block-totes-fotogaleries() {
+  .view-content {
+    height: 100px;
+    overflow: hidden;
+  }
+  .view-footer {
+    cursor: pointer;
+  }
+}
+
+
+
 /*****
  * OJU DOS ARXIUS AJUNTATS, ES PODEN REPETIR
  * DEFINICIONS
@@ -13,10 +30,35 @@
     $zen-gutter-width:10px;
     @include zen-nested-container();
     @include zen-grid-background();
+    .field-seccio-web {
+      @include zen-grid-item(1,1);
+    }
+    .field-autoria-general{
+      @include zen-grid-item(2,2);
+      @include graphik-medium(15px,$gris3,22px);
+      text-transform: uppercase;
+      text-decoration: underline;   
+    }
+
+    .field-data {
+      @include zen-grid-item(3,3);
+    }
     .field-fotografies {
+      @include zen-clear();
       @include zen-grid-item(9,1);
+      .field-slideshow-caption-text {
+        @include public-roman(21px, $gris7,30px);
+      }
+      .item-list ul {
+        list-style: none;
+      }
+      margin-bottom: 50px;
     }
     .field-body { 
+      @include zen-clear();
+      @include zen-grid-item(8,1,right);
+    }
+    .field-etiquetes {
       @include zen-clear();
       @include zen-grid-item(8,1,right);
     }
@@ -26,8 +68,17 @@
     #block-views-fotogaleria-block {
       @include zen-clear(left);
       @include zen-grid-item(6,1,left);
+      
     }
   }
+
+
+
+
+/*ESTILS*/
+
+
+
   #page-title {
     @include titulo-fotogaleria;
   }
@@ -35,10 +86,27 @@
     @include public-roman(23px,$gris7,32px);
     }
   #block-views-fotogaleria-block {
-    @include graphik-medium(26px,$gris7,30px);
+    .block-title {
+      @include graphik-medium(26px,$gris7,30px);
+    }
     .views-field-title a {
       @include graphik-semibold(21px, $gris7,24px);
     }
+    .view-footer {
+    }
+  }
+}
+
+/**
+ * Vista de fotogaleries
+ * /fotogaleria
+ */
+body.section-fotogaleria.page-views {
+  /**
+   * view del peu d'altres fotogaleries 
+   */
+  #block-views-fotogaleria-block {
+    @include block-totes-fotogaleries();
   }
 }
 

@@ -130,9 +130,15 @@ if (drupal_is_front_page()) {
      <?php print render($page['interior']); ?>
    </div>   
 
+
    <div id="seccion_portada">
      <?php print render($page['seccion_portada']); ?>
    </div>   
+  
+   <div id="seccion_inferiors">
+     <?php print render($page['seccion_inferiors']); ?>
+   </div>  
+
 
   <div id="faldo-wrapper">
     <div id="faldo-switcher"> <span class="faldo-switcher">&nbsp;</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa');?></span><?php print t('Col·labora en fer possible aquest mitjà'); ?> </div>

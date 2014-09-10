@@ -70,6 +70,7 @@ stylesheets[all][] = css/styles.css
 scripts[] = js/menu_lateral.js
 scripts[] = js/menu_seccions.js
 scripts[] = js/faldo.js
+scripts[] = js/comportaments_generics.js
 scripts[] = js/afegir_subscriptora.js
 
 
@@ -95,6 +96,7 @@ regions[destacat]       = Destacat
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[interior]       = Interior
+regions[seccion_inferiors] = Seccion inferiors
 regions[seccion_portada] = Seccion portada
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
