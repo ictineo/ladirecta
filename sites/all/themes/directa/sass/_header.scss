@@ -1,0 +1,16 @@
+/**HEADER**/
+
+
+/*GRID*/
+#header {
+  $zen-column-count: 23;
+  $zen-gutter-width: 10px;
+  $zen-auto-include-item-base: true;
+  @include zen-grid-container();
+  #logo {
+  }
+  .region-header {
+  }
+
+}
+

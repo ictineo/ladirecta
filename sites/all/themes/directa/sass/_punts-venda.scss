@@ -1,0 +1,60 @@
+/* View punts de venda */ //sense disseny
+
+body.page-puntsdevenda {
+  #main {
+    #content {
+      .breadcrumb {
+        @include breadcrumb;
+      }
+      h1#page-title {
+        @include graphik-bold(46px,$gris8,54px);
+        padding-top: 30px;
+      }
+      .view-punts-de-venda {
+        .view-filters {
+          .views-exposed-widgets {
+            label {
+              @include graphik-bold(30px, $gris8, 33px);
+              padding-bottom: 10px;
+            }
+          }
+        }
+        .view-content {
+          .views-view-grid {
+            tbody {
+              .views-field-title a {
+                @include graphik-medium(26px, $gris8, 30px);
+              }
+              .views-field {
+                padding-left: 40px;
+                .views-label {
+                  @include graphik-semibold(22px, $gris8, 40px);
+                }
+                .field-content {
+                  display: inline;
+                  @include graphik-regular(22px, $gris8, 40px);
+                }
+              }
+              .views-field.adress {
+                background: url('../images/mapa.png') no-repeat 0 10px;
+              }
+              .views-field.phone {
+                background: url('../images/tel.png') no-repeat 0 10px;
+              }
+              .views-field.cp {
+                background: url('../images/avio.png') no-repeat 0 10px;
+              }
+              .views-field.mail {
+                background: url('../images/mail.png') no-repeat 0 10px;
+              }
+              .views-field.web {
+                background: url('../images/mapa.png') no-repeat 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

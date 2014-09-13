@@ -1,0 +1,13 @@
+#col-meta .easy_social_box {
+  .easy_social-widget.easy_social-widget-twitter {
+    position: relative;
+    &:after {
+      display: block;
+      width: 200px;
+      height: 50px;
+      content: " ";
+      background: blue;
+      position: absolute;
+    }
+  }
+}

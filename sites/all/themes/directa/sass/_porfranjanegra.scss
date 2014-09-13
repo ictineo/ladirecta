@@ -1,0 +1,346 @@
+/**Franja negra de portada*/
+
+@mixin graphik-semibold-fn($font-size,$line-height) {
+  font-family:'graphiksemibold';
+  font-size:$font-size;
+  line-height:$line-height;
+  color:$gris3
+}
+
+@mixin public-roman-fn($font-size, $line-height) {
+  font-family: 'publico_textroman';
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $gris3
+}
+
+@mixin graphik-medium-seccions($font-size, $line-height) {
+  font-family: 'graphikmedium';
+  font-size:$font-size;
+  line-height: $line-height;
+  color: $gris7;
+}
+
+
+
+@mixin autoria-fn() {
+  font-size: 15px;
+  line-height: 20px;
+  color: $gris3;
+  text-transform: uppercase;
+  display: inline;
+  text-decoration: underline;
+}
+
+@mixin data-fn() {
+  font-size: 15px;
+  line-height: 20px;
+  color: $gris3;
+}
+
+@mixin h2-espai-fn(){
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px $gris3;
+}
+
+
+
+/*Graella*/
+.region-seccion-portada,
+.region-seccion-inferiors {
+  $zen-column-count: 23;
+  $zen-gutter-width: 20px;
+  $zen-auto-include-item-base: true;
+  background-color: $negre2;
+  padding-left: 20px;
+  padding-right: 20px;
+  .field-descripcio-foto-portada,
+  .field-autor-foto-portada {
+    @include autoria-fn();
+  }
+  .views-field-title {
+    margin-bottom: 10px;
+  }
+  .field-body {
+    p:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  @include zen-grid-container();
+  /*TRES COLUMNAS*/
+  #block-views-9e43a5859a02b156a0111ba48933a77f {
+    @include zen-grid-item(9,1);
+  }
+  #block-views-d8638b80f81195b8c988a314036c8c55 {
+    @include zen-grid-item(8,10);
+  }
+  #block-views-b6fc8349d2e36602d9ec641764829686 {
+    @include zen-grid-item(6,18);
+  }
+
+  /*EXPRESSIONS AUXILIAR*/
+  #block-views-d8638b80f81195b8c988a314036c8c55 {
+    .view-content {
+      $zen-column-count: 2;
+      $zen-gutter-width: 10px;
+      @include zen-grid-container();
+      .views-row {
+        @include zen-grid-item(2,1);
+        @include zen-nested-container();
+        .views-field-nothing {
+          @include zen-grid-item(2,1);
+        }
+        .views-field-title {
+          @include zen-clear();
+          @include zen-grid-item(2,1);
+        }
+        .field-portada-fotogaleria {
+          @include zen-clear();
+          @include zen-grid-item(1,1);
+        }
+        .field-body {
+          @include zen-grid-item(1,2);
+        }
+        .views-field-nothing-1 {
+          @include zen-clear();
+          @include zen-grid-item(1,1);
+        }
+        @include zen-clear();
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+
+
+
+
+  /*EXPRESSIONS DESTACAT*/
+  #block-views-9e43a5859a02b156a0111ba48933a77f {
+    h2.block__title {
+      @include graphik-medium(26px,$gris3,30px);
+      @include h2-espai-fn();
+    }
+    .field-autor {
+      @include autoria-fn();
+    }
+    .date-display-single {
+      @include data-fn();
+    }
+    .views-field-title a {
+      @include graphik-semibold-fn(36px,40px);
+    }
+    .field-portada-fotogaleria {
+    }
+
+    .field-body {
+      @include public-roman-fn(19px,24px);
+      a {
+        color:$blanc;
+        text-decoration: underline;
+      }
+      
+    }
+  }
+
+  /*EXPRESSIONS AUXILIAR*/
+  #block-views-d8638b80f81195b8c988a314036c8c55 {
+    h2.block__title {
+      @include graphik-medium(26px,$negre2,30px);
+      @include h2-espai-fn();
+    }
+    .views-field-title a {
+      @include graphik-semibold-fn(30px,33px);
+    }
+    .field-autor {
+      @include autoria-fn();
+    }
+    .date-display-single {
+      @include data-fn();
+    }
+    .field-body {
+      @include public-roman-fn(17px,24px);
+      a {
+        color:$blanc;
+        text-decoration: underline;
+      }
+    }
+    .views-row-1 .views-field-nothing-1 {
+      display:block;
+      content:"";
+      border-bottom: solid 1px $gris3;
+    }
+    
+  }
+  /*IMPRESSIONS*/
+  #block-views-b6fc8349d2e36602d9ec641764829686 {
+    table {
+      margin-top: 0;
+    }
+    h2.block__title {
+      @include graphik-medium(26px,$gris3,30px);
+      @include h2-espai-fn();
+    }
+    .views-field-title a {
+      @include graphik-semibold-fn(27px,30px); /*no definit disseny*/
+    }
+    .field-autor {
+      @include autoria-fn();
+    }
+    .date-display-single {
+      @include data-fn();
+    }
+    .field-body {
+      @include public-roman-fn(19px,24px);
+      a {
+        color:$blanc;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+ 
+
+/*RESTA DE SECCIONS*/
+.region-seccion-inferiors {
+  $zen-column-count: 23;
+  $zen-gutter-width: 0px;
+  $zen-auto-include-item-base: true;
+  @include zen-grid-container();
+  #block-directa-custom-seccions-portada {
+    @include zen-grid-item(7,1);
+  }
+  /*#block-views-f6d5ffea550fc2e6f9965237f6e9216c*/
+
+  #block-views-8cf51664534d81cd6f19f736c791b6bf,
+  #block-views-8cf51664534d81cd6f19f736c791b6bf,
+  #block-views-66eea5503a81d1a282509c0f281bb1dd,
+  #block-views-9e55819d28ec55202f138730f1fad224,
+  #block-views-3139b72ceb297d9c104027a9acd05199,
+  #block-views-7960623019115263ba0aac1ad3d05279 {
+    display: none;
+  }
+
+   
+  .block-views { 
+    @include zen-grid-item(10,8);
+    @include zen-nested-container();
+    .block-title {
+      @include zen-clear();
+      @include zen-grid-item(23,1);
+    }
+    .view-clon-de-portada-seccions-llistat- {
+      @include zen-clear();
+      @include zen-grid-item(23,1);
+    }
+
+
+  }
+  #block-directa-custom-seccions-portada {
+    $zen-column-count: 2;
+    @include zen-grid-container();
+    .view-content {
+      @include zen-grid-item(2,1);
+      @include zen-nested-container();
+      .views-field-field-seccio-web-1 {
+        @include zen-grid-item(2,1);
+      }
+      .field-portada-fotogaleria {
+        @include zen-clear();
+        @include zen-grid-item(1,1);
+      }
+      .views-field-nothing {
+        @include zen-grid-item(1,2);
+      }
+      @include zen-clear();
+    }
+  }
+  .block-views {
+    .block-title {
+      color: $blanc;
+    }
+  }
+}
+
+
+
+
+/*RESTA DE SECCIONS STYLES*/
+
+.region-seccion-inferiors {
+    background-color: $blanc;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10px;
+  table {
+    margin-top: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #block-directa-custom-seccions-portada {
+    .view-content {
+      border-bottom: solid 1px $gris6;
+      padding-bottom:20px;
+      margin-bottom:10px;
+    }
+    .views-field-field-seccio-web-1 {
+      @include graphik-medium-seccions(33px,40px);
+      border-bottom: 1px solid $gris6;
+      padding-bottom: 10px;
+      margin-bottom:10px;
+    }
+    .field-portada-fotogaleria {
+      padding-top:5px;
+    }
+    .views-field-nothing {
+      border-right: 1px solid $gris6;
+      .title a {
+        @include graphik-semibold(19px,$gris7,25px);
+        padding-right: 20px;
+      }
+      .field-body {
+        @include public-roman-fn(17px,24px);
+        padding-right: 20px;
+      }
+    }
+  }
+  .block-views {
+    .block-title {
+      @include graphik-medium-seccions(33px,40px);
+      color: $blanc;
+      border-bottom: 1px solid $gris6;
+      padding-bottom:10px;
+      margin-bottom:10px;
+    }
+    .view-content {
+     
+    }
+    .view-clon-de-portada-seccions-llistat- {
+      .views-row {
+        border-bottom: 1px solid $gris6;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 20px;
+
+      }
+      .views-field-title a{
+        @include graphik-medium-seccions(19px,25px); /*line height original 46*/
+      }
+    }
+  }
+}
+
+
+
+
+

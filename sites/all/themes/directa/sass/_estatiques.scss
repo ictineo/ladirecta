@@ -1,0 +1,105 @@
+//Estatiques
+.page-node-13270 {
+  
+   #page-title {
+     margin-left: 50px;
+     padding-left:50px;
+    }
+
+    article {
+     margin-left:100px;
+
+
+
+   }
+  
+
+
+}
+
+
+////Quisom
+.page-node-11672 {
+   h1 {
+    background-image: url("../images/help.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #5e5e5e;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-left: 60px;
+    padding-left: 50px; 
+   }
+   article {
+     margin-left: 60px;
+   }
+ }
+////Colabora
+.page-colabora{
+  #main {
+    $zen-column-count:23;
+    $zen-gutter-width:10px;
+    
+    @include zen-grid-container(); 
+    #content {     
+      .page__title.title {
+          background-image: url("../images/share.png");
+          background-position: left center;
+          background-repeat: no-repeat;
+          color: #777777;
+          margin-left: 70px;
+          padding-left: 50px;
+          margin-bottom: 50px;
+          padding-top: 0;
+      }
+      @include zen-grid-item(17,1);
+      .view { 
+        padding-left:100px;
+        article {
+           .node__title.node-title{
+             font-size: 40px;
+             font-weight: 400;
+             margin-bottom: 48px;
+           }
+           color: #777777;
+           fieldset {         
+             padding-bottom: 70px;           
+             border-bottom-width: 1px;
+             margin-bottom: 40px;
+             border-top-width: 1px; 
+             &.collapsed {
+               border-top-width: 0px;
+             }
+             
+             legend {  
+               @include box-shadow(rgba(200,200,200,0.8) 0px 0px 34px 3px inset);  
+               float: right;
+               padding:  5px;
+               border-radius: 5px;
+
+               .fieldset-legend {
+                 background-image:none; 
+                 padding-left: 5px;
+                 .fieldset-title{
+                   color: #777777;
+                 }
+               }
+             }
+             .fieldset-wrapper  { 
+               #webform-component-missatge {
+                 input {
+                   height: 200px;
+                 }
+               }
+             }
+         }
+      }    
+    }
+  }  
+    .sidebars {
+      @include zen-grid-item(6,18);
+      margin-top:100px;
+    }
+  }
+}
