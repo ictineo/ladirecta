@@ -3,26 +3,66 @@
   .breadcrumb {
     display: none;
   }
-  .node-noticia.view-mode-token {
-    $zen-column-count:4;
-    @include zen-grid-container();
-    @include zen-grid-background();
-    @include zen-nested-container();
-    img {
-      @include zen-grid-item(1,1);
-    }
-    .date-display-single {
-      @include zen-nested-container();
-      @include zen-grid-item(3,2);
-    }
-    .node-title {
-      @include zen-clear(right);
-      @include zen-nested-container();
-      @include zen-grid-item(3,2);
-    }
-   .field-body {
-     @include zen-nested-container();
-     @include zen-grid-item(3,2);
+  #main #content {
+    article.node-noticia.view-mode-full {
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      .field-fotografies {
+        @include zen-grid-item(15,1);
+      }
+      #col-meta {
+        @include zen-clear();
+        @include zen-grid-item(3,1);
+        @include zen-nested-container;
+        #meta-info {
+          @include zen-grid-item(14,1);
+        }
+      }
+      .easy_social_box {
+        @include zen-clear();
+        @include zen-grid-item(3,1);
+      }
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      .field-body {
+        @include zen-grid-item(12,4);
+      }
+      #tags-wrapper {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+      }
+      .field-collection-container {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+        article.field-contingut-relacionat {//node-noticia.view-mode-token {
+          $zen-column-count: 3;
+          $zen-gutter-width: 10px;
+          $zen-auto-include-item-base: true;
+          @include zen-grid-container();
+          .field-portada-fotogaleria {
+            @include zen-grid-item(1,1);
+          }
+          fieldset.group-nested .fieldset-wrapper {
+            @include zen-grid-item(2,2);
+            @include zen-nested-container();
+            //.node-title {
+              //@include zen-grid-item(3,1);
+            //}
+            .field-autor {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+            }
+            .date-display-single {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+            }
+            .field-body {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+           }
+          }
+        }
+      }
     }
   }
 }
@@ -33,28 +73,232 @@
 /***
  * OJU SELECTOR MASSA GENERIC PER SER NOTICIA DE PORTADA!
  */
-.not-front {
-  #page-title {
-    @include titulo-not;
-  }
-  .node-title {
-    a {
-      @include titulo-not;
+.not-front.node-type-noticia {
+  #main {
+    #content {
+      margin-top: 30px;
+      #page-title {
+        @include titulo-not;
+        padding-top: 20px;
+      }
+      //.node-title {
+        //a {
+         // @include titulo-not;
+       // }
+      //}
+      article.node-noticia.view-mode-full {
+        #nav-links-wrapper {
+          .node-nav-links {
+            position: absolute;
+            top: 1700px;
+            background-color: $blanc;
+            opacity: 0.7;
+            width: 28%;
+            height: 70px;
+            padding: 20px 10px 10px 0;
+            a {
+              @include graphik-bold(16px,$gris7,22px);
+              width: 70%;
+            }
+            &.node-nav-links-prev {
+              left: -75px;
+              box-shadow: 0px 0px 2px 2px $fons;
+              a {
+                float: right;
+                background: url('../images/prev.png') no-repeat -15px 10px;
+                padding-left: 40px;
+              }
+            }
+            &.node-nav-links-next {
+              box-shadow: 6px 3px 10px 2px $fons;
+              right:10%;
+              text-align: right;
+              a {
+                float: left;
+                background: url('../images/next.png') no-repeat 275px 10px;
+                padding-right: 40px;
+              }
+            }
+          }
+        }
+        .field-subtitol {
+          @include subtitulo-not;
+        padding-bottom: 20px;
+        }
+        .field-fotografies {
+          .field-peu-fotografia {
+            @include peu-foto;
+            color:$negre;
+            text-transform: none;
+            display: inline-block;
+            margin-right: 10px;
+          }
+          .field-autoria {
+            @include peu-foto;
+            text-transform: none;
+            display: inline-block;
+          }
+        }
+        #col-meta {
+          padding-top: 30px;
+          .field-autor,
+          .date-display-single {
+            @include graphik-bold(15px,$gris7,22px);
+          }
+          .field-autor {
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+        }
+        .field-body {
+          padding-top: 30px;
+          margin-bottom: -120px;
+          p {
+            @include body;
+            font-size: 20px; //jude modifica. hay q modificar el mixin cuando sea definitivo y borrar esta linea
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+          .destacat {
+            @include public-roman(26px, $vermell, 36px);
+            margin-left: -25%;
+            width: 65%;
+            float: left;
+          }
+          figure.caption {
+            border-bottom: 1px dashed $fons;
+            margin-bottom: 10px;
+            figcaption {
+              @include public-roman(15px,$negre,auto);
+              margin: 10px 0;
+            }
+          }
+        }
+        @include cont-rel();//.field-continguts-relacionats es crida des del mixin
+        .field-collection-container {
+          @include not-rel();
+          border: none 0px;
+          .field-continguts-relacionats {
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+        }
+        #tags-wrapper {
+          border-top: 1px solid $gris6;
+          padding-top: 5px;
+          //border-bottom: 1px solid $gris6;
+          #tags-etiquetes-wrapper,
+          #tags-territori-wrapper {
+            display: inline-block;
+            width: auto;
+            mark.field-etiquetes ,
+            .field-territori  {
+              @include etiquetes;
+              background: none;
+            }
+          }
+        }  
+        .field-collection-container {
+          article {
+          }
+        }
+        //Noticies relacionades
+        .field-collection-container {
+          h3.field-label {
+            margin: 10px 0px;
+            padding:10px 0;
+            border-bottom: solid 1px $fons;
+          }
+          article.field-contingut-relacionat {
+            border-bottom: 1px dashed $fons;
+            &:last-of-type {
+              border-bottom: 1px dashed $fons;
+            }
+            .field-collection-view.view-mode-token {
+              border: none 0px;
+              article.node-noticia.view-mode-token {
+                border: none 0px;
+                margin: 0;
+                header {
+                  float: right;
+                  padding-left: 33%;
+                  margin-bottom: 10px;
+                  .node__title.node-title {
+                    a {
+                      @include graphik-semibold(28px, $gris7, 34px);//Jude canvia definicio tipo de 33 a 28 i de 37 a 34 interlineat
+                    }
+                  }
+                }
+                .field-portada-fotogaleria img {
+                  margin-left: -15px;
+                }
+                fieldset.group-nested {
+                  float: right;
+                  border: none 0px;
+                  margin: 0;
+                  padding: 0;
+                  .field-autor,
+                  .date-display-single {
+                    @include graphik-medium (17px, $gris5, 19px);
+                    //padding-left: 10px;
+                  }
+                  .field-autor {
+                    text-decoration: underline;
+                  }
+                  .field-body {
+                    margin-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: 10px;
+                    p {
+                      @include entradilla-not-rel-dest;
+                    } 
+                  }
+                }
+              }
+              .field-destacar {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-  .field-subtitol {
-    @include subtitulo-not;
-  }
-  .body {
-    @include body;
-  }
-  .field-etiquetes,
-  .field-territori {
-    @include etiquetes;
-  }
-    @include cont-rel();
-  .field-collection-container {
-    @include not-rel();
+    //SIDEBARS
+    .sidebars {
+      .region-sidebar-second {
+        margin-top: 30px;
+        .block {
+          border-left: 1px solid $gris6;
+          padding-left: 10px;
+        }
+        #block-directa-custom-mes-noticies {
+          h2.block-title {
+            @include graphik-medium(26px, $gris7, 31px);
+          }
+          .view-ultimes-noticies {
+            .view-content {
+              .views-row {
+                padding-top: 10px;
+                margin: 10px 0;
+                border-top: 1px solid $gris6;
+                &:last-of-type {
+                  border-bottom: 1px solid $gris6;
+                  padding-bottom: 10px;
+                }
+                .views-field-title a {
+                  @include graphik-medium(19px, $gris7, 23px);
+                }
+              }
+            }
+          }
+        }
+        #block-tagadelic-taxonomy-tagadelic-taxonomy {
+          h2.block-title {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 

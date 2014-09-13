@@ -127,6 +127,8 @@ if (drupal_is_front_page()) {
 
    <div id="interior">
       <div id="menu-tigger"> &nbsp; </div>
+      <div id="menu-close-top" class="menu-close"> &nbsp; </div>
+      <div id="menu-close-bottom" class="menu-close"> &nbsp; </div>
      <?php print render($page['interior']); ?>
    </div>   
 
@@ -151,4 +153,3 @@ if (drupal_is_front_page()) {
 
 <?php print render($page['bottom']); ?>
 
-<?php drupal_add_js(drupal_get_path('theme','directa') . '/js/menu.js'); ?>

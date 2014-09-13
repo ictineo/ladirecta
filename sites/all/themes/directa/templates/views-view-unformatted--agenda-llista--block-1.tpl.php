@@ -1,12 +1,4 @@
 <?php
-/**
-* @file
-* Default simple view template to display a list of rows.
-*
-* @ingroup views_templates
-*/
-?>
-<?php
 /** custom display
 * Generate days structure
 */
@@ -15,66 +7,81 @@
 $days = array();
 $today = time();
 
-//if (date('w',strtotime($today)) 
 $calcul= date('w',strtotime($today));
 $calcul2= (0 - $calcul)+3;
-if ($calcul == 0) { $calcul2 = 6; } 
+if ($calcul == 0) { 
+  $calcul2 = 6; 
+} 
 
 $today = strtotime("$calcul2 day", $today);
 
 for ($i = 0 ; $i < 14; $i++) {
-/* creem el array buit per la clau del dia */
-$days[date('Y-m-d', $today)] = '';
-/* incrementem el timestap amb un dia */
-
-$today = strtotime("+1 day", $today);
+  /* creem el array buit per la clau del dia */
+  $days[date('Y-m-d', $today)] = '';
+  /* incrementem el timestap amb un dia */
+  $today = strtotime("+1 day", $today);
 }
 
 $j = 0;
+
+foreach ($view->result as $id => $row):
+  $nodeurl = url('node/'. $row->nid);
+  if ($row->field_body[0]['rendered'] == 'NULL') { 
+    $row->field_body[0]['rendered'] = ''; 
+  }
+
+  /* coprovem que el dia de levent esta en els 30seguents */
+  if (array_key_exists(date('Y-m-d', strtotime($row->field_data_field_data_ag_field_data_ag_value)), $days)) {
+    $output  ='<div class="event">';
+    $output .= '<span class="title">';
+    $output .=   '<a href='.url('node/'. $row->nid).'>'.$row->node_title.'</a>';
+    $output .= '</span>';
+    $output .= '<span class="adreca">';
+    $output .=   $row->field_field_adreca[0]['rendered'];
+    $output .= '</span>';
+    $output .= '<span class="resum">';
+    $output .=   $row->field_body[0]['rendered'];
+    $output .= '</span>';
+    $output .=   '<a href='.url('node/'. $row->nid).'> +info </a>';
+    $output .= '</span>';
+    $output .='</div>';
+    $days[date('Y-m-d', strtotime($row->field_data_field_data_ag_field_data_ag_value))] .= $output;
+  }
+
+endforeach;
+
+
+/** preparem per mostrar la linia de navegacio de dies **/
+$dates1 = '';
+$dates2 = '';
+
+$j = 0;
+$context_class = ' past';
+foreach ($days as $date2 => $res2):
+  $j++;
+  if($context_class == ' today') {
+    $context_class = ' future';
+  }
+  if(date('Y-m-d',strtotime($date2)) == date('Y-m-d', time())) { 
+    $context_class = ' today';
+  } 
+  if ($j <= 7) { 
+    $dates1 .= '<div class="daysup day-'.date('Y-m-d', strtotime($date2)). $context_class . '" data-date="'.date('Y-m-d', strtotime($date2)).'">'.date('d', strtotime($date2)).'</div>';
+  }
+  else {
+    $dates2 .= '<div class="daysup day-'.date('Y-m-d', strtotime($date2)). $context_class . '" data-date="'.date('Y-m-d', strtotime($date2)).'">'.date('d', strtotime($date2)).'</div>';
+  }
+endforeach;
 ?>
-<?php foreach ($view->result as $id => $row): ?>
-
-<?php
-
-
-$nodeurl = url('node/'. $row->nid);
- if ($row->field_body[0]['rendered'] == 'NULL') { $row->field_body[0]['rendered'] = ''; }
-/* coprovem que el dia de levent esta en els 30seguents */
-if (array_key_exists(date('Y-m-d', strtotime($row->field_data_field_data_ag_field_data_ag_value)), $days)) {
-  $days[date('Y-m-d', strtotime($row->field_data_field_data_ag_field_data_ag_value))] .= 
-
-    '<span class="title"><span class="num"></span> <div class="events"><a href='.url('node/'. $row->nid).'>'.$row->node_title.'</a></div></span>
-    <span class="adreca"><span class="num"></span> <div class="events">'.$row->field_field_adreca[0]['rendered'].'</div></span>
-    <span class="resum"><span class="num"></span><div class="events">'.$row->field_body[0]['rendered'].'</div></span>
-    <span class="mesinfo"><div class="events"> <a href='.url('node/'. $row->nid).'> +info </a></div> </span>';
-}
-
-?>
-
-
-<?php endforeach; ?>
 
 
 <div id="cal-line"> 
   <div id=menu-agenda>
    <div id=menusup>
-<?php
-$j = 0;
-
-foreach ($days as $date2 => $res2) {
-  $j++;?>
-      <?php if ($j <= 7) { print('<div class="daysup day-'.date('Y-m-d', strtotime($date2)).'" data-date="'.date('Y-m-d', strtotime($date2)).'">'.date('d', strtotime($date2)).'</div>');}  
-           // else { print('<div class=dayinf>'.date('d', strtotime($date2)).'</div>');} 
-}?>
+      <?php print $dates1; ?>
     </div>
     <div id=menuinf> 
-<?
-$j= 0;
-foreach ($days as $date3 => $res3) {
-  $j++;?>
-      <?php if ($j >= 8) { print('<div class="daysup day-'.date('Y-m-d', strtotime($date3)).'" data-date="'.date('Y-m-d', strtotime($date3)).'">'.date('d', strtotime($date3)).'</div>');}  
-           // else { print('<div class=dayinf>'.date('d', strtotime($date2)).'</div>');} 
-}?>
+      <?php print $dates2; ?>
     </div>
   </div>
   
@@ -82,20 +89,24 @@ foreach ($days as $date3 => $res3) {
   <div class="sotamenu"> 
 <?
 /** mostrem el html que volem **/
-foreach ($days as $date => $res) {  ?>
- <?php $today_class = ''; if(date('Y-m-d',strtotime($date)) == date('Y-m-d', time())) { $today_class = ' today';} ?>
- <?php print('<div class="dia-block day-'.date('Y-m-d', strtotime($date)).$today_class.'" data-date="'.date('Y-m-d', strtotime($date)).'">'); ?>
-  <?print('<span class="data"><span class="num">' . date('d', strtotime($date)) . '</span></span>'); ?>
-    <div id="events">
-  <?  if(!empty($res)) {
-    print($res);}
-   else {
-   print('<span class="day"><span class="num">Cap event aquest dia</span></span>');
-   }
-  ?> 
-    </div>
-</div>  <?
-}
+foreach ($days as $date => $res):
+  $today_class = ''; 
+  $day_text = date('d', strtotime($date));
+  if(date('Y-m-d',strtotime($date)) == date('Y-m-d', time())) { 
+    $today_class = ' today';
+    $day_text = t('Today');
+  } 
+  print('<div class="dia-block day-' . date('Y-m-d', strtotime($date)) . $today_class . '" data-date="' . date('Y-m-d', strtotime($date)) . '">');
+  print('  <span class="data"><span class="num">' . $day_text . '</span></span>'); 
+  print('  <div class="events">');
+  if(!empty($res)) {
+    print($res);
+  }
+  else {
+    print('<span class="no-events">Cap event aquest dia</span>');
+  }
+print(' </div></div>  ');
+endforeach;
 ?>
   </div>
 <?php $options = array('absolute' => TRUE);

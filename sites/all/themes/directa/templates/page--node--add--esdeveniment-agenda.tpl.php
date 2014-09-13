@@ -84,7 +84,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print ('(Ic) Agenda'); ?></h1>
+        <h1 class="page__title title" id="page-title"><?php print ('Agenda'); ?></h1><!--trec (Ic) previ a Agenda -JUDE -->
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -118,3 +118,6 @@
 </div>
 
 <?php print render($page['bottom']); ?>
+
+  <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/placeholder.js'); ?>
+

@@ -2,17 +2,32 @@
 @import "publico";
 @import "graphic";
 
+/*COLORS VAR
+  FONTS MIXINS
+  SHADOWS
+  BOTONES & LOGO
+*/
+
 /*COLORS*/
 $gris2:#767676;
-$gris3:#777; 
+$gris3:#777777; 
 $gris4:#9A9A9A;
 $gris5:#939393;
 $gris6:#D3D3D3; /*fil d'ariadna*/
 $gris7:#5E5E5E; /*inicia sessio*/
+$gris8:#535353; //gris titol pagina -- Jude
+$gris9: #f0f0f0;
+$gris10: #f7f7f7;
 $vermell:#C13432;
 $blanc: #FFFFFF;
 $negre:#030303;
 $fons: #e9e9e9; /*gris de fons*/
+$negre2:#444444; /*Franja portada pendent confirmacio*/
+$fons_rosa: #f7e8f6;
+/** 
+ * notes quiron, ordre de grisos
+ * blanc -> 9 -> 6 -> 4 -> 5 -> 2 = 3 -> 7 -> 8 -> negre -> negre2
+ */
 
 
 /*MIXINS FONTS*/
@@ -89,138 +104,91 @@ $fons: #e9e9e9; /*gris de fons*/
 -moz-box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 }
-
-
-
-/*FORMATOS DE TEXTO INTERNOS*/
-
-@mixin titulo-not {
-  @include graphik-bold(46px,$gris7,56px);
-  padding-top: 5px;
-  padding-bottom: 5px;
+/*shadows*/
+@mixin header-shadow {
+  -webkit-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
+  -moz-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
+  box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
 }
-@mixin titulo-fotogaleria {
-  @include graphik-bold(32px,$gris7,36px);
+@mixin menu-shadow {
+ -webkit-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
+ -moz-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
+  box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1); 
 }
-@mixin subtitulo-not {
-  @include graphik-medium(33px, $gris3,40px);
-  padding-top: 5px;
-  padding-bottom: 5px;
+@mixin line-gradient {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
 }
-@mixin body {
-  @include public-roman(23px, $gris7, 32px);
-}
-@mixin peu-foto {
-  @include public-roman(16px, $gris3, auto);
-  text-transform: uppercase;
-  .p {
-  @include public-roman(16px,#000000, auto);
-  text-transform: none;
-  }
-}
-
-@mixin seccio {
-  background-color: $gris7;
-  padding: 5px; 
-  a {
-    @include enllac-net;
-    @include graphik-super(19px,$blanc,19px);
-    font-weight: normal;
-  }
-}
-
-@mixin autoria {
-  color:$gris3;
-  text-transform:uppercase;
-  padding-left:5px;
-  padding-right:5px;
-  a {
-    text-transform:underline;
-  }
-}
-@mixin data {
-  color: $gris3;
-  a {
-    text-transform:underline;
-  }
-}
-
-@mixin tagadelic {
-  a {
-    font-family: 'graphiksemibold';
-    color: $negre;
-    line-height: 30px;
-  }
-}
-
-@mixin cont-rel() {
-  //background-color: $fons;
-  .field-continguts-relacionats {
-    background-color:$fons;
-    margin:0px;
-    .field-collection-view-final {
-      margin: 0;
-      width:100%;
-      thead {
-        display:none;
-      }
-      tbody {
-        .field_collection_item  {
-          background-color: $fons;
-          border: none;
-          .field-continguts-relacionats-ref {
-            padding-bottom:10px;
-            padding-top:10px;
-            a {
-              @include public-roman(17px, $gris7, 22px);
-              text-decoration: underline;
-              padding-left:40px;
-            }
-          }
-          
-        }
-      }
-    }
-  }
-}
-
-@mixin not-rel() {
-    h3.field-label {
-      @include graphik-medium(33px, $gris3, 37px);
-      padding-bottom: 0;
-      margin-botttom: 0;
-      border-top: solid 1px $fons;
-      margin-top: 10px;
-      padding-top:10px;
-    }
-  .field-contingut-relacionat .field-collection-view {
-    .node__title a {
-      @include graphik-semibold(33px, $gris7, 37px);
-    }
-    .field-body {
-      @include public-roman(21px, $gris7, 26px);
-    }
-  }
-}
-
-
-@mixin etiquetes {
-  a {
-    @include public-roman(17px, $gris7, 22px);
-    text-decoration: underline;
-  }
-}
-
-
-@mixin portada-numero {
-  .field-portada-numero {
-    img {
-      border:5px solid $fons;
-    }
-  }
+@mixin box-shadow {
+ -webkit-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+ -moz-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
+  box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1); 
 }
 
 /*BOTONES*/
+/*logo*/
+@mixin logo() {
+   background-image:url('../images/logo.png');
+   background-repeat:no-repeat;
+   display:block;
+   content:"";
+   width:132px;
+   height:39px;
+}
+@mixin bseccio {
+  a {
+    font-family:'graphikmedium';
+    font-size:16px;
+    color:$blanc;
+    background-color:$gris7;
+    font-weight:normal;
+    text-align:right;
+    padding-right:5px;
+  }
+}
+@mixin buto-seccions-m960() {
+    font-family:'graphikmedium';
+    font-size:15px;
+    color:$gris7;
+    font-weight:normal;
+    text-align:right;
+    padding-right:5px;
+    text-transform: uppercase;
+    background-image:url('../images/menu_arrow_down');
+    background-repeat:no-repeat;
+    background-position: 8px 8px;
+    height:auto;
+    background-color:$gris6;
+    text-align:right;
+    border-radius:5px;
+}
+@mixin reset-login() {
+  label,
+  .description {
+    display:none;
+  }
+  .form-item {
+    margin: 0;
+  }
+}
+
+
+@mixin reset-button {
+  .form-action { 
+    border: none;  
+    padding-top:5px;
+    width:100%;
+    margin-top:15px;
+  }
+  button, 
+  input[type="button"], 
+  input[type="reset"], 
+  input[type="submit"] {
+    border: none;  
+    padding-top:5px;
+    width:100%;
+    margin-top:15px;
+  }
+}
 @mixin subscriute($padding) {
   background-color:$vermell;
   border-radius: 5px;
@@ -233,8 +201,112 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
     @include public-bold(24px,$blanc,24px);
   }
 }
+@mixin subscriute-m960($padding) {
+  background-color:$vermell;
+  border-radius: 5px;
+  text-align: center;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  a {
+    @include public-bold(20px,$blanc,24px);
+  }
+}
+@mixin inicia($padding) {
+  padding: 0;
+  @include login-shadow;
+  text-align: center;
+  background-color: $fons;
+  a {
+    padding-top: $padding;
+    padding-bottom: $padding;
+    @include graphik-medium(15px,$gris7,auto);
+  }
+}
+@mixin buto-inicia-m960($padding) {
+  padding: $padding;
+  @include login-shadow;
+  text-align: left;
+  background-color: $fons;
+  backgroudn-repeat: no-repeat;
+  background-position: 8px 8px;
+  height: auto;
+  border-radius: 5px;
+  a {
+    padding-top: $padding;
+    padding-bottom: $padding;
+    @include graphik-medium(15px,$gris7,auto);
+  }
+}
+@mixin bsessio {
+  a {
+    font-family:'graphikmedium';
+    font-size:17px;
+    color:$gris7;
+  }
+  background-color:$gris6;
+  text-align:center;
+  padding:3px;
+}
+@mixin bsubs {
+  border-radius:5px;
+  background-color:$vermell;
+  text-align:center;
+  //padding:3px;
+  a {
+    font-family:'publico_text_bold';
+    font-size:18px;
+    color:$blanc;
+  }
+}
+@mixin bform {
+  font-family:'graphikmedium';
+  font-size:21px;
+  font-color:$gris4;
+}
 
-
+@mixin buscador() {
+  html.js,
+  html.js input.form-autocomplete,
+  input.form-autocomplete {
+    background-image:url('../images/vi.png');
+    background-repeat:no-repeat;
+    background-position: right;
+    display:block;
+    content:"";
+    border:1px solid $gris2;
+    height:28px;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+  .views-submit-button {
+    display:none;
+  }
+}
+@mixin buscador-m960() {
+  html.js,
+  html.js input.form-autocomplete,
+  input.form-autocomplete {
+    background-image:url('../images/vi.png');
+    background-repeat:no-repeat;
+    background-position: right;
+    display:block;
+    content:"";
+    border:1px solid $gris2;
+    height:28px;
+  }
+  .views-exposed-widgets {
+    margin-bottom: 0px;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+  .views-submit-button {
+    display:none;
+  }
+}
 
 /*MIXINS FORMULARIOS*/
 @mixin user-login {
@@ -265,19 +337,6 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
     }
   }
 }
-@mixin inicia($padding) {
-  padding: 0;
-  @include login-shadow;
-  text-align: center;
-  background-color: $fons;
-  a {
-    padding-top: $padding;
-    padding-bottom: $padding;
-    @include graphik-medium(17px,$gris7,auto);
-  }
-}
-
-
 
 
 
@@ -348,94 +407,10 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 }
 
 
-@mixin reset-button {
-  .form-action { 
-    border: none;  
-    padding-top:5px;
-    width:100%;
-    margin-top:15px;
-  }
-  button, 
-  input[type="button"], 
-  input[type="reset"], 
-  input[type="submit"] {
-    border: none;  
-    padding-top:5px;
-    width:100%;
-    margin-top:15px;
-  }
- }
-
-/*logo*/
- @mixin logo() {
-   background-image:url('../images/logo.png');
-   background-repeat:no-repeat;
-   display:block;
-   content:"";
-   width:132px;
-   height:39px;
- }
 
 
 
-/*Botones*/
-@mixin bseccio {
-  a {
-    font-family:'graphikmedium';
-    font-size:16px;
-    color:$blanc;
-    background-color:$gris7;
-    font-weight:normal;
-    text-align:right;
-    padding-right:5px;
-  }
-}
-@mixin bsessio {
-  a {
-    font-family:'graphikmedium';
-    font-size:17px;
-    color:$gris7;
-  }
-  background-color:$gris6;
-  text-align:center;
-  padding:3px;
-}
-@mixin bsubs {
-  border-radius:5px;
-  background-color:$vermell;
-  text-align:center;
-  //padding:3px;
-  a {
-    font-family:'publico_text_bold';
-    font-size:18px;
-    color:$blanc;
-  }
-}
-@mixin bform {
-  font-family:'graphikmedium';
-  font-size:21px;
-  font-color:$gris4;
-}
 
-@mixin buscador() {
-  html.js,
-  html.js input.form-autocomplete,
-  input.form-autocomplete {
-    background-image:url('../images/vi.png');
-    background-repeat:no-repeat;
-    background-position: right;
-    display:block;
-    content:"";
-    border:1px solid $gris2;
-    height:28px;
-  }
-  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
-    padding:0px;
-  }
-  .views-submit-button {
-    display:none;
-  }
-}
 
 
 /*Menus*/
@@ -461,8 +436,8 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
     background-position:0 0;
     li {
       list-style: none;
-      background-color:$color;
       border: none;
+      background-color: inherit;
       &.odd {
         border-left: 1px solid $border;
       }
@@ -480,24 +455,32 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
       margin-bottom:5px;
     }
   }
- 
 
-//EASY SOCIAL//
-
-@mixin easysocial {
-  .easy_social_box {
+@mixin seccio {
+  background-color: $gris7;
+  padding: 5px; 
+  a {
+    @include enllac-net;
+    @include graphik-super(19px,$blanc,19px);
+    font-weight: normal;
   }
 }
 
-
-
-
-
-
-
-
-
-
+@mixin autoria {
+  color:$gris3;
+  text-transform:uppercase;
+  padding-left:5px;
+  padding-right:5px;
+  a {
+    text-transform:underline;
+  }
+}
+@mixin data {
+  color: $gris3;
+  a {
+    text-transform:underline;
+  }
+}
 @mixin tit-menu {
   font-family:'graphik_regularregular';
   font-weight: normal;
@@ -539,32 +522,14 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   font-family:'graphikmedium';
   font-size:17px;
   font-color:$gris6;
-  .a {
+  padding-left: 20px;
+  padding-top: 20px;
+  a {
     text-decoration:underline;
+    color: $gris6;
   }
 }
-/*shadows*/
 
-@mixin header-shadow {
-  -webkit-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
-  -moz-box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
-  box-shadow: 0px 10px 11px -11px rgba(233,233,233,1);
-}
-
-
-@mixin menu-shadow {
- -webkit-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
- -moz-box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1);
-  box-shadow: inset 0px 15px 12px -12px rgba(233,233,233,1); 
-}
-@mixin line-gradient {
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-}
-@mixin box-shadow {
- -webkit-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
- -moz-box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1);
-  box-shadow: inset 0px 15px 12px 0px rgba(233,233,233,1); 
-}
 
 
 /*ESTILS DE TEXT*/
@@ -606,17 +571,132 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   color:$gris7;
   font-weight:normal;
 }
- 
-/*LOGIN*/
-@mixin reset-login() {
-  label,
-  .description {
-    display:none;
-  }
-  .form-item {
-    margin: 0;
+/*FORMATOS DE TEXTO INTERNOS*/
+
+@mixin titulo-not {
+  @include graphik-bold(46px,$gris7,56px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@mixin titulo-fotogaleria {
+  @include graphik-bold(32px,$gris7,36px);
+}
+@mixin subtitulo-not {
+  @include graphik-medium(33px, $gris3,40px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@mixin body {
+  @include public-roman(23px, $gris7, 32px);
+}
+@mixin peu-foto {
+  @include public-roman(16px, $gris3, auto);
+  text-transform: uppercase;
+  .p {
+  @include public-roman(16px,#000000, auto);
+  text-transform: none;
   }
 }
+
+
+
+@mixin tagadelic {
+  a {
+    font-family: 'graphiksemibold';
+    color: $negre;
+    line-height: 30px;
+  }
+}
+
+@mixin cont-rel() {
+  //background-color: $fons;
+  .field-continguts-relacionats {
+    background-color:$fons;
+    margin:0px;
+    .field-collection-view-final {
+      margin: 0;
+      width:100%;
+      thead {
+        display:none;
+      }
+      tbody {
+        .field_collection_item  {
+          background-color: $fons;
+          border: none;
+          .field-continguts-relacionats-ref {
+            padding-bottom:10px;
+            padding-top:10px;
+            a {
+              @include public-roman(17px, $gris7, 22px);
+              text-decoration: underline;
+              padding-left:60px;
+            }
+            a[href*="/fotogaleria/"] {
+              background: url('../images/foto_p.png') no-repeat 20px 4px;
+            }
+            a[href*="/video/"] {
+              background: url('../images/video_p.png') no-repeat 20px 4px;
+            }
+            a[href*="/document/"] {
+              background: url('../images/adj2.png') no-repeat 20px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin not-rel() {
+    h3.field-label {
+      @include graphik-medium(33px, $gris3, 37px);
+      padding-bottom: 0;
+      margin-botttom: 0;
+      border-top: solid 1px $fons;
+      margin-top: 10px;
+      padding-top:10px;
+    }
+  .field-contingut-relacionat .field-collection-view {
+    .node__title a {
+      @include graphik-semibold(33px, $gris7, 37px);
+    }
+    .field-body {
+      @include public-roman(21px, $gris7, 26px);
+    }
+  }
+}
+
+
+@mixin etiquetes {
+  a {
+    @include public-roman(17px, $gris7, 22px);
+    text-decoration: underline;
+  }
+}
+
+/*etiquetes fotogalerias*/
+@mixin etiquetes-2 {
+  border-top: solid 1px $fons;
+  border-bottom: solid 1px $fons;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom:20px;
+  a {
+    @include public-roman(19px, $negre2, 26px);
+    text-decoration: underline;
+  }
+}
+
+
+@mixin portada-numero {
+  .field-portada-numero {
+    img {
+      border:5px solid $fons;
+    }
+  }
+}
+ 
+
 
 
 

@@ -36,7 +36,6 @@ if (!isset($pager_position)) {
         <?php if (isset($item['field_autoria']['und']['0']['value'])) { ?>
           <span class="field_slideshow-caption-text2"><?php print $item['field_autoria']['und']['0']['value']; ?> </span>   
   <?php } ?>   
-     
           </div>
         <?php endif; ?>
       </div>

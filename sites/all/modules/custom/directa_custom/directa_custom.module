@@ -32,6 +32,10 @@ function directa_custom_block_info() {
       'info' => t('Mes noticies node final'),
       'cache' => DRUPAL_CACHE_PER_ROLE,
     ),
+    'comptador_subscriptores' => array(
+      'info' => t('Comptador de Subscriptores'),
+      'cache' => DRUPAL_CACHE_PER_ROLE,
+    ),
   );
 }
 
@@ -44,7 +48,7 @@ function directa_custom_block_view($delta = '') {
   case 'openx_banner_lateralgran1':
     $block['subject'] = '';
     $block['content'] = <<<EOF
-      <script type='text/javascript'><!--<![CDATA[
+      <script type='text/javascript'>
          var m3_u = (location.protocol=='https:'?'https://directa.cat/openx/www/delivery/ajs.php':'http://directa.cat/openx/www/delivery/ajs.php');
          var m3_r = Math.floor(Math.random()*99999999999);
          if (!document.MAX_used) document.MAX_used = ',';
@@ -57,7 +61,8 @@ function directa_custom_block_view($delta = '') {
          if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
          if (document.context) document.write ("&context=" + escape(document.context));
          if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
-         document.write ("'><\/scr"+"ipt>");]]>--></script><noscript><a href='http://directa.cat/openx/www/delivery/ck.php?n=af0c3878&amp;cb=092340230' target='_blank'><img src='http://directa.cat/openx/www/delivery/avw.php?zoneid=8&amp;cb=84848345&amp;n=af0c3878' border='0' alt='' /></a></noscript>
+         document.write ("'><\/scr"+"ipt>");</script>
+         <noscript><a href='http://directa.cat/openx/www/delivery/ck.php?n=af0c3878&amp;cb=092340230' target='_blank'><img src='http://directa.cat/openx/www/delivery/avw.php?zoneid=8&amp;cb=84848345&amp;n=af0c3878' border='0' alt='' /></a></noscript>
 EOF;
     break;
 
@@ -177,6 +182,27 @@ EOF;
     }
     break;
 
+  case 'comptador_subscriptores':
+    $block['subject'] = '';
+    /***
+     * TODO aixo sha de fer mes eficient!
+     */
+    /** carreguem tots els usuaris en un array, nomes uid**/
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'user')
+      ->addMetaData('account', user_load(1));
+    $results = $query->execute();
+    /** reorrem el array user a user **/
+    $total_subscrites = 0;
+    foreach($results['user'] as $key => $user) {
+      /** carreguem tot lusuari i mirem si te el rol 8, subscripcio activa**/
+      if(array_key_exists('8', user_load($key)->roles)) {
+        $total_subscrites++;
+      }
+    }
+    $block['content'] = 'Som <span class="comptador">' . $total_subscrites . '</span> subscriptores. <div class="subs">Faltes tu!</div>';
+    break;
+
   }
   return $block;
 }
@@ -208,17 +234,54 @@ function directa_custom_form_profile2_edit_main_form_alter(&$form, &$form_state)
 
   // afegim la nostra funcio de submit
   $form['#submit'][] = 'directa_custom_user_submit';
-  dsm($form);
 }
 
 function directa_custom_user_submit($form, &$form_state) {
-  foreach($form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE] as $id => $item) {
-    dsm($item);
-  }
+  // si esta marcat enviar mail procedim
+  if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
+    // creem el missatge a guardar
+    $register = 'Correu electrònic enviat:' . "\n";
+    $register .= $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] . "\n\n";
+    $register .= $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'];
+    // el posem en el primer element buit, per si existeix
+    foreach($form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE] as $id => $item) {
+      if($item['value'] == '') {
+        $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['value'] = $register;
+        $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
+        break;
+      }
+    }
+    // si no existeix (tots plens) el creem
+    if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1] = array();
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['value'] = $register;
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['_weight'] = $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['_weight'] + 1;
+      $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
+    }
+
+    $params = array();
+    $params['body'] = "adsf";
+    $params['context'] = array();
+    $language = language_default();
+    $params = array(
+      '@url' => url('node/'),
+      '@title' => 'asdf',
+    );
+    $msg = drupal_mail('directa_custom', 'test', 'juli@projecteictineo.com', $language, $params, 'test@examplesdo.com', true);
+    //dsm($msg);
+
+  // borrem el congingut
   $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
-  $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] = '';
-  $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'] = '';
-  dsm($form_state);
+    $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] = '';
+    $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'] = '';
+  }
+}
+
+function directa_custom_mail($key, &$message, $params) {
+    $message['subject'] = t("@title event registration confirmation", $params);
+    $message['body'] = array();
+    $message['body'][] = t("Hello", $params);
+    $message['body'][] = t("Node has been created @title (@url).", $params);
 }
 
 

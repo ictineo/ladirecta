@@ -35,6 +35,8 @@ a {
 #header {
   margin-top:10px;
   padding-top:10px;
+  position: relative;
+  z-index: 102;
   @include header-shadow;
 }
 
@@ -42,64 +44,79 @@ a {
  * afecten a tot independentment de on estiguin!
  */
 // CAL COMENTAR CADA UN QUE ES!!
-#block-user-login {
-}
-#block-block-7,
-#block-block-4 {
-  @include bseccio;
-  background-image:url('../images/menu_arrow_down');
-  background-repeat:no-repeat;
-  background-position: 8px 8px;
-  height:auto;
-  background-color:$gris7;
-  text-align:right;
-  border-radius:5px;
-}
-#block-block-3 {
-  @include inicia(5px);
+
+/*CABECERA*/
+
+#header {
+  #block-block-7 { //Desplegable menu seccions
+    @include buto-seccions-m960();
+  }
+  #block-block-3 { //Inicia sessio presumiblemente login page not sure
+    .block-title {
+      display: none;
+    }
+    background-image:url('../images/menu_arrow_down');
+    background-repeat:no-repeat;
+    background-position: 8px 8px;
+    height:auto;
+    background-color:$gris7;
+    text-align:right;
+    border-radius:5px;
+    @include inicia(5px);
+  }
+  #block-block-4 { //Inicia sessió header
+    @include buto-inicia-m960(0px);
+  }
+
+  #block-block-2 { // xarxes socials 
+    //border-left:1px solid $gris2;
+    //border-right:1px solid $gris2;
+    .fb {
+      @include back;
+      background-image:url('../images/fb.png');
+    }
+    .tw {
+      @include back;
+      background-image:url('../images/tw.png');
+    }
+    .vi {
+      @include back;
+      background-image:url('../images/vi.png');
+    }
+  }
+  #block-views-exp-hemeroteca-page-1 {
+    @include buscador-m960;
+    border-left: 1px solid $fons;
+  }
+  .views-exposed-form #edit-search-api-views-fulltext-wrapper {
+    padding:0px;
+  }
+  //#block-block-4,  //inicia sessio
+  #secondary-menu { //meny usuario logueado automatico
+    @include bsessio;
+    a {
+      padding: 0;
+      background-color:#e5e5e5;
+      @include back;
+      background-image:url('../images/arrow_down');
+      content:"";
+      display:block;
+      width:auto;
+      background-position:85px 11px;
+      border-radius:5px;
+      height:auto;
+    }
+  }
+
+  #secondary-meny {
+    }
+
+  #block-block-1 {
+    @include subscriute-m960(2px);
+  }
 }
 
-#block-block-2 {
-  border-left:1px solid $gris2;
-  border-right:1px solid $gris2;
-  .fb {
-    @include back;
-      background-image:url('../images/fb.png');
-  }
-  .tw {
-    @include back;
-    background-image:url('../images/tw.png');
-  }
-  .vi {
-    @include back;
-    background-image:url('../images/vi.png');
-  }
-}
-#block-views-exp-hemeroteca-page-1 {
-  @include buscador;
-}
-.views-exposed-form #edit-search-api-views-fulltext-wrapper {
-  padding:0px;
-}
-#block-block-5,
-#secondary-menu {
-  @include bsessio;
-  a {
-    padding: 0;
-    background-color:#e5e5e5;
-    @include back;
-    background-image:url('../images/arrow_down');
-    content:"";
-    display:block;
-    width:auto;
-    background-position:85px 11px;
-    border-radius:5px;
-    height:auto;
-  }
-}
-#block-block-1 {
-  @include subscriute(5px);
-}
+
 
 /*MENU*/
 #main-menu {
@@ -109,6 +126,7 @@ ul.nice-menu {
   border-top: 0;
 }
 // que es això? cal comentar que es
+// aixó és quelcom que fa que els tags es vegin amarillo fosforito, Joan sap l'origen (IBR)
 .mark {
   color:none;
 }

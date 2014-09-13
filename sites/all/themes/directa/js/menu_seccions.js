@@ -7,15 +7,17 @@ Drupal.behaviors.directa_menu_superior = {
       /* fem servir una clase pel toggle i saber lestat actual del menu */
       if (!jQuery('#navigation').hasClass('active')) {
         jQuery('#navigation').addClass('active');
-        jQuery('#navigation .block-nice-menus').animate({ 
+        jQuery('#navigation').animate({ 
           'height': Drupal.behaviors.directa_menu_superior_height
-        });
+        }, function() {jQuery(this).css('overflow', 'visible');});
       } else {
         /* emagantzemem el valor de left per recuperarlo per amegar */
-        jQuery('#navigation').removeClass('active');
-        jQuery('#navigation .block-nice-menus').animate({ 
+        jQuery('#navigation').animate({ 
           'height': '0px'
-        })
+        }, 400, function() {
+          jQuery(this).css('overflow', 'hidden');
+          jQuery('#navigation').removeClass('active');
+        });
       }
     });
     /* si no hi ha actiu cap terme de taxonomia posem el h2 com a selector **/

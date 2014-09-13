@@ -23,7 +23,7 @@
  * DEFINICIONS
  * REVISAR
  */
-
+.page-fotogaleria,
 .not-front.node-type-fotogaleria {
   #content {
     $zen-column-count:9;
@@ -43,32 +43,97 @@
     .field-data {
       @include zen-grid-item(3,3);
     }
-    .field-fotografies {
+
+    .field-fotografies  {
       @include zen-clear();
       @include zen-grid-item(9,1);
-      .field-slideshow-caption-text {
+      .field-slideshow {
+        @include zen-grid-item(7,2);
+      }
+      .field-slideshow-caption {
         @include public-roman(21px, $gris7,30px);
       }
+      #field-slideshow-1-controls {
+        @include zen-grid-container();
+        a.prev {
+          @include zen-grid-item(2,1,left);
+          background-image:url('../images/prev.png');
+          @include background(15px,30px);
+          margin-top:20%;
+          &:hover {
+            background-position:-17px 0;
+          }
+        }
+        a.next {
+          @include zen-grid-item(2,1,right);
+          background-image:url('../images/next.png');
+          @include background(15px,30px);
+          margin-top:20%;
+          &:hover {
+            background-position: -18px 0;
+          }
+        }
+      }
+
       .item-list ul {
         list-style: none;
       }
       margin-bottom: 50px;
+      @include zen-clear(both);
+    
+    }
+    .easy_social_box {
+      @include zen-clear();
+      $zen-column-count: 9;
+      $zen-gutter-width: 10px;
+      @include zen-grid-container();
+      @include zen-grid-item(1,1,left);
     }
     .field-body { 
-      @include zen-clear();
       @include zen-grid-item(8,1,right);
     }
     .field-etiquetes {
-      @include zen-clear();
-      @include zen-grid-item(8,1,right);
+      @include zen-clear(both);
+      @include zen-grid-item(8,2);
+      @include etiquetes-2;
+      margin-bottom:100px;
     }
-    .easy_social_box {
-      @include zen-grid-item(1,1,left);
-    }
-    #block-views-fotogaleria-block {
-      @include zen-clear(left);
-      @include zen-grid-item(6,1,left);
-      
+    #block-views-fotogaleria-block  {
+      @include zen-grid-item(6,1);
+      $zen-column-count: 3;
+      $zen-gutter-width: 10px;
+      border-right: 1px solid $fons;
+      padding-right:20px;
+      @include zen-grid-container();
+      h2.block-title {
+        @include zen-grid-item(3,1);
+        margin-bottom:10px;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        $zen-column-count: 3;
+        $zen-gutter-width: 10px;
+        @include zen-grid-container();
+        li {
+          padding-bottom: 10px;
+        }
+        li.views-row-first {
+          display: none;
+        }
+        li:nth-child(3n) {
+          @include zen-grid-item(1,3);
+        }
+        li:nth-child(3n+1) {
+          @include zen-grid-item(1,1);
+
+        }
+        li:nth-child(3n+2) {
+          @include zen-grid-item(1,2);
+          @include zen-clear();
+        }
+      }
+
     }
   }
 
@@ -81,18 +146,32 @@
 
   #page-title {
     @include titulo-fotogaleria;
+    margin-top: 10px;
+    margin-bottom:10px;
+
   }
   .field-body {
     @include public-roman(23px,$gris7,32px);
+    p.first-of-type {
+      margin-top: 0;
     }
+  }
   #block-views-fotogaleria-block {
     .block-title {
       @include graphik-medium(26px,$gris7,30px);
     }
     .views-field-title a {
-      @include graphik-semibold(21px, $gris7,24px);
+      @include graphik-semibold(18px, $gris7,22px); /*variacio disseny*/
     }
     .view-footer {
+      @include graphik-semibold(21px,$gris7,24px);
+      background-color: $fons;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      p {
+        margin: 0px;
+      }
     }
   }
 }
@@ -106,7 +185,7 @@ body.section-fotogaleria.page-views {
    * view del peu d'altres fotogaleries 
    */
   #block-views-fotogaleria-block {
-    @include block-totes-fotogaleries();
+    //@include block-totes-fotogaleries();
   }
 }
 

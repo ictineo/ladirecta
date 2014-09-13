@@ -33,11 +33,10 @@ if($view_mode == 'full') {
 
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
-      <?php if (!$page && $title): ?>
+       <?php if (!$page && $title): ?>
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
@@ -55,15 +54,49 @@ if($view_mode == 'full') {
     </header>
   <?php endif; ?>
   <?php if($view_mode == 'full'): ?>
-    <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-    <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div>
-  <?php endif; ?>
-  <?php
-    // We hide the comments and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    print render($content);
-  ?>
+    <?php
+      // We hide the comments and links now so that we can render them later.
+      //print render($content);
+      print(render($content['field_subtitol']));
+      print(render($content['field_fotografies']));
+?>
+      <div id="col-meta">
+        <div id="meta-info">
+<?php
+          print(render($content['field_autor']));
+          print(render($content['field_data']));
+?>
+        </div>
+      </div>
+    <div id="nav-links-wrapper">
+      <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
+      <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div>
+    </div>
+<?php
+      print(render($content['body']));
+  print(render($content['easy_social_1'])); 
+      print(render($content['field_continguts_relacionats']));
+    ?>
+    
+
+      <div id="tags-wrapper">
+        <div id="tags-etiquetes-wrapper">
+          <?php print render($content['field_etiquetes']); ?>
+        </div>
+        <div id="tags-territori-wrapper">
+          <?php print render($content['field_territori']); ?>
+        </div>
+      </div>
+    <?php
+        print(render($content['field_contingut_relacionat']));
+    ?>
+  <?php else: ?>
+<?php
+      hide($content['links']);
+      hide($content['comments']);
+      print(render($content));
+endif;
+?>
 
   <?php print render($content['links']); ?>
 

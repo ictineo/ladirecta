@@ -8,25 +8,288 @@
  * REVISAR!!
  */
 
-$menu_w: 80%;
-$menu_tiger_w: 100px;
+$menu_w: 1050px;
+$menu_tiger_w: 50px;
 /*MENU LATERAL*/
 #interior {
-  margin-top:$head-height;
-  background-color:$gris7;
-  #menu-tigger {
+  width: $menu_w;
+  position: fixed;
+  left: -$menu_w;
+  top: 80px;
+  background-color: white;
+  z-index: 100;
+  background-color: $gris9;
+  padding: 32px 0;
+  @include box-shadow($gris6 0px 0px 10px 4px inset);
+  /** layout a 3 columnes **/
+  .region-interior {
+    $zen-column-count:  3;
+    $zen-gutter-width:  20px;
+
+    width: 1024px;
+    @include zen-grid-container();
+    #block-views-agenda-llista-block-1 {
+      @include zen-grid-item(1,1);
+      #menu-agenda {
+      }
+    }
+    #block-views-cd-serveis-block-1 {
+      @include zen-grid-item(1,2);
+    }
+    #block-views-linies-de-recerca-block {
+      @include zen-grid-item(1,3);
+    }
   }
+ #menu-tigger {
+    cursor: pointer;
+    width: $menu_tiger_w;
+    height: 300px;
+    position: absolute;
+    right: -$menu_tiger_w;
+    background-image: url('../images/menu-tigger.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  .menu-close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    background-image: url('../images/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -402px -39px;
+  }
+  #menu-close-top {
+    top: 8px;
+    right: 8px;
+  }
+  #menu-close-bottom {
+    right: 8px;
+    bottom: 8px;
+  }
+
   #block-views-agenda-llista-block-1,
-  #block-views-cd-noticias-block-1,
+  #block-views-cd-serveis-block-1,
   #block-views-linies-de-recerca-block {
-    @include menu-lateral;
+    border-left: 6px solid $gris9;
+    padding: 8px;
+    background-color: white;
+    .block-title {
+      @include graphik-medium(26px, $gris2, 31px);
+      background-repeat: no-repeat;
+      background-position: -30px 30%;// posicionament nefest, no estan clares les mides
+      padding-left: 42px;
+      border-bottom: 2px solid $gris6;
+      vertical-align: top;
+      line-height: 45px;
+      margin-bottom: 12px;
+    }
   }
-  @include block-mlateral();
+
+  /** columna 1 agenda **/
+  #block-views-agenda-llista-block-1 {
+    #menu-agenda > div {
+      background: none repeat scroll 0 0 $gris6;
+      height: 45px;
+      margin-bottom: 4px;
+      padding-top: 7px;
+      width: 100%;
+      .daysup {
+        cursor: pointer;
+        background: none repeat scroll 0 0 white;
+        font-family: 'graphiksemibold';
+        font-size: 16px;
+        color: $gris2;
+        border-radius: 60px;
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 7px;
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        vertical-align: center;
+        text-align: center;
+        &.past {
+          color: $gris4;
+        }
+        &.today {
+          background-color: $gris7;
+          color: white;
+        }
+      }
+    }
+    .sotamenu {
+      margin-top: 16px;
+      .dia-block {
+        $zen-column-count: 4;
+        @include zen-grid-container();
+        display: none;
+        width: 100%;
+        .data {
+          @include zen-grid-item(1,1);
+          padding-left: 0px;
+          .num {
+            width: 60px;
+            height: 60px;
+            background-color: $gris6;
+            border-radius: 120px;
+            line-height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: 'graphiksemibold';
+            font-size: 24px;
+            color: $gris7;
+            margin: 0 12px 12px 12px;
+            display: block;
+            overflow: hidden;
+            text-transform: uppercase;
+          }
+        }
+        .events {
+          @include zen-grid-item(3,2);
+          min-height: 100px;
+          padding-left: 8px;
+          border-left: 1px solid $gris7;
+          .no-events {
+            font-family: 'graphiksemibold';
+            color: $gris5;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          .event {
+            border-top: 2px solid $gris6;
+            width: 90%;
+            margin-top: 8px;
+            padding-top: 8px;
+            .title a {
+              @include graphik-semibold(18px, $gris7, 18px);
+            }
+            .field-adreca {
+              font-family: 'Arial', sans-serif;
+              font-size: 16px;
+              line-height: 19px;
+              color: $gris2;
+              font-style: italic;
+            }
+            .resum .field-body {
+              font-family: 'Arial', sans-serif;
+              font-weight: bold;
+              font-size: 17px;
+              line-height: 21px;
+              color: $gris2;
+            }
+            & > a {
+              @include public-roman(19px, $negre2, 19px);
+            }
+          }
+          .event:first-child {
+            border-top: 0px none;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+        }
+      }
+      .dia-block.today .data .num {
+        font-size: 18px;
+      }
+    }
+  }
+  #block-views-cd-serveis-block-1 {
+    .view-header {
+      .views-row {
+        .views-field-title {
+          display: none;
+        }
+        @include graphik-medium(14px, $gris2, 17px);
+        .field-body {
+          min-height: 106px;
+          p {
+            margin: 0px;
+          }
+        }
+      }
+    }
+    .view-cd-serveis.view-display-id-block_1 > .view-content {
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid $gris6;
+      @include box-shadow($gris4 0px 0px 4px 1px );
+      .views-row > div {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+      .views-row {
+        .views-field-title{
+          padding: 0px;
+          a {
+            @include graphik-semibold(18px, $gris7, 22px);
+          }
+        }
+        .field-oferta {
+          @include graphik-medium(14px, $gris7, 17px);
+        }
+        .field-tipus-de-servei a {
+          padding: 2px 14px;
+          @include graphik-medium(11px, $gris3, 15px);
+          background-color: $fons_rosa;
+        }
+        .views-field-view-node a {
+          @include graphik-medium(13px, $gris7, 17px);
+          text-decoration: underline;
+        }
+      }
+    }
+    .view-footer .views-row {
+      .views-field-title a {
+        @include graphik-semibold(18px, $gris7, 22px);
+        margin-top: 8px;
+        margin-bottom: 4px;
+        display: inline-block;
+      }
+      .field-oferta {
+        @include graphik-medium(12px, $gris2, 15px);
+      }
+    }
+  }
+
+  #block-views-linies-de-recerca-block {
+    .view-header p {
+      @include graphik-medium(14px, $gris2, 17px);
+      margin: 0px;
+    }
+    .view-content .views-row {
+      $zen-column-count: 8;
+      @include zen-grid-container();
+      border-bottom: 1px solid $gris6;
+      .views-field-title {
+        @include zen-grid-item(7,1);
+        a {
+          @include graphik-bold(16px, $gris2, 20px);
+          text-decoration: none;
+        }
+      }
+      .views-field-comment-count {
+        @include zen-clear();
+        @include zen-grid-item(7,1);
+        line-height: 16px;
+        span {
+          padding-left: 30px;
+          @include graphik-medium(12px, $gris2, 16px);
+        }
+      }
+      .views-field-view-node {
+        @include zen-grid-item(2,7);
+      }
+    }
+  }
+
   #block-views-agenda-llista-block-1 .block-title {
     background-image: url('../images/agenda.png');
   }
   #block-views-cd-noticias-block-1 .block-title {
-    background-image: url('../images/agenda.png');
+  }
+  #block-views-linies-de-recerca-block .block-title {
   }
   #block-views-linies-de-recerca-block {
     .block-title {
@@ -57,52 +320,5 @@ $menu_tiger_w: 100px;
   #block-views-cd-serveis-block-1 .block-title {
     background-image: url('../images/agenda.png'); 
   }
-  width: $menu_w;
-  position: fixed;
-  left: -$menu_w;
-  top: 0px;
-  background-color: white;
-  z-index: 10;
-  #menu-tigger {
-    cursor: pointer;
-    width: $menu_tiger_w;
-    height: 300px;
-    background-color: pink;
-    position: absolute;
-    right: -$menu_tiger_w;
-  }
-  /** Calendari menu lateral **/
-  #cal-line {
-    .dia-block {
-      display: none;
-    }
-  }
-  /* Agenda Lateral menu */
-  .block.block-views {
-    display: inline-block;
-    float: left;
-    width: 310px;
-  }
-  #menu-agenda {
-    width: 290px;
-  }
-  #menu-agenda > div {
-    background: none repeat scroll 0 0 rgb(220, 220, 200);
-    height: 35px;
-    margin-bottom: 4px;
-    padding-top: 9px;
-    width: 100%;
-  }
-  .daysup {
-    background: none repeat scroll 0 0 grey;
-    border-radius: 60px;
-    display: inline;
-    margin-top: 0;
-    padding: 8px;
-  }
-  #esdeveniment-agenda-node-form {
-    .vertical-tabs {
-       display:none;
-     }
-  }
+
 }

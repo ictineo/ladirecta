@@ -130,3 +130,34 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function directa_preprocess_page(&$vars, $hook) {
+  if (isset($vars['node']->type)) {
+    // If the content type's machine name is "my_machine_name" the file
+    // name will be "page--my-machine-name.tpl.php".
+    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+  }
+}
+/* reescribim la funcio de render del field collection **/
+/** volem posar els valors de continguts relacionats com a classe*/
+//function directa_field_collection_view($variables) {
+  //$element = $variables['element'];
+  //dsm($element);
+  //$field_col = array_values(entity_load('field_collection_item', array(array_keys($element['entity']['field_collection_item'])[0])));
+  //dsm(array(array_keys($element['entity']['field_collection_item'])[0]));
+  //if(!empty($field_col->field_promogut_portada)) {
+    //$destacar_class = "no-portada";
+    //if($field_col->field_promogut_portada[LANGUAGE_NONE][0]['value'] == 1) {
+      //$destacar_class = "portada";
+    //}
+    //$element['#attributes']['class'][] = $destacar_class;
+  //}
+  //if(!empty($field_col->field_destacar)) {
+    //$destacar_class = "no-destacat";
+    //if($field_col->field_destacar[LANGUAGE_NONE][0]['value'] == 1) {
+      //$destacar_class = "destacat";
+    //}
+    //$element['#attributes']['class'][] = $destacar_class;
+  //}
+  //return '<div' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</div>';
+//}
