@@ -119,6 +119,9 @@ $.fn.cycle.transitions.carousel = {
         //     // fluid; don't size the container
         // }
 
+        // quiron ictineo
+        // apliquem patch
+        // https://github.com/malsup/cycle2/issues/107
         offset = ( opts.carouselOffset || 0 );
         if ( opts.allowWrap !== false ) {
             if ( opts.carouselSlideDimension ) {
@@ -127,10 +130,18 @@ $.fn.cycle.transitions.carousel = {
             else {
                 // calculate offset based on actual slide dimensions
                 tmp = opts._carouselWrap.children();
-                for (var j=0; j < (opts.slideCount + opts.currSlide); j++) {
+                //for (var j=0; j < (opts.slideCount + opts.currSlide); j++) {
+                for (var j=0; j < (opts.currSlide); j++) {
                     offset -= $(tmp[j])[vert?'outerHeight':'outerWidth'](true);
                 }
             }
+        }
+        else {
+          // calculate offset based on actual slide dimensions
+          tmp = opts._carouselWrap.children();
+          for (var j=0; j < (opts.currSlide); j++) {
+             offset -= $(tmp[j])[vert?'outerHeight':'outerWidth'](true);
+          }
         }
 
         opts._carouselWrap.css( vert ? 'top' : 'left', offset );

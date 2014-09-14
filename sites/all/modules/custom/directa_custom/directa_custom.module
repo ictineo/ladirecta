@@ -1,4 +1,100 @@
-<?
+<?php
+/**
+ * Implements hook_form_alter().
+ * Implementation of hook_form_profile2_edif_PROFILE_NAME_form_alter()
+ */
+function directa_custom_form_profile2_edit_main_form_alter(&$form, &$form_state) {
+  // carregeum la taxonomia i els seus termes
+  $v = taxonomy_vocabulary_machine_name_load('plantilles_mail_subscripcions');
+  $terms = taxonomy_get_tree($v->vid);
+  // preperem la concatenacio de contingut
+  $output = "<label>Plantilles</label>";
+  $output .= '<div id="plantilles-wrapper">';
+  foreach($terms as $count => $term) {
+    $output .= '<div class="plantilla-wrapper '. $count . '">';
+    $output .= '  <div class="plantilla-title">' . $term->name . '</div>';
+    $output .= '  <div class="plantilla-cont" >' . $term->description . '</div>';
+    $output .= "</div>";
+  }
+  $output .= "</div>";
+
+  // ho afegim a sota del email body
+  $form['profile_main']['field_email_body'][LANGUAGE_NONE]['#suffix'] .= $output;
+
+  // carreguem el js a mida
+  drupal_add_js(drupal_get_path('module', 'directa_custom') . '/js/custom_user_profile_edit.js');
+
+  // afegim la nostra funcio de submit
+  $form['#submit'][] = 'directa_custom_user_submit';
+}
+
+function directa_custom_user_submit($form, &$form_state) {
+  // si esta marcat enviar mail procedim
+  if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
+    // creem el missatge a guardar
+    $register = 'Correu electrònic enviat:' . "\n";
+    $register .= $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] . "\n\n";
+    $register .= $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'];
+    // el posem en el primer element buit, per si existeix
+    foreach($form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE] as $id => $item) {
+      if($item['value'] == '') {
+        $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['value'] = $register;
+        $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
+        break;
+      }
+    }
+    // si no existeix (tots plens) el creem
+    if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1] = array();
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['value'] = $register;
+      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['_weight'] = $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['_weight'] + 1;
+      $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
+    }
+
+    $params = array();
+    $params['body'] = "adsf";
+    $params['context'] = array();
+    $language = language_default();
+    $params = array(
+      '@url' => url('node/'),
+      '@title' => 'asdf',
+    );
+    $msg = drupal_mail('directa_custom', 'test', 'juli@projecteictineo.com', $language, $params, 'test@examplesdo.com', true);
+    //dsm($msg);
+
+  // borrem el congingut
+  $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
+    $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] = '';
+    $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'] = '';
+  }
+}
+
+function directa_custom_mail($key, &$message, $params) {
+    $message['subject'] = t("@title event registration confirmation", $params);
+    $message['body'] = array();
+    $message['body'][] = t("Hello", $params);
+    $message['body'][] = t("Node has been created @title (@url).", $params);
+}
+
+function directa_form_alter(&$form, &$form_state, $form_id){
+  if($form_id =="views_exposed_form"){
+    if($form['#id'] ==  "views-exposed-form-hemeroteca-page") {
+      // print $form array on the top of the page
+      if (isset($form['search_api_views_fulltext'])) {
+           $form['search_api_views_fulltext']['#attributes'] = array('placeholder' => array(t('Escriu la teva recerca')));
+      }  
+      $form['submit']['#value'] = t('Adequar la recerca');
+      //$form = array('field_data_w' => array(
+        //'#type' => 'fieldset',
+      //)) + $form;
+      //$form['field_data_w']['field_data'] = $form['field_data'];
+      //$form['field_data_w']['field_data_1'] = $form['field_data_1'];
+      //unset($form['field_data']);
+      //unset($form['field_data_1']);
+    }
+  }
+}
+
 /**
  * Implements hook_block_info().
  */
@@ -164,12 +260,41 @@ EOF;
       $exclude_nid .= $node->nid;
     }
     $block['subject'] = '';
-    $block['content'] = views_embed_view('portada_seccions', 'block', $exclude_nid);
-    $block['content'] .= views_embed_view('portada_seccions', 'block_1', $exclude_nid);
-    $block['content'] .= views_embed_view('portada_seccions', 'block_2', $exclude_nid);
-    $block['content'] .= views_embed_view('portada_seccions', 'block_3', $exclude_nid);
-    $block['content'] .= views_embed_view('portada_seccions', 'block_4', $exclude_nid);
-    $block['content'] .= views_embed_view('portada_seccions', 'block_5', $exclude_nid);
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] = $wrapped_section;
+
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block_1', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block_1', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] .= $wrapped_section;
+
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block_2', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block_2', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] .= $wrapped_section;
+
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block_3', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block_3', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] .= $wrapped_section;
+
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block_4', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block_4', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] .= $wrapped_section;
+
+    $wrapped_section  = '<div id="seccio1-wrapper">';
+    $wrapped_section .=   views_embed_view('portada_seccions', 'block_5', $exclude_nid);
+    $wrapped_section .=   views_embed_view('clon_de_portada_seccions_llistat_', 'block_5', $exclude_nid);
+    $wrapped_section .= '</div>';
+    $block['content'] .= $wrapped_section;
 
     break;
 
@@ -205,83 +330,6 @@ EOF;
 
   }
   return $block;
-}
-
-/**
- * Implements hook_form_alter().
- * Implementation of hook_form_profile2_edif_PROFILE_NAME_form_alter()
- */
-function directa_custom_form_profile2_edit_main_form_alter(&$form, &$form_state) {
-  // carregeum la taxonomia i els seus termes
-  $v = taxonomy_vocabulary_machine_name_load('plantilles_mail_subscripcions');
-  $terms = taxonomy_get_tree($v->vid);
-  // preperem la concatenacio de contingut
-  $output = "<label>Plantilles</label>";
-  $output .= '<div id="plantilles-wrapper">';
-  foreach($terms as $count => $term) {
-    $output .= '<div class="plantilla-wrapper '. $count . '">';
-    $output .= '  <div class="plantilla-title">' . $term->name . '</div>';
-    $output .= '  <div class="plantilla-cont" >' . $term->description . '</div>';
-    $output .= "</div>";
-  }
-  $output .= "</div>";
-
-  // ho afegim a sota del email body
-  $form['profile_main']['field_email_body'][LANGUAGE_NONE]['#suffix'] .= $output;
-
-  // carreguem el js a mida
-  drupal_add_js(drupal_get_path('module', 'directa_custom') . '/js/custom_user_profile_edit.js');
-
-  // afegim la nostra funcio de submit
-  $form['#submit'][] = 'directa_custom_user_submit';
-}
-
-function directa_custom_user_submit($form, &$form_state) {
-  // si esta marcat enviar mail procedim
-  if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
-    // creem el missatge a guardar
-    $register = 'Correu electrònic enviat:' . "\n";
-    $register .= $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] . "\n\n";
-    $register .= $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'];
-    // el posem en el primer element buit, per si existeix
-    foreach($form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE] as $id => $item) {
-      if($item['value'] == '') {
-        $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['value'] = $register;
-        $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
-        break;
-      }
-    }
-    // si no existeix (tots plens) el creem
-    if($form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] != NULL) {
-      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1] = array();
-      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['value'] = $register;
-      $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id+1]['_weight'] = $form_state['values']['profile_main']['field_missatge'][LANGUAGE_NONE][$id]['_weight'] + 1;
-      $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
-    }
-
-    $params = array();
-    $params['body'] = "adsf";
-    $params['context'] = array();
-    $language = language_default();
-    $params = array(
-      '@url' => url('node/'),
-      '@title' => 'asdf',
-    );
-    $msg = drupal_mail('directa_custom', 'test', 'juli@projecteictineo.com', $language, $params, 'test@examplesdo.com', true);
-    //dsm($msg);
-
-  // borrem el congingut
-  $form_state['values']['profile_main']['field_email'][LANGUAGE_NONE][0]['value'] = NULL;
-    $form_state['values']['profile_main']['field_email_subject'][LANGUAGE_NONE][0]['value'] = '';
-    $form_state['values']['profile_main']['field_email_body'][LANGUAGE_NONE][0]['value'] = '';
-  }
-}
-
-function directa_custom_mail($key, &$message, $params) {
-    $message['subject'] = t("@title event registration confirmation", $params);
-    $message['body'] = array();
-    $message['body'][] = t("Hello", $params);
-    $message['body'][] = t("Node has been created @title (@url).", $params);
 }
 
 

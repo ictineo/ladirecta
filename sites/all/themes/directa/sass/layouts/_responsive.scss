@@ -185,10 +185,17 @@ $zen-auto-include-item-base: false;
     }
     #secondary-menu { //menu usuario logueado automatico
       @include zen-grid-item(3,11);
+      @include zen-nested-container();
+      ul {
+        @include zen-grid-item(20,2);
+      }
     }
     //Aquest contenidor te els blcos de seccions, xxss, inici de sessió, subscrib i cercador
     .region-header  {
       @include zen-clear(none);
+      $zen-column-count: 23;
+      $zen-gutter-width: 20px;
+      $zen-auto-include-item-base: true;
       @include zen-grid-item(20,3);
       $zen-column-count:20;
       $zen-gutter-width:20px;
@@ -202,7 +209,7 @@ $zen-auto-include-item-base: false;
       
       /*Inicia sessió*/
       #block-block-4 { //Inicia sessió
-        @include zen-grid-item(2,10);
+        @include zen-grid-item(3,9);
       }
       #block-block-1 { //Subscriu-t'hi
         @include zen-grid-item(3,12);
@@ -213,7 +220,7 @@ $zen-auto-include-item-base: false;
         display: none;
       }
       #block-views-exp-hemeroteca-page-1 { //Caixa cercador
-        @include zen-grid-item(5,1,right);
+        @include zen-grid-item(6,1,right);
         @include zen-nested-container();
         #edit-search-api-views-fulltext-wrapper {
           @include zen-grid-item(19,1,right);
@@ -227,7 +234,7 @@ $zen-auto-include-item-base: false;
         display: none;
       }
       #block-block-2 {  //xarxes socials
-          @include zen-grid-item(2,8);
+          @include zen-grid-item(2,7);
           $zen-column-count: 3;
           $zen-gutter-width: 5px;
           $zen-auto-include-item-base: true;
@@ -243,6 +250,7 @@ $zen-auto-include-item-base: false;
           }
       }
     }
+
   }
 
   /** això és per TOT el contingut? sino s'ha d'acotar **/

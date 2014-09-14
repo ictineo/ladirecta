@@ -59,26 +59,24 @@ if($view_mode == 'full') {
       //print render($content);
       print(render($content['field_subtitol']));
       print(render($content['field_fotografies']));
-?>
+      ?>
       <div id="col-meta">
         <div id="meta-info">
-<?php
-          print(render($content['field_autor']));
-          print(render($content['field_data']));
-?>
+          <?php
+            print(render($content['field_autor']));
+            print(render($content['field_data']));
+          ?>
         </div>
       </div>
     <div id="nav-links-wrapper">
       <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
       <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div>
     </div>
-<?php
+    <?php
       print(render($content['body']));
-  print(render($content['easy_social_1'])); 
+      print(render($content['easy_social_1'])); 
       print(render($content['field_continguts_relacionats']));
     ?>
-    
-
       <div id="tags-wrapper">
         <div id="tags-etiquetes-wrapper">
           <?php print render($content['field_etiquetes']); ?>
@@ -90,12 +88,12 @@ if($view_mode == 'full') {
     <?php
         print(render($content['field_contingut_relacionat']));
     ?>
-  <?php else: ?>
-<?php
-      hide($content['links']);
-      hide($content['comments']);
-      print(render($content));
-endif;
+    <?php else: ?>
+      <?php
+        hide($content['links']);
+        hide($content['comments']);
+        print(render($content));
+      endif;
 ?>
 
   <?php print render($content['links']); ?>

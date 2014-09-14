@@ -1,6 +1,6 @@
 
 // de on es aquest selector??
-.node-esdeveniment_agenda-form{
+/*.node-esdeveniment_agenda-form{
   .form-item-title {
     .form-text.required {
       height: 68px;
@@ -21,39 +21,51 @@
   .date-float {
     display:none;
   }
-}
+}*/
 
 // Afegir nou esdeveniment agenda
 // En aquesta pagina tambe hi ha el calendari en
 // carrousel
 .page-node-add-esdeveniment-agenda {
   #main #content {
-    //@include zen-grid-item(4,1);
     form > div {
       $zen-column-count: 3;
-      $zen-gutter-width:60px;
+      $zen-gutter-width:10px;
+      $zen-auto-include-item-base: true;
       @include zen-grid-container();
-      .form-type-textfield.form-item-title {
+      .group-header {//form-type-textfield.form-item-title {
         @include zen-grid-item(3,1);
       }
-      #edit-field-adreca-electronica {
+      .group-left {
         @include zen-clear();
         @include zen-grid-item(1,1);
       }
-      #edit-field-data-ag {
-        @include zen-grid-item(2,2);
+      .group-middle {
+        @include zen-grid-item(1,2);
+        @include zen-nested-container();
+        legend {
+          @include zen-grid-item(1,1);
+        }
+        .fieldset-wrapper {
+          @include zen-grid-item(2,2);
+        }
       }
-      #edit-field-adreca {
-        @include zen-clear();
+      .group-right {
+        @include zen-grid-item(1,3);
+        .form-item.form-type-hierarchical-select {
+          $zen-column-count: 3;
+          @include zen-grid-container();
+          label {
+            @include zen-grid-item(1,1);
+          }
+          .hierarchical-select-wrapper {
+            @include zen-grid-item(2,2);
+          }
+        }
       }
-      #edit-field-territori {
+      .group-footer {
         @include zen-clear();
-      }
-      #edit-body {
-        @include zen-clear();
-      }
-      #edit-field-adjuntar-imatge {
-        @include zen-clear();
+        @include zen-grid-item(3,1);
       }
     }
     .view-agenda-llista {
@@ -74,6 +86,135 @@
         padding-left: 40px;
         background: url('../images/agenda.png') no-repeat -30px 0;
       }
+      form#esdeveniment-agenda-node-form {
+        textarea,
+        input {
+          background-color: $fons_form;
+          padding-left: 10px;
+          @include graphik-medium (15px,$form, 21px);
+          border: 1px solid;
+        }
+        .group-header {
+          .form-item-title {
+            padding-left: 0;
+            padding-right: 0;
+            input {
+              @include graphik-medium (33px,$form, 37px);
+            }
+          }
+        }
+        .group-left {
+          margin-top: -17px;
+        }
+        .group-middle {
+          margin-top: 0px;
+          #edit-field-data-ag {
+            fieldset.form-wrapper {
+              border: none 0px;
+              margin-left: 0px;
+              padding-left: 0px;
+              legend {
+                text-align: center;
+                padding-right: 16px;
+                margin-top: 20px;
+                .fieldset-legend {
+                  @include graphik-medium(17px, #888888, 19px);
+                }
+              }
+              .date-float {
+                display: none;
+              }
+              .date-no-float.container-inline-date {
+                .form-item {
+                  .date-padding {
+                    padding: 0;
+                    .form-item {
+                      .description {
+                        display: none;
+                      }
+                    }
+                    .form-item.form-item-field-data-ag-und-0-value-date {
+                      margin-bottom: 17px;
+                      margin-top: -5px;
+                    }
+                  }
+                }
+              }
+              date-no-float.start-date-wrapper {
+              }
+            }
+          }
+        }
+        .group-right {
+          margin-top: -17px;
+          #edit-field-municipi {
+            .form-item {
+              label {
+                @include graphik-medium(17px, #888888, 19px);
+                margin-top: 25px;
+              }
+              .hierarchical-select-wrapper {
+                .hierarchical-select {
+                  .selects {
+                    .chosen-container.chosen-container-single {
+                      a.chosen-single {
+                        width: 65% !important;
+                      }
+                      .chosen-drop {
+                        width: 65% !important;
+                      }
+                    }
+                    .form-select {
+                      //width: 65% !important;
+                    }
+                  }
+                }
+                .nojs {
+                  .help-text {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .group-footer {
+          margin-top: -20px;
+          #edit-body {
+            .form-item {
+              .form-textarea-wrapper.resizable-textarea {
+                .grippie {
+                  display: none;
+                }
+              }
+            }
+            fieldset {
+              display: none;
+            }
+            .description {
+              display: none;
+            }
+          }
+          #edit-field-adjuntar-imatge {
+            .form-item {
+              label {
+                @include graphik-medium(17px, #888888, 19px);
+                float: left;
+              }
+            }
+          }
+        }
+        #edit-actions {
+          bottom: 50px;
+          display: inline-block;
+          position: relative;
+          float: right;
+          input#edit-submit {
+            background-color: $vermell;
+            @include public-bold(20px, $blanc, 26px);
+          }
+        }
+      }
       .view-agenda-llista {
         .view-content {
           #cal-line-next.cal-line-pager {
@@ -90,8 +231,10 @@
             display: block;
             width: 24px;
             height: 24px;
+            //margin-top: 256px;
           }
           #cal-line.cycle-slideshow {
+            margin-top: -110px;
             .cycle-carousel-wrap {
               position: relative !important;
             }
@@ -101,7 +244,7 @@
               .data-avui {
                 background: none repeat scroll 0 0 $gris7;
                 border-radius: 95px;
-                padding: 6px;
+                padding: 1px;
                 display: block;
                 height: 165px;
                 width: 165px;
@@ -113,7 +256,7 @@
                 }
                 .num {
                   @include graphik-regular(53px,$blanc,21px);
-                  margin-top: 16px;
+                  margin-top: 50px;
                 }
                 .llet {
                   @include graphik-regular(16px,$blanc,21px);
@@ -124,13 +267,16 @@
               .data-avui {
                 border: 5px solid $gris7;
                 background-color: $blanc;
+                border-radius: 90px;
+                height: 160px;
+                width: 160px;
                 .num,
                 .llet {
                   color: $gris7;
                 }
                 .num {
                   @include graphik-regular(53px,$gris7,21px);
-                  margin-top: 16px;
+                  margin-top: 50px;
                 }
                 .llet {
                   @include graphik-regular(16px,$gris7,21px);
@@ -142,14 +288,35 @@
                 display: inline-block;
                 margin-left: 10px;
                 width: 100%;
-                //data {
-                //  @include public-bold(16px,$gris4,16px);
-                //  font-style: italic;
-                //  }
+                &:nth-child(even) {
+                  background-color: $gris9;
+                  border-top: 5px solid $blanc;
+                }
+                &:nth-child(odd) {
+                  background-color: $blanc;
+                  border-top: 5px solid $gris9;
+                }
                 .title {
-                  .events a {
+                  a {
                     @include graphik-semibold(19px,$gris7,21px);
+                    white-space: initial;
                   }
+                }
+                .adreca {
+                  @include graphik-regular(16px,$gris4,16px);
+                  font-style: italic;
+                  white-space: initial;
+                }
+              }
+            }
+            .cycle-carousel-wrap {
+              .dia.cycle-slide {
+                .month-label {
+                  margin-top: -18px;
+                  border-left: 1px solid $gris7;
+                  margin-left: 46%;
+                  padding-left: 4px;
+                  @include graphik-semibold(10px, $gris7, 12px);
                 }
               }
             }

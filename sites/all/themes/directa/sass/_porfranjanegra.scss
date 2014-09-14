@@ -212,36 +212,32 @@
   $zen-column-count: 23;
   $zen-gutter-width: 0px;
   $zen-auto-include-item-base: true;
-  @include zen-grid-container();
-  #block-directa-custom-seccions-portada {
-    @include zen-grid-item(7,1);
-  }
-  /*#block-views-f6d5ffea550fc2e6f9965237f6e9216c*/
-
-  #block-views-8cf51664534d81cd6f19f736c791b6bf,
-  #block-views-8cf51664534d81cd6f19f736c791b6bf,
-  #block-views-66eea5503a81d1a282509c0f281bb1dd,
-  #block-views-9e55819d28ec55202f138730f1fad224,
-  #block-views-3139b72ceb297d9c104027a9acd05199,
-  #block-views-7960623019115263ba0aac1ad3d05279 {
-    display: none;
+  #seccio1-wrapper {
+    @include zen-grid-item(17,1);
+    @include zen-grid-container();
+    .view-id-portada_seccions {
+      @include zen-clear();
+      @include zen-grid-item(9,1);
+    }
+    .view-clon-de-portada-seccions-llistat- {
+      @include zen-grid-item(14,10);
+    }
+    @include zen-clear();
   }
 
    
   .block-views { 
-    @include zen-grid-item(10,8);
-    @include zen-nested-container();
-    .block-title {
-      @include zen-clear();
-      @include zen-grid-item(23,1);
+    //@include zen-grid-item(10,8);
+    //@include zen-nested-container();
+    //.block-title {
+      //@include zen-clear();
+      //@include zen-grid-item(23,1);
     }
     .view-clon-de-portada-seccions-llistat- {
-      @include zen-clear();
-      @include zen-grid-item(23,1);
+      //@include zen-clear();
+      //@include zen-grid-item(23,1);
     }
-
-
-  }
+  
   #block-directa-custom-seccions-portada {
     $zen-column-count: 2;
     @include zen-grid-container();
@@ -277,7 +273,6 @@
     background-color: $blanc;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 10px;
   table {
     margin-top: 0;
   }
@@ -289,7 +284,7 @@
 
   #block-directa-custom-seccions-portada {
     .view-content {
-      border-bottom: solid 1px $gris6;
+      //border-bottom: solid 1px $gris6;
       padding-bottom:20px;
       margin-bottom:10px;
     }
@@ -298,12 +293,13 @@
       border-bottom: 1px solid $gris6;
       padding-bottom: 10px;
       margin-bottom:10px;
+      margin-top: 10px;
     }
     .field-portada-fotogaleria {
       padding-top:5px;
     }
     .views-field-nothing {
-      border-right: 1px solid $gris6;
+      //border-right: 1px solid $gris6;
       .title a {
         @include graphik-semibold(19px,$gris7,25px);
         padding-right: 20px;
@@ -314,7 +310,13 @@
       }
     }
   }
-  .block-views {
+  #seccio1-wrapper {
+    border-bottom: 1px solid $gris6;
+    border-right: 1px solid $gris6;
+    padding-right: 10px;
+  }
+  .view-portada-seccions,
+  .view-clon-de-portada-seccions-llistat- {
     .block-title {
       @include graphik-medium-seccions(33px,40px);
       color: $blanc;
@@ -322,22 +324,31 @@
       padding-bottom:10px;
       margin-bottom:10px;
     }
-    .view-content {
-     
+  }
+    
+  .view-clon-de-portada-seccions-llistat- {
+    .views-row-first {
+      margin-top:60px;
+      border-top: 1px solid $gris6
     }
-    .view-clon-de-portada-seccions-llistat- {
-      .views-row {
-        border-bottom: 1px solid $gris6;
+    .views-row {
         padding-top: 10px;
         padding-bottom: 10px;
-        margin-left: 20px;
-
-      }
-      .views-field-title a{
+        border-left: 1px solid $gris6;
+        padding-left: 10px;
+        //border-bottom: 1px solid $gris6;
+    }
+   .views-field-title {
+        padding-left: 20px;
+        border-bottom: 1px solid $gris6;
+        padding-bottom: 10px;
+        a {
         @include graphik-medium-seccions(19px,25px); /*line height original 46*/
       }
     }
-  }
+   
+ }
+
 }
 
 
