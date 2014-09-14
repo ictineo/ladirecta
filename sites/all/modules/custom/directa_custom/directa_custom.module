@@ -82,6 +82,12 @@ function directa_form_alter(&$form, &$form_state, $form_id){
       // print $form array on the top of the page
       if (isset($form['search_api_views_fulltext'])) {
            $form['search_api_views_fulltext']['#attributes'] = array('placeholder' => array(t('Escriu la teva recerca')));
+      }
+      if (isset($form['field_seccio'])) {
+           $form['field_seccio']['#attributes'] = array('placeholder' => array(t('Escull seccions')));
+      }  
+      if (isset($form['author'])) {
+           $form['author']['#attributes'] = array('placeholder' => array(t('Escull autor')));
       }  
       $form['submit']['#value'] = t('Adequar la recerca');
       //$form = array('field_data_w' => array(

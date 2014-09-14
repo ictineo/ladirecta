@@ -109,9 +109,9 @@
       & > label {
         display:none;
       } 
-      .chosen-container.chosen-container-multi.form-select{
-       display:inline;
-      }
+      .form-text.form-autocomplete {
+        width:100%;
+      } 
     }
     #edit-type-wrapper {
       @include zen-clear(); 
@@ -148,18 +148,18 @@
    }
     .general {
       @include zen-clear();
-      @include zen-grid-item(6,1);  
-      $zen-column-count:6;
+      @include zen-grid-item(12,1);  
+      $zen-column-count:12;
       $zen-gutter-width:10px;                                                                                   
       @include zen-grid-container();
       .columna1 {
-        @include zen-grid-item(1,1);
+        @include zen-grid-item(2,1);
       }
       .columna2 {
-        @include zen-grid-item(1,2);
+        @include zen-grid-item(2,3);
       }
       .columna3 {
-       @include zen-grid-item(4,3);
+       @include zen-grid-item(8,5);
       }
 
     }

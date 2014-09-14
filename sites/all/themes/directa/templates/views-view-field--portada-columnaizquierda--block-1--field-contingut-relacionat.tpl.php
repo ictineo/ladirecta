@@ -3,6 +3,7 @@
 * collection
 * i mostrem nomes si esta promogut a portada
 */
+
 /** recorem els valors del field collection **/
 $out_d  = '';
 $out_nd = '';

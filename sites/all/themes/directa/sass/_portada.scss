@@ -254,13 +254,24 @@ body.front {
    }
 
    /*DESTACAT 3 COLUMNES*/
+   /** recuperem els valors inicials */
+   $zen-column-count:23;
+   $zen-gutter-width:10px; 
    #destacat {
      @include zen-clear();
      @include zen-grid-item(23,1);
-     .view-portada-destacadotodascolumnas.view-display-id-block {
-       @include zen-grid-item(23,1);
-       @include zen-grid-background();
-       @include zen-nested-container();
+     /** nomes hi haura una row SEMPRE **/
+     .view-portada-destacadotodascolumnas.view-display-id-block .view-content .views-row-1{
+       width: 100%;
+       $zen-column-count: 2;
+       $zen-gutter-width: 10px; 
+       @include zen-grid-container();
+       .field-portada-fotogaleria {
+         @include zen-grid-item(1,1);
+       }
+       .col-right {
+         @include zen-grid-item(1,2);
+       }
        a.autor {
          @include autoria;
        }
@@ -272,25 +283,6 @@ body.front {
       }
        .field-body {
          @include entradilla-3col;
-       }
-       .pretitular {
-         display:block-inline;
-       }
-       .field-fotografies,
-       .field-portada-fotogaleria {
-         @include zen-grid-item(11,1);
-       }
-       .views-field-nothing {
-         @include zen-grid-item(12,1,right);
-       }
-       .views-field-title {
-         @include zen-clear(right);
-         @include zen-grid-item(12,1,right);
-       }
-       .field-body,
-       .field-continguts-relacionats {
-         @include zen-clear(right);
-         @include zen-grid-item(12,1,right);
        }
        .attachment {
          @include zen-clear(both);
