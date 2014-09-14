@@ -158,6 +158,8 @@ ul.nice-menu {
 .field-seccio {
   @include seccio;
 }
+.autories,
+.field-autoria-general,
 .field-autor,
 a.autor {
   @include autoria;

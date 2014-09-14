@@ -25,9 +25,8 @@ body.front {
       }
       .views-field-field-continguts-relacionats {
         margin: 12px 0 0 10px;
-        padding: 10px;
         display: block;
-        width: 85%;
+        width: 95%;
         background-color:$fons;
         @include box-shadow($gris6 0px 0px 10px inset);
         .field-continguts-relacionats {
@@ -51,7 +50,16 @@ body.front {
             &[href*="/document/"] {
               background-image: url('../images/adj2.png');
             }
+            .field-continguts-relacionats-ref {
+              padding: 0 12px;
+            }
  
+          }
+          &:first-child > div {
+            padding-top: 10px;
+          }
+          &:last-child > div {
+            padding-bottom: 10px;
           }
         }
       }
@@ -73,12 +81,14 @@ body.front {
             line-height: 18px;
             font-size: 12px;
           }
+          .field-autoria-general:after,
           .field-autor:after {
             display: inline-block;
             content: '/';
             color: $gris3;
           }
           /** cas tingui enllas o no **/
+          .field-autoria-general,
           .field-autor,
           .field-autor a.autor {
             text-decoration: underline;
@@ -108,12 +118,18 @@ body.front {
           }
         }
       }
+      .views-row {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid $gris6;
+      }
    }
 
    /** columna noticies (esquerra) **/
    #content {
      @include zen-clear();
      @include zen-grid-item(9,1);
+     padding: 0 12px;
      /*COLUMNA NOTICIES (ESQUERRA)*/
      .view-portada-columnaizquierda.view-display-id-block_1 {
        h2.node-title a {
@@ -160,7 +176,7 @@ body.front {
          h4.titol-rel-no-dest {
            text-transform: uppercase;
            @include graphik-semibold(15px, $gris7, 19px);
-           margin: 4px 0;
+           margin: 12px 0 0 0;
          }
 
          .no-destacat {
@@ -171,13 +187,13 @@ body.front {
              @include zen-grid-item(3,1);
              margin-bottom: 4px;
              .autories {
-               padding-left: 6px;
+               padding-left: 10px;
              }
            }
            .field-portada-fotogaleria {
              @include zen-clear();
              @include zen-grid-item(1,1);
-             padding-left: 6px;
+             padding-left: 10px;
            }
            .col-right {
              @include zen-grid-item(2,2);
@@ -202,6 +218,8 @@ body.front {
    /* columna mig (actualitat) */
    .sidebars .region-sidebar-first {
      @include zen-grid-item(8,10);
+     padding: 0 18px;
+     background-color: $fons;
      /*COLUMNA ACTUALITAT (DRETA)*/
      .front .region-sidebar-first {
        padding: 0 20px;

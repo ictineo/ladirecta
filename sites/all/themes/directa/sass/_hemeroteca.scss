@@ -62,6 +62,8 @@
       } 
      .description {
        margin-left: -130%;
+       margin-bottom: 15px;
+       margin-top:-25px;
      }
      #edit-field-data-datepicker-popup-0 {
       max-width:50%;
@@ -93,6 +95,9 @@
       & > label {
         display:none;
       }
+      .chosen-container.chosen-container-multi.form-select{
+       display:inline;
+      }
       #edit_field_seccio_chosen{
         width: 100%;
       } 
@@ -103,18 +108,31 @@
       @include zen-grid-item(4,8);
       & > label {
         display:none;
+      } 
+      .chosen-container.chosen-container-multi.form-select{
+       display:inline;
       }
     }
     #edit-type-wrapper {
       @include zen-clear(); 
       @include zen-grid-item(3,5);
-      .description{ 
+     margin-top: 10px;
+     .form-item.form-type-radio.form-item-type {
+       display:inline;
+       margin-right: 50px;
+     } 
+     .description{ 
         margin-left: -130%;
-        margin-top: -50px; 
+        margin-top: -25px; 
       }
      }
     #edit-type-1--2-wrapper {
       @include zen-grid-item(4,8);
+      label {
+        float: left;
+        font-weight: bold;
+        margin-right: 20px;
+      } 
     }
     .views-submit-button {
       @include zen-clear(); 
