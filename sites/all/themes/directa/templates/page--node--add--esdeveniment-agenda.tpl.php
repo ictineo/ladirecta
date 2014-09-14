@@ -46,8 +46,10 @@
       </nav>
     <?php endif; ?>
 
-    <?php //print render($page['header']); ?>
-    
+    <?php print render($page['header']); ?> <!--Jude descomenta -->
+<!-- Jude equipara main i navigation amb noticia-->
+      </header> 
+    <div id="main"> <!--Jude add-->    
     <div id="navigation">
 
       <?php if ($main_menu): ?>
@@ -71,10 +73,10 @@
         </nav>
       <?php endif; ?>
 
-      <?php // print render($page['navigation']); ?>
+      <?php print render($page['navigation']); //Jude descomenta ?>
 
     </div>
-  </header>
+<!--  </header> -->
 
   <div id="main">
 
@@ -114,6 +116,19 @@
 
   </div>
 
+<!--Jude adds interior i faldo-->
+   <div id="interior">
+      <div id="menu-tigger"> &nbsp; </div>
+      <div id="menu-close-top" class="menu-close"> &nbsp; </div>
+      <div id="menu-close-bottom" class="menu-close"> &nbsp; </div>
+     <?php print render($page['interior']); ?>
+   </div>   
+
+ <div id="faldo-wrapper">
+    <div id="faldo-switcher"> <span class="faldo-switcher">&nbsp;</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa');?></span><?php print t('Col·labora en fer possible aquest mitjà'); ?> </div>
+     <?php print render($page['faldo']); ?>
+  </div>
+  
   <?php print render($page['footer']); ?>
 </div>
 

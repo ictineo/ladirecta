@@ -23,6 +23,7 @@ body.front {
          margin: 0px;
        }
       }
+      /*.field-continguts-relacionats,*/
       .views-field-field-continguts-relacionats {
         margin: 12px 0 0 10px;
         display: block;
@@ -63,6 +64,80 @@ body.front {
           }
         }
       }
+     .views-field-field-contingut-relacionat.related-news-wrapper {
+       .destacat {
+         display: block;
+         position: relative;
+         & > * {
+           margin: 0 20px;
+         }
+         .meta-info-top {
+           margin-top: 20px;
+           .autories { 
+             padding-left: 0px;
+           }
+         }
+         h2.node-title {
+           position: relative;
+           @include graphik-semibold(22px, $gris7, 26px);
+           &:before {
+             display: block;
+             content: ' ';
+             width: 12px;
+             height: 15px;
+             border-left: 1px solid black;
+             border-bottom: 1px solid black;
+             border-bottom-left-radius: 8px;
+             position: absolute;
+             top: 3px;
+             left: -24px;
+           }
+         }
+         .field-body {
+           margin-top: 8px;
+           & > * {
+             @include public-roman(17px, $gris7, 21px)
+           }
+         }
+       }
+
+       /** clases a lo loco! xD **/
+       h4.titol-rel-no-dest {
+         text-transform: uppercase;
+         @include graphik-semibold(15px, $gris7, 19px);
+         margin: 12px 0 0 0;
+       }
+
+       .no-destacat {
+         $zen-column-count: 3;
+         $zen-gutter-width: 0px;
+         @include zen-grid-container();
+         .meta-info-top {
+           @include zen-grid-item(3,1);
+           margin-bottom: 4px;
+           .autories {
+             padding-left: 10px;
+           }
+         }
+         .field-portada-fotogaleria {
+           @include zen-clear();
+           @include zen-grid-item(1,1);
+           padding-left: 10px;
+         }
+         .col-right {
+           @include zen-grid-item(2,2);
+           padding-left: 13px;
+           h2.node-title {
+             @include graphik-semibold(19px, $gris7, 21px);
+             margin: 0px;
+           }
+           .field-body > * {
+             @include public-roman(15px, $gris7, 19px)
+           }
+
+         }
+       }
+     }
       .view-display-id-block_1 {
         @include portada-numero;
       }
@@ -126,89 +201,19 @@ body.front {
    }
 
    /** columna noticies (esquerra) **/
+   /** recuperem els valors inicials */
+   $zen-column-count:23;
+   $zen-gutter-width:10px; 
    #content {
      @include zen-clear();
      @include zen-grid-item(9,1);
-     padding: 0 12px;
+     padding: 20px 12px;
      /*COLUMNA NOTICIES (ESQUERRA)*/
      .view-portada-columnaizquierda.view-display-id-block_1 {
        h2.node-title a {
          @include titular-not;
        }
-       .views-field-field-contingut-relacionat.related-news-wrapper {
-         .destacat {
-           display: block;
-           position: relative;
-           & > * {
-             margin: 0 20px;
-           }
-           .meta-info-top {
-             margin-top: 20px;
-             .autories { 
-               padding-left: 0px;
-             }
-           }
-           h2.node-title {
-             position: relative;
-             @include graphik-semibold(22px, $gris7, 26px);
-             &:before {
-               display: block;
-               content: ' ';
-               width: 12px;
-               height: 15px;
-               border-left: 1px solid black;
-               border-bottom: 1px solid black;
-               border-bottom-left-radius: 8px;
-               position: absolute;
-               top: 3px;
-               left: -24px;
-             }
-           }
-           .field-body {
-             margin-top: 8px;
-             & > * {
-               @include public-roman(17px, $gris7, 21px)
-             }
-           }
-         }
 
-         /** clases a lo loco! xD **/
-         h4.titol-rel-no-dest {
-           text-transform: uppercase;
-           @include graphik-semibold(15px, $gris7, 19px);
-           margin: 12px 0 0 0;
-         }
-
-         .no-destacat {
-           $zen-column-count: 3;
-           $zen-gutter-width: 0px;
-           @include zen-grid-container();
-           .meta-info-top {
-             @include zen-grid-item(3,1);
-             margin-bottom: 4px;
-             .autories {
-               padding-left: 10px;
-             }
-           }
-           .field-portada-fotogaleria {
-             @include zen-clear();
-             @include zen-grid-item(1,1);
-             padding-left: 10px;
-           }
-           .col-right {
-             @include zen-grid-item(2,2);
-             padding-left: 13px;
-             h2.node-title {
-               @include graphik-semibold(19px, $gris7, 21px);
-               margin: 0px;
-             }
-             .field-body > * {
-               @include public-roman(15px, $gris7, 19px)
-             }
-
-           }
-         }
-       }
      }
    }
 
@@ -220,6 +225,7 @@ body.front {
      @include zen-grid-item(8,10);
      padding: 0 18px;
      background-color: $fons;
+     padding-top: 22px;
      /*COLUMNA ACTUALITAT (DRETA)*/
      .front .region-sidebar-first {
        padding: 0 20px;
@@ -264,13 +270,50 @@ body.front {
      .view-portada-destacadotodascolumnas.view-display-id-block .view-content .views-row-1{
        width: 100%;
        $zen-column-count: 2;
-       $zen-gutter-width: 10px; 
+       $zen-gutter-width: 20px; 
        @include zen-grid-container();
+       margin-top: 32px;
        .field-portada-fotogaleria {
          @include zen-grid-item(1,1);
+         a {
+           width: 100%;
+           img {
+             width: 100%;
+           }
+         }
        }
        .col-right {
          @include zen-grid-item(1,2);
+         h2.views-field-title a {
+           font-size: 28px;
+           line-height: 32px;
+         }
+       }
+       .views-field-field-contingut-relacionat.related-news-wrapper {
+         .destacat {
+           @include zen-clear();
+           @include zen-grid-item(2,1);
+           .meta-info-top {
+             margin-top: 0px;
+           }
+         }
+         .no-dest-wrapper {
+           @include zen-clear();
+           .no-destacat:nth-child(2n) {
+             @include zen-grid-item(1,2);
+           }
+           .no-destacat:nth-child(2n+1) {
+             @include zen-clear();
+             @include zen-grid-item(1,1);
+             border-right: 1px solid $gris6;
+           }
+           .meta-info-top {
+             display: none;
+           }
+           .no-destacat {
+             margin-top: 12px;
+           }
+         }
        }
        a.autor {
          @include autoria;

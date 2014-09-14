@@ -95,6 +95,12 @@
       & > label {
         display:none;
       }
+      .chosen-container {
+        .chosen-results {
+          min-width:395px;
+          background:white;
+      }
+      }
       .chosen-container.chosen-container-multi.form-select{
        display:inline;
       }
@@ -150,12 +156,33 @@
       @include zen-clear();
       @include zen-grid-item(12,1);  
       $zen-column-count:12;
-      $zen-gutter-width:10px;                                                                                   
+      $zen-gutter-width:10px; 
+                                                                                        
       @include zen-grid-container();
+      border-bottom: 1px solid rgb(224, 224, 255);
+      border-top: 1px solid rgb(224, 224, 224);
+      padding-bottom: 20px;
+      padding-top: 20px;
       .columna1 {
-        @include zen-grid-item(2,1);
+         @include zen-grid-item(2,1);
+         & > div {
+           padding-bottom: 10px;
+        } 
+        
+        .Reportatge {
+            background-image: url("../images/foto");
+            background-repeat: no-repeat;
+            height: 23px;
+            width: 32px;
+        } 
+        .Numero.Paper {
+            background-image: url("../images/adj");
+            background-repeat: no-repeat;
+            height: 23px;
+            width: 32px;
+        } 
         .Notícia {
-            background-image: url("sites/all/themes/directa/images/adj2");
+            background-image: url("../images/adj2");
             background-repeat: no-repeat;
             height: 23px;
             width: 32px;
