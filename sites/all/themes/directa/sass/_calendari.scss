@@ -256,6 +256,7 @@
             .cycle-carousel-wrap {
               position: relative !important;
             }
+            /* estils generics de les boles */
             .dia.cycle-slide {
               vertical-align: top;
               .data,
@@ -264,8 +265,9 @@
                 border-radius: 95px;
                 padding: 1px;
                 display: block;
-                height: 150px;
-                width: 150px;
+                height: 170px;
+                width: 170px;
+                padding-right: 5px;
                 .num,
                 .llet {
                   display: block;
@@ -282,12 +284,14 @@
                   text-transform: uppercase;
                 }
               }
+              /*estil especific pel current day*/
               .data-avui {
                 border: 5px solid $gris7;
                 background-color: $blanc;
                 border-radius: 90px;
-                height: 145px;
-                width: 145px;
+                height: 165px;
+                width: 165px;
+                padding-right: 0px;
                 .num,
                 .llet {
                   color: $gris7;

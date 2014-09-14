@@ -41,6 +41,10 @@
       @include zen-grid-item(12,1);
       @include zen-clear(); 
       margin-bottom: 30px;
+      .form-text.form-autocomplete {
+       background-color:rgb(252,246,246);
+
+      }
       & > label {
         display: none;
    
@@ -56,6 +60,9 @@
        label {
          width:60px; 
          display:inline-block;
+         color: rgb(136, 136, 136);
+         font-family: arial;
+         font-weight: lighter; 
        }
      .form-item.form-type-textfield.form-item-field-data-date > label {
          display: none;
@@ -64,6 +71,9 @@
        margin-left: -130%;
        margin-bottom: 15px;
        margin-top:-25px;
+       color: rgb(136, 136, 136);
+       font-family: arial;
+       font-weight: 500;  
      }
      #edit-field-data-datepicker-popup-0 {
       max-width:50%;
@@ -81,6 +91,9 @@
        label {
          width:60px; 
          display:inline-block;
+         color: rgb(136, 136, 136);
+         font-family: arial;
+         font-weight: lighter;
        }
       .form-item.form-type-textfield.form-item-field-data-1-date > label {
        display: none;
@@ -130,6 +143,9 @@
      .description{ 
         margin-left: -130%;
         margin-top: -25px; 
+        color: rgb(136, 136, 136);
+        font-family: arial;
+        font-weight: 50; 
       }
      }
     #edit-type-1--2-wrapper {
@@ -138,7 +154,10 @@
         float: left;
         font-weight: bold;
         margin-right: 20px;
-      } 
+        color: rgb(136, 136, 136);
+        font-family: arial;
+  
+       } 
     }
     .views-submit-button {
       @include zen-clear(); 

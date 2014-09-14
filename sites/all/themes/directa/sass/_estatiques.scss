@@ -1,6 +1,12 @@
 //Estatiques
+
+.page-colabora {
+  .messages--error  { //amagant missatges d'error temporalment
+    display: none;
+  }
+}
+
 .page-node-13270 {
-  
    #page-title {
      background-image: url("../images/avio.png");
      background-position: left center;
@@ -11,18 +17,10 @@
      padding-top: 0; 
      margin-bottom:-50px  
    }
-
     article {
      margin-left:50px;
-
-
-
    }
-  
-
-
 }
-
 
 ////Quisom
 .page-node-11672 {
@@ -41,6 +39,7 @@
      margin-left: 60px;
    }
  }
+
 ////Colabora
 .page-colabora{
   #main {
@@ -54,21 +53,23 @@
           background-position: left center;
           background-repeat: no-repeat;
           color: #777777;
-          margin-left: 70px;
+          //margin-left: 70px;
           padding-left: 50px;
           margin-bottom: 50px;
           padding-top: 0;
+          margin-top: 35px;
+          @include graphik-bold(35px, $gris7, 40px);
       }
       @include zen-grid-item(17,1);
       .view { 
-        padding-left:100px;
+        //padding-left:100px;
         article {
            .node__title.node-title{
-             font-size: 40px;
-             font-weight: 400;
-             margin-bottom: 48px;
+             @include graphik-regular(40px,$gris7,45px);
            }
-           color: #777777;
+           .field-body {
+             @include graphik-regular(22px,$gris3,33px);
+           }
            fieldset {         
              padding-bottom: 70px;           
              border-bottom-width: 1px;

@@ -43,7 +43,7 @@
           .field-portada-fotogaleria a img {
             @include zen-grid-item(1,1);
           }
-          fieldset.group-nested .fieldset-wrapper {
+          fieldset.group-nested {
             @include zen-grid-item(2,2);
             @include zen-nested-container();
             //.node-title {
@@ -102,7 +102,7 @@
               width: 70%;
             }
             &.node-nav-links-prev {
-              left: -50px;
+              left: -75px;
               box-shadow: 0px 0px 2px 2px $fons;
               a {
                 float: right;
@@ -185,6 +185,10 @@
           .field-continguts-relacionats {
             margin-top: 30px;
             margin-bottom: 30px;
+            tr.field_collection_item.odd,
+            tr.field_collection_item.even {
+              background-color: $fons;
+            }
           }
         }
         #tags-wrapper {

@@ -808,10 +808,11 @@ table {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
+  width: 90%;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000347}}
 #header,
 #content,
 #navigation,
@@ -845,20 +846,20 @@ table {
 }
 
 /**All**/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000360}}
 #name-and-slogan {
   display: none;
 }
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000368}}
   #main {
     /* Move all the children of #main down to make room. */
     position: relative;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000373}}
   #navigation {
     /* Move the navbar up inside #main's padding. */
     top: 0;
@@ -872,19 +873,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000394}}
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\0000396}}
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003101}}
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -895,19 +896,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003109}}
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003111}}
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003116}}
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -918,27 +919,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003124}}
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003126}}
   .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003131}}
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003136}}
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -952,7 +953,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003142}}
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -962,7 +963,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003146}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -970,14 +971,14 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003151}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003155}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -990,13 +991,13 @@ table {
  */
 @media all and (min-width: 960px) {
   /*USUARI AUTENTICAT*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003172}}
   .logged-in #header #block-block-4 {
     display: none;
   }
 
   /*USUARI NO AUTENTICAT*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003181}}
   #header #logo {
     float: left;
     width: 8.69565%;
@@ -1010,11 +1011,11 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003183}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003184}}
   #header #name-and-slogan {
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003187}}
   #header #secondary-menu {
     float: left;
     width: 13.04348%;
@@ -1030,7 +1031,7 @@ table {
     padding-left: 0;
     padding-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003190}}
   #header #secondary-menu ul {
     float: left;
     width: 86.95652%;
@@ -1044,7 +1045,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003195}}
   #header .region-header {
     clear: none;
     float: left;
@@ -1069,7 +1070,7 @@ table {
   #header .region-header:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003206}}
   #header .region-header #block-block-7 {
     /*Secciones*/
     float: left;
@@ -1084,7 +1085,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003212}}
   #header .region-header #block-block-4 {
     float: left;
     width: 15%;
@@ -1098,7 +1099,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003215}}
   #header .region-header #block-block-1 {
     float: left;
     width: 15%;
@@ -1112,13 +1113,13 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003220}}
   #header .region-header #block-block-5,
   #header .region-header #block-block-3,
   #header .region-header #block-system-user-menu {
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003223}}
   #header .region-header #block-views-exp-hemeroteca-page-1 {
     float: right;
     width: 30%;
@@ -1134,7 +1135,7 @@ table {
     padding-left: 0;
     padding-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003226}}
   #header .region-header #block-views-exp-hemeroteca-page-1 #edit-search-api-views-fulltext-wrapper {
     float: right;
     width: 95%;
@@ -1148,11 +1149,11 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003229}}
   #header .region-header #block-views-exp-hemeroteca-page-1 .views-submit-button {
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003233}}
   #header .region-header #block-system-user-menu {
     float: left;
     width: 15%;
@@ -1167,7 +1168,7 @@ table {
     word-wrap: break-word;
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003237}}
   #header .region-header #block-block-2 {
     float: left;
     width: 10%;
@@ -1183,7 +1184,7 @@ table {
     padding-left: 0;
     padding-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003243}}
   #header .region-header #block-block-2 .tw {
     float: left;
     width: 33.33333%;
@@ -1197,7 +1198,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003246}}
   #header .region-header #block-block-2 .fb {
     float: left;
     width: 33.33333%;
@@ -1211,7 +1212,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003249}}
   #header .region-header #block-block-2 .vi {
     float: left;
     width: 33.33333%;
@@ -1236,7 +1237,7 @@ table {
   #main:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003263}}
   #main #interior {
     float: left;
     width: 73.91304%;
@@ -1260,7 +1261,7 @@ table {
   #main #interior:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003270}}
   #main #interior #block-views-agenda-llista-block-1 {
     float: left;
     width: 33.33333%;
@@ -1274,7 +1275,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003273}}
   #main #interior #block-views-cd-noticias-block-1 {
     float: left;
     width: 33.33333%;
@@ -1288,7 +1289,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003275}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003276}}
   #main #interior #block-views-linies-de-recerca-block {
     float: left;
     width: 33.33333%;
@@ -1302,7 +1303,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003279}}
   #main #interior #block-views-cd-serveis-block-1 {
     float: left;
     width: 100%;
@@ -1327,7 +1328,7 @@ table {
   .node-type-actualitat #main:after, .node-type-noticia #main:after, .node-type-esdeveniment-agenda #main:after, .node-type-fotogaleria #main:after, .node-type-videogaleria #main:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003291}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003292}}
   .node-type-actualitat #main #content, .node-type-noticia #main #content, .node-type-esdeveniment-agenda #main #content, .node-type-fotogaleria #main #content, .node-type-videogaleria #main #content {
     clear: left;
     float: left;
@@ -1342,7 +1343,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003299}}
   .node-type-actualitat #main .sidebars .region-sidebar-first, .node-type-noticia #main .sidebars .region-sidebar-first, .node-type-esdeveniment-agenda #main .sidebars .region-sidebar-first, .node-type-fotogaleria #main .sidebars .region-sidebar-first, .node-type-videogaleria #main .sidebars .region-sidebar-first {
     float: left;
     width: 26.08696%;
@@ -1357,7 +1358,7 @@ table {
     word-wrap: break-word;
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003302}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/layouts\/_responsive\.scss}line{font-family:\00003303}}
   .node-type-actualitat #main .sidebars .region-sidebar-second, .node-type-noticia #main .sidebars .region-sidebar-second, .node-type-esdeveniment-agenda #main .sidebars .region-sidebar-second, .node-type-fotogaleria #main .sidebars .region-sidebar-second, .node-type-videogaleria #main .sidebars .region-sidebar-second {
     float: left;
     width: 26.08696%;
@@ -2240,19 +2241,20 @@ a {
 }
 
 /*AMAGATS*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000324}}
+.breadcrumb,
 .header__logo-image {
   display: none;
 }
 
 /*HEADER*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000329}}
 .region-header {
   margin-bottom: -20px;
   padding-top: 15px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000333}}
 .html #header #logo {
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
@@ -2262,7 +2264,7 @@ a {
   height: 39px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000336}}
 #header {
   margin-top: 10px;
   padding-top: 10px;
@@ -2277,7 +2279,7 @@ a {
  * afecten a tot independentment de on estiguin!
  */
 /*CABECERA*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000352}}
 #header #block-block-7 {
   font-family: 'graphikmedium';
   font-size: 15px;
@@ -2294,7 +2296,7 @@ a {
   text-align: right;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000355}}
 #header #block-block-3 {
   background-image: url("../images/menu_arrow_down");
   background-repeat: no-repeat;
@@ -2310,7 +2312,7 @@ a {
   text-align: center;
   background-color: #e9e9e9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000356}}
 #header #block-block-3 .block-title {
   display: none;
 }
@@ -2324,7 +2326,7 @@ a {
   line-height: auto;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000369}}
 #header #block-block-4 .inicias {
   padding: 0px;
   -webkit-box-shadow: inset 0px 0px 2px 2px #e3e3e3;
@@ -2351,7 +2353,7 @@ a {
   line-height: auto;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000379}}
 #header #secondary-menu a {
   padding: 0;
   background-color: #e5e5e5;
@@ -2359,7 +2361,7 @@ a {
   height: auto;
   display: inline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000392}}
 #header #secondary-menu ul {
   padding: 0px;
   -webkit-box-shadow: inset 0px 0px 2px 2px #e3e3e3;
@@ -2386,20 +2388,20 @@ a {
   line-height: auto;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\0000397}}
 #header #secondary-menu ul li {
   padding-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003103}}
 #header #block-block-2 {
   border-left: 1px solid #e9e9e9;
   border-right: 1px solid #e9e9e9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003106}}
 #header #block-block-2 .xxss {
   padding-left: 12px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003110}}
 #header #block-block-2 .fb {
   background-repeat: no-repeat;
   display: block;
@@ -2408,7 +2410,7 @@ a {
   height: 20px;
   background-image: url("../images/fb.png");
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003114}}
 #header #block-block-2 .tw {
   background-repeat: no-repeat;
   display: block;
@@ -2417,7 +2419,7 @@ a {
   height: 20px;
   background-image: url("../images/tw.png");
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003118}}
 #header #block-block-2 .vi {
   background-repeat: no-repeat;
   display: block;
@@ -2426,7 +2428,7 @@ a {
   height: 20px;
   background-image: url("../images/vi.png");
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003123}}
 #header #block-views-exp-hemeroteca-page-1 {
   border-left: 1px solid #e9e9e9;
 }
@@ -2454,11 +2456,11 @@ a {
 #header #block-views-exp-hemeroteca-page-1 .views-submit-button {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003127}}
 #header .views-exposed-form #edit-search-api-views-fulltext-wrapper {
   padding: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003131}}
 #header #block-block-1 {
   background-color: #c13432;
   border-radius: 5px;
@@ -2477,17 +2479,17 @@ a {
 }
 
 /*MENU*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003139}}
 #main-menu {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003142}}
 ul.nice-menu {
   border-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003147}}
 .mark {
   color: none;
 }
@@ -2497,7 +2499,7 @@ ul.nice-menu {
  * AQUI LI FALTA CONTEXT, SON MOLT GENERICS ELS
  * SELECTORS PER ASSIGNAR ESTILS DE TEXT!
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003156}}
 .field-seccio-web {
   background-color: #5e5e5e;
   padding: 5px;
@@ -2513,7 +2515,7 @@ ul.nice-menu {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003159}}
 .field-seccio {
   background-color: #5e5e5e;
   padding: 5px;
@@ -2529,7 +2531,7 @@ ul.nice-menu {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003165}}
 .autories,
 .field-autoria-general,
 .field-autor,
@@ -2547,7 +2549,7 @@ a.autor a {
   text-transform: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003168}}
 span.date-display-single {
   color: #777777;
 }
@@ -2556,7 +2558,7 @@ span.date-display-single a {
   text-transform: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003172}}
 .field-seccio-web {
   background-color: #5e5e5e;
   padding: 5px;
@@ -2572,7 +2574,7 @@ span.date-display-single a {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directa\.scss}line{font-family:\00003175}}
 .peu.fotografia {
   font-family: 'publico_textroman';
   font-size: 16px;
@@ -2960,26 +2962,29 @@ span.date-display-single a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003254}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow {
   margin-top: -110px;
+  /* estils generics de les boles */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003256}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .cycle-carousel-wrap {
   position: relative !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003259}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003260}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide {
   vertical-align: top;
+  /*estil especific pel current day*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003263}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui {
   background: none repeat scroll 0 0 #5e5e5e;
   border-radius: 95px;
   padding: 1px;
   display: block;
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
+  padding-right: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003272}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .llet,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num,
@@ -2988,7 +2993,7 @@ span.date-display-single a {
   text-align: center;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003275}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003277}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num {
   font-family: 'graphik_regularregular';
@@ -2998,7 +3003,7 @@ span.date-display-single a {
   font-weight: normal;
   margin-top: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003281}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .llet,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   font-family: 'graphik_regularregular';
@@ -3009,20 +3014,21 @@ span.date-display-single a {
   margin-top: 14px;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003288}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui {
   border: 5px solid #5e5e5e;
   background-color: white;
   border-radius: 90px;
-  height: 145px;
-  width: 145px;
+  height: 165px;
+  width: 165px;
+  padding-right: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003296}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   color: #5e5e5e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003295}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003299}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num {
   font-family: 'graphik_regularregular';
   font-size: 53px;
@@ -3031,7 +3037,7 @@ span.date-display-single a {
   font-weight: normal;
   margin-top: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003299}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003303}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   font-family: 'graphik_regularregular';
   font-size: 16px;
@@ -3041,23 +3047,23 @@ span.date-display-single a {
   margin-top: 14px;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003305}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003309}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event {
   display: inline-block;
   margin-left: 10px;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003313}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event:nth-child(even) {
   background-color: #f0f0f0;
   border-top: 5px solid white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003317}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event:nth-child(odd) {
   background-color: white;
   border-top: 5px solid #f0f0f0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003322}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event .title a {
   font-family: 'graphiksemibold';
   font-size: 19px;
@@ -3065,7 +3071,7 @@ span.date-display-single a {
   line-height: 21px;
   white-space: initial;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003327}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event .adreca {
   font-family: 'graphik_regularregular';
   font-size: 16px;
@@ -3075,7 +3081,7 @@ span.date-display-single a {
   font-style: italic;
   white-space: initial;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003336}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .cycle-carousel-wrap .dia.cycle-slide .month-label {
   margin-top: -18px;
   border-left: 1px solid #5e5e5e;
@@ -5099,7 +5105,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   word-wrap: break-word;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\0000346}}
-.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .fieldset-wrapper {
+.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested {
   float: left;
   width: 66.66667%;
   margin-left: 33.33333%;
@@ -5115,7 +5121,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   padding-right: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\0000352}}
-.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .fieldset-wrapper .field-autor {
+.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .field-autor {
   clear: left;
   float: left;
   width: 100%;
@@ -5130,7 +5136,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   word-wrap: break-word;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\0000356}}
-.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .fieldset-wrapper .date-display-single {
+.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .date-display-single {
   clear: left;
   float: left;
   width: 100%;
@@ -5145,7 +5151,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   word-wrap: break-word;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\0000360}}
-.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .fieldset-wrapper .field-body {
+.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat fieldset.group-nested .field-body {
   clear: left;
   float: left;
   width: 100%;
@@ -5198,7 +5204,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003104}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #nav-links-wrapper .node-nav-links.node-nav-links-prev {
-  left: -50px;
+  left: -75px;
   box-shadow: 0px 0px 2px 2px #e9e9e9;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003107}}
@@ -5350,17 +5356,17 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   padding: 8px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003632}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item {
   /*background-color: $fons;*/
   border: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003635}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item .field-continguts-relacionats-ref {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item .field-continguts-relacionats-ref {
   padding-bottom: 2px;
   padding-top: 2px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003638}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item .field-continguts-relacionats-ref a {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item .field-continguts-relacionats-ref a {
   font-family: 'publico_textroman';
   font-size: 17px;
   color: #5e5e5e;
@@ -5373,15 +5379,15 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   background-repeat: no-repeat;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003647}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item .field-continguts-relacionats-ref a[href*="/fotogaleria/"] {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item .field-continguts-relacionats-ref a[href*="/fotogaleria/"] {
   background-image: url("../images/foto_p.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003650}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item .field-continguts-relacionats-ref a[href*="/video/"] {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item .field-continguts-relacionats-ref a[href*="/video/"] {
   background-image: url("../images/video_p.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_directamixins\.scss}line{font-family:\00003653}}
-.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody .field_collection_item .field-continguts-relacionats-ref a[href*="/document/"] {
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-continguts-relacionats .field-collection-view-final tbody tr.field_collection_item .field-continguts-relacionats-ref a[href*="/document/"] {
   background-image: url("../images/adj2.png");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003182}}
@@ -5420,18 +5426,23 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   margin-top: 30px;
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003189}}
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container .field-continguts-relacionats tr.field_collection_item.odd,
+.not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container .field-continguts-relacionats tr.field_collection_item.even {
+  background-color: #e9e9e9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003194}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper {
   border-top: 1px solid lightgrey;
   padding-top: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003199}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper #tags-etiquetes-wrapper,
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper #tags-territori-wrapper {
   display: inline-block;
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003203}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper #tags-etiquetes-wrapper mark.field-etiquetes,
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper #tags-etiquetes-wrapper .field-territori,
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full #tags-wrapper #tags-territori-wrapper mark.field-etiquetes,
@@ -5449,54 +5460,54 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   line-height: 22px;
   text-decoration: underline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003215}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container h3.field-label {
   margin: 10px 0px;
   padding: 10px 0;
   border-bottom: solid 1px #e9e9e9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003220}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat {
   border-bottom: 1px dashed #e9e9e9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003222}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat:last-of-type {
   border-bottom: 1px dashed #e9e9e9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003225}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token {
   border: none 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003227}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token {
   border: none 0px;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003230}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token header {
   float: right;
   padding-left: 33%;
   margin-bottom: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003235}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token header .node__title.node-title a {
   font-family: 'graphiksemibold';
   font-size: 28px;
   color: #5e5e5e;
   line-height: 34px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003240}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token .field-portada-fotogaleria img {
   margin-left: -15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003239}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003243}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested {
   float: right;
   border: none 0px;
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003249}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested .field-autor,
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested .date-display-single {
   font-family: 'graphikmedium';
@@ -5505,37 +5516,37 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   line-height: 19px;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003253}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested .field-autor {
   text-decoration: underline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003256}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested .field-body {
   margin-bottom: 0px;
   padding-top: 0px;
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003260}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token article.node-noticia.view-mode-token fieldset.group-nested .field-body p {
   font-family: 'publico_textsemibold';
   font-size: 21px;
   line-height: 26px;
   color: #767676;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003266}}
 .not-front.node-type-noticia #main #content article.node-noticia.view-mode-full .field-collection-container article.field-contingut-relacionat .field-collection-view.view-mode-token .field-destacar {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003276}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second {
   margin-top: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003278}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second .block {
   border-left: 1px solid lightgrey;
   padding-left: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003283}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second #block-directa-custom-mes-noticies h2.block-title {
   font-family: 'graphikmedium';
   font-size: 26px;
@@ -5543,18 +5554,18 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   line-height: 31px;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003284}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003288}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second #block-directa-custom-mes-noticies .view-ultimes-noticies .view-content .views-row {
   padding-top: 10px;
   margin: 10px 0;
   border-top: 1px solid lightgrey;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003288}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003292}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second #block-directa-custom-mes-noticies .view-ultimes-noticies .view-content .views-row:last-of-type {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003296}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second #block-directa-custom-mes-noticies .view-ultimes-noticies .view-content .views-row .views-field-title a {
   font-family: 'graphikmedium';
   font-size: 19px;
@@ -5562,7 +5573,7 @@ body.page-node-add-esdeveniment-agenda #main #interior #block-views-cd-serveis-b
   line-height: 23px;
   font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_noticia\.scss}line{font-family:\00003304}}
 .not-front.node-type-noticia #main .sidebars .region-sidebar-second #block-tagadelic-taxonomy-tagadelic-taxonomy h2.block-title {
   display: none;
 }
@@ -7519,6 +7530,11 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\000034}}
+.page-colabora .messages--error {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000310}}
 .page-node-13270 #page-title {
   background-image: url("../images/avio.png");
   background-position: left center;
@@ -7529,12 +7545,12 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   padding-top: 0;
   margin-bottom: -50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000320}}
 .page-node-13270 article {
   margin-left: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000327}}
 .page-node-11672 h1 {
   background-image: url("../images/help.png");
   background-position: left center;
@@ -7546,7 +7562,7 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   margin-left: 60px;
   padding-left: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000338}}
 .page-node-11672 article {
   margin-left: 60px;
 }
@@ -7560,7 +7576,7 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
 .page-colabora #main:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000350}}
 .page-colabora #main #content {
   float: left;
   width: 73.91304%;
@@ -7574,43 +7590,49 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000351}}
 .page-colabora #main #content .page__title.title {
   background-image: url("../images/share.png");
   background-position: left center;
   background-repeat: no-repeat;
   color: #777777;
-  margin-left: 70px;
   padding-left: 50px;
   margin-bottom: 50px;
   padding-top: 0;
+  margin-top: 35px;
+  font-family: 'graphikbold';
+  font-size: 35px;
+  color: #5e5e5e;
+  line-height: 40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000363}}
-.page-colabora #main #content .view {
-  padding-left: 100px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000365}}
-.page-colabora #main #content .view article {
-  color: #777777;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000367}}
 .page-colabora #main #content .view article .node__title.node-title {
+  font-family: 'graphik_regularregular';
   font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 48px;
+  color: #5e5e5e;
+  line-height: 45px;
+  font-weight: normal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000370}}
+.page-colabora #main #content .view article .field-body {
+  font-family: 'graphik_regularregular';
+  font-size: 22px;
+  color: #777777;
+  line-height: 33px;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000373}}
 .page-colabora #main #content .view article fieldset {
   padding-bottom: 70px;
   border-bottom-width: 1px;
   margin-bottom: 40px;
   border-top-width: 1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000378}}
 .page-colabora #main #content .view article fieldset.collapsed {
   border-top-width: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000382}}
 .page-colabora #main #content .view article fieldset legend {
   -webkit-box-shadow: rgba(200, 200, 200, 0.8) 0px 0px 34px 3px inset;
   -moz-box-shadow: rgba(200, 200, 200, 0.8) 0px 0px 34px 3px inset;
@@ -7619,20 +7641,20 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   padding: 5px;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000388}}
 .page-colabora #main #content .view article fieldset legend .fieldset-legend {
   background-image: none;
   padding-left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000391}}
 .page-colabora #main #content .view article fieldset legend .fieldset-legend .fieldset-title {
   color: #777777;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\0000398}}
 .page-colabora #main #content .view article fieldset .fieldset-wrapper #webform-component-missatge input {
   height: 200px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_estatiques\.scss}line{font-family:\00003107}}
 .page-colabora #main .sidebars {
   float: left;
   width: 26.08696%;
@@ -7759,10 +7781,14 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   margin-bottom: 30px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000344}}
+.page-hemeroteca #content .views-exposed-widgets #edit-search-api-views-fulltext-wrapper .form-text.form-autocomplete {
+  background-color: #fcf6f6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000348}}
 .page-hemeroteca #content .views-exposed-widgets #edit-search-api-views-fulltext-wrapper > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000353}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper {
   clear: left;
   float: left;
@@ -7777,31 +7803,37 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000356}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper .views-widget {
   display: inline-block;
   width: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000360}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper label {
   width: 60px;
   display: inline-block;
+  color: #888888;
+  font-family: arial;
+  font-weight: lighter;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000367}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper .form-item.form-type-textfield.form-item-field-data-date > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000370}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper .description {
   margin-left: -130%;
   margin-bottom: 15px;
   margin-top: -25px;
+  color: #888888;
+  font-family: arial;
+  font-weight: 500;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000378}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-wrapper #edit-field-data-datepicker-popup-0 {
   max-width: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000383}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-1-wrapper {
   clear: left;
   float: left;
@@ -7817,25 +7849,28 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   word-wrap: break-word;
   margin-top: -20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000387}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-1-wrapper .views-widget {
   display: inline-block;
   width: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000391}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-1-wrapper label {
   width: 60px;
   display: inline-block;
+  color: #888888;
+  font-family: arial;
+  font-weight: lighter;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000398}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-1-wrapper .form-item.form-type-textfield.form-item-field-data-1-date > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003102}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-data-1-wrapper #edit-field-data-1-datepicker-popup-0 {
   max-width: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003106}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-seccio-wrapper {
   float: left;
   width: 33.33333%;
@@ -7849,24 +7884,24 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003108}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-seccio-wrapper > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003112}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-seccio-wrapper .chosen-container .chosen-results {
   min-width: 395px;
   background: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003117}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-seccio-wrapper .chosen-container.chosen-container-multi.form-select {
   display: inline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003120}}
 .page-hemeroteca #content .views-exposed-widgets #edit-field-seccio-wrapper #edit_field_seccio_chosen {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003125}}
 .page-hemeroteca #content .views-exposed-widgets #edit-author-wrapper {
   clear: left;
   float: left;
@@ -7881,15 +7916,15 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003128}}
 .page-hemeroteca #content .views-exposed-widgets #edit-author-wrapper > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003131}}
 .page-hemeroteca #content .views-exposed-widgets #edit-author-wrapper .form-text.form-autocomplete {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003135}}
 .page-hemeroteca #content .views-exposed-widgets #edit-type-wrapper {
   clear: left;
   float: left;
@@ -7905,17 +7940,20 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   word-wrap: break-word;
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003139}}
 .page-hemeroteca #content .views-exposed-widgets #edit-type-wrapper .form-item.form-type-radio.form-item-type {
   display: inline;
   margin-right: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003143}}
 .page-hemeroteca #content .views-exposed-widgets #edit-type-wrapper .description {
   margin-left: -130%;
   margin-top: -25px;
+  color: #888888;
+  font-family: arial;
+  font-weight: 50;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003151}}
 .page-hemeroteca #content .views-exposed-widgets #edit-type-1--2-wrapper {
   float: left;
   width: 33.33333%;
@@ -7929,13 +7967,15 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003153}}
 .page-hemeroteca #content .views-exposed-widgets #edit-type-1--2-wrapper label {
   float: left;
   font-weight: bold;
   margin-right: 20px;
+  color: #888888;
+  font-family: arial;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003162}}
 .page-hemeroteca #content .views-exposed-widgets .views-submit-button {
   clear: left;
   float: left;
@@ -7950,11 +7990,11 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003166}}
 .page-hemeroteca #content .views-exposed-widgets .views-widget .description {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003174}}
 .page-hemeroteca .general {
   clear: left;
   float: left;
@@ -7982,7 +8022,7 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
 .page-hemeroteca .general:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003185}}
 .page-hemeroteca .general .columna1 {
   float: left;
   width: 16.66667%;
@@ -7996,44 +8036,44 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003168}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003187}}
 .page-hemeroteca .general .columna1 > div {
   padding-bottom: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003191}}
 .page-hemeroteca .general .columna1 .Reportatge {
   background-image: url("../images/foto");
   background-repeat: no-repeat;
   height: 23px;
   width: 32px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003197}}
 .page-hemeroteca .general .columna1 .Numero.Paper {
   background-image: url("../images/adj");
   background-repeat: no-repeat;
   height: 23px;
   width: 32px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003203}}
 .page-hemeroteca .general .columna1 .Notícia {
   background-image: url("../images/adj2");
   background-repeat: no-repeat;
   height: 23px;
   width: 32px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003209}}
 .page-hemeroteca .general .columna1 .numero {
   color: #5e5e5e;
   font-size: 24px;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003214}}
 .page-hemeroteca .general .columna1 .data {
   color: #5e5e5e;
   font-size: 22px;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003222}}
 .page-hemeroteca .general .columna2 {
   float: left;
   width: 16.66667%;
@@ -8047,7 +8087,7 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003225}}
 .page-hemeroteca .general .columna3 {
   float: left;
   width: 66.66667%;
@@ -8061,24 +8101,24 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003228}}
 .page-hemeroteca .general .columna3 .titol a {
   color: #5e5e5e;
   font-size: 26px;
   font-weight: 600;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003233}}
 .page-hemeroteca .general .columna3 .bodier {
   color: #5e5e5e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003237}}
 .page-hemeroteca .general .columna3 .etiquetes {
   background-color: #e0e0e0;
   height: 50px;
   margin-top: -11px;
   padding: 8px 8px 8px 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003242}}
 .page-hemeroteca .general .columna3 .etiquetes > a {
   color: black;
   font-family: publico_textroman;
