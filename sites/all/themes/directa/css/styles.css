@@ -2857,35 +2857,39 @@ span.date-display-single a {
   font-weight: normal;
   margin-top: 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003160}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003156}}
+.page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-right #edit-field-municipi .form-item .hierarchical-select-wrapper {
+  margin-left: 28%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003161}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-right #edit-field-municipi .form-item .hierarchical-select-wrapper .hierarchical-select .selects .chosen-container.chosen-container-single a.chosen-single {
   width: 65% !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003164}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-right #edit-field-municipi .form-item .hierarchical-select-wrapper .hierarchical-select .selects .chosen-container.chosen-container-single .chosen-drop {
   width: 65% !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003174}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-right #edit-field-municipi .form-item .hierarchical-select-wrapper .nojs .help-text {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003182}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer {
   margin-top: -20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003187}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-body .form-item .form-textarea-wrapper.resizable-textarea .grippie {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003192}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-body fieldset {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003195}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-body .description {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003201}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-field-adjuntar-imatge .form-item label {
   font-family: 'graphikmedium';
   font-size: 17px;
@@ -2893,63 +2897,89 @@ span.date-display-single a {
   line-height: 19px;
   font-weight: normal;
   float: left;
+  margin-top: 20px;
+  margin-right: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003209}}
+.page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-field-adjuntar-imatge .form-item .image-widget .filefield-sources-list a {
+  font-family: 'graphikmedium';
+  font-size: 15px;
+  color: #888888;
+  line-height: 17px;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003214}}
+.page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form .group-footer #edit-field-adjuntar-imatge .form-item .description {
+  margin-left: 12%;
+  font-family: 'graphikmedium';
+  font-size: 10px;
+  color: #888888;
+  line-height: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003222}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form #edit-actions {
-  bottom: 50px;
+  bottom: 75px;
   display: inline-block;
   position: relative;
   float: right;
+  margin-right: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003228}}
 .page-node-add-esdeveniment-agenda #main #content form#esdeveniment-agenda-node-form #edit-actions input#edit-submit {
   background-color: #c13432;
+  border-radius: 4px;
   font-family: 'publico_textsemibold';
   font-size: 20px;
   color: white;
   line-height: 26px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003235}}
+.page-node-add-esdeveniment-agenda #main #content .view-agenda-llista {
+  margin-top: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003238}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line-next.cal-line-pager {
   pointer: cursor;
   background: url("../images/arrowh.png") no-repeat 0px 0px;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003243}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line-prev.cal-line-pager {
   pointer: cursor;
   background: url("../images/arrowh.png") no-repeat -24px 0px;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003248}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content .cal-line-pager {
   display: block;
   width: 24px;
   height: 24px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003254}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow {
   margin-top: -110px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003256}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .cycle-carousel-wrap {
   position: relative !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003259}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide {
   vertical-align: top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003262}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui {
   background: none repeat scroll 0 0 #5e5e5e;
   border-radius: 95px;
   padding: 1px;
   display: block;
-  height: 165px;
-  width: 165px;
+  height: 150px;
+  width: 150px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003270}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .llet,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num,
@@ -2958,7 +2988,7 @@ span.date-display-single a {
   text-align: center;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003257}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003275}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num {
   font-family: 'graphik_regularregular';
@@ -2968,7 +2998,7 @@ span.date-display-single a {
   font-weight: normal;
   margin-top: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003279}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data .llet,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   font-family: 'graphik_regularregular';
@@ -2979,20 +3009,20 @@ span.date-display-single a {
   margin-top: 14px;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003285}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui {
   border: 5px solid #5e5e5e;
   background-color: white;
   border-radius: 90px;
-  height: 160px;
-  width: 160px;
+  height: 145px;
+  width: 145px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003292}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num,
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   color: #5e5e5e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003277}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003295}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .num {
   font-family: 'graphik_regularregular';
   font-size: 53px;
@@ -3001,7 +3031,7 @@ span.date-display-single a {
   font-weight: normal;
   margin-top: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003281}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003299}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide .data-avui .llet {
   font-family: 'graphik_regularregular';
   font-size: 16px;
@@ -3011,23 +3041,23 @@ span.date-display-single a {
   margin-top: 14px;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003305}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event {
   display: inline-block;
   margin-left: 10px;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003291}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003309}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event:nth-child(even) {
   background-color: #f0f0f0;
   border-top: 5px solid white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003295}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003313}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event:nth-child(odd) {
   background-color: white;
   border-top: 5px solid #f0f0f0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003318}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event .title a {
   font-family: 'graphiksemibold';
   font-size: 19px;
@@ -3035,7 +3065,7 @@ span.date-display-single a {
   line-height: 21px;
   white-space: initial;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003305}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003323}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .dia.cycle-slide #event .adreca {
   font-family: 'graphik_regularregular';
   font-size: 16px;
@@ -3045,7 +3075,7 @@ span.date-display-single a {
   font-style: italic;
   white-space: initial;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_calendari\.scss}line{font-family:\00003332}}
 .page-node-add-esdeveniment-agenda #main #content .view-agenda-llista .view-content #cal-line.cycle-slideshow .cycle-carousel-wrap .dia.cycle-slide .month-label {
   margin-top: -18px;
   border-left: 1px solid #5e5e5e;
@@ -7761,7 +7791,26 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003157}}
+.page-hemeroteca .general .columna1 .Notícia {
+  background-image: url("sites/all/themes/directa/images/adj2");
+  background-repeat: no-repeat;
+  height: 23px;
+  width: 32px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003163}}
+.page-hemeroteca .general .columna1 .numero {
+  color: #5e5e5e;
+  font-size: 24px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003168}}
+.page-hemeroteca .general .columna1 .data {
+  color: #5e5e5e;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003176}}
 .page-hemeroteca .general .columna2 {
   float: left;
   width: 16.66667%;
@@ -7775,7 +7824,7 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   box-sizing: border-box;
   word-wrap: break-word;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003179}}
 .page-hemeroteca .general .columna3 {
   float: left;
   width: 66.66667%;
@@ -7788,6 +7837,31 @@ body.page-puntsdevenda #main #content .view-punts-de-venda .view-content .views-
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003182}}
+.page-hemeroteca .general .columna3 .titol a {
+  color: #5e5e5e;
+  font-size: 26px;
+  font-weight: 600;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003187}}
+.page-hemeroteca .general .columna3 .bodier {
+  color: #5e5e5e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003191}}
+.page-hemeroteca .general .columna3 .etiquetes {
+  background-color: #e0e0e0;
+  height: 50px;
+  margin-top: -11px;
+  padding: 8px 8px 8px 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/directa_truc5\/sites\/all\/themes\/directa\/sass\/_hemeroteca\.scss}line{font-family:\00003196}}
+.page-hemeroteca .general .columna3 .etiquetes > a {
+  color: black;
+  font-family: publico_textroman;
+  font-size: 14px;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 /**

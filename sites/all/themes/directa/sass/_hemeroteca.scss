@@ -154,13 +154,55 @@
       @include zen-grid-container();
       .columna1 {
         @include zen-grid-item(2,1);
+        .Notícia {
+            background-image: url("sites/all/themes/directa/images/adj2");
+            background-repeat: no-repeat;
+            height: 23px;
+            width: 32px;
+        } 
+        .numero {
+            color: rgb(94, 94, 94);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .data {
+          color: rgb(94, 94, 94);
+          font-size: 22px;
+          font-weight: bold;
+        }
+        
+
       }
       .columna2 {
         @include zen-grid-item(2,3);
       }
       .columna3 {
        @include zen-grid-item(8,5);
-      }
+          
+        .titol a {
+          color: rgb(94, 94, 94);
+          font-size: 26px;
+          font-weight: 600;
+        }
+        .bodier {
+         color: rgb(94,94,94);
+
+       } 
+        .etiquetes {
+          background-color: rgb(224, 224, 224);
+          height: 50px;
+          margin-top: -11px;
+          padding: 8px 8px 8px 20px;
+        & > a {
+          color: rgb(0, 0, 0);
+          font-family: publico_textroman;
+          font-size: 14px;
+          font-weight: bolder;
+          text-decoration: underline;
+      }  
+     }   
+    
+     }
 
     }
   }

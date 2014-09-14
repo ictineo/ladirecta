@@ -154,6 +154,7 @@
                 margin-top: 25px;
               }
               .hierarchical-select-wrapper {
+                margin-left: 28%;
                 .hierarchical-select {
                   .selects {
                     .chosen-container.chosen-container-single {
@@ -203,21 +204,36 @@
                 margin-top: 20px;
                 margin-right: 20px;
               }
+              .image-widget {
+                .filefield-sources-list {
+                  a {
+                    @include graphik-medium(15px, #888888, 17px);
+                  }
+                }
+              }
+              .description {
+                margin-left: 12%;
+                @include graphik-medium(10px, #888888, 12px);
+                margin-top: 5px;
+              }
             }
           }
         }
         #edit-actions {
-          bottom: 50px;
+          bottom: 75px;
           display: inline-block;
           position: relative;
           float: right;
+          margin-right: 15px;
           input#edit-submit {
             background-color: $vermell;
+            border-radius: 4px;
             @include public-bold(20px, $blanc, 26px);
           }
         }
       }
       .view-agenda-llista {
+        margin-top: 50px;
         .view-content {
           #cal-line-next.cal-line-pager {
             pointer: cursor;
@@ -248,8 +264,8 @@
                 border-radius: 95px;
                 padding: 1px;
                 display: block;
-                height: 165px;
-                width: 165px;
+                height: 150px;
+                width: 150px;
                 .num,
                 .llet {
                   display: block;
@@ -270,8 +286,8 @@
                 border: 5px solid $gris7;
                 background-color: $blanc;
                 border-radius: 90px;
-                height: 160px;
-                width: 160px;
+                height: 145px;
+                width: 145px;
                 .num,
                 .llet {
                   color: $gris7;
