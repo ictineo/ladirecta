@@ -221,6 +221,10 @@
     }
     .view-clon-de-portada-seccions-llistat- {
       @include zen-grid-item(14,10);
+      .view-footer {
+         margin-left: 420px;
+         margin-top: -60px;
+      }
     }
     @include zen-clear();
   }

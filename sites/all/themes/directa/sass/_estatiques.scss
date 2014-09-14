@@ -45,24 +45,28 @@
   #main {
     $zen-column-count:23;
     $zen-gutter-width:10px;
-    
     @include zen-grid-container(); 
     #content {     
+      @include zen-grid-item(23,1);
       .page__title.title {
+          @include zen-grid-item(23,1);
+          border-bottom: 1px solid red; //PROVISIONAL
           background-image: url("../images/share.png");
           background-position: left center;
           background-repeat: no-repeat;
           color: #777777;
           //margin-left: 70px;
           padding-left: 50px;
-          margin-bottom: 50px;
-          padding-top: 0;
+          //margin-bottom: 50px;
+          padding-bottom: 20px;
+          padding-top: 20px;
           margin-top: 35px;
           @include graphik-bold(35px, $gris7, 40px);
       }
-      @include zen-grid-item(17,1);
       .view { 
         //padding-left:100px;
+        @include zen-clear();
+        @include zen-grid-item(17,1);
         article {
            .node__title.node-title{
              @include graphik-regular(40px,$gris7,45px);
@@ -106,7 +110,30 @@
   }  
     .sidebars {
       @include zen-grid-item(6,18);
-      margin-top:100px;
+      margin-top: 250px;
     }
   }
+    .webform-client-form-11465 {// graella formulario --> no funciona. S'ha de revisar en conjunt la graella del node
+      $zen-colum-count: 2;
+      $zen-gutter-width: 10px;
+      @include zen-nested-container();
+      #webform-component-nom {
+        @include zen-grid-item(1,1);
+      }
+      #webform-component-adreca {
+        @include zen-grid-item(1,2);
+      }
+      #webform-component-assumpte {
+        @include zen-clear();
+        @include zen-grid-item(2,1);
+      }
+      #webform-component-missatge {
+        @include zen-clear();
+        @include zen-grid-item(2,1);
+      }
+      
+      
+  }
 }
+  
+

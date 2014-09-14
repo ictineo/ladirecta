@@ -105,6 +105,11 @@ if (drupal_is_front_page()) {
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
+        <?php /** amagem el contingut principal si estem a una portada interna**/ ?>
+        <?php //if(arg(0) == 'seccionspaper' || arg(0) == 'seccionsweb' || arg(0) == 'territorial'): ?>
+        <?php if(arg(0) == 'taxonomy'): ?>
+          <?php hide($page['content']['system_main']); ?>
+        <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       <?php else: ?>

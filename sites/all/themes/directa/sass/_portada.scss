@@ -1,3 +1,4 @@
+body.page-taxonomy,
 body.front {
  #main {
    $zen-column-count:23;
@@ -40,7 +41,7 @@ body.front {
             background-position: 0 50%;
             background-repeat: no-repeat;
             display: block;
-            width: 100%;
+            width: 90%;
             padding-left: 28px;
             &[href*="/fotogaleria/"] {
               background-image: url('../images/foto_p.png');
