@@ -1,0 +1,149 @@
+// Hemeroteca
+
+.page-hemeroteca {
+
+  #content { 
+    margin-left:30px;     
+    $zen-column-count:6;
+    $zen-gutter-width:10px;                                                                                   
+    @include zen-grid-container();
+    #page-title {
+      display:none;
+    }
+
+   .views-exposed-widgets {
+     @include zen-grid-item(6,1); 
+     $zen-column-count:12;
+     $zen-gutter-width:10px;                                                                                   
+     @include zen-grid-container();
+     /*.views-exposed-widget.views-widget-filter-search_api_views_fulltext {*/
+       /*width:100%;*/
+     /*}*/
+     #edit-search-api-views-fulltext-wrapper  {
+      
+      @include zen-clear(); 
+      @include zen-grid-item(12,1);
+      /*$zen-column-count:6;*/
+      /*$zen-gutter-width:10px;                                                                                   */
+      /*@include zen-grid-container();*/
+      label {
+        dispolay: none;
+      }
+      .form-text.form-autocomplete {
+       @include zen-grid-item(12,1);
+        height: 50px;
+      }
+      @include zen-clear(); 
+
+    }
+    /** quiron **/
+    #edit-search-api-views-fulltext-wrapper {
+      @include zen-grid-item(12,1);
+      @include zen-clear(); 
+      margin-bottom: 30px;
+      & > label {
+        display: none;
+   
+      } 
+    }
+    #edit-field-data-wrapper {
+      @include zen-clear(); 
+      @include zen-grid-item(3,5);  
+      .views-widget {
+        display: inline-block;
+        width:50%;
+       }
+       label {
+         width:60px; 
+         display:inline-block;
+       }
+     .form-item.form-type-textfield.form-item-field-data-date > label {
+         display: none;
+      } 
+     .description {
+       margin-left: -130%;
+     }
+     #edit-field-data-datepicker-popup-0 {
+      max-width:50%;
+     }
+
+    }
+    #edit-field-data-1-wrapper {
+      @include zen-clear(); 
+      @include zen-grid-item(3,5);
+      margin-top: -20px;
+       .views-widget {
+        display: inline-block;
+        width:50%;
+       }
+       label {
+         width:60px; 
+         display:inline-block;
+       }
+      .form-item.form-type-textfield.form-item-field-data-1-date > label {
+       display: none;
+      }
+
+     #edit-field-data-1-datepicker-popup-0{
+      max-width:50%;
+     }
+    }
+    #edit-field-seccio-wrapper {
+      @include zen-grid-item(4,8);
+      & > label {
+        display:none;
+      }
+      #edit_field_seccio_chosen{
+        width: 100%;
+      } 
+    }
+     
+    #edit-author-wrapper {
+      @include zen-clear(); 
+      @include zen-grid-item(4,8);
+      & > label {
+        display:none;
+      }
+    }
+    #edit-type-wrapper {
+      @include zen-clear(); 
+      @include zen-grid-item(3,5);
+      .description{ 
+        margin-left: -130%;
+        margin-top: -50px; 
+      }
+     }
+    #edit-type-1--2-wrapper {
+      @include zen-grid-item(4,8);
+    }
+    .views-submit-button {
+      @include zen-clear(); 
+      @include zen-grid-item(4,8);
+    }
+    .views-widget .description {
+      display: none;
+    }
+   }
+
+     
+   
+   }
+    .general {
+      @include zen-clear();
+      @include zen-grid-item(6,1);  
+      $zen-column-count:6;
+      $zen-gutter-width:10px;                                                                                   
+      @include zen-grid-container();
+      .columna1 {
+        @include zen-grid-item(1,1);
+      }
+      .columna2 {
+        @include zen-grid-item(1,2);
+      }
+      .columna3 {
+       @include zen-grid-item(4,3);
+      }
+
+    }
+  }
+
