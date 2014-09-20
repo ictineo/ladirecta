@@ -33,7 +33,7 @@ if($view_mode == 'full') {
 
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
+<?php   dsm($node); ?>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
@@ -56,11 +56,16 @@ if($view_mode == 'full') {
   <?php endif; ?>
 
   <?php if($view_mode == 'full'): ?>
+    <div id="nav-links-wrapper">
     <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-    <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div>
+    <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print "&nbsp"; ?></a></div>
+  </div>
   <?php endif; ?>
   <?php
     // We hide the comments and links now so that we can render them later.
+
+//print('<div class=data1>'.$node->field-data-ag['und']['0']['value'].'</div>');
+//print('<div class=data2>'.$node->field-data-ag['und']['0']['value2'].'</div>');
     hide($content['comments']);
     hide($content['links']);
     print render($content);

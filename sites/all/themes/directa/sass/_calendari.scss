@@ -73,10 +73,12 @@
   }
 }
 
-
-.page-node-add-esdeveniment-agenda {
+/*theming formulari*/
+.page-node-add-esdeveniment-agenda, 
+.page-node-edit.page-node-add-esdeveniment-agenda {
   #main {
     #content {
+      background: none;
       .breadcrumb {
         display: none;
       }
@@ -87,6 +89,7 @@
         background: url('../images/agenda.png') no-repeat -30px 0;
       }
       form#esdeveniment-agenda-node-form {
+        border-bottom: 1px dashed $fons;
         textarea,
         input {
           background-color: $fons_form;
@@ -113,6 +116,7 @@
               border: none 0px;
               margin-left: 0px;
               padding-left: 0px;
+              background: none;
               legend {
                 text-align: center;
                 padding-right: 16px;
@@ -239,22 +243,25 @@
             pointer: cursor;
             background: url('../images/arrowh.png') no-repeat 0px 0px;
             float: left;
+            margin: 21% 0 0 -1.5%;
           }
           #cal-line-prev.cal-line-pager {
             pointer: cursor;
             background: url('../images/arrowh.png') no-repeat -24px 0px;
             float:right;
+            margin: 21% -7.5% 0 0;
           }
           .cal-line-pager {
             display: block;
             width: 24px;
             height: 24px;
-            //margin-top: 256px;
+            //margin-top: -220px;
           }
           #cal-line.cycle-slideshow {
             margin-top: -110px;
             .cycle-carousel-wrap {
               position: relative !important;
+              margin-top: -70px !important;
             }
             /* estils generics de les boles */
             .dia.cycle-slide {
@@ -268,6 +275,7 @@
                 height: 170px;
                 width: 170px;
                 padding-right: 5px;
+                margin-bottom: 10px;
                 .num,
                 .llet {
                   display: block;
@@ -306,29 +314,66 @@
                   text-transform: uppercase;
                 }
               }
+              .no-events,
               #event {
-                display: inline-block;
-                margin-left: 10px;
-                width: 100%;
-                &:nth-child(even) {
-                  background-color: $gris9;
-                  border-top: 5px solid $blanc;
-                }
-                &:nth-child(odd) {
-                  background-color: $blanc;
-                  border-top: 5px solid $gris9;
-                }
+                margin: 0 5px;
+                width: 95%;
+                padding: 5px 0 5px 5px;
                 .title {
+                  margin-top: 5px;
                   a {
                     @include graphik-semibold(19px,$gris7,21px);
                     white-space: initial;
                   }
                 }
                 .adreca {
-                  @include graphik-regular(16px,$gris4,16px);
+                  font-family: Arial;
+                  font-size: 15px;
+                  line-height: 16px;
+                  color: $gris2;
                   font-style: italic;
                   white-space: initial;
+                  margin-top: 5px;
                 }
+                .resum .field-body {
+                  font-family: Arial;
+                  font-size: 17px;
+                  line-height: 19px;
+                  color: $gris2;
+                  margin-top: 5px;
+                  margin-bottom: 10px;
+                  p {
+                    margin: inherit;
+                    white-space: normal;
+                  }
+                }
+                .mesinfo {
+                  margin-top: 5px;
+                  a {
+                    font-family: publico_textroman;
+                    font-size: 19px;
+                    color: $negre;
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .no-events {
+                font-family: Arial;
+                font-size: 19px;
+                line-height: 21px;
+                color: $gris2;
+                font-style: italic;
+                white-space: initial;
+                margin-top: 5px;
+                text-align: center;
+              }
+              &:nth-child(even) #event {
+                  background-color: $gris9;
+                  border-top: 5px solid $blanc;
+              }
+              &:nth-child(odd) #event {
+                  background-color: $blanc;
+                  border-top: 5px solid $gris9;
               }
             }
             .cycle-carousel-wrap {

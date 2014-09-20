@@ -9,6 +9,9 @@ body.front {
    #content,
    #destacat,
    .sidebars {
+     .messages--error {
+       display:none;
+     }
      .views-field-title {
        margin-top: 12px;
        a {
@@ -224,38 +227,88 @@ body.front {
    /* columna mig (actualitat) */
    .sidebars .region-sidebar-first {
      @include zen-grid-item(8,10);
-     padding: 0 18px;
-     background-color: $fons;
-     padding-top: 22px;
-     /*COLUMNA ACTUALITAT (DRETA)*/
-     .front .region-sidebar-first {
-       padding: 0 20px;
-       border-right: 1px solid #e9e9e9;
-       #block-views-portada-columnadreta-block-1 {
-        background-color: #e9e9e9;
-         .block__title block-title {
-           display:none;
+     padding-right: 10px;
+     border-right: 1px solid $gris6;
+     & > div {
+       padding: 0 14px;
+       background-color: $fons;
+       padding-top: 22px;
+       padding-bottom: 0px;
+       margin-bottom: 0px;
+       .view-portada-columnadreta { 
+         .field-video {
+           .media-youtube-player {
+             width:100%;
+           }
          }
+         .fotogaleria {
+           background-color: rgb(220, 220, 220);
+           background-image: url("../images/foto.png");
+           background-position: center center;
+           background-repeat: no-repeat;
+           border-radius: 30px 30px 30px 30px;
+           height: 40px;
+           margin-left: 10px;
+           margin-top: -70px;
+           padding: 5px;
+           position: absolute;
+           width: 40px;
+         } 
+         .video {
+           background-color: rgb(220, 220, 220);
+           background-image: url("../images/video.png");
+           background-position: center center;
+           background-repeat: no-repeat;
+           border-radius: 30px 30px 30px 30px;
+           height: 40px;
+           margin-left: 10px;
+           margin-top: -70px;
+           padding: 5px;
+           position: absolute;
+           width: 40px;
+         } 
        }
      }
    }
+     /*COLUMNA ACTUALITAT (DRETA)*/
 
    /** columna dreta (sidebar) **/
    .sidebars .region-sidebar-second {
      @include zen-grid-item(6,18);
+     /*correccio del gutter*/
+     padding-right: 0px;
+     padding-left: 10px;
      /*BUTLLETÍ SONOR**/
-     #faldo_esquerra {
-     @include zen-grid-background;
-       $zen-column-count:5;
-       @include zen-nested-container();
-       @include zen-grid-background;
-       #faldo_esquerra_portada {
-         @include zen-grid-item(2,1);
-         background-color: green;
+     .view-id-fald_.view-display-id-block_1 .views-row-1 {
+       border-bottom: 0px none;
+       margin-bottom: 32px;
+       min-height: 270px;
+       .field-portada-numero {
+         width: 60%;
+         float: left;
+         margin-right: 10px;
+         img {
+           width: 95%;
+           padding: 0px;
+         }
        }
-       #faldo_esquerra_dreta {
-         @include zen-grid-item(2,3);
-         background-color: yellow;
+       .prototype-wrapper,
+       .num,
+       .date-display-single,
+       .field-pdf,
+       & > a,
+       .field-butlleti-sonor {
+         display: inline;
+       }
+       .prototype-wrapper {
+         right: 0px;
+         position: absolute;
+       }
+       .num {
+         @include graphik-semibold(16px, $gris7, 18px);
+       }
+       &:after {
+         clear: both;
        }
      }
    }

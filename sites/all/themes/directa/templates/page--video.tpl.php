@@ -10,8 +10,8 @@
 
 <?php
 if (drupal_is_front_page()) {
-  //$variables['title']="";
-  //unset($variables['page']['content']['system_main']['default_message']);
+  $variables['title']="";
+  unset($variables['page']['content']['system_main']['default_message']);
 }
 ?>
 
@@ -90,35 +90,38 @@ if (drupal_is_front_page()) {
     </div>   
 
     <div id="content" class="column" role="main">
-      <?php if(!$is_front): ?>
-        <?php print render($page['highlighted']); ?>
-        <?php print $breadcrumb; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php print render($tabs); ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php /** amagem el contingut principal si estem a una portada interna**/ ?>
-        <?php //if(arg(0) == 'seccionspaper' || arg(0) == 'seccionsweb' || arg(0) == 'territorial'): ?>
-        <?php if(arg(0) == 'taxonomy' && !(arg(3) == 'edit')): ?>
-          <?php hide($page['content']['system_main']); ?>
-          <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/alturaportada.js'); ?>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
-      <?php else: ?>
-        <?php hide($page['content']['system_main']); ?>
-        <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/alturaportada.js'); ?>
-        <?php print $messages; ?>
-        <?php print render($page['content']); ?>
+      <?php print render($page['highlighted']); ?>
+      <?php print $breadcrumb; ?>
+      <a id="main-content"></a>
+      <?php if(!empty($node->field_seccio_web) || (!empty($node->field_autoria_general))):
+        print '<div class="meta-info-top">';
+        print render(field_view_field('node', $node, 'field_seccio_web', array('label' => 'hidden')));
+        if(!empty($node->field_autoria_general) || !empty($node->field_data)):
+          print   '<span class="autories">';
+          print     render(field_view_field('node', $node, 'field_autoria_general', array('label' => 'hidden')));
+          print     render(field_view_field('node', $node, 'field_data', array('label' => 'hidden', 'settings' => array('format_type' => 'franja'))));
+          print   '</span>';
+        endif;
+        print '</div>';
+        foreach($page['content']['system_main']['nodes'] as $nid => $node):
+          hide($page['content']['system_main']['nodes'][$nid]['field_seccio_web']);
+          hide($page['content']['system_main']['nodes'][$nid]['field_autoria_general']);
+          hide($page['content']['system_main']['nodes'][$nid]['field_data']);
+        endforeach;
+      endif;?>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      <?php print render($tabs); ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
     </div>
 
     

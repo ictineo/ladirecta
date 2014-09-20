@@ -2,38 +2,107 @@
 
 
 /*NOTICIAS*/
-
+.page-node-add,
+.page-node-edit,
 .page-node-add-noticia {
+  .node-type-list {
+    a {
+    @include graphik-medium(16px,$gris7,16px);
+    }
+    dd {
+      margin-left: 0;
+      padding-bottom: 10px;
+    }
+  }
+  #edit-field-fotografies {
+    #edit-field-fotografies-und-0 {
+      max-width: 80%;
+      .fieldset-wrapper {
+        max-width: 80%;
+      }
+    }
+  }
+  #content {
+    background-color: #eeeeee;
+  }
+  #edit-actions {
+    margin-top: 10px;
+    text-align: right;
+  }
+  .vertical-tabs  {
+    margin-bottom: 0;
+    a {
+    @include graphik-medium(16px,$gris7,16px);
+    }
+  }
+  #edit-field-portada-fotogaleria {
+    a {
+    @include graphik-medium(16px,$gris7,16px);
+    }
+  }
+
+ .form-item .tabledrag-toggle-weight-wrapper a {
+    display: none;
+  }
+  .ds-2col-stacked-fluidi.ds-form.clearfix {
+    .ds-2col-stacked-fluid > .group-footer {
+      background-color: #eeeeee;
+    }
+  }
+  .form-field-type-field-collection {
+    background-color: #eeeeee;
+    input {
+      max-width: 90%;
+    }
+    a {
+    @include graphik-medium(16px,$gris7,16px);
+    }
+  }
   label {
     @include graphik-medium(18px, $negre, 18px);
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
   fieldset.form-wrapper {
     border: none;
+    background-color: #eeeeee;
+    .filter-wrapper {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  #edit-body-und-0-format {
+    .filter-wrapper {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
   .tips,
   .description {
     @include graphik-regular(12px,$gris7,12px);
   }
+  #edit-field-fotografies {
+    background-color: #ffffff;
+  }
+  .field-type-text-with-summary { 
+    a {
+      @include graphik-medium(16px,$gris7,16px);
+    }
+  }
 
-  .form-item .tabledrag-toggle-weight-wrapper a {
+
+  .messages--error {
     display: none;
   }
-}
-
-
-
-/*Editor de texto*/
-.field-type-text-with-summary {
-  a {
-    @include graphik-medium(16px,$gris7,16px);
+  #block-twitter-block-1 {
+    display: none;
   }
-}
-
-
-
 
 }
 
-
+html .messages--error {
+  display: none;
+}
 
 
 

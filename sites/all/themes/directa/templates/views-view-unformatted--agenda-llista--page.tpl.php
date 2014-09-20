@@ -32,6 +32,9 @@ foreach ($view->result as $id => $row):
   }
   if (array_key_exists(date('Y-m-d', strtotime($row->field_data_field_data_ag_field_data_ag_value)), $days)) {
     $output  = '<div id="event">';
+    //$output .=   '<span class="hora">';
+    //$output .=     $row->field_data_field_data_ag_field_data_ag_value[0]['rendered']; //Jude adds
+    $output .=   '</span>';
     $output .=   '<span class="title">';
     $output .=     '<a href='.url('node/'. $row->nid).'>'.$row->node_title.'</a>';
     $output .=   '</span>';
@@ -85,7 +88,7 @@ foreach ($days as $date => $res):
      if(!empty($res)) {
       print($res);
      } else {
-       print('<span class="no-events">Cap event aquest dia</span>');
+       print('<span class="no-events"><div class="no-events">Cap event aquest dia</div></span>');
      }
     ?> 
   </div><!-- /dia --> 

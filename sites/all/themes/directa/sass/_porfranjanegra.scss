@@ -21,8 +21,6 @@
   color: $gris7;
 }
 
-
-
 @mixin autoria-fn() {
   font-size: 15px;
   line-height: 20px;
@@ -217,13 +215,13 @@
     @include zen-grid-container();
     .view-id-portada_seccions {
       @include zen-clear();
-      @include zen-grid-item(9,1);
+      @include zen-grid-item(12,1);
     }
     .view-clon-de-portada-seccions-llistat- {
-      @include zen-grid-item(14,10);
+      @include zen-grid-item(11,13);
       .view-footer {
-         margin-left: 420px;
-         margin-top: -60px;
+         margin-left: 70%;
+         display:block;
       }
     }
     @include zen-clear();
@@ -355,7 +353,10 @@
 
 }
 
-
+#enllas a {
+  @include graphik-medium(19px,$blanc,25px);
+  background-color: $gris7;
+}
 
 
 

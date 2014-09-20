@@ -31,6 +31,9 @@ $zen-auto-include-item-base: false;
  * by setting a max-width.
  */
 #page,
+/*#page > header,*/
+/*#page > #main,*/
+/*#page > footer,*/
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -283,7 +286,7 @@ $zen-auto-include-item-base: false;
   }
 
   /** això és per TOT el contingut NO PORTADA? sino s'ha d'acotar **/
- .node-type-actualitat, .node-type-noticia, .node-type-esdeveniment-agenda, .node-type-fotogaleria, .node-type-videogaleria  {
+ .node-type-actualitat, .node-type-noticia, .node-type-esdeveniment-agenda  {
    #main {
      $zen-column-count:23;
      $zen-gutter-width:10px; 

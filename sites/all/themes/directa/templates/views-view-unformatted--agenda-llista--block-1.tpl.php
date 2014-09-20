@@ -103,7 +103,7 @@ foreach ($days as $date => $res):
     print($res);
   }
   else {
-    print('<span class="no-events">Cap event aquest dia</span>');
+    print('<span class="no-events"><div class="no-events">Cap event aquest dia</div></span>');
   }
 print(' </div></div>  ');
 endforeach;

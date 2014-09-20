@@ -34,7 +34,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Italic Title',		element: 'h2', styles: { 'font-style': 'italic' } },
 	{ name: 'Subtitle',			element: 'h3', styles: { 'color': '#aaa', 'font-style': 'italic' } },
 	
-{ name: 'Destacat',			element: 'div', attributes: { 'class': 'destacat' } },//Jude added
+{ name: 'Destacat',			element: 'div', attributes: { 'class': 'destacat' }, styles: {'color':'#C13432'} },//Jude added
 //	{
 //		name: 'Special Container',
 //		element: 'div',

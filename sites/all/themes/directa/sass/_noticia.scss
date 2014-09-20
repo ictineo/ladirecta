@@ -18,6 +18,10 @@
           @include zen-grid-item(14,1);
         }
       }
+      .flag-destacado_portada {
+        display:none;
+      }
+
       .easy_social_box {
         @include zen-clear();
         @include zen-grid-item(3,1);
@@ -112,7 +116,7 @@
             }
             &.node-nav-links-next {
               //box-shadow: 6px 3px 10px 2px $fons;
-              right:30%;
+              right:0%;
               //text-align: right;
               //background: url('../images/next.png') no-repeat 10px 10px;
               width: 40px;
@@ -147,7 +151,8 @@
           padding-top: 30px;
           .field-autor,
           .date-display-single {
-            @include graphik-bold(15px,$gris7,22px);
+            @include graphik-bold(11px,$gris7,22px);
+            padding-left: 5px;
           }
           .field-autor {
             text-transform: uppercase;

@@ -1,0 +1,71 @@
+
+.page-node-16432 {
+  $zen-column-count: 4;
+  $zen-gutter-width: 20px;
+  @include zen-grid-container;
+  .bola {
+    @include zen-grid-item(2,3);
+  }
+  #page-title, 
+  article.node-16432 {
+    @include zen-clear();
+    @include zen-grid-item(2,1);
+  }
+  #block-views-exp-hemeroteca-page-1--2 {
+    @include zen-clear();
+    @include zen-grid-item(2,1);
+  }
+}
+
+/*404*/
+.page-node-16432 {
+  .bola {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    background-color: $fons;
+  }
+  #page-title {
+    @include graphik-bold(35px,$gris7,40px);
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  article.node-16432 {
+    .field-body {
+      .no-auth {
+        @include graphik-regular(30px,$gris7, 40px); 
+        padding-right: 40px;
+        margin-bottom: 10px;
+      }
+      .subscriu {
+        @include graphik-medium(16px,$gris3, 25px); 
+        margin-bottom: 20px;
+        a {
+          @include graphik-semibold(16px,$negre,25px);
+          text-decoration: underline;
+        }
+      }
+    }
+    .easy_social_box {
+      display: none;
+    }
+  }
+  #block-views-exp-hemeroteca-page-1--2 {
+    margin-bottom: 185px;
+    #views-exposed-form-hemeroteca-page-1 {
+      #edit-search-api-views-fulltext-wrapper {
+        input#edit-search-api-views-fulltext {
+          @include graphik-medium (25px,$form, 35px);
+          width: 90%;
+        }
+      }
+      .views-exposed-widget.views-submit-button {
+        display: none;
+      }
+    }
+  }
+}

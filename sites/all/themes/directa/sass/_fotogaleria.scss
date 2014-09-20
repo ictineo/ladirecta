@@ -24,31 +24,37 @@
  * REVISAR
  */
 .page-fotogaleria,
-.not-front.node-type-fotogaleria {
+.page-videogaleria,
+.not-front.node-type-fotogaleria, 
+.not-front.node-type-video {
+  
   #content {
+    $zen-column-count:23;   
+    $zen-gutter-width:10px;    
+    @include zen-grid-item(23,1);
     $zen-column-count:9;
-    $zen-gutter-width:10px;
     @include zen-nested-container();
-    @include zen-grid-background();
     .field-seccio-web {
-      @include zen-grid-item(1,1);
     }
     .field-autoria-general{
-      @include zen-grid-item(2,2);
+      display:inline;
       @include graphik-medium(15px,$gris3,22px);
       text-transform: uppercase;
       text-decoration: underline;   
     }
-
     .field-data {
-      @include zen-grid-item(3,3);
+      display:inline;
+    }
+    .field-video{
+      @include zen-grid-item(7,3);
+      @include zen-clear();
     }
 
     .field-fotografies  {
       @include zen-clear();
       @include zen-grid-item(9,1);
       .field-slideshow {
-        @include zen-grid-item(7,2);
+        @include zen-grid-item(8,2);
       }
       .field-slideshow-caption {
         @include public-roman(21px, $gris7,30px);
@@ -90,7 +96,11 @@
       @include zen-grid-item(1,1,left);
     }
     .field-body { 
+      @include zen-clear();
       @include zen-grid-item(8,1,right);
+    }
+    .flag-outer {
+      display:none;
     }
     .field-etiquetes {
       @include zen-clear(both);
@@ -98,8 +108,10 @@
       @include etiquetes-2;
       margin-bottom:100px;
     }
-    #block-views-fotogaleria-block  {
-      @include zen-grid-item(6,1);
+    #block-views-fotogaleria-block,
+    #block-views-videogaleria-block {
+      @include zen-clear();
+      @include zen-grid-item(9,1);
       $zen-column-count: 3;
       $zen-gutter-width: 10px;
       border-right: 1px solid $fons;
@@ -135,6 +147,21 @@
       }
 
     }
+    .view-id-fotogaleria.view-display-id-page,
+    .view-id-videogaleria.view-display-id-page {
+      .views-field-title.field-content {
+          @include graphik-semibold(18px, $gris7,22px); /*variacio disseny*/
+      }  
+      .field-body {
+        @include zen-clear();
+
+      }
+      .field-slideshow-pager.slides-4 {
+        @include zen-clear();
+      }
+    
+    }
+  
   }
 
 
@@ -144,7 +171,7 @@
 
 
 
-  #page-title {
+  #page-title, .page-title {
     @include titulo-fotogaleria;
     margin-top: 10px;
     margin-bottom:10px;
@@ -156,12 +183,20 @@
       margin-top: 0;
     }
   }
-  #block-views-fotogaleria-block {
+  #block-views-fotogaleria-block,
+  #block-views-videogaleria-block {
+    @include zen-grid-item(9,1);
+    margin-top:100px;
+    table {
+      width:100%;
+    }
     .block-title {
       @include graphik-medium(26px,$gris7,30px);
+      margin-top:-10px;
     }
     .views-field-title a {
       @include graphik-semibold(18px, $gris7,22px); /*variacio disseny*/
+      
     }
     .view-footer {
       @include graphik-semibold(21px,$gris7,24px);
@@ -175,6 +210,7 @@
     }
   }
 }
+
 
 /**
  * Vista de fotogaleries
