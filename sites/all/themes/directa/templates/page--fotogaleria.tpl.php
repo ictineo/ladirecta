@@ -93,19 +93,19 @@ if (drupal_is_front_page()) {
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
-      <?php if(!empty($node->field_seccio_web) || (!empty($node->field_autoria_general))):
+      <?php if(!empty($node->field_seccio_web) || (!empty($node->field_autor))):
         print '<div class="meta-info-top">';
         print render(field_view_field('node', $node, 'field_seccio_web', array('label' => 'hidden')));
-        if(!empty($node->field_autoria_general) || !empty($node->field_data)):
+        if(!empty($node->field_autor) || !empty($node->field_data)):
           print   '<span class="autories">';
-          print     render(field_view_field('node', $node, 'field_autoria_general', array('label' => 'hidden')));
+          print     render(field_view_field('node', $node, 'field_autor', array('label' => 'hidden')));
           print     render(field_view_field('node', $node, 'field_data', array('label' => 'hidden', 'settings' => array('format_type' => 'franja'))));
           print   '</span>';
         endif;
         print '</div>';
         foreach($page['content']['system_main']['nodes'] as $nid => $node):
           hide($page['content']['system_main']['nodes'][$nid]['field_seccio_web']);
-          hide($page['content']['system_main']['nodes'][$nid]['field_autoria_general']);
+          hide($page['content']['system_main']['nodes'][$nid]['field_autor']);
           hide($page['content']['system_main']['nodes'][$nid]['field_data']);
         endforeach;
       endif;?>
@@ -169,3 +169,4 @@ if (drupal_is_front_page()) {
 
 <?php print render($page['bottom']); ?>
 
+  <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/comportaments_generics.js'); ?>

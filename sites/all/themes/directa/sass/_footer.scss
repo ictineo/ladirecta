@@ -59,15 +59,18 @@
   }
   #block-nice-menus-3,
   #block-nice-menus-3--2 {
-    $zen-column-count:3;
+    $zen-column-count:2;
     $zen-gutter-width:10px;
     @include zen-grid-container();
+    ul {
+      width: auto;
+    }
     li.odd {
-      @include zen-grid-item(3,1);
+      @include zen-grid-item(1,1);
       @include zen-clear(left);
     }
     li.even {
-      @include zen-grid-item(2,4);
+      @include zen-grid-item(1,2);
       @include zen-clear(right);
     }
   }

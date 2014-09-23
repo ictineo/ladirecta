@@ -7,8 +7,6 @@
  * @see https://drupal.org/node/1728164
  */
 ?>
-<!--Bola gris-->
-<div class="bola"><?php print "&nbsp"; ?></div>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
@@ -37,11 +35,6 @@
     hide($content['comments']);
     hide($content['links']);
     print render($content);
-
-    $search_block = block_load('views', '-exp-hemeroteca-page-1');
-    print_r($search_block);
-    $output =  drupal_render(_block_get_renderable_array(_block_render_blocks(array($search_block)))); 
-    print $output; 
   ?>
 
   <?php print render($content['links']); ?>

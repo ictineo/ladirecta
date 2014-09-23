@@ -212,12 +212,19 @@ body.front {
      @include zen-clear();
      @include zen-grid-item(9,1);
      padding: 20px 12px;
+     .feeds-icon {
+     display:none;
+     }
      /*COLUMNA NOTICIES (ESQUERRA)*/
-     .view-portada-columnaizquierda.view-display-id-block_1 {
-       h2.node-title a {
-         @include titular-not;
+     .view-portada-columnaizquierda {
+       .feed-icon {
+         display:none;
        }
-
+       .view-display-id-block_1 {
+         h2.node-title a {
+           @include titular-not;
+         }
+       }
      }
    }
 
@@ -267,6 +274,9 @@ body.front {
            position: absolute;
            width: 40px;
          } 
+         .feed-icon {
+           display:none;
+         }
        }
      }
    }

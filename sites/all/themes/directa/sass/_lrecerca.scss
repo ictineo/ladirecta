@@ -1,0 +1,117 @@
+/*Línies de recerca i actualitat*/
+
+.node-type-linies-de-recerca {
+  .breadcrumb {
+    display: none;
+  }
+  #main #content {
+    article.node-linies-de-recerca.view-mode-full {
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      .easy_social_box {
+        @include zen-clear();
+        @include zen-grid-item(3,1);
+      }
+      .field-body {
+        @include zen-grid-item(12,4);
+      }
+      #tags-wrapper {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+      }
+      section#comments {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+        #comment-form div {
+          $zen-column-count: 2;
+          @include zen-grid-container();
+          .form-item-name {
+            @include zen-grid-item(1,1);
+          }
+          .form-item-subject {
+            @include zen-grid-item(1,2);
+          }
+          #edit-comment-body {
+            @include zen-clear();
+            @include zen-grid-item(2,1);
+          }
+          #edit-field-archius-adjunts {
+            @include zen-clear();
+            @include zen-grid-item(1,1);
+          }
+          #edit-actions {
+            @include zen-grid-item(1,2);
+          }
+        }
+      }
+    }
+  }
+}
+ 
+.node-type-linies-de-recerca {
+  #main #content {
+    margin-top: 30px;
+    #page-title {
+      @include titulo-not;
+      padding-top: 20px;
+    }
+    article.node-linies-de-recerca.view-mode-full {
+      .field-body {
+        padding-top: 30px;
+        margin-bottom: -120px;
+        p {
+          @include body;
+          font-size: 20px; //jude modifica. hay q modificar el mixin cuando sea definitivo y borrar esta linea
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+      }
+      section#comments {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px dashed $fons;
+        h2 {
+          @include public-roman(19px, $gris7, 24px);
+        }
+        #comment-form {
+          @include user-login;
+          .form-item {
+            input#edit-name,
+            input#edit-subject,
+            textarea#edit-comment-body-und-0-value {
+              padding: 5px 10px;
+              text-align: left;
+            }
+          }
+          #edit-actions.form-actions {
+            text-align: right;
+            input#edit-submit {
+              background-color: $gris7;
+              color: $fons;
+              padding: 5px 20px;
+            }
+          }
+          #edit-field-archius-adjunts {
+            #edit-field-archius-adjunts-und-0 {
+              margin-top: 0px;
+              #edit-field-archius-adjunts-und-0-title {
+                margin-top: 0px;
+                display: inline-block;
+                label {
+                  @include graphik-medium(21px,#9a9a9a,auto);
+                }
+              }
+              a#edit-field-archius-adjunts-und-0-select {
+                @include login-shadow;
+                @include graphik-medium(17px, $gris7, auto);
+                padding: 5px 20px;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

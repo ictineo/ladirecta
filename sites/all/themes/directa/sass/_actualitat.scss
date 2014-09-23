@@ -1,10 +1,10 @@
-/*NOTICIA COMPLETA**/
-.node-type-noticia {
+/*Actualitat grid**/
+.node-type-actualitat {
   .breadcrumb {
     display: none;
   }
   #main #content {
-    article.node-noticia.view-mode-full {
+    article.node-actualitat.view-mode-full {
       $zen-column-count: 17;
       @include zen-grid-container();
       .field-fotografies {
@@ -18,7 +18,6 @@
           @include zen-grid-item(14,1);
         }
       }
-
       .easy_social_box {
         @include zen-clear();
         @include zen-grid-item(3,1);
@@ -36,7 +35,7 @@
       .field-collection-container {
         @include zen-clear();
         @include zen-grid-item(13,3);
-        article.field-contingut-relacionat {//node-noticia.view-mode-token {
+        article.field-contingut-relacionat {//node-noticia.view-mode-token 
           $zen-column-count: 3;
           $zen-gutter-width: 10px;
           $zen-auto-include-item-base: true;
@@ -61,7 +60,31 @@
             .field-body {
               @include zen-clear();
               @include zen-grid-item(3,1);
-           }
+            }
+          }
+        }
+      }
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      section#comments {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+        #comment-form div {
+          $zen-column-count: 2;
+          @include zen-grid-container();
+          .form-item-name {
+            @include zen-grid-item(1,1);
+          }
+          .form-item-subject {
+            @include zen-grid-item(1,2);
+          }
+          #edit-comment-body {
+            @include zen-clear();
+            @include zen-grid-item(2,1);
+          }
+          #edit-actions {
+            @include zen-clear();
+            @include zen-grid-item(2,1);
           }
         }
       }
@@ -71,11 +94,8 @@
 
 
 
-/*NOTICIA COMPLETA*/
-/***
- * OJU SELECTOR MASSA GENERIC PER SER NOTICIA DE PORTADA!
- */
-.not-front.node-type-noticia {
+/*Actualitat estils*/
+.not-front.node-type-actualitat {
   #main {
     #content {
       margin-top: 30px;
@@ -83,12 +103,7 @@
         @include titulo-not;
         padding-top: 20px;
       }
-      //.node-title {
-        //a {
-         // @include titulo-not;
-       // }
-      //}
-      article.node-noticia.view-mode-full {
+      article.node-actualitat.view-mode-full {
         #nav-links-wrapper {
           .node-nav-links {
             position: absolute;
@@ -267,6 +282,30 @@
               }
               .field-destacar {
                 display: none;
+              }
+            }
+          }
+        }
+        section#comments {
+          h2 {
+            @include public-roman(19px, $gris7, 24px);
+          }
+          #comment-form {
+            @include user-login;
+            .form-item {
+              input#edit-name,
+              input#edit-subject,
+              textarea#edit-comment-body-und-0-value {
+                padding: 5px 10px;
+                text-align: left;
+              }
+            }
+            #edit-actions.form-actions {
+              text-align: right;
+              input#edit-submit {
+                background-color: $gris7;
+                color: $fons;
+                padding: 5px 20px;
               }
             }
           }
