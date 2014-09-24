@@ -7,7 +7,7 @@
     article.node-actualitat.view-mode-full {
       $zen-column-count: 17;
       @include zen-grid-container();
-      .field-fotografies {
+      .field_fotografia_portada {
         @include zen-grid-item(15,1);
       }
       #col-meta {
@@ -82,9 +82,12 @@
             @include zen-clear();
             @include zen-grid-item(2,1);
           }
-          #edit-actions {
+          #edit-field-archius-adjunts {
             @include zen-clear();
-            @include zen-grid-item(2,1);
+            @include zen-grid-item(1,1);
+          }
+          #edit-actions {
+            @include zen-grid-item(1,2);
           }
         }
       }
@@ -102,45 +105,9 @@
       #page-title {
         @include titulo-not;
         padding-top: 20px;
+        display: block;
       }
       article.node-actualitat.view-mode-full {
-        #nav-links-wrapper {
-          .node-nav-links {
-            position: absolute;
-            top: 1100px;
-            background-color: $blanc;
-            opacity: 0.7;
-            width: 28%;
-            height: 70px;
-            padding: 20px 10px 10px 0;
-            a {
-              @include graphik-bold(16px,$gris7,22px);
-              width: 70%;
-            }
-            &.node-nav-links-prev {
-              left: -75px;
-              box-shadow: 0px 0px 2px 2px $fons;
-              a {
-                float: right;
-                background: url('../images/prev.png') no-repeat -15px 10px;
-                padding-left: 40px;
-              }
-            }
-            &.node-nav-links-next {
-              //box-shadow: 6px 3px 10px 2px $fons;
-              right:0%;
-              //text-align: right;
-              //background: url('../images/next.png') no-repeat 10px 10px;
-              width: 40px;
-              a {
-                float: left;
-                background: url('../images/next.png') no-repeat 10px 10px;
-                width: 27px;
-                height: 40px;
-              }
-            }
-          }
-        }
         .field-subtitol {
           @include subtitulo-not;
         padding-bottom: 20px;
@@ -282,30 +249,6 @@
               }
               .field-destacar {
                 display: none;
-              }
-            }
-          }
-        }
-        section#comments {
-          h2 {
-            @include public-roman(19px, $gris7, 24px);
-          }
-          #comment-form {
-            @include user-login;
-            .form-item {
-              input#edit-name,
-              input#edit-subject,
-              textarea#edit-comment-body-und-0-value {
-                padding: 5px 10px;
-                text-align: left;
-              }
-            }
-            #edit-actions.form-actions {
-              text-align: right;
-              input#edit-submit {
-                background-color: $gris7;
-                color: $fons;
-                padding: 5px 20px;
               }
             }
           }

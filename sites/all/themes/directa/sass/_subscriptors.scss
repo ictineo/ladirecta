@@ -27,6 +27,7 @@ body.page-user {
     .tabs-primary {
       @include zen-clear();
     }
+    .profile dl:nth-of-type(1),
     #user-profile-form {
       * { 
         font-family:'graphik_regularregular';
@@ -57,6 +58,7 @@ body.page-user {
           margin-top: 53px;
         }
       }
+      .field-group-fieldset:nth-of-type(5),
       .field-group-fieldset:nth-of-type(4) {
         @include zen-clear();
         @include zen-grid-item(23,1);
@@ -263,12 +265,16 @@ body.page-user {
         }
       }
     }
+    dl:nth-of-type(2) {
+      @include zen-clear();
+    }
     .profile {
       $zen-column-count:23;
       $zen-glutter-width:10px;
       @include zen-grid-container();
       .user-picture {
-        @include zen-grid-item(4,1,right);
+        float:left;
+        @include zen-clear;
       }
       dl {
        dt {

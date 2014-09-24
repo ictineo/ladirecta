@@ -38,12 +38,15 @@
         width: 100%;
         $zen-column-count:2;
         @include zen-grid-container();
-        background-image: url('../images/adj.png');
+        background-image: url('../images/adj3.png');
         li a {
           @include graphik-regular (16px, $gris7, 25px);
           &:hover {
             @include graphik-semibold(16px,$vermell,25px);
           }
+        }
+        li.menu-1361 a {
+          font-weight: 600;
         }
       }
       .odd {
@@ -64,12 +67,15 @@
         width: 100%;
         $zen-column-count:2;
         @include zen-grid-container();
-        background-image: url('../images/adj3.png');
+        background-image: url('../images/adj.png');
         li a {
           @include graphik-regular (16px, $gris7, 25px);
           &:hover {
             @include graphik-semibold(16px,$vermell,25px);
           }
+        }
+        li.menu-1343 a {
+          font-weight: 600;
         }
       }
       .odd {

@@ -1,5 +1,50 @@
 /* View punts de venda */ //sense disseny
 
+
+body.page-puntsdevenda {
+  $zen-column-count: 2;
+  table.views-view-grid.cols-2 {
+    width: 100%;
+    $zen-column-count: 2;
+    $zen-gutter-width: 20px;
+    $zen-auto-include-item-base: true;
+    @include zen-grid-container();
+    .col-1 {
+      @include zen-grid-item (1,1);
+      $zen-column-count: 5;
+      @include zen-grid-container();
+      .views-field-title {
+        @include zen-grid-item(4,2);
+      }
+      .field-imatge {
+        @include zen-grid-item(1,1);
+      }
+      .mail {
+        @include zen-clear();
+      }
+    $zen-column-count: 2;
+    }
+    .col-2 {
+      @include zen-grid-item (1,2);
+      $zen-column-count: 5;
+      @include zen-grid-container();
+      .views-field-title {
+        @include zen-grid-item(4,2);
+      }
+      .field-imatge {
+        @include zen-grid-item(1,1);
+      }
+      .mail {
+        @include zen-clear();
+      }
+    $zen-column-count: 2;
+    }
+  }
+}
+
+
+
+
 body.page-puntsdevenda {
   #main {
     #content {
@@ -9,6 +54,7 @@ body.page-puntsdevenda {
       h1#page-title {
         @include graphik-bold(46px,$gris8,54px);
         padding-top: 30px;
+        display: block;
       }
       .view-punts-de-venda {
         .view-filters {
@@ -20,35 +66,73 @@ body.page-puntsdevenda {
           }
         }
         .view-content {
+          margin-top: 30px;
           .views-view-grid {
             tbody {
-              .views-field-title a {
-                @include graphik-medium(26px, $gris8, 30px);
+              tr {
+                border-bottom: 1px dashed $fons;
+              }
+              tr.row-1 {
+                border-top: 1px dashed $fons;
+                padding-top: 15px;
+              }
+              td {
+                padding-bottom: 15px;
+                padding-top: 15px;
+              }
+              td.col-1 {
+                border-right: 1px dashed $fons;
+              }
+
+              .field-imatge {
               }
               .views-field {
-                padding-left: 40px;
+                padding-left: 50px;
                 .views-label {
                   @include graphik-semibold(22px, $gris8, 40px);
                 }
-                .field-content {
+                .field-content,
+                .field-horari,
+                .field-webpv {
                   display: inline;
                   @include graphik-regular(22px, $gris8, 40px);
+                  a {
+                    @include graphik-regular(22px, $gris8, 40px);
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .views-field-title {
+                margin-bottom: 50px;
+                padding-top: 30px;
+                .field-content {
+                  background-color:$gris7;
+                  font-weight:normal;
+                  text-align:right;
+                  padding:5px;
+                  @include graphik-semibold(26px, $blanc, 30px);
                 }
               }
               .views-field.adress {
-                background: url('../images/mapa.png') no-repeat 0 10px;
+                background: url('../images/avio.png') no-repeat 0 10px;
               }
-              .views-field.phone {
+              .views-field.views-field-field-tel-fon-1 {
                 background: url('../images/tel.png') no-repeat 0 10px;
               }
-              .views-field.cp {
+              .views-field.views-field-field-municipi-1 {
                 background: url('../images/avio.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-codi-postal-1 {
+                background: url('../images/mapa.png') no-repeat 0 10px;
               }
               .views-field.mail {
                 background: url('../images/mail.png') no-repeat 0 10px;
               }
-              .views-field.web {
-                background: url('../images/mapa.png') no-repeat 0 10px;
+              .views-field.views-field-field-webpv {
+                background: url('../images/people.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-horari {
+                background: url('../images/help.png') no-repeat 0 10px;
               }
             }
           }

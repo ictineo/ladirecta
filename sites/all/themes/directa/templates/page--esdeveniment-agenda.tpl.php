@@ -171,7 +171,7 @@ if (drupal_is_front_page()) {
 
 
   <div id="faldo-wrapper">
-    <div id="faldo-switcher"> <span class="faldo-switcher">&nbsp;</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa');?></span><?php print t('Col·labora en fer possible aquest mitjà'); ?> </div>
+    <div id="faldo-switcher"> <span class="faldo-switcher-dis">obrir</span> <span class="faldo-switcher-act">tancar</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa.');?></span><?php print t('Col·labora en fer possible aquest mitjà.'); ?> </div>
      <?php print render($page['faldo']); ?>
   </div>
   

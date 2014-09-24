@@ -67,6 +67,7 @@ stylesheets[all][] = css/styles.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
+scripts[] = js/jquery.cookie/jquery.cookie.js
 scripts[] = js/menu_lateral.js
 scripts[] = js/menu_seccions.js
 scripts[] = js/faldo.js

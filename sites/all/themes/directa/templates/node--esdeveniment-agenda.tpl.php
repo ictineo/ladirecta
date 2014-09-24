@@ -33,7 +33,6 @@ if($view_mode == 'full') {
 
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-<?php   dsm($node); ?>
   <?php if ($title_prefix || $title_suffix || $display_submitted || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
@@ -57,9 +56,13 @@ if($view_mode == 'full') {
 
   <?php if($view_mode == 'full'): ?>
     <div id="nav-links-wrapper">
-    <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-      <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
-  </div>
+      <?php if(!empty($prev_title)): ?>
+        <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
+      <?php endif; ?>
+      <?php if(!empty($next_title)): ?>
+        <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
+      <?php endif; ?>
+    </div>
   <?php endif; ?>
   <?php
     // We hide the comments and links now so that we can render them later.

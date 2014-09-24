@@ -229,6 +229,7 @@
 
     .view-id-fotogaleria.view-display-id-page,
     .view-id-videogaleria.view-display-id-page {
+      margin-top: -20px;
       .views-field-title.field-content {
         @include graphik-semibold(18px, $gris7,22px); /*variacio disseny*/
       }  
@@ -282,11 +283,22 @@
       }
     }
 
-  #page-title, .page-title , .views-field-title, .views-field-title a {
-    @include titulo-fotogaleria;
-    margin-top: 10px;
-    margin-bottom:10px;
+    #content {
+      #page-title, .page-title , .views-field-title, .views-field-title a {
+        @include titulo-fotogaleria;
+        margin-top: 10px;
+        margin-bottom:10px;
+        display: block;
+        font-weight: bolder;
+        font-weight: bolder;
 
+    }
+  }
+  #content {
+    .views-field-title,
+    .views-field-title a {
+      margin-top: 0px;
+    }
   }
   fieldset.group-top-wr {
     border: none 0px;
@@ -396,6 +408,7 @@ body.section-fotogaleria.page-views {
   }
 }
 
+.page-videogaleria.page-views,
 .page-fotogaleria.page-views {
   #main #content {
     margin-top: 0px;

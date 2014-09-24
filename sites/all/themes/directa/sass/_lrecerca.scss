@@ -66,51 +66,6 @@
           margin-bottom: 20px;
         }
       }
-      section#comments {
-        margin-top: 30px;
-        padding-top: 30px;
-        border-top: 1px dashed $fons;
-        h2 {
-          @include public-roman(19px, $gris7, 24px);
-        }
-        #comment-form {
-          @include user-login;
-          .form-item {
-            input#edit-name,
-            input#edit-subject,
-            textarea#edit-comment-body-und-0-value {
-              padding: 5px 10px;
-              text-align: left;
-            }
-          }
-          #edit-actions.form-actions {
-            text-align: right;
-            input#edit-submit {
-              background-color: $gris7;
-              color: $fons;
-              padding: 5px 20px;
-            }
-          }
-          #edit-field-archius-adjunts {
-            #edit-field-archius-adjunts-und-0 {
-              margin-top: 0px;
-              #edit-field-archius-adjunts-und-0-title {
-                margin-top: 0px;
-                display: inline-block;
-                label {
-                  @include graphik-medium(21px,#9a9a9a,auto);
-                }
-              }
-              a#edit-field-archius-adjunts-und-0-select {
-                @include login-shadow;
-                @include graphik-medium(17px, $gris7, auto);
-                padding: 5px 20px;
-                border: none;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

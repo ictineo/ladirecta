@@ -1,0 +1,645 @@
+3.2.12 (Media Mark)
+f05c6a1b6f0472145227fb481fb04db608811ed8
+o:Sass::Tree::RootNode
+:@template"˛'/* View punts de venda */ //sense disseny
+
+
+body.page-puntsdevenda {
+  $zen-column-count: 2;
+  table.views-view-grid.cols-2 {
+    width: 100%;
+    $zen-column-count: 2;
+    $zen-gutter-width: 20px;
+    $zen-auto-include-item-base: true;
+    @include zen-grid-container();
+    .col-1 {
+      @include zen-grid-item (1,1);
+      $zen-column-count: 5;
+      @include zen-grid-container();
+      .views-field-title {
+        @include zen-grid-item(4,2);
+      }
+      .field-imatge {
+        @include zen-grid-item(1,1);
+      }
+      .mail {
+        @include zen-clear();
+      }
+    $zen-column-count: 2;
+    }
+    .col-2 {
+      @include zen-grid-item (1,2);
+      $zen-column-count: 5;
+      @include zen-grid-container();
+      .views-field-title {
+        @include zen-grid-item(4,2);
+      }
+      .field-imatge {
+        @include zen-grid-item(1,1);
+      }
+      .mail {
+        @include zen-clear();
+      }
+    $zen-column-count: 2;
+    }
+  }
+}
+
+
+
+
+body.page-puntsdevenda {
+  #main {
+    #content {
+      .breadcrumb {
+        @include breadcrumb;
+      }
+      h1#page-title {
+        @include graphik-bold(46px,$gris8,54px);
+        padding-top: 30px;
+        display: block;
+      }
+      .view-punts-de-venda {
+        .view-filters {
+          .views-exposed-widgets {
+            label {
+              @include graphik-bold(30px, $gris8, 33px);
+              padding-bottom: 10px;
+            }
+          }
+        }
+        .view-content {
+          margin-top: 30px;
+          .views-view-grid {
+            tbody {
+              tr {
+                border-bottom: 1px dashed $fons;
+              }
+              tr.row-1 {
+                border-top: 1px dashed $fons;
+                padding-top: 15px;
+              }
+              td {
+                padding-bottom: 15px;
+                padding-top: 15px;
+              }
+              td.col-1 {
+                border-right: 1px dashed $fons;
+              }
+
+              .field-imatge {
+              }
+              .views-field {
+                padding-left: 50px;
+                .views-label {
+                  @include graphik-semibold(22px, $gris8, 40px);
+                }
+                .field-content,
+                .field-horari,
+                .field-webpv {
+                  display: inline;
+                  @include graphik-regular(22px, $gris8, 40px);
+                  a {
+                    @include graphik-regular(22px, $gris8, 40px);
+                    text-decoration: underline;
+                  }
+                }
+              }
+              .views-field-title {
+                margin-bottom: 50px;
+                padding-top: 30px;
+                .field-content {
+                  background-color:$gris7;
+                  font-weight:normal;
+                  text-align:right;
+                  padding:5px;
+                  @include graphik-semibold(26px, $blanc, 30px);
+                }
+              }
+              .views-field.adress {
+                background: url('../images/avio.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-tel-fon-1 {
+                background: url('../images/tel.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-municipi-1 {
+                background: url('../images/avio.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-codi-postal-1 {
+                background: url('../images/mapa.png') no-repeat 0 10px;
+              }
+              .views-field.mail {
+                background: url('../images/mail.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-webpv {
+                background: url('../images/people.png') no-repeat 0 10px;
+              }
+              .views-field.views-field-field-horari {
+                background: url('../images/help.png') no-repeat 0 10px;
+              }
+            }
+          }
+        }
+      }
+      /** view-source:http://filamentgroup.github.io/select-css/demo/ **/
+      .views-widget {
+        .form-item {
+          border: 1px solid #bbb;
+          border-radius: .3em;
+          box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+          background: #f3f3f3; /* Old browsers */
+          background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+          background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+        }
+          /* Container used for styling the custom select, the buttom class below adds the bg gradient, corners, etc. */
+          .form-item {
+            position: relative;
+            display:block;
+            margin-top:0.5em;
+            padding:0;
+          }
+          /* This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper */
+          .form-item select {
+            width: 200px;
+            margin:0;
+            background:none;
+            border: 1px solid transparent;
+            outline: none;
+            /* Prefixed box-sizing rules necessary for older browsers */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            /* Remove select styling */
+            appearance: none;
+            -webkit-appearance: none;
+            /* Font size must the 16px or larger to prevent iOS page zoom on focus */
+            font-size:16px;
+            /* General select styles: change as needed */
+            font-family: helvetica, sans-serif;
+            font-weight: bold;
+            color: #444;
+            padding: .2em 1.9em .2em .8em;
+            line-height:1.3;
+          }
+          /* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select. Note this si a 2x image so it will look bad in browsers that don't support background-size. In production, you'd handle this resolution switch via media query but this is a demo. */
+          .form-item::after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 8px;
+            top: 50%;
+            right: 1em;
+            margin-top:-4px;
+            background-image: url(http://filamentgroup.com/files/select-arrow.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            z-index: 2;
+            /* This hack make the select behind the arrow clickable in some browsers */
+            pointer-events:none;
+          }
+          /* Hover style */
+          .form-item:hover {
+            border:1px solid #888;
+          }
+          /* Focus style */
+          .form-item select:focus {
+            outline:none;
+            box-shadow: 0 0 1px 3px rgba(180,222,250, 1);
+            background-color:transparent;
+            color: #222;
+            border:1px solid #aaa;
+          }
+          /* Set options to normal weight */
+          .form-item option {
+            font-weight:normal;
+          }
+          /* ------------------------------------  */
+          /* START OF UGLY BROWSER-SPECIFIC HACKS */
+          /* ----------------------------------  */
+          /* OPERA - Pre-Blink nix the custom arrow, go with a native select button to keep it simple. Targeted via this hack http://browserhacks.com/#hack-a3f166304aafed524566bc6814e1d5c7 */
+          x:-o-prefocus, .form-item::after {
+            display:none;
+          }    
+           /* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance, IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */
+          /* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            .form-item select::-ms-expand {
+              display: none;
+            }
+            .form-item select:focus::-ms-value {
+              background: transparent;
+              color: #222;
+            }
+          }  
+          /* FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container. The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex. You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e */
+          /* Show only the native arrow */
+          @-moz-document url-prefix() { 
+            .form-item {
+              overflow: hidden;
+            }
+            .form-item select {
+              width: 120%;
+              width: -moz-calc(100% + 3em);
+              width: calc(100% + em);
+            }
+          }
+          /* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */
+          .form-item select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+          }
+          /* ------------------------------------  */
+          /*  END OF UGLY BROWSER-SPECIFIC HACKS  */
+          /* ------------------------------------  */
+      }
+    }
+  }
+}
+
+:@options{ :@has_childrenT:
+@linei:@children[	o:Sass::Tree::CommentNode
+:
+@type:normal:@value["/* View punts de venda */;@;	i;
+[ o;
+;:silent;["/*sense disseny */;@;	i;
+[ o:Sass::Tree::RuleNode:
+@tabsi :
+@rule["body.page-puntsdevenda:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" :@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+:@sourceso:Set:
+@hash{ :@subject0;@;[o:Sass::Selector::Element	:@namespace0:
+@name["	body;@;	i	o:Sass::Selector::Class;["page-puntsdevenda;@;	i	;	i	;	i	;@;T;	i	;
+[o:Sass::Tree::VariableNode:
+@expro:Sass::Script::Number:@numerator_units[ :@original"2;i;@:@denominator_units[ ;	i
+;"zen-column-count;@:@guarded0;	i
+;
+[ o;;i ;["!table.views-view-grid.cols-2;o;;" ;[o;;[o;
+;o;;{ ;0;@/;[o;	;0;["
+table;@/;	io; ;["views-view-grid;@/;	io; ;["cols-2;@/;	i;	i;	i;@;T;	i;
+[o:Sass::Tree::PropNode:@prop_syntax:new;i ;o:Sass::Script::String;:identifier;"	100%;@;["
+width;@;	i;
+[ o;!;"o;#;$[ ;%"2;i;@;&@(;	i;"zen-column-count;@;'0;	i;
+[ o;!;"o;#;$["px;%"	20px;i;@;&[ ;	i;"zen-gutter-width;@;'0;	i;
+[ o;!;"o:Sass::Script::Bool;T;@;	i;"zen-auto-include-item-base;@;'0;	i;
+[ o:Sass::Tree::MixinNode:@splat0:
+@args[ ;"zen-grid-container:@keywords{ ;@;	i;
+[ o;;i ;[".col-1;o;;" ;[o;;[o;
+;o;;{ ;0;@b;[o; ;["
+col-1;@b;	i;	i;	i;@;T;	i;
+[o;.;/0;0[o;#;$[ ;%"1;i;@;&@(;	io;#;$[ ;%"1;i;@;&@(;	i;"zen-grid-item;1{ ;@;	i;
+[ o;!;"o;#;$[ ;%"5;i
+;@;&@(;	i;"zen-column-count;@;'0;	i;
+[ o;.;/0;0[ ;"zen-grid-container;1{ ;@;	i;
+[ o;;i ;[".views-field-title;o;;" ;[o;;[o;
+;o;;{ ;0;@É;[o; ;["views-field-title;@É;	i;	i;	i;@;T;	i;
+[o;.;/0;0[o;#;$[ ;%"4;i	;@;&@(;	io;#;$[ ;%"2;i;@;&@(;	i;"zen-grid-item;1{ ;@;	i;
+[ o;;i ;[".field-imatge;o;;" ;[o;;[o;
+;o;;{ ;0;@û;[o; ;["field-imatge;@û;	i;	i;	i;@;T;	i;
+[o;.;/0;0[o;#;$[ ;%"1;i;@;&@(;	io;#;$[ ;%"1;i;@;&@(;	i;"zen-grid-item;1{ ;@;	i;
+[ o;;i ;["
+.mail;o;;" ;[o;;[o;
+;o;;{ ;0;@π;[o; ;["	mail;@π;	i;	i;	i;@;T;	i;
+[o;.;/0;0[ ;"zen-clear;1{ ;@;	i;
+[ o;!;"o;#;$[ ;%"2;i;@;&@(;	i;"zen-column-count;@;'0;	i;
+[ o;;i ;[".col-2;o;;" ;[o;;[o;
+;o;;{ ;0;@‘;[o; ;["
+col-2;@‘;	i ;	i ;	i ;@;T;	i ;
+[o;.;/0;0[o;#;$[ ;%"1;i;@;&@(;	i!o;#;$[ ;%"2;i;@;&@(;	i!;"zen-grid-item;1{ ;@;	i!;
+[ o;!;"o;#;$[ ;%"5;i
+;@;&@(;	i";"zen-column-count;@;'0;	i";
+[ o;.;/0;0[ ;"zen-grid-container;1{ ;@;	i#;
+[ o;;i ;[".views-field-title;o;;" ;[o;;[o;
+;o;;{ ;0;@˙;[o; ;["views-field-title;@˙;	i$;	i$;	i$;@;T;	i$;
+[o;.;/0;0[o;#;$[ ;%"4;i	;@;&@(;	i%o;#;$[ ;%"2;i;@;&@(;	i%;"zen-grid-item;1{ ;@;	i%;
+[ o;;i ;[".field-imatge;o;;" ;[o;;[o;
+;o;;{ ;0;@;[o; ;["field-imatge;@;	i';	i';	i';@;T;	i';
+[o;.;/0;0[o;#;$[ ;%"1;i;@;&@(;	i(o;#;$[ ;%"1;i;@;&@(;	i(;"zen-grid-item;1{ ;@;	i(;
+[ o;;i ;["
+.mail;o;;" ;[o;;[o;
+;o;;{ ;0;@0;[o; ;["	mail;@0;	i*;	i*;	i*;@;T;	i*;
+[o;.;/0;0[ ;"zen-clear;1{ ;@;	i+;
+[ o;!;"o;#;$[ ;%"2;i;@;&@(;	i-;"zen-column-count;@;'0;	i-;
+[ o;;i ;["body.page-puntsdevenda;o;;" ;[o;;[o;
+;o;;{ ;0;@K;[o;	;0;["	body;@K;	i5o; ;["page-puntsdevenda;@K;	i5;	i5;	i5;@;T;	i5;
+[o;;i ;["
+#main;o;;" ;[o;;[o;
+;o;;{ ;0;@^;[o:Sass::Selector::Id;["	main;@^;	i6;	i6;	i6;@;T;	i6;
+[o;;i ;["#content;o;;" ;[o;;[o;
+;o;;{ ;0;@n;[o;2;["content;@n;	i7;	i7;	i7;@;T;	i7;
+[
+o;;i ;[".breadcrumb;o;;" ;[o;;[o;
+;o;;{ ;0;@~;[o; ;["breadcrumb;@~;	i8;	i8;	i8;@;T;	i8;
+[o;.;/0;0[ ;"breadcrumb;1{ ;@;	i9;
+[ o;;i ;["h1#page-title;o;;" ;[o;;[o;
+;o;;{ ;0;@ì;[o;	;0;["h1;@ì;	i;o;2;["page-title;@ì;	i;;	i;;	i;;@;T;	i;;
+[o;.;/0;0[o;#;$["px;%"	46px;i3;@;&[ ;	i<o:Sass::Script::Variable	:@underscored_name"
+gris8;"
+gris8;@;	i<o;#;$["px;%"	54px;i;;@;&[ ;	i<;"graphik-bold;1{ ;@;	i<;
+[ o;(;);*;i ;o;+;;,;"	30px;@;["padding-top;@;	i=;
+[ o;(;);*;i ;o;+;;,;"
+block;@;["display;@;	i>;
+[ o;;i ;[".view-punts-de-venda;o;;" ;[o;;[o;
+;o;;{ ;0;@ƒ;[o; ;["view-punts-de-venda;@ƒ;	i@;	i@;	i@;@;T;	i@;
+[o;;i ;[".view-filters;o;;" ;[o;;[o;
+;o;;{ ;0;@‘;[o; ;["view-filters;@‘;	iA;	iA;	iA;@;T;	iA;
+[o;;i ;[".views-exposed-widgets;o;;" ;[o;;[o;
+;o;;{ ;0;@‰;[o; ;["views-exposed-widgets;@‰;	iB;	iB;	iB;@;T;	iB;
+[o;;i ;["
+label;o;;" ;[o;;[o;
+;o;;{ ;0;@Ù;[o;	;0;["
+label;@Ù;	iC;	iC;	iC;@;T;	iC;
+[o;.;/0;0[o;#;$["px;%"	30px;i#;@;&[ ;	iDo;3	;4"
+gris8;"
+gris8;@;	iDo;#;$["px;%"	33px;i&;@;&[ ;	iD;"graphik-bold;1{ ;@;	iD;
+[ o;(;);*;i ;o;+;;,;"	10px;@;["padding-bottom;@;	iE;
+[ o;;i ;[".view-content;o;;" ;[o;;[o;
+;o;;{ ;0;@;[o; ;["view-content;@;	iI;	iI;	iI;@;T;	iI;
+[o;(;);*;i ;o;+;;,;"	30px;@;["margin-top;@;	iJ;
+[ o;;i ;[".views-view-grid;o;;" ;[o;;[o;
+;o;;{ ;0;@2;[o; ;["views-view-grid;@2;	iK;	iK;	iK;@;T;	iK;
+[o;;i ;["
+tbody;o;;" ;[o;;[o;
+;o;;{ ;0;@B;[o;	;0;["
+tbody;@B;	iL;	iL;	iL;@;T;	iL;
+[o;;i ;["tr;o;;" ;[o;;[o;
+;o;;{ ;0;@R;[o;	;0;["tr;@R;	iM;	iM;	iM;@;T;	iM;
+[o;(;);*;i ;o:Sass::Script::List	:@separator:
+space;[o;#;$["px;%"1px;i;@;&[ ;	iNo;+	;;,;"dashed;@;	iNo;3	;4"	fons;"	fons;@;	iN;@;	iN;["border-bottom;@;	iN;
+[ o;;i ;["tr.row-1;o;;" ;[o;;[o;
+;o;;{ ;0;@r;[o;	;0;["tr;@r;	iPo; ;["
+row-1;@r;	iP;	iP;	iP;@;T;	iP;
+[o;(;);*;i ;o;5	;6;7;[o;#;$["px;%"1px;i;@;&[ ;	iQo;+	;;,;"dashed;@;	iQo;3	;4"	fons;"	fons;@;	iQ;@;	iQ;["border-top;@;	iQ;
+[ o;(;);*;i ;o;+;;,;"	15px;@;["padding-top;@;	iR;
+[ o;;i ;["td;o;;" ;[o;;[o;
+;o;;{ ;0;@õ;[o;	;0;["td;@õ;	iT;	iT;	iT;@;T;	iT;
+[o;(;);*;i ;o;+;;,;"	15px;@;["padding-bottom;@;	iU;
+[ o;(;);*;i ;o;+;;,;"	15px;@;["padding-top;@;	iV;
+[ o;;i ;["td.col-1;o;;" ;[o;;[o;
+;o;;{ ;0;@∑;[o;	;0;["td;@∑;	iXo; ;["
+col-1;@∑;	iX;	iX;	iX;@;T;	iX;
+[o;(;);*;i ;o;5	;6;7;[o;#;$["px;%"1px;i;@;&[ ;	iYo;+	;;,;"dashed;@;	iYo;3	;4"	fons;"	fons;@;	iY;@;	iY;["border-right;@;	iY;
+[ o;;i ;[".field-imatge;o;;" ;[o;;[o;
+;o;;{ ;0;@⁄;[o; ;["field-imatge;@⁄;	i\;	i\;	i\;@;T;	i\;
+[ o;;i ;[".views-field;o;;" ;[o;;[o;
+;o;;{ ;0;@Í;[o; ;["views-field;@Í;	i^;	i^;	i^;@;T;	i^;
+[o;(;);*;i ;o;+;;,;"	50px;@;["padding-left;@;	i_;
+[ o;;i ;[".views-label;o;;" ;[o;;[o;
+;o;;{ ;0;@ ;[o; ;["views-label;@ ;	i`;	i`;	i`;@;T;	i`;
+[o;.;/0;0[o;#;$["px;%"	22px;i;@;&[ ;	iao;3	;4"
+gris8;"
+gris8;@;	iao;#;$["px;%"	40px;i-;@;&[ ;	ia;"graphik-semibold;1{ ;@;	ia;
+[ o;;i ;["P.field-content,
+                .field-horari,
+                .field-webpv;o;;" ;[o;;[o;
+;o;;{ ;0;@";[o; ;["field-content;@";	ie;	ieo;;["
+o;
+;o;;{ ;0;@";[o; ;["field-horari;@";	ie;	ieo;;["
+o;
+;o;;{ ;0;@";[o; ;["field-webpv;@";	ie;	ie;	ie;@;T;	ie;
+[o;(;);*;i ;o;+;;,;"inline;@;["display;@;	if;
+[ o;.;/0;0[o;#;$["px;%"	22px;i;@;&[ ;	igo;3	;4"
+gris8;"
+gris8;@;	igo;#;$["px;%"	40px;i-;@;&[ ;	ig;"graphik-regular;1{ ;@;	ig;
+[ o;;i ;["a;o;;" ;[o;;[o;
+;o;;{ ;0;@^;[o;	;0;["a;@^;	ih;	ih;	ih;@;T;	ih;
+[o;.;/0;0[o;#;$["px;%"	22px;i;@;&[ ;	iio;3	;4"
+gris8;"
+gris8;@;	iio;#;$["px;%"	40px;i-;@;&[ ;	ii;"graphik-regular;1{ ;@;	ii;
+[ o;(;);*;i ;o;+;;,;"underline;@;["text-decoration;@;	ij;
+[ o;;i ;[".views-field-title;o;;" ;[o;;[o;
+;o;;{ ;0;@Ü;[o; ;["views-field-title;@Ü;	in;	in;	in;@;T;	in;
+[o;(;);*;i ;o;+;;,;"	50px;@;["margin-bottom;@;	io;
+[ o;(;);*;i ;o;+;;,;"	30px;@;["padding-top;@;	ip;
+[ o;;i ;[".field-content;o;;" ;[o;;[o;
+;o;;{ ;0;@¢;[o; ;["field-content;@¢;	iq;	iq;	iq;@;T;	iq;
+[
+o;(;);*;i ;o;3	;4"
+gris7;"
+gris7;@;	ir;["background-color;@;	ir;
+[ o;(;);*;i ;o;+;;,;"normal;@;["font-weight;@;	is;
+[ o;(;);*;i ;o;+;;,;"
+right;@;["text-align;@;	it;
+[ o;(;);*;i ;o;+;;,;"5px;@;["padding;@;	iu;
+[ o;.;/0;0[o;#;$["px;%"	26px;i;@;&[ ;	ivo;3	;4"
+blanc;"
+blanc;@;	ivo;#;$["px;%"	30px;i#;@;&[ ;	iv;"graphik-semibold;1{ ;@;	iv;
+[ o;;i ;[".views-field.adress;o;;" ;[o;;[o;
+;o;;{ ;0;@›;[o; ;["views-field;@›;	iyo; ;["adress;@›;	iy;	iy;	iy;@;T;	iy;
+[o;(;);*;i ;o;5	;6;7;[	o:Sass::Script::Funcall;/0;0[o;+	;:string;"../images/avio.png;@;	iz;"url;1{ ;@;	izo;+	;;,;"no-repeat;@;	izo;#;$[ ;%"0;i ;@;&@(;	izo;#;$["px;%"	10px;i;@;&[ ;	iz;@;	iz;["background;@;	iz;
+[ o;;i ;["-.views-field.views-field-field-tel-fon-1;o;;" ;[o;;[o;
+;o;;{ ;0;@;[o; ;["views-field;@;	i|o; ;[" views-field-field-tel-fon-1;@;	i|;	i|;	i|;@;T;	i|;
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/tel.png;@;	i};"url;1{ ;@;	i}o;+	;;,;"no-repeat;@;	i}o;#;$[ ;%"0;i ;@;&@(;	i}o;#;$["px;%"	10px;i;@;&[ ;	i};@;	i};["background;@;	i};
+[ o;;i ;["..views-field.views-field-field-municipi-1;o;;" ;[o;;[o;
+;o;;{ ;0;@/;[o; ;["views-field;@/;	io; ;["!views-field-field-municipi-1;@/;	i;	i;	i;@;T;	i;
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/avio.png;@;	i{;"url;1{ ;@;	i{o;+	;;,;"no-repeat;@;	i{o;#;$[ ;%"0;i ;@;&@(;	i{o;#;$["px;%"	10px;i;@;&[ ;	i{;@;	i{;["background;@;	i{;
+[ o;;i ;["1.views-field.views-field-field-codi-postal-1;o;;" ;[o;;[o;
+;o;;{ ;0;@X;[o; ;["views-field;@X;	i}o; ;["$views-field-field-codi-postal-1;@X;	i};	i};	i};@;T;	i};
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/mapa.png;@;	i~;"url;1{ ;@;	i~o;+	;;,;"no-repeat;@;	i~o;#;$[ ;%"0;i ;@;&@(;	i~o;#;$["px;%"	10px;i;@;&[ ;	i~;@;	i~;["background;@;	i~;
+[ o;;i ;[".views-field.mail;o;;" ;[o;;[o;
+;o;;{ ;0;@Å;[o; ;["views-field;@Å;	iÄo; ;["	mail;@Å;	iÄ;	iÄ;	iÄ;@;T;	iÄ;
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/mail.png;@;	iÅ;"url;1{ ;@;	iÅo;+	;;,;"no-repeat;@;	iÅo;#;$[ ;%"0;i ;@;&@(;	iÅo;#;$["px;%"	10px;i;@;&[ ;	iÅ;@;	iÅ;["background;@;	iÅ;
+[ o;;i ;[").views-field.views-field-field-webpv;o;;" ;[o;;[o;
+;o;;{ ;0;@™;[o; ;["views-field;@™;	iÉo; ;["views-field-field-webpv;@™;	iÉ;	iÉ;	iÉ;@;T;	iÉ;
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/people.png;@;	iÑ;"url;1{ ;@;	iÑo;+	;;,;"no-repeat;@;	iÑo;#;$[ ;%"0;i ;@;&@(;	iÑo;#;$["px;%"	10px;i;@;&[ ;	iÑ;@;	iÑ;["background;@;	iÑ;
+[ o;;i ;["*.views-field.views-field-field-horari;o;;" ;[o;;[o;
+;o;;{ ;0;@”;[o; ;["views-field;@”;	iÜo; ;["views-field-field-horari;@”;	iÜ;	iÜ;	iÜ;@;T;	iÜ;
+[o;(;);*;i ;o;5	;6;7;[	o;8;/0;0[o;+	;;9;"../images/help.png;@;	iá;"url;1{ ;@;	iáo;+	;;,;"no-repeat;@;	iáo;#;$[ ;%"0;i ;@;&@(;	iáo;#;$["px;%"	10px;i;@;&[ ;	iá;@;	iá;["background;@;	iá;
+[ o;
+;;;["H/** view-source:http://filamentgroup.github.io/select-css/demo/ **/;@;	iç;
+[ o;;i ;[".views-widget;o;;" ;[o;;[o;
+;o;;{ ;0;@ ;[o; ;["views-widget;@ ;	ié;	ié;	ié;@;T;	ié;
+["o;;i ;[".form-item;o;;" ;[o;;[o;
+;o;;{ ;0;@;[o; ;["form-item;@;	iè;	iè;	iè;@;T;	iè;
+[o;(;);*;i ;o;+;;,;"1px solid #bbb;@;["border;@;	iê;
+[ o;(;);*;i ;o;+;;,;"	.3em;@;["border-radius;@;	ië;
+[ o;(;);*;i ;o;5	;6;7;[
+o;#;$[ ;%"0;i ;@;&@(;	iío;#;$["px;%"1px;i;@;&[ ;	iío;#;$[ ;%"0;i ;@;&@(;	iío;#;$["px;%"1px;i;@;&[ ;	iío;8;/0;0[	o;#;$[ ;%"0;i ;@;&@(;	iío;#;$[ ;%"0;i ;@;&@(;	iío;#;$[ ;%"0;i ;@;&@(;	iío;#;$[ ;%"	0.04;f0.040000000000000001 {;@;&@(;	ií;"	rgba;1{ ;@;	ií;@;	ií;["box-shadow;@;	ií;
+[ o;(;);*;i ;o;+;;,;"#f3f3f3;@;["background;@;	iì;
+[ o;
+;;;["/* Old browsers */;@;	iì;
+[ o;(;);*;i ;o;8;/0;0[o;+	;;,;"top;@;	iîo;5	;6;7;[o:Sass::Script::Color	:@attrs{	:rediˇ:
+alphai:
+greeniˇ:	blueiˇ;0;@;	iîo;#;$["%;%"0%;i ;@;&[ ;	iî;@;	iîo;5	;6;7;[o;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	iîo;#;$["%;%"	100%;ii;@;&[ ;	iî;@;	iî;"-moz-linear-gradient;1{ ;@;	iî;["background;@;	iî;
+[ o;
+;;;["/* FF3.6+ */;@;	iî;
+[ o;(;);*;i ;o;8;/0;0[
+o;+	;;,;"linear;@;	iïo;5	;6;7;[o;+	;;,;"	left;@;	iïo;+	;;,;"top;@;	iï;@;	iïo;5	;6;7;[o;+	;;,;"	left;@;	iïo;+	;;,;"bottom;@;	iï;@;	iïo;8;/0;0[o;#;$["%;%"0%;i ;@;&[ ;	iïo;:	;;{	;<iˇ;=i;>iˇ;?iˇ;0;@;	iï;"color-stop;1{ ;@;	iïo;8;/0;0[o;#;$["%;%"	100%;ii;@;&[ ;	iïo;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	iï;"color-stop;1{ ;@;	iï;"-webkit-gradient;1{ ;@;	iï;["background;@;	iï;
+[ o;
+;;;["/* Chrome,Safari4+ */;@;	iï;
+[ o;(;);*;i ;o;8;/0;0[o;+	;;,;"top;@;	iño;5	;6;7;[o;:	;;{	;<iˇ;=i;>iˇ;?iˇ;0;@;	iño;#;$["%;%"0%;i ;@;&[ ;	iñ;@;	iño;5	;6;7;[o;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	iño;#;$["%;%"	100%;ii;@;&[ ;	iñ;@;	iñ;"-webkit-linear-gradient;1{ ;@;	iñ;["background;@;	iñ;
+[ o;
+;;;["/* Chrome10+,Safari5.1+ */;@;	iñ;
+[ o;(;);*;i ;o;8;/0;0[o;+	;;,;"top;@;	ióo;5	;6;7;[o;:	;;{	;<iˇ;=i;>iˇ;?iˇ;0;@;	ióo;#;$["%;%"0%;i ;@;&[ ;	ió;@;	ióo;5	;6;7;[o;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	ióo;#;$["%;%"	100%;ii;@;&[ ;	ió;@;	ió;"-o-linear-gradient;1{ ;@;	ió;["background;@;	ió;
+[ o;
+;;;["/* Opera 11.10+ */;@;	ió;
+[ o;(;);*;i ;o;8;/0;0[o;+	;;,;"top;@;	iòo;5	;6;7;[o;:	;;{	;<iˇ;=i;>iˇ;?iˇ;0;@;	iòo;#;$["%;%"0%;i ;@;&[ ;	iò;@;	iòo;5	;6;7;[o;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	iòo;#;$["%;%"	100%;ii;@;&[ ;	iò;@;	iò;"-ms-linear-gradient;1{ ;@;	iò;["background;@;	iò;
+[ o;
+;;;["/* IE10+ */;@;	iò;
+[ o;(;);*;i ;o;8;/0;0[o;5	;6;7;[o;+	;;,;"to;@;	iôo;+	;;,;"bottom;@;	iô;@;	iôo;5	;6;7;[o;:	;;{	;<iˇ;=i;>iˇ;?iˇ;0;@;	iôo;#;$["%;%"0%;i ;@;&[ ;	iô;@;	iôo;5	;6;7;[o;:	;;{	;<iÂ;=i;>iÂ;?iÂ;0;@;	iôo;#;$["%;%"	100%;ii;@;&[ ;	iô;@;	iô;"linear-gradient;1{ ;@;	iô;["background;@;	iô;
+[ o;
+;;;["/* W3C */;@;	iô;
+[ o;
+;;;["s/* Container used for styling the custom select, the buttom class below adds the bg gradient, corners, etc. */;@;	iõ;
+[ o;;i ;[".form-item;o;;" ;[o;;[o;
+;o;;{ ;0;@5;[o; ;["form-item;@5;	iú;	iú;	iú;@;T;	iú;
+[	o;(;);*;i ;o;+;;,;"relative;@;["position;@;	iù;
+[ o;(;);*;i ;o;+;;,;"
+block;@;["display;@;	iû;
+[ o;(;);*;i ;o;+;;,;"
+0.5em;@;["margin-top;@;	iü;
+[ o;(;);*;i ;o;+;;,;"0;@;["padding;@;	i†;
+[ o;
+;;;["~/* This is the native select, we're making everything but the text invisible so we can see the button styles in the wrapper */;@;	i¢;
+[ o;;i ;[".form-item select;o;;" ;[o;;[o;
+;o;;{ ;0;@a;[o; ;["form-item;@a;	i£;	i£o;
+;o;;{ ;0;@a;[o;	;0;["select;@a;	i£;	i£;	i£;@;T;	i£;
+[o;(;);*;i ;o;+;;,;"
+200px;@;["
+width;@;	i§;
+[ o;(;);*;i ;o;+;;,;"0;@;["margin;@;	i•;
+[ o;(;);*;i ;o;+;;,;"	none;@;["background;@;	i¶;
+[ o;(;);*;i ;o;+;;,;"1px solid transparent;@;["border;@;	iß;
+[ o;(;);*;i ;o;+;;,;"	none;@;["outline;@;	i®;
+[ o;
+;;;["A/* Prefixed box-sizing rules necessary for older browsers */;@;	i©;
+[ o;(;);*;i ;o;+;;,;"border-box;@;["-webkit-box-sizing;@;	i™;
+[ o;(;);*;i ;o;+;;,;"border-box;@;["-moz-box-sizing;@;	i´;
+[ o;(;);*;i ;o;+;;,;"border-box;@;["box-sizing;@;	i¨;
+[ o;
+;;;[" /* Remove select styling */;@;	i≠;
+[ o;(;);*;i ;o;+;;,;"	none;@;["appearance;@;	iÆ;
+[ o;(;);*;i ;o;+;;,;"	none;@;["-webkit-appearance;@;	iØ;
+[ o;
+;;;["N/* Font size must the 16px or larger to prevent iOS page zoom on focus */;@;	i∞;
+[ o;(;);*;i ;o;+;;,;"	16px;@;["font-size;@;	i±;
+[ o;
+;;;["2/* General select styles: change as needed */;@;	i≤;
+[ o;(;);*;i ;o;+;;,;"helvetica, sans-serif;@;["font-family;@;	i≥;
+[ o;(;);*;i ;o;+;;,;"	bold;@;["font-weight;@;	i¥;
+[ o;(;);*;i ;o;+;;,;"	#444;@;["
+color;@;	iµ;
+[ o;(;);*;i ;o;+;;,;".2em 1.9em .2em .8em;@;["padding;@;	i∂;
+[ o;(;);*;i ;o;+;;,;"1.3;@;["line-height;@;	i∑;
+[ o;
+;;;["H/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select. Note this si a 2x image so it will look bad in browsers that don't support background-size. In production, you'd handle this resolution switch via media query but this is a demo. */;@;	iπ;
+[ o;;i ;[".form-item::after;o;;" ;[o;;[o;
+;o;;{ ;0;@Ï;[o; ;["form-item;@Ï;	i∫o:Sass::Selector::Pseudo
+:	@arg0;["
+after:@syntactic_type:element;@Ï;	i∫;	i∫;	i∫;@;T;	i∫;
+[o;(;);*;i ;o;+;;,;""";@;["content;@;	iª;
+[ o;(;);*;i ;o;+;;,;"absolute;@;["position;@;	iº;
+[ o;(;);*;i ;o;+;;,;"0px;@;["
+width;@;	iΩ;
+[ o;(;);*;i ;o;+;;,;"8px;@;["height;@;	iæ;
+[ o;(;);*;i ;o;+;;,;"50%;@;["top;@;	iø;
+[ o;(;);*;i ;o;+;;,;"1em;@;["
+right;@;	i¿;
+[ o;(;);*;i ;o;+;;,;"	-4px;@;["margin-top;@;	i¡;
+[ o;(;);*;i ;o;+	;;,;"9url(http://filamentgroup.com/files/select-arrow.png);@;	i¬;["background-image;@;	i¬;
+[ o;(;);*;i ;o;+;;,;"no-repeat;@;["background-repeat;@;	i√;
+[ o;(;);*;i ;o;+;;,;"	100%;@;["background-size;@;	iƒ;
+[ o;(;);*;i ;o;+;;,;"2;@;["z-index;@;	i≈;
+[ o;
+;;;["P/* This hack make the select behind the arrow clickable in some browsers */;@;	i∆;
+[ o;(;);*;i ;o;+;;,;"	none;@;["pointer-events;@;	i«;
+[ o;
+;;;["/* Hover style */;@;	i…;
+[ o;;i ;[".form-item:hover;o;;" ;[o;;[o;
+;o;;{ ;0;@O;[o; ;["form-item;@O;	i o;@
+;A0;["
+hover;B:
+class;@O;	i ;	i ;	i ;@;T;	i ;
+[o;(;);*;i ;o;+;;,;"1px solid #888;@;["border;@;	iÀ;
+[ o;
+;;;["/* Focus style */;@;	iÕ;
+[ o;;i ;[".form-item select:focus;o;;" ;[o;;[o;
+;o;;{ ;0;@l;[o; ;["form-item;@l;	iŒ;	iŒo;
+;o;;{ ;0;@l;[o;	;0;["select;@l;	iŒo;@
+;A0;["
+focus;B;D;@l;	iŒ;	iŒ;	iŒ;@;T;	iŒ;
+[
+o;(;);*;i ;o;+;;,;"	none;@;["outline;@;	iœ;
+[ o;(;);*;i ;o;5	;6;7;[
+o;#;$[ ;%"0;i ;@;&@(;	i–o;#;$[ ;%"0;i ;@;&@(;	i–o;#;$["px;%"1px;i;@;&[ ;	i–o;#;$["px;%"3px;i;@;&[ ;	i–o;8;/0;0[	o;#;$[ ;%"180;i¥;@;&@(;	i–o;#;$[ ;%"222;iﬁ;@;&@(;	i–o;#;$[ ;%"250;i˙;@;&@(;	i–o;#;$[ ;%"1;i;@;&@(;	i–;"	rgba;1{ ;@;	i–;@;	i–;["box-shadow;@;	i–;
+[ o;(;);*;i ;o;+;;,;"transparent;@;["background-color;@;	i—;
+[ o;(;);*;i ;o;+;;,;"	#222;@;["
+color;@;	i“;
+[ o;(;);*;i ;o;+;;,;"1px solid #aaa;@;["border;@;	i”;
+[ o;
+;;;["'/* Set options to normal weight */;@;	i’;
+[ o;;i ;[".form-item option;o;;" ;[o;;[o;
+;o;;{ ;0;@»;[o; ;["form-item;@»;	i÷;	i÷o;
+;o;;{ ;0;@»;[o;	;0;["option;@»;	i÷;	i÷;	i÷;@;T;	i÷;
+[o;(;);*;i ;o;+;;,;"normal;@;["font-weight;@;	i◊;
+[ o;
+;;;["0/* ------------------------------------  */;@;	iŸ;
+[ o;
+;;;["//* START OF UGLY BROWSER-SPECIFIC HACKS */;@;	i⁄;
+[ o;
+;;;["./* ----------------------------------  */;@;	i€;
+[ o;
+;;;["µ/* OPERA - Pre-Blink nix the custom arrow, go with a native select button to keep it simple. Targeted via this hack http://browserhacks.com/#hack-a3f166304aafed524566bc6814e1d5c7 */;@;	i‹;
+[ o;;i ;["%x:-o-prefocus, .form-item::after;o;;" ;[o;;[o;
+;o;;{ ;0;@ı;[o;	;0;["x;@ı;	i›o;@
+;A0;["-o-prefocus;B;D;@ı;	i›;	i›o;;[o;
+;o;;{ ;0;@ı;[o; ;["form-item;@ı;	i›o;@
+;A0;["
+after;B;C;@ı;	i›;	i›;	i›;@;T;	i›;
+[o;(;);*;i ;o;+;;,;"	none;@;["display;@;	iﬁ;
+[ o;
+;;;["/* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance, IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */;@;	i‡;
+[ o;
+;;;["/* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */;@;	i·;
+[ o:Sass::Tree::MediaNode;i :@query["screen"
+ and "(o;+	;;,;"-ms-high-contrast;@;	i‚": o;+	;;,;"active;@;	i‚")", "(o;+	;;,;"-ms-high-contrast;@;	i‚": o;+	;;,;"	none;@;	i‚");" ;@;T;	i‚;
+[o;;i ;["".form-item select::-ms-expand;o;;" ;[o;;[o;
+;o;;{ ;0;@7;[o; ;["form-item;@7;	i„;	i„o;
+;o;;{ ;0;@7;[o;	;0;["select;@7;	i„o;@
+;A0;["-ms-expand;B;C;@7;	i„;	i„;	i„;@;T;	i„;
+[o;(;);*;i ;o;+;;,;"	none;@;["display;@;	i‰;
+[ o;;i ;["'.form-item select:focus::-ms-value;o;;" ;[o;;[o;
+;o;;{ ;0;@W;[o; ;["form-item;@W;	iÊ;	iÊo;
+;o;;{ ;0;@W;[o;	;0;["select;@W;	iÊo;@
+;A0;["
+focus;B;D;@W;	iÊo;@
+;A0;["-ms-value;B;C;@W;	iÊ;	iÊ;	iÊ;@;T;	iÊ;
+[o;(;);*;i ;o;+;;,;"transparent;@;["background;@;	iÁ;
+[ o;(;);*;i ;o;+;;,;"	#222;@;["
+color;@;	iË;
+[ o;
+;;;["∂/* FIREFOX won't let us hide the native select arrow, so we have to make it wider than needed and clip it via overflow on the parent container. The percentage width is a fallback since FF 4+ supports calc() so we can just add a fixed amount of extra width to push the native arrow out of view. We're applying this hack across all FF versions because all the previous hacks were too fragile and complex. You might want to consider not using this hack and using the native select arrow in FF. Note this makes the menus wider than the select button because they display at the specified width and aren't clipped. Targeting hack via http://browserhacks.com/#hack-758bff81c5c32351b02e10480b5ed48e */;@;	iÎ;
+[ o;
+;;;["%/* Show only the native arrow */;@;	iÏ;
+[ o:Sass::Tree::DirectiveNode
+;["@-moz-document " "url-prefix();@;T;	iÌ;
+[o;;i ;[".form-item;o;;" ;[o;;[o;
+;o;;{ ;0;@é;[o; ;["form-item;@é;	iÓ;	iÓ;	iÓ;@;T;	iÓ;
+[o;(;);*;i ;o;+;;,;"hidden;@;["overflow;@;	iÔ;
+[ o;;i ;[".form-item select;o;;" ;[o;;[o;
+;o;;{ ;0;@§;[o; ;["form-item;@§;	iÒ;	iÒo;
+;o;;{ ;0;@§;[o;	;0;["select;@§;	iÒ;	iÒ;	iÒ;@;T;	iÒ;
+[o;(;);*;i ;o;+;;,;"	120%;@;["
+width;@;	iÚ;
+[ o;(;);*;i ;o;+	;;,;"-moz-calc(100% + 3em);@;	iÛ;["
+width;@;	iÛ;
+[ o;(;);*;i ;o;+	;;,;"calc(100% + em);@;	iÙ;["
+width;@;	iÙ;
+[ o;
+;;;["å/* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */;@;	i˜;
+[ o;;i ;["%.form-item select:-moz-focusring;o;;" ;[o;;[o;
+;o;;{ ;0;@—;[o; ;["form-item;@—;	i¯;	i¯o;
+;o;;{ ;0;@—;[o;	;0;["select;@—;	i¯o;@
+;A0;["-moz-focusring;B;D;@—;	i¯;	i¯;	i¯;@;T;	i¯;
+[o;(;);*;i ;o;+;;,;"transparent;@;["
+color;@;	i˘;
+[ o;(;);*;i ;o;+;;,;"0 0 0 #000;@;["text-shadow;@;	i˙;
+[ o;
+;;;["0/* ------------------------------------  */;@;	i¸;
+[ o;
+;;;["//*  END OF UGLY BROWSER-SPECIFIC HACKS  */;@;	i˝;
+[ o;
+;;;["0/* ------------------------------------  */;@;	i˛;
+[ 

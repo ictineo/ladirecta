@@ -1,4 +1,39 @@
-/*COMPLEMENT DIRECTA*/
+/*COMPLEMENT DIRECTA NODE FINAL */
+#node-type-cd-serveis {
+  #content {
+    $zen-column-count:6;
+    $zen-gutter-width:10px;
+    @include zen-grid-container();
+    .region-highlighted {
+      @include zen-grid-item(6,1);
+      #block-views-cd-noticias-block-2 {
+        @include zen-grid-item(6,1);
+        @include zen-clear();
+        .field-image {
+        @include zen-grid-item(1,1);
+        }
+        .views-field-page-title{      
+          @include zen-grid-item(5,2);
+          h3 {
+            @include graphik-medium(35px,$gris3,40px);
+          }
+        }
+      }
+      #block-views-exp-cd-serveis-page-1{
+        @include zen-grid-item(6,1);
+        @include zen-clear();
+      }
+    }
+    article {
+      @include zen-clear();
+      @include zen-grid-item(6,1);
+    }
+  
+  
+  }
+
+}
+/*COMPLEMENT DIRECTA Llista Genera*/
 #content {
   $zen-column-count:6;
   $zen-gutter-width:10px;
@@ -34,8 +69,17 @@
         @include zen-grid-item(6,1);
         .generic{
           @include zen-grid-item(6,1);
+          background-color: rgb(58, 58, 58);
+          padding: 20px;
           .esquerra{
+            background: none repeat scroll 0 0 rgb(255, 255, 255);
+            min-height: 230px;
             @include zen-grid-item(2,1);
+            .field-tipus-de-servei{
+              a {
+                @include graphik-medium(15px,$gris4,24px); 
+              }
+            }
           }
           .dreta {
             @include zen-grid-item(4,3);
@@ -45,11 +89,8 @@
             .field-oferta{
               @include graphik-medium(26px,$gris4,26px);
             }
-            .field-tipus-de-servei{
-            
-            }
             .field-body{
-              @include graphik-medium(22px,$gris4,26px);
+              @include graphik-medium(19px,$gris4,26px);
             }
             #subscriu {
               @include zen-grid-item(2,1);
@@ -73,16 +114,91 @@
   .view-id-cd_serveis.view-display-id-page_1{
     @include zen-grid-item(6,1);
     @include zen-clear();
+    $zen-gutter-width:20px;
     .views-row:nth-child(3n+1){
-      @include zen-grid-item(2,1);
+      @include zen-grid-item(2,1);     
       @include zen-clear();
+      background-color: rgba(220, 220, 220, 0.3);
+      margin-top: 10px;
+      padding:5px;
+      .views-field-title{
+        @include graphik-medium(19px,$gris3,23px); 
+      }
+      .field-oferta{
+        @include graphik-medium(24px,$gris4,26px); 
+      }
+      .field-tipus-de-servei {
+        border-radius: 3px 3px 3px 3px;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 5px;
+        width: auto;
+        background-color:rgba(220,220,220,0.8);
+        a {
+          @include graphik-medium(16px,$gris3,23px);
+        }
+      }
+      .views-field-view-node{
+        a {
+          @include graphik-medium(14px,$gris3,23px);
+        }
+      }
     }
     .views-row:nth-child(3n+2){
       @include zen-grid-item(2,3);
+      background-color: rgba(220, 220, 220, 0.3);
+      margin-top: 10px;
+      padding:5px;
+      .views-field-title{
+        @include graphik-medium(19px,$gris3,23px); 
+      }
+      .field-oferta{
+        @include graphik-bold(24px,$gris4,26px); 
+      }
+      .field-tipus-de-servei {
+        border-radius: 3px 3px 3px 3px;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 5px;
+        width: auto;
+        background-color:rgba(220,220,220,0.8);
+        a {
+          @include graphik-medium(16px,$gris3,23px);
+        }
+      }
+      .views-field-view-node{
+        a {
+          @include graphik-medium(14px,$gris3,23px);
+        }
+      }
     }
     .views-row:nth-child(3n+3){
       @include zen-grid-item(2,5);
-      
+      background-color: rgba(220, 220, 220, 0.3);
+      margin-top: 10px;
+      padding:5px;
+      .views-field-title{
+        @include graphik-medium(19px,$gris3,23px); 
+      }
+      .field-oferta{
+        @include graphik-medium(24px,$gris4,26px); 
+      }
+      .field-tipus-de-servei {
+        border-radius: 3px 3px 3px 3px;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 5px;
+        width: auto;
+        background-color:rgba(220,220,220,0.8);
+        a {
+          @include graphik-medium(16px,$gris3,23px);
+        }
+      }
+      .views-field-view-node{
+        a {
+          @include graphik-medium(14px,$gris3,23px);
+        }
+      }
     }
   }
 }

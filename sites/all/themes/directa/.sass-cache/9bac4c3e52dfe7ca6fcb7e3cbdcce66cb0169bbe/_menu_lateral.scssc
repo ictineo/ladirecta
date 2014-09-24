@@ -1,0 +1,831 @@
+3.2.12 (Media Mark)
+d131565e974fc03fb87ecd98585e841298251783
+o:Sass::Tree::RootNode
+:@template"= /**
+ * Estils pel menu lateral colepsable
+ */
+
+/*****
+ * OJU molts ARXIUS AJUNTATS, ES PODEN REPETIR DEFINICIONS
+ *
+ * REVISAR!!
+ */
+
+$menu_w: 1050px;
+$menu_tiger_w: 50px;
+/*MENU LATERAL*/
+/*vaia fucking guarrada de solucio de diumenge vespre */
+body.page-node-add-esdeveniment-agenda #main #interior,
+#interior {
+  width: $menu_w;
+  position: fixed;
+  left: -$menu_w;
+  top: 80px;
+  background-color: white;
+  z-index: 100;
+  background-color: $gris9;
+  padding: 32px 0;
+  @include box-shadow($gris6 0px 0px 10px 4px inset);
+  /** layout a 3 columnes **/
+  .region-interior {
+    $zen-column-count:  3;
+    $zen-gutter-width:  20px;
+
+    width: 1024px;
+    @include zen-grid-container();
+    #block-views-agenda-llista-block-1 {
+      @include zen-grid-item(1,1);
+      #menu-agenda {
+      }
+    }
+    #block-views-cd-serveis-block-1 {
+      @include zen-grid-item(1,2);
+    }
+    #block-views-linies-de-recerca-block {
+      @include zen-grid-item(1,3);
+    }
+  }
+ #menu-tigger {
+    cursor: pointer;
+    width: $menu_tiger_w;
+    height: 300px;
+    position: absolute;
+    right: -$menu_tiger_w;
+    background-image: url('../images/menu-tigger.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  .menu-close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    background-image: url('../images/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -402px -39px;
+  }
+  #menu-close-top {
+    top: 8px;
+    right: 8px;
+  }
+  #menu-close-bottom {
+    right: 8px;
+    bottom: 8px;
+  }
+
+  #block-views-agenda-llista-block-1,
+  #block-views-cd-serveis-block-1,
+  #block-views-linies-de-recerca-block {
+    border-left: 6px solid $gris9;
+    padding: 8px;
+    background-color: white;
+    .block-title {
+      @include graphik-medium(26px, $gris2, 31px);
+      background-repeat: no-repeat;
+      background-position: -30px 30%;// posicionament nefest, no estan clares les mides
+      padding-left: 42px;
+      border-bottom: 2px solid $gris6;
+      vertical-align: top;
+      line-height: 45px;
+      margin-bottom: 12px;
+    }
+  }
+
+  /** columna 1 agenda **/
+  #block-views-agenda-llista-block-1 {
+    #menu-agenda > div {
+      background: none repeat scroll 0 0 $gris6;
+      height: 45px;
+      margin-bottom: 4px;
+      padding-top: 7px;
+      width: 100%;
+      .daysup {
+        cursor: pointer;
+        background: none repeat scroll 0 0 white;
+        font-family: 'graphiksemibold';
+        font-size: 16px;
+        color: $gris2;
+        border-radius: 60px;
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 7px;
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        vertical-align: center;
+        text-align: center;
+        &.past {
+          color: $gris4;
+        }
+        &.today {
+          background-color: $gris7;
+          color: white;
+        }
+      }
+    }
+    .sotamenu {
+      margin-top: 16px;
+      .dia-block {
+        $zen-column-count: 4;
+        @include zen-grid-container();
+        display: none;
+        width: 100%;
+        .data {
+          @include zen-grid-item(1,1);
+          padding-left: 0px;
+          .num {
+            width: 60px;
+            height: 60px;
+            background-color: $gris6;
+            border-radius: 120px;
+            line-height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: 'graphiksemibold';
+            font-size: 24px;
+            color: $gris7;
+            margin: 0 12px 12px 12px;
+            display: block;
+            overflow: hidden;
+            text-transform: uppercase;
+          }
+        }
+        .events {
+          @include zen-grid-item(3,2);
+          min-height: 100px;
+          padding-left: 8px;
+          border-left: 1px solid $gris7;
+          .no-events {
+            font-family: 'graphiksemibold';
+            color: $gris5;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          .event {
+            border-top: 2px solid $gris6;
+            width: 90%;
+            margin-top: 8px;
+            padding-top: 8px;
+            .title a {
+              @include graphik-semibold(18px, $gris7, 18px);
+            }
+            .field-adreca {
+              font-family: 'Arial', sans-serif;
+              font-size: 16px;
+              line-height: 19px;
+              color: $gris2;
+              font-style: italic;
+            }
+            .resum .field-body {
+              font-family: 'Arial', sans-serif;
+              font-weight: bold;
+              font-size: 17px;
+              line-height: 21px;
+              color: $gris2;
+            }
+            & > a {
+              @include public-roman(19px, $negre2, 19px);
+            }
+          }
+          .event:first-child {
+            border-top: 0px none;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+        }
+      }
+      .dia-block.today .data .num {
+        font-size: 18px;
+      }
+    }
+  }
+  #block-views-cd-serveis-block-1 {
+    .view-header {
+      .views-row {
+        .views-field-title {
+          display: none;
+        }
+        @include graphik-medium(14px, $gris2, 17px);
+        .field-body {
+          min-height: 106px;
+          p {
+            margin: 0px;
+          }
+        }
+      }
+    }
+    .view-cd-serveis.view-display-id-block_1 > .view-content {
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid $gris6;
+      @include box-shadow($gris4 0px 0px 4px 1px );
+      .views-row > div {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+      .views-row {
+        .views-field-title{
+          padding: 0px;
+          a {
+            @include graphik-semibold(18px, $gris7, 22px);
+          }
+        }
+        .field-oferta {
+          @include graphik-medium(14px, $gris7, 17px);
+        }
+        .field-tipus-de-servei a {
+          padding: 2px 14px;
+          @include graphik-medium(11px, $gris3, 15px);
+          background-color: $fons_rosa;
+        }
+        .views-field-view-node a {
+          @include graphik-medium(13px, $gris7, 17px);
+          text-decoration: underline;
+        }
+      }
+    }
+    .view-footer .views-row {
+      .views-field-title a {
+        @include graphik-semibold(18px, $gris7, 22px);
+        margin-top: 8px;
+        margin-bottom: 4px;
+        display: inline-block;
+      }
+      .field-oferta {
+        @include graphik-medium(12px, $gris2, 15px);
+      }
+    }
+  }
+
+  #block-views-linies-de-recerca-block {
+    .view-header p {
+      @include graphik-medium(14px, $gris2, 17px);
+      margin: 0px;
+    }
+    .view-content .views-row {
+      $zen-column-count: 8;
+      @include zen-grid-container();
+      border-bottom: 1px solid $gris6;
+      .views-field-title {
+        @include zen-grid-item(7,1);
+        a {
+          @include graphik-bold(16px, $gris2, 20px);
+          text-decoration: none;
+        }
+      }
+      .views-field-comment-count {
+        @include zen-clear();
+        @include zen-grid-item(7,1);
+        line-height: 16px;
+        span {
+          padding-left: 30px;
+          @include graphik-medium(12px, $gris2, 16px);
+        }
+      }
+      .views-field-view-node {
+        @include zen-grid-item(2,7);
+      }
+    }
+  }
+
+  #block-views-agenda-llista-block-1 .block-title {
+    background-image: url('../images/agenda.png');
+  }
+  #block-views-cd-noticias-block-1 .block-title {
+  }
+  #block-views-linies-de-recerca-block .block-title {
+  }
+  #block-views-linies-de-recerca-block {
+    .block-title {
+      background-image: url('../images/agenda.png');
+    }
+    .view-header {
+    @include graphik-medium(19px, $gris2, 24px);
+    }
+    .views-field-title a {
+      @include graphik-bold(26px, $gris7, 30px);
+    }
+    .field-body {
+      @include graphik-bold(19px, $gris2, 21px);
+    }
+    .views-field-comment-count {
+      @include graphik-medium(16px, $gris2, 37px);
+      padding-left:20px;
+      @include back-simple; 
+    }
+    .view-footer {
+      text-align: right;
+    }
+    a {
+      @include graphik-medium(16px, $gris7, 19px);
+      text-decoration: underline;
+    }
+  }
+  #block-views-cd-serveis-block-1 .block-title {
+    background-image: url('../images/agenda.png'); 
+  }
+
+}
+:@options{ :@has_childrenT:
+@linei:@children[o:Sass::Tree::CommentNode
+:
+@type:normal:@value["2/**
+ * Estils pel menu lateral colepsable
+ */;@;	i;
+[ o;
+;;;["Z/*****
+ * OJU molts ARXIUS AJUNTATS, ES PODEN REPETIR DEFINICIONS
+ *
+ * REVISAR!!
+ */;@;	i
+;
+[ o:Sass::Tree::VariableNode:
+@expro:Sass::Script::Number:@numerator_units["px:@original"1050px;i;@:@denominator_units[ ;	i:
+@name"menu_w;@:@guarded0;	i;
+[ o;;o;;["px;"	50px;i7;@;[ ;	i;"menu_tiger_w;@;0;	i;
+[ o;
+;;;["/*MENU LATERAL*/;@;	i;
+[ o;
+;;;["=/*vaia fucking guarrada de solucio de diumenge vespre */;@;	i;
+[ o:Sass::Tree::RuleNode:
+@tabsi :
+@rule["Fbody.page-node-add-esdeveniment-agenda #main #interior,
+#interior:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" :@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+:@sourceso:Set:
+@hash{ :@subject0;@-;[o:Sass::Selector::Element	:@namespace0;["	body;@-;	io:Sass::Selector::Class;["&page-node-add-esdeveniment-agenda;@-;	i;	io;
+; o;!;"{ ;#0;@-;[o:Sass::Selector::Id;["	main;@-;	i;	io;
+; o;!;"{ ;#0;@-;[o;';["interior;@-;	i;	io;;["
+o;
+; o;!;"{ ;#0;@-;[o;';["interior;@-;	i;	i;	i;@;T;	i;
+[o:Sass::Tree::PropNode:@prop_syntax:new;i ;o:Sass::Script::Variable	:@underscored_name"menu_w;"menu_w;@;	i;["
+width;@;	i;
+[ o;(;);*;i ;o:Sass::Script::String;:identifier;"
+fixed;@;["position;@;	i;
+[ o;(;);*;i ;o:!Sass::Script::UnaryOperation	;@:@operando;+	;,"menu_w;"menu_w;@;	i;	i:@operator:
+minus;["	left;@;	i;
+[ o;(;);*;i ;o;-;;.;"	80px;@;["top;@;	i;
+[ o;(;);*;i ;o;-;;.;"
+white;@;["background-color;@;	i;
+[ o;(;);*;i ;o;-;;.;"100;@;["z-index;@;	i;
+[ o;(;);*;i ;o;+	;,"
+gris9;"
+gris9;@;	i;["background-color;@;	i;
+[ o;(;);*;i ;o;-;;.;"32px 0;@;["padding;@;	i;
+[ o:Sass::Tree::MixinNode:@splat0:
+@args[o:Sass::Script::List	:@separator:
+space;[o;+	;,"
+gris6;"
+gris6;@;	io;;["px;"0px;i ;@;[ ;	io;;["px;"0px;i ;@;[ ;	io;;["px;"	10px;i;@;[ ;	io;;["px;"4px;i	;@;[ ;	io;-	;;.;"
+inset;@;	i;@;	i;"box-shadow:@keywords{ ;@;	i;
+[ o;
+;;;[" /** layout a 3 columnes **/;@;	i;
+[ o;;i ;[".region-interior;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@´;[o;&;["region-interior;@´;	i ;	i ;	i ;@;T;	i ;
+[o;;o;;[ ;"3;i;@;[ ;	i!;"zen-column-count;@;0;	i!;
+[ o;;o;;["px;"	20px;i;@;[ ;	i";"zen-gutter-width;@;0;	i";
+[ o;(;);*;i ;o;-;;.;"1024px;@;["
+width;@;	i$;
+[ o;3;40;5[ ;"zen-grid-container;9{ ;@;	i%;
+[ o;;i ;["'#block-views-agenda-llista-block-1;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@’;[o;';["&block-views-agenda-llista-block-1;@’;	i&;	i&;	i&;@;T;	i&;
+[o;3;40;5[o;;[ ;"1;i;@;@ª;	i'o;;[ ;"1;i;@;@ª;	i';"zen-grid-item;9{ ;@;	i';
+[ o;;i ;["#menu-agenda;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;';["menu-agenda;@;	i(;	i(;	i(;@;T;	i(;
+[ o;;i ;["$#block-views-cd-serveis-block-1;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ ;[o;';["#block-views-cd-serveis-block-1;@ ;	i+;	i+;	i+;@;T;	i+;
+[o;3;40;5[o;;[ ;"1;i;@;@ª;	i,o;;[ ;"2;i;@;@ª;	i,;"zen-grid-item;9{ ;@;	i,;
+[ o;;i ;[")#block-views-linies-de-recerca-block;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;';["(block-views-linies-de-recerca-block;@;	i.;	i.;	i.;@;T;	i.;
+[o;3;40;5[o;;[ ;"1;i;@;@ª;	i/o;;[ ;"3;i;@;@ª;	i/;"zen-grid-item;9{ ;@;	i/;
+[ o;;i ;["#menu-tigger;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@6;[o;';["menu-tigger;@6;	i2;	i2;	i2;@;T;	i2;
+[o;(;);*;i ;o;-;;.;"pointer;@;["cursor;@;	i3;
+[ o;(;);*;i ;o;+	;,"menu_tiger_w;"menu_tiger_w;@;	i4;["
+width;@;	i4;
+[ o;(;);*;i ;o;-;;.;"
+300px;@;["height;@;	i5;
+[ o;(;);*;i ;o;-;;.;"absolute;@;["position;@;	i6;
+[ o;(;);*;i ;o;/	;@;0o;+	;,"menu_tiger_w;"menu_tiger_w;@;	i7;	i7;1;2;["
+right;@;	i7;
+[ o;(;);*;i ;o:Sass::Script::Funcall;40;5[o;-	;:string;"../images/menu-tigger.png;@;	i8;"url;9{ ;@;	i8;["background-image;@;	i8;
+[ o;(;);*;i ;o;-;;.;"0 0;@;["background-position;@;	i9;
+[ o;(;);*;i ;o;-;;.;"no-repeat;@;["background-repeat;@;	i:;
+[ o;;i ;[".menu-close;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@};[o;&;["menu-close;@};	i<;	i<;	i<;@;T;	i<;
+[o;(;);*;i ;o;-;;.;"
+block;@;["display;@;	i=;
+[ o;(;);*;i ;o;-;;.;"	20px;@;["
+width;@;	i>;
+[ o;(;);*;i ;o;-;;.;"	20px;@;["height;@;	i?;
+[ o;(;);*;i ;o;-;;.;"pointer;@;["cursor;@;	i@;
+[ o;(;);*;i ;o;-;;.;"absolute;@;["position;@;	iA;
+[ o;(;);*;i ;o;:;40;5[o;-	;;;;"../images/sprites.png;@;	iB;"url;9{ ;@;	iB;["background-image;@;	iB;
+[ o;(;);*;i ;o;-;;.;"no-repeat;@;["background-repeat;@;	iC;
+[ o;(;);*;i ;o;-;;.;"-402px -39px;@;["background-position;@;	iD;
+[ o;;i ;["#menu-close-top;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@¡;[o;';["menu-close-top;@¡;	iF;	iF;	iF;@;T;	iF;
+[o;(;);*;i ;o;-;;.;"8px;@;["top;@;	iG;
+[ o;(;);*;i ;o;-;;.;"8px;@;["
+right;@;	iH;
+[ o;;i ;["#menu-close-bottom;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@›;[o;';["menu-close-bottom;@›;	iJ;	iJ;	iJ;@;T;	iJ;
+[o;(;);*;i ;o;-;;.;"8px;@;["
+right;@;	iK;
+[ o;(;);*;i ;o;-;;.;"8px;@;["bottom;@;	iL;
+[ o;;i ;["r#block-views-agenda-llista-block-1,
+  #block-views-cd-serveis-block-1,
+  #block-views-linies-de-recerca-block;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@˘;[o;';["&block-views-agenda-llista-block-1;@˘;	iQ;	iQo;;["
+o;
+; o;!;"{ ;#0;@˘;[o;';["#block-views-cd-serveis-block-1;@˘;	iQ;	iQo;;["
+o;
+; o;!;"{ ;#0;@˘;[o;';["(block-views-linies-de-recerca-block;@˘;	iQ;	iQ;	iQ;@;T;	iQ;
+[	o;(;);*;i ;o;6	;7;8;[o;;["px;"6px;i;@;[ ;	iRo;-	;;.;"
+solid;@;	iRo;+	;,"
+gris9;"
+gris9;@;	iR;@;	iR;["border-left;@;	iR;
+[ o;(;);*;i ;o;-;;.;"8px;@;["padding;@;	iS;
+[ o;(;);*;i ;o;-;;.;"
+white;@;["background-color;@;	iT;
+[ o;;i ;[".block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@9;[o;&;["block-title;@9;	iU;	iU;	iU;@;T;	iU;
+[o;3;40;5[o;;["px;"	26px;i;@;[ ;	iVo;+	;,"
+gris2;"
+gris2;@;	iVo;;["px;"	31px;i$;@;[ ;	iV;"graphik-medium;9{ ;@;	iV;
+[ o;(;);*;i ;o;-;;.;"no-repeat;@;["background-repeat;@;	iW;
+[ o;(;);*;i ;o;-;;.;"-30px 30%;@;["background-position;@;	iX;
+[ o;
+;:silent;[":/* posicionament nefest, no estan clares les mides */;@;	iX;
+[ o;(;);*;i ;o;-;;.;"	42px;@;["padding-left;@;	iY;
+[ o;(;);*;i ;o;6	;7;8;[o;;["px;"2px;i;@;[ ;	iZo;-	;;.;"
+solid;@;	iZo;+	;,"
+gris6;"
+gris6;@;	iZ;@;	iZ;["border-bottom;@;	iZ;
+[ o;(;);*;i ;o;-;;.;"top;@;["vertical-align;@;	i[;
+[ o;(;);*;i ;o;-;;.;"	45px;@;["line-height;@;	i\;
+[ o;(;);*;i ;o;-;;.;"	12px;@;["margin-bottom;@;	i];
+[ o;
+;;;["/** columna 1 agenda **/;@;	ia;
+[ o;;i ;["'#block-views-agenda-llista-block-1;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ó;[o;';["&block-views-agenda-llista-block-1;@ó;	ib;	ib;	ib;@;T;	ib;
+[o;;i ;["#menu-agenda > div;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ß;[o;';["menu-agenda;@ß;	ic;	ic">o;
+; o;!;"{ ;#0;@ß;[o;$	;%0;["div;@ß;	ic;	ic;	ic;@;T;	ic;
+[o;(;);*;i ;o;6	;7;8;[o;-	;;.;"	none;@;	ido;-	;;.;"repeat;@;	ido;-	;;.;"scroll;@;	ido;;[ ;"0;i ;@;@ª;	ido;;[ ;"0;i ;@;@ª;	ido;+	;,"
+gris6;"
+gris6;@;	id;@;	id;["background;@;	id;
+[ o;(;);*;i ;o;-;;.;"	45px;@;["height;@;	ie;
+[ o;(;);*;i ;o;-;;.;"4px;@;["margin-bottom;@;	if;
+[ o;(;);*;i ;o;-;;.;"7px;@;["padding-top;@;	ig;
+[ o;(;);*;i ;o;-;;.;"	100%;@;["
+width;@;	ih;
+[ o;;i ;[".daysup;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Ï;[o;&;["daysup;@Ï;	ii;	ii;	ii;@;T;	ii;
+[o;(;);*;i ;o;-;;.;"pointer;@;["cursor;@;	ij;
+[ o;(;);*;i ;o;-;;.;"!none repeat scroll 0 0 white;@;["background;@;	ik;
+[ o;(;);*;i ;o;-;;.;"'graphiksemibold';@;["font-family;@;	il;
+[ o;(;);*;i ;o;-;;.;"	16px;@;["font-size;@;	im;
+[ o;(;);*;i ;o;+	;,"
+gris2;"
+gris2;@;	in;["
+color;@;	in;
+[ o;(;);*;i ;o;-;;.;"	60px;@;["border-radius;@;	io;
+[ o;(;);*;i ;o;-;;.;"inline-block;@;["display;@;	ip;
+[ o;(;);*;i ;o;-;;.;"0;@;["margin-top;@;	iq;
+[ o;(;);*;i ;o;-;;.;"7px;@;["margin-left;@;	ir;
+[ o;(;);*;i ;o;-;;.;"	37px;@;["
+width;@;	is;
+[ o;(;);*;i ;o;-;;.;"	37px;@;["height;@;	it;
+[ o;(;);*;i ;o;-;;.;"	37px;@;["line-height;@;	iu;
+[ o;(;);*;i ;o;-;;.;"center;@;["vertical-align;@;	iv;
+[ o;(;);*;i ;o;-;;.;"center;@;["text-align;@;	iw;
+[ o;;i ;["&.past;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Q;[o:Sass::Selector::Parent;@Q;	ixo;&;["	past;@Q;	ix;	ix;	ix;@;T;	ix;
+[o;(;);*;i ;o;+	;,"
+gris4;"
+gris4;@;	iy;["
+color;@;	iy;
+[ o;;i ;["&.today;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@i;[o;=;@i;	i{o;&;["
+today;@i;	i{;	i{;	i{;@;T;	i{;
+[o;(;);*;i ;o;+	;,"
+gris7;"
+gris7;@;	i|;["background-color;@;	i|;
+[ o;(;);*;i ;o;-;;.;"
+white;@;["
+color;@;	i};
+[ o;;i ;[".sotamenu;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@á;[o;&;["sotamenu;@á;	i|;	i|;	i|;@;T;	i|;
+[o;(;);*;i ;o;-;;.;"	16px;@;["margin-top;@;	i};
+[ o;;i ;[".dia-block;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ù;[o;&;["dia-block;@ù;	i~;	i~;	i~;@;T;	i~;
+[o;;o;;[ ;"4;i	;@;@ª;	i;"zen-column-count;@;0;	i;
+[ o;3;40;5[ ;"zen-grid-container;9{ ;@;	iÄ;
+[ o;(;);*;i ;o;-;;.;"	none;@;["display;@;	iÅ;
+[ o;(;);*;i ;o;-;;.;"	100%;@;["
+width;@;	iÇ;
+[ o;;i ;["
+.data;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ƒ;[o;&;["	data;@ƒ;	iÉ;	iÉ;	iÉ;@;T;	iÉ;
+[o;3;40;5[o;;[ ;"1;i;@;@ª;	iÑo;;[ ;"1;i;@;@ª;	iÑ;"zen-grid-item;9{ ;@;	iÑ;
+[ o;(;);*;i ;o;-;;.;"0px;@;["padding-left;@;	iÖ;
+[ o;;i ;["	.num;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Â;[o;&;["num;@Â;	iÜ;	iÜ;	iÜ;@;T;	iÜ;
+[o;(;);*;i ;o;-;;.;"	60px;@;["
+width;@;	iá;
+[ o;(;);*;i ;o;-;;.;"	60px;@;["height;@;	ià;
+[ o;(;);*;i ;o;+	;,"
+gris6;"
+gris6;@;	iâ;["background-color;@;	iâ;
+[ o;(;);*;i ;o;-;;.;"
+120px;@;["border-radius;@;	iä;
+[ o;(;);*;i ;o;-;;.;"	60px;@;["line-height;@;	iã;
+[ o;(;);*;i ;o;-;;.;"center;@;["text-align;@;	iå;
+[ o;(;);*;i ;o;-;;.;"middle;@;["vertical-align;@;	iç;
+[ o;(;);*;i ;o;-;;.;"'graphiksemibold';@;["font-family;@;	ié;
+[ o;(;);*;i ;o;-;;.;"	24px;@;["font-size;@;	iè;
+[ o;(;);*;i ;o;+	;,"
+gris7;"
+gris7;@;	iê;["
+color;@;	iê;
+[ o;(;);*;i ;o;-;;.;"0 12px 12px 12px;@;["margin;@;	ië;
+[ o;(;);*;i ;o;-;;.;"
+block;@;["display;@;	ií;
+[ o;(;);*;i ;o;-;;.;"hidden;@;["overflow;@;	iì;
+[ o;(;);*;i ;o;-;;.;"uppercase;@;["text-transform;@;	iî;
+[ o;;i ;[".events;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@K;[o;&;["events;@K;	ió;	ió;	ió;@;T;	ió;
+[o;3;40;5[o;;[ ;"3;i;@;@ª;	iòo;;[ ;"2;i;@;@ª;	iò;"zen-grid-item;9{ ;@;	iò;
+[ o;(;);*;i ;o;-;;.;"
+100px;@;["min-height;@;	iô;
+[ o;(;);*;i ;o;-;;.;"8px;@;["padding-left;@;	iö;
+[ o;(;);*;i ;o;6	;7;8;[o;;["px;"1px;i;@;[ ;	iõo;-	;;.;"
+solid;@;	iõo;+	;,"
+gris7;"
+gris7;@;	iõ;@;	iõ;["border-left;@;	iõ;
+[ o;;i ;[".no-events;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Ç;[o;&;["no-events;@Ç;	iú;	iú;	iú;@;T;	iú;
+[	o;(;);*;i ;o;-;;.;"'graphiksemibold';@;["font-family;@;	iù;
+[ o;(;);*;i ;o;+	;,"
+gris5;"
+gris5;@;	iû;["
+color;@;	iû;
+[ o;(;);*;i ;o;-;;.;"	18px;@;["font-size;@;	iü;
+[ o;(;);*;i ;o;-;;.;"	22px;@;["line-height;@;	i†;
+[ o;;i ;[".event;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@´;[o;&;["
+event;@´;	i¢;	i¢;	i¢;@;T;	i¢;
+[o;(;);*;i ;o;6	;7;8;[o;;["px;"2px;i;@;[ ;	i£o;-	;;.;"
+solid;@;	i£o;+	;,"
+gris6;"
+gris6;@;	i£;@;	i£;["border-top;@;	i£;
+[ o;(;);*;i ;o;-;;.;"90%;@;["
+width;@;	i§;
+[ o;(;);*;i ;o;-;;.;"8px;@;["margin-top;@;	i•;
+[ o;(;);*;i ;o;-;;.;"8px;@;["padding-top;@;	i¶;
+[ o;;i ;[".title a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@›;[o;&;["
+title;@›;	iß;	ißo;
+; o;!;"{ ;#0;@›;[o;$	;%0;["a;@›;	iß;	iß;	iß;@;T;	iß;
+[o;3;40;5[o;;["px;"	18px;i;@;[ ;	i®o;+	;,"
+gris7;"
+gris7;@;	i®o;;["px;"	18px;i;@;[ ;	i®;"graphik-semibold;9{ ;@;	i®;
+[ o;;i ;[".field-adreca;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;&;["field-adreca;@;	i™;	i™;	i™;@;T;	i™;
+[
+o;(;);*;i ;o;-;;.;"'Arial', sans-serif;@;["font-family;@;	i´;
+[ o;(;);*;i ;o;-;;.;"	16px;@;["font-size;@;	i¨;
+[ o;(;);*;i ;o;-;;.;"	19px;@;["line-height;@;	i≠;
+[ o;(;);*;i ;o;+	;,"
+gris2;"
+gris2;@;	iÆ;["
+color;@;	iÆ;
+[ o;(;);*;i ;o;-;;.;"italic;@;["font-style;@;	iØ;
+[ o;;i ;[".resum .field-body;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@5;[o;&;["
+resum;@5;	i±;	i±o;
+; o;!;"{ ;#0;@5;[o;&;["field-body;@5;	i±;	i±;	i±;@;T;	i±;
+[
+o;(;);*;i ;o;-;;.;"'Arial', sans-serif;@;["font-family;@;	i≤;
+[ o;(;);*;i ;o;-;;.;"	bold;@;["font-weight;@;	i≥;
+[ o;(;);*;i ;o;-;;.;"	17px;@;["font-size;@;	i¥;
+[ o;(;);*;i ;o;-;;.;"	21px;@;["line-height;@;	iµ;
+[ o;(;);*;i ;o;+	;,"
+gris2;"
+gris2;@;	i∂;["
+color;@;	i∂;
+[ o;;i ;["
+& > a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@k;[o;=;@k;	i∏;	i∏">o;
+; o;!;"{ ;#0;@k;[o;$	;%0;["a;@k;	i∏;	i∏;	i∏;@;T;	i∏;
+[o;3;40;5[o;;["px;"	19px;i;@;[ ;	iπo;+	;,"negre2;"negre2;@;	iπo;;["px;"	19px;i;@;[ ;	iπ;"public-roman;9{ ;@;	iπ;
+[ o;;i ;[".event:first-child;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ì;[o;&;["
+event;@ì;	iºo:Sass::Selector::Pseudo
+:	@arg0;["first-child:@syntactic_type:
+class;@ì;	iº;	iº;	iº;@;T;	iº;
+[o;(;);*;i ;o;-;;.;"0px none;@;["border-top;@;	iΩ;
+[ o;(;);*;i ;o;-;;.;"0px;@;["margin-top;@;	iæ;
+[ o;(;);*;i ;o;-;;.;"0px;@;["padding-top;@;	iø;
+[ o;;i ;[" .dia-block.today .data .num;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@∏;[o;&;["dia-block;@∏;	i√o;&;["
+today;@∏;	i√;	i√o;
+; o;!;"{ ;#0;@∏;[o;&;["	data;@∏;	i√;	i√o;
+; o;!;"{ ;#0;@∏;[o;&;["num;@∏;	i√;	i√;	i√;@;T;	i√;
+[o;(;);*;i ;o;-;;.;"	18px;@;["font-size;@;	iƒ;
+[ o;;i ;["$#block-views-cd-serveis-block-1;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ﬂ;[o;';["#block-views-cd-serveis-block-1;@ﬂ;	i»;	i»;	i»;@;T;	i»;
+[o;;i ;[".view-header;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Ô;[o;&;["view-header;@Ô;	i…;	i…;	i…;@;T;	i…;
+[o;;i ;[".views-row;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ˇ;[o;&;["views-row;@ˇ;	i ;	i ;	i ;@;T;	i ;
+[o;;i ;[".views-field-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;&;["views-field-title;@;	iÀ;	iÀ;	iÀ;@;T;	iÀ;
+[o;(;);*;i ;o;-;;.;"	none;@;["display;@;	iÃ;
+[ o;3;40;5[o;;["px;"	14px;i;@;[ ;	iŒo;+	;,"
+gris2;"
+gris2;@;	iŒo;;["px;"	17px;i;@;[ ;	iŒ;"graphik-medium;9{ ;@;	iŒ;
+[ o;;i ;[".field-body;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@7;[o;&;["field-body;@7;	iœ;	iœ;	iœ;@;T;	iœ;
+[o;(;);*;i ;o;-;;.;"
+106px;@;["min-height;@;	i–;
+[ o;;i ;["p;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@M;[o;$	;%0;["p;@M;	i—;	i—;	i—;@;T;	i—;
+[o;(;);*;i ;o;-;;.;"0px;@;["margin;@;	i“;
+[ o;;i ;["=.view-cd-serveis.view-display-id-block_1 > .view-content;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@c;[o;&;["view-cd-serveis;@c;	i◊o;&;["view-display-id-block_1;@c;	i◊;	i◊">o;
+; o;!;"{ ;#0;@c;[o;&;["view-content;@c;	i◊;	i◊;	i◊;@;T;	i◊;
+[o;(;);*;i ;o;-;;.;"8px;@;["padding;@;	iÿ;
+[ o;(;);*;i ;o;-;;.;"6px;@;["margin-top;@;	iŸ;
+[ o;(;);*;i ;o;6	;7;8;[o;;["px;"1px;i;@;[ ;	i⁄o;-	;;.;"
+solid;@;	i⁄o;+	;,"
+gris6;"
+gris6;@;	i⁄;@;	i⁄;["border;@;	i⁄;
+[ o;3;40;5[o;6	;7;8;[
+o;+	;,"
+gris4;"
+gris4;@;	i€o;;["px;"0px;i ;@;[ ;	i€o;;["px;"0px;i ;@;[ ;	i€o;;["px;"4px;i	;@;[ ;	i€o;;["px;"1px;i;@;[ ;	i€;@;	i€;"box-shadow;9{ ;@;	i€;
+[ o;;i ;[".views-row > div;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@∏;[o;&;["views-row;@∏;	i‹;	i‹">o;
+; o;!;"{ ;#0;@∏;[o;$	;%0;["div;@∏;	i‹;	i‹;	i‹;@;T;	i‹;
+[o;(;);*;i ;o;-;;.;"	14px;@;["padding-left;@;	i›;
+[ o;(;);*;i ;o;-;;.;"	14px;@;["padding-right;@;	iﬁ;
+[ o;;i ;[".views-row;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@‹;[o;&;["views-row;@‹;	i‡;	i‡;	i‡;@;T;	i‡;
+[	o;;i ;[".views-field-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@Ï;[o;&;["views-field-title;@Ï;	i·;	i·;	i·;@;T;	i·;
+[o;(;);*;i ;o;-;;.;"0px;@;["padding;@;	i‚;
+[ o;;i ;["a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;$	;%0;["a;@;	i„;	i„;	i„;@;T;	i„;
+[o;3;40;5[o;;["px;"	18px;i;@;[ ;	i‰o;+	;,"
+gris7;"
+gris7;@;	i‰o;;["px;"	22px;i;@;[ ;	i‰;"graphik-semibold;9{ ;@;	i‰;
+[ o;;i ;[".field-oferta;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@$;[o;&;["field-oferta;@$;	iÁ;	iÁ;	iÁ;@;T;	iÁ;
+[o;3;40;5[o;;["px;"	14px;i;@;[ ;	iËo;+	;,"
+gris7;"
+gris7;@;	iËo;;["px;"	17px;i;@;[ ;	iË;"graphik-medium;9{ ;@;	iË;
+[ o;;i ;[".field-tipus-de-servei a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@F;[o;&;["field-tipus-de-servei;@F;	iÍ;	iÍo;
+; o;!;"{ ;#0;@F;[o;$	;%0;["a;@F;	iÍ;	iÍ;	iÍ;@;T;	iÍ;
+[o;(;);*;i ;o;-;;.;"2px 14px;@;["padding;@;	iÎ;
+[ o;3;40;5[o;;["px;"	11px;i;@;[ ;	iÏo;+	;,"
+gris3;"
+gris3;@;	iÏo;;["px;"	15px;i;@;[ ;	iÏ;"graphik-medium;9{ ;@;	iÏ;
+[ o;(;);*;i ;o;+	;,"fons_rosa;"fons_rosa;@;	iÌ;["background-color;@;	iÌ;
+[ o;;i ;[".views-field-view-node a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@|;[o;&;["views-field-view-node;@|;	iÔ;	iÔo;
+; o;!;"{ ;#0;@|;[o;$	;%0;["a;@|;	iÔ;	iÔ;	iÔ;@;T;	iÔ;
+[o;3;40;5[o;;["px;"	13px;i;@;[ ;	io;+	;,"
+gris7;"
+gris7;@;	io;;["px;"	17px;i;@;[ ;	i;"graphik-medium;9{ ;@;	i;
+[ o;(;);*;i ;o;-;;.;"underline;@;["text-decoration;@;	iÒ;
+[ o;;i ;[".view-footer .views-row;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@´;[o;&;["view-footer;@´;	iı;	iıo;
+; o;!;"{ ;#0;@´;[o;&;["views-row;@´;	iı;	iı;	iı;@;T;	iı;
+[o;;i ;[".views-field-title a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@¬;[o;&;["views-field-title;@¬;	iˆ;	iˆo;
+; o;!;"{ ;#0;@¬;[o;$	;%0;["a;@¬;	iˆ;	iˆ;	iˆ;@;T;	iˆ;
+[	o;3;40;5[o;;["px;"	18px;i;@;[ ;	i˜o;+	;,"
+gris7;"
+gris7;@;	i˜o;;["px;"	22px;i;@;[ ;	i˜;"graphik-semibold;9{ ;@;	i˜;
+[ o;(;);*;i ;o;-;;.;"8px;@;["margin-top;@;	i¯;
+[ o;(;);*;i ;o;-;;.;"4px;@;["margin-bottom;@;	i˘;
+[ o;(;);*;i ;o;-;;.;"inline-block;@;["display;@;	i˙;
+[ o;;i ;[".field-oferta;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@˝;[o;&;["field-oferta;@˝;	i¸;	i¸;	i¸;@;T;	i¸;
+[o;3;40;5[o;;["px;"	12px;i;@;[ ;	i˝o;+	;,"
+gris2;"
+gris2;@;	i˝o;;["px;"	15px;i;@;[ ;	i˝;"graphik-medium;9{ ;@;	i˝;
+[ o;;i ;[")#block-views-linies-de-recerca-block;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@;[o;';["(block-views-linies-de-recerca-block;@;	i;	i;	i;@;T;	i;
+[o;;i ;[".view-header p;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@/;[o;&;["view-header;@/;	i;	io;
+; o;!;"{ ;#0;@/;[o;$	;%0;["p;@/;	i;	i;	i;@;T;	i;
+[o;3;40;5[o;;["px;"	14px;i;@;[ ;	io;+	;,"
+gris2;"
+gris2;@;	io;;["px;"	17px;i;@;[ ;	i;"graphik-medium;9{ ;@;	i;
+[ o;(;);*;i ;o;-;;.;"0px;@;["margin;@;	i;
+[ o;;i ;[".view-content .views-row;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@^;[o;&;["view-content;@^;	i;	io;
+; o;!;"{ ;#0;@^;[o;&;["views-row;@^;	i;	i;	i;@;T;	i;
+[o;;o;;[ ;"8;i;@;@ª;	i;"zen-column-count;@;0;	i;
+[ o;3;40;5[ ;"zen-grid-container;9{ ;@;	i	;
+[ o;(;);*;i ;o;6	;7;8;[o;;["px;"1px;i;@;[ ;	i
+o;-	;;.;"
+solid;@;	i
+o;+	;,"
+gris6;"
+gris6;@;	i
+;@;	i
+;["border-bottom;@;	i
+;
+[ o;;i ;[".views-field-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ê;[o;&;["views-field-title;@ê;	i;	i;	i;@;T;	i;
+[o;3;40;5[o;;[ ;"7;i;@;@ª;	io;;[ ;"1;i;@;@ª;	i;"zen-grid-item;9{ ;@;	i;
+[ o;;i ;["a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@´;[o;$	;%0;["a;@´;	i;	i;	i;@;T;	i;
+[o;3;40;5[o;;["px;"	16px;i;@;[ ;	io;+	;,"
+gris2;"
+gris2;@;	io;;["px;"	20px;i;@;[ ;	i;"graphik-bold;9{ ;@;	i;
+[ o;(;);*;i ;o;-;;.;"	none;@;["text-decoration;@;	i;
+[ o;;i ;[".views-field-comment-count;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@”;[o;&;["views-field-comment-count;@”;	i;	i;	i;@;T;	i;
+[	o;3;40;5[ ;"zen-clear;9{ ;@;	i;
+[ o;3;40;5[o;;[ ;"7;i;@;@ª;	io;;[ ;"1;i;@;@ª;	i;"zen-grid-item;9{ ;@;	i;
+[ o;(;);*;i ;o;-;;.;"	16px;@;["line-height;@;	i;
+[ o;;i ;["	span;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@˘;[o;$	;%0;["	span;@˘;	i;	i;	i;@;T;	i;
+[o;(;);*;i ;o;-;;.;"	30px;@;["padding-left;@;	i;
+[ o;3;40;5[o;;["px;"	12px;i;@;[ ;	io;+	;,"
+gris2;"
+gris2;@;	io;;["px;"	16px;i;@;[ ;	i;"graphik-medium;9{ ;@;	i;
+[ o;;i ;[".views-field-view-node;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@!	;[o;&;["views-field-view-node;@!	;	i;	i;	i;@;T;	i;
+[o;3;40;5[o;;[ ;"2;i;@;@ª;	io;;[ ;"7;i;@;@ª;	i;"zen-grid-item;9{ ;@;	i;
+[ o;;i ;["4#block-views-agenda-llista-block-1 .block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@<	;[o;';["&block-views-agenda-llista-block-1;@<	;	i!;	i!o;
+; o;!;"{ ;#0;@<	;[o;&;["block-title;@<	;	i!;	i!;	i!;@;T;	i!;
+[o;(;);*;i ;o;:;40;5[o;-	;;;;"../images/agenda.png;@;	i";"url;9{ ;@;	i";["background-image;@;	i";
+[ o;;i ;["2#block-views-cd-noticias-block-1 .block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@]	;[o;';["$block-views-cd-noticias-block-1;@]	;	i$;	i$o;
+; o;!;"{ ;#0;@]	;[o;&;["block-title;@]	;	i$;	i$;	i$;@;T;	i$;
+[ o;;i ;["6#block-views-linies-de-recerca-block .block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@t	;[o;';["(block-views-linies-de-recerca-block;@t	;	i&;	i&o;
+; o;!;"{ ;#0;@t	;[o;&;["block-title;@t	;	i&;	i&;	i&;@;T;	i&;
+[ o;;i ;[")#block-views-linies-de-recerca-block;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ã	;[o;';["(block-views-linies-de-recerca-block;@ã	;	i(;	i(;	i(;@;T;	i(;
+[o;;i ;[".block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@õ	;[o;&;["block-title;@õ	;	i);	i);	i);@;T;	i);
+[o;(;);*;i ;o;:;40;5[o;-	;;;;"../images/agenda.png;@;	i*;"url;9{ ;@;	i*;["background-image;@;	i*;
+[ o;;i ;[".view-header;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@µ	;[o;&;["view-header;@µ	;	i,;	i,;	i,;@;T;	i,;
+[o;3;40;5[o;;["px;"	19px;i;@;[ ;	i-o;+	;,"
+gris2;"
+gris2;@;	i-o;;["px;"	24px;i;@;[ ;	i-;"graphik-medium;9{ ;@;	i-;
+[ o;;i ;[".views-field-title a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@◊	;[o;&;["views-field-title;@◊	;	i/;	i/o;
+; o;!;"{ ;#0;@◊	;[o;$	;%0;["a;@◊	;	i/;	i/;	i/;@;T;	i/;
+[o;3;40;5[o;;["px;"	26px;i;@;[ ;	i0o;+	;,"
+gris7;"
+gris7;@;	i0o;;["px;"	30px;i#;@;[ ;	i0;"graphik-bold;9{ ;@;	i0;
+[ o;;i ;[".field-body;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ 
+;[o;&;["field-body;@ 
+;	i2;	i2;	i2;@;T;	i2;
+[o;3;40;5[o;;["px;"	19px;i;@;[ ;	i3o;+	;,"
+gris2;"
+gris2;@;	i3o;;["px;"	21px;i;@;[ ;	i3;"graphik-bold;9{ ;@;	i3;
+[ o;;i ;[".views-field-comment-count;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@"
+;[o;&;["views-field-comment-count;@"
+;	i5;	i5;	i5;@;T;	i5;
+[o;3;40;5[o;;["px;"	16px;i;@;[ ;	i6o;+	;,"
+gris2;"
+gris2;@;	i6o;;["px;"	37px;i*;@;[ ;	i6;"graphik-medium;9{ ;@;	i6;
+[ o;(;);*;i ;o;-;;.;"	20px;@;["padding-left;@;	i7;
+[ o;3;40;5[ ;"back-simple;9{ ;@;	i8;
+[ o;;i ;[".view-footer;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@O
+;[o;&;["view-footer;@O
+;	i:;	i:;	i:;@;T;	i:;
+[o;(;);*;i ;o;-;;.;"
+right;@;["text-align;@;	i;;
+[ o;;i ;["a;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@e
+;[o;$	;%0;["a;@e
+;	i=;	i=;	i=;@;T;	i=;
+[o;3;40;5[o;;["px;"	16px;i;@;[ ;	i>o;+	;,"
+gris7;"
+gris7;@;	i>o;;["px;"	19px;i;@;[ ;	i>;"graphik-medium;9{ ;@;	i>;
+[ o;(;);*;i ;o;-;;.;"underline;@;["text-decoration;@;	i?;
+[ o;;i ;["1#block-views-cd-serveis-block-1 .block-title;o;;" ;[o;;[o;
+; o;!;"{ ;#0;@ç
+;[o;';["#block-views-cd-serveis-block-1;@ç
+;	iB;	iBo;
+; o;!;"{ ;#0;@ç
+;[o;&;["block-title;@ç
+;	iB;	iB;	iB;@;T;	iB;
+[o;(;);*;i ;o;:;40;5[o;-	;;;;"../images/agenda.png;@;	iC;"url;9{ ;@;	iC;["background-image;@;	iC;
+[ 

@@ -1,4 +1,5 @@
 body.page-taxonomy,
+body.page-paper,
 body.front {
  #main {
    $zen-column-count:23;
@@ -145,8 +146,12 @@ body.front {
       .view-display-id-block_1 {
         @include portada-numero;
       }
+      .field-seccio,
       .field-seccio-web {
         @include seccio;
+      }
+      .field-seccio {
+        display: inline;
       }
       .meta-info-top {
         width: 100%;
@@ -169,6 +174,7 @@ body.front {
           /** cas tingui enllas o no **/
           .field-autoria-general,
           .field-autor,
+          .field-autor a,
           .field-autor a.autor {
             text-decoration: underline;
             padding: 0px;
@@ -292,9 +298,9 @@ body.front {
      .view-id-fald_.view-display-id-block_1 .views-row-1 {
        border-bottom: 0px none;
        margin-bottom: 32px;
-       min-height: 270px;
+       min-height: 190px;
        .field-portada-numero {
-         width: 60%;
+         width: 55%;
          float: left;
          margin-right: 10px;
          img {
@@ -302,23 +308,118 @@ body.front {
            padding: 0px;
          }
        }
+       .num-tit {
+         display: inline;
+         div {
+           display: inline;
+         }
+         @include public-bold(18px, $negre, 22px);
+       }
        .prototype-wrapper,
        .num,
        .date-display-single,
        .field-pdf,
        & > a,
-       .field-butlleti-sonor {
-         display: inline;
-       }
-       .prototype-wrapper {
-         right: 0px;
-         position: absolute;
-       }
        .num {
          @include graphik-semibold(16px, $gris7, 18px);
        }
+       .field-dataf {
+         margin-top: -8px;
+         span {
+           @include graphik-semibold(12px, $gris3, 18px);
+         }
+       }
+       a.hemeroteca {
+         position: absolute;
+         display: inline;
+       }
+       a.hemeroteca,
+       .views-field-view-node a {
+         text-transform: uppercase;
+         @include graphik-regular(11px, $gris7, 18px);
+         padding-left: 32px;
+         line-height: 20px;
+         vertical-align: middle;
+         background-repeat: no-repeat;
+         background-position: 0 50%;
+         background-size: 28px 18px;
+         margin-left: -10px;
+         display: inline-block;
+       }
+       a.hemeroteca {
+         background-image: url('../images/num_view.png');
+       }
+       .views-field-view-node a {
+         margin-top: 12px;
+         background-image: url('../images/num_dwn.png');
+       }
        &:after {
          clear: both;
+       }
+     }
+     #block-views-butlletisonor-block-1 {
+       .view-content .views-row {
+         border-bottom: 0px none;
+         margin-bottom: 0px;
+         padding-bottom: 0px;
+         .player-wrapper {
+           .field-butlleti-sonor {
+             width: 55px;
+             float: left;
+             .ui360-vis {
+               margin: 0px;
+               padding: 0px;
+               & > div {
+                 margin: 0px;
+                 padding: 0px;
+               }
+               a {
+                 display: none;
+               }
+             }
+           }
+         }
+         .views-field-title {
+           span {
+             @include graphik-semibold(14px, $gris2, 18px);
+             display: block;
+           }
+         }
+         .field-databs {
+           span {
+             @include graphik-semibold(12px, $gris3, 18px);
+           }
+         }
+       }
+       .item-list {
+         .pager {
+           margin: 0px;
+           li.pager-current {
+             display: none;
+           }
+           li.pager-previous a,
+           li.pager-next a {
+             display: inline-block;
+             width: 24px;
+             height: 24px;
+             text-indent: 99999px;
+             overflow: hidden;
+             background-image: url('../images/sprites.png');
+             background-repeat: no-repeat;
+           }
+           li.pager-previous a{
+             background-position: -387px -61px;
+           }
+           li.pager-next a{
+             background-position: -411px -61px;
+           }
+         }
+         border-bottom: 1px solid $gris6;
+         padding-bottom: 12px;
+         margin-bottom: 12px;
+       }
+       .feed-icon {
+         display: none;
        }
      }
    }

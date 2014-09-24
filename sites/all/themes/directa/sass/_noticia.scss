@@ -18,7 +18,6 @@
           @include zen-grid-item(14,1);
         }
       }
-
       .easy_social_box {
         @include zen-clear();
         @include zen-grid-item(3,1);
@@ -82,12 +81,8 @@
       #page-title {
         @include titulo-not;
         padding-top: 20px;
+        display: block;
       }
-      //.node-title {
-        //a {
-         // @include titulo-not;
-       // }
-      //}
       article.node-noticia.view-mode-full {
         .field-subtitol {
           @include subtitulo-not;

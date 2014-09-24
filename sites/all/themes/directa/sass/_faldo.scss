@@ -1,3 +1,4 @@
+#faldo-wrapper.active,
 #faldo-wrapper {
   width: 100%;
   min-width: 100%;
@@ -5,21 +6,184 @@
   position: fixed;
   bottom: 0px;
   left: 0;
-  height: 40%;
+  min-height: 40%;
+  #faldo-switcher {
+    padding-left: 20%;
+    cursor: pointer;
+    height:40px;
+    line-height: 40px;
+    verical-align: middle;
+    background-color: $gris9;
+    position: relative;
+    @include graphik-regular(19px, $gris7, 40px);
+    @include box-shadow($gris7 0px 0px 10px);
+    .faldo-titol-destacat {
+      @include graphik-medium(21px, $gris7, 40px);
+      padding-right: 6px;
+    }
+    .faldo-switcher-act,
+    .faldo-switcher-dis {
+      content: "tancar";
+      text-transform: uppercase;
+      padding: 4px 8px;
+      @include box-shadow($gris7 0px 0px 3px inset);
+      @include border-radius(2px);
+      font-size: 12px;
+      display: inline;
+      vertical-align: middle;
+      margin-right: 22px;
+    }
+    .faldo-switcher-dis {
+      display: none;
+    }
+  }
+  &.disabled #faldo-switcher {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    .faldo-switcher-act {
+      display: none;
+    }
+    .faldo-switcher-dis {
+      display: inline;
+    }
+  }
   .region-faldo {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
+    height: 480px;
+    background-color: white;
     #faldo-general {
+      width: 90%;
+      max-width: 1280px;
+      margin: 0 auto;
       $zen-column-count:  2;
       $zen-gutter-width:  20px;
       @include zen-grid-container();
+      h4.title {
+        margin: 8px 0;
+        @include zen-grid-item(2,1);
+        text-align: center;
+        @include public-bold(32px, $gris7, 36px);
+      }
       #faldo_esquerra {
+        @include zen-clear();
         @include zen-grid-item(1,1);
-        @include zen-grid-container();
+        @include zen-nested-container();
+        #faldo_esquerra_portada {
+          @include zen-grid-item(1,1);
+          img {
+            width: 100%;
+          }
+        }
+        #faldo_esquerra_dreta {
+          @include zen-grid-item(1,2);
+          .easy_social-widget {
+            width: 100%;
+            margin-top: 12px;
+          }
+          #faldo_subscriptors {
+            @include subscriute(20px);
+            width: 80%;
+            margin-top: 18px;
+            #subscriu {
+              margin-top: 20px;
+              a {
+                font-size: 24px;
+
+              }
+            }
+          }
+        }
       }
       #faldo_dreta {
         @include zen-grid-item(1,2);
-        @include zen-grid-container();
+        @include zen-nested-container();
+        #faldo_dreta_destacat {
+          @include zen-grid-item(2,1);
+          @include zen-nested-container();
+          #faldo_dreta_destacat_fotografia {
+            @include zen-grid-item(1,1);
+          }
+          #faldo_dreta_destacat_noticia {
+            @include zen-grid-item(1,2);
+          
+            #titol_destacada {
+              h5 {
+                margin: 0;
+                a {
+                  @include graphik-semibold(18px, $gris7, 22px);
+                }
+              }
+              .field-body,
+              .field-body * {
+                @include public-roman(15px, $gris7, 18px);
+              }
+              .field-body p {
+                margin: 4px 0;
+              }
+            }
+          }
+        }
+        #faldo_dreta_noticies {
+          @include zen-clear();
+          @include zen-nested-container();
+          .noti-no-dest:nth-child(2n+1) {
+            @include zen-clear();
+            @include zen-grid-item(1,1);
+          }
+          .noti-no-dest:nth-child(2n+2) {
+            @include zen-grid-item(1,2);
+          }
+          .noti-no-dest {
+            margin: 18px 0;
+            a.node-title {
+              @include graphik-medium(17px, $gris7, 21px);
+            }
+          }
+        }
+      }
+      .meta-info-top {
+        width: 100%;
+        display: block;
+        margin-bottom: 6px;
+        .autories > div,
+        & > * {
+          display: inline;
+        }
+        .field-seccio {
+          font-size: 15px;
+        }
+        .autories {
+          display: inline;
+          padding-left: 4px;
+          * {
+            display: inline;
+            line-height: 18px;
+            font-size: 12px;
+          }
+          .field-autoria-general:after,
+          .field-autor:after {
+            display: inline;
+            content: ' /';
+            color: $gris3;
+          }
+          /** cas tingui enllas o no **/
+          .field-autoria-general,
+          .field-autor,
+          .field-autor a,
+          .field-autor a.autor {
+            text-decoration: underline;
+            display: inline;
+            color: $gris3;
+            padding: 0px;
+          }
+          .field-autor a,
+          .field-data {
+            font-size: 10px;
+          }
+        }
       }
     }
   }

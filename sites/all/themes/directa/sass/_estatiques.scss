@@ -6,39 +6,52 @@
   }
 }
 
+//Contacte
 .page-node-13270 {
-   #page-title {
-     background-image: url("../images/avio.png");
-     background-position: left center;
-     background-repeat: no-repeat;
-     color: rgb(119, 119, 119);
-     margin-left: 70px;
-     padding-left: 50px;
-     padding-top: 0; 
-     margin-bottom:-50px  
-   }
+  #content{ 
+    margin-bottom: 30px;
+    #page-title {
+      background-image: url("../images/avio.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      color: rgb(119, 119, 119);
+      margin-left: 4%;
+      padding-left: 50px;
+      padding-top: 0; 
+      margin-bottom:-50px ; 
+      display:inherit;
+      margin-top: 30px;
+    }
     article {
-     margin-left:50px;
-   }
+      margin-left:50px;
+    }
+  }
 }
 
 ////Quisom
 .page-node-11672 {
-   h1 {
-    background-image: url("../images/help.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    color: $gris7;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 1.5em;
-    margin-left: 60px;
-    padding-left: 50px; 
-   }
-   article {
-     margin-left: 60px;
-   }
- }
+  #content {
+    margin-top: 30px;
+    h1#page-title {
+      background-image: url("../images/help.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      color: $gris7;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-left: 60px;
+      padding-left: 50px; 
+      display:block;
+    }
+    article {
+      margin-left: 60px;
+      .field-body {
+        @include graphik-regular(17px, $gris8, 21px);
+      }
+    }
+  }
+}
 
 ////Colabora
 .page-colabora{

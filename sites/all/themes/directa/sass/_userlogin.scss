@@ -27,6 +27,15 @@ body.not-logged-in.page-user {
          display: none;
        }
 
+        ul.tabs-primary.tabs.primary {//selector reaprofitat per posar el logo
+          background: url('../images/logo.png') no-repeat;
+          width: 150px;
+          height: 90px;
+          position: relative;
+          left: 43%;
+          top: 20px;
+        }
+
        #edit-account,
        #user-pass, //reset password
        #user-login, // login standard

@@ -10,7 +10,7 @@ if($view_mode == 'full') {
   global $base_url;
   $query_next = new EntityFieldQuery();
   $query_next->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'noticia')
+      ->entityCondition('bundle', 'actualitat')
       ->propertyCondition('status', 1)
       ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '>')
       ->fieldOrderBy('field_data', 'value', 'ASC')
@@ -21,7 +21,7 @@ if($view_mode == 'full') {
 
   $query_prev = new EntityFieldQuery();
   $query_prev->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'noticia')
+      ->entityCondition('bundle', 'actualitat')
       ->propertyCondition('status', 1)
       ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '<')
       ->fieldOrderBy('field_data', 'value', 'DESC')
@@ -58,7 +58,7 @@ if($view_mode == 'full') {
       // We hide the comments and links now so that we can render them later.
       //print render($content);
       print(render($content['field_subtitol']));
-      print(render($content['field_fotografies']));
+      print(render($content['field_fotografia_portada']));
       ?>
       <div id="col-meta">
         <div id="meta-info">
@@ -69,8 +69,12 @@ if($view_mode == 'full') {
         </div>
       </div>
     <div id="nav-links-wrapper">
-      <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-      <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
+      <?php if(!empty($prev_title)): ?>
+        <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
+      <?php endif; ?>
+      <?php if(!empty($next_title)): ?>
+        <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
+      <?php endif; ?>
     </div>
     <?php
       print(render($content['body']));

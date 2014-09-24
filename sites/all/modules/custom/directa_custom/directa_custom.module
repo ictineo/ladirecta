@@ -1,4 +1,31 @@
 <?php
+
+/**
+ * implementation hook_node_access()
+ * Limit access to node pages bases on nodetype
+ * @param unknown_type $node
+ * @param unknown_type $op
+ * @param unknown_type $account
+ */
+function directa_custom_node_access($node, $op, $account) { 
+  if (! is_object($node)) {
+    return NODE_ACCESS_IGNORE;
+  }
+  
+  $type = is_string($node) ? $node : $node->type;
+
+  if($op == 'view' && arg(0) == 'node' && arg(1) === $node->nid && ($type == 'numero_paper' || $type == 'noticia_paper')) {
+    $flag = flag_get_flag('embargament');
+    if($flag->is_flagged($node->nid) && (array_key_exists(1, $account->roles) || array_key_exists(9, $account->roles))) {
+      return NODE_ACCESS_DENY;
+    }
+  }
+
+  // Returning nothing from this function would have the same effect.
+  return NODE_ACCESS_IGNORE;
+}
+
+
 /**
  * Implements hook_form_alter().
  * Implementation of hook_form_profile2_edif_PROFILE_NAME_form_alter()
