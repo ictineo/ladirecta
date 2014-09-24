@@ -1,2 +1,88 @@
 /*COMPLEMENT DIRECTA*/
+#content {
+  $zen-column-count:6;
+  $zen-gutter-width:10px;
+  @include zen-grid-container();
+  #page-title {
+    display:none;
+  }
+  .region-highlighted{
+    @include zen-grid-item(6,1);
+    #block-views-cd-noticias-block{
+      @include zen-grid-item(6,1);
+      @include zen-clear();
+      
+      .field-image {
+      
+      @include zen-grid-item(1,1);
+      }
+      .views-field-page-title{      
+        @include zen-grid-item(5,2);
+        h3 {
+          @include graphik-medium(35px,$gris3,40px);
+        }
+      }
+      .field-body{
+        @include zen-clear(); 
+        @include zen-grid-item(6,1);
+      }
+    }
+    #block-views-cd-serveis-block{
+      @include zen-grid-item(6,1);
+      @include zen-clear();
+      .view-cd-serveis {
+        @include zen-grid-item(6,1);
+        .generic{
+          @include zen-grid-item(6,1);
+          .esquerra{
+            @include zen-grid-item(2,1);
+          }
+          .dreta {
+            @include zen-grid-item(4,3);
+            a {
+              
+            }
+            .field-oferta{
+              @include graphik-medium(26px,$gris4,26px);
+            }
+            .field-tipus-de-servei{
+            
+            }
+            .field-body{
+              @include graphik-medium(22px,$gris4,26px);
+            }
+            #subscriu {
+              @include zen-grid-item(2,1);
+              @include subscriute(10px);         
+            }
+            #text {
+              @include zen-grid-item(4,3);
+              @include graphik-medium(17px,$gris4,26px);
+            }
+          }
+        }
 
+      }
+    }
+    #block-views-exp-cd-serveis-page-1{
+      @include zen-grid-item(6,1);
+      @include zen-clear();
+    }
+    @include zen-clear();
+  }
+  .view-id-cd_serveis.view-display-id-page_1{
+    @include zen-grid-item(6,1);
+    @include zen-clear();
+    .views-row:nth-child(3n+1){
+      @include zen-grid-item(2,1);
+      @include zen-clear();
+    }
+    .views-row:nth-child(3n+2){
+      @include zen-grid-item(2,3);
+    }
+    .views-row:nth-child(3n+3){
+      @include zen-grid-item(2,5);
+      
+    }
+  }
+}

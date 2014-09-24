@@ -3,28 +3,45 @@
   .breadcrumb {
     display: none;
   }
-  #main #content {
-    ul.tabs-primary.tabs.primary {
-      display: none;
-    }
-    article.node-esdeveniment-agenda.view-mode-full {
+  #main {
+    #content {
       $zen-column-count: 17;
       @include zen-grid-container();
-      .field-data-ag {
-        @include zen-grid-item(7,1);
+      $zen-gutter-width: 15px;
+      $zen-auto-include-item-base: true;
+      .event-day-wrapper {
+        @include zen-grid-item(3,1);
+        @include zen-grid-container();
+        .dia {
+          @include zen-grid-item(17,1);
+        }
       }
-      .field-adreca {
-        @include zen-clear();
-        @include zen-grid-item(12,4);
+      $zen-column-count: 17;
+      .main-col-wrapper {
+        @include zen-grid-item(14,4);
+        @include zen-grid-container();
+        #page-title {
+          @include zen-grid-item(17,1);
+        }
+        .field-data-ag {
+          @include zen-grid-item(17,1);
+        }
+        article.node-esdeveniment-agenda.view-mode-full {
+          .field-adreca {
+            @include zen-clear();
+            @include zen-grid-item(17,1);
+          }
+          .field-municipi {
+            @include zen-clear();
+            @include zen-grid-item(17,1);
+          }
+          .field-body {
+            @include zen-clear();
+            @include zen-grid-item(17,1);
+          }
+        }
       }
-      .field-municipi {
-        @include zen-clear();
-        @include zen-grid-item(12,4);
-      }
-      .field-body {
-        @include zen-clear();
-        @include zen-grid-item(12,4);
-      }
+      $zen-column-count: 17;
       .easy_social_box {
         @include zen-clear();
         @include zen-grid-item(3,1);
@@ -33,78 +50,86 @@
   }
 }
 
+
 .not-front.node-type-esdeveniment-agenda {
   #main {
+    margin-top: 30px;
+    border-top: 1px dashed $fons;
     #content {
-      margin-top: 30px;
-      #page-title {
-        @include titulo-not;
-        padding-top: 20px;
+      .event-day-wrapper {
+        .dia {
+          margin-left: -25px;
+          .month-label {
+            @include graphik-medium(19px, $gris7, 22px);
+            margin-top: -15px;
+            padding-bottom: 10px;
+            text-align: right;
+            margin-right: -20px;
+            border-left: 1px solid $gris7;
+            margin-left: 85px;
+          }
+          .data {
+            height: 170px;
+            width: 170px;
+            border-radius: 85px;
+            background: none repeat scroll 0 0 $gris7;
+            display: block;
+            .num {
+              @include graphik-regular(53px,$blanc,21px);
+              display: block;
+              padding-top: 35%;
+              padding-left: 33%;
+            }
+            .llet {
+              @include graphik-regular(16px,$blanc,21px);
+              text-transform: uppercase;
+              display: block;
+              padding-left: 33%;
+              margin-top: 10px
+            }
+          }
+        }
       }
-      article.node-esdeveniment-agenda.view-mode-full {
-        #nav-links-wrapper {
-          .node-nav-links {
-            position: absolute;
-            top: 400px;
-            background-color: $blanc;
-            opacity: 0.7;
-            width: 28%;
-            height: 70px;
-            padding: 20px 10px 10px 0;
-            a {
-              @include graphik-bold(16px,$gris7,22px);
-              width: 70%;
-            }
-            &.node-nav-links-prev {
-              left: -75px;
-              box-shadow: 0px 0px 2px 2px $fons;
-              a {
-                float: right;
-                background: url('../images/prev.png') no-repeat -15px 10px;
-                padding-left: 40px;
-              }
-            }
-            &.node-nav-links-next {
-              //box-shadow: 6px 3px 10px 2px $fons;
-              right:0%;
-              //text-align: right;
-              //background: url('../images/next.png') no-repeat 10px 10px;
-              width: 40px;
-              a {
-                float: left;
-                background: url('../images/next.png') no-repeat 10px 10px;
-                width: 27px;
-                height: 40px;
-              }
-            }
-          }
-        }
+      margin-top: 30px;
+      .main-col-wrapper {
+        margin-top: 20px;
         .field-data-ag {
-        } //Pendent modificació template
-        .field-adreca {
-          @include graphik-medium(30px,$gris3,32px);
+          @include public-bold(25px,#838383,30px);
           font-style: italic;
+        } 
+        #page-title {
+          display: block;
+          @include titulo-not;
+          line-height: 50px;
+          padding-top: 20px;
+          margin-top: 15px;
+          margin-bottom: 10px;
         }
-        .field-municipi {
-          @include graphik-medium(20px,$gris3,30px);
-        }
-        .field-adjuntar-imatge {
-          margin-left: 18%;
-          float: left;
-          display: none; //PENDENT
-        }
-        .field-body {
-          padding-top: 15px;
-          margin-bottom: -120px;
-          p {
-            @include body;
-            font-size: 20px; //jude modifica. hay q modificar el mixin cuando sea definitivo y borrar esta linea
-            margin-top: 0;
-            margin-bottom: 20px;
+        article.node-esdeveniment-agenda.view-mode-full {
+          .field-adreca {
+            @include graphik-medium(30px,$gris3,32px);
+            font-style: italic;
           }
-        }
-        .easy_social_box {
-          margin-bottom: 30px;
+          .field-municipi {
+            @include graphik-medium(20px,$gris3,30px);
+          }
+          .field-adjuntar-imatge {
+            margin-left: 18%;
+            float: left;
+            clear: none;
+          }
+          .field-body {
+            padding-top: 15px;
+            p {
+              @include body;
+              font-size: 20px; //jude modifica. hay q modificar el mixin cuando sea definitivo y borrar esta linea
+              margin-top: 0;
+              margin-bottom: 20px;
+            }
+          }
+          .easy_social_box {
+            margin-bottom: 30px;
+          }
         }
       }
     }

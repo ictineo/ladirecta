@@ -210,24 +210,31 @@
   $zen-column-count: 23;
   $zen-gutter-width: 0px;
   $zen-auto-include-item-base: true;
-  #seccio1-wrapper {
-    @include zen-grid-item(17,1);
-    @include zen-grid-container();
-    .view-id-portada_seccions {
-      @include zen-clear();
-      @include zen-grid-item(12,1);
-    }
-    .view-clon-de-portada-seccions-llistat- {
-      @include zen-grid-item(11,13);
-      .view-footer {
-         margin-left: 70%;
-         display:block;
+  #block-directa-custom-openx-banner-lateralpetit4 {
+    @include zen-clear();  
+    @include zen-grid-item(6,18);
+  
+   }
+ #block-directa-custom-seccions-portada{ 
+   @include zen-grid-item(17,1);
+   @include zen-grid-container();
+   #seccio1-wrapper {
+      @include zen-grid-item(23,1);
+      @include zen-grid-container();
+      .view-id-portada_seccions {
+        @include zen-clear();
+        @include zen-grid-item(12,1);
       }
+      .view-clon-de-portada-seccions-llistat- {
+        @include zen-grid-item(11,13);
+        .view-footer {
+           margin-left: 70%;
+           display:block;
+        }
+      }
+      @include zen-clear();
     }
-    @include zen-clear();
   }
-
-   
   .block-views { 
     //@include zen-grid-item(10,8);
     //@include zen-nested-container();

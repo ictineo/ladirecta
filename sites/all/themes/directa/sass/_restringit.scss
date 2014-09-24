@@ -12,12 +12,12 @@
     @include zen-grid-item(2,1);
   }
   #block-block-3--2,
-  #block-user-login {
+  #user-login-form {
     @include zen-clear();
-    @include zen-grid-item(1,1);
+    @include zen-grid-item(2,1);
   }
   #block-block-1--2 {
-    @include zen-grid-item(1,2);
+    @include zen-grid-item(2,3);
   }
 }
 
@@ -30,7 +30,8 @@
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    background-color: $fons;
+    background-image: url('../images/il_403.png');
+    @include background-size(cover);
   } 
   #page-title {
     @include graphik-bold(35px,$gris7,40px);
@@ -39,7 +40,8 @@
     text-transform: uppercase;
   }
   article.node-16231 {
-    margin-bottom: 185px;
+    margin-top: 40px;
+    margin-bottom: 110px;
     .field-body {
       .no-auth {
         @include graphik-regular(30px,$gris7, 40px); 
@@ -63,29 +65,27 @@
     padding-left: 35px;
     margin-bottom: 0px;
   }
-  #block-user-login {
-    padding-left: 25px;
-    #user-login-form {
-      @include user-login;
-      .form-item.form-item-name {
-        margin-bottom: 0px;
-      }
-      .form-item.form-type-password {
-        margin-top: 0px;
-      }
-      .item-list {
-        display: none;
-      }
-      #edit-actions {
-        #edit-submit {
-          width: 90%;
-        }
+  padding-left: 25px;
+  #user-login-form {
+    @include user-login;
+    .form-item.form-item-name {
+      margin-bottom: 0px;
+    }
+    .form-item.form-type-password {
+      margin-top: 0px;
+    }
+    .item-list {
+      display: none;
+    }
+    #edit-actions {
+      #edit-submit {
+        width: 90%;
       }
     }
   }
+  
   #block-block-1--2 {
     @include subscriute(20px);
     margin-top: 20px;
-    width: 20%;
   }
 }

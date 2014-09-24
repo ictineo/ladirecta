@@ -51,12 +51,15 @@ a {
 #header {
   #block-block-7 { //Desplegable menu seccions
     @include buto-seccions-m960();
+    #sections-switcher {
+      line-height: 25px;
+    }
   }
   #block-block-3 { //Inicia sessio presumiblemente login page not sure
     .block-title {
       display: none;
     }
-    background-image:url('../images/menu_arrow_down');
+    //background-image:url('../images/menu_arrow_down');
     background-repeat:no-repeat;
     background-position: 8px 8px;
     height:auto;
@@ -68,9 +71,12 @@ a {
   #block-block-4  {
     .inicias { //Inicia sessió header
       @include buto-inicia-m960(0px);
-      background-image:url('../images/arrow_down.png');
+      //background-image:url('../images/arrow_down.png');
       background-position: 90% 12px;
       background-repeat: no-repeat;
+      a {
+        line-height: 25px;
+      }
     }
   }
   #secondary-menu { //meny usuario logueado automatico
@@ -120,9 +126,13 @@ a {
       background-image:url('../images/vi.png');
     }
   }
-  #block-views-exp-hemeroteca-page-1 {
+  #block-views-exp-hemeroteca-page-1 { //cercador
     @include buscador-m960;
     border-left: 1px solid $fons;
+    form#views-exposed-form-hemeroteca-page-1 {
+      margin-top: -6px;
+      padding-bottom: 6px;
+    }
   }
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;
@@ -130,6 +140,9 @@ a {
   
   #block-block-1 {
     @include subscriute-m960(2px);
+    padding-bottom: 0px;
+    margin-top: -1px;
+    width: 14% !important;
   }
 }
 

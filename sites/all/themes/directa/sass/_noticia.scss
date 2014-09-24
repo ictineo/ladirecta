@@ -89,43 +89,6 @@
        // }
       //}
       article.node-noticia.view-mode-full {
-        #nav-links-wrapper {
-          .node-nav-links {
-            position: absolute;
-            top: 1100px;
-            background-color: $blanc;
-            opacity: 0.7;
-            width: 28%;
-            height: 70px;
-            padding: 20px 10px 10px 0;
-            a {
-              @include graphik-bold(16px,$gris7,22px);
-              width: 70%;
-            }
-            &.node-nav-links-prev {
-              left: -75px;
-              box-shadow: 0px 0px 2px 2px $fons;
-              a {
-                float: right;
-                background: url('../images/prev.png') no-repeat -15px 10px;
-                padding-left: 40px;
-              }
-            }
-            &.node-nav-links-next {
-              //box-shadow: 6px 3px 10px 2px $fons;
-              right:0%;
-              //text-align: right;
-              //background: url('../images/next.png') no-repeat 10px 10px;
-              width: 40px;
-              a {
-                float: left;
-                background: url('../images/next.png') no-repeat 10px 10px;
-                width: 27px;
-                height: 40px;
-              }
-            }
-          }
-        }
         .field-subtitol {
           @include subtitulo-not;
         padding-bottom: 20px;

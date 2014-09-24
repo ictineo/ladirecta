@@ -23,8 +23,9 @@ $blanc: #FFFFFF;
 $negre:#030303;
 $fons: #e9e9e9; /*gris de fons*/
 $negre2:#444444; /*Franja portada pendent confirmacio*/
+$input_bg: #fbfbfb;
 $fons_rosa: #f7e8f6;
-$fons_form: #f7e8f6; //No especificat, cal canviar-lo
+$fons_form: $input_bg; //No especificat, cal canviar-lo
 $form: #BABABA; //color text form
 /** 
  * notes quiron, ordre de grisos

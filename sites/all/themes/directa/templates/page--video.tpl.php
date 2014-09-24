@@ -94,20 +94,23 @@ if (drupal_is_front_page()) {
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php 
-      if(!empty($node->field_seccio_web) || (!empty($node->field_autoria_general))):
+      $autor = render(array_values($page['content']['system_main']['nodes'])[0]['field_autor']);
+      $data  = render(array_values($page['content']['system_main']['nodes'])[0]['field_data']);
+      $secc  = render(array_values($page['content']['system_main']['nodes'])[0]['field_seccio_web']);
+      if(!empty($secc) || (!empty($autor))):
         print '<div class="meta-info-top">';
         print render(field_view_field('node', $node, 'field_seccio_web', array('label' => 'hidden')));
-        if(!empty($node->field_autoria_general) || !empty($node->field_data)):
+        if(!empty($autor) || !empty($data)):
           print   '<span class="autories">';
-          print     render(field_view_field('node', $node, 'field_autoria_general', array('label' => 'hidden')));
-          print     render(field_view_field('node', $node, 'field_data', array('label' => 'hidden', 'settings' => array('format_type' => 'franja'))));
+          print     $autor;
+          print     $data;
           print   '</span>';
         endif;
         print '</div>';
         if(!empty($page['content']['system_main']['nodes'])):
           foreach($page['content']['system_main']['nodes'] as $nid => $node):
             hide($page['content']['system_main']['nodes'][$nid]['field_seccio_web']);
-            hide($page['content']['system_main']['nodes'][$nid]['field_autoria_general']);
+            hide($page['content']['system_main']['nodes'][$nid]['field_autor']);
             hide($page['content']['system_main']['nodes'][$nid]['field_data']);
           endforeach;
         endif;

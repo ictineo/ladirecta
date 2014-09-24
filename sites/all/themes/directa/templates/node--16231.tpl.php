@@ -36,7 +36,16 @@
     // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
+    hide($content['easy_social_1']);
     print render($content);
+  ?>
+
+  <?php
+    $login = drupal_get_form("user_login_block"); 
+    print drupal_render($login);
+    $block = block_load('block','1');
+    print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+
   ?>
 
   <?php print render($content['links']); ?>

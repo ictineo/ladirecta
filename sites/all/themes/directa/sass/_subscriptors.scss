@@ -1,0 +1,307 @@
+body.page-user {
+  * { font-family: "graphikmedium"; }
+  #content {
+    .region-highlighted {
+      #block-block-11 {
+        font-family: "graphikmedium";
+        color: $gris7; 
+        .subs {
+          font-family: "graphiksemibold";
+          margin-top: 24px;
+          margin-bottom: 42px;
+          font-size: 32px;
+          line-height: 36px;
+        }
+        .subs2,
+        .subs1 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .subs1_grey {
+          margin-top: 12px;
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+    .tabs-primary {
+      @include zen-clear();
+    }
+    #user-profile-form {
+      * { 
+        font-family:'graphik_regularregular';
+        color: $gris3;
+      }
+      .field-group-fieldset:nth-of-type(1) {
+        @include zen-grid-item(7,1);
+        .fieldset-wrapper {
+          margin-top: 53px;
+        }
+      }
+      .field-group-fieldset:nth-of-type(2) {
+        @include zen-grid-item(9,8);
+        label {
+          display: none;
+        }
+        .form-item {
+          margin-top: 0px;
+        }
+      }
+      .field-group-fieldset:nth-of-type(3) {
+        @include zen-grid-item(5,17);
+        fieldset {
+          @include zen-clear();
+          @include zen-grid-item(23,1);
+        }
+        & > .fieldset-wrapper {
+          margin-top: 53px;
+        }
+      }
+      .field-group-fieldset:nth-of-type(4) {
+        @include zen-clear();
+        @include zen-grid-item(23,1);
+      }
+      #edit-actions {
+        @include zen-clear();
+        @include zen-grid-item(5,17);
+        input {
+          width: 100%;
+          margin-bottom: 24px;
+          @include subscriute(20px);
+          font-family:'publico_textsemibold';
+          color: white;
+          font-size: 20px;
+          line-height: 24px;
+          border: 0px none;
+        }
+      }
+      .field-group-fieldset {
+        /*http://css-tricks.com/snippets/css/glowing-blue-input-highlights/*/
+        input[type=text], textarea {
+          -webkit-transition: all 0.30s ease-in-out;
+          -moz-transition: all 0.30s ease-in-out;
+          -ms-transition: all 0.30s ease-in-out;
+          -o-transition: all 0.30s ease-in-out;
+          outline: none;
+          padding: 3px 0px 3px 3px;
+          margin: 5px 1px 3px 0px;
+          border: 1px solid $gris9;
+          background-color: $input_bg;
+        }
+         
+        input[type=text]:focus, textarea:focus {
+          box-shadow: 0 0 5px $gris6;
+          padding: 3px 0px 3px 3px;
+          margin: 5px 1px 3px 0px;
+          border: 1px solid $gris6;
+        }
+        border: 0px none;
+        .fieldset-wrapper {
+          @include zen-grid-item(23,1);
+          @include zen-nested-container();
+          & > * {
+            /*@include zen-grid-item(23,1);*/
+          }
+        }
+        input {
+            @include zen-grid-item(23,1);
+        }
+        #edit-profile-main-field-subscripcions {
+          display: none;
+        }
+        #edit-profile-main-field-subscripcions-markup {
+          .opcio {
+            @include zen-grid-container();
+            background-color: $gris9;
+            border-bottom: 8px solid white;
+            .bola {
+              @include zen-grid-item(3,1);
+            }
+            .text {
+              @include zen-grid-item(10,4);
+              padding-top: 12px;
+              padding-bottom: 12px;
+              .nom {
+                font-family: "graphikmedium";
+                font-size: 22px;
+                line-height: 26px;
+              }
+              .ajuda {
+                display: inherit;
+                font-size: 11px;
+                line-height: 13px;
+              }
+            }
+            .expand {
+              @include zen-grid-item(3,14);
+              padding-top: 20px;
+              span {
+                color: white;
+                font-weight: 900;
+                font-size: 16px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                vertical-align: middle;
+                background-color: $gris4;
+                @include border-radius(22px);
+                padding-bottom: 2px;
+              }
+            }
+            .preu {
+              @include zen-grid-item(6,17);
+              span {
+                @include graphik-super(28px, $gris3, 36px);
+                display: inline-block;
+                width: 70px;
+                height: 55px;
+                text-align: center;
+                padding-top: 14px;
+                vertical-align: middle;
+                margin: 6px 0;
+                @include border-radius(70px);
+                background-color: white;
+                &:after {
+                  font-family:'graphik_regularregular';
+                  content: "€";
+                  font-size: 14px;
+                }
+              }
+            }
+            .colapsat {
+              @include zen-clear();
+              @include zen-grid-item(23,1);
+              background-color: white;
+              display: none;
+            }
+            &.active {
+              .colapsat {
+                display: inherit;
+              }
+              .expand span {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        #edit-profile-main-field-forma-pagament {
+          display: none;
+        }
+        #edit-profile-main-field-altres,
+        #edit-profile-main-field-altres-input,
+        #edit-profile-main-field-domicialiacio,
+        .field-group-fieldset,
+        #profile-main-field-transferencia-add-more-wrapper {
+          clear: both;
+          .text .opcio {
+            @include graphik-medium(16px, $gris3, 20px);
+          }
+          .colapsat * {
+            @include graphik-regular(13px, $gris3, 18px);
+            margin: 0px;
+          }
+        }
+        #edit-profile-main-field-altres-input label {
+          display: none;
+        }
+        &:nth-of-type(3) {
+          fieldset {
+            legend {
+              display: none;
+            }
+            .fieldset-wrapper {
+              margin-top: 0px;
+            }
+            .form-item{ 
+              margin: 0px;
+              display: inline-block;
+            }
+            input {
+              font-size: 12px;
+            }
+            .field-type-text {
+              float: left;
+            }
+            .form-item-profile-main-field-compte1-und-0-value {
+              width: 34px;
+            }
+            .form-item-profile-main-field-compte2-und-0-value {
+              width: 34px;
+            }
+            .form-item-profile-main-field-compte3-und-0-value {
+              width: 22px;
+            }
+            .form-item-profile-main-field-compte4-und-0-value {
+              width: 85px;
+            }
+          }
+        }
+      }
+      /** theme del form restringit **/
+      .field-group-fieldset:nth-of-type(4) {
+        .fieldset-wrapper {
+          @include zen-nested-container();
+          & > div:nth-child(2n+1) {
+            @include zen-clear();
+            @include zen-grid-item(12,1);
+          }
+          & > div:nth-child(2n+2) {
+            @include zen-grid-item(11,13);
+          }
+          label {
+            // sobreescribim el hide de lscript
+            display: inline !important;
+          }
+          fieldset.group-notificacions {
+            @include zen-grid-item(23,1);
+            & > div {
+              @include zen-clear();
+              @include zen-grid-item(23,1);
+            }
+          }
+        }
+      }
+    }
+    .profile {
+      $zen-column-count:23;
+      $zen-glutter-width:10px;
+      @include zen-grid-container();
+      .user-picture {
+        @include zen-grid-item(4,1,right);
+      }
+      dl {
+       dt {
+         @include zen-clear(right);
+         @include zen-grid-item(4,1,right);
+       }
+       dd {
+         
+         @include zen-clear(right);
+         @include zen-grid-item(4,1,right);
+       }
+      }
+      & > h3 {
+        display:none;
+      }
+      .profile2-main {
+        @include zen-grid-item(23,1);
+      
+        .group-dades-subscripcio{
+          @include zen-grid-item(8,6, right);
+        }
+        .group-dades-personals{
+          @include zen-grid-item(10,1);
+        }
+        .group-dades-pagament{
+          @include zen-clear(right);
+          @include zen-grid-item(8,6, right);   
+        }
+        .group-dades-de-gestio{
+          @include zen-grid-item(23,1);
+          @include zen-clear();
+        }
+      }
+    }
+  }
+}

@@ -10,8 +10,8 @@
 
 <?php
 if (drupal_is_front_page()) {
-  //$variables['title']="";
-  //unset($variables['page']['content']['system_main']['default_message']);
+  $variables['title']="";
+  unset($variables['page']['content']['system_main']['default_message']);
 }
 ?>
 
@@ -90,10 +90,36 @@ if (drupal_is_front_page()) {
     </div>   
 
     <div id="content" class="column" role="main">
-      <?php if(!$is_front): ?>
+        <?php if(!empty($node->field_data_ag)):
+          // traballem amb el timestamp que es mes agil
+          $evdate = strtotime($node->field_data_ag);
+        ?>
+        <div class="event-day-wrapper">
+          <div class="dia">
+            <div class="month-label">
+              <?php print t(date('F', $evdate)); ?>
+            </div>
+            <span class="data">
+              <span class="num">
+                <?php print date('d', $evdate); ?>
+              </span>
+              <span class="llet">
+                <?php print t(date('l', $evdate)); ?>
+              </span>
+            </span>
+          </div>
+        </div>
+        <?php endif; ?>
+      <div class="main-col-wrapper">
         <?php print render($page['highlighted']); ?>
         <?php print $breadcrumb; ?>
         <a id="main-content"></a>
+        <?php if(!empty($node->field_data_ag)):
+          print render(field_view_field('node', $node, 'field_data_ag', array('label' => 'hidden', 'settings' => array('format_type' => 'hora'))));
+          foreach($page['content']['system_main']['nodes'] as $nid => $node):
+            hide($page['content']['system_main']['nodes'][$nid]['field_data_ag']);
+          endforeach;
+        endif;?>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
           <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
@@ -105,20 +131,9 @@ if (drupal_is_front_page()) {
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
-        <?php /** amagem el contingut principal si estem a una portada interna**/ ?>
-        <?php //if(arg(0) == 'seccionspaper' || arg(0) == 'seccionsweb' || arg(0) == 'territorial'): ?>
-        <?php if(arg(0) == 'taxonomy' && !(arg(3) == 'edit')): ?>
-          <?php hide($page['content']['system_main']); ?>
-          <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/alturaportada.js'); ?>
-        <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
-      <?php else: ?>
-        <?php hide($page['content']['system_main']); ?>
-        <?php drupal_add_js(drupal_get_path('theme', 'directa') . '/js/alturaportada.js'); ?>
-        <?php print $messages; ?>
-        <?php print render($page['content']); ?>
-      <?php endif; ?>
+      </div>
     </div>
 
     
@@ -166,8 +181,3 @@ if (drupal_is_front_page()) {
 
 <?php print render($page['bottom']); ?>
 
-<?php 
-  if(arg(0) == 'user' && arg(2) == 'edit'):
-   drupal_add_js(drupal_get_path('theme', 'directa') . '/js/placeholder.js');
-  endif;
-?>

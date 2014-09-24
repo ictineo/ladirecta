@@ -71,6 +71,7 @@ scripts[] = js/menu_lateral.js
 scripts[] = js/menu_seccions.js
 scripts[] = js/faldo.js
 scripts[] = js/xxss.js
+scripts[] = js/search_exposed.js
 scripts[] = js/comportaments_generics.js
 scripts[] = js/afegir_subscriptora.js
 

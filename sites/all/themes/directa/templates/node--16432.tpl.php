@@ -36,10 +36,10 @@
     // We hide the comments and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
+    hide($content['easy_social_1']);
     print render($content);
 
-    $search_block = block_load('views', '-exp-hemeroteca-page-1');
-    print_r($search_block);
+    $search_block = block_load('views', '-exp-hemeroteca-page_1');
     $output =  drupal_render(_block_get_renderable_array(_block_render_blocks(array($search_block)))); 
     print $output; 
   ?>

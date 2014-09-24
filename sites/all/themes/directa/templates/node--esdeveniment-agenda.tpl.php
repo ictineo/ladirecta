@@ -58,7 +58,7 @@ if($view_mode == 'full') {
   <?php if($view_mode == 'full'): ?>
     <div id="nav-links-wrapper">
     <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-    <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print "&nbsp"; ?></a></div>
+      <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
   </div>
   <?php endif; ?>
   <?php

@@ -11,11 +11,7 @@
     @include zen-clear();
     @include zen-grid-item(2,1);
   }
-  #block-views-exp-hemeroteca-page-1--2 {
-    @include zen-clear();
-    @include zen-grid-item(2,1);
-  }
-}
+} 
 
 /*404*/
 .page-node-16432 {
@@ -26,7 +22,8 @@
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    background-color: $fons;
+    background-image: url('../images/il_404.png');
+    @include background-size(cover);
   }
   #page-title {
     @include graphik-bold(35px,$gris7,40px);
@@ -35,6 +32,7 @@
     text-transform: uppercase;
   }
   article.node-16432 {
+    margin-top: 120px;
     .field-body {
       .no-auth {
         @include graphik-regular(30px,$gris7, 40px); 
@@ -53,18 +51,20 @@
     .easy_social_box {
       display: none;
     }
-  }
-  #block-views-exp-hemeroteca-page-1--2 {
-    margin-bottom: 185px;
-    #views-exposed-form-hemeroteca-page-1 {
-      #edit-search-api-views-fulltext-wrapper {
-        input#edit-search-api-views-fulltext {
-          @include graphik-medium (25px,$form, 35px);
-          width: 90%;
+    #block-views-exp-hemeroteca-page-1 {
+      width: 200%;
+      margin-bottom: 185px;
+      #views-exposed-form-hemeroteca-page-1 {
+        #edit-search-api-views-fulltext-wrapper {
+          input#edit-search-api-views-fulltext {
+            @include graphik-medium (25px,$form, 35px);
+            width: 90%;
+            padding-left: 12px;
+          }
         }
-      }
-      .views-exposed-widget.views-submit-button {
-        display: none;
+        .views-exposed-widget.views-submit-button {
+          display: none;
+        }
       }
     }
   }
