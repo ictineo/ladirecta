@@ -28,6 +28,7 @@ body.page-user {
       @include zen-clear();
     }
     .profile dl:nth-of-type(1),
+    #user-register-form #edit-profile-main > .fieldset-wrapper,
     #user-profile-form {
       * { 
         font-family:'graphik_regularregular';
@@ -46,6 +47,9 @@ body.page-user {
         }
         .form-item {
           margin-top: 0px;
+        }
+        .fieldset-wrapper > * {
+          @include zen-clear();
         }
       }
       .field-group-fieldset:nth-of-type(3) {
@@ -77,26 +81,26 @@ body.page-user {
           border: 0px none;
         }
       }
+      /*http://css-tricks.com/snippets/css/glowing-blue-input-highlights/*/
+      input[type=password], input[type=text], textarea {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid $gris9;
+        background-color: $input_bg;
+      }
+       
+      input[type=text]:focus, textarea:focus {
+        box-shadow: 0 0 5px $gris6;
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid $gris6;
+      }
       .field-group-fieldset {
-        /*http://css-tricks.com/snippets/css/glowing-blue-input-highlights/*/
-        input[type=text], textarea {
-          -webkit-transition: all 0.30s ease-in-out;
-          -moz-transition: all 0.30s ease-in-out;
-          -ms-transition: all 0.30s ease-in-out;
-          -o-transition: all 0.30s ease-in-out;
-          outline: none;
-          padding: 3px 0px 3px 3px;
-          margin: 5px 1px 3px 0px;
-          border: 1px solid $gris9;
-          background-color: $input_bg;
-        }
-         
-        input[type=text]:focus, textarea:focus {
-          box-shadow: 0 0 5px $gris6;
-          padding: 3px 0px 3px 3px;
-          margin: 5px 1px 3px 0px;
-          border: 1px solid $gris6;
-        }
         border: 0px none;
         .fieldset-wrapper {
           @include zen-grid-item(23,1);
@@ -185,6 +189,13 @@ body.page-user {
                 transform: rotate(45deg);
               }
             }
+            &.active {
+              background-color: $gris7;
+              .nom,
+              .ajuda {
+                color: white;
+              }
+            }
           }
         }
         #edit-profile-main-field-forma-pagament {
@@ -232,11 +243,32 @@ body.page-user {
               width: 34px;
             }
             .form-item-profile-main-field-compte3-und-0-value {
-              width: 22px;
+              width: 26px;
             }
             .form-item-profile-main-field-compte4-und-0-value {
               width: 85px;
             }
+          }
+        }
+      }
+      .group-pagament {
+        & > .fieldset-wrapper > .form-wrapper {
+          padding: 8px;
+        }
+        .form-item-profile-main-field-altres-input-und-0-value {
+          margin: 0px;
+        }
+        .form-wrapper.active {
+          background-color: $gris7;
+          #profile-main-field-transferencia-add-more-wrapper .text .opcio,
+          #profile-main-field-transferencia-add-more-wrapper .colapsat *,
+          #profile-main-field-domicialiacio-add-more-wrapper .text .opcio,
+          #profile-main-field-domicialiacio-add-more-wrapper .colapsat *,
+          #profile-main-field-altres-add-more-wrapper .text .opcio,
+          #profile-main-field-altres-add-more-wrapper .colapsat *,
+          .opcio,
+          h4 {
+            color: white;
           }
         }
       }
@@ -307,6 +339,66 @@ body.page-user {
           @include zen-grid-item(23,1);
           @include zen-clear();
         }
+      }
+    }
+  }
+}
+/** reescriptura per /user/UID/edit **/
+body.page-user-edit {
+  #content {
+    ul.tabs-primary li{
+      display: none;
+    }
+    #user-profile-form {
+      #edit-locale,
+      #edit-picture {
+        display: none;
+      }
+        .fieldset-wrapper #edit-profile-main-field-e-mail {
+          display: none;
+        }
+    }
+  }
+}
+/** reescriptura per /subscriute **/
+body.page-user-register.not-logged-in {
+  #content #user-register-form {
+    #edit-account {
+      display: none;
+    }
+    #edit-profile-main {
+      fieldset.field-group-fieldset:nth-of-type(1) > .fieldset-wrapper,
+      fieldset.field-group-fieldset:nth-of-type(2) > .fieldset-wrapper,
+      fieldset.field-group-fieldset:nth-of-type(3) > .fieldset-wrapper,
+      fieldset.field-group-fieldset > .fieldset-wrapper {
+        margin-top: 0;
+      }
+      fieldset.field-group-fieldset:nth-of-type(1) > .fieldset-wrapper {
+        margin-top: 29px;
+      }
+      fieldset.field-group-fieldset:nth-of-type(3) > .fieldset-wrapper {
+        margin-top: 54px;
+        fieldset .fieldset-wrapper {
+          margin-top: 0px;
+        }
+      }
+      fieldset.group-restringido {
+        display: none;
+      }
+    }
+    #edit-actions {
+      margin-top: 24px;
+      @include zen-clear();
+      @include zen-grid-item(5,17);
+      input {
+        width: 100%;
+        margin-bottom: 24px;
+        @include subscriute(20px);
+        font-family:'publico_textsemibold';
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        border: 0px none;
       }
     }
   }

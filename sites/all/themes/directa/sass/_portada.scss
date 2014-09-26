@@ -34,19 +34,21 @@ body.front {
         display: block;
         width: 95%;
         background-color:$fons;
+        background-image: url('../images/pattern-grisclar.png');
         @include box-shadow($gris6 0px 0px 10px inset);
         .field-continguts-relacionats {
           a {
-            @include public-roman(14px, $gris7, 22px);
+            @include public-roman(14px, $gris7, 20px);
             text-decoration: underline;
             margin: 0 12px;
-            padding-left: 28px;
+            padding-left: 40px;
             display: inline-block;
             background-position: 0 50%;
             background-repeat: no-repeat;
             display: block;
-            width: 90%;
-            padding-left: 28px;
+            width: 87%;
+            padding-left: 40px;
+            min-height: 28px;
             &[href*="/fotogaleria/"] {
               background-image: url('../images/foto_p.png');
             }
@@ -149,9 +151,21 @@ body.front {
       .field-seccio,
       .field-seccio-web {
         @include seccio;
+        background-image: url('../images/pattern-gris.png');
       }
       .field-seccio {
         display: inline;
+        background-image: url('../images/pattern-lila.png');
+        margin-left: 6px;
+        &:before {
+          content: ' ';
+          float: left;
+          width: 21px;
+          height: 17px;
+          display: inline-block;
+          margin-top: 3px;
+          background-image: url('../images/icona_paper_lila.png');
+        }
       }
       .meta-info-top {
         width: 100%;
@@ -168,8 +182,9 @@ body.front {
           .field-autoria-general:after,
           .field-autor:after {
             display: inline-block;
-            content: '/';
+            content: ' /';
             color: $gris3;
+            text-decoration: none;
           }
           /** cas tingui enllas o no **/
           .field-autoria-general,
@@ -178,6 +193,7 @@ body.front {
           .field-autor a.autor {
             text-decoration: underline;
             padding: 0px;
+            color: $gris3;
           }
         }
       }
@@ -358,6 +374,15 @@ body.front {
        }
      }
      #block-views-butlletisonor-block-1 {
+       background-image: url('../images/audio.png');
+       background-repeat: no-repeat;
+       background-position: 0 7px;
+       h2.block-title {
+         @include graphik-bold(19px, white, 19px);
+         background-image: url('../images/pattern-gris.png');
+         padding: 5px;
+         margin-left: 22px;
+       }
        .view-content .views-row {
          border-bottom: 0px none;
          margin-bottom: 0px;
@@ -510,6 +535,19 @@ body.front {
      }
    }
  } 
+ #seccion_portada{
+   $zen-column-count:6;
+   $zen-gutter-width:10px; 
+   @include zen-grid-container();
+   #block-views-portadapaper-especials-block{
+     @include zen-grid-item(3,1);
+   }
+   #block-views-portadapaper-especials-block-1{
+     @include zen-grid-item(3,4);
+   }
+ }
+
+
 }
 
 

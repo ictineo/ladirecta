@@ -96,11 +96,15 @@
           display: inline-block;
           float: left;
           margin-right: 10px;
+          background-image: url('../images/pattern-gris.png');
           }
           .field-autor {
             //@include zen-grid-item(5,3);
             display: inline-block;
             float: left;
+            font-size: 12px;
+            line-height: 18px;
+            color: $gris3;
           }
         .views-field-title {
           @include zen-clear();
@@ -309,6 +313,7 @@
   .meta-info-top {
     .field-seccio-web {
       display: inline-block;
+      background-image: url('../images/pattern-gris.png');
     }
     .autories {
       .field-autor,
@@ -319,12 +324,19 @@
   }
   .field-autor,
   .field-autor a {
-    @include graphik-medium(15px,$gris3,22px);
+    /** altura de tota la caixa i centrem amb middle**/
+    @include graphik-medium(12px,$gris3,35px);
+    vertical-align: middle;
     text-transform: uppercase;
     text-decoration: underline;   
   }
   .date-display-single {
-    @include graphik-medium(15px,$gris3,22px);
+    &:before {
+      display: inline-block;
+      content: '/ ';
+    }
+    @include graphik-medium(12px,$gris3,35px);
+    vertical-align: middle;
   }
   .field-body {
     @include public-roman(23px,$gris7,32px);
@@ -356,6 +368,15 @@
   }
   #tags-wrapper {
     padding: 10px 0;
+    .field-etiquetes,
+    .field-tags,
+    .field-tags .field-items .field-item,
+    .field-territori {
+      display: inline-block;
+      width: auto;
+      @include etiquetes;
+      background: none;
+    }
   }
   #block-views-fotogaleria-block,
   #block-views-videogaleria-block {

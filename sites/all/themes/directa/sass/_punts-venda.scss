@@ -65,25 +65,36 @@ body.page-puntsdevenda {
             }
           }
         }
+        .view-empty{
+          .no-result{
+            @include graphik-medium(34px,$gris3,40px);
+            margin: 20px;
+          }
+        }
         .view-content {
           margin-top: 30px;
           .views-view-grid {
             tbody {
-              tr {
-                border-bottom: 1px dashed $fons;
+              tr:after {
+                @include separador;
               }
               tr.row-1 {
-                border-top: 1px dashed $fons;
                 padding-top: 15px;
+                &:before {
+                  @include separador;
+                }
               }
               td {
                 padding-bottom: 15px;
                 padding-top: 15px;
               }
-              td.col-1 {
-                border-right: 1px dashed $fons;
+              td.col-1:after {
+                background-image: url('../images/pattern-ratlla-separadorg.png');
+                width: 1px;
+                display: block;
+                content: " ";
+                height: 100%;
               }
-
               .field-imatge {
               }
               .views-field {

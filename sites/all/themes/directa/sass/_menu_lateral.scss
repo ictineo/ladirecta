@@ -19,7 +19,7 @@ body.page-node-add-esdeveniment-agenda #main #interior,
   left: -$menu_w;
   top: 80px;
   background-color: white;
-  z-index: 100;
+  z-index: 900;
   background-color: $gris9;
   padding: 32px 0;
   @include box-shadow($gris6 0px 0px 10px 4px inset);
@@ -91,6 +91,12 @@ body.page-node-add-esdeveniment-agenda #main #interior,
 
   /** columna 1 agenda **/
   #block-views-agenda-llista-block-1 {
+    .view-footer {
+      a {
+        @include graphik-medium(16px,$gris7,20px); 
+        text-decoration:underline;
+      }
+    }
     #menu-agenda > div {
       background: none repeat scroll 0 0 $gris6;
       height: 45px;
@@ -242,6 +248,12 @@ body.page-node-add-esdeveniment-agenda #main #interior,
         }
       }
     }
+    .view-footer {
+      .view-footer{
+        @include graphik-medium(16px,$gris7,19px);
+        text-decoration:underline;
+      }
+    }
     .view-footer .views-row {
       .views-field-title a {
         @include graphik-semibold(18px, $gris7, 22px);
@@ -253,6 +265,13 @@ body.page-node-add-esdeveniment-agenda #main #interior,
         @include graphik-medium(12px, $gris2, 15px);
       }
     }
+    .view-footer {
+      a {
+        @include graphik-medium(16px,$gris7,20px); 
+        text-decoration:underline;
+      }
+    }
+ 
   }
 
   #block-views-linies-de-recerca-block {
@@ -263,25 +282,48 @@ body.page-node-add-esdeveniment-agenda #main #interior,
     .view-content .views-row {
       $zen-column-count: 8;
       @include zen-grid-container();
+      padding: 6px 0 10px 0;
       border-bottom: 1px solid $gris6;
       .views-field-title {
-        @include zen-grid-item(7,1);
+        @include zen-grid-item(8,1);
+        padding-left: 0px;
         a {
-          @include graphik-bold(16px, $gris2, 20px);
+          @include graphik-bold(16px, $gris2, 16px);
           text-decoration: none;
+          display: inline-block;
+          margin-top: 4px;
         }
       }
       .views-field-comment-count {
         @include zen-clear();
-        @include zen-grid-item(7,1);
+        @include zen-grid-item(8,1);
         line-height: 16px;
         span {
-          padding-left: 30px;
-          @include graphik-medium(12px, $gris2, 16px);
+          @include graphik-medium(12px, $gris2, 21px);
+          vertical-align: top;
+        }
+        span:before {
+          float: left;
+          content: ' ';
+          display: inline-block;
+          width: 26px;
+          height: 21px;
+          background-image: url('../images/sprites.png');
+          background-position: -408px -105px;
         }
       }
       .views-field-view-node {
-        @include zen-grid-item(2,7);
+        @include zen-grid-item(1,8);
+        padding-right: 0px;
+        a {
+          display: block;
+          width: 18px;
+          height: 19px;
+          text-indent: 99999px;
+          overflow: hidden;
+          background-image: url('../images/sprites.png');
+          background-position: -361px -131px;
+        }
       }
     }
   }

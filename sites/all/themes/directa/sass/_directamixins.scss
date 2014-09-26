@@ -206,7 +206,7 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 }
 @mixin subscriute-m960($padding) {
   background-color:$vermell;
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: center;
   padding-left:0px;
   padding-right:0px;
@@ -235,7 +235,7 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   backgroudn-repeat: no-repeat;
   background-position: 8px 8px;
   height: auto;
-  border-radius: 5px;
+  @include border-radius(2px);
   a {
     padding-top: $padding;
     padding-bottom: $padding;
@@ -346,8 +346,8 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 
 /*Transversals*/
 @mixin enllac-net {
-  text-decoration:none;
   padding: 0;
+  color: inherit;
 }
 @mixin sprite {
   background-image:url('../images/sprites.png');
@@ -614,6 +614,7 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
 
 @mixin cont-rel() {
   //background-color: $fons;
+  //.field-continguts-relacionats-ref,
   .field-continguts-relacionats {
     background-color:$fons;
     margin: 10px;
@@ -637,10 +638,10 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
             padding-bottom:2px;
             padding-top:2px;
             a {
-              @include public-roman(17px, $gris7, 22px);
+              @include public-roman(17px, $gris7, 30px);
               text-decoration: underline;
               margin: 0 12px;
-              padding-left: 28px;
+              padding-left: 40px;
               display: inline-block;
               background-position: 0 50%;
               background-repeat: no-repeat;
@@ -710,6 +711,13 @@ box-shadow: inset 0px 0px 2px 2px rgba(227,227,227,1);
   }
 }
  
+@mixin separador {
+  content: " ";
+  display: block;
+  background-image: url('../images/pattern-ratlla-separador.png');
+  height: 1px;
+}
+
 
 
 

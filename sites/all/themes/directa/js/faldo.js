@@ -21,7 +21,7 @@ Drupal.behaviors.directa_faldo = {
       }
     });
     if(jQuery.cookie(cookie_name) != 1) {
-      jQuery('#faldo-wrapper').addClass('active');
+      jQuery('#faldo-wrapper').removeClass('disabled').addClass('active');
     } else {
       jQuery('#faldo-wrapper').addClass('disabled').css('bottom', '-100%');
     }

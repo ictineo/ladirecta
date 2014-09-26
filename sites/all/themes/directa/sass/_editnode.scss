@@ -1,3 +1,26 @@
+/**
+ * temporal
+ * --------
+ */
+.page-node-add,
+.page-node-edit,
+.page-node-add-noticia {
+  .field-type-entityreference {
+    .dialog-links {
+      display: none;
+    }
+  }
+}
+.page-node-edit.node-type-noticia,
+.page-node-add-noticia.node-type-noticia {
+  .field-type-entityreference {
+    .dialog-links {
+      display: inherit;
+    }
+  }
+}
+
+
 /**USABILIDAD FORMULARIOS CREACIÓN Y EDICIÓN NODOS*/
 
 

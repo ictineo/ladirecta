@@ -5,6 +5,7 @@
  */
 /**FOOTER**/
 #footer {
+  margin-top: 24px;
   background-color: $gris7;
   @include zen-clear(both);
   $zen-column-count:10;

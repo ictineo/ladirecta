@@ -20,14 +20,14 @@ if (drupal_is_front_page()) {
   <header class="header" id="header" role="banner">
 
     <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo vcard" id="logo"><img src="<?php print $logo; ?>" alt="<?php print $site_name ?>" class="header__logo-image url fn org" /></a>
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
       <div class="header__name-and-slogan" id="name-and-slogan">
         <?php if ($site_name): ?>
-          <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+          <h1 class="header__site-name vcard" id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print $site_name ?>" class="header__site-link url fn org" rel="home"><span><?php print $site_name; ?></span></a>
           </h1>
         <?php endif; ?>
 
@@ -154,10 +154,12 @@ if (drupal_is_front_page()) {
      <?php print render($page['seccion_inferiors']); ?>
    </div>  
 
-   <div id="faldo-wrapper" data-day="<?php print date('z'); ?>">
-    <div id="faldo-switcher"> <span class="faldo-switcher-dis">obrir</span> <span class="faldo-switcher-act">tancar</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa.');?></span><?php print t('Col·labora en fer possible aquest mitjà.'); ?> </div>
-     <?php print render($page['faldo']); ?>
-  </div>
+  <?php if(variable_get('directa_custom_enable_faldo','') == 1): ?>
+     <div id="faldo-wrapper" class="disabled" data-day="<?php print date('z'); ?>">
+       <div id="faldo-switcher"> <span class="faldo-switcher-dis">obrir</span> <span class="faldo-switcher-act">tancar</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa.');?></span><?php print t('Col·labora en fer possible aquest mitjà.'); ?> </div>
+       <?php print render($page['faldo']); ?>
+    </div>
+  <?php endif; ?>
   
 <?php print render($page['footer']); ?>
 

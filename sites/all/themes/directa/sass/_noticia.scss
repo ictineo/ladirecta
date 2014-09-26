@@ -1,4 +1,4 @@
-/*NOTICIA COMPLETA**/
+/*NOTICIA  COMPLETA**/
 .node-type-noticia {
   .breadcrumb {
     display: none;
@@ -35,11 +35,12 @@
       .field-collection-container {
         @include zen-clear();
         @include zen-grid-item(13,3);
-        article.field-contingut-relacionat {//node-noticia.view-mode-token {
+        article.field-contingut-relacionat {
           $zen-column-count: 3;
           $zen-gutter-width: 10px;
           $zen-auto-include-item-base: true;
           @include zen-grid-container();
+          .field-portada-fotogaleria img,
           .field-portada-fotogaleria a img {
             @include zen-grid-item(1,1);
           }
@@ -78,6 +79,9 @@
   #main {
     #content {
       margin-top: 30px;
+      .field-seccio {
+        @include seccio;
+      }
       #page-title {
         @include titulo-not;
         padding-top: 20px;
@@ -105,6 +109,7 @@
         #col-meta {
           padding-top: 30px;
           .field-autor,
+          .field-autor a,
           .date-display-single {
             @include graphik-bold(11px,$gris7,22px);
             padding-left: 5px;
@@ -128,10 +133,13 @@
             margin-left: -25%;
             width: 65%;
             float: left;
+            padding: 10px 10px 10px 0;
           }
           figure.caption {
-            border-bottom: 1px dashed $fons;
             margin-bottom: 10px;
+            &:after {
+             @include separador;
+            }
             figcaption {
               @include public-roman(15px,$negre,auto);
               margin: 10px 0;
@@ -159,10 +167,14 @@
           #tags-territori-wrapper {
             display: inline-block;
             width: auto;
-            mark.field-etiquetes ,
+            padding-bottom: 5px;
+            mark.field-etiquetes,
+            .field-etiquetes,
+            .field-etiquetes .field-items .field-item,
             .field-territori  {
               @include etiquetes;
               background: none;
+              display: inline-block;
             }
           }
         }  
@@ -173,14 +185,20 @@
         //Noticies relacionades
         .field-collection-container {
           h3.field-label {
-            margin: 10px 0px;
+            margin: 0px 0px 10px 0;
             padding:10px 0;
-            border-bottom: solid 1px $fons;
+            line-height: 70px;
+            &:after {
+              @include separador;
+            }
           }
-          article.field-contingut-relacionat {
-            border-bottom: 1px dashed $fons;
-            &:last-of-type {
-              border-bottom: 1px dashed $fons;
+           div.field-contingut-relacionat,
+           article.field-contingut-relacionat {
+            &:after {
+              @include separador;
+            }
+            &:last-of-type:after {
+              @include separador;
             }
             .field-collection-view.view-mode-token {
               border: none 0px;
@@ -190,6 +208,7 @@
                 header {
                   float: right;
                   padding-left: 33%;
+                  min-width: 66%;
                   margin-bottom: 10px;
                   .node__title.node-title {
                     a {
@@ -206,6 +225,7 @@
                   margin: 0;
                   padding: 0;
                   .field-autor,
+                  .field-autor a,
                   .date-display-single {
                     @include graphik-medium (17px, $gris5, 19px);
                     //padding-left: 10px;

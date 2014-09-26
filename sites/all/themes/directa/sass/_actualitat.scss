@@ -69,6 +69,14 @@
       section#comments {
         @include zen-clear();
         @include zen-grid-item(13,3);
+        > h2 {
+          display:none;
+        }
+        #comment-form {
+          #edit-author--2 {
+            display:none;
+          }
+        }
         #comment-form div {
           $zen-column-count: 2;
           @include zen-grid-container();
@@ -76,7 +84,7 @@
             @include zen-grid-item(1,1);
           }
           .form-item-subject {
-            @include zen-grid-item(1,2);
+            @include zen-grid-item(2,1);
           }
           #edit-comment-body {
             @include zen-clear();
@@ -127,6 +135,7 @@
           }
         }
         #col-meta {
+          @include graphik-bold(18px,$gris7,22px);
           padding-top: 30px;
           .field-autor,
           .date-display-single {
@@ -154,8 +163,10 @@
             float: left;
           }
           figure.caption {
-            border-bottom: 1px dashed $fons;
             margin-bottom: 10px;
+            &:after {
+             @include separador;
+            }
             figcaption {
               @include public-roman(15px,$negre,auto);
               margin: 10px 0;
@@ -183,7 +194,10 @@
           #tags-territori-wrapper {
             display: inline-block;
             width: auto;
-            mark.field-etiquetes ,
+            mark.field-etiquetes,
+            .field-etiquetes,
+            .field-etiquetes .field-items .field-item,
+            .field-etiquetes .field-items .field-item a,
             .field-territori  {
               @include etiquetes;
               background: none;
@@ -202,9 +216,11 @@
             border-bottom: solid 1px $fons;
           }
           article.field-contingut-relacionat {
-            border-bottom: 1px dashed $fons;
-            &:last-of-type {
-              border-bottom: 1px dashed $fons;
+            &:after {
+              @include separador;
+            }
+            &:last-of-type:after {
+              @include separador;
             }
             .field-collection-view.view-mode-token {
               border: none 0px;

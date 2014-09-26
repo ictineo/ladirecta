@@ -2,7 +2,7 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
     /** sincronitzacio de camps de tipus de subscripcio**/
-    jQuery('body.page-user #user-profile-form  #edit-profile-main-field-subscripcions-markup .opcio, body.page-admin-people-create #edit-profile-main #edit-profile-main-field-subscripcions-markup .opcio').click(function () {
+    jQuery('body.page-user #user-register-form  #edit-profile-main-field-subscripcions-markup .opcio, body.page-user #user-profile-form  #edit-profile-main-field-subscripcions-markup .opcio, body.page-admin-people-create #edit-profile-main #edit-profile-main-field-subscripcions-markup .opcio').click(function () {
       /** classes del markup per fer el efecte d'actiu **/
       jQuery(this).siblings().removeClass('active');
       jQuery(this).addClass('active');
@@ -21,7 +21,7 @@ Drupal.behaviors.my_custom_behavior = {
     });
 
     /** sincronitzacio de camps de tipus de pagament **/
-    jQuery('body.page-user  #user-profile-form .group-pagament .field-type-markup, body.page-admin-people-create #edit-profile-main .group-pagament .field-type-markup').click(function () {
+    jQuery('body.page-user  #user-register-form .group-pagament .field-type-markup, body.page-user  #user-profile-form .group-pagament .field-type-markup, body.page-admin-people-create #edit-profile-main .group-pagament .field-type-markup').click(function () {
       /** classes del markup per fer el efecte d'actiu **/
       jQuery(this).siblings().removeClass('active');
       jQuery(this).addClass('active');
@@ -38,17 +38,20 @@ Drupal.behaviors.my_custom_behavior = {
 
     /** tiguerajem el canvi en els camps de text per omplir nom usuari, contrasenya i mail **/
     var update_usrnamepwd = function () {
-      var name = jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-nom-usuari-und-0-value').val();
-      var surname = jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-cognom-und-0-value').val();
-      jQuery('body.page-admin-people-create #edit-account #edit-name').val(name + surname);
-      jQuery('body.page-admin-people-create #edit-account #edit-pass-pass1').val(name + surname);
-      jQuery('body.page-admin-people-create #edit-account #edit-pass-pass2').val(name + surname);
+      console.log('focusout');
+      var name = jQuery('#edit-profile-main #edit-profile-main-field-nom-usuari-und-0-value').val();
+      var surname = jQuery('#edit-profile-main #edit-profile-main-field-cognom-und-0-value').val();
+      jQuery('#edit-account #edit-name').val(name + surname);
+      jQuery('#edit-account #edit-pass-pass1').val(name + surname);
+      jQuery('#edit-account #edit-pass-pass2').val(name + surname);
     }
 
     jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-nom-usuari-und-0-value').focusout(update_usrnamepwd);
+    jQuery('body.page-user #user-register-form  #edit-profile-main-field-nom-usuari-und-0-value').focusout(update_usrnamepwd);
     jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-cognom-und-0-value').focusout(update_usrnamepwd);
-    jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-e-mail-und-0-email').focusout(function () {
-      jQuery('body.page-admin-people-create #edit-account #edit-mail').val(jQuery('body.page-admin-people-create #edit-profile-main #edit-profile-main-field-e-mail-und-0-email').val());
+    jQuery('body.page-user #user-register-form  #edit-profile-main-field-cognom-und-0-value').focusout(update_usrnamepwd);
+    jQuery('body.page-user #user-register-form  #edit-profile-main-field-e-mail-und-0-email, body.page-admin-people-create #edit-profile-main #edit-profile-main-field-e-mail-und-0-email').focusout(function () {
+      jQuery('#edit-account #edit-mail').val(jQuery('#edit-profile-main #edit-profile-main-field-e-mail-und-0-email').val());
     });
 
   }

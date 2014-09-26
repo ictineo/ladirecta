@@ -64,7 +64,9 @@
         background: url('../images/agenda.png') no-repeat -30px 0;
       }
       form#esdeveniment-agenda-node-form {
-        border-bottom: 1px dashed $fons;
+        &:after {
+          @include separador;
+        }
         textarea,
         input {
           background-color: $fons_form;

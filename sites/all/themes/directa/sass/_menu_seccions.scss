@@ -35,7 +35,8 @@
       @include menu-seccions($blanc,$gris7);
       text-transform: uppercase;
       ul {
-        width: 100%;
+        /* compansem el pading de l'icona */
+        width: 95%;
         $zen-column-count:2;
         @include zen-grid-container();
         background-image: url('../images/adj3.png');
@@ -64,7 +65,8 @@
       @include menu-seccions($blanc,$gris7);
       text-transform: uppercase;
       ul {
-        width: 100%;
+        /* compansem el pading de l'icona */
+        width: 95%;
         $zen-column-count:2;
         @include zen-grid-container();
         background-image: url('../images/adj.png');
@@ -91,8 +93,8 @@
       $zen-gutter-width:10px;
       @include zen-grid-item(1, 3);
       .block-title {
-        @include tit-menu;
-        @include block-tit;
+        /*@include tit-menu;*/
+        /*@include block-tit;*/
       }
       ul {
         width: 100%;
@@ -104,10 +106,14 @@
           }
         }
         li {
+          cursor: pointer;
           float: none;
           border-left: 0;
           padding-left: 0;
           @include territori-caixa;
+          background-image: url('../images/pattern-gris.png');
+          span,
+          h2,
           a {
             @include territori;
           }

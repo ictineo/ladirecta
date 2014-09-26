@@ -1,32 +1,94 @@
 /*COMPLEMENT DIRECTA NODE FINAL */
-#node-type-cd-serveis {
+.node-type-cd-serveis {
   #content {
     $zen-column-count:6;
     $zen-gutter-width:10px;
     @include zen-grid-container();
     .region-highlighted {
       @include zen-grid-item(6,1);
+      $zen-column-count:12;
+      $zen-gutter-width:10px;
+      @include zen-grid-container();
       #block-views-cd-noticias-block-2 {
-        @include zen-grid-item(6,1);
+        @include zen-grid-item(12,1);
         @include zen-clear();
+        .views-field-view-node{
+          @include zen-grid-item(1,1);
+          padding-left:40px;
+          margin-top:60px;
+          background-image: url("../images/arrow_left");
+          background-position: left center;
+          background-repeat: no-repeat;
+          a {
+            @include graphik-medium(15px,$gris3,20px);
+            padding-top:30px;
+            text-decoration: underline;
+          }
+        }
         .field-image {
-        @include zen-grid-item(1,1);
+        @include zen-grid-item(2,2);
         }
         .views-field-page-title{      
-          @include zen-grid-item(5,2);
+          @include zen-grid-item(9,4);
           h3 {
             @include graphik-medium(35px,$gris3,40px);
           }
         }
       }
       #block-views-exp-cd-serveis-page-1{
-        @include zen-grid-item(6,1);
+        @include zen-grid-item(12,1);
         @include zen-clear();
+        @include graphik-medium(20px,$gris3,26px);
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        padding-top:20px;
+        padding-bottom:20px;
+        > h2 {
+          display:none;
+        }
       }
+    
     }
-    article {
+    .node-cd-serveis {
+      $zen-column-count:6;
+      $zen-gutter-width:10px;
+      @include zen-grid-container();
       @include zen-clear();
       @include zen-grid-item(6,1);
+      padding-bottom:10px;
+      .field-logotip{
+        display:block;
+        width:30%;
+        float:left;
+        pading: 0px 10px 4px 0px;
+      }
+      .field-label{
+        @include graphik-medium(18px,$gris3,28px);
+        padding-left:34%;
+      }
+      
+      .field-oferta{
+        @include graphik-bold(31px,$gris4,40px);
+        padding-left:34%;
+      }
+      .field-body{
+        @include graphik-medium(20px,$gris7,26px);
+        padding-left:34%;
+      }
+     .field-adre-a{
+        @include graphik-medium(24px,$gris7,40px);
+        padding-left:34%;
+     }
+      .field-web{
+        @include graphik-medium(24px,$gris7,40px);
+      }
+      .field-tipus-de-servei{
+        @include graphik-medium(22px,$gris4,30px);
+        margin-left:34%;
+        background-color: rgba(230, 230, 230, 0.8);
+        padding:5px;
+        display:inline;
+      }
     }
   
   
@@ -36,7 +98,7 @@
 /*COMPLEMENT DIRECTA Llista Genera*/
 #content {
   $zen-column-count:6;
-  $zen-gutter-width:10px;
+  $zen-gutter-width: 50px;
   @include zen-grid-container();
   #page-title {
     display:none;
@@ -115,12 +177,18 @@
     @include zen-grid-item(6,1);
     @include zen-clear();
     $zen-gutter-width:20px;
+    .views-row{
+      padding:30px;
+      @include border-radius(4px);
+      width:90%;
+      margin: 12px auto;
+      .field-logotip{
+        text-align:center;
+      }
+    }
     .views-row:nth-child(3n+1){
       @include zen-grid-item(2,1);     
       @include zen-clear();
-      background-color: rgba(220, 220, 220, 0.3);
-      margin-top: 10px;
-      padding:5px;
       .views-field-title{
         @include graphik-medium(19px,$gris3,23px); 
       }
@@ -146,9 +214,6 @@
     }
     .views-row:nth-child(3n+2){
       @include zen-grid-item(2,3);
-      background-color: rgba(220, 220, 220, 0.3);
-      margin-top: 10px;
-      padding:5px;
       .views-field-title{
         @include graphik-medium(19px,$gris3,23px); 
       }
@@ -174,9 +239,6 @@
     }
     .views-row:nth-child(3n+3){
       @include zen-grid-item(2,5);
-      background-color: rgba(220, 220, 220, 0.3);
-      margin-top: 10px;
-      padding:5px;
       .views-field-title{
         @include graphik-medium(19px,$gris3,23px); 
       }

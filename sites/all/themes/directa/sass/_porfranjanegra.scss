@@ -252,6 +252,7 @@
     @include zen-grid-container();
     .view-content {
       @include zen-grid-item(2,1);
+      float:none;
       @include zen-nested-container();
       .views-field-field-seccio-web-1 {
         @include zen-grid-item(2,1);

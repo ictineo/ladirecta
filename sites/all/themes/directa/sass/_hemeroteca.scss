@@ -10,6 +10,32 @@
       display:none;
     }
     .views-exposed-widgets {
+      /**
+       * estils generics del formulari
+       */
+      /*http://css-tricks.com/snippets/css/glowing-blue-input-highlights/*/
+      input[type=text], textarea {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid $gris9;
+        background-color: $input_bg;
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        @include graphik-medium(14px, $gris3, 18px);
+        padding-left: 6px;
+        color: #bababa;
+      }
+      input[type=text]:focus, textarea:focus {
+        box-shadow: 0 0 5px $gris6;
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid $gris6;
+      }
       @include zen-grid-item(6,1); 
       $zen-column-count:12;
       $zen-gutter-width:10px;                                                                                   
@@ -28,6 +54,9 @@
         .form-text {
           @include zen-grid-item(12,1);
           height: 50px;
+          padding-left: 12px;
+          @include graphik-medium(30px, #bababa, 34px);
+          background-position: 99% 50%;
         }
         @include zen-clear(); 
       }  
@@ -53,21 +82,21 @@
         label {
           width:60px; 
           display:inline-block;
-          color: rgb(136, 136, 136);
-          font-family: arial;
-          font-weight: lighter; 
+          @include graphik-regular(16px, #888888, 24px);
         }
         .form-item.form-type-textfield.form-item-field-data-date > label {
           display: none;
         } 
         .description {
           margin-left: -130%;
+          width: 130%;
           margin-bottom: 15px;
           margin-top:-25px;
           @include graphik-semibold(18px,#888888, 21px);
         }
         #edit-field-data-datepicker-popup-0 {
           max-width:50%;
+          
         }
       }
       #edit-field-data-1-wrapper {
@@ -92,11 +121,14 @@
           max-width:50%;
         }
       }
+      #edit-field-etiquetes-wrapper,
       #edit-field-seccio-wrapper {
         @include zen-grid-item(4,8);
         & > label {
           display:none;
         }
+        /* treiem el trobber */
+        input { background-image: none; }
         .chosen-container {
           .chosen-results {
             min-width:395px;
@@ -129,8 +161,12 @@
           display:inline;
           margin-right: 50px;
         } 
+        label {
+          @include graphik-regular(16px, #888888, 24px);
+        }
         .description{ 
            margin-left: -130%;
+           width: 130%;
            margin-top: -25px;         
            @include graphik-semibold(18px,#888888, 21px);
          }
@@ -141,10 +177,33 @@
           float: left;
           @include graphik-semibold(18px,#888888, 21px);
         } 
+        #edit_type_1__2_chosen,
         #edit-type-1--2 {
           @include zen-grid-item(6,2);
+          .chosen-drop li,
+          .chosen-single span,
           option, selected {
             @include graphik-medium(17px, #bababa, 10px);           
+          }
+          &.chosen-container-active .chosen-single {
+            border-color: $gris7;
+          }
+          .chosen-single span {
+            line-height: 24px;
+          }
+          .chosen-drop {
+            margin-left: 5px;
+            width: 190px;
+            li.highlighted {
+              color: $gris7;
+              background-image: none;
+              background-color: $gris9;
+            }
+          }
+          .chosen-single span {
+          }
+          .chosen-search {
+            display: none;
           }
         }
       }
@@ -153,9 +212,11 @@
         @include zen-grid-item(3,9);
         #edit-submit-hemeroteca {
           float:right;
+          border: 0px;
+          @include border-radius(4px);
           background-color: #5e5e5e;
-          padding: 10px;
-          @include graphik-bold(20px,#ffffff,20px);
+          padding: 10px 20px;
+          @include public-bold(24px,#ffffff,20px);
         }
       }
       .views-widget .description {

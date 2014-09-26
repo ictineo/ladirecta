@@ -6,6 +6,8 @@
  * @param unknown_type $node
  * @param unknown_type $op
  * @param unknown_type $account
+ *
+ * Usat per l'embargament compara flag del contingut amb rol d'usuari per fer un 403
  */
 function directa_custom_node_access($node, $op, $account) { 
   if (! is_object($node)) {
@@ -23,6 +25,52 @@ function directa_custom_node_access($node, $op, $account) {
 
   // Returning nothing from this function would have the same effect.
   return NODE_ACCESS_IGNORE;
+}
+
+function directa_custom_menu() {
+  $menu['admin/config/directa'] = array (
+    'title' => t('La Directa'),
+    'description' => t('Configuracions a mida per La Directa'),
+    'position' => 'left',
+    'weight' => -100,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer faldo'),                                                                   
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+  $menu['admin/config/directa/faldo'] = array (
+    'title' => t('Configuració del faldó'),
+    'description' => t('Activar / desactivar el faldó per tot el site'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('directa_custom_enable_faldo'),
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('administer faldo'),                                                                   
+  );
+  return $menu;
+}
+
+function directa_custom_enable_faldo() {
+  $form = array();
+  $form['directa_custom_enable_faldo'] = array( 
+    '#type' => 'radios',
+    '#options' => array(0 => "Ocultar", 1 => "Mostrar"),
+    '#title' => 'Faldó de número en paper:',
+    '#default_value' => variable_get('directa_custom_enable_faldo', ''),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_permision().
+ */
+function directa_custom_permission() {
+  return array(
+    'administer faldo' => array(
+      'title' => t('Administra el faldó'),
+      'description' => t('activar/desactivar el faldó de nou numero en paper'),
+    ),
+  );
 }
 
 
@@ -112,6 +160,9 @@ function directa_form_alter(&$form, &$form_state, $form_id){
       }
       if (isset($form['field_seccio'])) {
            $form['field_seccio']['#attributes'] = array('placeholder' => array(t('Escull seccions')));
+      }  
+      if (isset($form['field_etiquetes'])) {
+           $form['field_etiquetes']['#attributes'] = array('placeholder' => array(t('Etiquetes')));
       }  
       if (isset($form['author'])) {
            $form['author']['#attributes'] = array('placeholder' => array(t('Escull autor')));

@@ -124,10 +124,12 @@
      <?php print render($page['interior']); ?>
    </div>   
 
- <div id="faldo-wrapper">
-    <div id="faldo-switcher"> <span class="faldo-switcher-dis">obrir</span> <span class="faldo-switcher-act">tancar</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa.');?></span><?php print t('Col·labora en fer possible aquest mitjà.'); ?> </div>
-     <?php print render($page['faldo']); ?>
-  </div>
+  <?php if(variable_get('directa_custom_enable_faldo','') == 1): ?>
+     <div id="faldo-wrapper" class="disabled" data-day="<?php print date('z'); ?>">
+      <div id="faldo-switcher"> <span class="faldo-switcher-dis">obrir</span> <span class="faldo-switcher-act">tancar</span> <span class="faldo-titol-destacat"><?php print t('Subscriute a la directa.');?></span><?php print t('Col·labora en fer possible aquest mitjà.'); ?> </div>
+       <?php print render($page['faldo']); ?>
+    </div>
+  <?php endif; ?>
   
   <?php print render($page['footer']); ?>
 </div>

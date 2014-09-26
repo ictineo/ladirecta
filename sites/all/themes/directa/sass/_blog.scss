@@ -20,7 +20,7 @@
       }
       .easy_social_box {
         @include zen-clear();
-        @include zen-grid-item(3,1);
+        @include zen-grid-item(1,2);
       }
       $zen-column-count: 17;
       @include zen-grid-container();
@@ -30,39 +30,6 @@
       #tags-wrapper {
         @include zen-clear();
         @include zen-grid-item(13,3);
-      }
-      /*contingut relacionat*/
-      .field-collection-container {
-        @include zen-clear();
-        @include zen-grid-item(13,3);
-        article.field-contingut-relacionat {//node-noticia.view-mode-token {
-          $zen-column-count: 3;
-          $zen-gutter-width: 10px;
-          $zen-auto-include-item-base: true;
-          @include zen-grid-container();
-          .field-portada-fotogaleria a img {
-            @include zen-grid-item(1,1);
-          }
-          fieldset.group-nested {
-            @include zen-grid-item(2,2);
-            @include zen-nested-container();
-            //.node-title {
-              //@include zen-grid-item(3,1);
-            //}
-            .field-autor {
-              @include zen-clear();
-              @include zen-grid-item(3,1);
-            }
-            .date-display-single {
-              @include zen-clear();
-              @include zen-grid-item(3,1);
-            }
-            .field-body {
-              @include zen-clear();
-              @include zen-grid-item(3,1);
-           }
-          }
-        }
       }
     }
   }
@@ -83,11 +50,11 @@
         display: block;
       }
       article.node-blog.view-mode-full {
-        .field-subtitol {
-          @include subtitulo-not;
-        padding-bottom: 20px;
+        margin-bottom: 30px;
+        .submitted {
+          @include graphik-medium(20px,$gris3, 0px);
         }
-        .field-fotografies {
+        .field-fotografia {
           .field-peu-fotografia {
             @include peu-foto;
             color:$negre;
@@ -101,16 +68,12 @@
             display: inline-block;
           }
         }
-        #col-meta {
-          padding-top: 30px;
-          .field-autor,
-          .date-display-single {
-            @include graphik-bold(11px,$gris7,22px);
-            padding-left: 5px;
-          }
-          .field-autor {
-            text-transform: uppercase;
-            text-decoration: underline;
+        ul.links {
+          padding-left: 5px;
+          text-transform: uppercase;
+          text-decoration: underline;
+          a {
+            @include graphik-bold(11px,$gris7,90px);
           }
         }
         .field-body {
@@ -127,26 +90,16 @@
             margin-left: -25%;
             width: 65%;
             float: left;
+            padding: 10px 10px 10px 0;
           }
           figure.caption {
-            border-bottom: 1px dashed $fons;
             margin-bottom: 10px;
+            &:after {
+             @include separador;
+            }
             figcaption {
               @include public-roman(15px,$negre,auto);
               margin: 10px 0;
-            }
-          }
-        }
-        @include cont-rel();//.field-continguts-relacionats es crida des del mixin
-        .field-collection-container {
-          @include not-rel();
-          border: none 0px;
-          .field-continguts-relacionats {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            tr.field_collection_item.odd,
-            tr.field_collection_item.even {
-              background-color: $fons;
             }
           }
         }
@@ -165,69 +118,6 @@
             }
           }
         }  
-        .field-collection-container {
-          article {
-          }
-        }
-        //Noticies relacionades
-        .field-collection-container {
-          h3.field-label {
-            margin: 10px 0px;
-            padding:10px 0;
-            border-bottom: solid 1px $fons;
-          }
-          article.field-contingut-relacionat {
-            border-bottom: 1px dashed $fons;
-            &:last-of-type {
-              border-bottom: 1px dashed $fons;
-            }
-            .field-collection-view.view-mode-token {
-              border: none 0px;
-              article.node-noticia.view-mode-token {
-                border: none 0px;
-                margin: 0;
-                header {
-                  float: right;
-                  padding-left: 33%;
-                  margin-bottom: 10px;
-                  .node__title.node-title {
-                    a {
-                      @include graphik-semibold(28px, $gris7, 34px);//Jude canvia definicio tipo de 33 a 28 i de 37 a 34 interlineat
-                    }
-                  }
-                }
-                .field-portada-fotogaleria img {
-                  margin-left: -15px;
-                }
-                fieldset.group-nested {
-                  float: right;
-                  border: none 0px;
-                  margin: 0;
-                  padding: 0;
-                  .field-autor,
-                  .date-display-single {
-                    @include graphik-medium (17px, $gris5, 19px);
-                    //padding-left: 10px;
-                  }
-                  .field-autor {
-                    text-decoration: underline;
-                  }
-                  .field-body {
-                    margin-bottom: 0px;
-                    padding-top: 0px;
-                    margin-top: 10px;
-                    p {
-                      @include entradilla-not-rel-dest;
-                    } 
-                  }
-                }
-              }
-              .field-destacar {
-                display: none;
-              }
-            }
-          }
-        }
       }
     }
     //SIDEBARS
@@ -267,6 +157,43 @@
       }
     }
   }
+  #footer {
+    margin-top: 40px;
+  }
 }
 
+/* llistat*/
+
+.page-blog { 
+  #main #content.column { 
+    width: 90%; 
+    h1#page-title { 
+    } 
+    .node-blog { 
+      margin-top: 30px;
+      margin-bottom: 30px; 
+      h2 a { 
+        @include titulo-not; 
+      } 
+      .submitted span { 
+        @include graphik-medium(20px,$gris3, 0px);
+      } 
+      .field-body { 
+        @include body; 
+      } 
+      ul.links { 
+        li.node-readmore { 
+          @include autoria; 
+          float: right;
+          a { 
+            color: $vermell; 
+            &:hover { 
+              color: $gris6; 
+            } 
+          }
+        }
+      }
+    }
+  }
+}
 

@@ -10,7 +10,7 @@
       $zen-gutter-width: 15px;
       $zen-auto-include-item-base: true;
       .event-day-wrapper {
-        @include zen-grid-item(3,1);
+        @include zen-grid-item(5,1);
         @include zen-grid-container();
         .dia {
           @include zen-grid-item(17,1);
@@ -18,26 +18,26 @@
       }
       $zen-column-count: 17;
       .main-col-wrapper {
-        @include zen-grid-item(14,4);
+        @include zen-grid-item(12,6);
         @include zen-grid-container();
         #page-title {
-          @include zen-grid-item(17,1);
+          /*@include zen-grid-item(17,1);*/
         }
         .field-data-ag {
-          @include zen-grid-item(17,1);
+          /*@include zen-grid-item(17,1);*/
         }
         article.node-esdeveniment-agenda.view-mode-full {
           .field-adreca {
-            @include zen-clear();
-            @include zen-grid-item(17,1);
+            /*@include zen-clear();*/
+            /*@include zen-grid-item(17,1);*/
           }
           .field-municipi {
-            @include zen-clear();
-            @include zen-grid-item(17,1);
+            /*@include zen-clear();*/
+            /*@include zen-grid-item(17,1);*/
           }
           .field-body {
-            @include zen-clear();
-            @include zen-grid-item(17,1);
+            /*@include zen-clear();*/
+            /*@include zen-grid-item(17,1);*/
           }
         }
       }
@@ -54,7 +54,9 @@
 .not-front.node-type-esdeveniment-agenda {
   #main {
     margin-top: 30px;
-    border-top: 1px dashed $fons;
+    &:before {
+      @include separador;
+    }
     #content {
       .event-day-wrapper {
         .dia {
@@ -63,7 +65,8 @@
             @include graphik-medium(19px, $gris7, 22px);
             margin-top: -15px;
             padding-bottom: 10px;
-            text-align: right;
+            text-align: left;
+            padding-left: 4px;
             margin-right: -20px;
             border-left: 1px solid $gris7;
             margin-left: 85px;
@@ -101,8 +104,6 @@
           display: block;
           @include titulo-not;
           line-height: 50px;
-          padding-top: 20px;
-          margin-top: 15px;
           margin-bottom: 10px;
         }
         article.node-esdeveniment-agenda.view-mode-full {
@@ -114,8 +115,8 @@
             @include graphik-medium(20px,$gris3,30px);
           }
           .field-adjuntar-imatge {
-            margin-left: 18%;
             float: left;
+            padding: 0 12px 4px 0;
             clear: none;
           }
           .field-body {

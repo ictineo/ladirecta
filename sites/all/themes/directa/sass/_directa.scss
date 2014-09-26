@@ -14,9 +14,28 @@
 
 /**Fulla d'estils de la Directa**/
 
-
-a {
+.body a,
+.field-body a {
   @include enllac-net;
+  text-decoration: underline;
+}
+header,
+footer,
+.node-title,
+#faldo-wrapper,
+#faldo_subscriptors,
+.field-title,
+.title,
+.views-field-title,
+.field-seccio,
+.field-seccio-web,
+mark {
+  a {
+    text-decoration: none;
+  }
+}
+a.node-title {
+  text-decoration: none;
 }
 
 /*AMAGATS*/
@@ -49,10 +68,20 @@ a {
 /*CABECERA*/
 
 #header {
+    .block {
+      margin: 0px;
+    }
   #block-block-7 { //Desplegable menu seccions
-    @include buto-seccions-m960();
+    @include graphik-medium(12px, $gris9, 16px);
+    background-image:url('../images/menu_arrow_down');
+    background-repeat:no-repeat;
+    background-position: 4px 4px;
+    background-color: $gris7;
+    padding-right: 2px;
+    padding-left: 16px;
+    @include border-radius(2px);
     #sections-switcher {
-      line-height: 25px;
+      line-height: 20px;
     }
   }
   #block-block-3 { //Inicia sessio presumiblemente login page not sure
@@ -80,28 +109,50 @@ a {
     }
   }
   #secondary-menu { //meny usuario logueado automatico
-    //@include bsessio;
-    //@include buto-inicia-m960(0px);
+    line-height: 30px;
+    height: 30px;
+    vertical-align: bottom;
     a {
       padding: 0;
       background-color:#e5e5e5;
-      //@include back;
-      //background-image:url('../images/arrow_down');
-      //content:"";
-      //display:block;
-      //width:auto;
-      //background-position:85px 11px;
       border-radius:5px;
-      height:auto;
       display: inline;
     }
     ul {
-      @include buto-inicia-m960(0px);
-      margin-top: 17px;
-      margin-bottom:0;
-      margin-left: 10px;
+      display: inline;
+      margin: 0px;
+      padding: 0px;
       li {
         padding-right: 0;
+        display: inline;
+        float: right;
+        a {
+          height: 20px;
+          padding: 4px 8px;
+          @include box-shadow($gris5 0px 0px 5px inset);
+          @include border-radius(2px);
+        }
+      }
+      li.first a {
+        width: 20px;
+        display: block;
+        text-indent: 999999px;
+        background-image: url('../images/sprites.png');
+        overflow: hidden;
+      }
+      li.last a {
+        @include graphik-semibold(14px, $gris7, 16px);
+        padding-left: 2px;
+        &:before { 
+          content: ' ';
+          width: 10px;
+          height: 12px;
+          display: inline-block;
+          background-image: url('../images/sprites.png');
+          background-position: -328px -240px;
+          margin-right: 3px;
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -129,10 +180,6 @@ a {
   #block-views-exp-hemeroteca-page-1 { //cercador
     @include buscador-m960;
     border-left: 1px solid $fons;
-    form#views-exposed-form-hemeroteca-page-1 {
-      margin-top: -6px;
-      padding-bottom: 6px;
-    }
   }
   .views-exposed-form #edit-search-api-views-fulltext-wrapper {
     padding:0px;
@@ -140,9 +187,7 @@ a {
   
   #block-block-1 {
     @include subscriute-m960(2px);
-    padding-bottom: 0px;
-    margin-top: -1px;
-    width: 14% !important;
+    min-width: 150px;
   }
 }
 

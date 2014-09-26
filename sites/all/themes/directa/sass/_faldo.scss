@@ -7,6 +7,8 @@
   bottom: 0px;
   left: 0;
   min-height: 40%;
+  background-color: white;
+  z-index: 40;
   #faldo-switcher {
     padding-left: 20%;
     cursor: pointer;
@@ -52,7 +54,8 @@
   .region-faldo {
     width: 100%;
     margin: 0 auto;
-    height: 480px;
+    min-height: 480px;
+    height: 100%;
     background-color: white;
     #faldo-general {
       width: 90%;

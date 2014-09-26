@@ -138,6 +138,9 @@ function directa_preprocess_page(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
   }
 }
+function directa_preprocess_field(&$vars, $hook) {
+  //dsm($vars['element']['#field_name']);
+}
 
 /**
  * per poder fer el theaming de node/add/esdeveniment-agenda

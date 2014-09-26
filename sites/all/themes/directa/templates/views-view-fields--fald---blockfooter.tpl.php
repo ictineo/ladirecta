@@ -57,7 +57,7 @@
       </div>
     </div>
     <div id="faldo_dreta_noticies">
-    <?php print $fields['field_contingut_relacionat_ref']->content; ?>
+    <?php print $fields['field_not_paper_rel']->content; ?>
     </div>
   </div>
 </div>

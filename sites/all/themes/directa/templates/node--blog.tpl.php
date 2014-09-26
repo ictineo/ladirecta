@@ -6,30 +6,6 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728164
  */
-if($view_mode == 'full') {
-  global $base_url;
-  $query_next = new EntityFieldQuery();
-  $query_next->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'noticia')
-      ->propertyCondition('status', 1)
-      ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '>')
-      ->fieldOrderBy('field_data', 'value', 'ASC')
-      ->range(0, 1);
-  $result = $query_next->execute();
-  $next_url   = $base_url . '/' . drupal_get_path_alias('node/' . array_keys($result['node'])[0]);
-  $next_title = node_load(array_values($result['node'])[0]->nid)->title;
-
-  $query_prev = new EntityFieldQuery();
-  $query_prev->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'noticia')
-      ->propertyCondition('status', 1)
-      ->fieldCondition('field_data', 'value', $node->field_data[LANGUAGE_NONE][0]['value'], '<')
-      ->fieldOrderBy('field_data', 'value', 'DESC')
-      ->range(0, 1);
-  $result = $query_prev->execute();
-  $prev_url   = $base_url . '/' . drupal_get_path_alias('node/' . array_keys($result['node'])[0]);
-  $prev_title = node_load(array_values($result['node'])[0]->nid)->title;
-}
 
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -58,40 +34,17 @@ if($view_mode == 'full') {
       // We hide the comments and links now so that we can render them later.
       //print render($content);
       print(render($content['field_subtitol']));
-      print(render($content['field_fotografies']));
+      print(render($content['field_fotografia']));
       ?>
-      <div id="col-meta">
-        <div id="meta-info">
-          <?php
-            print(render($content['field_autor']));
-            print(render($content['field_data']));
-          ?>
-        </div>
-      </div>
-    <div id="nav-links-wrapper">
-      <?php if(!empty($prev_title)): ?>
-        <div class='node-nav-links node-nav-links-prev'><a href="<?php print $prev_url; ?>"><?php print $prev_title; ?></a></div>
-      <?php endif; ?>
-      <?php if(!empty($next_title)): ?>
-        <div class='node-nav-links node-nav-links-next'><a href="<?php print $next_url; ?>"><?php print $next_title; ?></a></div> 
-      <?php endif; ?>
-    </div>
     <?php
       print(render($content['body']));
       print(render($content['easy_social_1'])); 
-      print(render($content['field_continguts_relacionats']));
     ?>
       <div id="tags-wrapper">
         <div id="tags-etiquetes-wrapper">
           <?php print render($content['field_etiquetes']); ?>
         </div>
-        <div id="tags-territori-wrapper">
-          <?php print render($content['field_territori']); ?>
-        </div>
       </div>
-    <?php
-        print(render($content['field_contingut_relacionat']));
-    ?>
     <?php else: ?>
       <?php
         hide($content['links']);
