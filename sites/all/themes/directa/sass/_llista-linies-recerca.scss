@@ -1,0 +1,58 @@
+body.page-linies-de-recerca {
+  #main {
+    #content {
+      .view-id-linies_de_recerca.view-display-id-page {
+        .view-header * {
+          @include graphik-regular( 16px, $gris3, 20px);
+        }
+        .view-content {
+          $zen-column-count: 2;
+          .views-row:nth-child(2n+1) {
+            @include zen-grid-item(1,1);
+          }
+          .views-row:nth-child(2n+2) {
+            @include zen-grid-item(1,2);
+          }
+          .views-row {
+            .views-field-title a {
+              @include graphik-semibold(24px, $gris7, 28px);
+            }
+            .field-body {
+              @include graphik-regular( 16px, $gris7, 20px);
+            }
+            .views-field-comment-count {
+              line-height: 16px;
+              span {
+                @include graphik-medium(12px, $gris2, 21px);
+                vertical-align: top;
+              }
+              span:before {
+                float: left;
+                content: ' ';
+                display: inline-block;
+                width: 26px;
+                height: 21px;
+                background-image: url('../images/sprites.png');
+                background-position: -408px -105px;
+              }
+            }
+            .views-field-view-node {
+              float: right;
+              padding-right: 0px;
+              margin-right: 24px;
+              a {
+                display: block;
+                width: 18px;
+                height: 19px;
+                text-indent: 99999px;
+                overflow: hidden;
+                background-image: url('../images/sprites.png');
+                background-position: -361px -131px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

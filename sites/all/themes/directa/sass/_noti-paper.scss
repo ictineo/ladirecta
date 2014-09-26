@@ -1,0 +1,291 @@
+/* NOTICIA PAPER COMPLETA**/
+.node-type-noticia-paper {
+  .breadcrumb {
+    display: none;
+  }
+  #main #content {
+    article.node-noticia-paper.view-mode-full {
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      .field-portada-fotogaleria {
+        @include zen-grid-item(15,1);
+      }
+      #col-meta {
+        @include zen-clear();
+        @include zen-grid-item(3,1);
+        @include zen-nested-container;
+        #meta-info {
+          @include zen-grid-item(14,1);
+        }
+      }
+      .easy_social_box {
+        @include zen-clear();
+        @include zen-grid-item(3,1);
+      }
+      $zen-column-count: 17;
+      @include zen-grid-container();
+      .field-body {
+        @include zen-grid-item(12,4);
+      }
+      #tags-wrapper {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+      }
+      /*contingut relacionat*/
+      .field-collection-container {
+        @include zen-clear();
+        @include zen-grid-item(13,3);
+        .field-contingut-relacionat .field-collection-view article {
+          $zen-column-count: 3;
+          $zen-gutter-width: 10px;
+          $zen-auto-include-item-base: true;
+          @include zen-grid-container();
+          .field-portada-fotogaleria img,
+          .field-portada-fotogaleria a img {
+            @include zen-grid-item(1,1);
+          }
+          fieldset.group-nested {
+            @include zen-grid-item(2,2);
+            @include zen-nested-container();
+            //.node-title {
+              //@include zen-grid-item(3,1);
+            //}
+            .field-autor {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+            }
+            .date-display-single {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+            }
+            .field-body {
+              @include zen-clear();
+              @include zen-grid-item(3,1);
+           }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*NOTICIA COMPLETA*/
+/***
+ * OJU SELECTOR MASSA GENERIC PER SER NOTICIA DE PORTADA!
+ */
+.not-front.node-type-noticia-paper {
+  #main {
+    #content {
+      margin-top: 30px;
+      .field-seccio {
+        @include seccio;
+        width: -moz-fit-content;
+      }
+      #page-title {
+        @include titulo-not;
+        padding-top: 20px;
+        display: block;
+      }
+      article.node-noticia-paper.view-mode-full {
+        .field-subtitol {
+          @include subtitulo-not;
+        padding-bottom: 20px;
+        }
+        .field-fotografies {
+          .field-peu-fotografia {
+            @include peu-foto;
+            color:$negre;
+            text-transform: none;
+            display: inline-block;
+            margin-right: 10px;
+          }
+          .field-autoria {
+            @include peu-foto;
+            text-transform: none;
+            display: inline-block;
+          }
+        }
+        #col-meta {
+          padding-top: 30px;
+          .field-autor,
+          .field-autor a,
+          .date-display-single {
+            @include graphik-bold(11px,$gris7,22px);
+            padding-left: 5px;
+          }
+          .field-autor {
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+        }
+        .field-body {
+          padding-top: 30px;
+          margin-bottom: -120px;
+          p {
+            @include body;
+            font-size: 20px; //jude modifica. hay q modificar el mixin cuando sea definitivo y borrar esta linea
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+          .destacat {
+            @include public-roman(26px, $vermell, 36px);
+            margin-left: -25%;
+            width: 65%;
+            float: left;
+            padding: 10px 10px 10px 0;
+          }
+          figure.caption {
+            margin-bottom: 10px;
+            &:after {
+             @include separador;
+            }
+            figcaption {
+              @include public-roman(15px,$negre,auto);
+              margin: 10px 0;
+            }
+          }
+        }
+        @include cont-rel();//.field-continguts-relacionats es crida des del mixin
+        .field-collection-container {
+          @include not-rel();
+          border: none 0px;
+          .field-continguts-relacionats {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            tr.field_collection_item.odd,
+            tr.field_collection_item.even {
+              background-color: $fons;
+            }
+          }
+        }
+        #tags-wrapper {
+          border-top: 1px solid $gris6;
+          padding-top: 5px;
+          //border-bottom: 1px solid $gris6;
+          #tags-etiquetes-wrapper,
+          #tags-territori-wrapper {
+            display: inline-block;
+            width: auto;
+            mark.field-etiquetes,
+            .field-etiquetes,
+            .field-territori  {
+              @include etiquetes;
+              background: none;
+            }
+          }
+        }  
+        .field-collection-container {
+          article {
+          }
+        }
+        //Noticies relacionades
+        .field-collection-container {
+          h3.field-label {
+            margin: 0 0 10px 0px;
+            padding:10px 0;
+            line-height: 70px;
+            &:after {
+              @include separador;
+            }
+          }
+           .field-contingut-relacionat {
+             &:after {
+               @include separador;
+             }
+            &:last-of-type:after {
+              @include separador;
+            }
+            .field-collection-view.view-mode-token {
+              border: none 0px;
+              article.node-noticia.view-mode-token, 
+              article.node-noticia-paper.view-mode-token {
+                border: none 0px;
+                margin: 0;
+                header {
+                  float: right;
+                  padding-left: 33%;
+                  min-width: 66%;
+                  margin-bottom: 10px;
+                  .node__title.node-title {
+                    a {
+                      @include graphik-semibold(28px, $gris7, 34px);//Jude canvia definicio tipo de 33 a 28 i de 37 a 34 interlineat
+                    }
+                  }
+                }
+                .field-portada-fotogaleria img {
+                  margin-left: -15px;
+                }
+                fieldset.group-nested {
+                  float: right;
+                  border: none 0px;
+                  margin: 0;
+                  padding: 0;
+                  .field-autor,
+                  .field-autor a,
+                  .date-display-single {
+                    @include graphik-medium (17px, $gris5, 19px);
+                    //padding-left: 10px;
+                  }
+                  .field-autor {
+                    text-decoration: underline;
+                  }
+                  .field-body {
+                    margin-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: 10px;
+                    p {
+                      @include entradilla-not-rel-dest;
+                    } 
+                  }
+                }
+              }
+              .field-destacar {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    //SIDEBARS
+    .sidebars {
+      .region-sidebar-second {
+        margin-top: 30px;
+        .block {
+          border-left: 1px solid $gris6;
+          padding-left: 10px;
+        }
+        #block-directa-custom-mes-noticies {
+          h2.block-title {
+            @include graphik-medium(26px, $gris7, 31px);
+          }
+          .view-ultimes-noticies {
+            .view-content {
+              .views-row {
+                padding-top: 10px;
+                margin: 10px 0;
+                border-top: 1px solid $gris6;
+                &:last-of-type {
+                  border-bottom: 1px solid $gris6;
+                  padding-bottom: 10px;
+                }
+                .views-field-title a {
+                  @include graphik-medium(19px, $gris7, 23px);
+                }
+              }
+            }
+          }
+        }
+        #block-tagadelic-taxonomy-tagadelic-taxonomy {
+          h2.block-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
